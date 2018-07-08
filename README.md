@@ -19,11 +19,9 @@ The author of this mod does not take any responsibility for damaged or corrupted
 
 ## Install with modloader
 
-1. If you don't already have mod loader, download it from GTAGarage:
-	http://www.gtagarage.com/mods/show.php?id=25377
+1. If you don't already have mod loader, download it from [here](https://github.com/thelink2012/modloader/releases).
 
-2. Also download ThirteenAG's Ultimate ASI Loader:
-	https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
+2. Also download ThirteenAG's [Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
 
 3. First, extract the Ultimate ASI Loader and copy all of its content to where you installed your game (root folder).
 This, by default (on 64 bit systems and non-Steam version) should be "C:\Program Files (x86)\Rockstar Games\Grand Theft Auto Vice City"
@@ -34,14 +32,11 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 
 5. Create a new "UpdatedSCM" directory in your "modloader" directory.
 
-6. Copy folders "data", "text" and "to gta3.img" to the newly created "UpdatedSCM" folder.
-	-- Alternatively, use one of the other SCM files from the "other_scms" folder. --
+6. Copy folders "data", "text" and "to gta3.img" to the newly created "UpdatedSCM" folder. Alternatively, use one of the other SCM files from the "other_scms" folder.
 
-7. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use steve-m's COL Editor: http://ce2.steve-m.com
-	-- This is not required if you use the SCM without MC Tommy.
+7. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use steve-m's [COL Editor](http://ce2.steve-m.com). (This is not required if you use the SCM without MC Tommy.)
 
-8. I highly recommend using CLEO: http://cleo.li/download.html
-	...and using "extras > cleo > cs-playmodels.cs" + "marina-bay-carpark-wl.cs" one is for the Marina bay carpark water level, and the other is if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
+8. I highly recommend using [CLEO](http://cleo.li/download.html) and using "extras > cleo > cs-playmodels.cs". This is if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
 
 
 ## Install manually
@@ -49,7 +44,7 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 If Modloader does not work with Windows XP (or if you do not want to) or your Windows version for some reason, then this is the path to take.
 
 Create a backup of the original files and then do the necessary changes. By default, the root game folder resides in:
-	"C:\Program Files (x86)\Rockstar Games\Grand Theft Auto Vice City"
+	`C:\Program Files (x86)\Rockstar Games\Grand Theft Auto Vice City`
 
 1. Replace "main.scm" with "data > main.scm" file.
 2. Replace your preferred language GXT file(s) in the "text" folder. Or alternatively, use CLEO and the required FXT file(s) from "extras > cleo > CLEO_TEXT"
@@ -89,7 +84,6 @@ The game is going to stall in a black screen if you don't add "csruger.dff" and 
 	Replace it with (the 6th column with "VCPDCHE"):
 
 	`236, 	vicechee, 	vicechee, 	car, 	CHEETAH, 	VCPDCHE, 		null,	ignore, 	10, 	7,	0,		250, 0.7`
-
 
 Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah" or an other localized one. (Note that the included GXT files already contain this change.)
 
