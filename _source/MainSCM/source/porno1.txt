@@ -1,0 +1,2104 @@
+:PORNO1
+thread 'PORNO1'
+gosub @PORNO1_46
+if
+wasted_or_busted
+jf @PORNO1_37
+gosub @PORNO1_11164
+
+:PORNO1_37
+gosub @PORNO1_11249
+end_thread
+
+:PORNO1_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'PORN1'
+058E: set_restart_mission_taxi_destination 21.489 966.28 9.5 172.7
+$4387 = 0 // integer values
+$4388 = 0 // integer values
+$4386 = 0 // integer values
+$4400 = 0.0 // floating-point values
+$4389 = 0 // integer values
+$4390 = 0 // integer values
+$4391 = 0 // integer values
+$4392 = 0 // integer values
+$4393 = 0 // integer values
+$4394 = 0 // integer values
+$4395 = 0 // integer values
+$4401 = 0.0 // floating-point values
+$4402 = 0.0 // floating-point values
+$4403 = 0.0 // floating-point values
+$4404 = 0.0 // floating-point values
+$4396 = 0 // integer values
+$4397 = 0 // integer values
+$4398 = 0 // integer values
+$4399 = 0.0 // floating-point values
+03CF: load_wav 'MONO_3' as 1
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDIREC'
+023C: load_special_actor 3 'CSJUGGZ'
+023C: load_special_actor 4 'CMRAMAN'
+023C: load_special_actor 5 'MPORNA'
+02F3: load_object #CUTOBJ01 'CS_CAM'
+02F3: load_object #CUTOBJ02 'DRCHAIR'
+Camera.SetAtPos(-86.0, 929.0, 9.764)
+038B: load_requested_models
+
+:PORNO1_369
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @PORNO1_411
+wait 0
+jump @PORNO1_369
+
+:PORNO1_411
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @PORNO1_443
+wait 0
+jump @PORNO1_411
+
+:PORNO1_443
+02E4: load_cutscene_data 'PORN_1'
+0244: set_cutscene_pos -69.128 920.965 9.764
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $163 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $163 'CSDIREC'
+02E5: $4405 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $4405 'CSJUGGZ'
+02E5: $197 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $197 'CMRAMAN'
+02E5: $164 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $164 'MPORNA'
+02E5: $209 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $209 'CS_CAM'
+02E5: $215 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $215 'DRCHAIR'
+0395: clear_area 1 at -66.0 933.04 range 10.2 1.0
+0055: put_player $PLAYER_CHAR at -66.0 933.04 10.2
+0171: set_player $PLAYER_CHAR z_angle_to 275.6
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:PORNO1_695
+if
+  2533 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_730
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_695
+
+:PORNO1_730
+00BC: text_highpriority 'POR1_A' 10000 ms 1  // Action.
+
+:PORNO1_745
+if
+  3343 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_780
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_745
+
+:PORNO1_780
+00BC: text_highpriority 'POR1_B' 10000 ms 1  // Whoa! Now that's big.
+
+:PORNO1_795
+if
+  6008 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_830
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_795
+
+:PORNO1_830
+00BC: text_highpriority 'POR1_C' 10000 ms 1  // 12 inches. That is regulation baby.
+
+:PORNO1_845
+if
+  11226 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_880
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_845
+
+:PORNO1_880
+00BC: text_highpriority 'POR1_D' 10000 ms 1  // CUT!! Who IS this idiot? You! YOU! Why are you in my space? WHY?
+
+:PORNO1_895
+if
+  16462 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_930
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_895
+
+:PORNO1_930
+00BC: text_highpriority 'POR1_E' 10000 ms 1  // What is all this crap?
+
+:PORNO1_945
+if
+  18076 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_980
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_945
+
+:PORNO1_980
+00BC: text_highpriority 'POR1_F' 10000 ms 1  // Aliens? Fishing poles?
+
+:PORNO1_995
+if
+  20247 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1030
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_995
+
+:PORNO1_1030
+00BC: text_highpriority 'POR1_G' 10000 ms 1  // Who's ever seen a shark that big?
+
+:PORNO1_1045
+if
+  22282 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1080
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1045
+
+:PORNO1_1080
+00BC: text_highpriority 'POR1_H' 10000 ms 1  // All this stuff's gotta go.
+
+:PORNO1_1095
+if
+  24320 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1130
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1095
+
+:PORNO1_1130
+00BC: text_highpriority 'POR1_I' 10000 ms 1  // Why'd you get in this business, ya prick?
+
+:PORNO1_1145
+if
+  26352 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1180
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1145
+
+:PORNO1_1180
+00BC: text_highpriority 'POR1_J' 10000 ms 1  // Huh?
+
+:PORNO1_1195
+if
+  27126 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1230
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1195
+
+:PORNO1_1230
+00BC: text_highpriority 'POR1_K' 10000 ms 1  // For the pussy, that's why! What is this??
+
+:PORNO1_1245
+if
+  30127 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1280
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1245
+
+:PORNO1_1280
+00BC: text_highpriority 'POR1_L' 10000 ms 1  // This is my art - SECURITY!
+
+:PORNO1_1295
+if
+  34028 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1332
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1295
+
+:PORNO1_1332
+00BC: text_highpriority 'POR1_M' 10000 ms 1  // Look, you pompous asshole, I own you now. I own all of this.
+
+:PORNO1_1347
+if
+  38273 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1384
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1347
+
+:PORNO1_1384
+00BC: text_highpriority 'POR1_N' 10000 ms 1  // We're gonna turn this place around...
+
+:PORNO1_1399
+if
+  40013 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1436
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1399
+
+:PORNO1_1436
+00BC: text_highpriority 'POR1_O' 10000 ms 1  // I'm gonna make you rich.
+
+:PORNO1_1451
+if
+  42086 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1488
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1451
+
+:PORNO1_1488
+00BC: text_highpriority 'POR1_P' 10000 ms 1  // Uh. You're - You - you're Tommy Vercetti? But I thought that you were...
+
+:PORNO1_1503
+if
+  46091 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1540
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1503
+
+:PORNO1_1540
+00BC: text_highpriority 'POR1_Q' 10000 ms 1  // That's right.
+
+:PORNO1_1555
+if
+  47169 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1592
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1555
+
+:PORNO1_1592
+00BC: text_highpriority 'POR1_R' 10000 ms 1  // We're gonna be making some changes around here and start making some real money.
+
+:PORNO1_1607
+if
+  50143 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1644
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1607
+
+:PORNO1_1644
+00BC: text_highpriority 'POR1_S' 10000 ms 1  // Actually, have you ever thought about, umm...
+
+:PORNO1_1659
+if
+  52720 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1696
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1659
+
+:PORNO1_1696
+00BC: text_highpriority 'POR1_T' 10000 ms 1  // But first we're going to need some good-looking broads.
+
+:PORNO1_1711
+if
+  54090 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1748
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1711
+
+:PORNO1_1748
+00BC: text_highpriority 'POR1_U' 10000 ms 1  // Yeh, girls are fine but you... whew!
+
+:PORNO1_1763
+if
+  56976 > $CUT_SCENE_TIME // integer values
+jf @PORNO1_1800
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO1_1763
+
+:PORNO1_1800
+fade 0 1500
+00BE: text_clear_all
+wait 1000
+if
+856A:   not has_cutscene_been_interrupted
+jf @PORNO1_1846
+if
+03D0:   wav 1 loaded
+jf @PORNO1_1846
+03D1: play_wav 1
+
+:PORNO1_1846
+if
+fading
+jf @PORNO1_1870
+wait 0
+jump @PORNO1_1846
+
+:PORNO1_1870
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetAtPos(-67.0, 939.297, 10.94)
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 0 60000
+Model.Load(#WMYPI)
+Model.Load(#BMYCR)
+Model.Load(#BMYBB)
+Model.Load(#WMYST)
+Model.Load(#HMYRI)
+Model.Load(#SENTINEL)
+Model.Load(#BAT)
+Model.Load(#TEC9)
+Model.Load(#STRETCH)
+
+:PORNO1_1996
+if or
+   not Model.Available(#WMYPI)
+   not Model.Available(#BMYCR)
+   not Model.Available(#BMYBB)
+   not Model.Available(#WMYST)
+   not Model.Available(#HMYRI)
+jf @PORNO1_2030
+wait 0
+jump @PORNO1_1996
+
+:PORNO1_2030
+if or
+   not Model.Available(#SENTINEL)
+   not Model.Available(#BAT)
+   not Model.Available(#TEC9)
+   not Model.Available(#STRETCH)
+jf @PORNO1_2072
+wait 0
+jump @PORNO1_2030
+
+:PORNO1_2072
+023C: load_special_actor 1 'IGCANDY'
+023C: load_special_actor 2 'IGMERC'
+
+:PORNO1_2096
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @PORNO1_2126
+wait 0
+jump @PORNO1_2096
+
+:PORNO1_2126
+038B: load_requested_models
+018A: $4382 = create_checkpoint_at -448.3 1324.6 10.7
+fade 1 1500
+00BC: text_highpriority 'POR1_01' 5000 ms 1  // ~g~Candy Suxxx would be perfect for a starring role!
+00BB: text_lowpriority 'POR1_23' 5000 ms 1  // ~g~Candy will be taking care of business ~h~Downtown~g~.
+0481:  3.0
+
+:PORNO1_2192
+if
+80F6:   not player $PLAYER_CHAR 1 -448.3 1324.6 10.7 radius 1.0 1.0 2.0
+jf @PORNO1_2307
+wait 0
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car -448.3 1324.6 10.7 radius 20.0 20.0 20.0
+jf @PORNO1_2300
+00DA: $4378 = player $PLAYER_CHAR car
+
+:PORNO1_2300
+jump @PORNO1_2192
+
+:PORNO1_2307
+03CF: load_wav 'PORN1_1' as 1
+03CF: load_wav 'PORN1_2' as 2
+
+:PORNO1_2331
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO1_2361
+wait 0
+jump @PORNO1_2331
+
+:PORNO1_2361
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+if
+   not Car.Wrecked($4378)
+jf @PORNO1_2456
+if
+01AD:   car $4378 sphere 0 near_point -448.3 1324.6 radius 30.0 30.0
+jf @PORNO1_2456
+Car.PutAt($4378, -441.9, 1337.0, 10.7)
+Car.Angle($4378) = 289.8
+
+:PORNO1_2456
+03BA: clear_cars_from_cube -584.8 1320.7 5.5 -309.7 1360.2 15.5
+01EB: set_traffic_density_multiplier_to 0.0
+0055: put_player $PLAYER_CHAR at -448.3 1324.6 10.7
+0171: set_player $PLAYER_CHAR z_angle_to 19.7
+Camera.SetPosition(-445.3, 1321.8, 13.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-450.3, 1327.7, 12.0, 2)
+00BC: text_highpriority 'POR1_26' 5000 ms 1  // ~g~Here's Candy, looks like she has been with Congressman Shrub again.
+$4379 = Car.Create(#STRETCH, -492.4, 1335.8, 10.4)
+00AE: set_vehicle $4379 traffic_behavior_to 2
+Car.Angle($4379) = 276.1
+0129: $4380 = create_actor 4 #HMYRI in_car $4379 driverseat
+054A: set_actor $4380 can_be_shot_in_a_car 0
+0229: set_car $4379 color_to 34 34
+01C8: $4372 = create_actor_pedtype 5 model #SPECIAL01 in_car $4379 passenger_seat 2
+04F5: unknown_actor $4372 kiss_player $PLAYER_CHAR on 1
+01ED: clear_actor $4372 threat_search
+02A9: set_actor $4372 immune_to_nonplayer 1
+0245: set_actor $4372 walk_style_to 46
+0319: set_actor $4372 running 1
+0568: set_actor $4372 untargetable 1
+053C:  $4372 0
+04BA: set_car $4379 speed_instantly 15.0
+Car.SetMaxSpeed($4379, 15.0)
+Car.DriveTo($4379, -448.4, 1340.6, 10.4)
+17@ = 0 // integer values
+
+:PORNO1_2763
+wait 0
+if
+   not Car.Wrecked($4379)
+jf @PORNO1_2901
+if
+  17@ > 7000 // integer values
+jf @PORNO1_2809
+jump @PORNO1_2908
+
+:PORNO1_2809
+if
+81AF:   not car $4379 0 -448.4 1340.6 10.4 radius 4.0 4.0 4.0
+jf @PORNO1_2884
+Car.DriveTo($4379, -448.4, 1340.6, 10.4)
+jump @PORNO1_2901
+
+:PORNO1_2884
+Car.SetMaxSpeed($4379, 0.0)
+jump @PORNO1_2908
+
+:PORNO1_2901
+jump @PORNO1_2763
+
+:PORNO1_2908
+if
+   not Car.Wrecked($4379)
+jf @PORNO1_2958
+if
+   not Actor.Dead($4372)
+jf @PORNO1_2958
+Car.SetMaxSpeed($4379, 0.0)
+01D3: actor $4372 leave_car $4379
+
+:PORNO1_2958
+wait 0
+if
+   not Car.Wrecked($4379)
+jf @PORNO1_3321
+01E9: $4395 = car $4379 num_passengers
+if
+  $4395 == 0 // integer values
+jf @PORNO1_3314
+if
+   not Actor.Dead($4372)
+jf @PORNO1_3293
+Camera.Restore_WithJumpCut
+01D1: actor $4372 follow_actor $PLAYER_ACTOR
+01D1: actor $PLAYER_ACTOR follow_actor $4372
+if
+   not Car.Wrecked($4379)
+jf @PORNO1_3084
+Car.SetMaxSpeed($4379, 15.0)
+Car.DriveTo($4379, -338.6, 1133.1, 8.5)
+
+:PORNO1_3084
+$4371 = Car.Create(#SENTINEL, -492.4, 1335.8, 10.4)
+Car.Angle($4371) = 276.1
+00AE: set_vehicle $4371 traffic_behavior_to 2
+Car.ImmuneToNonPlayer($4371) = True
+0129: $4373 = create_actor 4 #WMYPI in_car $4371 driverseat
+01B2: give_actor $4373 weapon 22 ammo 30000 // Load the weapon model before using this
+02A9: set_actor $4373 immune_to_nonplayer 1
+01C8: $4374 = create_actor_pedtype 4 model #WMYST in_car $4371 passenger_seat 0
+01B2: give_actor $4374 weapon 6 ammo 1 // Load the weapon model before using this
+01ED: clear_actor $4374 threat_search
+01C8: $4375 = create_actor_pedtype 4 model #BMYBB in_car $4371 passenger_seat 1
+01B2: give_actor $4375 weapon 6 ammo 1 // Load the weapon model before using this
+01ED: clear_actor $4375 threat_search
+01C8: $4376 = create_actor_pedtype 4 model #BMYCR in_car $4371 passenger_seat 2
+01B2: give_actor $4376 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4376 threat_search
+$4383 = Marker.CreateAboveActor($4373)
+04BA: set_car $4379 speed_instantly 15.0
+Car.SetMaxSpeed($4371, 15.0)
+Car.DriveTo($4371, -448.4, 1340.6, 10.4)
+
+:PORNO1_3293
+17@ = 0 // integer values
+jump @PORNO1_3328
+jump @PORNO1_3321
+
+:PORNO1_3314
+jump @PORNO1_2958
+
+:PORNO1_3321
+jump @PORNO1_2958
+
+:PORNO1_3328
+wait 0
+if
+  17@ > 7000 // integer values
+jf @PORNO1_3358
+jump @PORNO1_3445
+
+:PORNO1_3358
+if
+   not Actor.Dead($4372)
+jf @PORNO1_3438
+if
+00E9:   player $PLAYER_CHAR 0 $4372 radius 2.0 2.0
+jf @PORNO1_3438
+011C: actor $4372 clear_objective
+011C: actor $PLAYER_ACTOR clear_objective
+020E: actor $PLAYER_ACTOR look_at_actor $4372
+020F: actor $4372 look_at_player $PLAYER_CHAR
+jump @PORNO1_3445
+
+:PORNO1_3438
+jump @PORNO1_3328
+
+:PORNO1_3445
+Camera.SetPosition(-450.2, 1328.1, 12.8, 0.0, 0.0, 0.0)
+Camera.PointAt(-449.9, 1330.8, 12.2, 2)
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+00BC: text_highpriority 'POR1_04' 4000 ms 1  // Yo, Candy. I'm looking for movie talent - you interested?
+03D1: play_wav 1
+
+:PORNO1_3525
+if
+83D2:   not wav 1 ended
+jf @PORNO1_3551
+wait 0
+jump @PORNO1_3525
+
+:PORNO1_3551
+040D: unload_wav 1
+03D5: remove_text 'POR1_04'  // Yo, Candy. I'm looking for movie talent - you interested?
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+if
+   not Actor.Dead($4372)
+jf @PORNO1_3600
+0372: set_actor $4372 anim 19 wait_state_time 10000 ms
+
+:PORNO1_3600
+if
+   not Actor.Dead($4373)
+jf @PORNO1_3640
+if
+   not Car.Wrecked($4371)
+jf @PORNO1_3640
+01D3: actor $4373 leave_car $4371
+
+:PORNO1_3640
+00BC: text_highpriority 'POR1_05' 4000 ms 1  // Sure! But, you'd have to talk to my agent...
+03D1: play_wav 2
+
+:PORNO1_3659
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4372)
+jf @PORNO1_3714
+if
+   not Actor.Dead($4373)
+jf @PORNO1_3703
+020E: actor $4373 look_at_actor $PLAYER_ACTOR
+
+:PORNO1_3703
+wait 0
+jump @PORNO1_3659
+
+:PORNO1_3714
+040D: unload_wav 2
+03D5: remove_text 'POR1_05'  // Sure! But, you'd have to talk to my agent...
+03CF: load_wav 'PRN1_3A' as 1
+03CF: load_wav 'PORN1_3' as 2
+
+:PORNO1_3752
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO1_3782
+wait 0
+jump @PORNO1_3752
+
+:PORNO1_3782
+if
+   not Actor.Dead($4372)
+jf @PORNO1_3831
+0372: set_actor $4372 anim 0 wait_state_time 100 ms
+if
+   not Actor.Dead($4373)
+jf @PORNO1_3831
+020E: actor $4372 look_at_actor $4373
+
+:PORNO1_3831
+00BC: text_highpriority 'POR1_06' 4000 ms 1  // The HELL are you doin'?
+03D1: play_wav 2
+
+:PORNO1_3850
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4373)
+jf @PORNO1_3881
+wait 0
+jump @PORNO1_3850
+
+:PORNO1_3881
+040D: unload_wav 2
+03D5: remove_text 'POR1_06'  // The HELL are you doin'?
+01BE: set_actor $PLAYER_ACTOR to_look_at_spot -448.4 1340.6 10.4
+0211: actor $PLAYER_ACTOR walk_to -448.4 1333.6
+00BC: text_highpriority 'POR1_07' 4000 ms 1  // You should have stayed at home today!
+03D1: play_wav 1
+
+:PORNO1_3949
+if
+83D2:   not wav 1 ended
+jf @PORNO1_3975
+wait 0
+jump @PORNO1_3949
+
+:PORNO1_3975
+040D: unload_wav 1
+03D5: remove_text 'POR1_07'  // You should have stayed at home today!
+03CF: load_wav 'PRN1_21' as 2
+
+:PORNO1_4001
+if
+83D0:   not wav 2 loaded
+jf @PORNO1_4027
+wait 0
+jump @PORNO1_4001
+
+:PORNO1_4027
+if
+   not Actor.Dead($4373)
+jf @PORNO1_4067
+if
+   not Car.Wrecked($4371)
+jf @PORNO1_4067
+01D5: actor $4373 go_to_and_drive_car $4371
+
+:PORNO1_4067
+00BC: text_highpriority 'POR1_7B' 4000 ms 1  // Can you believe this asshole?
+03D1: play_wav 2
+
+:PORNO1_4086
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4373)
+jf @PORNO1_4117
+wait 0
+jump @PORNO1_4086
+
+:PORNO1_4117
+040D: unload_wav 2
+03D5: remove_text 'POR1_7B'  // Can you believe this asshole?
+if
+   not Actor.Dead($4374)
+jf @PORNO1_4203
+if
+   not Actor.Dead($4375)
+jf @PORNO1_4203
+if
+   not Actor.Dead($4376)
+jf @PORNO1_4203
+01CA: actor $4374 kill_player $PLAYER_CHAR
+01CA: actor $4375 kill_player $PLAYER_CHAR
+01CA: actor $4376 kill_player $PLAYER_CHAR
+
+:PORNO1_4203
+if
+   not Actor.Dead($4372)
+jf @PORNO1_4240
+0350: set_actor $4372 maintain_position_when_attacked 1
+$4392 = 1 // integer values
+jump @PORNO1_4262
+
+:PORNO1_4240
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO1_11164
+
+:PORNO1_4262
+wait 1000
+if
+   not Car.Wrecked($4379)
+jf @PORNO1_4325
+if
+82CA:   not car $4379 bounding_sphere_visible
+jf @PORNO1_4325
+if
+   not Actor.Dead($4380)
+jf @PORNO1_4320
+Actor.DestroyInstantly($4380)
+
+:PORNO1_4320
+Car.Destroy($4379)
+
+:PORNO1_4325
+011C: actor $PLAYER_ACTOR clear_objective
+01EB: set_traffic_density_multiplier_to 1.0
+Car.RemoveReferences($4378)
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Marker.Disable($4382)
+00BC: text_highpriority 'POR1_02' 7000 ms 1  // ~g~ Go and take out Candy's pimp, then return and pick up Candy.
+if
+   not Car.Wrecked($4371)
+jf @PORNO1_4406
+03CC: car $4371 add_to_stuck_car_check 1.5 = 4000
+
+:PORNO1_4406
+wait 0
+if
+  $4386 == 0 // integer values
+jf @PORNO1_5544
+if
+   not Actor.Dead($4373)
+jf @PORNO1_5537
+if
+   not Car.Wrecked($4371)
+jf @PORNO1_5530
+if
+81FC:   not player $PLAYER_CHAR near_car $4371 radius 80.0 80.0 0
+jf @PORNO1_4505
+Car.ImmuneToNonPlayer($4371) = True
+jump @PORNO1_4512
+
+:PORNO1_4505
+Car.ImmuneToNonPlayer($4371) = False
+
+:PORNO1_4512
+$4389 = Car.Health($4371)
+if
+  $4389 > 300 // integer values
+jf @PORNO1_5510
+if
+   Actor.InCar($4373, $4371)
+jf @PORNO1_5491
+01E9: $4387 = car $4371 num_passengers
+if
+  $4387 == 3 // integer values
+jf @PORNO1_4909
+if
+01FC:   player $PLAYER_CHAR near_car $4371 radius 50.0 50.0 0
+jf @PORNO1_4892
+if
+  $4391 == 0 // integer values
+jf @PORNO1_4647
+16@ = 0 // integer values
+$4391 = 1 // integer values
+
+:PORNO1_4647
+Car.SetMaxSpeed($4371, 0.0)
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @PORNO1_4773
+if
+   not Actor.Dead($4374)
+jf @PORNO1_4766
+if
+   not Actor.Dead($4375)
+jf @PORNO1_4766
+if
+   not Actor.Dead($4376)
+jf @PORNO1_4766
+01CA: actor $4374 kill_player $PLAYER_CHAR
+01CA: actor $4375 kill_player $PLAYER_CHAR
+01CA: actor $4376 kill_player $PLAYER_CHAR
+$4387 = 0 // integer values
+$4390 = 0 // integer values
+$4391 = 0 // integer values
+
+:PORNO1_4766
+jump @PORNO1_4885
+
+:PORNO1_4773
+if
+  16@ > 3000 // integer values
+jf @PORNO1_4885
+if
+   not Actor.Dead($4374)
+jf @PORNO1_4885
+if
+   not Actor.Dead($4375)
+jf @PORNO1_4885
+if
+   not Actor.Dead($4376)
+jf @PORNO1_4885
+01CA: actor $4374 kill_player $PLAYER_CHAR
+01CA: actor $4375 kill_player $PLAYER_CHAR
+01CA: actor $4376 kill_player $PLAYER_CHAR
+$4387 = 0 // integer values
+$4390 = 0 // integer values
+$4391 = 0 // integer values
+
+:PORNO1_4885
+jump @PORNO1_4902
+
+:PORNO1_4892
+Car.SetMaxSpeed($4371, 20.0)
+
+:PORNO1_4902
+jump @PORNO1_5404
+
+:PORNO1_4909
+if
+  $4390 == 0 // integer values
+jf @PORNO1_4939
+Car.SetToPsychoDriver($4371)
+$4390 = 1 // integer values
+
+:PORNO1_4939
+Car.SetMaxSpeed($4371, 40.0)
+if
+81FC:   not player $PLAYER_CHAR near_car $4371 radius 100.0 100.0 0
+jf @PORNO1_5404
+if
+82CA:   not car $4371 bounding_sphere_visible
+jf @PORNO1_5404
+if
+   not Actor.Dead($4374)
+jf @PORNO1_5103
+if
+   not Actor.InCar($4374, $4371)
+jf @PORNO1_5096
+if
+80E9:   not player $PLAYER_CHAR 0 $4374 radius 60.0 60.0
+jf @PORNO1_5096
+0321: kill_actor $4374
+Actor.RemoveReferences($4374)
+01C8: $4374 = create_actor_pedtype 4 model #WMYST in_car $4371 passenger_seat 0
+01B2: give_actor $4374 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5096
+jump @PORNO1_5132
+
+:PORNO1_5103
+Actor.RemoveReferences($4374)
+01C8: $4374 = create_actor_pedtype 4 model #WMYST in_car $4371 passenger_seat 0
+01B2: give_actor $4374 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5132
+if
+   not Actor.Dead($4375)
+jf @PORNO1_5239
+if
+   not Actor.InCar($4375, $4371)
+jf @PORNO1_5232
+if
+80E9:   not player $PLAYER_CHAR 0 $4375 radius 60.0 60.0
+jf @PORNO1_5232
+0321: kill_actor $4375
+Actor.RemoveReferences($4375)
+01C8: $4375 = create_actor_pedtype 4 model #BMYBB in_car $4371 passenger_seat 1
+01B2: give_actor $4375 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5232
+jump @PORNO1_5268
+
+:PORNO1_5239
+Actor.RemoveReferences($4375)
+01C8: $4375 = create_actor_pedtype 4 model #BMYBB in_car $4371 passenger_seat 1
+01B2: give_actor $4375 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5268
+if
+   not Actor.Dead($4376)
+jf @PORNO1_5375
+if
+   not Actor.InCar($4376, $4371)
+jf @PORNO1_5368
+if
+80E9:   not player $PLAYER_CHAR 0 $4376 radius 60.0 60.0
+jf @PORNO1_5368
+0321: kill_actor $4376
+Actor.RemoveReferences($4376)
+01C8: $4376 = create_actor_pedtype 4 model #BMYCR in_car $4371 passenger_seat 2
+01B2: give_actor $4376 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5368
+jump @PORNO1_5404
+
+:PORNO1_5375
+Actor.RemoveReferences($4376)
+01C8: $4376 = create_actor_pedtype 4 model #BMYCR in_car $4371 passenger_seat 2
+01B2: give_actor $4376 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:PORNO1_5404
+if
+  $4386 == 0 // integer values
+jf @PORNO1_5448
+if
+03CE:   car $4371 stuck
+jf @PORNO1_5448
+0477: set_car $4371 action 2 time 1000
+
+:PORNO1_5448
+if
+01F4:   car $4371 flipped
+jf @PORNO1_5484
+01D3: actor $4373 leave_car $4371
+03CD: car $4371 remove_from_stuck_car_check
+$4386 = 1 // integer values
+
+:PORNO1_5484
+jump @PORNO1_5503
+
+:PORNO1_5491
+03CD: car $4371 remove_from_stuck_car_check
+$4386 = 1 // integer values
+
+:PORNO1_5503
+jump @PORNO1_5530
+
+:PORNO1_5510
+01D3: actor $4373 leave_car $4371
+03CD: car $4371 remove_from_stuck_car_check
+$4386 = 1 // integer values
+
+:PORNO1_5530
+jump @PORNO1_5544
+
+:PORNO1_5537
+jump @PORNO1_6205
+
+:PORNO1_5544
+if
+  $4386 == 1 // integer values
+jf @PORNO1_6027
+if
+   not Actor.Dead($4373)
+jf @PORNO1_6020
+if
+  $4388 == 0 // integer values
+jf @PORNO1_5621
+Marker.Disable($4383)
+$4383 = Marker.CreateAboveActor($4373)
+Car.RemoveReferences($4371)
+$4388 = 1 // integer values
+
+:PORNO1_5621
+if
+8449:   not actor $4373 in_a_car
+jf @PORNO1_5943
+Car.RemoveReferences($4371)
+
+:PORNO1_5642
+wait 0
+if
+   not Actor.Dead($4373)
+jf @PORNO1_5936
+Actor.StorePos($4373, $4400, $4401, $4404)
+0086: $4402 = $4400 // floating-point values only
+$4402 += 20.0 // floating-point values
+0086: $4403 = $4401 // floating-point values only
+$4403 += 20.0 // floating-point values
+$4400 -= 20.0 // floating-point values
+$4401 -= 20.0 // floating-point values
+0327: $4371 = create_random_car_with_actors -1 in_area $4400 $4401 $4402 $4403
+if
+  $4371 == -1 // integer values
+jf @PORNO1_5793
+Car.RemoveReferences($4371)
+0193: set_actor $4373 objective_to_act_like_ped
+jump @PORNO1_5642
+jump @PORNO1_5936
+
+:PORNO1_5793
+01EA: $4387 = car $4371 max_passengers
+if
+  3 > $4387 // integer values
+jf @PORNO1_5848
+Car.RemoveReferences($4371)
+011C: actor $4373 clear_objective
+0193: set_actor $4373 objective_to_act_like_ped
+jump @PORNO1_5642
+jump @PORNO1_5936
+
+:PORNO1_5848
+$4389 = Car.Health($4371)
+if
+  300 > $4389 // integer values
+jf @PORNO1_5899
+Car.RemoveReferences($4371)
+0193: set_actor $4373 objective_to_act_like_ped
+jump @PORNO1_5642
+jump @PORNO1_5936
+
+:PORNO1_5899
+020A: set_car $4371 door_status_to 1
+Car.SetMaxSpeed($4371, 0.0)
+011C: actor $4373 clear_objective
+01D5: actor $4373 go_to_and_drive_car $4371
+0319: set_actor $4373 running 1
+
+:PORNO1_5936
+jump @PORNO1_6013
+
+:PORNO1_5943
+Marker.Disable($4383)
+if
+   not Car.Wrecked($4371)
+jf @PORNO1_5992
+$4383 = Marker.CreateAboveActor($4373)
+00AE: set_vehicle $4371 traffic_behavior_to 2
+03CC: car $4371 add_to_stuck_car_check 1.5 = 4000
+
+:PORNO1_5992
+$4388 = 0 // integer values
+$4386 = 0 // integer values
+$4390 = 0 // integer values
+
+:PORNO1_6013
+jump @PORNO1_6027
+
+:PORNO1_6020
+jump @PORNO1_6205
+
+:PORNO1_6027
+if
+   not Actor.Dead($4372)
+jf @PORNO1_6176
+if
+00F0:   actor $4372 stopped 0 -448.3 1324.6 radius 3.0 3.0
+jf @PORNO1_6140
+if
+  $4392 == 0 // integer values
+jf @PORNO1_6133
+01BE: set_actor $4372 to_look_at_spot -448.4 1340.6 10.7
+0350: set_actor $4372 maintain_position_when_attacked 1
+$4392 = 1 // integer values
+
+:PORNO1_6133
+jump @PORNO1_6169
+
+:PORNO1_6140
+0350: set_actor $4372 maintain_position_when_attacked 0
+0239: actor $4372 run_to -448.3 1324.6
+$4392 = 0 // integer values
+
+:PORNO1_6169
+jump @PORNO1_6198
+
+:PORNO1_6176
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO1_11164
+
+:PORNO1_6198
+jump @PORNO1_4406
+
+:PORNO1_6205
+00BC: text_highpriority 'POR1_24' 7000 ms 1  // ~g~Go back and collect Candy.
+Marker.Disable($4383)
+if
+   not Actor.Dead($4372)
+jf @PORNO1_6287
+0372: set_actor $4372 anim 0 wait_state_time 1 ms
+Actor.Angle($4372) = 14.9
+0350: set_actor $4372 maintain_position_when_attacked 0
+018A: $4382 = create_checkpoint_at -448.3 1324.6 10.7
+
+:PORNO1_6287
+if
+80F6:   not player $PLAYER_CHAR 1 -448.3 1326.6 10.7 radius 1.0 1.0 2.0
+jf @PORNO1_6517
+wait 0
+if
+   Actor.Dead($4372)
+jf @PORNO1_6384
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO1_11164
+jump @PORNO1_6510
+
+:PORNO1_6384
+if
+00F0:   actor $4372 stopped 0 -448.3 1324.6 radius 3.0 3.0
+jf @PORNO1_6481
+if
+  $4392 == 0 // integer values
+jf @PORNO1_6474
+01BE: set_actor $4372 to_look_at_spot -448.4 1340.6 10.7
+0350: set_actor $4372 maintain_position_when_attacked 1
+$4392 = 1 // integer values
+
+:PORNO1_6474
+jump @PORNO1_6510
+
+:PORNO1_6481
+0350: set_actor $4372 maintain_position_when_attacked 0
+0239: actor $4372 run_to -448.3 1324.6
+$4392 = 0 // integer values
+
+:PORNO1_6510
+jump @PORNO1_6287
+
+:PORNO1_6517
+01DF: tie_actor $4372 to_player $PLAYER_CHAR
+$4393 = 1 // integer values
+Marker.Disable($4382)
+03CF: load_wav 'PRN1_16' as 1
+
+:PORNO1_6549
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_6575
+wait 0
+jump @PORNO1_6549
+
+:PORNO1_6575
+00BC: text_highpriority 'POR1_27' 4000 ms 1  // Come on, let's go.
+03D1: play_wav 1
+
+:PORNO1_6594
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_6625
+wait 0
+jump @PORNO1_6594
+
+:PORNO1_6625
+040D: unload_wav 1
+03D5: remove_text 'POR1_19'  // Hey!
+00BB: text_lowpriority 'POR1_12' 5000 ms 1  // ~g~Take Candy with you to meet up with Mercedes.
+Actor.RemoveReferences($4374)
+Actor.RemoveReferences($4375)
+Actor.RemoveReferences($4376)
+Car.RemoveReferences($4371)
+$4377 = Actor.Create(CivFemale, #SPECIAL02, -902.3, 800.2, 10.4)
+Actor.Angle($4377) = 95.9
+04F5: unknown_actor $4377 kiss_player $PLAYER_CHAR on 1
+0245: set_actor $4377 walk_style_to 46
+0319: set_actor $4377 running 1
+053C:  $4377 0
+0372: set_actor $4377 anim 19 wait_state_time 86400000 ms
+0568: set_actor $4377 untargetable 1
+$4371 = Car.Create(#SENTINEL, -858.0, 796.5, 10.9)
+Car.Angle($4371) = 187.1
+0376: $4374 = create_random_actor -887.5 800.5 10.3
+0376: $4375 = create_random_actor -888.5 800.5 10.3
+0376: $4376 = create_random_actor -888.6 801.2 10.3
+03F9: make_actors $4374 $4375 converse_in 86400000 ms
+03F9: make_actors $4376 $4375 converse_in 86400000 ms
+018A: $4384 = create_checkpoint_at -900.8 796.0 10.3
+
+:PORNO1_6897
+if
+80F6:   not player $PLAYER_CHAR $4393 -900.8 796.0 10.3 radius 1.0 1.0 2.0
+jf @PORNO1_7868
+wait 0
+if
+   not Actor.Dead($4372)
+jf @PORNO1_7782
+if
+  $4393 == 1 // integer values
+jf @PORNO1_7161
+if
+8320:   not actor $4372 in_range_of_player $PLAYER_CHAR
+jf @PORNO1_7161
+03CF: load_wav 'PRN1_13' as 1
+
+:PORNO1_7015
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_7041
+wait 0
+jump @PORNO1_7015
+
+:PORNO1_7041
+00BC: text_highpriority 'POR1_20' 4000 ms 1  // Tommy where are you going? Get back here!
+03D1: play_wav 1
+
+:PORNO1_7060
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_7091
+wait 0
+jump @PORNO1_7060
+
+:PORNO1_7091
+040D: unload_wav 1
+03D5: remove_text 'POR1_20'  // Tommy where are you going? Get back here!
+00BB: text_lowpriority 'POR1_25' 4000 ms 1  // ~g~You have left Candy behind, go and get her.
+Marker.Disable($4384)
+Marker.Disable($4382)
+if
+   not Actor.Dead($4372)
+jf @PORNO1_7154
+$4382 = Marker.CreateAboveActor($4372)
+
+:PORNO1_7154
+$4393 = 0 // integer values
+
+:PORNO1_7161
+if
+  $4393 == 0 // integer values
+jf @PORNO1_7366
+if
+00FB:   player $PLAYER_CHAR 0 $4372 radius 8.0 8.0 8.0
+jf @PORNO1_7366
+01DF: tie_actor $4372 to_player $PLAYER_CHAR
+03CF: load_wav 'PRN1_12' as 2
+
+:PORNO1_7235
+if
+83D0:   not wav 2 loaded
+jf @PORNO1_7261
+wait 0
+jump @PORNO1_7235
+
+:PORNO1_7261
+00BC: text_highpriority 'POR1_19' 4000 ms 1  // Hey!
+03D1: play_wav 2
+
+:PORNO1_7280
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4372)
+jf @PORNO1_7311
+wait 0
+jump @PORNO1_7280
+
+:PORNO1_7311
+040D: unload_wav 2
+03D5: remove_text 'POR1_19'  // Hey!
+Marker.Disable($4384)
+Marker.Disable($4382)
+if
+   not Actor.Dead($4377)
+jf @PORNO1_7359
+$4384 = Marker.CreateAboveActor($4377)
+
+:PORNO1_7359
+$4393 = 1 // integer values
+
+:PORNO1_7366
+if
+  2 > $4396 // integer values
+jf @PORNO1_7775
+if
+0320:   actor $4372 in_range_of_player $PLAYER_CHAR
+jf @PORNO1_7775
+if
+00E0:   player $PLAYER_CHAR driving
+jf @PORNO1_7775
+03C1: $4381 = player $PLAYER_CHAR car_no_save
+if
+   Actor.InCar($4372, $4381)
+jf @PORNO1_7775
+$4398 = Car.Health($4381)
+02E3: $4399 = car $4381 speed
+if
+  $4399 > 15.0 // floating-point values
+jf @PORNO1_7775
+if
+  $4396 == 0 // integer values
+jf @PORNO1_7629
+if
+  700 > $4398 // integer values
+jf @PORNO1_7629
+03CF: load_wav 'PRN1_17' as 1
+
+:PORNO1_7532
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_7558
+wait 0
+jump @PORNO1_7532
+
+:PORNO1_7558
+00BC: text_highpriority 'POR1_28' 4000 ms 1  // Tommy be careful! My implants aren't insured yet!
+03D1: play_wav 1
+
+:PORNO1_7577
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_7608
+wait 0
+jump @PORNO1_7577
+
+:PORNO1_7608
+040D: unload_wav 1
+03D5: remove_text 'POR1_28'  // Tommy be careful! My implants aren't insured yet!
+$4396 = 1 // integer values
+
+:PORNO1_7629
+if
+  $4396 == 1 // integer values
+jf @PORNO1_7775
+if
+  400 > $4398 // integer values
+jf @PORNO1_7775
+03CF: load_wav 'PRN1_19' as 1
+
+:PORNO1_7678
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_7704
+wait 0
+jump @PORNO1_7678
+
+:PORNO1_7704
+00BC: text_highpriority 'POR1_30' 4000 ms 1  // I can't do porno after this!
+03D1: play_wav 1
+
+:PORNO1_7723
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_7754
+wait 0
+jump @PORNO1_7723
+
+:PORNO1_7754
+040D: unload_wav 1
+03D5: remove_text 'POR1_30'  // I can't do porno after this!
+$4396 = 2 // integer values
+
+:PORNO1_7775
+jump @PORNO1_7804
+
+:PORNO1_7782
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO1_11164
+
+:PORNO1_7804
+if
+   Actor.Dead($4377)
+jf @PORNO1_7849
+00BC: text_highpriority 'POR1_18' 5000 ms 1  // ~r~Mercedes is dead!
+jump @PORNO1_11164
+jump @PORNO1_7861
+
+:PORNO1_7849
+0372: set_actor $4377 anim 25 wait_state_time 86400000 ms
+
+:PORNO1_7861
+jump @PORNO1_6897
+
+:PORNO1_7868
+Marker.Disable($4384)
+0055: put_player $PLAYER_CHAR at -900.8 796.0 10.3
+03DE: set_pedestrians_density_multiplier_to 0.0
+if
+   not Actor.Dead($4377)
+jf @PORNO1_7936
+Actor.PutAt($4377, -902.3, 800.2, 10.4)
+
+:PORNO1_7936
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-897.3, 799.7, 12.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-902.4, 798.0, 11.4, 2)
+03CF: load_wav 'PORN1_4' as 1
+03CF: load_wav 'PORN1_5' as 2
+
+:PORNO1_8022
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO1_8052
+wait 0
+jump @PORNO1_8022
+
+:PORNO1_8052
+if
+   not Actor.Dead($4377)
+jf @PORNO1_8076
+020E: actor $PLAYER_ACTOR look_at_actor $4377
+
+:PORNO1_8076
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+00BC: text_highpriority 'POR1_08' 4000 ms 1  // Hey Mercedes!
+03D1: play_wav 1
+
+:PORNO1_8105
+if
+83D2:   not wav 1 ended
+jf @PORNO1_8131
+wait 0
+jump @PORNO1_8105
+
+:PORNO1_8131
+040D: unload_wav 1
+03D5: remove_text 'POR1_08'  // Hey Mercedes!
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+if
+   not Actor.Dead($4377)
+jf @PORNO1_8175
+053D:  $4377
+
+:PORNO1_8175
+wait 100
+if
+   not Actor.Dead($4377)
+jf @PORNO1_8203
+01D1: actor $4377 follow_actor $PLAYER_ACTOR
+
+:PORNO1_8203
+00BC: text_highpriority 'POR1_09' 4000 ms 1  // Hey Tommy! You wanna party?
+03D1: play_wav 2
+
+:PORNO1_8222
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4377)
+jf @PORNO1_8253
+wait 0
+jump @PORNO1_8222
+
+:PORNO1_8253
+040D: unload_wav 2
+03D5: remove_text 'POR1_09'  // Hey Tommy! You wanna party?
+03CF: load_wav 'PORN1_6' as 1
+03CF: load_wav 'PORN1_7' as 2
+
+:PORNO1_8291
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO1_8321
+wait 0
+jump @PORNO1_8291
+
+:PORNO1_8321
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+00BC: text_highpriority 'POR1_10' 4000 ms 1  // Not now sweets. You interested in doing some movies?
+03D1: play_wav 1
+
+:PORNO1_8350
+if
+83D2:   not wav 1 ended
+jf @PORNO1_8376
+wait 0
+jump @PORNO1_8350
+
+:PORNO1_8376
+040D: unload_wav 1
+03D5: remove_text 'POR1_10'  // Not now sweets. You interested in doing some movies?
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+00BC: text_highpriority 'POR1_11' 4000 ms 1  // Of course. As long as it's cheap and sleazy.
+03D1: play_wav 2
+
+:PORNO1_8418
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4377)
+jf @PORNO1_8449
+wait 0
+jump @PORNO1_8418
+
+:PORNO1_8449
+040D: unload_wav 2
+03D5: remove_text 'POR1_11'  // Of course. As long as it's cheap and sleazy.
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+03CF: load_wav 'PORN1_8' as 1
+
+:PORNO1_8485
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_8511
+wait 0
+jump @PORNO1_8485
+
+:PORNO1_8511
+00BC: text_highpriority 'POR1_14' 4000 ms 1  // Heh heh - you're hired!
+03D1: play_wav 1
+
+:PORNO1_8530
+if
+83D2:   not wav 1 ended
+jf @PORNO1_8556
+wait 0
+jump @PORNO1_8530
+
+:PORNO1_8556
+040D: unload_wav 1
+03D5: remove_text 'POR1_14'  // Heh heh - you're hired!
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+03DE: set_pedestrians_density_multiplier_to 1.0
+if
+   not Actor.Dead($4377)
+jf @PORNO1_8610
+01DF: tie_actor $4377 to_player $PLAYER_CHAR
+
+:PORNO1_8610
+$4394 = 1 // integer values
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+00BB: text_lowpriority 'POR1_13' 5000 ms 1  // ~g~Take the girls back to the Studio to meet Steve.
+018A: $4385 = create_checkpoint_at -60.2 934.5 10.6
+
+:PORNO1_8665
+wait 0
+if
+   not Actor.Dead($4372)
+jf @PORNO1_9094
+if
+  2 > $4397 // integer values
+jf @PORNO1_9094
+if
+0320:   actor $4372 in_range_of_player $PLAYER_CHAR
+jf @PORNO1_9094
+if
+00E0:   player $PLAYER_CHAR driving
+jf @PORNO1_9094
+03C1: $4381 = player $PLAYER_CHAR car_no_save
+if
+   Actor.InCar($4372, $4381)
+jf @PORNO1_9094
+$4398 = Car.Health($4381)
+02E3: $4399 = car $4381 speed
+if
+  $4399 > 15.0 // floating-point values
+jf @PORNO1_9094
+if
+  $4397 == 0 // integer values
+jf @PORNO1_8948
+if
+  700 > $4398 // integer values
+jf @PORNO1_8948
+03CF: load_wav 'PRN1_18' as 1
+
+:PORNO1_8851
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_8877
+wait 0
+jump @PORNO1_8851
+
+:PORNO1_8877
+00BC: text_highpriority 'POR1_29' 4000 ms 1  // You call that driving?
+03D1: play_wav 1
+
+:PORNO1_8896
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_8927
+wait 0
+jump @PORNO1_8896
+
+:PORNO1_8927
+040D: unload_wav 1
+03D5: remove_text 'POR1_29'  // You call that driving?
+$4397 = 1 // integer values
+
+:PORNO1_8948
+if
+  $4397 == 1 // integer values
+jf @PORNO1_9094
+if
+  400 > $4398 // integer values
+jf @PORNO1_9094
+03CF: load_wav 'PRN1_20' as 1
+
+:PORNO1_8997
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_9023
+wait 0
+jump @PORNO1_8997
+
+:PORNO1_9023
+00BC: text_highpriority 'POR1_31' 4000 ms 1  // What? Are you trying to kill me? I thought I was the star!
+03D1: play_wav 1
+
+:PORNO1_9042
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_9073
+wait 0
+jump @PORNO1_9042
+
+:PORNO1_9073
+040D: unload_wav 1
+03D5: remove_text 'POR1_31'  // What? Are you trying to kill me? I thought I was the star!
+$4397 = 2 // integer values
+
+:PORNO1_9094
+if
+   not Actor.Dead($4372)
+jf @PORNO1_9531
+if
+  $4393 == 1 // integer values
+jf @PORNO1_9305
+if
+8320:   not actor $4372 in_range_of_player $PLAYER_CHAR
+jf @PORNO1_9305
+03CF: load_wav 'PRN1_13' as 1
+
+:PORNO1_9159
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_9185
+wait 0
+jump @PORNO1_9159
+
+:PORNO1_9185
+00BC: text_highpriority 'POR1_20' 4000 ms 1  // Tommy where are you going? Get back here!
+03D1: play_wav 1
+
+:PORNO1_9204
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_9235
+wait 0
+jump @PORNO1_9204
+
+:PORNO1_9235
+040D: unload_wav 1
+03D5: remove_text 'POR1_20'  // Tommy where are you going? Get back here!
+00BB: text_lowpriority 'POR1_25' 4000 ms 1  // ~g~You have left Candy behind, go and get her.
+Marker.Disable($4382)
+Marker.Disable($4385)
+if
+   not Actor.Dead($4372)
+jf @PORNO1_9298
+$4382 = Marker.CreateAboveActor($4372)
+
+:PORNO1_9298
+$4393 = 0 // integer values
+
+:PORNO1_9305
+if
+  $4393 == 0 // integer values
+jf @PORNO1_9524
+if
+00FB:   player $PLAYER_CHAR 0 $4372 radius 8.0 8.0 8.0
+jf @PORNO1_9524
+01DF: tie_actor $4372 to_player $PLAYER_CHAR
+03CF: load_wav 'PRN1_12' as 2
+
+:PORNO1_9379
+if
+83D0:   not wav 2 loaded
+jf @PORNO1_9405
+wait 0
+jump @PORNO1_9379
+
+:PORNO1_9405
+00BC: text_highpriority 'POR1_19' 4000 ms 1  // Hey!
+03D1: play_wav 2
+
+:PORNO1_9424
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4372)
+jf @PORNO1_9455
+wait 0
+jump @PORNO1_9424
+
+:PORNO1_9455
+040D: unload_wav 2
+03D5: remove_text 'POR1_19'  // Hey!
+Marker.Disable($4382)
+Marker.Disable($4385)
+if
+  $4394 == 1 // integer values
+jf @PORNO1_9517
+018A: $4385 = create_checkpoint_at -60.2 934.5 10.6
+
+:PORNO1_9517
+$4393 = 1 // integer values
+
+:PORNO1_9524
+jump @PORNO1_9553
+
+:PORNO1_9531
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO1_11164
+
+:PORNO1_9553
+if
+   not Actor.Dead($4377)
+jf @PORNO1_9990
+if
+  $4394 == 1 // integer values
+jf @PORNO1_9764
+if
+8320:   not actor $4377 in_range_of_player $PLAYER_CHAR
+jf @PORNO1_9764
+03CF: load_wav 'PRN1_14' as 1
+
+:PORNO1_9618
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_9644
+wait 0
+jump @PORNO1_9618
+
+:PORNO1_9644
+00BC: text_highpriority 'POR1_21' 4000 ms 1  // Where are you going?
+03D1: play_wav 1
+
+:PORNO1_9663
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4377)
+jf @PORNO1_9694
+wait 0
+jump @PORNO1_9663
+
+:PORNO1_9694
+040D: unload_wav 1
+03D5: remove_text 'POR1_21'  // Where are you going?
+00BC: text_highpriority 'TAXW3_1' 4000 ms 1  // ~g~Go and pick up Mercedes.
+Marker.Disable($4384)
+Marker.Disable($4385)
+if
+   not Actor.Dead($4377)
+jf @PORNO1_9757
+$4384 = Marker.CreateAboveActor($4377)
+
+:PORNO1_9757
+$4394 = 0 // integer values
+
+:PORNO1_9764
+if
+  $4394 == 0 // integer values
+jf @PORNO1_9983
+if
+00FB:   player $PLAYER_CHAR 0 $4377 radius 8.0 8.0 8.0
+jf @PORNO1_9983
+01DF: tie_actor $4377 to_player $PLAYER_CHAR
+03CF: load_wav 'PRN1_15' as 2
+
+:PORNO1_9838
+if
+83D0:   not wav 2 loaded
+jf @PORNO1_9864
+wait 0
+jump @PORNO1_9838
+
+:PORNO1_9864
+00BC: text_highpriority 'POR1_22' 4000 ms 1  // Tommy, when are we going to spend some time alone together?
+03D1: play_wav 2
+
+:PORNO1_9883
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4377)
+jf @PORNO1_9914
+wait 0
+jump @PORNO1_9883
+
+:PORNO1_9914
+040D: unload_wav 2
+03D5: remove_text 'POR1_22'  // Tommy, when are we going to spend some time alone together?
+Marker.Disable($4384)
+Marker.Disable($4385)
+if
+  $4393 == 1 // integer values
+jf @PORNO1_9976
+018A: $4385 = create_checkpoint_at -60.2 934.5 10.6
+
+:PORNO1_9976
+$4394 = 1 // integer values
+
+:PORNO1_9983
+jump @PORNO1_10012
+
+:PORNO1_9990
+00BC: text_highpriority 'POR1_18' 5000 ms 1  // ~r~Mercedes is dead!
+jump @PORNO1_11164
+
+:PORNO1_10012
+if
+  $4394 == 1 // integer values
+jf @PORNO1_10263
+if
+  $4393 == 1 // integer values
+jf @PORNO1_10263
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10263
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10263
+if
+00F5:   player $PLAYER_CHAR 1 -65.0 934.1 9.8 radius 5.0 5.0 5.0
+jf @PORNO1_10263
+if
+00FE:   actor $4372 0 -65.0 934.1 9.8 radius 5.0 5.0 5.0
+jf @PORNO1_10263
+if
+00FE:   actor $4377 0 -65.0 934.1 9.8 radius 5.0 5.0 5.0
+jf @PORNO1_10263
+if
+00E0:   player $PLAYER_CHAR driving
+jf @PORNO1_10256
+00DA: $4378 = player $PLAYER_CHAR car
+$97 = Car.Angle($4378)
+
+:PORNO1_10256
+jump @PORNO1_10270
+
+:PORNO1_10263
+jump @PORNO1_8665
+
+:PORNO1_10270
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+if
+   not Car.Wrecked($4378)
+jf @PORNO1_10325
+Car.PutAt($4378, -54.0, 942.1, 9.8)
+Car.Angle($4378) = $97
+
+:PORNO1_10325
+Camera.SetPosition(-50.7, 927.4, 10.1, 0.0, 0.0, 0.0)
+Camera.PointAt(-85.3, 960.7, 22.7, 2)
+03CF: load_wav 'PRN1_10' as 1
+03CF: load_wav 'PORN1_9' as 2
+
+:PORNO1_10400
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO1_10430
+wait 0
+jump @PORNO1_10400
+
+:PORNO1_10430
+00BC: text_highpriority 'POR1_15' 4000 ms 1  // Tommy, you coming in for a warm-up?
+03D1: play_wav 2
+
+:PORNO1_10449
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4377)
+jf @PORNO1_10480
+wait 0
+jump @PORNO1_10449
+
+:PORNO1_10480
+040D: unload_wav 2
+03D5: remove_text 'POR1_15'  // Tommy, you coming in for a warm-up?
+00BC: text_highpriority 'POR1_16' 4000 ms 1  // Maybe later, babe...
+03D1: play_wav 1
+
+:PORNO1_10513
+if
+83D2:   not wav 1 ended
+jf @PORNO1_10539
+wait 0
+jump @PORNO1_10513
+
+:PORNO1_10539
+040D: unload_wav 1
+03D5: remove_text 'POR1_16'  // Maybe later, babe...
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10595
+01E0: clear_leader $4372
+if
+   Actor.Driving($4372)
+jf @PORNO1_10595
+03E2: actor $4372 exit_car
+
+:PORNO1_10595
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10637
+01E0: clear_leader $4377
+if
+   Actor.Driving($4377)
+jf @PORNO1_10637
+03E2: actor $4377 exit_car
+
+:PORNO1_10637
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10653
+
+:PORNO1_10653
+if
+   Actor.Driving($4372)
+jf @PORNO1_10696
+wait 0
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10689
+
+:PORNO1_10689
+jump @PORNO1_10653
+
+:PORNO1_10696
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10712
+
+:PORNO1_10712
+if
+   Actor.Driving($4377)
+jf @PORNO1_10755
+wait 0
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10748
+
+:PORNO1_10748
+jump @PORNO1_10712
+
+:PORNO1_10755
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10791
+011C: actor $4372 clear_objective
+0211: actor $4372 walk_to -75.25 930.9
+
+:PORNO1_10791
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10827
+011C: actor $4377 clear_objective
+0211: actor $4377 walk_to -75.25 930.9
+
+:PORNO1_10827
+Camera.SetPosition(-63.3, 933.9, 12.9, 0.0, 0.0, 0.0)
+Camera.PointAt(-78.1, 930.8, 10.5, 2)
+if
+   not Actor.Dead($4377)
+jf @PORNO1_10914
+Actor.PutAt($4377, -62.3, 933.6, 9.9)
+
+:PORNO1_10914
+if
+   not Actor.Dead($4372)
+jf @PORNO1_10950
+Actor.PutAt($4372, -62.3, 935.6, 9.9)
+
+:PORNO1_10950
+17@ = 0 // integer values
+
+:PORNO1_10957
+if and
+80EC:   not actor $4372 0 -75.25 930.9 radius 1.0 1.0
+  8000 > 17@ // integer values
+jf @PORNO1_11030
+wait 0
+if
+   not Actor.Dead($4372)
+jf @PORNO1_11023
+
+:PORNO1_11023
+jump @PORNO1_10957
+
+:PORNO1_11030
+03CF: load_wav 'PRN1_11' as 1
+
+:PORNO1_11042
+if
+83D0:   not wav 1 loaded
+jf @PORNO1_11068
+wait 0
+jump @PORNO1_11042
+
+:PORNO1_11068
+00BC: text_highpriority 'POR1_17' 4000 ms 1  // Whoa, cool shark!
+03D1: play_wav 1
+
+:PORNO1_11087
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4372)
+jf @PORNO1_11118
+wait 0
+jump @PORNO1_11087
+
+:PORNO1_11118
+040D: unload_wav 1
+03D5: remove_text 'POR1_17'  // Whoa, cool shark!
+Actor.DestroyInstantly($4372)
+Actor.DestroyInstantly($4377)
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+jump @PORNO1_11181
+
+:PORNO1_11164
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:PORNO1_11181
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 1000
+030C: progress_made += 1
+0318: set_latest_mission_passed 'PORN_1'  // Recruitment Drive
+create_thread @PORN2
+$257 = 1 // integer values
+return
+
+:PORNO1_11249
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Model.Destroy(#WMYPI)
+Model.Destroy(#BMYCR)
+Model.Destroy(#BMYBB)
+Model.Destroy(#WMYST)
+Model.Destroy(#HMYRI)
+Model.Destroy(#SENTINEL)
+Model.Destroy(#BAT)
+Model.Destroy(#TEC9)
+Model.Destroy(#STRETCH)
+Actor.DestroyWithFade($4372)
+Actor.DestroyWithFade($4377)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Marker.Disable($4382)
+Marker.Disable($4384)
+Marker.Disable($4383)
+Marker.Disable($4385)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return

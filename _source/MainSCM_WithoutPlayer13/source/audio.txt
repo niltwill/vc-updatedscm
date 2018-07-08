@@ -1,0 +1,379 @@
+:AUDIO
+thread 'AUDIO'
+set_wb_check_to 0
+create_thread @AUDIO1
+end_thread
+
+:AUDIO1
+thread 'AUDIO1'
+$1559 = 0 // integer values
+$1560 = 0 // integer values
+$1561 = 0 // integer values
+$1565 = 0 // integer values
+$1566 = 0 // integer values
+$1567 = 0 // integer values
+$1571 = 0 // integer values
+$1572 = 0 // integer values
+$1573 = 0 // integer values
+$1579 = 0 // integer values
+$1576 = 0 // integer values
+$1577 = 0 // integer values
+
+:AUDIO1_94
+wait 500
+00BF: $9 = current_time_hours, $10 = current_time_minutes
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AUDIO1_1790
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @AUDIO1_403
+if
+  $275 == 0 // integer values
+jf @AUDIO1_212
+if
+  $1559 == 0 // integer values
+jf @AUDIO1_212
+018D: $1556 = create_sound 36 at -596.018 640.916 12.0
+$1559 = 1 // integer values
+
+:AUDIO1_212
+if
+  $275 == 1 // integer values
+jf @AUDIO1_295
+if
+  $276 == 0 // integer values
+jf @AUDIO1_295
+if
+  $1560 == 0 // integer values
+jf @AUDIO1_295
+018D: $1557 = create_sound 37 at -596.018 640.916 12.0
+$1560 = 1 // integer values
+
+:AUDIO1_295
+if
+  $275 == 1 // integer values
+jf @AUDIO1_396
+if
+  $276 == 1 // integer values
+jf @AUDIO1_396
+if
+  $277 == 0 // integer values
+jf @AUDIO1_396
+if
+  $1561 == 0 // integer values
+jf @AUDIO1_396
+018D: $1558 = create_sound 38 at -596.018 640.916 12.0
+$1561 = 1 // integer values
+
+:AUDIO1_396
+jump @AUDIO1_493
+
+:AUDIO1_403
+if
+  $1559 == 1 // integer values
+jf @AUDIO1_433
+018E: stop_sound $1556
+$1559 = 0 // integer values
+
+:AUDIO1_433
+if
+  $1560 == 1 // integer values
+jf @AUDIO1_463
+018E: stop_sound $1557
+$1560 = 0 // integer values
+
+:AUDIO1_463
+if
+  $1561 == 1 // integer values
+jf @AUDIO1_493
+018E: stop_sound $1558
+$1561 = 0 // integer values
+
+:AUDIO1_493
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @AUDIO1_893
+if or
+  $9 >= 23 // integer values
+  7 > $9 // integer values
+jf @AUDIO1_610
+if and
+  $1565 == 0 // integer values
+  $1566 == 0 // integer values
+  $1567 == 0 // integer values
+jf @AUDIO1_603
+018D: $1562 = create_sound 40 at 494.652 -83.347 10.032
+$1565 = 1 // integer values
+
+:AUDIO1_603
+jump @AUDIO1_640
+
+:AUDIO1_610
+if
+  $1565 == 1 // integer values
+jf @AUDIO1_640
+018E: stop_sound $1562
+$1565 = 0 // integer values
+
+:AUDIO1_640
+if and
+  $9 >= 7 // integer values
+  15 > $9 // integer values
+jf @AUDIO1_733
+if and
+  $1566 == 0 // integer values
+  $1565 == 0 // integer values
+  $1567 == 0 // integer values
+jf @AUDIO1_726
+018D: $1563 = create_sound 41 at 494.652 -83.347 10.032
+$1566 = 1 // integer values
+
+:AUDIO1_726
+jump @AUDIO1_763
+
+:AUDIO1_733
+if
+  $1566 == 1 // integer values
+jf @AUDIO1_763
+018E: stop_sound $1563
+$1566 = 0 // integer values
+
+:AUDIO1_763
+if and
+  $9 >= 15 // integer values
+  23 > $9 // integer values
+jf @AUDIO1_856
+if and
+  $1567 == 0 // integer values
+  $1565 == 0 // integer values
+  $1566 == 0 // integer values
+jf @AUDIO1_849
+018D: $1564 = create_sound 42 at 494.652 -83.347 10.032
+$1567 = 1 // integer values
+
+:AUDIO1_849
+jump @AUDIO1_886
+
+:AUDIO1_856
+if
+  $1567 == 1 // integer values
+jf @AUDIO1_886
+018E: stop_sound $1564
+$1567 = 0 // integer values
+
+:AUDIO1_886
+jump @AUDIO1_983
+
+:AUDIO1_893
+if
+  $1565 == 1 // integer values
+jf @AUDIO1_923
+018E: stop_sound $1562
+$1565 = 0 // integer values
+
+:AUDIO1_923
+if
+  $1566 == 1 // integer values
+jf @AUDIO1_953
+018E: stop_sound $1563
+$1566 = 0 // integer values
+
+:AUDIO1_953
+if
+  $1567 == 1 // integer values
+jf @AUDIO1_983
+018E: stop_sound $1564
+$1567 = 0 // integer values
+
+:AUDIO1_983
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @AUDIO1_1532
+if or
+  $9 >= 23 // integer values
+  7 > $9 // integer values
+jf @AUDIO1_1100
+if and
+  $1571 == 0 // integer values
+  $1572 == 0 // integer values
+  $1573 == 0 // integer values
+jf @AUDIO1_1093
+018D: $1568 = create_sound 43 at 87.738 -1456.117 11.0
+$1571 = 1 // integer values
+
+:AUDIO1_1093
+jump @AUDIO1_1130
+
+:AUDIO1_1100
+if
+  $1571 == 1 // integer values
+jf @AUDIO1_1130
+018E: stop_sound $1568
+$1571 = 0 // integer values
+
+:AUDIO1_1130
+if and
+  $9 >= 7 // integer values
+  15 > $9 // integer values
+jf @AUDIO1_1223
+if and
+  $1572 == 0 // integer values
+  $1571 == 0 // integer values
+  $1573 == 0 // integer values
+jf @AUDIO1_1216
+018D: $1569 = create_sound 44 at 87.738 -1456.117 11.0
+$1572 = 1 // integer values
+
+:AUDIO1_1216
+jump @AUDIO1_1253
+
+:AUDIO1_1223
+if
+  $1572 == 1 // integer values
+jf @AUDIO1_1253
+018E: stop_sound $1569
+$1572 = 0 // integer values
+
+:AUDIO1_1253
+if and
+  $9 >= 15 // integer values
+  23 > $9 // integer values
+jf @AUDIO1_1346
+if and
+  $1573 == 0 // integer values
+  $1571 == 0 // integer values
+  $1572 == 0 // integer values
+jf @AUDIO1_1339
+018D: $1570 = create_sound 45 at 87.738 -1456.117 11.0
+$1573 = 1 // integer values
+
+:AUDIO1_1339
+jump @AUDIO1_1376
+
+:AUDIO1_1346
+if
+  $1573 == 1 // integer values
+jf @AUDIO1_1376
+018E: stop_sound $1570
+$1573 = 0 // integer values
+
+:AUDIO1_1376
+if
+  $9 == 10 // integer values
+jf @AUDIO1_1448
+if
+  $1579 == 0 // integer values
+jf @AUDIO1_1441
+018D: $1578 = create_sound 46 at -76.074 -1528.485 13.397
+$1579 = 1 // integer values
+
+:AUDIO1_1441
+jump @AUDIO1_1478
+
+:AUDIO1_1448
+if
+  $1579 == 1 // integer values
+jf @AUDIO1_1478
+018E: stop_sound $1578
+$1579 = 0 // integer values
+
+:AUDIO1_1478
+if
+  $1576 == 0 // integer values
+jf @AUDIO1_1525
+018D: $1574 = create_sound 51 at -67.015 -1546.671 11.485
+$1576 = 1 // integer values
+
+:AUDIO1_1525
+jump @AUDIO1_1682
+
+:AUDIO1_1532
+if
+  $1571 == 1 // integer values
+jf @AUDIO1_1562
+018E: stop_sound $1568
+$1571 = 0 // integer values
+
+:AUDIO1_1562
+if
+  $1572 == 1 // integer values
+jf @AUDIO1_1592
+018E: stop_sound $1569
+$1572 = 0 // integer values
+
+:AUDIO1_1592
+if
+  $1573 == 1 // integer values
+jf @AUDIO1_1622
+018E: stop_sound $1570
+$1573 = 0 // integer values
+
+:AUDIO1_1622
+if
+  $1579 == 1 // integer values
+jf @AUDIO1_1652
+018E: stop_sound $1578
+$1579 = 0 // integer values
+
+:AUDIO1_1652
+if
+  $1576 == 1 // integer values
+jf @AUDIO1_1682
+018E: stop_sound $1574
+$1576 = 0 // integer values
+
+:AUDIO1_1682
+if
+0121:   player $PLAYER_CHAR in_zone 'PORNI'  // Prawn Island
+jf @AUDIO1_1760
+if
+  $1577 == 0 // integer values
+jf @AUDIO1_1753
+018D: $1575 = create_sound 51 at 9.637 1092.344 17.211
+$1577 = 1 // integer values
+
+:AUDIO1_1753
+jump @AUDIO1_1790
+
+:AUDIO1_1760
+if
+  $1577 == 1 // integer values
+jf @AUDIO1_1790
+018E: stop_sound $1575
+$1577 = 0 // integer values
+
+:AUDIO1_1790
+jump @AUDIO1_94
+
+
+:AUDIO_POSTMISSION_MONO
+wait 5000
+if 0256:   player $PLAYER_CHAR defined
+then
+	if 0@ == 1  // Rub Out post mission monologue
+	then
+		03CF: load_wav 'MONO_4' as 2
+	end
+
+	if 0@ == 2  // Death Row post mission monologue
+	then
+		03CF: load_wav 'MONO11' as 2
+	end
+
+	while 83D0:   not wav 2 loaded
+		wait 0
+	end
+
+	if 0256:   player $PLAYER_CHAR defined
+	then
+		03D1: play_wav 2
+
+		while 83D2:   not wav 2 ended
+			wait 0
+		end
+	end
+
+	040D: unload_wav 2
+end
+004E: end_thread

@@ -1,0 +1,1260 @@
+:PICKUPS
+thread 'PICKUPS'
+set_wb_check_to 0
+wait 100
+create_thread @PACKAGE
+
+:PICKUPS_26
+wait 0
+$1333 += 1 // integer values
+
+if
+  $1333 == 1 // integer values
+jf @PICKUPS_1540
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1540
+if
+  $1088 == 1 // integer values
+jf @PICKUPS_822
+if
+  $1332 == 0 // integer values
+jf @PICKUPS_815
+if
+  $273 == 1 // integer values
+jf @PICKUPS_568
+$1325 = Object.Init(#MONEYBAG, 228.934, -1269.593, 20.228)
+
+:PICKUPS_568
+if
+  $255 == 1 // integer values
+jf @PICKUPS_608
+$1326 = Object.Init(#BOOMSHINE, 228.934, -1269.593, 20.228)
+
+:PICKUPS_608
+if
+  $251 == 1 // integer values
+jf @PICKUPS_648
+$1327 = Object.Init(#MASK, 228.934, -1269.593, 20.228)
+
+:PICKUPS_648
+if
+  $PASSED_ASS1_RUB_OUT == 1 // integer values
+jf @PICKUPS_688
+$1328 = Object.Init(#COKE_VOODOO, 228.934, -1269.593, 20.228)
+
+:PICKUPS_688
+if
+  $249 == 1 // integer values
+jf @PICKUPS_728
+$1329 = Object.Init(#TROPHY1, 228.934, -1269.593, 20.228)
+
+:PICKUPS_728
+if
+  $PASSED_LAW1_THE_PARTY == 1 // integer values
+jf @PICKUPS_768
+$1330 = Object.Init(#SUTIBAG, 228.934, -1269.593, 20.228)
+
+:PICKUPS_768
+if
+  $260 == 1 // integer values
+jf @PICKUPS_808
+$1331 = Object.Init(#PORNPOSTERS, 228.934, -1269.593, 20.228)
+
+:PICKUPS_808
+$1332 = 1 // integer values
+
+:PICKUPS_815
+jump @PICKUPS_882
+
+:PICKUPS_822
+if
+  $1332 == 1 // integer values
+jf @PICKUPS_882
+Object.Destroy($1325)
+Object.Destroy($1326)
+Object.Destroy($1327)
+Object.Destroy($1328)
+Object.Destroy($1329)
+Object.Destroy($1330)
+Object.Destroy($1331)
+$1332 = 0 // integer values
+
+:PICKUPS_882
+if
+  $991 == 1 // integer values
+jf @PICKUPS_1445
+if
+  $1336 == 0 // integer values
+jf @PICKUPS_1438
+if
+  $266 == 0 // integer values
+jf @PICKUPS_965
+$1349 = Object.Init(#FRAME1, -378.394, -583.35, 27.078)
+jump @PICKUPS_987
+
+:PICKUPS_965
+$1350 = Object.Init(#FRAME1DAMAGED, -378.374, -583.35, 27.078)
+
+:PICKUPS_987
+if
+  $1311 == 1 // integer values
+jf @PICKUPS_1027
+$1337 = Object.Init(#FLAME_TINS, -373.306, -593.374, 25.369)
+
+:PICKUPS_1027
+if
+  $1598 == 1 // integer values
+jf @PICKUPS_1103
+if
+  $55 == 1 // integer values
+jf @PICKUPS_1103
+if
+  $1597 == 1 // integer values
+jf @PICKUPS_1103
+$1338 = Object.Init(#TROPHIES, -408.907, -560.001, 20.23)
+
+:PICKUPS_1103
+if
+  $245 == 1 // integer values
+jf @PICKUPS_1143
+$1339 = Object.Init(#HELI_BOX, -401.955, -566.672, 19.234)
+Object.CollisionDetection($1339) = True
+
+:PICKUPS_1143
+if
+  $389 == 1 // integer values
+jf @PICKUPS_1183
+$1347 = Object.Init(#PIZZA_BOX1, -406.211, -559.996, 18.654)
+
+:PICKUPS_1183
+if
+  $260 == 1 // integer values
+jf @PICKUPS_1311
+$1345 = Object.Init(#PIZZA_MESS, -383.088, -556.169, 18.95)
+$1346 = Object.Init(#PIZZA_MESS2, -385.024, -570.197, 21.58)
+$1340 = Object.Init(#MAN_RUBBISH03, -379.201, -568.813, 20.695)
+$1343 = Object.Init(#GASH_BAGS1, -408.239, -563.1, 19.054)
+$1344 = Object.Init(#GASHBAGS2, -383.019, -596.235, 25.037)
+
+:PICKUPS_1311
+if
+  $259 == 1 // integer values
+jf @PICKUPS_1351
+$1348 = Object.Init(#POLOROIDS, -374.306, -593.35, 26.475)
+
+:PICKUPS_1351
+if
+  $251 == 1 // integer values
+jf @PICKUPS_1391
+$1342 = Object.Init(#GUN_DOCS, -381.008, -594.382, 25.389)
+
+:PICKUPS_1391
+if
+  $246 == 1 // integer values
+jf @PICKUPS_1431
+$1341 = Object.Init(#SHOVEL, -375.566, -555.54, 19.15)
+Object.CollisionDetection($1341) = True
+
+:PICKUPS_1431
+$1336 = 1 // integer values
+
+:PICKUPS_1438
+jump @PICKUPS_1540
+
+:PICKUPS_1445
+if
+  $1336 == 1 // integer values
+jf @PICKUPS_1540
+Object.Destroy($1337)
+Object.Destroy($1338)
+Object.Destroy($1339)
+Object.Destroy($1340)
+Object.Destroy($1341)
+Object.Destroy($1342)
+Object.Destroy($1343)
+Object.Destroy($1344)
+Object.Destroy($1345)
+Object.Destroy($1346)
+Object.Destroy($1347)
+Object.Destroy($1348)
+Object.Destroy($1349)
+Object.Destroy($1350)
+$1336 = 0 // integer values
+
+:PICKUPS_1540
+if
+  $1333 == 2 // integer values
+jf @PICKUPS_1882
+if
+  $1180 == 0 // integer values
+jf @PICKUPS_1882
+if
+  $1278 == 1 // integer values
+jf @PICKUPS_1657
+if
+   Pickup.Picked_up($1297)
+jf @PICKUPS_1657
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1650
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER'
+04CF:  50
+
+:PICKUPS_1650
+gosub @PACKAGE_795
+
+:PICKUPS_1657
+if
+    $PASSED_HAT1_JUJU_SCRAMBLE == 1 // integer values
+jf @PICKUPS_1720
+if
+   Pickup.Picked_up($2096)
+jf @PICKUPS_1720
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1713
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAY11'
+04CF:  50
+
+:PICKUPS_1713
+gosub @PACKAGE_795
+
+:PICKUPS_1720
+if
+  $91 == 1 // integer values
+jf @PICKUPS_1801
+if
+   Pickup.Picked_up($1352)
+jf @PICKUPS_1801
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1794
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAY12'
+04CF:  120
+
+:PICKUPS_1794
+gosub @PACKAGE_795
+
+:PICKUPS_1801
+if
+  $1300 == 1 // integer values
+jf @PICKUPS_1882
+if
+   Pickup.Picked_up($1298)
+jf @PICKUPS_1882
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1875
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER'
+04CF:  50
+
+:PICKUPS_1875
+gosub @PACKAGE_795
+
+:PICKUPS_1882
+if
+  $1333 == 3 // integer values
+jf @PICKUPS_2404
+if
+  $1180 == 0 // integer values
+jf @PICKUPS_2404
+if
+  $1277 == 1 // integer values
+jf @PICKUPS_1999
+if
+   Pickup.Picked_up($1284)
+jf @PICKUPS_1999
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_1992
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER'
+04CF:  50
+
+:PICKUPS_1992
+gosub @PACKAGE_795
+
+:PICKUPS_1999
+if
+  $1265 == 1 // integer values
+jf @PICKUPS_2080
+if
+   Pickup.Picked_up($1285)
+jf @PICKUPS_2080
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2073
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER2'
+04CF:  100
+
+:PICKUPS_2073
+gosub @PACKAGE_795
+
+:PICKUPS_2080
+if
+  $1266 == 1 // integer values
+jf @PICKUPS_2161
+if
+   Pickup.Picked_up($1286)
+jf @PICKUPS_2161
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2154
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER3'
+04CF:  80
+
+:PICKUPS_2154
+gosub @PACKAGE_795
+
+:PICKUPS_2161
+if
+  $1267 == 1 // integer values
+jf @PICKUPS_2242
+if
+   Pickup.Picked_up($1287)
+jf @PICKUPS_2242
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2235
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER4'
+04CF:  40
+
+:PICKUPS_2235
+gosub @PACKAGE_795
+
+:PICKUPS_2242
+if
+  $1268 == 1 // integer values
+jf @PICKUPS_2323
+if
+   Pickup.Picked_up($1288)
+jf @PICKUPS_2323
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2316
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER5'
+04CF:  70
+
+:PICKUPS_2316
+gosub @PACKAGE_795
+
+:PICKUPS_2323
+if
+  $1269 == 1 // integer values
+jf @PICKUPS_2404
+if
+   Pickup.Picked_up($1289)
+jf @PICKUPS_2404
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2397
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER6'
+04CF:  90
+
+:PICKUPS_2397
+gosub @PACKAGE_795
+
+:PICKUPS_2404
+if
+  $1333 == 4 // integer values
+jf @PICKUPS_2764
+if
+  $1180 == 0 // integer values
+jf @PICKUPS_2764
+if
+  $1270 == 1 // integer values
+jf @PICKUPS_2521
+if
+   Pickup.Picked_up($1290)
+jf @PICKUPS_2521
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2514
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER8'
+04CF:  120
+
+:PICKUPS_2514
+gosub @PACKAGE_795
+
+:PICKUPS_2521
+if
+  $1271 == 1 // integer values
+jf @PICKUPS_2602
+if
+   Pickup.Picked_up($1291)
+jf @PICKUPS_2602
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2595
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER9'
+04CF:  30
+
+:PICKUPS_2595
+gosub @PACKAGE_795
+
+:PICKUPS_2602
+if
+  $1272 == 1 // integer values
+jf @PICKUPS_2683
+if
+   Pickup.Picked_up($1292)
+jf @PICKUPS_2683
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2676
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAY10'
+04CF:  100
+
+:PICKUPS_2676
+gosub @PACKAGE_795
+
+:PICKUPS_2683
+if
+  $1276 == 1 // integer values
+jf @PICKUPS_2730
+if
+   Pickup.Picked_up($1296)
+jf @PICKUPS_2730
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2757
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER7'
+04CF:  120
+
+:PICKUPS_2757
+gosub @PACKAGE_795
+
+:PICKUPS_2730
+if
+  $277 == 1 // integer values
+jf @PICKUPS_2764
+if
+   Pickup.Picked_up($MC_CLOTHES)
+jf @PICKUPS_2764
+gosub @PACKAGE_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_2735
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAY13'
+04CF:  150
+
+:PICKUPS_2735
+gosub @PACKAGE_795
+
+:PICKUPS_2764
+if
+  $1333 == 5 // integer values
+jf @PICKUPS_3215
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_3215
+if
+  $PASSED_ASS1_RUB_OUT == 1 // integer values
+jf @PICKUPS_3215
+if
+0121:   player $PLAYER_CHAR in_zone 'STARI'  // Starfish Island
+jf @PICKUPS_3183
+if
+  $1315 == 0 // integer values
+jf @PICKUPS_3176
+if
+  $1309 == 1 // integer values
+jf @PICKUPS_2900
+$1318 = Pickup.Create(#BODYARMOUR, 15, -314.7, -551.2, 10.3)
+
+:PICKUPS_2900
+if
+  $1310 == 1 // integer values
+jf @PICKUPS_2943
+$1319 = Pickup.Create(#CHNSAW, 15, -310.7, -551.2, 10.3)
+
+:PICKUPS_2943
+if
+  $1308 == 1 // integer values
+jf @PICKUPS_2988
+032B: $1320 = create_weapon_pickup #PYTHON 15 ammo 24 at -306.7 -551.2 10.3
+
+:PICKUPS_2988
+if
+  $1311 == 1 // integer values
+jf @PICKUPS_3033
+032B: $1321 = create_weapon_pickup #FLAME 15 ammo 60 at -302.7 -551.2 10.3
+
+:PICKUPS_3033
+if
+  $1312 == 1 // integer values
+jf @PICKUPS_3078
+032B: $1322 = create_weapon_pickup #LASER 15 ammo 28 at -298.7 -551.2 10.3
+
+:PICKUPS_3078
+if
+  $1313 == 1 // integer values
+jf @PICKUPS_3124
+032B: $1323 = create_weapon_pickup #MINIGUN 15 ammo 500 at -294.7 -551.2 10.3
+
+:PICKUPS_3124
+if
+  $1314 == 1 // integer values
+jf @PICKUPS_3169
+032B: $1324 = create_weapon_pickup #ROCKETLA 15 ammo 8 at -290.7 -551.2 10.3
+
+:PICKUPS_3169
+$1315 = 1 // integer values
+
+:PICKUPS_3176
+jump @PICKUPS_3215
+
+:PICKUPS_3183
+if
+  $1315 == 1 // integer values
+jf @PICKUPS_3215
+gosub @PACKAGE_636
+$1315 = 0 // integer values
+
+:PICKUPS_3215
+if
+  $1333 == 6 // integer values
+jf @PICKUPS_3666
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_3666
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @PICKUPS_3634
+if
+  $1088 == 1 // integer values
+jf @PICKUPS_3627
+if
+  $1316 == 0 // integer values
+jf @PICKUPS_3627
+if
+  $1309 == 1 // integer values
+jf @PICKUPS_3351
+$1318 = Pickup.Create(#BODYARMOUR, 15, 214.2, -1275.7, 19.2)
+
+:PICKUPS_3351
+if
+  $1310 == 1 // integer values
+jf @PICKUPS_3394
+$1319 = Pickup.Create(#CHNSAW, 15, 210.2, -1274.7, 19.2)
+
+:PICKUPS_3394
+if
+  $1308 == 1 // integer values
+jf @PICKUPS_3439
+032B: $1320 = create_weapon_pickup #PYTHON 15 ammo 24 at 206.2 -1273.7 19.2
+
+:PICKUPS_3439
+if
+  $1311 == 1 // integer values
+jf @PICKUPS_3484
+032B: $1321 = create_weapon_pickup #FLAME 15 ammo 60 at 224.2 -1273.1 19.2
+
+:PICKUPS_3484
+if
+  $1312 == 1 // integer values
+jf @PICKUPS_3529
+032B: $1322 = create_weapon_pickup #LASER 15 ammo 28 at 228.2 -1279.2 19.2
+
+:PICKUPS_3529
+if
+  $1313 == 1 // integer values
+jf @PICKUPS_3575
+032B: $1323 = create_weapon_pickup #MINIGUN 15 ammo 500 at 226.0 -1268.6 20.1
+
+:PICKUPS_3575
+if
+  $1314 == 1 // integer values
+jf @PICKUPS_3620
+032B: $1324 = create_weapon_pickup #ROCKETLA 15 ammo 8 at 231.7 -1264.4 20.1
+
+:PICKUPS_3620
+$1316 = 1 // integer values
+
+:PICKUPS_3627
+jump @PICKUPS_3666
+
+:PICKUPS_3634
+if
+  $1316 == 1 // integer values
+jf @PICKUPS_3666
+gosub @PACKAGE_636
+$1316 = 0 // integer values
+
+:PICKUPS_3666
+if
+  $1333 == 7 // integer values
+jf @PICKUPS_4117
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_4117
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @PICKUPS_4085
+if
+  $1795 == 1 // integer values
+jf @PICKUPS_4078
+if
+  $1317 == 0 // integer values
+jf @PICKUPS_4078
+if
+  $1309 == 1 // integer values
+jf @PICKUPS_3802
+$1318 = Pickup.Create(#BODYARMOUR, 15, -813.1, 1344.7, 66.4)
+
+:PICKUPS_3802
+if
+  $1310 == 1 // integer values
+jf @PICKUPS_3845
+$1319 = Pickup.Create(#CHNSAW, 15, -817.1, 1344.7, 66.4)
+
+:PICKUPS_3845
+if
+  $1308 == 1 // integer values
+jf @PICKUPS_3890
+032B: $1320 = create_weapon_pickup #PYTHON 15 ammo 24 at -821.1 1344.7 66.4
+
+:PICKUPS_3890
+if
+  $1311 == 1 // integer values
+jf @PICKUPS_3935
+032B: $1321 = create_weapon_pickup #FLAME 15 ammo 60 at -825.1 1344.7 66.4
+
+:PICKUPS_3935
+if
+  $1312 == 1 // integer values
+jf @PICKUPS_3980
+032B: $1322 = create_weapon_pickup #LASER 15 ammo 28 at -830.1 1344.7 66.4
+
+:PICKUPS_3980
+if
+  $1313 == 1 // integer values
+jf @PICKUPS_4026
+032B: $1323 = create_weapon_pickup #MINIGUN 15 ammo 500 at -833.1 1344.7 66.4
+
+:PICKUPS_4026
+if
+  $1314 == 1 // integer values
+jf @PICKUPS_4071
+032B: $1324 = create_weapon_pickup #ROCKETLA 15 ammo 8 at -839.0 1351.6 66.4
+
+:PICKUPS_4071
+$1317 = 1 // integer values
+
+:PICKUPS_4078
+jump @PICKUPS_4117
+
+:PICKUPS_4085
+if
+  $1317 == 1 // integer values
+jf @PICKUPS_4117
+gosub @PACKAGE_636
+$1317 = 0 // integer values
+
+:PICKUPS_4117
+if
+  $1333 == 8 // integer values
+jf @PICKUPS_4445
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_4299
+if
+  $260 == 1 // integer values
+jf @PICKUPS_4299
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @PICKUPS_4299
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4223
+gosub @PACKAGE_953
+jump @PICKUPS_4246
+
+:PICKUPS_4223
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4246
+gosub @PACKAGE_953
+
+:PICKUPS_4246
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4276
+gosub @PACKAGE_1097
+jump @PICKUPS_4299
+
+:PICKUPS_4276
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4299
+gosub @PACKAGE_1097
+
+:PICKUPS_4299
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_4445
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @PICKUPS_4445
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4369
+gosub @PACKAGE_1529
+jump @PICKUPS_4392
+
+:PICKUPS_4369
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4392
+gosub @PACKAGE_1529
+
+:PICKUPS_4392
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4422
+gosub @PACKAGE_1673
+jump @PICKUPS_4445
+
+:PICKUPS_4422
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4445
+gosub @PACKAGE_1673
+
+:PICKUPS_4445
+if
+  $1333 == 9 // integer values
+jf @PICKUPS_4627
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PICKUPS_4627
+if
+  $1795 == 1 // integer values
+jf @PICKUPS_4627
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @PICKUPS_4627
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4551
+gosub @PACKAGE_1241
+jump @PICKUPS_4574
+
+:PICKUPS_4551
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4574
+gosub @PACKAGE_1241
+
+:PICKUPS_4574
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @PICKUPS_4604
+gosub @PACKAGE_1385
+jump @PICKUPS_4627
+
+:PICKUPS_4604
+if
+044A:   player $PLAYER_CHAR on_foot
+jf @PICKUPS_4627
+gosub @PACKAGE_1385
+
+:PICKUPS_4627
+if
+  $1333 > 9 // integer values
+jf @PICKUPS_4652
+$1333 = 0 // integer values
+
+:PICKUPS_4652
+jump @PICKUPS_26
+
+:CLOTH1
+thread 'CLOTH1'
+wait 5000
+03E5: text_box 'CLOTH2'  // Street outfit delivered to Safehouses.
+wait 10000
+03E5: text_box 'CLOTH1'  // Soiree outfit delivered to Rafael's on Ocean Beach.
+end_thread
+
+:CLOTH2
+thread 'CLOTH2'
+wait 5000
+03E5: text_box 'HELP25'  // You can now take jobs from Avery Carrington.
+wait 10000
+03E5: text_box 'CLOTH3'  // Coveralls outfit delivered to Tooled Up in The North Point Mall.
+end_thread
+
+:CLOTH3
+thread 'CLOTH3'
+wait 5000
+03E5: text_box 'CLOTH4'  // Country Club outfit delivered to The Golf Club in Leaf Links.
+end_thread
+
+:CLOTH4
+thread 'CLOTH4'
+wait 5000
+03E5: text_box 'CLOTH5'  // Havana outfit delivered to Little Havana Streetwear in Little Havana.
+end_thread
+
+:CLOTH5
+thread 'CLOTH5'
+wait 5000
+03E5: text_box 'CLOTH6'  // Cop outfit delivered to Police Station on Washington Beach.
+end_thread
+
+:CLOTH6
+thread 'CLOTH6'
+wait 5000
+03E5: text_box 'CLOTH7'  // Casual outfit delivered to Gash in The North Point Mall.
+end_thread
+
+:CLOTH7
+thread 'CLOTH7'
+wait 20000
+03E5: text_box 'CLOTH8'  // Mr Vercetti outfit delivered to Collar & Cuffs on Ocean Beach.
+end_thread
+
+:CLOTH8
+thread 'CLOTH8'
+wait 5000
+03E5: text_box 'CLOTH9'  // Black Tracksuit outfit delivered to Jocksport in Downtown.
+end_thread
+
+:CLOTH9
+thread 'CLOTH9'
+wait 5000
+03E5: text_box 'CLOTH10'  // Bank Job outfit delivered to Malibu Club in Vice Point.
+end_thread
+
+:CLOTH10
+thread 'CLOTH10'
+wait 5000
+03E5: text_box 'CLOTH11'  // MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
+end_thread
+
+:CLOTH11
+thread 'CLOTH11'
+wait 5000
+03E5: text_box 'CLOTH12'  // Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
+end_thread
+
+:PACKAGE
+thread 'PACKAGE'
+wait 500
+03E1: $1306 = packages_found
+
+:PACKAGE_20
+if
+  10 > $1306 // integer values
+jf @PACKAGE_55
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_20
+
+:PACKAGE_55
+030C: progress_made += 1
+03E5: text_box 'PICK1'  // Body Armor delivered to Ocean View Hotel!
+$1309 = 1 // integer values
+
+:PACKAGE_76
+if
+  20 > $1306 // integer values
+jf @PACKAGE_111
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_76
+
+:PACKAGE_111
+030C: progress_made += 1
+03E5: text_box 'PICK3'  // Chainsaw delivered to Ocean View Hotel!
+$1310 = 1 // integer values
+
+:PACKAGE_132
+if
+  30 > $1306 // integer values
+jf @PACKAGE_167
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_132
+
+:PACKAGE_167
+030C: progress_made += 1
+03E5: text_box 'PICK2'  // .357 delivered to Ocean View Hotel!
+$1308 = 1 // integer values
+
+:PACKAGE_188
+if
+  40 > $1306 // integer values
+jf @PACKAGE_223
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_188
+
+:PACKAGE_223
+030C: progress_made += 1
+03E5: text_box 'PICK4'  // Flame Thrower delivered to Ocean View Hotel!
+$1311 = 1 // integer values
+
+:PACKAGE_244
+if
+  50 > $1306 // integer values
+jf @PACKAGE_279
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_244
+
+:PACKAGE_279
+030C: progress_made += 1
+03E5: text_box 'PICK5'  // .308 Sniper delivered to Ocean View Hotel!
+$1312 = 1 // integer values
+
+:PACKAGE_300
+if
+  60 > $1306 // integer values
+jf @PACKAGE_335
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_300
+
+:PACKAGE_335
+030C: progress_made += 1
+03E5: text_box 'PICK6'  // Minigun delivered to Ocean View Hotel!
+$1313 = 1 // integer values
+
+:PACKAGE_356
+if
+  70 > $1306 // integer values
+jf @PACKAGE_391
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_356
+
+:PACKAGE_391
+030C: progress_made += 1
+03E5: text_box 'PICK7'  // Rocket Launcher delivered to Ocean View Hotel!
+$1314 = 1 // integer values
+
+:PACKAGE_412
+if
+  80 > $1306 // integer values
+jf @PACKAGE_447
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_412
+
+:PACKAGE_447
+030C: progress_made += 1
+if
+    $PASSED_ASS1_RUB_OUT == 1
+then
+03E5: text_box 'PICK8'  // Sea Sparrow now available from Vercetti Estate on Starfish Island!
+else
+03E5: text_box 'PICK8B'  // Sea Sparrow now available from Diaz's Mansion on Starfish Island!
+end
+014C: set_parked_car_generator $1977 cars_to_generate_to 101
+
+:PACKAGE_468
+if
+  90 > $1306 // integer values
+jf @PACKAGE_503
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_468
+
+:PACKAGE_503
+030C: progress_made += 1
+03E5: text_box 'PICK9'  // Tank now available from the Army Barracks!
+014C: set_parked_car_generator $1978 cars_to_generate_to 101
+
+:PACKAGE_524
+if
+  100 > $1306 // integer values
+jf @PACKAGE_559
+wait 500
+03E1: $1306 = packages_found
+jump @PACKAGE_524
+
+:PACKAGE_559
+wait 5000
+030C: progress_made += 1
+if
+  $2097 == 0 // integer values
+jf @PACKAGE_617
+03E5: text_box 'PICK10'  // Hunter now available from the Army Barracks!
+014C: set_parked_car_generator $1979 cars_to_generate_to 101
+$2097 = 1 // integer values
+jump @PACKAGE_634
+
+:PACKAGE_617
+03E5: text_box 'APACHE'  // Hunter delivered to helipad in Ocean Beach.
+014C: set_parked_car_generator $2098 cars_to_generate_to 101
+
+:PACKAGE_634
+end_thread
+
+:PACKAGE_636
+Pickup.Destroy($1318)
+Pickup.Destroy($1319)
+Pickup.Destroy($1320)
+Pickup.Destroy($1321)
+Pickup.Destroy($1322)
+Pickup.Destroy($1323)
+Pickup.Destroy($1324)
+return
+
+:PACKAGE_673
+$1180 = 1 // integer values
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_742
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_711
+if
+fading
+jf @PACKAGE_735
+wait 0
+jump @PACKAGE_711
+
+:PACKAGE_735
+jump @PACKAGE_749
+
+:PACKAGE_742
+$1180 = 0 // integer values
+
+:PACKAGE_749
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_786
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Player.CanMove($PLAYER_CHAR) = False
+jump @PACKAGE_793
+
+:PACKAGE_786
+$1180 = 0 // integer values
+
+:PACKAGE_793
+return
+
+:PACKAGE_795
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_944
+038B: load_requested_models
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_834
+0353: refresh_actor $PLAYER_ACTOR
+
+:PACKAGE_834
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+if
+   not Player.WantedLevel($PLAYER_CHAR) > 2
+jf @PACKAGE_864
+Player.ClearWantedLevel($PLAYER_CHAR)
+
+:PACKAGE_864
+Player.CanMove($PLAYER_CHAR) = True
+$1180 = 0 // integer values
+fade 1 500
+if
+  $1351 == 0 // integer values
+jf @PACKAGE_927
+03E5: text_box 'CLT_HL2'  // When a Clothes Pickup is collected, a one star or two star wanted level will be cleared.
+$1351 = 1 // integer values
+jump @PACKAGE_937
+
+:PACKAGE_927
+03E5: text_box 'CLOHELP'  // Clean Clothes!!
+
+:PACKAGE_937
+jump @PACKAGE_951
+
+:PACKAGE_944
+$1180 = 0 // integer values
+
+:PACKAGE_951
+return
+
+:PACKAGE_953
+if
+00F5:   player $PLAYER_CHAR 0 -557.1 782.1 21.8 radius 2.5 2.5 2.5
+jf @PACKAGE_1095
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1016
+if
+fading
+jf @PACKAGE_1040
+wait 0
+jump @PACKAGE_1016
+
+:PACKAGE_1040
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1088
+0055: put_player $PLAYER_CHAR at -556.1 787.8 96.5
+0171: set_player $PLAYER_CHAR z_angle_to 100.5
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1088
+fade 1 500
+
+:PACKAGE_1095
+return
+
+:PACKAGE_1097
+if
+00F5:   player $PLAYER_CHAR 0 -551.8 787.4 97.5 radius 2.5 2.5 2.5
+jf @PACKAGE_1239
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1160
+if
+fading
+jf @PACKAGE_1184
+wait 0
+jump @PACKAGE_1160
+
+:PACKAGE_1184
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1232
+0055: put_player $PLAYER_CHAR at -562.1 782.0 21.8
+0171: set_player $PLAYER_CHAR z_angle_to 100.5
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1232
+fade 1 500
+
+:PACKAGE_1239
+return
+
+:PACKAGE_1241
+if
+00F5:   player $PLAYER_CHAR 0 -830.9 1312.4 10.5 radius 2.5 2.5 2.5
+jf @PACKAGE_1383
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1304
+if
+fading
+jf @PACKAGE_1328
+wait 0
+jump @PACKAGE_1304
+
+:PACKAGE_1328
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1376
+0055: put_player $PLAYER_CHAR at -815.0 1353.9 65.4
+0171: set_player $PLAYER_CHAR z_angle_to 87.2
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1376
+fade 1 500
+
+:PACKAGE_1383
+return
+
+:PACKAGE_1385
+if
+00F5:   player $PLAYER_CHAR 0 -811.7 1354.2 66.4 radius 2.5 2.5 2.5
+jf @PACKAGE_1527
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1448
+if
+fading
+jf @PACKAGE_1472
+wait 0
+jump @PACKAGE_1448
+
+:PACKAGE_1472
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1520
+0055: put_player $PLAYER_CHAR at -829.6 1308.8 10.5
+0171: set_player $PLAYER_CHAR z_angle_to 200.0
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1520
+fade 1 500
+
+:PACKAGE_1527
+return
+
+:PACKAGE_1529
+if
+00F5:   player $PLAYER_CHAR 0 -410.5 1120.9 10.1 radius 2.5 2.5 2.5
+jf @PACKAGE_1671
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1592
+if
+fading
+jf @PACKAGE_1616
+wait 0
+jump @PACKAGE_1592
+
+:PACKAGE_1616
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1664
+0055: put_player $PLAYER_CHAR at -446.9 1128.3 55.6
+0171: set_player $PLAYER_CHAR z_angle_to 282.0
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1664
+fade 1 500
+
+:PACKAGE_1671
+return
+
+:PACKAGE_1673
+if
+00F5:   player $PLAYER_CHAR 0 -451.1 1128.1 55.6 radius 2.5 2.5 2.5
+jf @PACKAGE_1815
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PACKAGE_1736
+if
+fading
+jf @PACKAGE_1760
+wait 0
+jump @PACKAGE_1736
+
+:PACKAGE_1760
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PACKAGE_1808
+0055: put_player $PLAYER_CHAR at -410.5 1117.7 10.0
+0171: set_player $PLAYER_CHAR z_angle_to 179.6
+03C8: set_camera_directly_before_player
+
+:PACKAGE_1808
+fade 1 500
+
+:PACKAGE_1815
+return

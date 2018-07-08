@@ -1,0 +1,132 @@
+:BUYPRO2
+thread 'BUYPRO2'
+$ONMISSION = 1 // integer values
+wait 0
+Marker.Disable($256)
+Marker.Disable($629)
+030C: progress_made += 1
+015C: set_zone_gang_info 'PORNSTU' 1 4 0 0 0 0 0 0 1000 0 0 0
+015C: set_zone_gang_info 'PORNSTU' 0 5 0 0 0 0 0 0 1000 0 0 0
+022A: remove_forbidden_for_peds_cube -112.495 920.349 0.0 9.705 1025.694 30.0
+0169: set_fade_color 0 0 1
+fade 0 500
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+
+:BUYPRO2_170
+if
+fading
+jf @BUYPRO2_237
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO2_230
+02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473
+create_thread @PORN1
+end_thread
+
+:BUYPRO2_230
+jump @BUYPRO2_170
+
+:BUYPRO2_237
+Object.Destroy($FILM_STUDIO_FRONT_GATE_CLOSED)
+Object.Destroy($FILM_STUDIO_BACK_GATE_CLOSED)
+$FILM_STUDIO_FRONT_GATE_OPEN = Object.Init(#CI_GATESOPEN, 10.273, 963.308, 12.258)
+Object.RemoveFromMissionCleanupList($FILM_STUDIO_FRONT_GATE_OPEN)
+$FILM_STUDIO_BACK_GATE_OPEN = Object.Init(#CI_BACKGATEOPEN, -14.381, 884.12, 13.542)
+Object.RemoveFromMissionCleanupList($FILM_STUDIO_BACK_GATE_OPEN)
+Object.Destroy($1811)
+$1810 = Object.Init(#CI_JETYGATESOPEN, -115.825, 1028.55, 11.334)
+Object.RemoveFromMissionCleanupList($1810)
+0395: clear_area 1 at 10.1629 963.4605 range 9.8996 1.0
+0055: put_player $PLAYER_CHAR at 10.1629 963.4605 9.8996
+0171: set_player $PLAYER_CHAR z_angle_to 84.6334
+02A3: enable_widescreen 1
+0169: set_fade_color 0 0 1
+fade 1 500
+Camera.SetPosition(75.8516, 976.8268, 41.9825, 0.0, 0.0, 0.0)
+Camera.PointAt(74.8664, 976.7122, 41.855, 2)
+
+:BUYPRO2_460
+if
+fading
+jf @BUYPRO2_527
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO2_520
+02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473
+create_thread @PORN1
+end_thread
+
+:BUYPRO2_520
+jump @BUYPRO2_460
+
+:BUYPRO2_527
+01E3: text_1number_styled 'PORNBUY' number $630 time 5000 style 6  // Film Studio purchased: $~1~
+0529: add $630 to_money_spent_on_property_stats
+0542: add_property 2 to_property_own_stats
+0394: play_music 1
+043C: set_game_sounds_disable_on_fade 0
+wait 4000
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO2_614
+043C: set_game_sounds_disable_on_fade 1
+02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473
+create_thread @PORN1
+end_thread
+
+:BUYPRO2_614
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:BUYPRO2_629
+if
+fading
+jf @BUYPRO2_700
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO2_693
+043C: set_game_sounds_disable_on_fade 1
+02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473
+create_thread @PORN1
+end_thread
+
+:BUYPRO2_693
+jump @BUYPRO2_629
+
+:BUYPRO2_700
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+02A3: enable_widescreen 0
+02A7: $256 = create_icon_marker_and_sphere $424 at $471 $472 $473
+create_thread @PORN1
+0169: set_fade_color 0 0 1
+fade 1 500
+
+:BUYPRO2_766
+if
+fading
+jf @BUYPRO2_812
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO2_805
+043C: set_game_sounds_disable_on_fade 1
+end_thread
+
+:BUYPRO2_805
+jump @BUYPRO2_766
+
+:BUYPRO2_812
+043C: set_game_sounds_disable_on_fade 1
+create_thread @PSAVE9
+$ONMISSION = 0 // integer values
+mission_cleanup
+end_thread

@@ -1,0 +1,85 @@
+This save-friendly version contains only fixes, but nothing that would make your old save game files crash or force you to start a new game.
+Audio additions are all removed because they might cause some ... bugs and then make it unable to complete the game..The old saved ones.
+Also there are no model changes of any kind. Though some vehicle additions exist as CLEO scripts.
+
+! Warning !
+Despite these changes not breaking old save games, in these saved games you _might_ see weird glitches like an unusual floating building,
+something misbehaving, or some missing collision. So use this at your own risk and it's still best practice to start a new game above all else to make sure everything goes smoothly!
+
+[*] The message 'Come back when you have finished the Biker gang missions.' is shown for 4 seconds instead of 1
+[*] Duration of Pole Position mission complete cutscene is slightly longer.
+[*] The Infernus spawn inside the mall is disabled during 'All Hands On Deck!'
+[*] The driver of Candy's car in 'Recruitment Drive' can no longer be shot while in the car.
+[*] The limo driver and Candy can no longer be shot while in the car in 'Martha's Mug Shot'. In addition, the driver no longer responds to threats and the limo is fireproof.
+[*] During 'Cannon Fodder', the player now leaves the taxi slightly before the Cubans, instead of right after.
+[*] The Voodoo's with Cubans in 'Trojan Voodoo' are now fireproof, and the Cubans no longer respond to threats.
+[*] The Topfun van is set to not be locked in position at the end of 'Bombs Away!'
+[*] Bugfix in 'Love Juice' regarding trying to pick up Mercedes. It is now only possible in a car or motorcycle (with exception Pizza Boy/Baggage) as per instructed. No more easy heli rides!
+[*] The player is now removed from any vehicle and the vehicle despawned after the intro cutscene in 'Publicity Tour' if he was in one.
+[*] Lance now appears as IGBudy3 instead of the usual IGBuddy in 'Death Row'.
+[*] Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
+[*] Dark sky glitch during 'Shakedown' and 'Bar Brawl' fixed
+[*] Speeder given by Cortez now matches colour of the one attached to the yacht.
+[*] Ingame maverick from "Phnom Penh '86" now matches the cutscene Maverick's colour
+[*] Tommy's sitting position inside the Maverick is now at the back seat in mission "Phnom Penh '86" (when picked up by Lance after you got the money)
+[*] Restored Tommy's speaking animation with the french in "Mall Shoutout" and with Lance in "Guardian Angels" (at the carpark).
+[*] Lance now does not disappear instantly in Guardian Angels after the bike ambush (if you ever looked back before getting on the bike, he just vanished without a trace...).
+[*] Fixed a player animation stuck bug in 'The Job' (when you get out of the car around the bank area).
+[*] Tommy now walks over to Lance's Stallion during the beginning of 'Rub Out'.
+[*] The hidden package under Starfish Island is no longer below the ground.
+[*] Player can move around after picking up the chef's cellphone, instead of being locked in place.
+[*] Solid black palette used for UC vehicles changed to a lighter shade (still black).
+[*] Tommy's clothes are no longer reverted to his default one when entering missions 'Riot', 'Four Iron', 'No Escape?', 'Cop Land'.
+[*] You can no longer block the courier's path with a car in "Mall Shootout" (at the exit).
+[*] In 'Hog Tied' mission, the shark gang members no longer fade away like ghosts.
+[*] In 'Hog Tied', Tommy no longer gets stuck when leaving the bike at the mission's end.
+[*] Cheetah, Infernus, Stretch and Banshee no longer disappears in "The Party".
+[*] Added two star wanted level if you fail the mission 'Waste the wife'
+[*] The GiGN no longer disappear after you chase after Pierre in the mission 'Mall Shootout'
+[*] The 'G-spotlight' mission now starts at 22:00 instead of 17:00
+[*] Fixed widescreen error at the end of G-spotlight
+[*] Decreased the speed of Hilary's Sabre Turbo a bit
+[*] Moved Candy closer to the limo in "Martha's Mug Shot"
+[*] In mission 'RC Bandit Race', randomized the vehicle colours (originally all were always the same colour)
+[*] Decreased the last target's bike speed in 'Autocide'
+[*] Vehicles and targets no longer instantly disappear in 'Autocide'
+[*] In 'Naval Engagement', fixed Rico standing far too close to the edge of the pier, also edited checkpoint to reflect this
+[*] In mission 'Cop Land', added alarm to the coffee shop once you blow it all to hell, also reduced the fade a little in an attempt to hide the transition
+[*] In 'Jury Fury', the woman the jury is talking to will now disappear (with running) instead of remaining in the alley motionlessly
+[*] The speed of drug dealer in 'Love Juice' is slightly decreased
+[*] In 'Treacherous Swine', after you start the mission (finished initial cutscene) in the black fade you can no longer move (previously you can accidently get into the water)
+[*] In 'Treacherous Swine', at the penthouse, if you park a vehicle near the entrance it will now disappear when Gonzales is leaving
+[*] After you release the Squalo in 'The Fastest Boat', an alarm will sound off
+[*] Fixed the stuck animation in 'The Fastest Boat' after releasing the Squalo
+[*] Fixed widescreen errors in Avery missions
+[*] The player can no longer move before the cutscenes in Avery missions (previously you could even move enough to KO yourself with the limo)
+[*] Limos now have unique colors in 'Keep Your Friends Close'
+[*] Fixed dark sky glitch after cutscene in 'The Fastest Boat'
+[*] Fixed cutscene's end when buying the Cherry Popper Icecreams asset (previously the old lady remains visible)
+[*] Lance is no longer visible when you go back after you got the briefcase in 'Guardian Angels'
+[*] Slightly increased detection of the pizzabox because sometimes when you toss the pizza at them, they don't comprehend it
+[*] Moved Phil to back seat of Patriot in 'Boomshine Saigon'
+[*] Rico's boat is now removed after completing 'Stunt Boat Challenge'
+[*] In 'Autocide' when you quickly kill both Marcus Hammond and Franco Carter, game will no longer say they have noticed you
+[*] In 'Cop Land' ending at the "asset text" display, the camera is moved to hide the 'see-through' entrance
+[*] Tommy is relocated at the back seat of the Admiral in intro cutscene
+[*] Fix some male actors being created as female ones
+[*] You now need to get into a car to pass the mission in 'Treacherous Swine'
+[*] Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)
+[*] Increased bike's health in 'G-spotlight'
+[*] GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
+[*] Phil now sits in the left side of the Patriot in Boomshine Saigon
+[*] In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger
+[*] Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)
+[*] The target in 'Four Iron' will now escape when you hit him with a (not-so-deadly) weapon from the distance (otherwise if you do not get too close, you can easily kill him without him moving an inch)
+[*] No more infinite ammo with the pistol in 'The Shootist' in the first round, and you can also no longer shoot before the message "live ammunition..."
+[*] "Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing
+[*] Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
+[*] Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
+[*] In 'Jury Fury', damaging the Admiral will now make the jury enter the car instead of just doing nothing
+[*] The bike in 'G-Spotlight' is now damage-proof
+[*] Cubans entering your vehicle at the start of 'Cannon Fodder' now takes longer than two seconds
+[*] The third Cuban should also die now if he somewhat gets stuck while charging at the sniper
+[*] Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)
+[*] In 'V.I.P.', fixed looped arrow marker (that's the reason behind why it seemed standstill) and delivering him with the rival taxi will no longer fail the mission
+[*] Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)

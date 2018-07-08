@@ -1,0 +1,2201 @@
+:HAIT1
+thread 'HAIT1'
+gosub @HAIT1_46
+if
+wasted_or_busted
+jf @HAIT1_37
+gosub @HAIT1_5502
+
+:HAIT1_37
+gosub @HAIT1_5585
+end_thread
+
+:HAIT1_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$5721 = 0 // integer values
+$5722 = 0 // integer values
+$5723 = -1162.82 // floating-point values
+$5724 = -19.06 // floating-point values
+$5725 = 16.14 // floating-point values
+$5726 = 0 // integer values
+$5728 = -1154.48 // floating-point values
+$5729 = -30.59 // floating-point values
+$5730 = 19.08 // floating-point values
+$5731 = 12.22 // floating-point values
+$5733 = -1160.49 // floating-point values
+$5734 = -30.37 // floating-point values
+$5735 = 19.08 // floating-point values
+$5736 = 12.22 // floating-point values
+$5738 = -1142.84 // floating-point values
+$5739 = -6.34 // floating-point values
+$5740 = 22.97 // floating-point values
+$5741 = 84.66 // floating-point values
+$5743 = -1143.56 // floating-point values
+$5744 = -16.69 // floating-point values
+$5745 = 22.9 // floating-point values
+$5746 = 84.66 // floating-point values
+$5749 = 0 // integer values
+$5750 = 0 // integer values
+$5752 = -995.87 // floating-point values
+$5753 = -32.49 // floating-point values
+$5754 = 10.89 // floating-point values
+$5751 = 61000 // integer values
+$5835 = 0 // integer values
+$5836 = 0 // integer values
+$5755 = 0 // integer values
+$5756 = 0 // integer values
+$5757 = 0 // integer values
+$5760 = 0 // integer values
+$5761 = -966.67 // floating-point values
+$5762 = -36.7 // floating-point values
+$5763 = -100.0 // floating-point values
+$5764 = 90.0 // floating-point values
+$5765 = 100 // integer values
+$5805 = 0 // integer values
+$5767 = 0 // integer values
+$5768 = -969.82 // floating-point values
+$5769 = -46.22 // floating-point values
+$5770 = 9.91 // floating-point values
+$5771 = 0.0 // floating-point values
+$5772 = 100 // integer values
+$5774 = 0 // integer values
+$5775 = 0 // integer values
+$5777 = 0 // integer values
+$5778 = -968.1 // floating-point values
+$5779 = -28.41 // floating-point values
+$5780 = 9.94 // floating-point values
+$5781 = 0.0 // floating-point values
+$5782 = 100 // integer values
+$5783 = 0 // integer values
+$5785 = 0 // integer values
+$5788 = 0 // integer values
+$5789 = 0 // integer values
+$5791 = -914.55 // floating-point values
+$5792 = 344.73 // floating-point values
+$5793 = -100.0 // floating-point values
+$5790 = 61000 // integer values
+$5809 = 0 // integer values
+$5794 = 0 // integer values
+$5795 = 0 // integer values
+$5795 = 0 // integer values
+$5797 = 0 // integer values
+$5799 = 0 // integer values
+$5800 = -904.85 // floating-point values
+$5801 = 299.418 // floating-point values
+$5802 = 10.26 // floating-point values
+$5803 = 0.0 // floating-point values
+$5804 = 100 // integer values
+$5806 = 0 // integer values
+$5810 = 0 // integer values
+$5811 = -903.07 // floating-point values
+$5812 = 299.196 // floating-point values
+$5813 = 10.26 // floating-point values
+$5814 = 0.0 // floating-point values
+$5815 = -914.55 // floating-point values
+$5816 = 344.73 // floating-point values
+$5817 = 10.26 // floating-point values
+$5818 = 100 // integer values
+$5824 = 0 // integer values
+$5826 = 0 // integer values
+$5827 = -957.891 // floating-point values
+$5828 = 139.084 // floating-point values
+$5829 = 8.26 // floating-point values
+$5830 = 0 // integer values
+$5831 = 0 // integer values
+$5832 = 0 // integer values
+$5833 = 0 // integer values
+$5834 = 0 // integer values
+$5819 = 0 // integer values
+$5820 = 0 // integer values
+$5821 = 0 // integer values
+$5839 = 0.0 // floating-point values
+$5840 = 0.0 // floating-point values
+$5841 = 0.0 // floating-point values
+$5843 = 0 // integer values
+$5847 = -990.11 // floating-point values
+$5848 = -34.5 // floating-point values
+$5849 = 9.72 // floating-point values
+$5850 = 0 // integer values
+$5851 = 0 // integer values
+$5852 = -913.827 // floating-point values
+$5853 = 325.343 // floating-point values
+$5854 = 10.249 // floating-point values
+$5855 = 0 // integer values
+$5856 = 0 // integer values
+$5857 = 0 // integer values
+$5858 = 0 // integer values
+$5859 = 0 // integer values
+$5860 = 0 // integer values
+$5861 = 0 // integer values
+$5862 = 0 // integer values
+wait 0
+054C: use_GXT_table 'HAIT1'
+058E: set_restart_mission_taxi_destination -957.904 122.843 8.278 356.948
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'APOULET'
+02F3: load_object #CUTOBJ01 'HTABLE'
+02F3: load_object #CUTOBJ02 'KETTLE'
+Camera.SetAtPos(-962.697, 149.793, 10.21)
+select_interior 12
+04F9: set_extracolors 13 fade 0
+038B: load_requested_models
+
+:HAIT1_1168
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @HAIT1_1208
+wait 0
+jump @HAIT1_1168
+
+:HAIT1_1208
+02E4: load_cutscene_data 'HAT_1'
+0244: set_cutscene_pos -962.799 148.391 8.355
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $170 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $170 'APOULET'
+02E5: $214 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $214 'HTABLE'
+02E5: $213 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $213 'KETTLE'
+0395: clear_area 1 at -962.53 141.69 range 8.25 2.0
+0055: put_player $PLAYER_CHAR at -962.53 141.69 8.25
+0171: set_player $PLAYER_CHAR z_angle_to 183.42
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:HAIT1_1400
+if
+  2089 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1435
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1400
+
+:HAIT1_1435
+00BC: text_highpriority 'HAM1_A' 10000 ms 1  // Hello? Hello?
+
+:HAIT1_1450
+if
+  6844 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1485
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1450
+
+:HAIT1_1485
+00BC: text_highpriority 'HAM1_B' 10000 ms 1  // Come in, my dear, and rest your soul.
+
+:HAIT1_1500
+if
+  9955 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1535
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1500
+
+:HAIT1_1535
+00BC: text_highpriority 'HAM1_C' 10000 ms 1  // You must be the big bad man me grandaddy been chattin' 'bout.
+
+:HAIT1_1550
+if
+  13943 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1585
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1550
+
+:HAIT1_1585
+00BC: text_highpriority 'HAM1_D' 10000 ms 1  // Tells me tings about you, you know, when he visits,
+
+:HAIT1_1600
+if
+  16609 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1635
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1600
+
+:HAIT1_1635
+00BC: text_highpriority 'HAM1_E' 10000 ms 1  // and about the others who wait for you.
+
+:HAIT1_1650
+if
+  19208 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1685
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1650
+
+:HAIT1_1685
+00BC: text_highpriority 'HAM1_F' 10000 ms 1  // Now, we all dead for long time, but you,
+
+:HAIT1_1700
+if
+  21822 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1735
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1700
+
+:HAIT1_1735
+00BC: text_highpriority 'HAM1_G' 10000 ms 1  // I wouldn't want to be in your shoes, ha ha ha ha ha!
+
+:HAIT1_1750
+if
+  24520 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1785
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1750
+
+:HAIT1_1785
+00BC: text_highpriority 'HAM1_H' 10000 ms 1  // I got a message to come here.
+
+:HAIT1_1800
+if
+  26563 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1835
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1800
+
+:HAIT1_1835
+00BC: text_highpriority 'HAM1_I' 10000 ms 1  // Can you hear dem?
+
+:HAIT1_1850
+if
+  28200 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1885
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1850
+
+:HAIT1_1885
+00BC: text_highpriority 'HAM1_J' 10000 ms 1  // Dem callin' your name, boy, must want you pretty bad, don't ya tink?
+
+:HAIT1_1900
+if
+  32697 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1935
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1900
+
+:HAIT1_1935
+00BC: text_highpriority 'HAM1_K' 10000 ms 1  // Now you do old Auntie Poulet a turn, huh, maybe she help you.
+
+:HAIT1_1950
+if
+  35049 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_1987
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_1950
+
+:HAIT1_1987
+00BC: text_highpriority 'HAM1_L' 10000 ms 1  // Maybe she can give you a little juju after all of dis.
+
+:HAIT1_2002
+if
+  39949 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2039
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2002
+
+:HAIT1_2039
+00BC: text_highpriority 'HAM1_M' 10000 ms 1  // Give you some magic to give the law man the stink eye, hmmmmm?
+
+:HAIT1_2054
+if
+  43624 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2091
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2054
+
+:HAIT1_2091
+00BC: text_highpriority 'HAM1_N' 10000 ms 1  // Look, this is all very, um... give me what?
+
+:HAIT1_2106
+if
+  47531 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2143
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2106
+
+:HAIT1_2143
+00BC: text_highpriority 'HAM1_O' 10000 ms 1  // I,I, I think I've got the wrong address...
+
+:HAIT1_2158
+if
+  49412 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2195
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2158
+
+:HAIT1_2195
+00BC: text_highpriority 'HAM1_P' 10000 ms 1  // Do me these tings, Tommy......
+
+:HAIT1_2210
+if
+  53234 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2247
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2210
+
+:HAIT1_2247
+00BC: text_highpriority 'HAM1_Q' 10000 ms 1  // The Cubans, nasty proud foofoos, mmm,
+
+:HAIT1_2262
+if
+  57817 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2299
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2262
+
+:HAIT1_2299
+00BC: text_highpriority 'HAM1_R' 10000 ms 1  // been making my lovely Haitian boys shake de heads.
+
+:HAIT1_2314
+if
+  61451 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2351
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2314
+
+:HAIT1_2351
+00BC: text_highpriority 'HAM1_S' 10000 ms 1  // Now they told the policeman where me been stashing my powders.
+
+:HAIT1_2366
+if
+  64655 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2403
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2366
+
+:HAIT1_2403
+00BC: text_highpriority 'HAM1_T' 10000 ms 1  // Dey tink it drugs, them stupid.
+
+:HAIT1_2418
+if
+  68336 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2455
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2418
+
+:HAIT1_2455
+00BC: text_highpriority 'HAM1_U' 10000 ms 1  // Now be a good boy Tommy and go and get the powders for Auntie Poulet.
+
+:HAIT1_2470
+if
+  74373 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2507
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2470
+
+:HAIT1_2507
+00BC: text_highpriority 'HAM1_V' 10000 ms 1  // Yeah, yeah, sure, sure.
+
+:HAIT1_2522
+if
+  77824 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2559
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2522
+
+:HAIT1_2559
+00BE: text_clear_all
+
+:HAIT1_2561
+if
+  80912 > $CUT_SCENE_TIME // integer values
+jf @HAIT1_2598
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT1_2561
+
+:HAIT1_2598
+fade 0 2000
+00BE: text_clear_all
+
+:HAIT1_2607
+if
+fading
+jf @HAIT1_2631
+wait 0
+jump @HAIT1_2607
+
+:HAIT1_2631
+04FA: reset_sky_colors_with_fade 0
+select_interior 0
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Camera.SetAtPos(-962.53, 141.69, 8.25)
+04E3: unknown_player $PLAYER_CHAR 0 60000
+Model.Load(#SWAT)
+Model.Load(#MP5LNG)
+Model.Load(#SNIPER)
+Model.Load(#NITESTICK)
+03CF: load_wav 'HAT_1A' as 1
+
+:HAIT1_2725
+if or
+   not Model.Available(#SWAT)
+   not Model.Available(#MP5LNG)
+   not Model.Available(#SNIPER)
+   not Model.Available(#NITESTICK)
+jf @HAIT1_2766
+wait 0
+jump @HAIT1_2725
+
+:HAIT1_2766
+if
+83D0:   not wav 1 loaded
+jf @HAIT1_2792
+wait 0
+jump @HAIT1_2766
+
+:HAIT1_2792
+$5766 = Actor.Create(CivMale, #SWAT, $5768, $5769, $5770)
+$5773 = Marker.CreateAboveActor($5766)
+Marker.Disable($5773)
+Actor.DestroyInstantly($5766)
+$5776 = Actor.Create(CivMale, #SWAT, $5778, $5779, $5780)
+$5784 = Marker.CreateAboveActor($5776)
+Marker.Disable($5784)
+Actor.DestroyInstantly($5776)
+$5747 = Pickup.Create(#BRIEFCASE, 3, $5752, $5753, $5754)
+03DC: $5758 = create_marker_above_pickup $5747
+Marker.Disable($5758)
+Pickup.Destroy($5747)
+$5808 = Actor.Create(CivMale, #SWAT, $5811, $5812, $5813)
+$5823 = Marker.CreateAboveActor($5808)
+Marker.Disable($5823)
+Actor.DestroyInstantly($5808)
+$5798 = Actor.Create(CivMale, #SWAT, $5800, $5801, $5802)
+$5807 = Marker.CreateAboveActor($5798)
+Marker.Disable($5807)
+Actor.DestroyInstantly($5798)
+$5786 = Pickup.Create(#BRIEFCASE, 3, $5791, $5792, $5793)
+03DC: $5796 = create_marker_above_pickup $5786
+Marker.Disable($5796)
+Pickup.Destroy($5786)
+$5727 = Actor.Create(CivMale, #SWAT, $5728, $5729, $5730)
+Actor.DestroyInstantly($5727)
+$5732 = Actor.Create(CivMale, #SWAT, $5733, $5734, $5735)
+Actor.DestroyInstantly($5732)
+$5737 = Actor.Create(CivMale, #SWAT, $5738, $5739, $5740)
+Actor.DestroyInstantly($5737)
+$5742 = Actor.Create(CivMale, #SWAT, $5743, $5744, $5745)
+Actor.DestroyInstantly($5742)
+$5842 = Actor.Create(Cop, #SWAT, -1168.36, -8.738, 15.72)
+Actor.DestroyInstantly($5842)
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 1500
+$5719 = Pickup.Create(#BRIEFCASE, 3, $5723, $5724, $5725)
+03DC: $5720 = create_marker_above_pickup $5719
+$5721 = 1 // integer values
+00BC: text_highpriority 'HAM1_1' 5000 ms 1  // ~g~The cops are closing in on our stashes. BE quick, and beat dem to it!
+$123 = 0 // integer values
+
+:HAIT1_3204
+if
+  $5826 == 0 // integer values
+jf @HAIT1_5158
+wait 0
+if
+  $5831 == 1 // integer values
+jf @HAIT1_3320
+if
+  $5861 == 0 // integer values
+jf @HAIT1_3276
+16@ = 0 // integer values
+$5861 = 1 // integer values
+
+:HAIT1_3276
+if
+  $5861 == 1 // integer values
+jf @HAIT1_3320
+if
+  16@ >= 1000 // integer values
+jf @HAIT1_3320
+$5861 = 2 // integer values
+
+:HAIT1_3320
+if
+  $5819 == 1 // integer values
+jf @HAIT1_3414
+if
+  $5862 == 0 // integer values
+jf @HAIT1_3370
+16@ = 0 // integer values
+$5862 = 1 // integer values
+
+:HAIT1_3370
+if
+  $5862 == 1 // integer values
+jf @HAIT1_3414
+if
+  16@ >= 1000 // integer values
+jf @HAIT1_3414
+$5862 = 2 // integer values
+
+:HAIT1_3414
+if
+  $5722 == 0 // integer values
+jf @HAIT1_3457
+if
+  $5721 == 1 // integer values
+jf @HAIT1_3457
+gosub @HAIT1_5902
+
+:HAIT1_3457
+if
+  $5722 == 1 // integer values
+jf @HAIT1_3500
+if
+  $5726 == 0 // integer values
+jf @HAIT1_3500
+gosub @HAIT1_6536
+
+:HAIT1_3500
+if
+  $5722 == 1 // integer values
+jf @HAIT1_3856
+if
+  $5726 == 1 // integer values
+jf @HAIT1_3856
+if
+  $5749 == 0 // integer values
+jf @HAIT1_3856
+0395: clear_area 0 at $5752 $5753 range $5754 1.0
+$5747 = Pickup.Create(#BRIEFCASE, 3, $5752, $5753, $5754)
+03DC: $5748 = create_marker_above_pickup $5747
+014E: start_timer_at $5751 count_in_direction 1
+0395: clear_area 0 at $5761 $5762 range $5763 1.0
+$5759 = Actor.Create(CivMale, #SWAT, $5761, $5762, $5763)
+01ED: clear_actor $5759 threat_search
+0243: set_actor $5759 ped_stats_to 16
+011A: set_actor $5759 search_threat 1
+01B2: give_actor $5759 weapon 28 ammo 30000 // Load the weapon model before using this
+0350: set_actor $5759 maintain_position_when_attacked 1
+01CA: actor $5759 kill_player $PLAYER_CHAR
+0395: clear_area 0 at $5768 $5769 range $5770 1.0
+$5766 = Actor.Create(CivMale, #SWAT, $5768, $5769, $5770)
+01ED: clear_actor $5766 threat_search
+0243: set_actor $5766 ped_stats_to 16
+01B2: give_actor $5766 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $5766 search_threat 1
+0291: set_actor $5766 attack_when_provoked 1
+Actor.Angle($5766) = 90.0
+0395: clear_area 0 at $5778 $5779 range $5780 1.0
+$5776 = Actor.Create(CivMale, #SWAT, $5778, $5779, $5780)
+01ED: clear_actor $5776 threat_search
+0243: set_actor $5776 ped_stats_to 16
+01B2: give_actor $5776 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $5776 search_threat 1
+0291: set_actor $5776 attack_when_provoked 1
+Actor.Angle($5776) = 90.0
+$5749 = 1 // integer values
+
+:HAIT1_3856
+if
+  $5726 == 1 // integer values
+jf @HAIT1_4042
+if or
+80E4:   not player $PLAYER_CHAR 0 $5839 $5840 radius 3.0 3.0
+02DF:   player $PLAYER_CHAR aggressive
+   Actor.Dead($5842)
+jf @HAIT1_4042
+if
+   not Actor.Dead($5727)
+jf @HAIT1_3949
+0350: set_actor $5727 maintain_position_when_attacked 1
+01CA: actor $5727 kill_player $PLAYER_CHAR
+
+:HAIT1_3949
+if
+   not Actor.Dead($5732)
+jf @HAIT1_3980
+0350: set_actor $5732 maintain_position_when_attacked 1
+01CA: actor $5732 kill_player $PLAYER_CHAR
+
+:HAIT1_3980
+if
+   not Actor.Dead($5737)
+jf @HAIT1_4011
+0350: set_actor $5737 maintain_position_when_attacked 1
+01CA: actor $5737 kill_player $PLAYER_CHAR
+
+:HAIT1_4011
+if
+   not Actor.Dead($5742)
+jf @HAIT1_4042
+0350: set_actor $5742 maintain_position_when_attacked 1
+01CA: actor $5742 kill_player $PLAYER_CHAR
+
+:HAIT1_4042
+if
+  $5749 == 1 // integer values
+jf @HAIT1_4067
+gosub @HAIT1_7316
+
+:HAIT1_4067
+if
+  $5756 == 1 // integer values
+jf @HAIT1_4092
+gosub @HAIT1_6163
+
+:HAIT1_4092
+if
+  $5750 == 0 // integer values
+jf @HAIT1_4135
+if
+  $5749 == 1 // integer values
+jf @HAIT1_4135
+gosub @HAIT1_5994
+
+:HAIT1_4135
+if
+  $5750 == 0 // integer values
+jf @HAIT1_4196
+if
+  $5749 == 1 // integer values
+jf @HAIT1_4196
+if
+  $5751 == 0 // integer values
+jf @HAIT1_4196
+$5831 = 1 // integer values
+
+:HAIT1_4196
+if
+  $5832 == 1 // integer values
+jf @HAIT1_4420
+if
+  $5774 == 1 // integer values
+jf @HAIT1_4317
+if
+   not Actor.Dead($5766)
+jf @HAIT1_4317
+if
+82CB:   not actor $5766 bounding_sphere_visible
+jf @HAIT1_4317
+if
+80E9:   not player $PLAYER_CHAR 0 $5766 radius 120.0 120.0
+jf @HAIT1_4317
+00BC: text_highpriority 'HAM1_2' 5000 ms 1  // ~r~The cops got to the stash first!
+jump @HAIT1_5502
+
+:HAIT1_4317
+if
+  $5785 == 1 // integer values
+jf @HAIT1_4420
+if
+   not Actor.Dead($5776)
+jf @HAIT1_4420
+if
+82CB:   not actor $5776 bounding_sphere_visible
+jf @HAIT1_4420
+if
+80E9:   not player $PLAYER_CHAR 0 $5776 radius 120.0 120.0
+jf @HAIT1_4420
+00BC: text_highpriority 'HAM1_2' 5000 ms 1  // ~r~The cops got to the stash first!
+jump @HAIT1_5502
+
+:HAIT1_4420
+if
+  $5757 == 1 // integer values
+jf @HAIT1_4460
+00BC: text_highpriority 'HAM1_6' 5000 ms 1  // ~r~The Stash was destroyed, you idiot!
+jump @HAIT1_5502
+
+:HAIT1_4460
+if or
+  $5750 == 1 // integer values
+  $5755 == 1 // integer values
+jf @HAIT1_4561
+if
+  $5788 == 0 // integer values
+jf @HAIT1_4561
+0395: clear_area 0 at $5791 $5792 range $5793 1.0
+$5786 = Pickup.Create(#BRIEFCASE, 3, $5791, $5792, $5793)
+03DC: $5787 = create_marker_above_pickup $5786
+014E: start_timer_at $5790 count_in_direction 1
+$5788 = 1 // integer values
+
+:HAIT1_4561
+if
+  $5789 == 0 // integer values
+jf @HAIT1_4604
+if
+  $5788 == 1 // integer values
+jf @HAIT1_4604
+gosub @HAIT1_6291
+
+:HAIT1_4604
+if
+  $5820 == 1 // integer values
+jf @HAIT1_4828
+if
+  $5805 == 1 // integer values
+jf @HAIT1_4725
+if
+   not Actor.Dead($5798)
+jf @HAIT1_4725
+if
+82CB:   not actor $5798 bounding_sphere_visible
+jf @HAIT1_4725
+if
+80E9:   not player $PLAYER_CHAR 0 $5798 radius 120.0 120.0
+jf @HAIT1_4725
+00BC: text_highpriority 'HAM1_2' 5000 ms 1  // ~r~The cops got to the stash first!
+jump @HAIT1_5502
+
+:HAIT1_4725
+if
+  $5822 == 1 // integer values
+jf @HAIT1_4828
+if
+   not Actor.Dead($5808)
+jf @HAIT1_4828
+if
+82CB:   not actor $5808 bounding_sphere_visible
+jf @HAIT1_4828
+if
+80E9:   not player $PLAYER_CHAR 0 $5808 radius 120.0 120.0
+jf @HAIT1_4828
+00BC: text_highpriority 'HAM1_2' 5000 ms 1  // ~r~The cops got to the stash first!
+jump @HAIT1_5502
+
+:HAIT1_4828
+if
+  $5794 == 1 // integer values
+jf @HAIT1_4868
+00BC: text_highpriority 'HAM1_6' 5000 ms 1  // ~r~The Stash was destroyed, you idiot!
+jump @HAIT1_5502
+
+:HAIT1_4868
+if
+  $5789 == 0 // integer values
+jf @HAIT1_4929
+if
+  $5788 == 1 // integer values
+jf @HAIT1_4929
+if
+  $5790 == 0 // integer values
+jf @HAIT1_4929
+$5819 = 1 // integer values
+
+:HAIT1_4929
+if or
+  $5750 == 1 // integer values
+  $5755 == 1 // integer values
+jf @HAIT1_4979
+if
+  $5833 == 0 // integer values
+jf @HAIT1_4979
+gosub @HAIT1_9209
+
+:HAIT1_4979
+if
+  $5833 == 1 // integer values
+jf @HAIT1_5004
+gosub @HAIT1_9437
+
+:HAIT1_5004
+if
+  $5824 == 3 // integer values
+jf @HAIT1_5151
+if
+  $5830 == 0 // integer values
+jf @HAIT1_5083
+00BC: text_highpriority 'HAM1_3' 5000 ms 1  // ~g~Get this stuff back to the hideout!
+018A: $5825 = create_checkpoint_at $5827 $5828 $5829
+$123 = 1 // integer values
+$5830 = 1 // integer values
+
+:HAIT1_5083
+if
+00F5:   player $PLAYER_CHAR $123 $5827 $5828 $5829 radius 2.0 2.0 2.0
+jf @HAIT1_5151
+if
+  $5826 == 0 // integer values
+jf @HAIT1_5151
+$5826 = 1 // integer values
+
+:HAIT1_5151
+jump @HAIT1_3204
+
+:HAIT1_5158
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+011C: actor $PLAYER_ACTOR clear_objective
+Actor.RemoveReferences($5798)
+Actor.RemoveReferences($5808)
+0395: clear_area 0 at -964.776 145.189 range 9.52 1.0
+Camera.SetPosition(-964.776, 145.189, 9.52, 0.0, 0.0, 0.0)
+Camera.PointAt(-964.032, 144.523, 9.479, 2)
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HAIT1_5355
+00DA: $5844 = player $PLAYER_CHAR car
+01D3: actor $PLAYER_ACTOR leave_car $5844
+
+:HAIT1_5305
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HAIT1_5355
+wait 0
+if
+   Car.Wrecked($5844)
+jf @HAIT1_5348
+jump @HAIT1_5502
+
+:HAIT1_5348
+jump @HAIT1_5305
+
+:HAIT1_5355
+0211: actor $PLAYER_ACTOR walk_to -962.708 145.443
+16@ = 0 // integer values
+
+:HAIT1_5377
+if
+  4500 > 16@ // integer values
+jf @HAIT1_5407
+wait 0
+jump @HAIT1_5377
+
+:HAIT1_5407
+011C: actor $PLAYER_ACTOR clear_objective
+0395: clear_area 0 at -965.265 142.855 range 8.23 1.0
+0055: put_player $PLAYER_CHAR at -965.265 142.855 8.23
+0171: set_player $PLAYER_CHAR z_angle_to 190.53
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+jump @HAIT1_5519
+
+:HAIT1_5502
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:HAIT1_5519
+$PASSED_HAT1_JUJU_SCRAMBLE = 1 // integer values
+0394: play_music 1
+0318: set_latest_mission_passed 'HAT_1'  // Juju Scramble
+030C: progress_made += 1
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 1000
+Player.ClearWantedLevel($PLAYER_CHAR)
+055B: $2096 = create_clothes_pickup 11 at -1200.3 -322.9 10.9
+create_thread @CLOTH10
+create_thread @HAT2
+return
+
+:HAIT1_5585
+$ONMISSION = 0 // integer values
+Model.Destroy(#SWAT)
+Model.Destroy(#MP5LNG)
+Model.Destroy(#SNIPER)
+Model.Destroy(#NITESTICK)
+Marker.Disable($5720)
+Marker.Disable($5748)
+Marker.Disable($5758)
+Marker.Disable($5787)
+Marker.Disable($5796)
+Marker.Disable($5825)
+Marker.Disable($5773)
+Marker.Disable($5784)
+Marker.Disable($5807)
+Marker.Disable($5823)
+014F: stop_timer $5751
+014F: stop_timer $5790
+if
+  $5721 == 1 // integer values
+jf @HAIT1_5712
+if
+  $5722 == 0 // integer values
+jf @HAIT1_5712
+Pickup.Destroy($5719)
+
+:HAIT1_5712
+if
+  $5749 == 1 // integer values
+jf @HAIT1_5760
+if or
+  $5750 == 0 // integer values
+  $5832 == 0 // integer values
+jf @HAIT1_5760
+Pickup.Destroy($5747)
+
+:HAIT1_5760
+if
+  $5755 == 0 // integer values
+jf @HAIT1_5806
+if
+  $5756 == 1 // integer values
+jf @HAIT1_5806
+Marker.Disable($5758)
+Pickup.Destroy($5747)
+
+:HAIT1_5806
+if
+  $5788 == 1 // integer values
+jf @HAIT1_5847
+if
+  $5789 == 0 // integer values
+jf @HAIT1_5847
+Pickup.Destroy($5786)
+
+:HAIT1_5847
+if
+  $5797 == 0 // integer values
+jf @HAIT1_5893
+if
+  $5795 == 1 // integer values
+jf @HAIT1_5893
+Marker.Disable($5796)
+Pickup.Destroy($5786)
+
+:HAIT1_5893
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:HAIT1_5902
+if
+  $5722 == 0 // integer values
+jf @HAIT1_5992
+if
+  $5721 == 1 // integer values
+jf @HAIT1_5992
+if
+   Pickup.Picked_up($5719)
+jf @HAIT1_5992
+Marker.Disable($5720)
+018C: play_sound 1 at 0.0 0.0 0.0
+$5824 += 1 // integer values
+$5722 = 1 // integer values
+
+:HAIT1_5992
+return
+
+:HAIT1_5994
+if
+  $5750 == 0 // integer values
+jf @HAIT1_6161
+if
+  $5749 == 1 // integer values
+jf @HAIT1_6161
+if
+  $5832 == 0 // integer values
+jf @HAIT1_6161
+if
+   Pickup.Picked_up($5747)
+jf @HAIT1_6161
+Actor.RemoveReferences($5727)
+Actor.RemoveReferences($5732)
+Actor.RemoveReferences($5737)
+Actor.RemoveReferences($5742)
+Actor.RemoveReferences($5842)
+Marker.Disable($5748)
+018C: play_sound 1 at 0.0 0.0 0.0
+014F: stop_timer $5751
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+00BC: text_highpriority 'HAM1_4' 5000 ms 1  // ~g~Good! Now get the next one!
+$5824 += 1 // integer values
+$5834 = 1 // integer values
+$5750 = 1 // integer values
+
+:HAIT1_6161
+return
+
+:HAIT1_6163
+if
+  $5755 == 0 // integer values
+jf @HAIT1_6289
+if
+   Pickup.Picked_up($5747)
+jf @HAIT1_6289
+Actor.RemoveReferences($5727)
+Actor.RemoveReferences($5732)
+Actor.RemoveReferences($5737)
+Actor.RemoveReferences($5742)
+Actor.RemoveReferences($5842)
+Marker.Disable($5758)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'HAM1_4' 5000 ms 1  // ~g~Good! Now get the next one!
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+$5824 += 1 // integer values
+$5834 = 1 // integer values
+$5755 = 1 // integer values
+
+:HAIT1_6289
+return
+
+:HAIT1_6291
+if
+  $5789 == 0 // integer values
+jf @HAIT1_6433
+if
+  $5788 == 1 // integer values
+jf @HAIT1_6433
+if
+  $5820 == 0 // integer values
+jf @HAIT1_6433
+if
+   Pickup.Picked_up($5786)
+jf @HAIT1_6433
+Actor.RemoveReferences($5759)
+Actor.RemoveReferences($5766)
+Actor.RemoveReferences($5776)
+Marker.Disable($5787)
+018C: play_sound 1 at 0.0 0.0 0.0
+014F: stop_timer $5790
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+$5824 += 1 // integer values
+$5821 = 1 // integer values
+$5789 = 1 // integer values
+
+:HAIT1_6433
+if
+  $5797 == 0 // integer values
+jf @HAIT1_6534
+if
+   Pickup.Picked_up($5786)
+jf @HAIT1_6534
+Actor.RemoveReferences($5759)
+Actor.RemoveReferences($5766)
+Actor.RemoveReferences($5776)
+Marker.Disable($5796)
+018C: play_sound 1 at 0.0 0.0 0.0
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+$5824 += 1 // integer values
+$5821 = 1 // integer values
+$5797 = 1 // integer values
+
+:HAIT1_6534
+return
+
+:HAIT1_6536
+if
+  $5726 == 0 // integer values
+jf @HAIT1_7314
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+0054: store_player $PLAYER_CHAR position_to $5839 $5840 $5841
+0395: clear_area 0 at $5728 $5729 range $5730 1.0
+$5727 = Actor.Create(CivMale, #SWAT, $5728, $5729, $5730)
+01ED: clear_actor $5727 threat_search
+01B2: give_actor $5727 weapon 25 ammo 30000 // Load the weapon model before using this
+020F: actor $5727 look_at_player $PLAYER_CHAR
+0372: set_actor $5727 anim 14 wait_state_time 800 ms
+04C6: actor $5727 do_kung_fu_stance_towards_actor $PLAYER_ACTOR
+0337: set_actor $5727 visibility 0
+02AB: set_actor $5727 immunities BP 1 FP 1 EP 1 CP 1 MP 1
+wait 500
+Camera.SetAtPos($5728, $5729, $5730)
+Camera.SetPosition(-1153.551, -32.372, 21.675, 0.0, 0.0, 0.0)
+Camera.PointAt(-1153.833, -31.475, 21.334, 2)
+$5842 = Actor.Create(Cop, #SWAT, -1176.8, -22.2, 15.62)
+01ED: clear_actor $5842 threat_search
+01B2: give_actor $5842 weapon 4 ammo 1 // Load the weapon model before using this
+020F: actor $5842 look_at_player $PLAYER_CHAR
+if
+   not Actor.Dead($5727)
+jf @HAIT1_6851
+0337: set_actor $5727 visibility 1
+02AB: set_actor $5727 immunities BP 0 FP 0 EP 0 CP 0 MP 0
+
+:HAIT1_6851
+01BE: set_actor $PLAYER_ACTOR to_look_at_spot -1159.61 -31.04 20.09
+03D1: play_wav 1
+00BC: text_highpriority 'HAT_1A' 5000 ms 1  // ~g~Don't move a muscle, chump!
+0372: set_actor $PLAYER_ACTOR anim 17 wait_state_time 1000000 ms
+16@ = 0 // integer values
+
+:HAIT1_6909
+if
+  4000 > 16@ // integer values
+jf @HAIT1_6988
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @HAIT1_6956
+jump @HAIT1_6988
+
+:HAIT1_6956
+if
+03D2:   wav 1 ended
+jf @HAIT1_6981
+03D5: remove_text 'HAT_1A'  // ~g~Don't move a muscle, chump!
+
+:HAIT1_6981
+jump @HAIT1_6909
+
+:HAIT1_6988
+0395: clear_area 0 at $5733 $5734 range $5735 1.0
+$5732 = Actor.Create(CivMale, #SWAT, $5733, $5734, $5735)
+01ED: clear_actor $5732 threat_search
+01B2: give_actor $5732 weapon 25 ammo 30000 // Load the weapon model before using this
+020F: actor $5732 look_at_player $PLAYER_CHAR
+0372: set_actor $5732 anim 14 wait_state_time 2200 ms
+04C6: actor $5732 do_kung_fu_stance_towards_actor $PLAYER_ACTOR
+0395: clear_area 0 at $5738 $5739 range $5740 1.0
+$5737 = Actor.Create(CivMale, #SWAT, $5738, $5739, $5740)
+01ED: clear_actor $5737 threat_search
+01B2: give_actor $5737 weapon 25 ammo 30000 // Load the weapon model before using this
+020F: actor $5737 look_at_player $PLAYER_CHAR
+0372: set_actor $5737 anim 14 wait_state_time 5000 ms
+04C6: actor $5737 do_kung_fu_stance_towards_actor $PLAYER_ACTOR
+0395: clear_area 0 at $5743 $5744 range $5745 1.0
+$5742 = Actor.Create(CivMale, #SWAT, $5743, $5744, $5745)
+01ED: clear_actor $5742 threat_search
+01B2: give_actor $5742 weapon 25 ammo 30000 // Load the weapon model before using this
+020F: actor $5742 look_at_player $PLAYER_CHAR
+0372: set_actor $5742 anim 14 wait_state_time 5000 ms
+04C6: actor $5742 do_kung_fu_stance_towards_actor $PLAYER_ACTOR
+if
+03D2:   wav 1 ended
+jf @HAIT1_7244
+03D5: remove_text 'HAT_1A'  // ~g~Don't move a muscle, chump!
+
+:HAIT1_7244
+0230: set_player $PLAYER_CHAR stop_looking
+02A3: enable_widescreen 0
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 1 ms
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Camera.Restore_WithJumpCut
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+00BC: text_highpriority 'HAM1_4' 5000 ms 1  // ~g~Good! Now get the next one!
+$5726 = 1 // integer values
+
+:HAIT1_7314
+return
+
+:HAIT1_7316
+if
+  $5760 == 0 // integer values
+jf @HAIT1_7404
+if
+   Actor.Dead($5759)
+jf @HAIT1_7364
+$5760 = 1 // integer values
+jump @HAIT1_7404
+
+:HAIT1_7364
+$5765 = Actor.Health($5759)
+if
+  90 >= $5765 // integer values
+jf @HAIT1_7404
+$5834 = 1 // integer values
+$5831 = 1 // integer values
+
+:HAIT1_7404
+if
+  $5767 == 0 // integer values
+jf @HAIT1_8293
+if
+   Actor.Dead($5766)
+jf @HAIT1_7634
+if
+  $5832 == 1 // integer values
+jf @HAIT1_7606
+if
+  $5774 == 1 // integer values
+jf @HAIT1_7606
+if
+  $5775 == 1 // integer values
+jf @HAIT1_7506
+$5757 = 1 // integer values
+jump @HAIT1_7606
+
+:HAIT1_7506
+if
+056D:   actor $5766 defined
+jf @HAIT1_7599
+if
+  $5756 == 0 // integer values
+jf @HAIT1_7592
+Marker.Disable($5773)
+Actor.StoreDeadActorPos($5766, $5752, $5753, $5754)
+$5747 = Pickup.Create(#BRIEFCASE, 3, $5752, $5753, $5754)
+03DC: $5758 = create_marker_above_pickup $5747
+$5756 = 1 // integer values
+
+:HAIT1_7592
+jump @HAIT1_7606
+
+:HAIT1_7599
+$5757 = 1 // integer values
+
+:HAIT1_7606
+$5831 = 1 // integer values
+$5834 = 1 // integer values
+$5767 = 1 // integer values
+jump @HAIT1_8293
+
+:HAIT1_7634
+$5772 = Actor.Health($5766)
+if
+  $5832 == 1 // integer values
+jf @HAIT1_7667
+gosub @HAIT1_11287
+
+:HAIT1_7667
+if
+  90 >= $5772 // integer values
+jf @HAIT1_7699
+$5834 = 1 // integer values
+$5831 = 1 // integer values
+
+:HAIT1_7699
+if or
+  $5750 == 1 // integer values
+  $5834 == 1 // integer values
+jf @HAIT1_8293
+if
+  $5777 == 0 // integer values
+jf @HAIT1_7764
+011A: set_actor $5766 search_threat 1
+01CA: actor $5766 kill_player $PLAYER_CHAR
+jump @HAIT1_8293
+
+:HAIT1_7764
+if
+  $5750 == 0 // integer values
+jf @HAIT1_8293
+if
+  $5832 == 0 // integer values
+jf @HAIT1_8293
+if
+  $5831 == 1 // integer values
+jf @HAIT1_8155
+if
+  $5850 == 0 // integer values
+jf @HAIT1_7880
+0291: set_actor $5766 attack_when_provoked 0
+01ED: clear_actor $5766 threat_search
+011C: actor $5766 clear_objective
+00BC: text_highpriority 'HAM1_8' 5000 ms 1  // ~g~The cops are on the way to pick up the stash, get a move on!
+014F: stop_timer $5751
+$5850 = 1 // integer values
+
+:HAIT1_7880
+if
+  $5850 == 1 // integer values
+jf @HAIT1_8045
+if
+8510:   not unknown_actor $5766 on_path $5847 $5848 $5849 radius 4.0
+jf @HAIT1_8020
+if
+  $5857 == 0 // integer values
+jf @HAIT1_7974
+009E: set_actor $5766 path $5847 $5848 $5849 unknown 0.1 1
+$5857 = 1 // integer values
+
+:HAIT1_7974
+if
+  $5861 == 2 // integer values
+jf @HAIT1_8013
+009E: set_actor $5766 path $5847 $5848 $5849 unknown 0.1 1
+
+:HAIT1_8013
+jump @HAIT1_8045
+
+:HAIT1_8020
+0319: set_actor $5766 running 1
+0239: actor $5766 run_to $5752 $5753
+$5850 = 3 // integer values
+
+:HAIT1_8045
+if
+  $5850 == 1 // integer values
+jf @HAIT1_8155
+if
+00FF:   actor $5766 0 $5847 $5848 $5849 radius 2.5 2.5 2.5
+jf @HAIT1_8112
+$5850 = 2 // integer values
+
+:HAIT1_8112
+if
+  $5850 == 2 // integer values
+jf @HAIT1_8155
+0319: set_actor $5766 running 1
+0239: actor $5766 run_to $5752 $5753
+$5850 = 3 // integer values
+
+:HAIT1_8155
+if
+   not Actor.Dead($5766)
+jf @HAIT1_8293
+if
+  $5850 == 3 // integer values
+jf @HAIT1_8293
+if
+00ED:   actor $5766 0 $5752 $5753 radius 1.5 1.5
+jf @HAIT1_8293
+if
+  $5750 == 0 // integer values
+jf @HAIT1_8293
+Marker.Disable($5748)
+014F: stop_timer $5751
+Pickup.Destroy($5747)
+$5773 = Marker.CreateAboveActor($5766)
+00BC: text_highpriority 'HAM1_7' 5000 ms 1  // ~g~The cops have got our stash! Retrieve it before they get away!
+$5774 = 1 // integer values
+$5832 = 1 // integer values
+
+:HAIT1_8293
+if
+  $5777 == 0 // integer values
+jf @HAIT1_9182
+if
+   Actor.Dead($5776)
+jf @HAIT1_8523
+if
+  $5832 == 1 // integer values
+jf @HAIT1_8495
+if
+  $5785 == 1 // integer values
+jf @HAIT1_8495
+if
+  $5783 == 1 // integer values
+jf @HAIT1_8395
+$5757 = 1 // integer values
+jump @HAIT1_8495
+
+:HAIT1_8395
+if
+056D:   actor $5776 defined
+jf @HAIT1_8488
+if
+  $5756 == 0 // integer values
+jf @HAIT1_8481
+Marker.Disable($5784)
+Actor.StoreDeadActorPos($5776, $5752, $5753, $5754)
+$5747 = Pickup.Create(#BRIEFCASE, 3, $5752, $5753, $5754)
+03DC: $5758 = create_marker_above_pickup $5747
+$5756 = 1 // integer values
+
+:HAIT1_8481
+jump @HAIT1_8495
+
+:HAIT1_8488
+$5757 = 1 // integer values
+
+:HAIT1_8495
+$5831 = 1 // integer values
+$5834 = 1 // integer values
+$5777 = 1 // integer values
+jump @HAIT1_9182
+
+:HAIT1_8523
+$5782 = Actor.Health($5776)
+if
+  $5832 == 1 // integer values
+jf @HAIT1_8556
+gosub @HAIT1_11287
+
+:HAIT1_8556
+if
+  90 >= $5782 // integer values
+jf @HAIT1_8588
+$5834 = 1 // integer values
+$5831 = 1 // integer values
+
+:HAIT1_8588
+if or
+  $5834 == 1 // integer values
+  $5831 == 1 // integer values
+jf @HAIT1_9182
+if
+  $5750 == 0 // integer values
+jf @HAIT1_9149
+if
+  $5832 == 0 // integer values
+jf @HAIT1_9142
+if
+  $5831 == 1 // integer values
+jf @HAIT1_9004
+if
+  $5851 == 0 // integer values
+jf @HAIT1_8729
+0291: set_actor $5776 attack_when_provoked 0
+01ED: clear_actor $5776 threat_search
+011C: actor $5776 clear_objective
+00BC: text_highpriority 'HAM1_8' 5000 ms 1  // ~g~The cops are on the way to pick up the stash, get a move on!
+014F: stop_timer $5751
+$5851 = 1 // integer values
+
+:HAIT1_8729
+if
+  $5851 == 1 // integer values
+jf @HAIT1_8894
+if
+8510:   not unknown_actor $5776 on_path $5847 $5848 $5849 radius 4.0
+jf @HAIT1_8869
+if
+  $5858 == 0 // integer values
+jf @HAIT1_8823
+009E: set_actor $5776 path $5847 $5848 $5849 unknown 0.1 1
+$5858 = 1 // integer values
+
+:HAIT1_8823
+if
+  $5861 == 2 // integer values
+jf @HAIT1_8862
+009E: set_actor $5776 path $5847 $5848 $5849 unknown 0.1 1
+
+:HAIT1_8862
+jump @HAIT1_8894
+
+:HAIT1_8869
+0319: set_actor $5776 running 1
+0239: actor $5776 run_to $5752 $5753
+$5851 = 3 // integer values
+
+:HAIT1_8894
+if
+  $5851 == 1 // integer values
+jf @HAIT1_8961
+if
+00FF:   actor $5776 0 $5847 $5848 $5849 radius 2.5 2.5 2.5
+jf @HAIT1_8961
+$5851 = 2 // integer values
+
+:HAIT1_8961
+if
+  $5851 == 2 // integer values
+jf @HAIT1_9004
+0319: set_actor $5776 running 1
+0239: actor $5776 run_to $5752 $5753
+$5851 = 3 // integer values
+
+:HAIT1_9004
+if
+   not Actor.Dead($5776)
+jf @HAIT1_9142
+if
+  $5851 == 3 // integer values
+jf @HAIT1_9142
+if
+00ED:   actor $5776 0 $5752 $5753 radius 1.5 1.5
+jf @HAIT1_9142
+if
+  $5750 == 0 // integer values
+jf @HAIT1_9142
+Marker.Disable($5748)
+014F: stop_timer $5751
+Pickup.Destroy($5747)
+$5784 = Marker.CreateAboveActor($5776)
+00BC: text_highpriority 'HAM1_7' 5000 ms 1  // ~g~The cops have got our stash! Retrieve it before they get away!
+$5785 = 1 // integer values
+$5832 = 1 // integer values
+
+:HAIT1_9142
+jump @HAIT1_9182
+
+:HAIT1_9149
+if
+  $5832 == 0 // integer values
+jf @HAIT1_9182
+011A: set_actor $5776 search_threat 1
+01CA: actor $5776 kill_player $PLAYER_CHAR
+
+:HAIT1_9182
+if
+  $5861 == 2 // integer values
+jf @HAIT1_9207
+$5861 = 0 // integer values
+
+:HAIT1_9207
+return
+
+:HAIT1_9209
+if
+  $5833 == 0 // integer values
+jf @HAIT1_9435
+if
+   not Actor.Dead($5727)
+jf @HAIT1_9248
+Actor.RemoveReferences($5727)
+
+:HAIT1_9248
+if
+   not Actor.Dead($5732)
+jf @HAIT1_9269
+Actor.RemoveReferences($5732)
+
+:HAIT1_9269
+0395: clear_area 0 at $5800 $5801 range $5802 2.0
+$5798 = Actor.Create(CivMale, #SWAT, $5800, $5801, $5802)
+Actor.Angle($5798) = $5803
+01ED: clear_actor $5798 threat_search
+0243: set_actor $5798 ped_stats_to 16
+011A: set_actor $5798 search_threat 1
+01B2: give_actor $5798 weapon 25 ammo 30000 // Load the weapon model before using this
+0291: set_actor $5798 attack_when_provoked 1
+0395: clear_area 0 at $5811 $5812 range $5813 2.0
+$5808 = Actor.Create(CivMale, #SWAT, $5811, $5812, $5813)
+01ED: clear_actor $5808 threat_search
+0243: set_actor $5808 ped_stats_to 16
+011A: set_actor $5808 search_threat 1
+01B2: give_actor $5808 weapon 25 ammo 30000 // Load the weapon model before using this
+0291: set_actor $5808 attack_when_provoked 1
+0482:  8.0
+$5833 = 1 // integer values
+
+:HAIT1_9435
+return
+
+:HAIT1_9437
+if
+  $5799 == 0 // integer values
+jf @HAIT1_10371
+if
+   Actor.Dead($5798)
+jf @HAIT1_9667
+if
+  $5820 == 1 // integer values
+jf @HAIT1_9639
+if
+  $5805 == 1 // integer values
+jf @HAIT1_9639
+if
+  $5806 == 1 // integer values
+jf @HAIT1_9539
+$5794 = 1 // integer values
+jump @HAIT1_9639
+
+:HAIT1_9539
+if
+056D:   actor $5798 defined
+jf @HAIT1_9632
+if
+  $5795 == 0 // integer values
+jf @HAIT1_9625
+Marker.Disable($5807)
+Actor.StoreDeadActorPos($5798, $5791, $5792, $5793)
+$5786 = Pickup.Create(#BRIEFCASE, 3, $5791, $5792, $5793)
+03DC: $5796 = create_marker_above_pickup $5786
+$5795 = 1 // integer values
+
+:HAIT1_9625
+jump @HAIT1_9639
+
+:HAIT1_9632
+$5794 = 1 // integer values
+
+:HAIT1_9639
+$5821 = 1 // integer values
+$5819 = 1 // integer values
+$5799 = 1 // integer values
+jump @HAIT1_10371
+
+:HAIT1_9667
+$5804 = Actor.Health($5798)
+if
+  $5820 == 1 // integer values
+jf @HAIT1_9700
+gosub @HAIT1_11969
+
+:HAIT1_9700
+if
+  90 >= $5804 // integer values
+jf @HAIT1_9732
+$5821 = 1 // integer values
+$5819 = 1 // integer values
+
+:HAIT1_9732
+if or
+  $5821 == 1 // integer values
+  $5819 == 1 // integer values
+jf @HAIT1_10371
+if
+  $5810 == 0 // integer values
+jf @HAIT1_9813
+if
+   not Actor.Dead($5798)
+jf @HAIT1_9806
+011A: set_actor $5798 search_threat 1
+01CA: actor $5798 kill_player $PLAYER_CHAR
+
+:HAIT1_9806
+jump @HAIT1_10371
+
+:HAIT1_9813
+if
+  $5789 == 0 // integer values
+jf @HAIT1_10338
+if
+  $5820 == 0 // integer values
+jf @HAIT1_10331
+if
+  $5819 == 1 // integer values
+jf @HAIT1_10193
+if
+  $5855 == 0 // integer values
+jf @HAIT1_9929
+0291: set_actor $5798 attack_when_provoked 0
+01ED: clear_actor $5798 threat_search
+011C: actor $5798 clear_objective
+00BC: text_highpriority 'HAM1_8' 5000 ms 1  // ~g~The cops are on the way to pick up the stash, get a move on!
+014F: stop_timer $5790
+$5855 = 1 // integer values
+
+:HAIT1_9929
+if
+  $5855 == 1 // integer values
+jf @HAIT1_10094
+if
+8510:   not unknown_actor $5798 on_path $5852 $5853 $5854 radius 4.0
+jf @HAIT1_10069
+if
+  $5859 == 0 // integer values
+jf @HAIT1_10023
+009E: set_actor $5798 path $5852 $5853 $5854 unknown 0.1 1
+$5859 = 1 // integer values
+
+:HAIT1_10023
+if
+  $5862 == 2 // integer values
+jf @HAIT1_10062
+009E: set_actor $5798 path $5852 $5853 $5854 unknown 0.1 1
+
+:HAIT1_10062
+jump @HAIT1_10094
+
+:HAIT1_10069
+0319: set_actor $5798 running 1
+0239: actor $5798 run_to $5791 $5792
+$5855 = 3 // integer values
+
+:HAIT1_10094
+if
+  $5855 == 1 // integer values
+jf @HAIT1_10150
+00FF:   actor $5798 0 $5852 $5853 $5854 radius 1.0 1.0 1.0
+$5855 = 2 // integer values
+
+:HAIT1_10150
+if
+  $5855 == 2 // integer values
+jf @HAIT1_10193
+0319: set_actor $5798 running 1
+0239: actor $5798 run_to $5791 $5792
+$5855 = 3 // integer values
+
+:HAIT1_10193
+if
+   not Actor.Dead($5798)
+jf @HAIT1_10331
+if
+  $5855 == 3 // integer values
+jf @HAIT1_10331
+if
+00ED:   actor $5798 0 $5791 $5792 radius 1.5 1.5
+jf @HAIT1_10331
+if
+  $5789 == 0 // integer values
+jf @HAIT1_10331
+Marker.Disable($5787)
+014F: stop_timer $5790
+Pickup.Destroy($5786)
+$5807 = Marker.CreateAboveActor($5798)
+00BC: text_highpriority 'HAM1_7' 5000 ms 1  // ~g~The cops have got our stash! Retrieve it before they get away!
+$5805 = 1 // integer values
+$5820 = 1 // integer values
+
+:HAIT1_10331
+jump @HAIT1_10371
+
+:HAIT1_10338
+if
+  $5820 == 0 // integer values
+jf @HAIT1_10371
+011A: set_actor $5798 search_threat 1
+01CA: actor $5798 kill_player $PLAYER_CHAR
+
+:HAIT1_10371
+if
+  $5810 == 0 // integer values
+jf @HAIT1_11260
+if
+   Actor.Dead($5808)
+jf @HAIT1_10601
+if
+  $5820 == 1 // integer values
+jf @HAIT1_10573
+if
+  $5822 == 1 // integer values
+jf @HAIT1_10573
+if
+  $5809 == 1 // integer values
+jf @HAIT1_10473
+$5794 = 1 // integer values
+jump @HAIT1_10573
+
+:HAIT1_10473
+if
+056D:   actor $5808 defined
+jf @HAIT1_10566
+if
+  $5795 == 0 // integer values
+jf @HAIT1_10559
+Marker.Disable($5823)
+Actor.StoreDeadActorPos($5808, $5791, $5792, $5793)
+$5786 = Pickup.Create(#BRIEFCASE, 3, $5791, $5792, $5793)
+03DC: $5796 = create_marker_above_pickup $5786
+$5795 = 1 // integer values
+
+:HAIT1_10559
+jump @HAIT1_10573
+
+:HAIT1_10566
+$5794 = 1 // integer values
+
+:HAIT1_10573
+$5821 = 1 // integer values
+$5819 = 1 // integer values
+$5810 = 1 // integer values
+jump @HAIT1_11260
+
+:HAIT1_10601
+$5818 = Actor.Health($5808)
+if
+  $5820 == 1 // integer values
+jf @HAIT1_10634
+gosub @HAIT1_11969
+
+:HAIT1_10634
+if
+  90 >= $5818 // integer values
+jf @HAIT1_10666
+$5821 = 1 // integer values
+$5819 = 1 // integer values
+
+:HAIT1_10666
+if or
+  $5821 == 1 // integer values
+  $5819 == 1 // integer values
+jf @HAIT1_11260
+if
+  $5789 == 0 // integer values
+jf @HAIT1_11227
+if
+  $5820 == 0 // integer values
+jf @HAIT1_11220
+if
+  $5819 == 1 // integer values
+jf @HAIT1_11082
+if
+  $5856 == 0 // integer values
+jf @HAIT1_10807
+0291: set_actor $5808 attack_when_provoked 0
+01ED: clear_actor $5808 threat_search
+011C: actor $5808 clear_objective
+00BC: text_highpriority 'HAM1_8' 5000 ms 1  // ~g~The cops are on the way to pick up the stash, get a move on!
+014F: stop_timer $5790
+$5856 = 1 // integer values
+
+:HAIT1_10807
+if
+  $5856 == 1 // integer values
+jf @HAIT1_10972
+if
+8510:   not unknown_actor $5808 on_path $5852 $5853 $5854 radius 4.0
+jf @HAIT1_10947
+if
+  $5860 == 0 // integer values
+jf @HAIT1_10901
+009E: set_actor $5808 path $5852 $5853 $5854 unknown 0.1 1
+$5860 = 1 // integer values
+
+:HAIT1_10901
+if
+  $5862 == 2 // integer values
+jf @HAIT1_10940
+009E: set_actor $5808 path $5852 $5853 $5854 unknown 0.1 1
+
+:HAIT1_10940
+jump @HAIT1_10972
+
+:HAIT1_10947
+0319: set_actor $5808 running 1
+0239: actor $5808 run_to $5791 $5792
+$5856 = 3 // integer values
+
+:HAIT1_10972
+if
+  $5856 == 1 // integer values
+jf @HAIT1_11039
+if
+00FF:   actor $5808 0 $5852 $5853 $5854 radius 1.0 1.0 1.0
+jf @HAIT1_11039
+$5856 = 2 // integer values
+
+:HAIT1_11039
+if
+  $5856 == 2 // integer values
+jf @HAIT1_11082
+0319: set_actor $5808 running 1
+0239: actor $5808 run_to $5791 $5792
+$5856 = 3 // integer values
+
+:HAIT1_11082
+if
+   not Actor.Dead($5808)
+jf @HAIT1_11220
+if
+  $5856 == 3 // integer values
+jf @HAIT1_11220
+if
+00ED:   actor $5808 0 $5791 $5792 radius 1.5 1.5
+jf @HAIT1_11220
+if
+  $5789 == 0 // integer values
+jf @HAIT1_11220
+Marker.Disable($5787)
+014F: stop_timer $5790
+Pickup.Destroy($5786)
+$5823 = Marker.CreateAboveActor($5808)
+00BC: text_highpriority 'HAM1_7' 5000 ms 1  // ~g~The cops have got our stash! Retrieve it before they get away!
+$5822 = 1 // integer values
+$5820 = 1 // integer values
+
+:HAIT1_11220
+jump @HAIT1_11260
+
+:HAIT1_11227
+if
+  $5820 == 0 // integer values
+jf @HAIT1_11260
+011A: set_actor $5808 search_threat 1
+01CA: actor $5808 kill_player $PLAYER_CHAR
+
+:HAIT1_11260
+if
+  $5862 == 2 // integer values
+jf @HAIT1_11285
+$5862 = 0 // integer values
+
+:HAIT1_11285
+return
+
+:HAIT1_11287
+if
+  $5774 == 1 // integer values
+jf @HAIT1_11627
+if
+   not Actor.Dead($5766)
+jf @HAIT1_11627
+if
+  $5775 == 0 // integer values
+jf @HAIT1_11398
+if
+   not Actor.Driving($5766)
+jf @HAIT1_11398
+if
+02CB:   actor $5766 bounding_sphere_visible
+jf @HAIT1_11386
+01D0: actor $5766 avoid_player $PLAYER_CHAR
+jump @HAIT1_11398
+
+:HAIT1_11386
+0319: set_actor $5766 running 1
+0377: set_actor $5766 steal_any_car
+
+:HAIT1_11398
+if
+  $5775 == 0 // integer values
+jf @HAIT1_11492
+if
+   Actor.Driving($5766)
+jf @HAIT1_11492
+011C: actor $5766 clear_objective
+00D9: $5837 = actor $5766 car // add to mission cleanup
+03CC: car $5837 add_to_stuck_car_check 0.5 = 1000
+0190: add_vehicle $5837 to_flipped_check
+Car.SetMaxSpeed($5837, 40.0)
+00AE: set_vehicle $5837 traffic_behavior_to 2
+Car.SetToPsychoDriver($5837)
+$5775 = 1 // integer values
+
+:HAIT1_11492
+if
+  $5775 == 1 // integer values
+jf @HAIT1_11555
+if
+   not Car.Wrecked($5837)
+jf @HAIT1_11555
+if or
+018F:   vehicle $5837 flipped
+03CE:   car $5837 stuck
+jf @HAIT1_11555
+01D3: actor $5766 leave_car $5837
+
+:HAIT1_11555
+if
+  $5775 == 1 // integer values
+jf @HAIT1_11627
+if
+   not Actor.Driving($5766)
+jf @HAIT1_11627
+if
+   not Car.Wrecked($5837)
+jf @HAIT1_11620
+03CD: car $5837 remove_from_stuck_car_check
+0191: remove_vehicle $5837 from_flipped_check
+Car.RemoveReferences($5837)
+
+:HAIT1_11620
+$5775 = 0 // integer values
+
+:HAIT1_11627
+if
+  $5785 == 1 // integer values
+jf @HAIT1_11967
+if
+   not Actor.Dead($5776)
+jf @HAIT1_11967
+if
+  $5783 == 0 // integer values
+jf @HAIT1_11738
+if
+   not Actor.Driving($5776)
+jf @HAIT1_11738
+if
+02CB:   actor $5776 bounding_sphere_visible
+jf @HAIT1_11726
+01D0: actor $5776 avoid_player $PLAYER_CHAR
+jump @HAIT1_11738
+
+:HAIT1_11726
+0319: set_actor $5776 running 1
+0377: set_actor $5776 steal_any_car
+
+:HAIT1_11738
+if
+  $5783 == 0 // integer values
+jf @HAIT1_11832
+if
+   Actor.Driving($5776)
+jf @HAIT1_11832
+011C: actor $5776 clear_objective
+00D9: $5838 = actor $5776 car // add to mission cleanup
+03CC: car $5838 add_to_stuck_car_check 0.5 = 1000
+0190: add_vehicle $5838 to_flipped_check
+Car.SetMaxSpeed($5838, 40.0)
+00AE: set_vehicle $5838 traffic_behavior_to 2
+Car.SetToPsychoDriver($5838)
+$5783 = 1 // integer values
+
+:HAIT1_11832
+if
+  $5783 == 1 // integer values
+jf @HAIT1_11895
+if
+   not Car.Wrecked($5838)
+jf @HAIT1_11895
+if or
+018F:   vehicle $5838 flipped
+03CE:   car $5838 stuck
+jf @HAIT1_11895
+01D3: actor $5776 leave_car $5838
+
+:HAIT1_11895
+if
+  $5783 == 1 // integer values
+jf @HAIT1_11967
+if
+   not Actor.Driving($5776)
+jf @HAIT1_11967
+if
+   not Car.Wrecked($5838)
+jf @HAIT1_11960
+03CD: car $5838 remove_from_stuck_car_check
+0191: remove_vehicle $5838 from_flipped_check
+Car.RemoveReferences($5838)
+
+:HAIT1_11960
+$5783 = 0 // integer values
+
+:HAIT1_11967
+return
+
+:HAIT1_11969
+if
+  $5805 == 1 // integer values
+jf @HAIT1_12309
+if
+   not Actor.Dead($5798)
+jf @HAIT1_12309
+if
+  $5806 == 0 // integer values
+jf @HAIT1_12080
+if
+   not Actor.Driving($5798)
+jf @HAIT1_12080
+if
+02CB:   actor $5798 bounding_sphere_visible
+jf @HAIT1_12068
+01D0: actor $5798 avoid_player $PLAYER_CHAR
+jump @HAIT1_12080
+
+:HAIT1_12068
+0319: set_actor $5798 running 1
+0377: set_actor $5798 steal_any_car
+
+:HAIT1_12080
+if
+  $5806 == 0 // integer values
+jf @HAIT1_12174
+if
+   Actor.Driving($5798)
+jf @HAIT1_12174
+011C: actor $5798 clear_objective
+00D9: $5845 = actor $5798 car // add to mission cleanup
+03CC: car $5845 add_to_stuck_car_check 0.5 = 1000
+0190: add_vehicle $5845 to_flipped_check
+Car.SetMaxSpeed($5845, 40.0)
+00AE: set_vehicle $5845 traffic_behavior_to 2
+Car.SetToPsychoDriver($5845)
+$5806 = 1 // integer values
+
+:HAIT1_12174
+if
+  $5806 == 1 // integer values
+jf @HAIT1_12237
+if
+   not Car.Wrecked($5845)
+jf @HAIT1_12237
+if or
+018F:   vehicle $5845 flipped
+03CE:   car $5845 stuck
+jf @HAIT1_12237
+01D3: actor $5798 leave_car $5845
+
+:HAIT1_12237
+if
+  $5806 == 1 // integer values
+jf @HAIT1_12309
+if
+   not Actor.Driving($5798)
+jf @HAIT1_12309
+if
+   not Car.Wrecked($5845)
+jf @HAIT1_12302
+03CD: car $5845 remove_from_stuck_car_check
+0191: remove_vehicle $5845 from_flipped_check
+Car.RemoveReferences($5845)
+
+:HAIT1_12302
+$5806 = 0 // integer values
+
+:HAIT1_12309
+if
+  $5822 == 1 // integer values
+jf @HAIT1_12649
+if
+   not Actor.Dead($5808)
+jf @HAIT1_12649
+if
+  $5809 == 0 // integer values
+jf @HAIT1_12420
+if
+   not Actor.Driving($5808)
+jf @HAIT1_12420
+if
+02CB:   actor $5808 bounding_sphere_visible
+jf @HAIT1_12408
+01D0: actor $5808 avoid_player $PLAYER_CHAR
+jump @HAIT1_12420
+
+:HAIT1_12408
+0319: set_actor $5808 running 1
+0377: set_actor $5808 steal_any_car
+
+:HAIT1_12420
+if
+  $5809 == 0 // integer values
+jf @HAIT1_12514
+if
+   Actor.Driving($5808)
+jf @HAIT1_12514
+011C: actor $5808 clear_objective
+00D9: $5846 = actor $5808 car // add to mission cleanup
+03CC: car $5846 add_to_stuck_car_check 0.5 = 1000
+0190: add_vehicle $5846 to_flipped_check
+Car.SetMaxSpeed($5846, 40.0)
+00AE: set_vehicle $5846 traffic_behavior_to 2
+Car.SetToPsychoDriver($5846)
+$5809 = 1 // integer values
+
+:HAIT1_12514
+if
+  $5809 == 1 // integer values
+jf @HAIT1_12577
+if
+   not Car.Wrecked($5846)
+jf @HAIT1_12577
+if or
+018F:   vehicle $5846 flipped
+03CE:   car $5846 stuck
+jf @HAIT1_12577
+01D3: actor $5808 leave_car $5846
+
+:HAIT1_12577
+if
+  $5809 == 1 // integer values
+jf @HAIT1_12649
+if
+   not Actor.Driving($5808)
+jf @HAIT1_12649
+if
+   not Car.Wrecked($5846)
+jf @HAIT1_12642
+03CD: car $5846 remove_from_stuck_car_check
+0191: remove_vehicle $5846 from_flipped_check
+Car.RemoveReferences($5846)
+
+:HAIT1_12642
+$5809 = 0 // integer values
+
+:HAIT1_12649
+return

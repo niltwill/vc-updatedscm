@@ -1,0 +1,2680 @@
+:PIZZA
+thread 'PIZZA'
+gosub @PIZZA_46
+if
+wasted_or_busted
+jf @PIZZA_37
+gosub @PIZZA_2540
+
+:PIZZA_37
+gosub @PIZZA_2656
+end_thread
+
+:PIZZA_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+03D5: remove_text 'PIZ_OVE'  // Pizza Mission ended!
+$ONMISSION = 1 // integer values
+wait 0
+if
+  $389 == 0 // integer values
+jf @PIZZA_87
+increment_mission_attempts
+
+:PIZZA_87
+054C: use_GXT_table 'PIZZA'
+$7994 = 1 // integer values
+$7995 = 0 // integer values
+$7996 = 0 // integer values
+$7997 = 0 // integer values
+$7998 = 0 // integer values
+$7999 = 0 // integer values
+$8000 = 0 // integer values
+$8001 = 0 // integer values
+$8002 = 0 // integer values
+$8003 = 0 // integer values
+$8004 = 0 // integer values
+$8005 = 0 // integer values
+$8006 = 0 // integer values
+$8007 = 0 // integer values
+$8008 = 6 // integer values
+$8009 = 0 // integer values
+$8010 = 0 // integer values
+$8011 = 0 // integer values
+$8012 = 301000 // integer values
+$8013 = 0 // integer values
+$8014 = 0 // integer values
+$8015 = 0 // integer values
+$8016 = 0 // integer values
+$8017 = 0 // integer values
+$8018 = 0 // integer values
+$123 = 0 // integer values
+$8019 = 0 // integer values
+$8021 = 0 // integer values
+$8022 = 0 // integer values
+$8023 = 0.0 // floating-point values
+$8024 = 0.0 // floating-point values
+$8025 = 0.0 // floating-point values
+$8026 = 0.0 // floating-point values
+$8027 = 0.0 // floating-point values
+$8028 = 0.0 // floating-point values
+$8029 = 0.0 // floating-point values
+$8030 = 0.0 // floating-point values
+$8031 = 0.0 // floating-point values
+$8032 = 0.0 // floating-point values
+$8033 = 0.0 // floating-point values
+$8034 = 0.0 // floating-point values
+$8035 = 0.0 // floating-point values
+$8036 = 0.0 // floating-point values
+$8037 = 0.0 // floating-point values
+$8039 = 0.0 // floating-point values
+$8040 = 0.0 // floating-point values
+$8041 = 0.0 // floating-point values
+$8042 = 0.0 // floating-point values
+$8043 = 0.0 // floating-point values
+$8044 = 0.0 // floating-point values
+$95 = 0.0 // floating-point values
+$96 = 0.0 // floating-point values
+$97 = 0.0 // floating-point values
+$8020 = 0 // integer values
+if
+  $ONMISSION == 0 // integer values
+jf @PIZZA_804
+0376: $7966 = create_random_actor $8025 $8026 $8027
+$7982 = Marker.CreateAboveActor($7966)
+0376: $7967 = create_random_actor $8025 $8026 $8027
+$7983 = Marker.CreateAboveActor($7967)
+0376: $7968 = create_random_actor $8025 $8026 $8027
+$7984 = Marker.CreateAboveActor($7968)
+0376: $7969 = create_random_actor $8025 $8026 $8027
+$7985 = Marker.CreateAboveActor($7969)
+0376: $7970 = create_random_actor $8025 $8026 $8027
+$7986 = Marker.CreateAboveActor($7970)
+0376: $7971 = create_random_actor $8025 $8026 $8027
+$7987 = Marker.CreateAboveActor($7971)
+0376: $7972 = create_random_actor $8025 $8026 $8027
+$7988 = Marker.CreateAboveActor($7972)
+0376: $7973 = create_random_actor $8025 $8026 $8027
+$7989 = Marker.CreateAboveActor($7973)
+0376: $7974 = create_random_actor $8025 $8026 $8027
+$7990 = Marker.CreateAboveActor($7974)
+0376: $7975 = create_random_actor $8025 $8026 $8027
+$7991 = Marker.CreateAboveActor($7975)
+018A: $7992 = create_checkpoint_at $8036 $8037 -100.0
+
+:PIZZA_804
+Model.Load(#PIZZABOX)
+
+:PIZZA_809
+if
+   not Model.Available(#PIZZABOX)
+jf @PIZZA_836
+wait 0
+jump @PIZZA_809
+
+:PIZZA_836
+014C: set_parked_car_generator $1835 cars_to_generate_to 0
+014C: set_parked_car_generator $1833 cars_to_generate_to 0
+014C: set_parked_car_generator $1831 cars_to_generate_to 0
+0501: set_player $PLAYER_CHAR drive_by_mode_enabled 0
+if
+00E0:   player $PLAYER_CHAR driving
+jf @PIZZA_895
+00DA: $7965 = player $PLAYER_CHAR car
+jump @PIZZA_917
+
+:PIZZA_895
+00BC: text_highpriority 'PIZ1_32' 5000 ms 1  // ~r~Pizza's too hot to handle?
+jump @PIZZA_2540
+
+:PIZZA_917
+if
+  $ONMISSION == 0 // integer values
+jf @PIZZA_943
+$7993 = Marker.CreateAboveCar($7965)
+
+:PIZZA_943
+014E: start_timer_at $8012 count_in_direction 1
+03C4: set_status_text_to $8008 0 'PIZ1_12'  // Pizzas left:
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @PIZZA_996
+$8011 = 1 // integer values
+
+:PIZZA_996
+if
+0121:   player $PLAYER_CHAR in_zone 'HAITI'  // Little Haiti
+jf @PIZZA_1027
+$8011 = 2 // integer values
+
+:PIZZA_1027
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @PIZZA_1058
+$8011 = 3 // integer values
+
+:PIZZA_1058
+00BB: text_lowpriority 'PIZ1_01' 7000 ms 1  // ~g~Go deliver these pizzas, you must throw the pizza to the customers. Do a drive-by to throw the pizzas.
+00BB: text_lowpriority 'PIZ1_05' 7000 ms 1  // ~g~You have five minutes to deliver the orders before the customers phone another pizza shop.
+16@ = 0 // integer values
+
+:PIZZA_1095
+wait 0
+if
+  $7994 == 1 // integer values
+jf @PIZZA_1171
+if
+  $8019 == 0 // integer values
+jf @PIZZA_1171
+if
+  16@ > 13999 // integer values
+jf @PIZZA_1171
+03E5: text_box 'PIZ1_06'  // Press the~h~ ~k~~TOGGLE_SUBMISSIONS~~w~ when on the bike to cancel the mission.
+$8019 = 1 // integer values
+
+:PIZZA_1171
+if
+   not Car.Wrecked($7965)
+jf @PIZZA_1315
+if
+00DC:   player $PLAYER_CHAR driving $7965
+jf @PIZZA_1315
+if
+00FA:   player $PLAYER_CHAR stopped 0 $8036 $8037 $8038 radius 3.0 3.0 3.0
+jf @PIZZA_1315
+if
+  16@ > 14000 // integer values
+jf @PIZZA_1315
+if
+  $8008 > 0 // integer values
+jf @PIZZA_1315
+00BE: text_clear_all
+$8008 = 6 // integer values
+gosub @PIZZA_10425
+$123 = 0 // integer values
+16@ = 0 // integer values
+
+:PIZZA_1315
+if
+  $8012 == 0 // integer values
+jf @PIZZA_1355
+00BC: text_highpriority 'PIZ1_08' 5000 ms 1  // ~r~You are out of time. You're fired.
+jump @PIZZA_2540
+
+:PIZZA_1355
+if
+001C:   $7994 > $7995 // integer values
+jf @PIZZA_1565
+wait 0
+gosub @PIZZA_2799
+gosub @PIZZA_4815
+$7995 += 1 // integer values
+if
+  $8015 == 1 // integer values
+jf @PIZZA_1432
+00BC: text_highpriority 'PIZ1_07' 5000 ms 1  // ~r~You killed the customer! You're fired.
+
+:PIZZA_1432
+if
+  $8015 == 2 // integer values
+jf @PIZZA_1465
+00BC: text_highpriority 'PIZ1_09' 5000 ms 1  // ~r~You destroyed our bike! You're fired.
+
+:PIZZA_1465
+if
+  $8015 == 3 // integer values
+jf @PIZZA_1498
+00BC: text_highpriority 'PIZ1_32' 5000 ms 1  // ~r~Pizza's too hot to handle?
+
+:PIZZA_1498
+if or
+  $8015 == 1 // integer values
+  $8015 == 2 // integer values
+  $8015 == 3 // integer values
+jf @PIZZA_1537
+jump @PIZZA_2540
+
+:PIZZA_1537
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+gosub @PIZZA_12676
+jump @PIZZA_1355
+
+:PIZZA_1565
+if
+  $8015 == 1 // integer values
+jf @PIZZA_1598
+00BC: text_highpriority 'PIZ1_07' 5000 ms 1  // ~r~You killed the customer! You're fired.
+
+:PIZZA_1598
+if
+  $8015 == 2 // integer values
+jf @PIZZA_1631
+00BC: text_highpriority 'PIZ1_09' 5000 ms 1  // ~r~You destroyed our bike! You're fired.
+
+:PIZZA_1631
+if
+  $8015 == 3 // integer values
+jf @PIZZA_1664
+00BC: text_highpriority 'PIZ1_32' 5000 ms 1  // ~r~Pizza's too hot to handle?
+
+:PIZZA_1664
+if or
+  $8015 == 1 // integer values
+  $8015 == 2 // integer values
+  $8015 == 3 // integer values
+jf @PIZZA_1703
+jump @PIZZA_2540
+
+:PIZZA_1703
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+gosub @PIZZA_12676
+if
+  $8007 == 0 // integer values
+jf @PIZZA_2324
+if
+003A:   $8006 == $7994 // integer values and handles
+jf @PIZZA_1829
+if
+  $8017 == 0 // integer values
+jf @PIZZA_1822
+00BC: text_highpriority 'PIZ1_33' 7000 ms 1  // ~g~Return to the restaurant for more orders.
+Marker.Disable($7992)
+018A: $7992 = create_checkpoint_at $8036 $8037 -100.0
+$8007 = 1 // integer values
+
+:PIZZA_1822
+jump @PIZZA_2317
+
+:PIZZA_1829
+if
+  $8008 > 0 // integer values
+jf @PIZZA_1861
+gosub @PIZZA_6055
+jump @PIZZA_2317
+
+:PIZZA_1861
+gosub @PIZZA_6055
+if
+  $123 == 0 // integer values
+jf @PIZZA_1908
+00BC: text_highpriority 'PIZ1_02' 5000 ms 1  // ~g~You have thrown all your pizzas, go back and get some more.
+$123 = 1 // integer values
+
+:PIZZA_1908
+Marker.Disable($7982)
+Marker.Disable($7983)
+Marker.Disable($7984)
+Marker.Disable($7985)
+Marker.Disable($7986)
+Marker.Disable($7987)
+Marker.Disable($7988)
+Marker.Disable($7989)
+Marker.Disable($7990)
+Marker.Disable($7991)
+Marker.Disable($7992)
+if
+  $8017 == 0 // integer values
+jf @PIZZA_2317
+Marker.Disable($7992)
+018A: $7992 = create_checkpoint_at $8036 $8037 -100.0
+if
+00FA:   player $PLAYER_CHAR stopped 1 $8036 $8037 $8038 radius 5.0 5.0 5.0
+jf @PIZZA_2317
+if
+   not Actor.Dead($7966)
+jf @PIZZA_2068
+$7982 = Marker.CreateAboveActor($7966)
+
+:PIZZA_2068
+if
+   not Actor.Dead($7967)
+jf @PIZZA_2092
+$7983 = Marker.CreateAboveActor($7967)
+
+:PIZZA_2092
+if
+   not Actor.Dead($7968)
+jf @PIZZA_2116
+$7984 = Marker.CreateAboveActor($7968)
+
+:PIZZA_2116
+if
+   not Actor.Dead($7969)
+jf @PIZZA_2140
+$7985 = Marker.CreateAboveActor($7969)
+
+:PIZZA_2140
+if
+   not Actor.Dead($7970)
+jf @PIZZA_2164
+$7986 = Marker.CreateAboveActor($7970)
+
+:PIZZA_2164
+if
+   not Actor.Dead($7971)
+jf @PIZZA_2188
+$7987 = Marker.CreateAboveActor($7971)
+
+:PIZZA_2188
+if
+   not Actor.Dead($7972)
+jf @PIZZA_2212
+$7988 = Marker.CreateAboveActor($7972)
+
+:PIZZA_2212
+if
+   not Actor.Dead($7973)
+jf @PIZZA_2236
+$7989 = Marker.CreateAboveActor($7973)
+
+:PIZZA_2236
+if
+   not Actor.Dead($7974)
+jf @PIZZA_2260
+$7990 = Marker.CreateAboveActor($7974)
+
+:PIZZA_2260
+if
+   not Actor.Dead($7975)
+jf @PIZZA_2284
+$7991 = Marker.CreateAboveActor($7975)
+
+:PIZZA_2284
+Marker.Disable($7992)
+$8022 = 0 // integer values
+$8008 = 6 // integer values
+gosub @PIZZA_10425
+$123 = 0 // integer values
+
+:PIZZA_2317
+jump @PIZZA_2533
+
+:PIZZA_2324
+if
+00FA:   player $PLAYER_CHAR stopped 1 $8036 $8037 $8038 radius 5.0 5.0 5.0
+jf @PIZZA_2508
+if
+  $7994 == 10 // integer values
+jf @PIZZA_2430
+if
+  $389 == 0 // integer values
+jf @PIZZA_2416
+jump @PIZZA_2557
+jump @PIZZA_2423
+
+:PIZZA_2416
+$7994 = 9 // integer values
+
+:PIZZA_2423
+jump @PIZZA_2501
+
+:PIZZA_2430
+Marker.Disable($7992)
+$8012 = 301000 // integer values
+$8022 = 0 // integer values
+$8008 = 6 // integer values
+gosub @PIZZA_10425
+$123 = 0 // integer values
+$7995 = 0 // integer values
+$7994 += 1 // integer values
+$8006 = 0 // integer values
+$8007 = 0 // integer values
+
+:PIZZA_2501
+jump @PIZZA_2533
+
+:PIZZA_2508
+if
+  $8008 > 0 // integer values
+jf @PIZZA_2533
+gosub @PIZZA_6055
+
+:PIZZA_2533
+jump @PIZZA_1095
+
+:PIZZA_2540
+if
+    $8015 == 3
+then
+00BA: text_styled 'PIZ_OVE' 5000 ms 5  // Pizza Mission ended!
+else
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+end
+return
+
+:PIZZA_2557
+00BE: text_clear_all
+Player.ClearWantedLevel($PLAYER_CHAR)
+01E3: text_1number_styled 'M_PASS' number 5000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.Money($PLAYER_CHAR) += 5000
+if
+  $389 == 0 // integer values
+jf @PIZZA_2654
+0595: mission_complete
+00BC: text_highpriority 'PIZ_WON' 5000 ms 1  // Pizza Mission Complete. Your max Health increased to 150.
+030C: progress_made += 1
+055E: set_player $PLAYER_CHAR max_health += 50
+$389 = 1 // integer values
+
+:PIZZA_2654
+return
+
+:PIZZA_2656
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Model.Destroy(#FAGGIO)
+Model.Destroy(#PIZZABOX)
+014C: set_parked_car_generator $1835 cars_to_generate_to 101
+014C: set_parked_car_generator $1833 cars_to_generate_to 101
+014C: set_parked_car_generator $1831 cars_to_generate_to 101
+0534: increment_pizzas_delivered_by $8020
+Marker.Disable($7982)
+Marker.Disable($7983)
+Marker.Disable($7984)
+Marker.Disable($7985)
+Marker.Disable($7986)
+Marker.Disable($7987)
+Marker.Disable($7988)
+Marker.Disable($7989)
+Marker.Disable($7990)
+Marker.Disable($7991)
+Marker.Disable($7992)
+Marker.Disable($7993)
+0501: set_player $PLAYER_CHAR drive_by_mode_enabled 1
+0151: remove_status_text $8008
+014F: stop_timer $8012
+$390 = 1 // integer values
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:PIZZA_2799
+wait 0
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+  $8011 == 1 // integer values
+jf @PIZZA_2895
+0208: $8023 = random_float -1050.4 -160.9
+0208: $8024 = random_float -160.0 1600.7
+$8036 = -908.0 // floating-point values
+$8037 = 809.3 // floating-point values
+$8038 = 10.5 // floating-point values
+
+:PIZZA_2895
+if
+  $8011 == 2 // integer values
+jf @PIZZA_2973
+0208: $8023 = random_float -1200.4 -800.9
+0208: $8024 = random_float -660.0 300.7
+$8036 = -1028.9 // floating-point values
+$8037 = 82.7 // floating-point values
+$8038 = 10.7 // floating-point values
+
+:PIZZA_2973
+if
+  $8011 == 3 // integer values
+jf @PIZZA_3051
+0208: $8023 = random_float -100.9 1000.4
+0208: $8024 = random_float -300.7 800.5
+$8036 = 411.6 // floating-point values
+$8037 = 97.8 // floating-point values
+$8038 = 10.4 // floating-point values
+
+:PIZZA_3051
+02C0: set $8025 $8026 $8027 to_ped_path_coords_closest_to $8023 $8024 $97
+if or
+  8.0 > $8027 // floating-point values
+  $8027 > 12.0 // floating-point values
+jf @PIZZA_3109
+jump @PIZZA_2799
+
+:PIZZA_3109
+if and
+  $8025 > 333.358 // floating-point values
+  435.544 > $8025 // floating-point values
+  $8026 > -557.261 // floating-point values
+  -433.179 > $8026 // floating-point values
+jf @PIZZA_3167
+jump @PIZZA_2799
+
+:PIZZA_3167
+if and
+  $8025 > -64.434 // floating-point values
+  81.544 > $8025 // floating-point values
+  $8026 > -995.198 // floating-point values
+  -896.662 > $8026 // floating-point values
+jf @PIZZA_3225
+jump @PIZZA_2799
+
+:PIZZA_3225
+if and
+  $8025 > 446.491 // floating-point values
+  599.769 > $8025 // floating-point values
+  $8026 > -92.564 // floating-point values
+  53.415 > $8026 // floating-point values
+jf @PIZZA_3283
+jump @PIZZA_2799
+
+:PIZZA_3283
+if and
+  $8025 > -82.682 // floating-point values
+  234.821 > $8025 // floating-point values
+  $8026 > -272.607 // floating-point values
+  406.194 > $8026 // floating-point values
+jf @PIZZA_3341
+jump @PIZZA_2799
+
+:PIZZA_3341
+if and
+  $8025 > -290.702 // floating-point values
+  282.265 > $8025 // floating-point values
+  $8026 > 398.714 // floating-point values
+  661.476 > $8026 // floating-point values
+jf @PIZZA_3399
+jump @PIZZA_2799
+
+:PIZZA_3399
+if and
+  $8025 > -728.193 // floating-point values
+  -67.639 > $8025 // floating-point values
+  $8026 > -20.866 // floating-point values
+  99.566 > $8026 // floating-point values
+jf @PIZZA_3457
+jump @PIZZA_2799
+
+:PIZZA_3457
+if and
+  $8025 > -516.97 // floating-point values
+  -188.518 > $8025 // floating-point values
+  $8026 > -667.97 // floating-point values
+  -507.393 > $8026 // floating-point values
+jf @PIZZA_3515
+jump @PIZZA_2799
+
+:PIZZA_3515
+if and
+  $8025 > -710.393 // floating-point values
+  -579.012 > $8025 // floating-point values
+  $8026 > -1416.112 // floating-point values
+  -1211.742 > $8026 // floating-point values
+jf @PIZZA_3573
+jump @PIZZA_2799
+
+:PIZZA_3573
+if and
+  $8025 > 333.358 // floating-point values
+  493.934 > $8025 // floating-point values
+  $8026 > 991.328 // floating-point values
+  1261.389 > $8026 // floating-point values
+jf @PIZZA_3631
+jump @PIZZA_2799
+
+:PIZZA_3631
+if and
+  $8025 > -790.682 // floating-point values
+  -626.456 > $8025 // floating-point values
+  $8026 > 1196.908 // floating-point values
+  1306.392 > $8026 // floating-point values
+jf @PIZZA_3689
+jump @PIZZA_2799
+
+:PIZZA_3689
+if and
+  $8025 > -1173.877 // floating-point values
+  -1027.898 > $8025 // floating-point values
+  $8026 > 237.098 // floating-point values
+  415.922 > $8026 // floating-point values
+jf @PIZZA_3747
+jump @PIZZA_2799
+
+:PIZZA_3747
+if and
+  $8025 > -1389.195 // floating-point values
+  -1199.422 > $8025 // floating-point values
+  $8026 > -47.561 // floating-point values
+  229.799 > $8026 // floating-point values
+jf @PIZZA_3805
+jump @PIZZA_2799
+
+:PIZZA_3805
+if and
+  $8025 > -1571.667 // floating-point values
+  -1290.658 > $8025 // floating-point values
+  $8026 > -1007.371 // floating-point values
+  -784.753 > $8026 // floating-point values
+jf @PIZZA_3863
+jump @PIZZA_2799
+
+:PIZZA_3863
+0086: $8029 = $95 // floating-point values only
+0061: $8029 -= $8025 // floating-point values
+0086: $8030 = $96 // floating-point values only
+0061: $8030 -= $8026 // floating-point values
+0069: $8029 *= $8029 // floating-point values
+0069: $8030 *= $8030 // floating-point values
+0086: $8028 = $8029 // floating-point values only
+0059: $8028 += $8030 // floating-point values
+01FB: $8031 = square_root $8028
+if
+  120.0 > $8031 // floating-point values
+jf @PIZZA_3963
+jump @PIZZA_2799
+
+:PIZZA_3963
+0086: $8032 = $8036 // floating-point values only
+0061: $8032 -= $8025 // floating-point values
+0086: $8033 = $8037 // floating-point values only
+0061: $8033 -= $8026 // floating-point values
+0069: $8032 *= $8032 // floating-point values
+0069: $8033 *= $8033 // floating-point values
+0086: $8028 = $8032 // floating-point values only
+0059: $8028 += $8033 // floating-point values
+01FB: $8034 = square_root $8028
+if
+  100.0 > $8034 // floating-point values
+jf @PIZZA_4063
+jump @PIZZA_2799
+
+:PIZZA_4063
+if
+  $7996 == 1 // integer values
+jf @PIZZA_4138
+if
+   not Actor.Dead($7966)
+jf @PIZZA_4138
+if
+00EC:   actor $7966 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4138
+jump @PIZZA_2799
+
+:PIZZA_4138
+if
+  $7997 == 1 // integer values
+jf @PIZZA_4213
+if
+   not Actor.Dead($7967)
+jf @PIZZA_4213
+if
+00EC:   actor $7967 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4213
+jump @PIZZA_2799
+
+:PIZZA_4213
+if
+  $7998 == 1 // integer values
+jf @PIZZA_4288
+if
+   not Actor.Dead($7968)
+jf @PIZZA_4288
+if
+00EC:   actor $7968 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4288
+jump @PIZZA_2799
+
+:PIZZA_4288
+if
+  $7999 == 1 // integer values
+jf @PIZZA_4363
+if
+   not Actor.Dead($7969)
+jf @PIZZA_4363
+if
+00EC:   actor $7969 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4363
+jump @PIZZA_2799
+
+:PIZZA_4363
+if
+  $8000 == 1 // integer values
+jf @PIZZA_4438
+if
+   not Actor.Dead($7970)
+jf @PIZZA_4438
+if
+00EC:   actor $7970 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4438
+jump @PIZZA_2799
+
+:PIZZA_4438
+if
+  $8001 == 1 // integer values
+jf @PIZZA_4513
+if
+   not Actor.Dead($7971)
+jf @PIZZA_4513
+if
+00EC:   actor $7971 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4513
+jump @PIZZA_2799
+
+:PIZZA_4513
+if
+  $8002 == 1 // integer values
+jf @PIZZA_4588
+if
+   not Actor.Dead($7972)
+jf @PIZZA_4588
+if
+00EC:   actor $7972 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4588
+jump @PIZZA_2799
+
+:PIZZA_4588
+if
+  $8003 == 1 // integer values
+jf @PIZZA_4663
+if
+   not Actor.Dead($7973)
+jf @PIZZA_4663
+if
+00EC:   actor $7973 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4663
+jump @PIZZA_2799
+
+:PIZZA_4663
+if
+  $8004 == 1 // integer values
+jf @PIZZA_4738
+if
+   not Actor.Dead($7974)
+jf @PIZZA_4738
+if
+00EC:   actor $7974 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4738
+jump @PIZZA_2799
+
+:PIZZA_4738
+if
+  $8005 == 1 // integer values
+jf @PIZZA_4813
+if
+   not Actor.Dead($7975)
+jf @PIZZA_4813
+if
+00EC:   actor $7975 0 $8025 $8026 radius 25.0 25.0
+jf @PIZZA_4813
+jump @PIZZA_2799
+
+:PIZZA_4813
+return
+
+:PIZZA_4815
+if and
+  $7994 > 0 // integer values
+  $7996 == 0 // integer values
+jf @PIZZA_4904
+0376: $7966 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7966) = $8035
+01ED: clear_actor $7966 threat_search
+0192: set_actor $7966 objective_to_stand_still
+$7982 = Marker.CreateAboveActor($7966)
+$7996 = 1 // integer values
+return
+
+:PIZZA_4904
+if and
+  $7994 > 1 // integer values
+  $7997 == 0 // integer values
+jf @PIZZA_4993
+0376: $7967 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7967) = $8035
+01ED: clear_actor $7967 threat_search
+0192: set_actor $7967 objective_to_stand_still
+$7983 = Marker.CreateAboveActor($7967)
+$7997 = 1 // integer values
+return
+
+:PIZZA_4993
+if and
+  $7994 > 2 // integer values
+  $7998 == 0 // integer values
+jf @PIZZA_5082
+0376: $7968 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7968) = $8035
+01ED: clear_actor $7968 threat_search
+0192: set_actor $7968 objective_to_stand_still
+$7984 = Marker.CreateAboveActor($7968)
+$7998 = 1 // integer values
+return
+
+:PIZZA_5082
+if and
+  $7994 > 3 // integer values
+  $7999 == 0 // integer values
+jf @PIZZA_5171
+0376: $7969 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7969) = $8035
+01ED: clear_actor $7969 threat_search
+0192: set_actor $7969 objective_to_stand_still
+$7985 = Marker.CreateAboveActor($7969)
+$7999 = 1 // integer values
+return
+
+:PIZZA_5171
+if and
+  $7994 > 4 // integer values
+  $8000 == 0 // integer values
+jf @PIZZA_5260
+0376: $7970 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7970) = $8035
+01ED: clear_actor $7970 threat_search
+0192: set_actor $7970 objective_to_stand_still
+$7986 = Marker.CreateAboveActor($7970)
+$8000 = 1 // integer values
+return
+
+:PIZZA_5260
+if and
+  $7994 > 5 // integer values
+  $8001 == 0 // integer values
+jf @PIZZA_5349
+0376: $7971 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7971) = $8035
+01ED: clear_actor $7971 threat_search
+0192: set_actor $7971 objective_to_stand_still
+$7987 = Marker.CreateAboveActor($7971)
+$8001 = 1 // integer values
+return
+
+:PIZZA_5349
+if and
+  $7994 > 6 // integer values
+  $8002 == 0 // integer values
+jf @PIZZA_5438
+0376: $7972 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7972) = $8035
+01ED: clear_actor $7972 threat_search
+0192: set_actor $7972 objective_to_stand_still
+$7988 = Marker.CreateAboveActor($7972)
+$8002 = 1 // integer values
+return
+
+:PIZZA_5438
+if and
+  $7994 > 7 // integer values
+  $8003 == 0 // integer values
+jf @PIZZA_5527
+0376: $7973 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7973) = $8035
+01ED: clear_actor $7973 threat_search
+0192: set_actor $7973 objective_to_stand_still
+$7989 = Marker.CreateAboveActor($7973)
+$8003 = 1 // integer values
+return
+
+:PIZZA_5527
+if and
+  $7994 > 8 // integer values
+  $8004 == 0 // integer values
+jf @PIZZA_5616
+0376: $7974 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7974) = $8035
+01ED: clear_actor $7974 threat_search
+0192: set_actor $7974 objective_to_stand_still
+$7990 = Marker.CreateAboveActor($7974)
+$8004 = 1 // integer values
+return
+
+:PIZZA_5616
+if and
+  $7994 > 9 // integer values
+  $8005 == 0 // integer values
+jf @PIZZA_5705
+0376: $7975 = create_random_actor $8025 $8026 $8027
+0208: $8035 = random_float 0.0 359.9
+Actor.Angle($7975) = $8035
+01ED: clear_actor $7975 threat_search
+0192: set_actor $7975 objective_to_stand_still
+$7991 = Marker.CreateAboveActor($7975)
+$8005 = 1 // integer values
+return
+
+:PIZZA_5705
+return
+
+:PIZZA_5707
+if
+  $8009 == 0 // integer values
+jf @PIZZA_5879
+$8010 = Object.Init(#PIZZABOX, 0.0, 0.0, 100.0)
+035C: place_object $8010 relative_to_car $7965 offset 0.7 0.0 0.7
+Object.CollisionDetection($8010) = True
+Object.ToggleInMovingList($8010) = True
+0170: $8039 = player $PLAYER_CHAR z_angle
+$8040 -= 90.0 // floating-point values
+$8041 -= 90.0 // floating-point values
+02F7: $8040 = cosine $8039
+02F6: $8041 = sine $8039 // float
+$8040 *= 12.0 // floating-point values
+$8041 *= 12.0 // floating-point values
+038C: object $8010 scatter $8040 $8041 5.0
+$8008 -= 1 // integer values
+$8009 = 1 // integer values
+
+:PIZZA_5879
+return
+
+:PIZZA_5881
+if
+  $8009 == 0 // integer values
+jf @PIZZA_6053
+$8010 = Object.Init(#PIZZABOX, 0.0, 0.0, 100.0)
+035C: place_object $8010 relative_to_car $7965 offset -0.7 0.0 0.7
+Object.CollisionDetection($8010) = True
+Object.ToggleInMovingList($8010) = True
+0170: $8039 = player $PLAYER_CHAR z_angle
+$8040 -= 90.0 // floating-point values
+$8041 -= 90.0 // floating-point values
+02F7: $8040 = cosine $8039
+02F6: $8041 = sine $8039 // float
+$8040 *= -12.0 // floating-point values
+$8041 *= -12.0 // floating-point values
+038C: object $8010 scatter $8040 $8041 5.0
+$8008 -= 1 // integer values
+$8009 = 1 // integer values
+
+:PIZZA_6053
+return
+
+:PIZZA_6055
+if
+   not Car.Wrecked($7965)
+jf @PIZZA_6582
+if
+00DC:   player $PLAYER_CHAR driving $7965
+jf @PIZZA_6582
+if
+00E1:   player 0 pressed_button 7
+jf @PIZZA_6336
+if
+00E1:   player 0 pressed_button 17
+jf @PIZZA_6329
+if
+  $8008 == 6 // integer values
+jf @PIZZA_6157
+gosub @PIZZA_5707
+0084: $7976 = $8010 // integer values and handles
+
+:PIZZA_6157
+if
+  $8008 == 5 // integer values
+jf @PIZZA_6190
+gosub @PIZZA_5707
+0084: $7977 = $8010 // integer values and handles
+
+:PIZZA_6190
+if
+  $8008 == 4 // integer values
+jf @PIZZA_6223
+gosub @PIZZA_5707
+0084: $7978 = $8010 // integer values and handles
+
+:PIZZA_6223
+if
+  $8008 == 3 // integer values
+jf @PIZZA_6256
+gosub @PIZZA_5707
+0084: $7979 = $8010 // integer values and handles
+
+:PIZZA_6256
+if
+  $8008 == 2 // integer values
+jf @PIZZA_6289
+gosub @PIZZA_5707
+0084: $7980 = $8010 // integer values and handles
+
+:PIZZA_6289
+if
+  $8008 == 1 // integer values
+jf @PIZZA_6322
+gosub @PIZZA_5707
+0084: $7981 = $8010 // integer values and handles
+
+:PIZZA_6322
+jump @PIZZA_6336
+
+:PIZZA_6329
+$8009 = 0 // integer values
+
+:PIZZA_6336
+if
+00E1:   player 0 pressed_button 5
+jf @PIZZA_6582
+if
+00E1:   player 0 pressed_button 17
+jf @PIZZA_6575
+if
+  $8008 == 6 // integer values
+jf @PIZZA_6403
+gosub @PIZZA_5881
+0084: $7976 = $8010 // integer values and handles
+
+:PIZZA_6403
+if
+  $8008 == 5 // integer values
+jf @PIZZA_6436
+gosub @PIZZA_5881
+0084: $7977 = $8010 // integer values and handles
+
+:PIZZA_6436
+if
+  $8008 == 4 // integer values
+jf @PIZZA_6469
+gosub @PIZZA_5881
+0084: $7978 = $8010 // integer values and handles
+
+:PIZZA_6469
+if
+  $8008 == 3 // integer values
+jf @PIZZA_6502
+gosub @PIZZA_5881
+0084: $7979 = $8010 // integer values and handles
+
+:PIZZA_6502
+if
+  $8008 == 2 // integer values
+jf @PIZZA_6535
+gosub @PIZZA_5881
+0084: $7980 = $8010 // integer values and handles
+
+:PIZZA_6535
+if
+  $8008 == 1 // integer values
+jf @PIZZA_6568
+gosub @PIZZA_5881
+0084: $7981 = $8010 // integer values and handles
+
+:PIZZA_6568
+jump @PIZZA_6582
+
+:PIZZA_6575
+$8009 = 0 // integer values
+
+:PIZZA_6582
+if
+  $7996 == 1 // integer values
+jf @PIZZA_6794
+if
+   not Actor.Dead($7966)
+jf @PIZZA_6787
+0084: $8014 = $7966 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_6780
+if
+   not Actor.Dead($7966)
+jf @PIZZA_6682
+0372: set_actor $7966 anim 14 wait_state_time 500 ms
+jump @PIZZA_6689
+
+:PIZZA_6682
+$8015 = 1 // integer values
+
+:PIZZA_6689
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7966)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7982)
+$7996 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_6780
+jump @PIZZA_6794
+
+:PIZZA_6787
+$8015 = 1 // integer values
+
+:PIZZA_6794
+if
+  $7997 == 1 // integer values
+jf @PIZZA_7006
+if
+   not Actor.Dead($7967)
+jf @PIZZA_6999
+0084: $8014 = $7967 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_6992
+if
+   not Actor.Dead($7967)
+jf @PIZZA_6894
+0372: set_actor $7967 anim 14 wait_state_time 500 ms
+jump @PIZZA_6901
+
+:PIZZA_6894
+$8015 = 1 // integer values
+
+:PIZZA_6901
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7967)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7983)
+$7997 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_6992
+jump @PIZZA_7006
+
+:PIZZA_6999
+$8015 = 1 // integer values
+
+:PIZZA_7006
+if
+  $7998 == 1 // integer values
+jf @PIZZA_7218
+if
+   not Actor.Dead($7968)
+jf @PIZZA_7211
+0084: $8014 = $7968 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_7204
+if
+   not Actor.Dead($7968)
+jf @PIZZA_7106
+0372: set_actor $7968 anim 14 wait_state_time 500 ms
+jump @PIZZA_7113
+
+:PIZZA_7106
+$8015 = 1 // integer values
+
+:PIZZA_7113
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7968)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7984)
+$7998 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_7204
+jump @PIZZA_7218
+
+:PIZZA_7211
+$8015 = 1 // integer values
+
+:PIZZA_7218
+if
+  $7999 == 1 // integer values
+jf @PIZZA_7430
+if
+   not Actor.Dead($7969)
+jf @PIZZA_7423
+0084: $8014 = $7969 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_7416
+if
+   not Actor.Dead($7969)
+jf @PIZZA_7318
+0372: set_actor $7969 anim 14 wait_state_time 500 ms
+jump @PIZZA_7325
+
+:PIZZA_7318
+$8015 = 1 // integer values
+
+:PIZZA_7325
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7969)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7985)
+$7999 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_7416
+jump @PIZZA_7430
+
+:PIZZA_7423
+$8015 = 1 // integer values
+
+:PIZZA_7430
+if
+  $8000 == 1 // integer values
+jf @PIZZA_7642
+if
+   not Actor.Dead($7970)
+jf @PIZZA_7635
+0084: $8014 = $7970 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_7628
+if
+   not Actor.Dead($7970)
+jf @PIZZA_7530
+0372: set_actor $7970 anim 14 wait_state_time 500 ms
+jump @PIZZA_7537
+
+:PIZZA_7530
+$8015 = 1 // integer values
+
+:PIZZA_7537
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7970)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7986)
+$8000 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_7628
+jump @PIZZA_7642
+
+:PIZZA_7635
+$8015 = 1 // integer values
+
+:PIZZA_7642
+if
+  $8001 == 1 // integer values
+jf @PIZZA_7854
+if
+   not Actor.Dead($7971)
+jf @PIZZA_7847
+0084: $8014 = $7971 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_7840
+if
+   not Actor.Dead($7971)
+jf @PIZZA_7742
+0372: set_actor $7971 anim 14 wait_state_time 500 ms
+jump @PIZZA_7749
+
+:PIZZA_7742
+$8015 = 1 // integer values
+
+:PIZZA_7749
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7971)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7987)
+$8001 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_7840
+jump @PIZZA_7854
+
+:PIZZA_7847
+$8015 = 1 // integer values
+
+:PIZZA_7854
+if
+  $8002 == 1 // integer values
+jf @PIZZA_8066
+if
+   not Actor.Dead($7972)
+jf @PIZZA_8059
+0084: $8014 = $7972 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_8052
+if
+   not Actor.Dead($7972)
+jf @PIZZA_7954
+0372: set_actor $7972 anim 14 wait_state_time 500 ms
+jump @PIZZA_7961
+
+:PIZZA_7954
+$8015 = 1 // integer values
+
+:PIZZA_7961
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7972)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7988)
+$8002 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_8052
+jump @PIZZA_8066
+
+:PIZZA_8059
+$8015 = 1 // integer values
+
+:PIZZA_8066
+if
+  $8003 == 1 // integer values
+jf @PIZZA_8278
+if
+   not Actor.Dead($7973)
+jf @PIZZA_8271
+0084: $8014 = $7973 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_8264
+if
+   not Actor.Dead($7973)
+jf @PIZZA_8166
+0372: set_actor $7973 anim 14 wait_state_time 500 ms
+jump @PIZZA_8173
+
+:PIZZA_8166
+$8015 = 1 // integer values
+
+:PIZZA_8173
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7973)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7989)
+$8003 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_8264
+jump @PIZZA_8278
+
+:PIZZA_8271
+$8015 = 1 // integer values
+
+:PIZZA_8278
+if
+  $8004 == 1 // integer values
+jf @PIZZA_8490
+if
+   not Actor.Dead($7974)
+jf @PIZZA_8483
+0084: $8014 = $7974 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_8476
+if
+   not Actor.Dead($7974)
+jf @PIZZA_8378
+0372: set_actor $7974 anim 14 wait_state_time 500 ms
+jump @PIZZA_8385
+
+:PIZZA_8378
+$8015 = 1 // integer values
+
+:PIZZA_8385
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7974)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7990)
+$8004 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_8476
+jump @PIZZA_8490
+
+:PIZZA_8483
+$8015 = 1 // integer values
+
+:PIZZA_8490
+if
+  $8005 == 1 // integer values
+jf @PIZZA_8702
+if
+   not Actor.Dead($7975)
+jf @PIZZA_8695
+0084: $8014 = $7975 // integer values and handles
+gosub @PIZZA_8711
+if
+  $8013 == 1 // integer values
+jf @PIZZA_8688
+if
+   not Actor.Dead($7975)
+jf @PIZZA_8590
+0372: set_actor $7975 anim 14 wait_state_time 500 ms
+jump @PIZZA_8597
+
+:PIZZA_8590
+$8015 = 1 // integer values
+
+:PIZZA_8597
+wait 500
+gosub @PIZZA_10285
+Actor.RemoveReferences($7975)
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'PIZ1_34' 5000 ms 1  // ~g~Pizza delivered, here's your cash.
+Player.Money($PLAYER_CHAR) += 10
+Marker.Disable($7991)
+$8005 = 0 // integer values
+$8006 += 1 // integer values
+$8020 += 1 // integer values
+$8013 = 0 // integer values
+
+:PIZZA_8688
+jump @PIZZA_8702
+
+:PIZZA_8695
+$8015 = 1 // integer values
+
+:PIZZA_8702
+gosub @PIZZA_13088
+return
+
+:PIZZA_8711
+if
+03CA:   object $7976 exists
+jf @PIZZA_8973
+if
+   not Actor.Dead($8014)
+jf @PIZZA_8966
+if
+0472:   actor $8014 within_object_on_foot $7976 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_8959
+$8016 = 1 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_8792
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_8822
+jump @PIZZA_8952
+
+:PIZZA_8822
+if
+   not Actor.Dead($8014)
+jf @PIZZA_8924
+if
+03CA:   object $7976 exists
+jf @PIZZA_8917
+Object.StorePos($7976, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7976 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_8917
+jump @PIZZA_8952
+
+:PIZZA_8917
+jump @PIZZA_8931
+
+:PIZZA_8924
+$8015 = 1 // integer values
+
+:PIZZA_8931
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_8792
+
+:PIZZA_8952
+$8013 = 1 // integer values
+
+:PIZZA_8959
+jump @PIZZA_8973
+
+:PIZZA_8966
+$8015 = 1 // integer values
+
+:PIZZA_8973
+if
+03CA:   object $7977 exists
+jf @PIZZA_9235
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9228
+if
+0472:   actor $8014 within_object_on_foot $7977 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9221
+$8016 = 2 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_9054
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_9084
+jump @PIZZA_9214
+
+:PIZZA_9084
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9186
+if
+03CA:   object $7977 exists
+jf @PIZZA_9179
+Object.StorePos($7977, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7977 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9179
+jump @PIZZA_9214
+
+:PIZZA_9179
+jump @PIZZA_9193
+
+:PIZZA_9186
+$8015 = 1 // integer values
+
+:PIZZA_9193
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_9054
+
+:PIZZA_9214
+$8013 = 1 // integer values
+
+:PIZZA_9221
+jump @PIZZA_9235
+
+:PIZZA_9228
+$8015 = 1 // integer values
+
+:PIZZA_9235
+if
+03CA:   object $7978 exists
+jf @PIZZA_9497
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9490
+if
+0472:   actor $8014 within_object_on_foot $7978 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9483
+$8016 = 3 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_9316
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_9346
+jump @PIZZA_9476
+
+:PIZZA_9346
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9448
+if
+03CA:   object $7978 exists
+jf @PIZZA_9441
+Object.StorePos($7978, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7978 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9441
+jump @PIZZA_9476
+
+:PIZZA_9441
+jump @PIZZA_9455
+
+:PIZZA_9448
+$8015 = 1 // integer values
+
+:PIZZA_9455
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_9316
+
+:PIZZA_9476
+$8013 = 1 // integer values
+
+:PIZZA_9483
+jump @PIZZA_9497
+
+:PIZZA_9490
+$8015 = 1 // integer values
+
+:PIZZA_9497
+if
+03CA:   object $7979 exists
+jf @PIZZA_9759
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9752
+if
+0472:   actor $8014 within_object_on_foot $7979 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9745
+$8016 = 4 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_9578
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_9608
+jump @PIZZA_9738
+
+:PIZZA_9608
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9710
+if
+03CA:   object $7979 exists
+jf @PIZZA_9703
+Object.StorePos($7979, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7979 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9703
+jump @PIZZA_9738
+
+:PIZZA_9703
+jump @PIZZA_9717
+
+:PIZZA_9710
+$8015 = 1 // integer values
+
+:PIZZA_9717
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_9578
+
+:PIZZA_9738
+$8013 = 1 // integer values
+
+:PIZZA_9745
+jump @PIZZA_9759
+
+:PIZZA_9752
+$8015 = 1 // integer values
+
+:PIZZA_9759
+if
+03CA:   object $7980 exists
+jf @PIZZA_10021
+if
+   not Actor.Dead($8014)
+jf @PIZZA_10014
+if
+0472:   actor $8014 within_object_on_foot $7980 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_10007
+$8016 = 5 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_9840
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_9870
+jump @PIZZA_10000
+
+:PIZZA_9870
+if
+   not Actor.Dead($8014)
+jf @PIZZA_9972
+if
+03CA:   object $7980 exists
+jf @PIZZA_9965
+Object.StorePos($7980, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7980 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_9965
+jump @PIZZA_10000
+
+:PIZZA_9965
+jump @PIZZA_9979
+
+:PIZZA_9972
+$8015 = 1 // integer values
+
+:PIZZA_9979
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_9840
+
+:PIZZA_10000
+$8013 = 1 // integer values
+
+:PIZZA_10007
+jump @PIZZA_10021
+
+:PIZZA_10014
+$8015 = 1 // integer values
+
+:PIZZA_10021
+if
+03CA:   object $7981 exists
+jf @PIZZA_10283
+if
+   not Actor.Dead($8014)
+jf @PIZZA_10276
+if
+0472:   actor $8014 within_object_on_foot $7981 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_10269
+$8016 = 6 // integer values
+wait 20
+17@ = 0 // integer values
+
+:PIZZA_10102
+wait 0
+if
+  17@ > 3000 // integer values
+jf @PIZZA_10132
+jump @PIZZA_10262
+
+:PIZZA_10132
+if
+   not Actor.Dead($8014)
+jf @PIZZA_10234
+if
+03CA:   object $7981 exists
+jf @PIZZA_10227
+Object.StorePos($7981, $8042, $8043, $8044)
+0239: actor $8014 run_to $8042 $8043
+if
+0472:   actor $8014 within_object_on_foot $7981 rectangle 2.0 2.0 sphere 0
+jf @PIZZA_10227
+jump @PIZZA_10262
+
+:PIZZA_10227
+jump @PIZZA_10241
+
+:PIZZA_10234
+$8015 = 1 // integer values
+
+:PIZZA_10241
+gosub @PIZZA_13088
+gosub @PIZZA_13772
+jump @PIZZA_10102
+
+:PIZZA_10262
+$8013 = 1 // integer values
+
+:PIZZA_10269
+jump @PIZZA_10283
+
+:PIZZA_10276
+$8015 = 1 // integer values
+
+:PIZZA_10283
+return
+
+:PIZZA_10285
+if
+  $8016 == 1 // integer values
+jf @PIZZA_10308
+Object.Destroy($7976)
+
+:PIZZA_10308
+if
+  $8016 == 2 // integer values
+jf @PIZZA_10331
+Object.Destroy($7977)
+
+:PIZZA_10331
+if
+  $8016 == 3 // integer values
+jf @PIZZA_10354
+Object.Destroy($7978)
+
+:PIZZA_10354
+if
+  $8016 == 4 // integer values
+jf @PIZZA_10377
+Object.Destroy($7979)
+
+:PIZZA_10377
+if
+  $8016 == 5 // integer values
+jf @PIZZA_10400
+Object.Destroy($7980)
+
+:PIZZA_10400
+if
+  $8016 == 6 // integer values
+jf @PIZZA_10423
+Object.Destroy($7981)
+
+:PIZZA_10423
+return
+
+:PIZZA_10425
+Object.RemoveReferences($7976)
+Object.RemoveReferences($7977)
+Object.RemoveReferences($7978)
+Object.RemoveReferences($7979)
+Object.RemoveReferences($7980)
+Object.RemoveReferences($7981)
+0209: $8021 = random_int_in_ranges 1 20
+if
+  $8022 == 0 // integer values
+jf @PIZZA_12674
+if
+  $8021 == 1 // integer values
+jf @PIZZA_10597
+03CF: load_wav 'PISS_01' as 1
+
+:PIZZA_10512
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_10538
+wait 0
+jump @PIZZA_10512
+
+:PIZZA_10538
+00BC: text_highpriority 'PIZ1_13' 4000 ms 1  // Get these delivered nice and hot.
+03D1: play_wav 1
+
+:PIZZA_10557
+if
+83D2:   not wav 1 ended
+jf @PIZZA_10583
+wait 0
+jump @PIZZA_10557
+
+:PIZZA_10583
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_13'  // Get these delivered nice and hot.
+
+:PIZZA_10597
+if
+  $8021 == 2 // integer values
+jf @PIZZA_10712
+03CF: load_wav 'PISS_02' as 1
+
+:PIZZA_10627
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_10653
+wait 0
+jump @PIZZA_10627
+
+:PIZZA_10653
+00BC: text_highpriority 'PIZ1_14' 4000 ms 1  // Pal, pizza's for you.
+03D1: play_wav 1
+
+:PIZZA_10672
+if
+83D2:   not wav 1 ended
+jf @PIZZA_10698
+wait 0
+jump @PIZZA_10672
+
+:PIZZA_10698
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_14'  // Pal, pizza's for you.
+
+:PIZZA_10712
+if
+  $8021 == 3 // integer values
+jf @PIZZA_10827
+03CF: load_wav 'PISS_03' as 1
+
+:PIZZA_10742
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_10768
+wait 0
+jump @PIZZA_10742
+
+:PIZZA_10768
+00BC: text_highpriority 'PIZ1_15' 4000 ms 1  // Hey, come on Mister, deliver these quick.
+03D1: play_wav 1
+
+:PIZZA_10787
+if
+83D2:   not wav 1 ended
+jf @PIZZA_10813
+wait 0
+jump @PIZZA_10787
+
+:PIZZA_10813
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_15'  // Hey, come on Mister, deliver these quick.
+
+:PIZZA_10827
+if
+  $8021 == 4 // integer values
+jf @PIZZA_10942
+03CF: load_wav 'PISS_04' as 1
+
+:PIZZA_10857
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_10883
+wait 0
+jump @PIZZA_10857
+
+:PIZZA_10883
+00BC: text_highpriority 'PIZ1_16' 4000 ms 1  // What are you waiting around for Mister? You got pizza to deliver.
+03D1: play_wav 1
+
+:PIZZA_10902
+if
+83D2:   not wav 1 ended
+jf @PIZZA_10928
+wait 0
+jump @PIZZA_10902
+
+:PIZZA_10928
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_16'  // What are you waiting around for Mister? You got pizza to deliver.
+
+:PIZZA_10942
+if
+  $8021 == 5 // integer values
+jf @PIZZA_11057
+03CF: load_wav 'PISS_05' as 1
+
+:PIZZA_10972
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_10998
+wait 0
+jump @PIZZA_10972
+
+:PIZZA_10998
+00BC: text_highpriority 'PIZ1_17' 4000 ms 1  // I know you didn't want to be a pizza boy, well I don't give a damn.
+03D1: play_wav 1
+
+:PIZZA_11017
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11043
+wait 0
+jump @PIZZA_11017
+
+:PIZZA_11043
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_17'  // I know you didn't want to be a pizza boy, well I don't give a damn.
+
+:PIZZA_11057
+if
+  $8021 == 6 // integer values
+jf @PIZZA_11172
+03CF: load_wav 'PISS_06' as 1
+
+:PIZZA_11087
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11113
+wait 0
+jump @PIZZA_11087
+
+:PIZZA_11113
+00BC: text_highpriority 'PIZ1_18' 4000 ms 1  // Deliver these.
+03D1: play_wav 1
+
+:PIZZA_11132
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11158
+wait 0
+jump @PIZZA_11132
+
+:PIZZA_11158
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_18'  // Deliver these.
+
+:PIZZA_11172
+if
+  $8021 == 7 // integer values
+jf @PIZZA_11287
+03CF: load_wav 'PISS_07' as 1
+
+:PIZZA_11202
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11228
+wait 0
+jump @PIZZA_11202
+
+:PIZZA_11228
+00BC: text_highpriority 'PIZ1_19' 4000 ms 1  // These need delivering.
+03D1: play_wav 1
+
+:PIZZA_11247
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11273
+wait 0
+jump @PIZZA_11247
+
+:PIZZA_11273
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_19'  // These need delivering.
+
+:PIZZA_11287
+if
+  $8021 == 8 // integer values
+jf @PIZZA_11402
+03CF: load_wav 'PISS_08' as 1
+
+:PIZZA_11317
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11343
+wait 0
+jump @PIZZA_11317
+
+:PIZZA_11343
+00BC: text_highpriority 'PIZ1_20' 4000 ms 1  // Come on Mister, deliver these things or you're sacked.
+03D1: play_wav 1
+
+:PIZZA_11362
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11388
+wait 0
+jump @PIZZA_11362
+
+:PIZZA_11388
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_20'  // Come on Mister, deliver these things or you're sacked.
+
+:PIZZA_11402
+if
+  $8021 == 9 // integer values
+jf @PIZZA_11517
+03CF: load_wav 'PISS_09' as 1
+
+:PIZZA_11432
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11458
+wait 0
+jump @PIZZA_11432
+
+:PIZZA_11458
+00BC: text_highpriority 'PIZ1_21' 4000 ms 1  // We got people waiting pal.
+03D1: play_wav 1
+
+:PIZZA_11477
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11503
+wait 0
+jump @PIZZA_11477
+
+:PIZZA_11503
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_21'  // We got people waiting pal.
+
+:PIZZA_11517
+if
+  $8021 == 10 // integer values
+jf @PIZZA_11632
+03CF: load_wav 'PISS_10' as 1
+
+:PIZZA_11547
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11573
+wait 0
+jump @PIZZA_11547
+
+:PIZZA_11573
+00BC: text_highpriority 'PIZ1_22' 4000 ms 1  // What are you waiting around for? These need delivering!
+03D1: play_wav 1
+
+:PIZZA_11592
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11618
+wait 0
+jump @PIZZA_11592
+
+:PIZZA_11618
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_22'  // What are you waiting around for? These need delivering!
+
+:PIZZA_11632
+if
+  $8021 == 11 // integer values
+jf @PIZZA_11747
+03CF: load_wav 'PISS_11' as 1
+
+:PIZZA_11662
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11688
+wait 0
+jump @PIZZA_11662
+
+:PIZZA_11688
+00BC: text_highpriority 'PIZ1_23' 4000 ms 1  // Deliver the damn food Mister.
+03D1: play_wav 1
+
+:PIZZA_11707
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11733
+wait 0
+jump @PIZZA_11707
+
+:PIZZA_11733
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_23'  // Deliver the damn food Mister.
+
+:PIZZA_11747
+if
+  $8021 == 12 // integer values
+jf @PIZZA_11862
+03CF: load_wav 'PISS_12' as 1
+
+:PIZZA_11777
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11803
+wait 0
+jump @PIZZA_11777
+
+:PIZZA_11803
+00BC: text_highpriority 'PIZ1_24' 4000 ms 1  // These need delivering pal.
+03D1: play_wav 1
+
+:PIZZA_11822
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11848
+wait 0
+jump @PIZZA_11822
+
+:PIZZA_11848
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_24'  // These need delivering pal.
+
+:PIZZA_11862
+if
+  $8021 == 13 // integer values
+jf @PIZZA_11977
+03CF: load_wav 'PISS_13' as 1
+
+:PIZZA_11892
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_11918
+wait 0
+jump @PIZZA_11892
+
+:PIZZA_11918
+00BC: text_highpriority 'PIZ1_25' 4000 ms 1  // Man, can you take these?
+03D1: play_wav 1
+
+:PIZZA_11937
+if
+83D2:   not wav 1 ended
+jf @PIZZA_11963
+wait 0
+jump @PIZZA_11937
+
+:PIZZA_11963
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_25'  // Man, can you take these?
+
+:PIZZA_11977
+if
+  $8021 == 14 // integer values
+jf @PIZZA_12092
+03CF: load_wav 'PISS_14' as 1
+
+:PIZZA_12007
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12033
+wait 0
+jump @PIZZA_12007
+
+:PIZZA_12033
+00BC: text_highpriority 'PIZ1_26' 4000 ms 1  // Mister, deliver these pronto, avamos amigo.
+03D1: play_wav 1
+
+:PIZZA_12052
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12078
+wait 0
+jump @PIZZA_12052
+
+:PIZZA_12078
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_26'  // Mister, deliver these pronto, avamos amigo.
+
+:PIZZA_12092
+if
+  $8021 == 15 // integer values
+jf @PIZZA_12207
+03CF: load_wav 'PISS_15' as 1
+
+:PIZZA_12122
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12148
+wait 0
+jump @PIZZA_12122
+
+:PIZZA_12148
+00BC: text_highpriority 'PIZ1_27' 4000 ms 1  // Come on, we're in a rush, deliver these.
+03D1: play_wav 1
+
+:PIZZA_12167
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12193
+wait 0
+jump @PIZZA_12167
+
+:PIZZA_12193
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_27'  // Come on, we're in a rush, deliver these.
+
+:PIZZA_12207
+if
+  $8021 == 16 // integer values
+jf @PIZZA_12322
+03CF: load_wav 'PISS_16' as 1
+
+:PIZZA_12237
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12263
+wait 0
+jump @PIZZA_12237
+
+:PIZZA_12263
+00BC: text_highpriority 'PIZ1_28' 4000 ms 1  // You again? well deliver these quick pal.
+03D1: play_wav 1
+
+:PIZZA_12282
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12308
+wait 0
+jump @PIZZA_12282
+
+:PIZZA_12308
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_28'  // You again? well deliver these quick pal.
+
+:PIZZA_12322
+if
+  $8021 == 17 // integer values
+jf @PIZZA_12437
+03CF: load_wav 'PISS_17' as 1
+
+:PIZZA_12352
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12378
+wait 0
+jump @PIZZA_12352
+
+:PIZZA_12378
+00BC: text_highpriority 'PIZ1_29' 4000 ms 1  // No wasting time this time pal.
+03D1: play_wav 1
+
+:PIZZA_12397
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12423
+wait 0
+jump @PIZZA_12397
+
+:PIZZA_12423
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_29'  // No wasting time this time pal.
+
+:PIZZA_12437
+if
+  $8021 == 18 // integer values
+jf @PIZZA_12552
+03CF: load_wav 'PISS_18' as 1
+
+:PIZZA_12467
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12493
+wait 0
+jump @PIZZA_12467
+
+:PIZZA_12493
+00BC: text_highpriority 'PIZ1_30' 4000 ms 1  // Come on you lazy bastard, deliver this crap on time.
+03D1: play_wav 1
+
+:PIZZA_12512
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12538
+wait 0
+jump @PIZZA_12512
+
+:PIZZA_12538
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_30'  // Come on you lazy bastard, deliver this crap on time.
+
+:PIZZA_12552
+if
+  $8021 == 19 // integer values
+jf @PIZZA_12667
+03CF: load_wav 'PISS_19' as 1
+
+:PIZZA_12582
+if
+83D0:   not wav 1 loaded
+jf @PIZZA_12608
+wait 0
+jump @PIZZA_12582
+
+:PIZZA_12608
+00BC: text_highpriority 'PIZ1_31' 4000 ms 1  // You'll never get a promotion unless you move faster this time.
+03D1: play_wav 1
+
+:PIZZA_12627
+if
+83D2:   not wav 1 ended
+jf @PIZZA_12653
+wait 0
+jump @PIZZA_12627
+
+:PIZZA_12653
+040D: unload_wav 1
+03D5: remove_text 'PIZ1_31'  // You'll never get a promotion unless you move faster this time.
+
+:PIZZA_12667
+$8022 = 1 // integer values
+
+:PIZZA_12674
+return
+
+:PIZZA_12676
+if
+  $7996 == 1 // integer values
+jf @PIZZA_12717
+if
+   Actor.Dead($7966)
+jf @PIZZA_12717
+$8015 = 1 // integer values
+
+:PIZZA_12717
+if
+  $7997 == 1 // integer values
+jf @PIZZA_12758
+if
+   Actor.Dead($7967)
+jf @PIZZA_12758
+$8015 = 1 // integer values
+
+:PIZZA_12758
+if
+  $7998 == 1 // integer values
+jf @PIZZA_12799
+if
+   Actor.Dead($7968)
+jf @PIZZA_12799
+$8015 = 1 // integer values
+
+:PIZZA_12799
+if
+  $7999 == 1 // integer values
+jf @PIZZA_12840
+if
+   Actor.Dead($7969)
+jf @PIZZA_12840
+$8015 = 1 // integer values
+
+:PIZZA_12840
+if
+  $8000 == 1 // integer values
+jf @PIZZA_12881
+if
+   Actor.Dead($7970)
+jf @PIZZA_12881
+$8015 = 1 // integer values
+
+:PIZZA_12881
+if
+  $8001 == 1 // integer values
+jf @PIZZA_12922
+if
+   Actor.Dead($7971)
+jf @PIZZA_12922
+$8015 = 1 // integer values
+
+:PIZZA_12922
+if
+  $8002 == 1 // integer values
+jf @PIZZA_12963
+if
+   Actor.Dead($7972)
+jf @PIZZA_12963
+$8015 = 1 // integer values
+
+:PIZZA_12963
+if
+  $8003 == 1 // integer values
+jf @PIZZA_13004
+if
+   Actor.Dead($7973)
+jf @PIZZA_13004
+$8015 = 1 // integer values
+
+:PIZZA_13004
+if
+  $8004 == 1 // integer values
+jf @PIZZA_13045
+if
+   Actor.Dead($7974)
+jf @PIZZA_13045
+$8015 = 1 // integer values
+
+:PIZZA_13045
+if
+  $8005 == 1 // integer values
+jf @PIZZA_13086
+if
+   Actor.Dead($7975)
+jf @PIZZA_13086
+$8015 = 1 // integer values
+
+:PIZZA_13086
+return
+
+:PIZZA_13088
+if
+   not Car.Wrecked($7965)
+jf @PIZZA_13763
+if and
+01F4:   car $7965 flipped
+01C1:   car $7965 stopped
+jf @PIZZA_13132
+$8018 = 1 // integer values
+
+:PIZZA_13132
+if and
+80DC:   not player $PLAYER_CHAR driving $7965
+  $8017 == 0 // integer values
+  $8018 == 0 // integer values
+jf @PIZZA_13250
+00BC: text_highpriority 'PIZ1_11' 5000 ms 1  // Hey! Get back on the bike!
+$7993 = Marker.CreateAboveCar($7965)
+Marker.Disable($7982)
+Marker.Disable($7983)
+Marker.Disable($7984)
+Marker.Disable($7985)
+Marker.Disable($7986)
+Marker.Disable($7987)
+Marker.Disable($7988)
+Marker.Disable($7989)
+Marker.Disable($7990)
+Marker.Disable($7991)
+Marker.Disable($7992)
+$8017 = 1 // integer values
+
+:PIZZA_13250
+if and
+00DC:   player $PLAYER_CHAR driving $7965
+  $8017 == 1 // integer values
+jf @PIZZA_13756
+Marker.Disable($7993)
+if
+  $8007 == 0 // integer values
+jf @PIZZA_13726
+if
+  $7996 == 1 // integer values
+jf @PIZZA_13341
+if
+   not Actor.Dead($7966)
+jf @PIZZA_13341
+$7982 = Marker.CreateAboveActor($7966)
+
+:PIZZA_13341
+if
+  $7997 == 1 // integer values
+jf @PIZZA_13383
+if
+   not Actor.Dead($7967)
+jf @PIZZA_13383
+$7983 = Marker.CreateAboveActor($7967)
+
+:PIZZA_13383
+if
+  $7998 == 1 // integer values
+jf @PIZZA_13425
+if
+   not Actor.Dead($7968)
+jf @PIZZA_13425
+$7984 = Marker.CreateAboveActor($7968)
+
+:PIZZA_13425
+if
+  $7999 == 1 // integer values
+jf @PIZZA_13467
+if
+   not Actor.Dead($7969)
+jf @PIZZA_13467
+$7985 = Marker.CreateAboveActor($7969)
+
+:PIZZA_13467
+if
+  $8000 == 1 // integer values
+jf @PIZZA_13509
+if
+   not Actor.Dead($7970)
+jf @PIZZA_13509
+$7986 = Marker.CreateAboveActor($7970)
+
+:PIZZA_13509
+if
+  $8001 == 1 // integer values
+jf @PIZZA_13551
+if
+   not Actor.Dead($7971)
+jf @PIZZA_13551
+$7987 = Marker.CreateAboveActor($7971)
+
+:PIZZA_13551
+if
+  $8002 == 1 // integer values
+jf @PIZZA_13593
+if
+   not Actor.Dead($7972)
+jf @PIZZA_13593
+$7988 = Marker.CreateAboveActor($7972)
+
+:PIZZA_13593
+if
+  $8003 == 1 // integer values
+jf @PIZZA_13635
+if
+   not Actor.Dead($7973)
+jf @PIZZA_13635
+$7989 = Marker.CreateAboveActor($7973)
+
+:PIZZA_13635
+if
+  $8004 == 1 // integer values
+jf @PIZZA_13677
+if
+   not Actor.Dead($7974)
+jf @PIZZA_13677
+$7990 = Marker.CreateAboveActor($7974)
+
+:PIZZA_13677
+if
+  $8005 == 1 // integer values
+jf @PIZZA_13719
+if
+   not Actor.Dead($7975)
+jf @PIZZA_13719
+$7991 = Marker.CreateAboveActor($7975)
+
+:PIZZA_13719
+jump @PIZZA_13747
+
+:PIZZA_13726
+Marker.Disable($7992)
+018A: $7992 = create_checkpoint_at $8036 $8037 -100.0
+
+:PIZZA_13747
+00BE: text_clear_all
+$8017 = 0 // integer values
+
+:PIZZA_13756
+jump @PIZZA_13770
+
+:PIZZA_13763
+$8015 = 2 // integer values
+
+:PIZZA_13770
+return
+
+:PIZZA_13772
+if $8017 == 0
+then
+	gosub @PROCESS_R3_ABORT
+	if $MISSION_CANCEL_FLAG == 2
+	then
+		00BE: text_clear_all
+		$8015 = 3
+	end
+end
+return

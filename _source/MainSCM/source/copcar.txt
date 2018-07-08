@@ -1,0 +1,3088 @@
+:COPCAR
+gosub @COPCAR_36
+if
+wasted_or_busted
+jf @COPCAR_27
+gosub @COPCAR_11758
+
+:COPCAR_27
+gosub @COPCAR_11760
+end_thread
+
+:COPCAR_36
+$ONMISSION = 1 // integer values
+thread 'COPCAR'
+wait 0
+if
+  $1582 == 0 // integer values
+jf @COPCAR_77
+increment_mission_attempts
+
+:COPCAR_77
+054C: use_GXT_table 'COPCAR'
+$6892 = 0 // integer values
+$6900 = -100 // integer values
+$6902 = 0 // integer values
+$6895 = 0 // integer values
+$6909 = 0 // integer values
+$6906 = 0 // integer values
+$6894 = 0 // integer values
+$6896 = 0 // integer values
+$6908 = 0 // integer values
+$6897 = 0 // integer values
+$6898 = 0 // integer values
+$6899 = 0 // integer values
+$6901 = 0 // integer values
+$6903 = 0 // integer values
+$6904 = 0 // integer values
+$6905 = 0 // integer values
+$6907 = 0 // integer values
+$6935 = 0 // integer values
+$6936 = 0 // integer values
+$6980 = 4.0 // floating-point values
+$6981 = 1.0 // floating-point values
+$6937 = 0 // integer values
+$4886 = 0.0 // floating-point values
+$6962 = 0.0 // floating-point values
+$6982 = 0.0 // floating-point values
+$6983 = 0.0 // floating-point values
+$6984 = 0.0 // floating-point values
+$6985 = 0.0 // floating-point values
+2@ = 0.0 // floating-point values
+3@ = 0.0 // floating-point values
+4@ = 0.0 // floating-point values
+5@ = 0.0 // floating-point values
+8@ = 0.0 // floating-point values
+9@ = 0.0 // floating-point values
+10@ = 0.0 // floating-point values
+11@ = 0.0 // floating-point values
+Model.Load(#COLT45)
+Model.Load(#TEC9)
+Model.Load(#RUGER)
+Model.Load(#CHROMEGUN)
+Model.Load(#MACHETE)
+Model.Load(#BAT)
+038B: load_requested_models
+
+:COPCAR_419
+if or
+   not Model.Available(#COLT45)
+   not Model.Available(#TEC9)
+   not Model.Available(#RUGER)
+   not Model.Available(#CHROMEGUN)
+jf @COPCAR_461
+wait 0
+jump @COPCAR_419
+
+:COPCAR_461
+if or
+   not Model.Available(#MACHETE)
+   not Model.Available(#BAT)
+jf @COPCAR_493
+wait 0
+jump @COPCAR_461
+
+:COPCAR_493
+0481:  6.0
+0482:  3.0
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COPCAR_538
+03C1: $6875 = player $PLAYER_CHAR car_no_save
+053F: set_car $6875 tires_vulnerable 0
+
+:COPCAR_538
+$6918 = 0 // integer values
+$6927 = 0 // integer values
+$6934 = 0 // integer values
+$6894 = 0 // integer values
+$6910 = 0 // integer values
+$6911 = 0 // integer values
+$6912 = 0 // integer values
+$6913 = 0 // integer values
+$6914 = 0 // integer values
+$6915 = 0 // integer values
+$6916 = 0 // integer values
+$6919 = 0 // integer values
+$6920 = 0 // integer values
+$6921 = 0 // integer values
+$6922 = 0 // integer values
+$6923 = 0 // integer values
+$6924 = 0 // integer values
+$6925 = 0 // integer values
+$6928 = 0 // integer values
+12@ = 0 // integer values
+13@ = 0 // integer values
+$6929 = 0 // integer values
+$6930 = 0 // integer values
+$6931 = 0 // integer values
+$6932 = 0 // integer values
+$6966 = 0.0 // floating-point values
+$6967 = 0.0 // floating-point values
+$6968 = 0.0 // floating-point values
+$6969 = 0.0 // floating-point values
+$2565 = 0 // integer values
+gosub @COPCAR_11841
+0209: $6936 = random_int_in_ranges 9 95
+Model.Load($6936)
+
+:COPCAR_781
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_813
+jump @COPCAR_11758
+
+:COPCAR_813
+0054: store_player $PLAYER_CHAR position_to $95 $96 $447
+if
+  $PASSED_COK2_PHNOM_PENH_86 == 0 // integer values
+jf @COPCAR_882
+0208: $6942 = random_float -247.43 683.41
+0208: $6943 = random_float -1813.62 1308.102
+jump @COPCAR_987
+
+:COPCAR_882
+if
+0056:   player $PLAYER_CHAR 0 -1802.615 -1518.473 -270.134 1591.896
+jf @COPCAR_957
+0208: $6942 = random_float -1802.615 -270.134
+0208: $6943 = random_float -1518.473 1591.896
+jump @COPCAR_987
+
+:COPCAR_957
+0208: $6942 = random_float -247.43 683.41
+0208: $6943 = random_float -1813.62 1308.102
+
+:COPCAR_987
+$6944 = 10.0 // floating-point values
+if
+  4 > $6892 // integer values
+jf @COPCAR_1048
+03D3: point $6942 $6943 $6944 get_nearby_vector $6942 $6943 $6944 $6951
+$6944 += 0.5 // floating-point values
+
+:COPCAR_1048
+if and
+  $6892 > 3 // integer values
+  8 > $6892 // integer values
+jf @COPCAR_1433
+04B9: unknown_stuff $6942 $6943 $6944 8.0 500.0 $6942 $6943 $6944 $6945 $6946 $6947 $6951
+if and
+  $6942 == 0.0 // floating-point values
+  $6943 == 0.0 // floating-point values
+  $6945 == 0.0 // floating-point values
+  $6946 == 0.0 // floating-point values
+jf @COPCAR_1177
+wait 0
+jump @COPCAR_781
+
+:COPCAR_1177
+0086: $6963 = $6945 // floating-point values only
+0061: $6963 -= $6942 // floating-point values
+0086: $6964 = $6946 // floating-point values only
+0061: $6964 -= $6943 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $6963 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $6964 // floating-point values
+0086: $6965 = $6978 // floating-point values only
+0059: $6965 += $6979 // floating-point values
+01FB: $6965 = square_root $6965
+$4864 = 8.0 // floating-point values
+0071: $4864 /= $6965 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $4864 // floating-point values
+0086: $6945 = $6942 // floating-point values only
+0059: $6945 += $6978 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $4864 // floating-point values
+0086: $6946 = $6943 // floating-point values only
+0059: $6946 += $6979 // floating-point values
+$4864 = 2.0 // floating-point values
+0071: $4864 /= $6965 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $4864 // floating-point values
+0059: $6942 += $6978 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $4864 // floating-point values
+0059: $6943 += $6979 // floating-point values
+$6944 += 0.5 // floating-point values
+$6947 += 0.5 // floating-point values
+
+:COPCAR_1433
+if and
+  $6892 > 7 // integer values
+  12 > $6892 // integer values
+jf @COPCAR_1930
+04B9: unknown_stuff $6942 $6943 $6944 13.0 500.0 $6942 $6943 $6944 $6948 $6949 $6950 $6951
+if and
+  $6942 == 0.0 // floating-point values
+  $6943 == 0.0 // floating-point values
+  $6948 == 0.0 // floating-point values
+  $6949 == 0.0 // floating-point values
+jf @COPCAR_1562
+wait 0
+jump @COPCAR_781
+
+:COPCAR_1562
+0086: $6963 = $6948 // floating-point values only
+0061: $6963 -= $6942 // floating-point values
+0086: $6964 = $6949 // floating-point values only
+0061: $6964 -= $6943 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $6963 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $6964 // floating-point values
+0086: $6965 = $6978 // floating-point values only
+0059: $6965 += $6979 // floating-point values
+01FB: $6965 = square_root $6965
+$4864 = 13.0 // floating-point values
+0071: $4864 /= $6965 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $4864 // floating-point values
+0086: $6948 = $6942 // floating-point values only
+0059: $6948 += $6978 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $4864 // floating-point values
+0086: $6949 = $6943 // floating-point values only
+0059: $6949 += $6979 // floating-point values
+$4864 = 2.0 // floating-point values
+0071: $4864 /= $6965 // floating-point values
+0086: $6978 = $6963 // floating-point values only
+0069: $6978 *= $4864 // floating-point values
+0059: $6942 += $6978 // floating-point values
+0086: $6979 = $6964 // floating-point values only
+0069: $6979 *= $4864 // floating-point values
+0059: $6943 += $6979 // floating-point values
+0086: $6945 = $6942 // floating-point values only
+0061: $6945 -= $6948 // floating-point values
+$6945 /= 2.0 // floating-point values
+0059: $6945 += $6948 // floating-point values
+0086: $6946 = $6943 // floating-point values only
+0061: $6946 -= $6949 // floating-point values
+$6946 /= 2.0 // floating-point values
+0059: $6946 += $6949 // floating-point values
+0086: $6947 = $6944 // floating-point values only
+0061: $6947 -= $6950 // floating-point values
+$6947 /= 2.0 // floating-point values
+0059: $6947 += $6950 // floating-point values
+$6944 += 0.5 // floating-point values
+$6947 += 0.5 // floating-point values
+$6950 += 0.5 // floating-point values
+
+:COPCAR_1930
+if
+  7.0 > $6944 // floating-point values
+jf @COPCAR_1962
+wait 0
+jump @COPCAR_781
+
+:COPCAR_1962
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+0509: $6953 = distance_between_point $95 $96 and_point $6942 $6943
+if or
+  150.0 > $6953 // floating-point values
+  $6953 > 600.0 // floating-point values
+jf @COPCAR_2035
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2035
+if and
+  $6942 > -1905.785 // floating-point values
+  -1105.785 > $6942 // floating-point values
+  $6943 > 745.678 // floating-point values
+  1773.513 > $6943 // floating-point values
+jf @COPCAR_2097
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2097
+if and
+  $6942 > -265.018 // floating-point values
+  170.188 > $6942 // floating-point values
+  $6943 > -275.942 // floating-point values
+  1689.059 > $6943 // floating-point values
+jf @COPCAR_2159
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2159
+if and
+  $6942 > 164.191 // floating-point values
+  259.713 > $6942 // floating-point values
+  $6943 > -187.926 // floating-point values
+  631.97 > $6943 // floating-point values
+jf @COPCAR_2221
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2221
+if and
+  $6942 > -731.729 // floating-point values
+  -263.334 > $6942 // floating-point values
+  $6943 > -4.399 // floating-point values
+  62.853 > $6943 // floating-point values
+jf @COPCAR_2283
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2283
+if and
+  $6942 > -180.88 // floating-point values
+  64.112 > $6942 // floating-point values
+  $6943 > -499.183 // floating-point values
+  -417.519 > $6943 // floating-point values
+jf @COPCAR_2345
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2345
+if and
+  $6942 > -762.855 // floating-point values
+  -172.566 > $6942 // floating-point values
+  $6943 > -667.099 // floating-point values
+  -224.382 > $6943 // floating-point values
+jf @COPCAR_2407
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2407
+if
+  $PASSED_COK2_PHNOM_PENH_86 == 0 // integer values
+jf @COPCAR_2673
+if and
+  $6942 > -2327.212 // floating-point values
+  -261.402 > $6942 // floating-point values
+  $6943 > -2027.821 // floating-point values
+  1894.426 > $6943 // floating-point values
+jf @COPCAR_2487
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2487
+if and
+  $6942 > -265.018 // floating-point values
+  170.188 > $6942 // floating-point values
+  $6943 > -275.942 // floating-point values
+  1689.059 > $6943 // floating-point values
+jf @COPCAR_2549
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2549
+if and
+  $6942 > -265.657 // floating-point values
+  36.828 > $6942 // floating-point values
+  $6943 > -729.217 // floating-point values
+  -275.488 > $6943 // floating-point values
+jf @COPCAR_2611
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2611
+if and
+  $6942 > 164.191 // floating-point values
+  259.713 > $6942 // floating-point values
+  $6943 > -187.926 // floating-point values
+  631.97 > $6943 // floating-point values
+jf @COPCAR_2673
+wait 0
+jump @COPCAR_781
+
+:COPCAR_2673
+0099: $6893 = random_integer_0-to-65535
+
+:COPCAR_2678
+if
+  $6893 == 0 // integer values
+jf @COPCAR_2708
+0099: $6893 = random_integer_0-to-65535
+jump @COPCAR_2678
+
+:COPCAR_2708
+if or
+   not Model.Available($6935)
+   not Model.Available($6936)
+jf @COPCAR_2772
+wait 0
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_2765
+jump @COPCAR_11758
+
+:COPCAR_2765
+jump @COPCAR_2708
+
+:COPCAR_2772
+$6876 = Car.Create($6935, $6942, $6943, $6944)
+Car.Health($6876) = 800
+00AE: set_vehicle $6876 traffic_behavior_to 2
+048B: set_car $6876 route_seed $6893
+04BD: set_car $6876 is_part_of_convoy 1
+Car.Angle($6876) = $6951
+0428: set_car $6876 avoid_level_transitions 1
+
+:COPCAR_2834
+if
+04F1:   is_car_waiting_for_world_collision $6876
+jf @COPCAR_2916
+wait 0
+if
+   Car.Wrecked($6876)
+jf @COPCAR_2877
+jump @COPCAR_11758
+
+:COPCAR_2877
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_2909
+jump @COPCAR_11758
+
+:COPCAR_2909
+jump @COPCAR_2834
+
+:COPCAR_2916
+0129: $6877 = create_actor 15 $6936 in_car $6876 driverseat
+if
+   not $ONMISSION == 1 // integer values
+jf @COPCAR_2989
+018A: $6939 = create_checkpoint_at $445 $446 $447
+018A: $6940 = create_checkpoint_at $445 $446 $447
+018A: $6941 = create_checkpoint_at $445 $446 $447
+
+:COPCAR_2989
+Marker.Disable($6939)
+$6939 = Marker.CreateAboveActor($6877)
+0084: $6891 = $6877 // integer values and handles
+gosub @COPCAR_15798
+if
+  $6892 > 0 // integer values
+jf @COPCAR_3072
+01C8: $6878 = create_actor_pedtype 15 model $6936 in_car $6876 passenger_seat 0
+0084: $6891 = $6878 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3079
+
+:COPCAR_3072
+$6914 = 1 // integer values
+
+:COPCAR_3079
+if
+  $6892 > 1 // integer values
+jf @COPCAR_3134
+01C8: $6879 = create_actor_pedtype 15 model $6936 in_car $6876 passenger_seat 1
+0084: $6891 = $6879 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3141
+
+:COPCAR_3134
+$6915 = 1 // integer values
+
+:COPCAR_3141
+if
+  $6892 > 2 // integer values
+jf @COPCAR_3196
+01C8: $6880 = create_actor_pedtype 15 model $6936 in_car $6876 passenger_seat 2
+0084: $6891 = $6880 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3203
+
+:COPCAR_3196
+$6916 = 1 // integer values
+
+:COPCAR_3203
+if
+  $6892 > 3 // integer values
+jf @COPCAR_3413
+$6881 = Car.Create($6935, $6945, $6946, $6947)
+04BD: set_car $6881 is_part_of_convoy 1
+Car.Angle($6881) = $6951
+0428: set_car $6881 avoid_level_transitions 1
+00AE: set_vehicle $6881 traffic_behavior_to 2
+Car.Health($6881) = 800
+048B: set_car $6881 route_seed $6893
+
+:COPCAR_3283
+if
+04F1:   is_car_waiting_for_world_collision $6881
+jf @COPCAR_3365
+wait 0
+if
+   Car.Wrecked($6881)
+jf @COPCAR_3326
+jump @COPCAR_11758
+
+:COPCAR_3326
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_3358
+jump @COPCAR_11758
+
+:COPCAR_3358
+jump @COPCAR_3283
+
+:COPCAR_3365
+0129: $6882 = create_actor 15 $6936 in_car $6881 driverseat
+0084: $6891 = $6882 // integer values and handles
+gosub @COPCAR_15798
+Marker.Disable($6940)
+$6940 = Marker.CreateAboveActor($6882)
+jump @COPCAR_3427
+
+:COPCAR_3413
+$6927 = 1 // integer values
+$6922 = 1 // integer values
+
+:COPCAR_3427
+if
+  $6892 > 4 // integer values
+jf @COPCAR_3482
+01C8: $6883 = create_actor_pedtype 15 model $6936 in_car $6881 passenger_seat 0
+0084: $6891 = $6883 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3489
+
+:COPCAR_3482
+$6923 = 1 // integer values
+
+:COPCAR_3489
+if
+  $6892 > 5 // integer values
+jf @COPCAR_3544
+01C8: $6884 = create_actor_pedtype 15 model $6936 in_car $6881 passenger_seat 1
+0084: $6891 = $6884 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3551
+
+:COPCAR_3544
+$6924 = 1 // integer values
+
+:COPCAR_3551
+if
+  $6892 > 6 // integer values
+jf @COPCAR_3606
+01C8: $6885 = create_actor_pedtype 15 model $6936 in_car $6881 passenger_seat 2
+0084: $6891 = $6885 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3613
+
+:COPCAR_3606
+$6925 = 1 // integer values
+
+:COPCAR_3613
+if
+  $6892 > 7 // integer values
+jf @COPCAR_3823
+$6886 = Car.Create($6935, $6948, $6949, $6950)
+04BD: set_car $6886 is_part_of_convoy 1
+Car.Angle($6886) = $6951
+0428: set_car $6886 avoid_level_transitions 1
+00AE: set_vehicle $6886 traffic_behavior_to 2
+Car.Health($6886) = 800
+048B: set_car $6886 route_seed $6893
+
+:COPCAR_3693
+if
+04F1:   is_car_waiting_for_world_collision $6886
+jf @COPCAR_3775
+wait 0
+if
+   Car.Wrecked($6886)
+jf @COPCAR_3736
+jump @COPCAR_11758
+
+:COPCAR_3736
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_3768
+jump @COPCAR_11758
+
+:COPCAR_3768
+jump @COPCAR_3693
+
+:COPCAR_3775
+0129: $6887 = create_actor 15 $6936 in_car $6886 driverseat
+0084: $6891 = $6887 // integer values and handles
+gosub @COPCAR_15798
+Marker.Disable($6941)
+$6941 = Marker.CreateAboveActor($6887)
+jump @COPCAR_3837
+
+:COPCAR_3823
+$6934 = 1 // integer values
+$6929 = 1 // integer values
+
+:COPCAR_3837
+if
+  $6892 > 8 // integer values
+jf @COPCAR_3892
+01C8: $6888 = create_actor_pedtype 15 model $6936 in_car $6886 passenger_seat 0
+0084: $6891 = $6888 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3899
+
+:COPCAR_3892
+$6930 = 1 // integer values
+
+:COPCAR_3899
+if
+  $6892 > 9 // integer values
+jf @COPCAR_3954
+01C8: $6889 = create_actor_pedtype 15 model $6936 in_car $6886 passenger_seat 1
+0084: $6891 = $6889 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_3961
+
+:COPCAR_3954
+$6931 = 1 // integer values
+
+:COPCAR_3961
+if
+  $6892 > 10 // integer values
+jf @COPCAR_4016
+01C8: $6890 = create_actor_pedtype 15 model $6936 in_car $6886 passenger_seat 2
+0084: $6891 = $6890 // integer values and handles
+gosub @COPCAR_15798
+jump @COPCAR_4023
+
+:COPCAR_4016
+$6932 = 1 // integer values
+
+:COPCAR_4023
+Model.Destroy($6935)
+Model.Destroy($6936)
+gosub @COPCAR_15216
+Actor.StorePos($6877, $6954, $6955, $447)
+03AA: play_suspect_last_seen_at $6954 $6955 $447
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+0086: $4862 = $95 // floating-point values only
+0061: $4862 -= $6954 // floating-point values
+0086: $4863 = $96 // floating-point values only
+0061: $4863 -= $6955 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $6952 = $4863 // floating-point values only
+0059: $6952 += $4863 // floating-point values
+01FB: $6952 = square_root $6952
+0071: $6952 /= $6980 // floating-point values
+$6952 *= 1000.0 // floating-point values
+008C: $6907 = float_to_integer $6952
+if
+  40000 > $6907 // integer values
+jf @COPCAR_4208
+$6907 = 40000 // integer values
+
+:COPCAR_4208
+0058: $6900 += $6907 // integer values
+$6907 /= 1000 // integer values
+if
+  $6909 == 1 // integer values
+jf @COPCAR_4267
+01E3: text_1number_styled 'A_TIME' number $6907 time 4000 style 6  // +~1~ seconds
+jump @COPCAR_4320
+
+:COPCAR_4267
+if
+  45000 > $6900 // integer values
+jf @COPCAR_4298
+$6900 = 45000 // integer values
+
+:COPCAR_4298
+$6900 += 30000 // integer values
+014E: start_timer_at $6900 count_in_direction 1
+$6909 = 1 // integer values
+
+:COPCAR_4320
+01BD: $4811 = current_time_in_ms
+0084: $6917 = $4811 // integer values and handles
+0084: $6926 = $4811 // integer values and handles
+0084: $6933 = $4811 // integer values and handles
+if
+  13 > $6892 // integer values
+jf @COPCAR_4377
+$6980 -= 0.1 // floating-point values
+
+:COPCAR_4377
+0396: pause_timer 0
+0084: $6938 = $6892 // integer values and handles
+$6938 += 1 // integer values
+01E5: text_1number_highpriority 'CLEVEL' $6938 flag 5000 time 1  // Vigilante Mission Level ~1~
+
+:COPCAR_4414
+wait 0
+01BD: $4811 = current_time_in_ms
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+gosub @COPCAR_16370
+if
+  $6902 == 1 // integer values
+jf @COPCAR_4469
+jump @COPCAR_11758
+
+:COPCAR_4469
+if or
+  $6910 == -1 // integer values
+  $6919 == -1 // integer values
+  $6928 == -1 // integer values
+jf @COPCAR_4508
+$6894 = 1 // integer values
+
+:COPCAR_4508
+$2565 += 1 // integer values
+if
+  $2565 > 2 // integer values
+jf @COPCAR_4540
+$2565 = 0 // integer values
+
+:COPCAR_4540
+if
+  $2565 == 0 // integer values
+jf @COPCAR_6393
+if
+   not Actor.Dead($6877)
+jf @COPCAR_5636
+if
+0449:   actor $6877 in_a_car
+jf @COPCAR_5233
+Car.RemoveReferences($6876)
+$6876 = Actor.CurrentCar($6877)
+if
+  $6910 == -1 // integer values
+jf @COPCAR_4685
+046D: $6898 = actor $6877 car_free_seats // members_in_group
+if
+  $6898 > 0 // integer values
+jf @COPCAR_4670
+0084: $6917 = $4811 // integer values and handles
+$6917 += 2000 // integer values
+jump @COPCAR_4678
+
+:COPCAR_4670
+0084: $6917 = $4811 // integer values and handles
+
+:COPCAR_4678
+$6910 = 0 // integer values
+
+:COPCAR_4685
+if
+  $6910 == 0 // integer values
+jf @COPCAR_4766
+if
+001C:   $4811 > $6917 // integer values
+jf @COPCAR_4766
+Car.SetMaxSpeed($6876, 100.0)
+00AE: set_vehicle $6876 traffic_behavior_to 2
+Car.SetToPsychoDriver($6876)
+0084: $6911 = $4811 // integer values and handles
+$6910 = 1 // integer values
+$6912 = 0 // integer values
+
+:COPCAR_4766
+if
+  $6910 > 0 // integer values
+jf @COPCAR_5226
+if
+00DC:   player $PLAYER_CHAR driving $6876
+jf @COPCAR_4811
+01CA: actor $6877 kill_player $PLAYER_CHAR
+
+:COPCAR_4811
+0084: $4880 = $6876 // integer values and handles
+0084: $4881 = $6912 // integer values and handles
+0084: $4882 = $6911 // integer values and handles
+0086: $4877 = $6982 // floating-point values only
+0086: $4878 = $6983 // floating-point values only
+0086: $4879 = $6984 // floating-point values only
+if
+  $6985 > 0.0 // floating-point values
+jf @COPCAR_4887
+gosub @COPCAR_13644
+
+:COPCAR_4887
+0084: $6912 = $4881 // integer values and handles
+0084: $6911 = $4882 // integer values and handles
+0086: $6982 = $4877 // floating-point values only
+0086: $6983 = $4878 // floating-point values only
+0086: $6984 = $4879 // floating-point values only
+if
+  $6912 == -9 // integer values
+jf @COPCAR_4960
+046B: actor $6877 leave_car $6876 and_flee
+$6912 = 0 // integer values
+
+:COPCAR_4960
+if
+8185:   not car $6876 health >= 400
+jf @COPCAR_4987
+01CA: actor $6877 kill_player $PLAYER_CHAR
+
+:COPCAR_4987
+if
+8185:   not car $6876 health >= 251
+jf @COPCAR_5037
+046B: actor $6877 leave_car $6876 and_flee
+0084: $6917 = $4811 // integer values and handles
+$6917 += 2000 // integer values
+jump @COPCAR_5045
+
+:COPCAR_5037
+0084: $6917 = $4811 // integer values and handles
+
+:COPCAR_5045
+gosub @COPCAR_14253
+Actor.StorePos($6877, $6954, $6955, $447)
+0086: $4862 = $95 // floating-point values only
+0061: $4862 -= $6954 // floating-point values
+0086: $4863 = $96 // floating-point values only
+0061: $4863 -= $6955 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+$6985 = 1000.0 // floating-point values
+0071: $6985 /= $4864 // floating-point values
+if
+  $6985 > 100.0 // floating-point values
+jf @COPCAR_5187
+$6985 = 100.0 // floating-point values
+
+:COPCAR_5187
+if
+  15.0 > $6985 // floating-point values
+jf @COPCAR_5218
+$6985 = 15.0 // floating-point values
+
+:COPCAR_5218
+Car.SetMaxSpeed($6876, $6985)
+
+:COPCAR_5226
+jump @COPCAR_5629
+
+:COPCAR_5233
+$6910 = -1 // integer values
+gosub @COPCAR_14253
+if
+001C:   $4811 > $6917 // integer values
+jf @COPCAR_5629
+if
+00E9:   player $PLAYER_CHAR 0 $6877 radius 45.0 45.0
+jf @COPCAR_5505
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @COPCAR_5328
+01CA: actor $6877 kill_player $PLAYER_CHAR
+jump @COPCAR_5498
+
+:COPCAR_5328
+if
+00E9:   player $PLAYER_CHAR 0 $6877 radius 30.0 30.0
+jf @COPCAR_5374
+01CA: actor $6877 kill_player $PLAYER_CHAR
+jump @COPCAR_5498
+
+:COPCAR_5374
+0084: $4869 = $6877 // integer values and handles
+if
+   not Car.Wrecked($6876)
+jf @COPCAR_5491
+if
+0185:   car $6876 health >= 400
+jf @COPCAR_5477
+if
+0202:   actor $6877 near_car $6876 radius 40.0 40.0 sphere 0
+jf @COPCAR_5463
+01D5: actor $6877 go_to_and_drive_car $6876
+jump @COPCAR_5470
+
+:COPCAR_5463
+gosub @COPCAR_13066
+
+:COPCAR_5470
+jump @COPCAR_5484
+
+:COPCAR_5477
+gosub @COPCAR_13066
+
+:COPCAR_5484
+jump @COPCAR_5498
+
+:COPCAR_5491
+gosub @COPCAR_13066
+
+:COPCAR_5498
+jump @COPCAR_5629
+
+:COPCAR_5505
+0084: $4869 = $6877 // integer values and handles
+if
+   not Car.Wrecked($6876)
+jf @COPCAR_5622
+if
+0185:   car $6876 health >= 400
+jf @COPCAR_5608
+if
+0202:   actor $6877 near_car $6876 radius 40.0 40.0 sphere 0
+jf @COPCAR_5594
+01D5: actor $6877 go_to_and_drive_car $6876
+jump @COPCAR_5601
+
+:COPCAR_5594
+gosub @COPCAR_13066
+
+:COPCAR_5601
+jump @COPCAR_5615
+
+:COPCAR_5608
+gosub @COPCAR_13066
+
+:COPCAR_5615
+jump @COPCAR_5629
+
+:COPCAR_5622
+gosub @COPCAR_13066
+
+:COPCAR_5629
+jump @COPCAR_6087
+
+:COPCAR_5636
+Marker.Disable($6939)
+Actor.RemoveReferences($6877)
+if
+  $6913 == 0 // integer values
+jf @COPCAR_5732
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_5725
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_5725
+$6913 = 1 // integer values
+
+:COPCAR_5732
+if
+   not Actor.Dead($6878)
+jf @COPCAR_5894
+0084: $6877 = $6878 // integer values and handles
+$6878 = -1 // integer values
+$6913 = 0 // integer values
+$6914 = 1 // integer values
+$6939 = Marker.CreateAboveActor($6877)
+if
+   not Actor.Dead($6879)
+jf @COPCAR_5836
+01DE: tie_actor $6879 to_actor $6877
+if
+831F:   not unknown_actor $6879 hit_by_actor $6877
+jf @COPCAR_5836
+01CC: actor $6879 kill_player $PLAYER_CHAR
+
+:COPCAR_5836
+if
+   not Actor.Dead($6880)
+jf @COPCAR_5887
+01DE: tie_actor $6880 to_actor $6877
+if
+831F:   not unknown_actor $6880 hit_by_actor $6877
+jf @COPCAR_5887
+01CC: actor $6880 kill_player $PLAYER_CHAR
+
+:COPCAR_5887
+jump @COPCAR_6087
+
+:COPCAR_5894
+Actor.RemoveReferences($6878)
+if
+   not Actor.Dead($6879)
+jf @COPCAR_6010
+0084: $6877 = $6879 // integer values and handles
+$6879 = -1 // integer values
+$6913 = 0 // integer values
+$6915 = 1 // integer values
+$6939 = Marker.CreateAboveActor($6877)
+if
+   not Actor.Dead($6880)
+jf @COPCAR_6003
+01DE: tie_actor $6880 to_actor $6877
+if
+831F:   not unknown_actor $6880 hit_by_actor $6877
+jf @COPCAR_6003
+01CC: actor $6880 kill_player $PLAYER_CHAR
+
+:COPCAR_6003
+jump @COPCAR_6087
+
+:COPCAR_6010
+Actor.RemoveReferences($6879)
+if
+   not Actor.Dead($6880)
+jf @COPCAR_6075
+0084: $6877 = $6880 // integer values and handles
+$6880 = -1 // integer values
+$6913 = 0 // integer values
+$6916 = 1 // integer values
+$6939 = Marker.CreateAboveActor($6877)
+jump @COPCAR_6087
+
+:COPCAR_6075
+Actor.RemoveReferences($6880)
+$6918 = 1 // integer values
+
+:COPCAR_6087
+if
+   Actor.Dead($6878)
+jf @COPCAR_6189
+if
+  $6914 == 0 // integer values
+jf @COPCAR_6189
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_6182
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_6182
+$6914 = 1 // integer values
+
+:COPCAR_6189
+if
+   Actor.Dead($6879)
+jf @COPCAR_6291
+if
+  $6915 == 0 // integer values
+jf @COPCAR_6291
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_6284
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_6284
+$6915 = 1 // integer values
+
+:COPCAR_6291
+if
+   Actor.Dead($6880)
+jf @COPCAR_6393
+if
+  $6916 == 0 // integer values
+jf @COPCAR_6393
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_6386
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_6386
+$6916 = 1 // integer values
+
+:COPCAR_6393
+if
+  $2565 == 1 // integer values
+jf @COPCAR_8713
+if
+   not Actor.Dead($6882)
+jf @COPCAR_7956
+if
+0449:   actor $6882 in_a_car
+jf @COPCAR_7553
+Car.RemoveReferences($6881)
+$6881 = Actor.CurrentCar($6882)
+if
+  $6919 == -1 // integer values
+jf @COPCAR_6538
+046D: $6898 = actor $6882 car_free_seats // members_in_group
+if
+  $6898 > 0 // integer values
+jf @COPCAR_6523
+0084: $6926 = $4811 // integer values and handles
+$6926 += 2000 // integer values
+jump @COPCAR_6531
+
+:COPCAR_6523
+0084: $6926 = $4811 // integer values and handles
+
+:COPCAR_6531
+$6919 = 0 // integer values
+
+:COPCAR_6538
+if
+  $6919 == 0 // integer values
+jf @COPCAR_6697
+if
+001C:   $4811 > $6926 // integer values
+jf @COPCAR_6697
+Car.SetMaxSpeed($6881, 100.0)
+00AE: set_vehicle $6881 traffic_behavior_to 2
+if
+  $6894 == 0 // integer values
+jf @COPCAR_6645
+if
+   not Car.Wrecked($6876)
+jf @COPCAR_6638
+Car.SetToPsychoDriver($6881)
+jump @COPCAR_6645
+
+:COPCAR_6638
+$6894 = 1 // integer values
+
+:COPCAR_6645
+if
+  $6894 == 1 // integer values
+jf @COPCAR_6675
+04BD: set_car $6881 is_part_of_convoy 0
+Car.SetToPsychoDriver($6881)
+
+:COPCAR_6675
+0084: $6920 = $4811 // integer values and handles
+$6919 = 1 // integer values
+$6921 = 0 // integer values
+
+:COPCAR_6697
+if
+  $6919 > 0 // integer values
+jf @COPCAR_7546
+if
+00DC:   player $PLAYER_CHAR driving $6881
+jf @COPCAR_6742
+01CA: actor $6882 kill_player $PLAYER_CHAR
+
+:COPCAR_6742
+0084: $4880 = $6881 // integer values and handles
+0084: $4881 = $6921 // integer values and handles
+0084: $4882 = $6920 // integer values and handles
+0088: $4877 = 2@ // floating-point values only
+0088: $4878 = 3@ // floating-point values only
+0088: $4879 = 4@ // floating-point values only
+if
+  5@ > 0.0 // floating-point values
+jf @COPCAR_6818
+gosub @COPCAR_13644
+
+:COPCAR_6818
+0084: $6921 = $4881 // integer values and handles
+0084: $6920 = $4882 // integer values and handles
+0089: 2@ = $4877 // floating-point values only
+0089: 3@ = $4878 // floating-point values only
+0089: 4@ = $4879 // floating-point values only
+if
+  $6921 == -9 // integer values
+jf @COPCAR_6891
+046B: actor $6882 leave_car $6881 and_flee
+$6921 = 0 // integer values
+
+:COPCAR_6891
+if
+8185:   not car $6881 health >= 400
+jf @COPCAR_6918
+01CA: actor $6882 kill_player $PLAYER_CHAR
+
+:COPCAR_6918
+if
+8185:   not car $6881 health >= 251
+jf @COPCAR_6968
+046B: actor $6882 leave_car $6881 and_flee
+0084: $6926 = $4811 // integer values and handles
+$6926 += 2000 // integer values
+jump @COPCAR_6976
+
+:COPCAR_6968
+0084: $6926 = $4811 // integer values and handles
+
+:COPCAR_6976
+gosub @COPCAR_14574
+Actor.StorePos($6882, 0@, 1@, $447)
+0086: $4862 = $95 // floating-point values only
+0067: $4862 -= 0@ // floating-point values
+0086: $4863 = $96 // floating-point values only
+0067: $4863 -= 1@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+5@ = 1000.0 // floating-point values
+0077: 5@ /= $4864 // floating-point values
+if
+  5@ > 100.0 // floating-point values
+jf @COPCAR_7118
+5@ = 100.0 // floating-point values
+
+:COPCAR_7118
+if
+  15.0 > 5@ // floating-point values
+jf @COPCAR_7149
+5@ = 15.0 // floating-point values
+
+:COPCAR_7149
+if
+  $6894 == 0 // integer values
+jf @COPCAR_7501
+if
+   not Car.Wrecked($6876)
+jf @COPCAR_7489
+0084: $4867 = $6881 // integer values and handles
+0084: $4868 = $6876 // integer values and handles
+gosub @COPCAR_12853
+0089: 5@ = $6962 // floating-point values only
+02F8: get_vehicle $6881 Z_angle_sine_to $6976
+02F9: get_vehicle $6881 Z_angle_cosine_to $6977
+Car.StorePos($6876, $6970, $6971, $447)
+Car.StorePos($6881, $6972, $6973, $447)
+0086: $6958 = $6972 // floating-point values only
+0061: $6958 -= $6970 // floating-point values
+0069: $6976 *= $6958 // floating-point values
+0086: $6959 = $6973 // floating-point values only
+0061: $6959 -= $6971 // floating-point values
+0069: $6977 *= $6959 // floating-point values
+0086: $6966 = $6976 // floating-point values only
+0059: $6966 += $6977 // floating-point values
+02F8: get_vehicle $6876 Z_angle_sine_to $6976
+02F9: get_vehicle $6876 Z_angle_cosine_to $6977
+Car.StorePos($6881, $6972, $6973, $447)
+Car.StorePos($6876, $6970, $6971, $447)
+0086: $6958 = $6970 // floating-point values only
+0061: $6958 -= $6972 // floating-point values
+0069: $6976 *= $6958 // floating-point values
+0086: $6959 = $6971 // floating-point values only
+0061: $6959 -= $6973 // floating-point values
+0069: $6977 *= $6959 // floating-point values
+0086: $6967 = $6976 // floating-point values only
+0059: $6967 += $6977 // floating-point values
+if
+  $6966 > 0.0 // floating-point values
+jf @COPCAR_7482
+if
+  0.0 > $6967 // floating-point values
+jf @COPCAR_7482
+5@ = 0.0 // floating-point values
+
+:COPCAR_7482
+jump @COPCAR_7501
+
+:COPCAR_7489
+Car.SetToPsychoDriver($6881)
+$6894 = 1 // integer values
+
+:COPCAR_7501
+if
+  5@ == 0.0 // floating-point values
+jf @COPCAR_7538
+0477: set_car $6881 action 1 time 17
+jump @COPCAR_7546
+
+:COPCAR_7538
+Car.SetMaxSpeed($6881, 5@)
+
+:COPCAR_7546
+jump @COPCAR_7949
+
+:COPCAR_7553
+$6919 = -1 // integer values
+gosub @COPCAR_14574
+if
+001C:   $4811 > $6926 // integer values
+jf @COPCAR_7949
+if
+00E9:   player $PLAYER_CHAR 0 $6882 radius 40.0 40.0
+jf @COPCAR_7825
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @COPCAR_7648
+01CA: actor $6882 kill_player $PLAYER_CHAR
+jump @COPCAR_7818
+
+:COPCAR_7648
+if
+00E9:   player $PLAYER_CHAR 0 $6882 radius 25.0 25.0
+jf @COPCAR_7694
+01CA: actor $6882 kill_player $PLAYER_CHAR
+jump @COPCAR_7818
+
+:COPCAR_7694
+0084: $4869 = $6882 // integer values and handles
+if
+   not Car.Wrecked($6881)
+jf @COPCAR_7811
+if
+0185:   car $6881 health >= 400
+jf @COPCAR_7797
+if
+0202:   actor $6882 near_car $6881 radius 40.0 40.0 sphere 0
+jf @COPCAR_7783
+01D5: actor $6882 go_to_and_drive_car $6881
+jump @COPCAR_7790
+
+:COPCAR_7783
+gosub @COPCAR_13066
+
+:COPCAR_7790
+jump @COPCAR_7804
+
+:COPCAR_7797
+gosub @COPCAR_13066
+
+:COPCAR_7804
+jump @COPCAR_7818
+
+:COPCAR_7811
+gosub @COPCAR_13066
+
+:COPCAR_7818
+jump @COPCAR_7949
+
+:COPCAR_7825
+0084: $4869 = $6882 // integer values and handles
+if
+   not Car.Wrecked($6881)
+jf @COPCAR_7942
+if
+0185:   car $6881 health >= 400
+jf @COPCAR_7928
+if
+0202:   actor $6882 near_car $6881 radius 40.0 40.0 sphere 0
+jf @COPCAR_7914
+01D5: actor $6882 go_to_and_drive_car $6881
+jump @COPCAR_7921
+
+:COPCAR_7914
+gosub @COPCAR_13066
+
+:COPCAR_7921
+jump @COPCAR_7935
+
+:COPCAR_7928
+gosub @COPCAR_13066
+
+:COPCAR_7935
+jump @COPCAR_7949
+
+:COPCAR_7942
+gosub @COPCAR_13066
+
+:COPCAR_7949
+jump @COPCAR_8407
+
+:COPCAR_7956
+Marker.Disable($6940)
+Actor.RemoveReferences($6882)
+if
+  $6922 == 0 // integer values
+jf @COPCAR_8052
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_8045
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_8045
+$6922 = 1 // integer values
+
+:COPCAR_8052
+if
+   not Actor.Dead($6883)
+jf @COPCAR_8214
+0084: $6882 = $6883 // integer values and handles
+$6883 = -1 // integer values
+$6922 = 0 // integer values
+$6923 = 1 // integer values
+$6940 = Marker.CreateAboveActor($6882)
+if
+   not Actor.Dead($6884)
+jf @COPCAR_8156
+01DE: tie_actor $6884 to_actor $6882
+if
+831F:   not unknown_actor $6884 hit_by_actor $6882
+jf @COPCAR_8156
+01CC: actor $6884 kill_player $PLAYER_CHAR
+
+:COPCAR_8156
+if
+   not Actor.Dead($6885)
+jf @COPCAR_8207
+01DE: tie_actor $6885 to_actor $6882
+if
+831F:   not unknown_actor $6885 hit_by_actor $6882
+jf @COPCAR_8207
+01CC: actor $6885 kill_player $PLAYER_CHAR
+
+:COPCAR_8207
+jump @COPCAR_8407
+
+:COPCAR_8214
+Actor.RemoveReferences($6883)
+if
+   not Actor.Dead($6884)
+jf @COPCAR_8330
+0084: $6882 = $6884 // integer values and handles
+$6884 = -1 // integer values
+$6922 = 0 // integer values
+$6924 = 1 // integer values
+$6940 = Marker.CreateAboveActor($6882)
+if
+   not Actor.Dead($6885)
+jf @COPCAR_8323
+01DE: tie_actor $6885 to_actor $6882
+if
+831F:   not unknown_actor $6885 hit_by_actor $6882
+jf @COPCAR_8323
+01CC: actor $6885 kill_player $PLAYER_CHAR
+
+:COPCAR_8323
+jump @COPCAR_8407
+
+:COPCAR_8330
+Actor.RemoveReferences($6884)
+if
+   not Actor.Dead($6885)
+jf @COPCAR_8395
+0084: $6882 = $6885 // integer values and handles
+$6885 = -1 // integer values
+$6922 = 0 // integer values
+$6925 = 1 // integer values
+$6940 = Marker.CreateAboveActor($6882)
+jump @COPCAR_8407
+
+:COPCAR_8395
+Actor.RemoveReferences($6885)
+$6927 = 1 // integer values
+
+:COPCAR_8407
+if
+   Actor.Dead($6883)
+jf @COPCAR_8509
+if
+  $6923 == 0 // integer values
+jf @COPCAR_8509
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_8502
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_8502
+$6923 = 1 // integer values
+
+:COPCAR_8509
+if
+   Actor.Dead($6884)
+jf @COPCAR_8611
+if
+  $6924 == 0 // integer values
+jf @COPCAR_8611
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_8604
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_8604
+$6924 = 1 // integer values
+
+:COPCAR_8611
+if
+   Actor.Dead($6885)
+jf @COPCAR_8713
+if
+  $6925 == 0 // integer values
+jf @COPCAR_8713
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_8706
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_8706
+$6925 = 1 // integer values
+
+:COPCAR_8713
+if
+  $2565 == 2 // integer values
+jf @COPCAR_11033
+if
+   not Actor.Dead($6887)
+jf @COPCAR_10276
+if
+0449:   actor $6887 in_a_car
+jf @COPCAR_9873
+Car.RemoveReferences($6886)
+$6886 = Actor.CurrentCar($6887)
+if
+  $6928 == -1 // integer values
+jf @COPCAR_8858
+046D: $6898 = actor $6887 car_free_seats // members_in_group
+if
+  $6898 > 0 // integer values
+jf @COPCAR_8843
+0084: $6933 = $4811 // integer values and handles
+$6933 += 2000 // integer values
+jump @COPCAR_8851
+
+:COPCAR_8843
+0084: $6933 = $4811 // integer values and handles
+
+:COPCAR_8851
+$6928 = 0 // integer values
+
+:COPCAR_8858
+if
+  $6928 == 0 // integer values
+jf @COPCAR_9017
+if
+001C:   $4811 > $6933 // integer values
+jf @COPCAR_9017
+Car.SetMaxSpeed($6886, 100.0)
+00AE: set_vehicle $6886 traffic_behavior_to 2
+if
+  $6894 == 0 // integer values
+jf @COPCAR_8965
+if
+   not Car.Wrecked($6881)
+jf @COPCAR_8958
+Car.SetToPsychoDriver($6886)
+jump @COPCAR_8965
+
+:COPCAR_8958
+$6894 = 1 // integer values
+
+:COPCAR_8965
+if
+  $6894 == 1 // integer values
+jf @COPCAR_8995
+04BD: set_car $6886 is_part_of_convoy 0
+Car.SetToPsychoDriver($6886)
+
+:COPCAR_8995
+008B: 12@ = $4811 // integer values and handles
+$6928 = 1 // integer values
+13@ = 0 // integer values
+
+:COPCAR_9017
+if
+  $6928 > 0 // integer values
+jf @COPCAR_9866
+if
+00DC:   player $PLAYER_CHAR driving $6886
+jf @COPCAR_9062
+01CA: actor $6887 kill_player $PLAYER_CHAR
+
+:COPCAR_9062
+0084: $4880 = $6886 // integer values and handles
+008A: $4881 = 13@ // integer values and handles
+008A: $4882 = 12@ // integer values and handles
+0088: $4877 = 8@ // floating-point values only
+0088: $4878 = 9@ // floating-point values only
+0088: $4879 = 10@ // floating-point values only
+if
+  11@ > 0.0 // floating-point values
+jf @COPCAR_9138
+gosub @COPCAR_13644
+
+:COPCAR_9138
+008B: 13@ = $4881 // integer values and handles
+008B: 12@ = $4882 // integer values and handles
+0089: 8@ = $4877 // floating-point values only
+0089: 9@ = $4878 // floating-point values only
+0089: 10@ = $4879 // floating-point values only
+if
+  13@ == -9 // integer values
+jf @COPCAR_9211
+046B: actor $6887 leave_car $6886 and_flee
+13@ = 0 // integer values
+
+:COPCAR_9211
+if
+8185:   not car $6886 health >= 400
+jf @COPCAR_9238
+01CA: actor $6887 kill_player $PLAYER_CHAR
+
+:COPCAR_9238
+if
+8185:   not car $6886 health >= 251
+jf @COPCAR_9288
+046B: actor $6887 leave_car $6886 and_flee
+0084: $6933 = $4811 // integer values and handles
+$6933 += 2000 // integer values
+jump @COPCAR_9296
+
+:COPCAR_9288
+0084: $6933 = $4811 // integer values and handles
+
+:COPCAR_9296
+gosub @COPCAR_14895
+Actor.StorePos($6887, 6@, 7@, $447)
+0086: $4862 = $95 // floating-point values only
+0067: $4862 -= 6@ // floating-point values
+0086: $4863 = $96 // floating-point values only
+0067: $4863 -= 7@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+11@ = 1000.0 // floating-point values
+0077: 11@ /= $4864 // floating-point values
+if
+  11@ > 100.0 // floating-point values
+jf @COPCAR_9438
+11@ = 100.0 // floating-point values
+
+:COPCAR_9438
+if
+  15.0 > 11@ // floating-point values
+jf @COPCAR_9469
+11@ = 15.0 // floating-point values
+
+:COPCAR_9469
+if
+  $6894 == 0 // integer values
+jf @COPCAR_9821
+if
+   not Car.Wrecked($6881)
+jf @COPCAR_9809
+0084: $4867 = $6886 // integer values and handles
+0084: $4868 = $6881 // integer values and handles
+gosub @COPCAR_12853
+0089: 11@ = $6962 // floating-point values only
+02F8: get_vehicle $6886 Z_angle_sine_to $6976
+02F9: get_vehicle $6886 Z_angle_cosine_to $6977
+Car.StorePos($6881, $6972, $6973, $447)
+Car.StorePos($6886, $6974, $6975, $447)
+0086: $6958 = $6974 // floating-point values only
+0061: $6958 -= $6972 // floating-point values
+0069: $6976 *= $6958 // floating-point values
+0086: $6959 = $6975 // floating-point values only
+0061: $6959 -= $6973 // floating-point values
+0069: $6977 *= $6959 // floating-point values
+0086: $6968 = $6976 // floating-point values only
+0059: $6968 += $6977 // floating-point values
+02F8: get_vehicle $6881 Z_angle_sine_to $6976
+02F9: get_vehicle $6881 Z_angle_cosine_to $6977
+Car.StorePos($6886, $6974, $6975, $447)
+Car.StorePos($6881, $6972, $6973, $447)
+0086: $6958 = $6972 // floating-point values only
+0061: $6958 -= $6974 // floating-point values
+0069: $6976 *= $6958 // floating-point values
+0086: $6959 = $6973 // floating-point values only
+0061: $6959 -= $6975 // floating-point values
+0069: $6977 *= $6959 // floating-point values
+0086: $6969 = $6976 // floating-point values only
+0059: $6969 += $6977 // floating-point values
+if
+  $6968 > 0.0 // floating-point values
+jf @COPCAR_9802
+if
+  0.0 > $6969 // floating-point values
+jf @COPCAR_9802
+11@ = 0.0 // floating-point values
+
+:COPCAR_9802
+jump @COPCAR_9821
+
+:COPCAR_9809
+Car.SetToPsychoDriver($6886)
+$6894 = 1 // integer values
+
+:COPCAR_9821
+if
+  11@ == 0.0 // floating-point values
+jf @COPCAR_9858
+0477: set_car $6886 action 1 time 17
+jump @COPCAR_9866
+
+:COPCAR_9858
+Car.SetMaxSpeed($6886, 11@)
+
+:COPCAR_9866
+jump @COPCAR_10269
+
+:COPCAR_9873
+$6928 = -1 // integer values
+gosub @COPCAR_14895
+if
+001C:   $4811 > $6933 // integer values
+jf @COPCAR_10269
+if
+00E9:   player $PLAYER_CHAR 0 $6887 radius 40.0 40.0
+jf @COPCAR_10145
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @COPCAR_9968
+01CA: actor $6887 kill_player $PLAYER_CHAR
+jump @COPCAR_10138
+
+:COPCAR_9968
+if
+00E9:   player $PLAYER_CHAR 0 $6887 radius 25.0 25.0
+jf @COPCAR_10014
+01CA: actor $6887 kill_player $PLAYER_CHAR
+jump @COPCAR_10138
+
+:COPCAR_10014
+0084: $4869 = $6887 // integer values and handles
+if
+   not Car.Wrecked($6886)
+jf @COPCAR_10131
+if
+0185:   car $6886 health >= 400
+jf @COPCAR_10117
+if
+0202:   actor $6887 near_car $6886 radius 40.0 40.0 sphere 0
+jf @COPCAR_10103
+01D5: actor $6887 go_to_and_drive_car $6886
+jump @COPCAR_10110
+
+:COPCAR_10103
+gosub @COPCAR_13066
+
+:COPCAR_10110
+jump @COPCAR_10124
+
+:COPCAR_10117
+gosub @COPCAR_13066
+
+:COPCAR_10124
+jump @COPCAR_10138
+
+:COPCAR_10131
+gosub @COPCAR_13066
+
+:COPCAR_10138
+jump @COPCAR_10269
+
+:COPCAR_10145
+0084: $4869 = $6887 // integer values and handles
+if
+   not Car.Wrecked($6886)
+jf @COPCAR_10262
+if
+0185:   car $6886 health >= 400
+jf @COPCAR_10248
+if
+0202:   actor $6887 near_car $6886 radius 40.0 40.0 sphere 0
+jf @COPCAR_10234
+01D5: actor $6887 go_to_and_drive_car $6886
+jump @COPCAR_10241
+
+:COPCAR_10234
+gosub @COPCAR_13066
+
+:COPCAR_10241
+jump @COPCAR_10255
+
+:COPCAR_10248
+gosub @COPCAR_13066
+
+:COPCAR_10255
+jump @COPCAR_10269
+
+:COPCAR_10262
+gosub @COPCAR_13066
+
+:COPCAR_10269
+jump @COPCAR_10727
+
+:COPCAR_10276
+Marker.Disable($6941)
+Actor.RemoveReferences($6887)
+if
+  $6929 == 0 // integer values
+jf @COPCAR_10372
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_10365
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_10365
+$6929 = 1 // integer values
+
+:COPCAR_10372
+if
+   not Actor.Dead($6888)
+jf @COPCAR_10534
+0084: $6887 = $6888 // integer values and handles
+$6888 = -1 // integer values
+$6929 = 0 // integer values
+$6930 = 1 // integer values
+$6941 = Marker.CreateAboveActor($6887)
+if
+   not Actor.Dead($6889)
+jf @COPCAR_10476
+01DE: tie_actor $6889 to_actor $6887
+if
+831F:   not unknown_actor $6889 hit_by_actor $6887
+jf @COPCAR_10476
+01CC: actor $6889 kill_player $PLAYER_CHAR
+
+:COPCAR_10476
+if
+   not Actor.Dead($6890)
+jf @COPCAR_10527
+01DE: tie_actor $6890 to_actor $6887
+if
+831F:   not unknown_actor $6890 hit_by_actor $6887
+jf @COPCAR_10527
+01CC: actor $6890 kill_player $PLAYER_CHAR
+
+:COPCAR_10527
+jump @COPCAR_10727
+
+:COPCAR_10534
+Actor.RemoveReferences($6888)
+if
+   not Actor.Dead($6889)
+jf @COPCAR_10650
+0084: $6887 = $6889 // integer values and handles
+$6889 = -1 // integer values
+$6929 = 0 // integer values
+$6931 = 1 // integer values
+$6941 = Marker.CreateAboveActor($6887)
+if
+   not Actor.Dead($6890)
+jf @COPCAR_10643
+01DE: tie_actor $6890 to_actor $6887
+if
+831F:   not unknown_actor $6890 hit_by_actor $6887
+jf @COPCAR_10643
+01CC: actor $6890 kill_player $PLAYER_CHAR
+
+:COPCAR_10643
+jump @COPCAR_10727
+
+:COPCAR_10650
+Actor.RemoveReferences($6889)
+if
+   not Actor.Dead($6890)
+jf @COPCAR_10715
+0084: $6887 = $6890 // integer values and handles
+$6890 = -1 // integer values
+$6929 = 0 // integer values
+$6932 = 1 // integer values
+$6941 = Marker.CreateAboveActor($6887)
+jump @COPCAR_10727
+
+:COPCAR_10715
+Actor.RemoveReferences($6890)
+$6934 = 1 // integer values
+
+:COPCAR_10727
+if
+   Actor.Dead($6888)
+jf @COPCAR_10829
+if
+  $6930 == 0 // integer values
+jf @COPCAR_10829
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_10822
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_10822
+$6930 = 1 // integer values
+
+:COPCAR_10829
+if
+   Actor.Dead($6889)
+jf @COPCAR_10931
+if
+  $6931 == 0 // integer values
+jf @COPCAR_10931
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_10924
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_10924
+$6931 = 1 // integer values
+
+:COPCAR_10931
+if
+   Actor.Dead($6890)
+jf @COPCAR_11033
+if
+  $6932 == 0 // integer values
+jf @COPCAR_11033
+$6895 += 1 // integer values
+0402: increment_criminals_stopped
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $6895 == 1 // integer values
+jf @COPCAR_11026
+03C4: set_status_text_to $6895 0 'KILLS'  // KILLS:
+
+:COPCAR_11026
+$6932 = 1 // integer values
+
+:COPCAR_11033
+if and
+  $6918 == 1 // integer values
+  $6927 == 1 // integer values
+  $6934 == 1 // integer values
+jf @COPCAR_11072
+jump @COPCAR_11079
+
+:COPCAR_11072
+jump @COPCAR_4414
+
+:COPCAR_11079
+0578: save_highest_vigilante_level $6938
+$6892 += 1 // integer values
+if or
+056C:   actor $PLAYER_ACTOR driving_police_vehicle
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COPCAR_11161
+03C1: $6875 = player $PLAYER_CHAR car_no_save
+053F: set_car $6875 tires_vulnerable 0
+$6908 = Car.Health($6875)
+$6908 += 100 // integer values
+Car.Health($6875) = $6908
+
+:COPCAR_11161
+Car.RemoveReferences($6876)
+Actor.RemoveReferences($6877)
+Actor.RemoveReferences($6878)
+Actor.RemoveReferences($6879)
+Actor.RemoveReferences($6880)
+Car.RemoveReferences($6881)
+Actor.RemoveReferences($6882)
+Actor.RemoveReferences($6883)
+Actor.RemoveReferences($6884)
+Actor.RemoveReferences($6885)
+Car.RemoveReferences($6886)
+Actor.RemoveReferences($6887)
+Actor.RemoveReferences($6888)
+Actor.RemoveReferences($6889)
+Actor.RemoveReferences($6890)
+Marker.Disable($6939)
+Marker.Disable($6940)
+Marker.Disable($6941)
+0084: $6897 = $6892 // integer values and handles
+0068: $6897 *= $6892 // integer values
+$6897 *= 50 // integer values
+01E3: text_1number_styled 'C_PASS' number $6897 time 5000 style 5  // THREAT ELIMINATED: $ ~1~
+Player.Money($PLAYER_CHAR) += $6897
+if
+  $1582 == 0 // integer values
+jf @COPCAR_11374
+if
+  $6892 == 12 // integer values
+jf @COPCAR_11374
+03E5: text_box 'C_COMP1'  // Vigilante mission level 12 complete: Your max Body Armor increased to 150
+030C: progress_made += 1
+055F: set_player $PLAYER_CHAR max_armour += 50
+035F: set_actor $PLAYER_ACTOR armour_to 150
+0595: mission_complete
+$1582 = 1 // integer values
+
+:COPCAR_11374
+if and
+856C:   not actor $PLAYER_ACTOR driving_police_vehicle
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #HUNTER
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COPCAR_11660
+if
+  $6901 == 0 // integer values
+jf @COPCAR_11482
+01BD: $6896 = current_time_in_ms
+if
+  $6900 > 60000 // integer values
+jf @COPCAR_11467
+$6899 = 60000 // integer values
+jump @COPCAR_11475
+
+:COPCAR_11467
+0084: $6899 = $6900 // integer values and handles
+
+:COPCAR_11475
+$6901 = 1 // integer values
+
+:COPCAR_11482
+01BD: $6903 = current_time_in_ms
+0084: $6904 = $6903 // integer values and handles
+0060: $6904 -= $6896 // integer values
+0060: $6899 -= $6904 // integer values
+0084: $6896 = $6903 // integer values and handles
+0084: $6905 = $6899 // integer values and handles
+$6905 /= 1000 // integer values
+if
+  1 > $6905 // integer values
+jf @COPCAR_11615
+$6905 = 0 // integer values
+if
+001C:   $6903 > $6937 // integer values
+jf @COPCAR_11608
+00BC: text_highpriority 'C_TIME' 3000 ms 1  // ~r~Your time as a law enforcer is over!
+$6902 = 1 // integer values
+jump @COPCAR_11758
+
+:COPCAR_11608
+jump @COPCAR_11631
+
+:COPCAR_11615
+0084: $6937 = $6903 // integer values and handles
+$6937 += 1000 // integer values
+
+:COPCAR_11631
+if
+    $6905 == 1
+then
+    01E5: text_1number_highpriority 'COPCARP' $6905 flag 200 time 1  // ~g~You have ~1~ second to return to a police vehicle before the mission ends.
+else
+    if
+        not $6905 == 0
+    then 
+        01E5: text_1number_highpriority 'COPCART' $6905 flag 200 time 1  // ~g~You have ~1~ seconds to return to a police vehicle before the mission ends.
+    end
+end
+0293: $18 = get_controller_mode
+gosub @PROCESS_R3_ABORT
+if $MISSION_CANCEL_FLAG == 2
+then
+    00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
+    $6902 = 1 // integer values
+    return
+end
+wait 0
+jump @COPCAR_11374
+
+:COPCAR_11660
+0396: pause_timer 1
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COPCAR_11718
+03C1: $6875 = player $PLAYER_CHAR car_no_save
+053F: set_car $6875 tires_vulnerable 0
+$6908 = Car.Health($6875)
+$6908 += 100 // integer values
+Car.Health($6875) = $6908
+
+:COPCAR_11718
+if
+  13 > $6892 // integer values
+jf @COPCAR_11751
+$6981 -= 0.05 // floating-point values
+03C7: set_sensitivity_to_crime_to $6981
+
+:COPCAR_11751
+jump @COPCAR_538
+
+:COPCAR_11758
+return
+
+:COPCAR_11760
+$ONMISSION = 0 // integer values
+Marker.Disable($6939)
+Marker.Disable($6940)
+Marker.Disable($6941)
+014F: stop_timer $6900
+0151: remove_status_text $6895
+Model.Destroy($6935)
+Model.Destroy($6936)
+Model.Destroy(#COLT45)
+Model.Destroy(#TEC9)
+Model.Destroy(#RUGER)
+Model.Destroy(#CHROMEGUN)
+Model.Destroy(#MACHETE)
+Model.Destroy(#BAT)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:COPCAR_11841
+if
+  $6892 > 1 // integer values
+jf @COPCAR_11875
+0209: $4127 = random_int_in_ranges 26 37
+jump @COPCAR_11884
+
+:COPCAR_11875
+0209: $4127 = random_int_in_ranges 0 37
+
+:COPCAR_11884
+if
+  $4127 == 0 // integer values
+jf @COPCAR_11910
+04AE: $6935 = 191 // = constant
+
+:COPCAR_11910
+if
+  $4127 == 1 // integer values
+jf @COPCAR_11936
+04AE: $6935 = 192 // = constant
+
+:COPCAR_11936
+if
+  $4127 == 2 // integer values
+jf @COPCAR_11962
+04AE: $6935 = 193 // = constant
+
+:COPCAR_11962
+if
+  $4127 == 3 // integer values
+jf @COPCAR_11988
+04AE: $6935 = 198 // = constant
+
+:COPCAR_11988
+if
+  $4127 == 4 // integer values
+jf @COPCAR_12014
+04AE: $6935 = 210 // = constant
+
+:COPCAR_12014
+if
+  $4127 == 5 // integer values
+jf @COPCAR_12040
+04AE: $6935 = 132 // = constant
+
+:COPCAR_12040
+if
+  $4127 == 6 // integer values
+jf @COPCAR_12066
+04AE: $6935 = 141 // = constant
+
+:COPCAR_12066
+if
+  $4127 == 7 // integer values
+jf @COPCAR_12092
+04AE: $6935 = 145 // = constant
+
+:COPCAR_12092
+if
+  $4127 == 8 // integer values
+jf @COPCAR_12118
+04AE: $6935 = 159 // = constant
+
+:COPCAR_12118
+if
+  $4127 == 9 // integer values
+jf @COPCAR_12144
+04AE: $6935 = 207 // = constant
+
+:COPCAR_12144
+if
+  $4127 == 10 // integer values
+jf @COPCAR_12170
+04AE: $6935 = 154 // = constant
+
+:COPCAR_12170
+if
+  $4127 == 11 // integer values
+jf @COPCAR_12196
+04AE: $6935 = 131 // = constant
+
+:COPCAR_12196
+if
+  $4127 == 12 // integer values
+jf @COPCAR_12222
+04AE: $6935 = 133 // = constant
+
+:COPCAR_12222
+if
+  $4127 == 13 // integer values
+jf @COPCAR_12248
+04AE: $6935 = 140 // = constant
+
+:COPCAR_12248
+if
+  $4127 == 14 // integer values
+jf @COPCAR_12274
+04AE: $6935 = 143 // = constant
+
+:COPCAR_12274
+if
+  $4127 == 15 // integer values
+jf @COPCAR_12300
+04AE: $6935 = 144 // = constant
+
+:COPCAR_12300
+if
+  $4127 == 16 // integer values
+jf @COPCAR_12326
+04AE: $6935 = 152 // = constant
+
+:COPCAR_12326
+if
+  $4127 == 17 // integer values
+jf @COPCAR_12352
+04AE: $6935 = 149 // = constant
+
+:COPCAR_12352
+if
+  $4127 == 18 // integer values
+jf @COPCAR_12378
+04AE: $6935 = 153 // = constant
+
+:COPCAR_12378
+if
+  $4127 == 19 // integer values
+jf @COPCAR_12404
+04AE: $6935 = 169 // = constant
+
+:COPCAR_12404
+if
+  $4127 == 20 // integer values
+jf @COPCAR_12430
+04AE: $6935 = 186 // = constant
+
+:COPCAR_12430
+if
+  $4127 == 21 // integer values
+jf @COPCAR_12456
+04AE: $6935 = 205 // = constant
+
+:COPCAR_12456
+if
+  $4127 == 22 // integer values
+jf @COPCAR_12482
+04AE: $6935 = 212 // = constant
+
+:COPCAR_12482
+if
+  $4127 == 23 // integer values
+jf @COPCAR_12508
+04AE: $6935 = 208 // = constant
+
+:COPCAR_12508
+if
+  $4127 == 24 // integer values
+jf @COPCAR_12534
+04AE: $6935 = 204 // = constant
+
+:COPCAR_12534
+if
+  $4127 == 25 // integer values
+jf @COPCAR_12560
+04AE: $6935 = 170 // = constant
+
+:COPCAR_12560
+if
+  $4127 == 26 // integer values
+jf @COPCAR_12586
+04AE: $6935 = 135 // = constant
+
+:COPCAR_12586
+if
+  $4127 == 27 // integer values
+jf @COPCAR_12612
+04AE: $6935 = 148 // = constant
+
+:COPCAR_12612
+if
+  $4127 == 28 // integer values
+jf @COPCAR_12638
+04AE: $6935 = 151 // = constant
+
+:COPCAR_12638
+if
+  $4127 == 29 // integer values
+jf @COPCAR_12664
+04AE: $6935 = 130 // = constant
+
+:COPCAR_12664
+if
+  $4127 == 30 // integer values
+jf @COPCAR_12690
+04AE: $6935 = 134 // = constant
+
+:COPCAR_12690
+if
+  $4127 == 31 // integer values
+jf @COPCAR_12716
+04AE: $6935 = 175 // = constant
+
+:COPCAR_12716
+if
+  $4127 == 32 // integer values
+jf @COPCAR_12742
+04AE: $6935 = 196 // = constant
+
+:COPCAR_12742
+if
+  $4127 == 33 // integer values
+jf @COPCAR_12768
+04AE: $6935 = 197 // = constant
+
+:COPCAR_12768
+if
+  $4127 == 34 // integer values
+jf @COPCAR_12794
+04AE: $6935 = 222 // = constant
+
+:COPCAR_12794
+if
+  $4127 == 35 // integer values
+jf @COPCAR_12820
+04AE: $6935 = 209 // = constant
+
+:COPCAR_12820
+if
+  $4127 == 36 // integer values
+jf @COPCAR_12846
+04AE: $6935 = 174 // = constant
+
+:COPCAR_12846
+Model.Load($6935)
+return
+
+:COPCAR_12853
+if
+  $4868 == -1 // integer values
+jf @COPCAR_12892
+0054: store_player $PLAYER_CHAR position_to $6960 $6961 $6958
+jump @COPCAR_12906
+
+:COPCAR_12892
+Car.StorePos($4868, $6960, $6961, $6958)
+
+:COPCAR_12906
+Car.StorePos($4867, $6956, $6957, $6958)
+0086: $6958 = $6956 // floating-point values only
+0061: $6958 -= $6960 // floating-point values
+0086: $6959 = $6957 // floating-point values only
+0061: $6959 -= $6961 // floating-point values
+0069: $6958 *= $6958 // floating-point values
+0069: $6959 *= $6959 // floating-point values
+0059: $6958 += $6959 // floating-point values
+01FB: $6958 = square_root $6958
+0086: $6962 = $6958 // floating-point values only
+$6962 += 3.0 // floating-point values
+if
+  $6962 > 100.0 // floating-point values
+jf @COPCAR_13033
+$6962 = 100.0 // floating-point values
+
+:COPCAR_13033
+if
+  0.0 > $6962 // floating-point values
+jf @COPCAR_13064
+$6962 = 0.0 // floating-point values
+
+:COPCAR_13064
+return
+
+:COPCAR_13066
+if
+   not Actor.Dead($4869)
+jf @COPCAR_13642
+Actor.StorePos($4869, $4872, $4873, $4874)
+if
+  $4886 == 919.9 // floating-point values
+jf @COPCAR_13134
+$451 = Car.Create($6935, $4872, $4873, $4874)
+
+:COPCAR_13134
+if
+00E9:   player $PLAYER_CHAR 0 $4869 radius 40.0 40.0
+jf @COPCAR_13421
+0086: $4875 = $4872 // floating-point values only
+$4875 += 40.0 // floating-point values
+0086: $4876 = $4873 // floating-point values only
+$4876 += 40.0 // floating-point values
+$4872 -= 40.0 // floating-point values
+$4873 -= 40.0 // floating-point values
+Car.RemoveReferences($451)
+$451 = -1 // integer values
+0327: $451 = create_random_car_with_actors -1 in_area $4872 $4873 $4875 $4876
+if or
+  $451 == -1 // integer values
+003A:   $6876 == $451 // integer values and handles
+jf @COPCAR_13293
+01CA: actor $4869 kill_player $PLAYER_CHAR
+jump @COPCAR_13414
+
+:COPCAR_13293
+if
+0185:   car $451 health >= 400
+jf @COPCAR_13394
+046D: $6898 = actor $4869 car_free_seats // members_in_group
+01EA: $4939 = car $451 max_passengers
+if
+801C:   not  $6898 > $4939 // integer values
+jf @COPCAR_13379
+020A: set_car $451 door_status_to 1
+Car.SetMaxSpeed($451, 0.0)
+01D5: actor $4869 go_to_and_drive_car $451
+jump @COPCAR_13387
+
+:COPCAR_13379
+01CA: actor $4869 kill_player $PLAYER_CHAR
+
+:COPCAR_13387
+jump @COPCAR_13414
+
+:COPCAR_13394
+01CA: actor $4869 kill_player $PLAYER_CHAR
+Car.RemoveReferences($451)
+$451 = -1 // integer values
+
+:COPCAR_13414
+jump @COPCAR_13642
+
+:COPCAR_13421
+03D3: point $4872 $4873 $4874 get_nearby_vector $4872 $4873 $4874 $4886
+if
+80C2:   not sphere_onscreen $4872 $4873 $4874 3.0
+jf @COPCAR_13642
+if
+838A:   not car_in_cube $4872 $4873 $4874 3.0 3.0 2.0
+jf @COPCAR_13569
+if
+   Model.Available($6935)
+jf @COPCAR_13562
+Car.RemoveReferences($451)
+$451 = Car.Create($6935, $4872, $4873, $4874)
+Car.Angle($451) = $4886
+01D5: actor $4869 go_to_and_drive_car $451
+
+:COPCAR_13562
+jump @COPCAR_13642
+
+:COPCAR_13569
+if
+00FF:   actor $4869 0 $4872 $4873 $4874 radius 3.0 3.0 2.0
+jf @COPCAR_13642
+02C0: set $4872 $4873 $4874 to_ped_path_coords_closest_to $4872 $4873 $4874
+0239: actor $4869 run_to $4872 $4873
+
+:COPCAR_13642
+return
+
+:COPCAR_13644
+01BD: $4887 = current_time_in_ms
+if
+   not Car.Wrecked($4880)
+jf @COPCAR_14251
+if and
+01F4:   car $4880 flipped
+01C1:   car $4880 stopped
+jf @COPCAR_13847
+$6894 = 1 // integer values
+if
+01FC:   player $PLAYER_CHAR near_car $4880 radius 90.0 90.0 0
+jf @COPCAR_13745
+03ED: set_car $4880 not_damaged_when_upside_down 0
+$4881 = -9 // integer values
+jump @COPCAR_13847
+
+:COPCAR_13745
+if
+82CA:   not car $4880 bounding_sphere_visible
+jf @COPCAR_13847
+Car.StorePos($4880, $4883, $4884, $4885)
+03D3: point $4883 $4884 $4885 get_nearby_vector $4883 $4884 $4885 $4886
+if
+80C2:   not sphere_onscreen $4883 $4884 $4885 4.0
+jf @COPCAR_13847
+Car.PutAt($4880, $4883, $4884, $4885)
+Car.Angle($4880) = $4886
+
+:COPCAR_13847
+if
+01AF:   car $4880 0 $4877 $4878 $4879 radius 4.0 4.0 4.0
+jf @COPCAR_14188
+if
+  $4881 == 0 // integer values
+jf @COPCAR_13922
+0084: $4882 = $4887 // integer values and handles
+$4881 = 1 // integer values
+
+:COPCAR_13922
+0060: $4887 -= $4882 // integer values
+if
+  $4881 == 1 // integer values
+jf @COPCAR_14188
+if
+  $4887 > 8000 // integer values
+jf @COPCAR_14188
+if
+01FC:   player $PLAYER_CHAR near_car $4880 radius 90.0 90.0 0
+jf @COPCAR_14027
+03ED: set_car $4880 not_damaged_when_upside_down 0
+0084: $4882 = $4887 // integer values and handles
+$4881 = -9 // integer values
+jump @COPCAR_14188
+
+:COPCAR_14027
+if
+82CA:   not car $4880 bounding_sphere_visible
+jf @COPCAR_14188
+Car.StorePos($4880, $4883, $4884, $4885)
+03D3: point $4883 $4884 $4885 get_nearby_vector $4883 $4884 $4885 $4886
+if
+838A:   not car_in_cube $4883 $4884 $4885 4.0 4.0 4.0
+jf @COPCAR_14188
+if
+80C2:   not sphere_onscreen $4883 $4884 $4885 4.0
+jf @COPCAR_14188
+Car.PutAt($4880, $4883, $4884, $4885)
+Car.Angle($4880) = $4886
+0084: $4882 = $4887 // integer values and handles
+$4881 = 0 // integer values
+$6894 = 1 // integer values
+
+:COPCAR_14188
+if
+81AF:   not car $4880 0 $4877 $4878 $4879 radius 4.0 4.0 4.0
+jf @COPCAR_14251
+Car.StorePos($4880, $4877, $4878, $4879)
+$4881 = 0 // integer values
+
+:COPCAR_14251
+return
+
+:COPCAR_14253
+if
+   not Actor.Dead($6877)
+jf @COPCAR_14572
+if
+   not Actor.Dead($6878)
+jf @COPCAR_14365
+if
+831F:   not unknown_actor $6878 hit_by_actor $6877
+jf @COPCAR_14358
+if
+00F2:   actor $6878 near_actor $6877 radius 30.0 30.0 0
+jf @COPCAR_14350
+01DE: tie_actor $6878 to_actor $6877
+jump @COPCAR_14358
+
+:COPCAR_14350
+01CC: actor $6878 kill_player $PLAYER_CHAR
+
+:COPCAR_14358
+jump @COPCAR_14370
+
+:COPCAR_14365
+Actor.RemoveReferences($6878)
+
+:COPCAR_14370
+if
+   not Actor.Dead($6879)
+jf @COPCAR_14466
+if
+831F:   not unknown_actor $6879 hit_by_actor $6877
+jf @COPCAR_14459
+if
+00F2:   actor $6879 near_actor $6877 radius 30.0 30.0 0
+jf @COPCAR_14451
+01DE: tie_actor $6879 to_actor $6877
+jump @COPCAR_14459
+
+:COPCAR_14451
+01CC: actor $6879 kill_player $PLAYER_CHAR
+
+:COPCAR_14459
+jump @COPCAR_14471
+
+:COPCAR_14466
+Actor.RemoveReferences($6879)
+
+:COPCAR_14471
+if
+   not Actor.Dead($6880)
+jf @COPCAR_14567
+if
+831F:   not unknown_actor $6880 hit_by_actor $6877
+jf @COPCAR_14560
+if
+00F2:   actor $6880 near_actor $6877 radius 30.0 30.0 0
+jf @COPCAR_14552
+01DE: tie_actor $6880 to_actor $6877
+jump @COPCAR_14560
+
+:COPCAR_14552
+01CC: actor $6880 kill_player $PLAYER_CHAR
+
+:COPCAR_14560
+jump @COPCAR_14572
+
+:COPCAR_14567
+Actor.RemoveReferences($6880)
+
+:COPCAR_14572
+return
+
+:COPCAR_14574
+if
+   not Actor.Dead($6882)
+jf @COPCAR_14893
+if
+   not Actor.Dead($6883)
+jf @COPCAR_14686
+if
+831F:   not unknown_actor $6883 hit_by_actor $6882
+jf @COPCAR_14679
+if
+00F2:   actor $6883 near_actor $6882 radius 30.0 30.0 0
+jf @COPCAR_14671
+01DE: tie_actor $6883 to_actor $6882
+jump @COPCAR_14679
+
+:COPCAR_14671
+01CC: actor $6883 kill_player $PLAYER_CHAR
+
+:COPCAR_14679
+jump @COPCAR_14691
+
+:COPCAR_14686
+Actor.RemoveReferences($6883)
+
+:COPCAR_14691
+if
+   not Actor.Dead($6884)
+jf @COPCAR_14787
+if
+831F:   not unknown_actor $6884 hit_by_actor $6882
+jf @COPCAR_14780
+if
+00F2:   actor $6884 near_actor $6882 radius 30.0 30.0 0
+jf @COPCAR_14772
+01DE: tie_actor $6884 to_actor $6882
+jump @COPCAR_14780
+
+:COPCAR_14772
+01CC: actor $6884 kill_player $PLAYER_CHAR
+
+:COPCAR_14780
+jump @COPCAR_14792
+
+:COPCAR_14787
+Actor.RemoveReferences($6884)
+
+:COPCAR_14792
+if
+   not Actor.Dead($6885)
+jf @COPCAR_14888
+if
+831F:   not unknown_actor $6885 hit_by_actor $6882
+jf @COPCAR_14881
+if
+00F2:   actor $6885 near_actor $6882 radius 30.0 30.0 0
+jf @COPCAR_14873
+01DE: tie_actor $6885 to_actor $6882
+jump @COPCAR_14881
+
+:COPCAR_14873
+01CC: actor $6885 kill_player $PLAYER_CHAR
+
+:COPCAR_14881
+jump @COPCAR_14893
+
+:COPCAR_14888
+Actor.RemoveReferences($6885)
+
+:COPCAR_14893
+return
+
+:COPCAR_14895
+if
+   not Actor.Dead($6887)
+jf @COPCAR_15214
+if
+   not Actor.Dead($6888)
+jf @COPCAR_15007
+if
+831F:   not unknown_actor $6888 hit_by_actor $6887
+jf @COPCAR_15000
+if
+00F2:   actor $6888 near_actor $6887 radius 30.0 30.0 0
+jf @COPCAR_14992
+01DE: tie_actor $6888 to_actor $6887
+jump @COPCAR_15000
+
+:COPCAR_14992
+01CC: actor $6888 kill_player $PLAYER_CHAR
+
+:COPCAR_15000
+jump @COPCAR_15012
+
+:COPCAR_15007
+Actor.RemoveReferences($6888)
+
+:COPCAR_15012
+if
+   not Actor.Dead($6889)
+jf @COPCAR_15108
+if
+831F:   not unknown_actor $6889 hit_by_actor $6887
+jf @COPCAR_15101
+if
+00F2:   actor $6889 near_actor $6887 radius 30.0 30.0 0
+jf @COPCAR_15093
+01DE: tie_actor $6889 to_actor $6887
+jump @COPCAR_15101
+
+:COPCAR_15093
+01CC: actor $6889 kill_player $PLAYER_CHAR
+
+:COPCAR_15101
+jump @COPCAR_15113
+
+:COPCAR_15108
+Actor.RemoveReferences($6889)
+
+:COPCAR_15113
+if
+   not Actor.Dead($6890)
+jf @COPCAR_15209
+if
+831F:   not unknown_actor $6890 hit_by_actor $6887
+jf @COPCAR_15202
+if
+00F2:   actor $6890 near_actor $6887 radius 30.0 30.0 0
+jf @COPCAR_15194
+01DE: tie_actor $6890 to_actor $6887
+jump @COPCAR_15202
+
+:COPCAR_15194
+01CC: actor $6890 kill_player $PLAYER_CHAR
+
+:COPCAR_15202
+jump @COPCAR_15214
+
+:COPCAR_15209
+Actor.RemoveReferences($6890)
+
+:COPCAR_15214
+return
+
+:COPCAR_15216
+if
+   not Actor.Dead($6877)
+jf @COPCAR_15796
+if
+0154:   actor $6877 in_zone 'VICE_C'  // Vice City
+jf @COPCAR_15279
+0384: text_1string 'C_BREIF' 'VICE_C' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Vice City
+
+:COPCAR_15279
+if
+0154:   actor $6877 in_zone 'BEACH1'  // Ocean Beach
+jf @COPCAR_15326
+0384: text_1string 'C_BREIF' 'BEACH1' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Ocean Beach
+
+:COPCAR_15326
+if
+0154:   actor $6877 in_zone 'BEACH2'  // Washington Beach
+jf @COPCAR_15373
+0384: text_1string 'C_BREIF' 'BEACH2' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Washington Beach
+
+:COPCAR_15373
+if
+0154:   actor $6877 in_zone 'BEACH3'  // Vice Point
+jf @COPCAR_15420
+0384: text_1string 'C_BREIF' 'BEACH3' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Vice Point
+
+:COPCAR_15420
+if
+0154:   actor $6877 in_zone 'GOLFC'  // Leaf Links
+jf @COPCAR_15467
+0384: text_1string 'C_BREIF' 'GOLFC' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Leaf Links
+
+:COPCAR_15467
+if
+0154:   actor $6877 in_zone 'STARI'  // Starfish Island
+jf @COPCAR_15514
+0384: text_1string 'C_BREIF' 'STARI' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Starfish Island
+
+:COPCAR_15514
+if
+0154:   actor $6877 in_zone 'DOCKS'  // Viceport
+jf @COPCAR_15561
+0384: text_1string 'C_BREIF' 'DOCKS' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Viceport
+
+:COPCAR_15561
+if
+0154:   actor $6877 in_zone 'HAVANA'  // Little Havana
+jf @COPCAR_15608
+0384: text_1string 'C_BREIF' 'HAVANA' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Little Havana
+
+:COPCAR_15608
+if
+0154:   actor $6877 in_zone 'HAITI'  // Little Haiti
+jf @COPCAR_15655
+0384: text_1string 'C_BREIF' 'HAITI' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Little Haiti
+
+:COPCAR_15655
+if
+0154:   actor $6877 in_zone 'PORNI'  // Prawn Island
+jf @COPCAR_15702
+0384: text_1string 'C_BREIF' 'PORNI' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Prawn Island
+
+:COPCAR_15702
+if
+0154:   actor $6877 in_zone 'DTOWN'  // Downtown
+jf @COPCAR_15749
+0384: text_1string 'C_BREIF' 'DTOWN' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Downtown
+
+:COPCAR_15749
+if
+0154:   actor $6877 in_zone 'A_PORT'  // Escobar International
+jf @COPCAR_15796
+0384: text_1string 'C_BREIF' 'A_PORT' 5000 ms 1  // ~g~Suspect last seen in the ~a~ area. // Escobar International
+
+:COPCAR_15796
+return
+
+:COPCAR_15798
+0433: set_actor $6891 is_criminal 1
+0319: set_actor $6891 running 1
+02A9: set_actor $6891 immune_to_nonplayer 1
+01ED: clear_actor $6891 threat_search
+0243: set_actor $6891 ped_stats_to 16
+011A: set_actor $6891 search_threat 1
+011A: set_actor $6891 search_threat 2
+011A: set_actor $6891 search_threat 4
+011A: set_actor $6891 search_threat 8
+011A: set_actor $6891 search_threat 16
+011A: set_actor $6891 search_threat 32
+011A: set_actor $6891 search_threat 64
+011A: set_actor $6891 search_threat 128
+011A: set_actor $6891 search_threat 256
+011A: set_actor $6891 search_threat 512
+011A: set_actor $6891 search_threat 1024
+011A: set_actor $6891 search_threat 2048
+011A: set_actor $6891 search_threat 4096
+011A: set_actor $6891 search_threat 8192
+011A: set_actor $6891 search_threat 16384
+011A: set_actor $6891 search_threat 65536
+011A: set_actor $6891 search_threat 131072
+011A: set_actor $6891 search_threat 262144
+011A: set_actor $6891 search_threat 524288
+011A: set_actor $6891 search_threat 1048576
+011A: set_actor $6891 search_threat 2097152
+011A: set_actor $6891 search_threat 4194304
+011A: set_actor $6891 search_threat 16777216
+0291: set_actor $6891 attack_when_provoked 1
+if
+  $6892 == 0 // integer values
+jf @COPCAR_16058
+0209: $4127 = random_int_in_ranges 0 2
+
+:COPCAR_16058
+if
+  $6892 > 1 // integer values
+jf @COPCAR_16085
+0209: $4127 = random_int_in_ranges 0 3
+
+:COPCAR_16085
+if
+  $6892 > 3 // integer values
+jf @COPCAR_16112
+0209: $4127 = random_int_in_ranges 0 4
+
+:COPCAR_16112
+if
+  $6892 > 5 // integer values
+jf @COPCAR_16139
+0209: $4127 = random_int_in_ranges 0 5
+
+:COPCAR_16139
+if
+  $6892 > 7 // integer values
+jf @COPCAR_16166
+0209: $4127 = random_int_in_ranges 0 6
+
+:COPCAR_16166
+if
+  $4127 == 0 // integer values
+jf @COPCAR_16249
+0209: $4127 = random_int_in_ranges 10 13
+if
+  $4127 == 10 // integer values
+jf @COPCAR_16221
+01B2: give_actor $6891 weapon 9 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16221
+if
+  $4127 == 11 // integer values
+jf @COPCAR_16249
+01B2: give_actor $6891 weapon 6 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16249
+if
+  $4127 == 1 // integer values
+jf @COPCAR_16277
+01B2: give_actor $6891 weapon 17 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16277
+if
+  $4127 == 2 // integer values
+jf @COPCAR_16305
+01B2: give_actor $6891 weapon 22 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16305
+if
+  $4127 == 3 // integer values
+jf @COPCAR_16333
+01B2: give_actor $6891 weapon 27 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16333
+if or
+  $4127 == 4 // integer values
+  $4127 == 5 // integer values
+jf @COPCAR_16368
+01B2: give_actor $6891 weapon 19 ammo 9999 // Load the weapon model before using this
+
+:COPCAR_16368
+return
+
+:COPCAR_16370
+if
+   not $6900 == -100 // integer values
+jf @COPCAR_16430
+if
+  1 > $6900 // integer values
+jf @COPCAR_16430
+$6902 = 1 // integer values
+00BC: text_highpriority 'C_TIME' 3000 ms 1  // ~r~Your time as a law enforcer is over!
+return
+
+:COPCAR_16430
+if and
+856C:   not actor $PLAYER_ACTOR driving_police_vehicle
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #HUNTER
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COPCAR_16704
+0396: pause_timer 0
+if
+  $6901 == 0 // integer values
+jf @COPCAR_16542
+01BD: $6896 = current_time_in_ms
+if
+  $6900 > 60000 // integer values
+jf @COPCAR_16527
+$6899 = 60000 // integer values
+jump @COPCAR_16535
+
+:COPCAR_16527
+0084: $6899 = $6900 // integer values and handles
+
+:COPCAR_16535
+$6901 = 1 // integer values
+
+:COPCAR_16542
+01BD: $6903 = current_time_in_ms
+0084: $6904 = $6903 // integer values and handles
+0060: $6904 -= $6896 // integer values
+0060: $6899 -= $6904 // integer values
+0084: $6896 = $6903 // integer values and handles
+0084: $6905 = $6899 // integer values and handles
+$6905 /= 1000 // integer values
+if
+  1 > $6905 // integer values
+jf @COPCAR_16670
+$6905 = 0 // integer values
+if
+001C:   $6903 > $6937 // integer values
+jf @COPCAR_16663
+00BC: text_highpriority 'C_TIME' 3000 ms 1  // ~r~Your time as a law enforcer is over!
+$6902 = 1 // integer values
+return
+
+:COPCAR_16663
+jump @COPCAR_16686
+
+:COPCAR_16670
+0084: $6937 = $6903 // integer values and handles
+$6937 += 1000 // integer values
+
+:COPCAR_16686
+if
+    $6905 == 1
+then
+    01E5: text_1number_highpriority 'COPCARP' $6905 flag 200 time 1  // ~g~You have ~1~ second to return to a police vehicle before the mission ends.
+else
+    if
+        not $6905 == 0
+    then 
+        01E5: text_1number_highpriority 'COPCART' $6905 flag 200 time 1  // ~g~You have ~1~ seconds to return to a police vehicle before the mission ends.
+    end
+end
+0293: $18 = get_controller_mode
+gosub @PROCESS_R3_ABORT
+if $MISSION_CANCEL_FLAG == 2
+then
+    00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
+    $6902 = 1 // integer values
+    return
+end
+
+:COPCAR_16704
+0293: $18 = get_controller_mode
+if or
+056C:   actor $PLAYER_ACTOR driving_police_vehicle
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COPCAR_16936
+03C1: $6875 = player $PLAYER_CHAR car_no_save
+053F: set_car $6875 tires_vulnerable 0
+if $6906 == 0
+then
+	gosub @PROCESS_R3_ABORT
+	if $MISSION_CANCEL_FLAG == 2
+	then
+		$6906 = 1
+	end
+end
+$6901 = 0 // integer values
+
+:COPCAR_16936
+if
+  $6906 == 1
+jf @COPCAR_17061
+if
+   not $18 == 3 // integer values
+jf @COPCAR_17020
+if
+80E1:   not player 0 pressed_button 19
+jf @COPCAR_17013
+00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
+$6902 = 1 // integer values
+return
+
+:COPCAR_17013
+jump @COPCAR_17061
+
+:COPCAR_17020
+if
+80E1:   not player 0 pressed_button 14
+jf @COPCAR_17061
+00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
+$6902 = 1 // integer values
+return
+
+:COPCAR_17061
+return

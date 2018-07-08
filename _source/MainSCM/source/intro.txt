@@ -1,0 +1,2710 @@
+:INTRO
+thread 'INTRO'
+$ONMISSION = 1 // integer values
+$13 = 0 // integer values
+$INTRO_PARTIAL_CUT_SKIP = 0
+wait 0
+fade 0 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Player.CanMove($PLAYER_CHAR) = False
+03AF: set_streaming 0
+03AD: set_rubbish 0
+054C: use_GXT_table 'INTRO'
+Player.MakeSafe($PLAYER_CHAR)
+044D: load_splash 'INTRO1'
+0169: set_fade_color 2 2 2
+wait 250
+023C: load_special_actor 1 'SFRENDA'
+023C: load_special_actor 2 'SFRENDB'
+023C: load_special_actor 3 'CSSONNY'
+023C: load_special_actor 4 'SGOONA'
+023C: load_special_actor 5 'SGOONB'
+02F3: load_object #CUTOBJ01 'SVNTRAY'
+02F3: load_object #CUTOBJ02 'DRINK'
+02F3: load_object #CUTOBJ03 'MBTBEMP'
+02F3: load_object #CUTOBJ04 'SCHAIR'
+03AF: set_streaming 0
+03AD: set_rubbish 0
+select_interior 1
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_MOBROOM2 1
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_DETAILSB 1
+Camera.SetAtPos(231.4, -1277.7, 19.0)
+04F9: set_extracolors 16 fade 0
+038B: load_requested_models
+
+:INTRO_295
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @INTRO_369
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_295
+
+:INTRO_369
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+   not Model.Available(#CUTOBJ04)
+jf @INTRO_443
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_369
+
+:INTRO_443
+02E4: load_cutscene_data 'INT_A'
+0244: set_cutscene_pos 231.411 -1277.707 19.069
+041D: set_camera_near_clip 0.1
+02E5: $127 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $127 'SFRENDA'
+02E5: $128 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $128 'SFRENDB'
+02E5: $138 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $138 'CSSONNY'
+02E5: $129 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $129 'SGOONA'
+02E5: $130 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $130 'SGOONB'
+02E5: $151 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $151 'SVNTRAY'
+02E5: $152 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $152 'DRINK01'
+02E5: $153 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $153 'DRINK02'
+02E5: $154 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $154 'DRINK03'
+02E5: $126 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $126 'MBTBEMP'
+02E5: $216 = create_cutscene_object #CUTOBJ04
+02E6: set_cutscene_anim $216 'SCHAIR'
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:INTRO_725
+if
+  1246 > $CUT_SCENE_TIME // integer values
+jf @INTRO_792
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_725
+
+:INTRO_792
+00BC: text_highpriority 'INT1_A' 10000 ms 1  // Tommy Vercetti...Huh! shit.
+
+:INTRO_807
+if
+  2708 > $CUT_SCENE_TIME // integer values
+jf @INTRO_874
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_807
+
+:INTRO_874
+00BC: text_highpriority 'INT1_B' 10000 ms 1  // Didn't think they'd ever let him out.
+
+:INTRO_889
+if
+  4796 > $CUT_SCENE_TIME // integer values
+jf @INTRO_956
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_889
+
+:INTRO_956
+00BC: text_highpriority 'INT1_C' 10000 ms 1  // He kept his head down, helps people forget.
+
+:INTRO_971
+if
+  7086 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1038
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_971
+
+:INTRO_1038
+00BC: text_highpriority 'INT1_D' 10000 ms 1  // People will remember soon enough.
+
+:INTRO_1053
+if
+  8404 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1120
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1053
+
+:INTRO_1120
+00BC: text_highpriority 'INT1_E' 10000 ms 1  // When they see him walking down the streets of their neighborhoods.
+
+:INTRO_1135
+if
+  10756 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1202
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1135
+
+:INTRO_1202
+00BC: text_highpriority 'INT1_F' 10000 ms 1  // It will be bad for business.
+
+:INTRO_1217
+if
+  12614 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1284
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1217
+
+:INTRO_1284
+00BC: text_highpriority 'INT1_G' 10000 ms 1  // Well, what are we gonna do, Sonny?
+
+:INTRO_1299
+if
+  14813 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1366
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1299
+
+:INTRO_1366
+00BC: text_highpriority 'INT1_H' 10000 ms 1  // We treat him like an old friend and keep him busy out of town. OK?
+
+:INTRO_1381
+if
+  18741 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1448
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1381
+
+:INTRO_1448
+00BC: text_highpriority 'INT1_I' 10000 ms 1  // We been talking about expanding down South, right?
+
+:INTRO_1463
+if
+  21294 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1530
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1463
+
+:INTRO_1530
+00BC: text_highpriority 'INT1_J' 10000 ms 1  // Vice City is twenty-four carat gold these days.
+
+:INTRO_1545
+if
+  24399 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1612
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1545
+
+:INTRO_1612
+00BC: text_highpriority 'INT1_K' 10000 ms 1  // The Colombians, the Mexicans, hell,
+
+:INTRO_1627
+if
+  26496 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1694
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1627
+
+:INTRO_1694
+00BC: text_highpriority 'INT1_L' 10000 ms 1  // even those Cuban refugees are cutting themselves a piece of some nice action.
+
+:INTRO_1709
+if
+  31264 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1776
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1709
+
+:INTRO_1776
+00BC: text_highpriority 'INT1_M' 10000 ms 1  // But it's all drugs, Sonny,
+
+:INTRO_1791
+if
+  32904 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1860
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1791
+
+:INTRO_1860
+00BC: text_highpriority 'INT1_N' 10000 ms 1  // None of the families will touch that shit!
+
+:INTRO_1875
+if
+  35200 > $CUT_SCENE_TIME // integer values
+jf @INTRO_1944
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1875
+
+:INTRO_1944
+00BC: text_highpriority 'INT1_O' 10000 ms 1  // Times are changing.
+
+:INTRO_1959
+if
+  36522 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2028
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_1959
+
+:INTRO_2028
+00BC: text_highpriority 'INT1_P' 10000 ms 1  // The families can't keep their backs turned while our enemies reap the rewards.
+
+:INTRO_2043
+if
+  41196 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2112
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2043
+
+:INTRO_2112
+00BC: text_highpriority 'INT1_Q' 10000 ms 1  // So, we send someone down to do the dirty work for us...
+
+:INTRO_2127
+if
+  45232 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2196
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2127
+
+:INTRO_2196
+00BC: text_highpriority 'INT1_R' 10000 ms 1  // and cut ourselves a nice quiet slice. OK?
+
+:INTRO_2211
+if
+  48992 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2280
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2211
+
+:INTRO_2280
+00BC: text_highpriority 'INT1_S' 10000 ms 1  // Who's our contact down there?
+
+:INTRO_2295
+if
+  50206 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2364
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2295
+
+:INTRO_2364
+00BC: text_highpriority 'INT1_T' 10000 ms 1  // Ken Rosenberg, schmuck of a lawyer.
+
+:INTRO_2379
+if
+  52509 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2448
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2379
+
+:INTRO_2448
+00BC: text_highpriority 'INT1_U' 10000 ms 1  // How's he gonna hold Vercetti's leash?
+
+:INTRO_2463
+if
+  54340 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2532
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2463
+
+:INTRO_2532
+00BC: text_highpriority 'INT1_V' 10000 ms 1  // We don't need him to.
+
+:INTRO_2547
+if
+  56291 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2616
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2547
+
+:INTRO_2616
+00BC: text_highpriority 'INT1_W' 10000 ms 1  // We just set him loose in Vice City,
+
+:INTRO_2631
+if
+  57900 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2700
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2631
+
+:INTRO_2700
+00BC: text_highpriority 'INT1_X' 10000 ms 1  // we give him a little cash to get started. OK?
+
+:INTRO_2715
+if
+  61168 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2784
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2715
+
+:INTRO_2784
+00BC: text_highpriority 'INT1_Y' 10000 ms 1  // Give it a few months.
+
+:INTRO_2799
+if
+  62518 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2868
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2799
+
+:INTRO_2868
+00BC: text_highpriority 'INT1_Z' 10000 ms 1  // Then we go down,
+
+:INTRO_2883
+if
+  64169 > $CUT_SCENE_TIME // integer values
+jf @INTRO_2952
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2883
+
+:INTRO_2952
+00BC: text_highpriority 'INT1_A1' 10000 ms 1  // pay him a little visit, right?
+
+:INTRO_2967
+if
+  65706 > $CUT_SCENE_TIME // integer values
+jf @INTRO_3036
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_2967
+
+:INTRO_3036
+00BC: text_highpriority 'INT1_A2' 10000 ms 1  // see how he's doing.
+
+:INTRO_3051
+if
+  66784 > $CUT_SCENE_TIME // integer values
+jf @INTRO_3120
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3051
+
+:INTRO_3120
+00BE: text_clear_all
+
+:INTRO_3122
+if
+  68240 > $CUT_SCENE_TIME // integer values
+jf @INTRO_3191
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 1
+then
+	jump @INTRO_3191
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3122
+
+:INTRO_3191
+00BE: text_clear_all
+0169: set_fade_color 1 1 1
+fade 0 2000
+
+:INTRO_3208
+if
+fading
+jf @INTRO_3264
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3208
+
+:INTRO_3264
+02EA: end_cutscene
+04FA: reset_sky_colors_with_fade 0
+03AD: set_rubbish 1
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#CUTOBJ04)
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_MOBROOM2 0
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_DETAILSB 0
+select_interior 0
+wait 0
+0522:
+044D: load_splash 'INTRO2'
+0169: set_fade_color 2 2 2
+wait 250
+set_weather 4
+00C0: set_current_time 12 0
+023C: load_special_actor 1 'CSKEN'
+023C: load_special_actor 2 'CSPLAY'
+023C: load_special_actor 3 'SGOONA'
+023C: load_special_actor 4 'SGOONB'
+02F3: load_object #CUTOBJ01 'AIRPLAN'
+02F3: load_object #CUTOBJ02 'MERCED'
+02F3: load_object #CUTOBJ03 'BRFCASE'
+Model.Load(#AP_RADAR1_01)
+Model.Load(#VEG_PALM04)
+Camera.SetAtPos(-1592.0, -545.0, 15.0)
+04E4: unknown_refresh_game_renderer_at -1654.0 -1388.0
+038B: load_requested_models
+
+:INTRO_3535
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @INTRO_3615
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3535
+
+:INTRO_3615
+if or
+   not Model.Available(#CUTOBJ03)
+   not Model.Available(#AP_RADAR1_01)
+   not Model.Available(#VEG_PALM04)
+jf @INTRO_3682
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3615
+
+:INTRO_3682
+0055: put_player $PLAYER_CHAR at -1654.0 -1388.0 -100.0
+0569:  'AIRPLAN'
+02E4: load_cutscene_data 'INT_M'
+0244: set_cutscene_pos -1601.536 -548.298 13.679
+02E5: $141 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $125 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $129 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $129 'SGOONA'
+02E5: $130 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $130 'SGOONB'
+02E5: $208 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $208 'AIRPLAN'
+02E5: $207 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $207 'MERCED'
+0418: set_object $207 draw_last 1
+02E5: $131 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $131 'BRFCASE'
+0525: unknown_cutscene_command $141 $207 'MERCBOD'
+0525: unknown_cutscene_command $125 $207 'MERCBOD'
+0525: unknown_cutscene_command $129 $207 'MERCBOD'
+0525: unknown_cutscene_command $130 $207 'MERCBOD'
+fade 1 3000
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:INTRO_3971
+if
+  4860 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4038
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_3971
+
+:INTRO_4038
+00BC: text_highpriority 'INT2_A' 10000 ms 1  // Hey, hey, guys! It's, uh, Ken Rosenberg here! Hey! Heh, heh, hey, great, hey!
+
+:INTRO_4053
+if
+  6400 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4120
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4053
+
+:INTRO_4120
+041D: set_camera_near_clip 0.15
+
+:INTRO_4127
+if
+  9600 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4194
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4127
+
+:INTRO_4194
+00BC: text_highpriority 'INT2_B' 10000 ms 1  // Well, uh, I'm gonna drive you guys to the meet, okay?
+
+:INTRO_4209
+if
+  12342 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4276
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4209
+
+:INTRO_4276
+00BC: text_highpriority 'INT2_C' 10000 ms 1  // Now, I've talked to the suppliers and they are very, huh-ha,
+
+:INTRO_4291
+if
+  15840 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4358
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4291
+
+:INTRO_4358
+00BC: text_highpriority 'INT2_D' 10000 ms 1  // keen to start a business relationship, so, uh,
+
+:INTRO_4373
+if
+  17556 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4440
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4373
+
+:INTRO_4440
+00BC: text_highpriority 'INT2_E' 10000 ms 1  // if all goes well, we should, uh,
+
+:INTRO_4455
+if
+  20640 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4522
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4455
+
+:INTRO_4522
+00BC: text_highpriority 'INT2_F' 10000 ms 1  // be doing very nicely for ourselves, which is, y'know...
+
+:INTRO_4537
+if
+  23018 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4604
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4537
+
+:INTRO_4604
+00BC: text_highpriority 'INT2_G' 10000 ms 1  // good..
+
+:INTRO_4619
+if
+  25863 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4686
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4619
+
+:INTRO_4686
+00BC: text_highpriority 'INT2_H' 10000 ms 1  // Okay, so. They're brothers, okay.
+
+:INTRO_4701
+if
+  26000 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4768
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4701
+
+:INTRO_4768
+if
+  27624 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4835
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4768
+
+:INTRO_4835
+00BC: text_highpriority 'INT2_I' 10000 ms 1  // One operates the uh, the business,
+
+:INTRO_4850
+if
+  29348 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4917
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4850
+
+:INTRO_4917
+00BC: text_highpriority 'INT2_J' 10000 ms 1  // and the other one does the flying.
+
+:INTRO_4932
+if
+  30300 > $CUT_SCENE_TIME // integer values
+jf @INTRO_4999
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 2
+then
+	jump @INTRO_4999
+end
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_4932
+
+:INTRO_4999
+00BE: text_clear_all
+0169: set_fade_color 1 1 1
+fade 0 2000
+
+:INTRO_5016
+if
+fading
+jf @INTRO_5100
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+if
+  $CUT_SCENE_TIME >= 33300 // integer values
+jf @INTRO_5061
+00BE: text_clear_all
+
+:INTRO_5061
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_5016
+
+:INTRO_5100
+00BE: text_clear_all
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#AP_RADAR1_01)
+Model.Destroy(#VEG_PALM04)
+wait 0
+044D: load_splash 'INTRO3'
+0169: set_fade_color 2 2 2
+wait 250
+set_weather 0
+00C0: set_current_time 20 0
+023C: load_special_actor 1 'CSKEN'
+023C: load_special_actor 2 'CSDEAL'
+023C: load_special_actor 3 'SGOONA'
+023C: load_special_actor 4 'SGOONB'
+023C: load_special_actor 5 'CSASSA'
+023C: load_special_actor 6 'CSASSB'
+023C: load_special_actor 7 'CSASSC'
+023C: load_special_actor 8 'CSPLAY'
+02F3: load_object #CUTOBJ01 'CS_CHOP'
+02F3: load_object #CUTOBJ02 'BRFCASE'
+02F3: load_object #CUTOBJ03 'DELCASE'
+02F3: load_object #CUTOBJ04 'MERCED'
+Model.Load(#DOC_CRANEEGGS04)
+Model.Load(#DOC_CRANE_CAB04)
+Model.Load(#DOCKFUEL07)
+04E4: unknown_refresh_game_renderer_at -692.0 -1559.0
+0055: put_player $PLAYER_CHAR at -683.145 -1581.747 11.53
+Camera.SetAtPos(-692.0, -1559.0, 12.0)
+04F9: set_extracolors 14 fade 0
+038B: load_requested_models
+
+:INTRO_5397
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+823D:   not special_actor 6 loaded
+jf @INTRO_5475
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_5397
+
+:INTRO_5475
+if or
+823D:   not special_actor 7 loaded
+823D:   not special_actor 8 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+   not Model.Available(#CUTOBJ04)
+jf @INTRO_5557
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_5475
+
+:INTRO_5557
+if or
+   not Model.Available(#DOC_CRANEEGGS04)
+   not Model.Available(#DOC_CRANE_CAB04)
+   not Model.Available(#DOCKFUEL07)
+jf @INTRO_5623
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_5557
+
+:INTRO_5623
+0569:  'CS_CHOP'
+02E4: load_cutscene_data 'INT_D'
+0244: set_cutscene_pos -690.0 -1568.0 11.44
+02E5: $125 = create_cutscene_object #SPECIAL08
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $143 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $143 'CSDEAL'
+02E5: $129 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $129 'SGOONA'
+02E5: $130 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $130 'SGOONB'
+02E5: $145 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $145 'CSASSA'
+02E5: $146 = create_cutscene_object #SPECIAL06
+02E6: set_cutscene_anim $146 'CSASSB'
+02E5: $147 = create_cutscene_object #SPECIAL07
+02E6: set_cutscene_anim $147 'CSASSC'
+02E5: $148 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $148 'CS_CHOP'
+0418: set_object $148 draw_last 1
+02E5: $131 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $131 'BRFCASE'
+02E5: $132 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $132 'DELCASE'
+02E5: $207 = create_cutscene_object #CUTOBJ04
+02E6: set_cutscene_anim $207 'MERCED'
+0418: set_object $207 draw_last 1
+0525: unknown_cutscene_command $141 $207 'MERCBOD'
+fade 1 2000
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:INTRO_5952
+if
+  6500 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6019
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_5952
+
+:INTRO_6019
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_6031
+if
+  8743 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6110
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_6031
+
+:INTRO_6110
+00BC: text_highpriority 'INT3_A' 10000 ms 1  // Ok, that's them in the chopper.
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_6137
+if
+  10784 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6216
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_6137
+
+:INTRO_6216
+00BC: text_highpriority 'INT3_B' 10000 ms 1  // All right, here's the deal.
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_6243
+if
+  12040 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6322
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_6243
+
+:INTRO_6322
+00BC: text_highpriority 'INT3_C' 10000 ms 1  // They want a straight exchange on open ground.
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_6349
+if
+  14488 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6428
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_6349
+
+:INTRO_6428
+00BC: text_highpriority 'INT3_D' 10000 ms 1  // All right? Ok. Stay tight, let's go.
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6455
+if
+  17072 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6534
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6455
+
+:INTRO_6534
+03D5: remove_text 'INT3_D'  // All right? Ok. Stay tight, let's go.
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6556
+if
+  20384 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6635
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6556
+
+:INTRO_6635
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6647
+if
+  23200 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6726
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6647
+
+:INTRO_6726
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6738
+if
+  35596 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6819
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6738
+
+:INTRO_6819
+00BC: text_highpriority 'INT3_G' 10000 ms 1  // Got it?
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6846
+if
+  36430 > $CUT_SCENE_TIME // integer values
+jf @INTRO_6927
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6846
+
+:INTRO_6927
+00BC: text_highpriority 'INT3_H' 10000 ms 1  // 100% pure grade-A Colombian, my friend.
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_6954
+if
+  39824 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7035
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_6954
+
+:INTRO_7035
+00BC: text_highpriority 'INT3_M' 10000 ms 1  // Let me see it.
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7062
+if
+  40896 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7143
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7062
+
+:INTRO_7143
+00BC: text_highpriority 'INT3_I' 10000 ms 1  // The greens?
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7170
+if
+  42518 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7251
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7170
+
+:INTRO_7251
+00BC: text_highpriority 'INT3_J' 10000 ms 1  // Tens and twenties...used.
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7278
+if
+  46872 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7359
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7278
+
+:INTRO_7359
+00BC: text_highpriority 'INT3_K' 10000 ms 1  // I think we have a deal, my friend. HA HA!
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7386
+if
+  51100 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7455
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_7386
+
+:INTRO_7455
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_7500
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_7500
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7512
+if
+  51233 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7593
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7512
+
+:INTRO_7593
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_7638
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_7638
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7650
+if
+  51366 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7731
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7650
+
+:INTRO_7731
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_7776
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_7776
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7788
+if
+  51500 > $CUT_SCENE_TIME // integer values
+jf @INTRO_7869
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7788
+
+:INTRO_7869
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_7946
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+058A: create_gun_flash_from -696.522 -1577.432 12.826 to -696.492 -1577.354 12.815
+
+:INTRO_7946
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_7958
+if
+  51633 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8039
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_7958
+
+:INTRO_8039
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8084
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_8084
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8096
+if
+  51733 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8177
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8096
+
+:INTRO_8177
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8222
+058A: create_gun_flash_from -696.442 -1577.358 12.765 to -696.402 -1577.286 12.749
+
+:INTRO_8222
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8234
+if
+  51766 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8315
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8234
+
+:INTRO_8315
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8360
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_8360
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8372
+if
+  51900 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8453
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8372
+
+:INTRO_8453
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8498
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_8498
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8510
+if
+  51966 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8591
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8510
+
+:INTRO_8591
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8636
+058A: create_gun_flash_from -696.448 -1577.274 12.666 to -696.405 -1577.206 12.643
+
+:INTRO_8636
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8648
+if
+  52033 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8729
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8648
+
+:INTRO_8729
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8806
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+058A: create_gun_flash_from -696.354 -1578.122 13.06 to -695.836 -1577.301 13.02
+
+:INTRO_8806
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+
+:INTRO_8818
+if
+  52166 > $CUT_SCENE_TIME // integer values
+jf @INTRO_8899
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 4
+jump @INTRO_8818
+
+:INTRO_8899
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_8944
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_8944
+0598: stir_ground_around_object $148 radius 10.0 flag 6
+
+:INTRO_8956
+if
+  52200 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9037
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 6
+jump @INTRO_8956
+
+:INTRO_9037
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9082
+058A: create_gun_flash_from -696.437 -1577.235 12.658 to -696.391 -1577.17 12.635
+
+:INTRO_9082
+0598: stir_ground_around_object $148 radius 10.0 flag 6
+
+:INTRO_9094
+if
+  52256 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9175
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9094
+
+:INTRO_9175
+00BC: text_highpriority 'INT3_N' 2000 ms 1  // Oh Shit!
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9202
+if
+  52300 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9283
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9202
+
+:INTRO_9283
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9328
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_9328
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9340
+if
+  52433 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9421
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9340
+
+:INTRO_9421
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9498
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+058A: create_gun_flash_from -696.439 -1577.222 12.653 to -696.391 -1577.158 12.63
+
+:INTRO_9498
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9510
+if
+  52566 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9591
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9510
+
+:INTRO_9591
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9636
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_9636
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9648
+if
+  52666 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9729
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9648
+
+:INTRO_9729
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9774
+058A: create_gun_flash_from -696.465 -1577.189 12.648 to -696.419 -1577.213 12.625
+
+:INTRO_9774
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9786
+if
+  52700 > $CUT_SCENE_TIME // integer values
+jf @INTRO_9867
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9786
+
+:INTRO_9867
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_9912
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_9912
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_9924
+if
+  52833 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10005
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_9924
+
+:INTRO_10005
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10050
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_10050
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10062
+if
+  52900 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10143
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10062
+
+:INTRO_10143
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10188
+058A: create_gun_flash_from -696.576 -1577.111 12.686 to -696.538 -1577.04 12.667
+
+:INTRO_10188
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10200
+if
+  52966 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10281
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10200
+
+:INTRO_10281
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10326
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_10326
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10338
+if
+  53100 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10419
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10338
+
+:INTRO_10419
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10464
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_10464
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10476
+if
+  53133 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10557
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10476
+
+:INTRO_10557
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10602
+058A: create_gun_flash_from -696.692 -1577.05 12.703 to -696.665 -1576.973 12.686
+
+:INTRO_10602
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10614
+if
+  53233 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10695
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10614
+
+:INTRO_10695
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10740
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_10740
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10752
+if
+  53366 > $CUT_SCENE_TIME // integer values
+jf @INTRO_10833
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10752
+
+:INTRO_10833
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_10942
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+058A: create_gun_flash_from -696.354 -1578.122 13.06 to -695.836 -1577.301 13.02
+058A: create_gun_flash_from -696.781 -1576.899 12.688 to -696.676 -1576.918 12.67
+
+:INTRO_10942
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_10954
+if
+  53500 > $CUT_SCENE_TIME // integer values
+jf @INTRO_11035
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_10954
+
+:INTRO_11035
+if
+856A:   not has_cutscene_been_interrupted
+jf @INTRO_11080
+058A: create_gun_flash_from -684.222 -1577.189 12.384 to -695.416 -1576.626 12.415
+
+:INTRO_11080
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+
+:INTRO_11092
+if
+  57000 > $CUT_SCENE_TIME // integer values
+jf @INTRO_11173
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+0598: stir_ground_around_object $148 radius 10.0 flag 8
+jump @INTRO_11092
+
+:INTRO_11173
+if
+  58736 > $CUT_SCENE_TIME // integer values
+jf @INTRO_11242
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_11173
+
+:INTRO_11242
+00BC: text_highpriority 'INT3_L' 10000 ms 1  // Go on, get out of here! Drive!
+
+:INTRO_11257
+if
+  60800 > $CUT_SCENE_TIME // integer values
+jf @INTRO_11326
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_11257
+
+:INTRO_11326
+00BE: text_clear_all
+
+:INTRO_11328
+if
+  63212 > $CUT_SCENE_TIME // integer values
+jf @INTRO_11397
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_11328
+
+:INTRO_11397
+0169: set_fade_color 1 1 1
+fade 0 2000
+
+:INTRO_11412
+if
+fading
+jf @INTRO_11468
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	jump @INTRO_11542
+end
+jump @INTRO_11412
+
+:INTRO_11468
+04FA: reset_sky_colors_with_fade 0
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+0296: unload_special_actor 6
+0296: unload_special_actor 7
+0296: unload_special_actor 8
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#CUTOBJ04)
+Model.Destroy(#DOC_CRANEEGGS04)
+Model.Destroy(#DOC_CRANE_CAB04)
+Model.Destroy(#DOCKFUEL07)
+wait 0
+
+:INTRO_11542
+044D: load_splash 'INTRO4'
+0169: set_fade_color 2 2 2
+if
+  $INTRO_PARTIAL_CUT_SKIP == 3
+then
+	fade 0 1000
+	00BE: text_clear_all
+
+	while fading
+		wait 0
+	end
+end
+
+01B7: release_weather
+00C0: set_current_time 21 0
+02EA: end_cutscene
+04FA: reset_sky_colors_with_fade 0
+select_interior 0
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+0296: unload_special_actor 6
+0296: unload_special_actor 7
+0296: unload_special_actor 8
+0296: unload_special_actor 9
+0296: unload_special_actor 10
+0296: unload_special_actor 11
+0296: unload_special_actor 12
+0296: unload_special_actor 13
+0296: unload_special_actor 14
+0296: unload_special_actor 15
+0296: unload_special_actor 16
+0296: unload_special_actor 17
+0296: unload_special_actor 18
+0296: unload_special_actor 19
+0296: unload_special_actor 20
+0296: unload_special_actor 21
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#CUTOBJ04)
+Model.Destroy(#CUTOBJ05)
+Model.Destroy(#DOC_CRANEEGGS04)
+Model.Destroy(#DOC_CRANE_CAB04)
+Model.Destroy(#DOCKFUEL07)
+Model.Destroy(#AP_RADAR1_01)
+Model.Destroy(#VEG_PALM04)
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_MOBROOM2 0
+0363: toggle_model_render_at 231.4 -1277.7 19.0 radius 50.0 object #MOB_DETAILSB 0
+wait 0
+01B7: release_weather
+00C0: set_current_time 21 0
+3@ = 0 // integer values
+4@ = 0 // integer values
+5@ = 0 // integer values
+6@ = 0 // integer values
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03CF: load_wav 'INTRO1' as 1
+03CF: load_wav 'INTRO2' as 2
+
+:INTRO_11899
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @INTRO_11929
+wait 0
+jump @INTRO_11899
+
+:INTRO_11929
+Model.Load(#ADMIRAL)
+Model.Load(#FAGGIO)
+023C: load_special_actor 10 'IGKEN'
+038B: load_requested_models
+
+:INTRO_11953
+if or
+   not Model.Available(#ADMIRAL)
+   not Model.Available(#FAGGIO)
+823D:   not special_actor 10 loaded
+jf @INTRO_11989
+wait 0
+jump @INTRO_11953
+
+:INTRO_11989
+0395: clear_area 0 at 114.2 -823.3 range 9.7 1.0
+04E4: unknown_refresh_game_renderer_at 86.428 -852.238
+Camera.SetAtPos(114.2, -823.3, 9.7)
+0395: clear_area 1 at 86.428 -852.238 range 9.325 50.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+01EB: set_traffic_density_multiplier_to 0.0
+0055: put_player $PLAYER_CHAR at 81.431 -852.868 9.332
+0395: clear_area 1 at 81.488 -852.563 range 10.0 10.0
+0@ = Car.Create(#ADMIRAL, 83.54, -851.669, 10.0)
+Car.SetImmunities(0@, 1, 1, 1, 1, 1)
+Car.Angle(0@) = 330.0
+01D4: actor $PLAYER_ACTOR go_to_car 0@ and_enter_it_as_a_passenger
+0129: 2@ = create_actor 4 #SPECIAL10 in_car 0@ driverseat
+01ED: clear_actor 2@ threat_search
+02AB: set_actor 2@ immunities BP 1 FP 1 EP 1 CP 1 MP 1
+Car.SetToNormalDriver(0@)
+0229: set_car 0@ color_to 84 84
+1@ = Car.Create(#FAGGIO, 127.4, -818.5, 9.5)
+Car.Angle(1@) = 250.6
+041E: set_radio_station 9 -1
+Model.Destroy(#ADMIRAL)
+Model.Destroy(#FAGGIO)
+
+:INTRO_12275
+if
+   not Actor.Driving($PLAYER_ACTOR)
+jf @INTRO_12318
+wait 0
+if
+   Car.Wrecked(0@)
+jf @INTRO_12311
+
+:INTRO_12311
+jump @INTRO_12275
+
+:INTRO_12318
+fade 1 1000
+0395: clear_area 1 at 116.583 -796.821 range 11.423 1.0
+Camera.SetPosition(116.583, -796.821, 11.423, 0.0, 0.0, 0.0)
+Camera.PointAt(116.573, -797.821, 11.414, 2)
+if
+   not Car.Wrecked(0@)
+jf @INTRO_12470
+04BA: set_car 0@ speed_instantly 20.0
+Car.DriveTo(0@, 103.1, -832.3, 9.317)
+Car.SetMaxSpeed(0@, 30.0)
+00AE: set_vehicle 0@ traffic_behavior_to 2
+4@ = 1 // integer values
+
+:INTRO_12470
+16@ = 0 // integer values
+17@ = 0 // integer values
+
+:INTRO_12484
+if or
+   not 3@ == 8 // integer values
+   not 4@ == 4 // integer values
+jf @INTRO_13565
+wait 0
+if
+   Car.Wrecked(0@)
+jf @INTRO_12536
+jump @INTRO_12964
+
+:INTRO_12536
+if
+  4@ == 1 // integer values
+jf @INTRO_12674
+if
+  17@ >= 30000 // integer values
+jf @INTRO_12674
+if
+   not Car.Wrecked(0@)
+jf @INTRO_12674
+if
+81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
+jf @INTRO_12674
+4@ = 3 // integer values
+Car.PutAt(0@, 132.6, -818.278, 9.446)
+Car.Angle(0@) = 206.0214
+
+:INTRO_12674
+if
+  4@ == 1 // integer values
+jf @INTRO_12767
+if
+01AF:   car 0@ 0 103.1 -832.3 9.317 radius 4.0 4.0 4.0
+jf @INTRO_12767
+Car.DriveTo(0@, 113.371, -819.078, 9.317)
+4@ = 2 // integer values
+
+:INTRO_12767
+if
+  4@ == 2 // integer values
+jf @INTRO_12860
+if
+01AF:   car 0@ 0 113.371 -819.078 9.317 radius 4.0 4.0 4.0
+jf @INTRO_12860
+Car.DriveTo(0@, 132.6, -818.278, 9.446)
+4@ = 3 // integer values
+
+:INTRO_12860
+if
+  4@ == 3 // integer values
+jf @INTRO_12964
+if
+01AF:   car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
+jf @INTRO_12964
+if
+   not Car.Wrecked(0@)
+jf @INTRO_12964
+Car.SetMaxSpeed(0@, 0.0)
+Car.SetToNormalDriver(0@)
+4@ = 4 // integer values
+
+:INTRO_12964
+if
+   Actor.Dead(2@)
+jf @INTRO_12980
+jump @INTRO_14275
+
+:INTRO_12980
+if
+  3@ == 0 // integer values
+jf @INTRO_13038
+03D1: play_wav 1
+00BC: text_highpriority 'INTRO1' 10000 ms 1  // I poke my head out of the gutter for one freakin' second and fate shovels shit in my face!
+16@ = 0 // integer values
+17@ = 0 // integer values
+3@ = 1 // integer values
+
+:INTRO_13038
+if
+  6@ == 0 // integer values
+jf @INTRO_13164
+if
+  17@ >= 2000 // integer values
+jf @INTRO_13164
+0395: clear_area 0 at 104.88 -808.433 range 12.108 1.0
+Camera.SetPosition(104.88, -808.433, 12.108, 0.0, 0.0, 0.0)
+Camera.PointAt(105.771, -808.888, 12.091, 2)
+17@ = 0 // integer values
+6@ = 1 // integer values
+
+:INTRO_13164
+if
+  3@ == 1 // integer values
+jf @INTRO_13252
+if
+03D2:   wav 1 ended
+jf @INTRO_13252
+03D5: remove_text 'INTRO1'  // I poke my head out of the gutter for one freakin' second and fate shovels shit in my face!
+if
+  16@ >= 1000 // integer values
+jf @INTRO_13252
+03D1: play_wav 2
+00BC: text_highpriority 'INTRO2' 10000 ms 1  // Go get some sleep.
+3@ = 2 // integer values
+
+:INTRO_13252
+if
+  3@ == 2 // integer values
+jf @INTRO_13289
+03CF: load_wav 'INTRO3' as 1
+3@ = 3 // integer values
+
+:INTRO_13289
+if
+  3@ == 3 // integer values
+jf @INTRO_13339
+if
+03D2:   wav 2 ended
+jf @INTRO_13339
+03D5: remove_text 'INTRO2'  // Go get some sleep.
+3@ = 4 // integer values
+
+:INTRO_13339
+if
+  3@ == 4 // integer values
+jf @INTRO_13398
+if
+03D0:   wav 1 loaded
+jf @INTRO_13398
+03CF: load_wav 'INTRO4' as 2
+16@ = 0 // integer values
+3@ = 5 // integer values
+
+:INTRO_13398
+if
+  3@ == 5 // integer values
+jf @INTRO_13461
+if
+  16@ >= 900 // integer values
+jf @INTRO_13461
+03D1: play_wav 1
+00BC: text_highpriority 'INTRO3' 10000 ms 1  // What are you gonna do?
+3@ = 6 // integer values
+
+:INTRO_13461
+if
+  3@ == 6 // integer values
+jf @INTRO_13511
+if
+03D2:   wav 1 ended
+jf @INTRO_13511
+03D5: remove_text 'INTRO3'  // What are you gonna do?
+3@ = 7 // integer values
+
+:INTRO_13511
+if
+  3@ == 7 // integer values
+jf @INTRO_13558
+if
+03D0:   wav 2 loaded
+jf @INTRO_13558
+16@ = 0 // integer values
+3@ = 8 // integer values
+
+:INTRO_13558
+jump @INTRO_12484
+
+:INTRO_13565
+if
+  300 > 16@ // integer values
+jf @INTRO_13627
+wait 0
+if
+   Car.Wrecked(0@)
+jf @INTRO_13604
+
+:INTRO_13604
+if
+   Actor.Dead(2@)
+jf @INTRO_13620
+
+:INTRO_13620
+jump @INTRO_13565
+
+:INTRO_13627
+03D1: play_wav 2
+00BC: text_highpriority 'INTRO4' 10000 ms 1  // I'll drop by your office tomorrow and we can start sorting this mess out.
+wait 400
+if
+   Car.Wrecked(0@)
+jf @INTRO_13667
+
+:INTRO_13667
+if
+   Actor.Dead(2@)
+jf @INTRO_13683
+
+:INTRO_13683
+if
+83D2:   not wav 2 ended
+jf @INTRO_13741
+wait 0
+if
+   Car.Wrecked(0@)
+jf @INTRO_13718
+
+:INTRO_13718
+if
+   Actor.Dead(2@)
+jf @INTRO_13734
+
+:INTRO_13734
+jump @INTRO_13683
+
+:INTRO_13741
+03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
+if
+   not Car.Wrecked(0@)
+jf @INTRO_13791
+if
+   not Actor.Dead(2@)
+jf @INTRO_13791
+01D3: actor 2@ leave_car 0@
+
+:INTRO_13791
+if
+   not Actor.Dead(2@)
+jf @INTRO_13866
+
+:INTRO_13807
+if
+   Actor.Driving(2@)
+jf @INTRO_13866
+wait 0
+if
+   Car.Wrecked(0@)
+jf @INTRO_13843
+
+:INTRO_13843
+if
+   Actor.Dead(2@)
+jf @INTRO_13859
+
+:INTRO_13859
+jump @INTRO_13807
+
+:INTRO_13866
+if
+   not Actor.Dead(2@)
+jf @INTRO_13904
+0211: actor 2@ walk_to 125.809 -815.263
+0319: set_actor 2@ running 1
+
+:INTRO_13904
+16@ = 0 // integer values
+
+:INTRO_13911
+if
+  1500 > 16@ // integer values
+jf @INTRO_13957
+wait 0
+if
+   not Actor.Dead(2@)
+jf @INTRO_13950
+
+:INTRO_13950
+jump @INTRO_13911
+
+:INTRO_13957
+0395: clear_area 0 at 113.655 -815.814 range 11.029 1.0
+Camera.SetPosition(113.655, -815.814, 11.029, 0.0, 0.0, 0.0)
+Camera.PointAt(114.307, -816.57, 11.083, 2)
+if
+   not Actor.Dead(2@)
+jf @INTRO_14078
+009F: set_actor 2@ idle
+011C: actor 2@ clear_objective
+Actor.PutAt(2@, 125.809, -815.263, 9.444)
+
+:INTRO_14078
+if
+   not Actor.Dead(2@)
+jf @INTRO_14123
+0211: actor 2@ walk_to 116.269 -825.438
+0319: set_actor 2@ running 1
+5@ = 1 // integer values
+
+:INTRO_14123
+if
+   not Actor.Driving($PLAYER_ACTOR)
+jf @INTRO_14176
+Actor.PutAt($PLAYER_ACTOR, 132.93, -820.38, 10.45)
+Actor.Angle($PLAYER_ACTOR) = 225.495
+jump @INTRO_14196
+
+:INTRO_14176
+0362: put_actor $PLAYER_ACTOR at 136.829 -817.835 9.470 and_remove_from_car
+
+:INTRO_14196
+if
+   not Actor.Driving($PLAYER_ACTOR)
+jf @INTRO_14222
+Actor.Angle($PLAYER_ACTOR) = 225.495
+
+:INTRO_14222
+17@ = 0 // integer values
+
+:INTRO_14229
+if
+  1350 > 17@ // integer values
+jf @INTRO_14275
+wait 0
+if
+   not Actor.Dead(2@)
+jf @INTRO_14268
+
+:INTRO_14268
+jump @INTRO_14229
+
+:INTRO_14275
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
+041E: set_radio_station 1 -1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03AD: set_rubbish 1
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Car.RemoveReferences(0@)
+Car.RemoveReferences(1@)
+014C: set_parked_car_generator $1899 cars_to_generate_to 101
+Actor.DestroyInstantly(2@)
+$220 = 1 // integer values
+$ONMISSION = 0 // integer values
+if
+   not Car.Wrecked(0@)
+jf @INTRO_14391
+Car.SetImmunities(0@, 0, 0, 0, 0, 0)
+
+:INTRO_14391
+0296: unload_special_actor 10
+Model.Destroy(#ADMIRAL)
+Model.Destroy(#FAGGIO)
+03DE: set_pedestrians_density_multiplier_to 1.0
+01EB: set_traffic_density_multiplier_to 1.0
+044D: load_splash 'SPLASH1'
+0169: set_fade_color 0 0 0
+mission_cleanup
+end_thread
+
+:INTRO_PROCESS_SKIP
+if $13 == 0
+then
+	if and
+	    80E1:   not player 0 pressed_button 12
+		80E1:   not player 0 pressed_button 15
+		80E1:   not player 0 pressed_button 16
+	then
+		$13 = 1
+	end
+end
+if $13 == 1
+then
+	// We want Enter to do full skip and Shift to do partial skip
+	// But with the gamepad, Y should do partial skip and A should do full skip
+	// so controls need to be reversed
+	if 0124:   has_pad_in_hands
+	then
+		if or
+		    00E1:   player 0 pressed_button 12
+			00E1:   player 0 pressed_button 16
+		then
+			$INTRO_PARTIAL_CUT_SKIP = 3
+			$13 = 0
+			return
+		end
+		if 00E1:   player 0 pressed_button 15
+		then
+			$INTRO_PARTIAL_CUT_SKIP += 1
+			$13 = 0
+			return
+		end
+	else
+		if 00E1:   player 0 pressed_button 15
+		then
+			$INTRO_PARTIAL_CUT_SKIP = 3
+			$13 = 0
+			return
+		end
+		if 00E1:   player 0 pressed_button 16
+		then
+			$INTRO_PARTIAL_CUT_SKIP += 1
+			$13 = 0
+		end
+	end
+end
+return

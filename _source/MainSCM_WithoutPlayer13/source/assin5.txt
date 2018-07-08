@@ -1,0 +1,2053 @@
+:ASSIN5
+thread 'ASSIN5'
+gosub @ASSIN5_46
+if
+wasted_or_busted
+jf @ASSIN5_37
+gosub @ASSIN5_12318
+
+:ASSIN5_37
+gosub @ASSIN5_12466
+end_thread
+
+:ASSIN5_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+wait 0
+054C: use_GXT_table 'ASSIN5'
+Model.Load(#SGA)
+Model.Load(#SGB)
+Model.Load(#MP5LNG)
+Model.Load(#CELLPHONE)
+Model.Load(#ADMIRAL)
+Model.Load(#PONY)
+Model.Load(#MAVERICK)
+Model.Load(#BARREL4)
+
+:ASSIN5_106
+if or
+   not Model.Available(#SGA)
+   not Model.Available(#SGB)
+   not Model.Available(#MP5LNG)
+   not Model.Available(#CELLPHONE)
+jf @ASSIN5_146
+wait 0
+jump @ASSIN5_106
+
+:ASSIN5_146
+if or
+   not Model.Available(#ADMIRAL)
+   not Model.Available(#PONY)
+   not Model.Available(#MAVERICK)
+   not Model.Available(#BARREL4)
+jf @ASSIN5_187
+wait 0
+jump @ASSIN5_146
+
+:ASSIN5_187
+023C: load_special_actor 1 'BGA'
+023C: load_special_actor 2 'BGB'
+
+:ASSIN5_211
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @ASSIN5_241
+wait 0
+jump @ASSIN5_211
+
+:ASSIN5_241
+03DE: set_pedestrians_density_multiplier_to 0.0
+01EB: set_traffic_density_multiplier_to 0.0
+02A3: enable_widescreen 1
+0395: clear_area 0 at -977.4625 -530.668 range 9.9113 4.0
+0395: clear_area 0 at -989.819 -524.6922 range 11.39922 3.0
+042B: clear_peds_from_cube -1475.243 -832.872 10.164 -1489.91 819.0943 18.669
+Player.CanMove($PLAYER_CHAR) = False
+0055: put_player $PLAYER_CHAR at -977.4625 -530.668 9.9113
+0171: set_player $PLAYER_CHAR z_angle_to 284.6051
+052B: actor $PLAYER_ACTOR hold_cellphone 1
+Camera.SetPosition(-981.4931, -531.1837, 11.49621, 0.0, 0.0, 0.0)
+0157: camera_on_player $PLAYER_CHAR mode 4 switchstyle 2
+Camera.SetBehindPlayer
+
+:ASSIN5_419
+if
+834E:   not move_object $1818 to -973.664 -516.25 10.092 speed 0.0 0.1 0.0 collision_check 0
+jf @ASSIN5_478
+wait 0
+jump @ASSIN5_419
+
+:ASSIN5_478
+03CF: load_wav 'JOB5_1' as 1
+03CF: load_wav 'JOB5_2' as 2
+
+:ASSIN5_502
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @ASSIN5_532
+wait 0
+jump @ASSIN5_502
+
+:ASSIN5_532
+fade 1 500
+
+:ASSIN5_539
+if
+fading
+jf @ASSIN5_563
+wait 0
+jump @ASSIN5_539
+
+:ASSIN5_563
+00BC: text_highpriority 'ASM5_A' 10000 ms 1  // There is a valuable exchange taking place on the roof of the Cherry Popper Ice Cream Company.
+03D1: play_wav 1
+
+:ASSIN5_582
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN5_637
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN5_630
+jump @ASSIN5_916
+
+:ASSIN5_630
+jump @ASSIN5_582
+
+:ASSIN5_637
+03D5: remove_text 'ASM5_A'  // There is a valuable exchange taking place on the roof of the Cherry Popper Ice Cream Company.
+040D: unload_wav 1
+00BC: text_highpriority 'ASM5_B' 10000 ms 1  // Kill everyone involved, steal the merchandise and take it to the helipad at the airport.
+03D1: play_wav 2
+
+:ASSIN5_670
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN5_725
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN5_718
+jump @ASSIN5_916
+
+:ASSIN5_718
+jump @ASSIN5_670
+
+:ASSIN5_725
+03D5: remove_text 'ASM5_B'  // Kill everyone involved, steal the merchandise and take it to the helipad at the airport.
+040D: unload_wav 2
+03CF: load_wav 'JOB5_3' as 1
+
+:ASSIN5_751
+if
+83D0:   not wav 1 loaded
+jf @ASSIN5_777
+wait 0
+jump @ASSIN5_751
+
+:ASSIN5_777
+Camera.SetPosition(-988.1754, -532.6743, 11.89331, 0.0, 0.0, 0.0)
+Camera.PointAt(-987.3879, -532.0587, 11.84551, 2)
+00BC: text_highpriority 'ASM5_C' 10000 ms 1  // There is a gate to your left that leads to the back of the factory.
+03D1: play_wav 1
+
+:ASSIN5_847
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN5_902
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN5_895
+jump @ASSIN5_916
+
+:ASSIN5_895
+jump @ASSIN5_847
+
+:ASSIN5_902
+03D5: remove_text 'ASM5_C'  // There is a gate to your left that leads to the back of the factory.
+040D: unload_wav 1
+
+:ASSIN5_916
+040D: unload_wav 1
+040D: unload_wav 2
+03EB: clear_small_messages_only
+wait 500
+052B: actor $PLAYER_ACTOR hold_cellphone 0
+Model.Destroy(#CELLPHONE)
+fade 0 1000
+
+:ASSIN5_950
+if
+fading
+jf @ASSIN5_974
+wait 0
+jump @ASSIN5_950
+
+:ASSIN5_974
+03DE: set_pedestrians_density_multiplier_to 1.0
+01EB: set_traffic_density_multiplier_to 1.0
+16@ = 0 // integer values
+0482:  2.0
+03C7: set_sensitivity_to_crime_to 0.1
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+Player.CanMove($PLAYER_CHAR) = True
+$6612 = 0 // integer values
+$6613 = 0 // integer values
+$6614 = 0 // integer values
+$6615 = 0 // integer values
+$6616 = 0 // integer values
+$6617 = 0 // integer values
+$6618 = 0 // integer values
+$6619 = 0 // integer values
+$6620 = 0 // integer values
+$6621 = 0 // integer values
+$6622 = 0 // integer values
+$6623 = 0 // integer values
+$6624 = 0 // integer values
+$6625 = 0 // integer values
+$6626 = 0 // integer values
+$6627 = 0 // integer values
+$6628 = 0 // integer values
+$6629 = 0 // integer values
+$6630 = 0 // integer values
+$6631 = 0 // integer values
+$6632 = 0 // integer values
+$6633 = 0 // integer values
+$6634 = 0 // integer values
+$6635 = 0 // integer values
+$6636 = 0 // integer values
+$6637 = 0 // integer values
+$6638 = 0 // integer values
+$6647 = 0 // integer values
+$6639 = 0 // integer values
+$6640 = 0 // integer values
+$6641 = 0 // integer values
+$6642 = 0 // integer values
+$6643 = 0 // integer values
+$6644 = 0 // integer values
+$6645 = 0 // integer values
+$6646 = 0 // integer values
+$6648 = 0 // integer values
+$6649 = 0 // integer values
+$6650 = 0 // integer values
+$6651 = 0 // integer values
+$6652 = 0 // integer values
+$6653 = 0 // integer values
+$6654 = 0 // integer values
+$6655 = 0 // integer values
+$6656 = 0 // integer values
+$6657 = 0 // integer values
+$6658 = 0 // integer values
+$6659 = 0 // integer values
+$6660 = 0 // integer values
+$6661 = 0 // integer values
+$6662 = 0 // integer values
+$6663 = 0 // integer values
+$6664 = 0 // integer values
+$6665 = 0 // integer values
+$6532 = Actor.Create(21, #SPECIAL01, -888.0087, -516.6854, 28.1699)
+01B2: give_actor $6532 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6532) = 112.8337
+01ED: clear_actor $6532 threat_search
+0243: set_actor $6532 ped_stats_to 16
+011A: set_actor $6532 search_threat 1
+02A9: set_actor $6532 immune_to_nonplayer 1
+$6533 = Actor.Create(21, #SPECIAL02, -886.0616, -514.7507, 28.1699)
+01B2: give_actor $6533 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6533) = 105.293
+01ED: clear_actor $6533 threat_search
+0243: set_actor $6533 ped_stats_to 16
+011A: set_actor $6533 search_threat 1
+02A9: set_actor $6533 immune_to_nonplayer 1
+$6534 = Actor.Create(21, #SPECIAL01, -886.1217, -518.1573, 28.16999)
+01B2: give_actor $6534 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6534) = 104.0362
+01ED: clear_actor $6534 threat_search
+0243: set_actor $6534 ped_stats_to 16
+011A: set_actor $6534 search_threat 1
+02A9: set_actor $6534 immune_to_nonplayer 1
+$6535 = Actor.Create(CivMale, #SGA, -893.7256, -517.13, 28.1754)
+01B2: give_actor $6535 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6535) = 279.891
+01ED: clear_actor $6535 threat_search
+0243: set_actor $6535 ped_stats_to 16
+011A: set_actor $6535 search_threat 1
+02A9: set_actor $6535 immune_to_nonplayer 1
+$6536 = Actor.Create(CivMale, #SGB, -894.7341, -515.9601, 28.1754)
+01B2: give_actor $6536 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6536) = 285.984
+01ED: clear_actor $6536 threat_search
+0243: set_actor $6536 ped_stats_to 16
+011A: set_actor $6536 search_threat 1
+02A9: set_actor $6536 immune_to_nonplayer 1
+03F9: make_actors $6535 $6532 converse_in 800000 ms
+$6547 = Object.Create(#BARREL4, -927.3963, -528.213, 10.134)
+035D: make_object $6547 targetable
+$6548 = Object.Create(#BARREL4, -904.3218, -566.7883, 9.7807)
+$6498 = Car.Create(#MAVERICK, -870.6392, -516.396, 28.1699)
+0229: set_car $6498 color_to 7 1
+Car.Angle($6498) = 183.0478
+Car.SetToNormalDriver($6498)
+$6537 = Car.Create(#ADMIRAL, -941.5502, -513.9277, 9.9197)
+0229: set_car $6537 color_to 70 0
+Car.SetToNormalDriver($6537)
+Car.Angle($6537) = 5.3408
+$6501 = Actor.Create(21, #SPECIAL01, -939.6057, -512.2731, 9.9113)
+01B2: give_actor $6501 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6501) = 90.5315
+01ED: clear_actor $6501 threat_search
+011A: set_actor $6501 search_threat 1
+0243: set_actor $6501 ped_stats_to 16
+02A9: set_actor $6501 immune_to_nonplayer 1
+0350: set_actor $6501 maintain_position_when_attacked 1
+$6502 = Actor.Create(21, #SPECIAL02, -939.5907, -516.5395, 9.9532)
+01B2: give_actor $6502 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6502) = 90.1574
+01ED: clear_actor $6502 threat_search
+011A: set_actor $6502 search_threat 1
+0243: set_actor $6502 ped_stats_to 16
+02A9: set_actor $6502 immune_to_nonplayer 1
+0350: set_actor $6502 maintain_position_when_attacked 1
+$6503 = Actor.Create(21, #SPECIAL02, -905.3917, -512.3774, 16.9633)
+01B2: give_actor $6503 weapon 25 ammo 3000 // Load the weapon model before using this
+Actor.Angle($6503) = 119.0373
+01ED: clear_actor $6503 threat_search
+011A: set_actor $6503 search_threat 1
+0243: set_actor $6503 ped_stats_to 16
+02A9: set_actor $6503 immune_to_nonplayer 1
+$6504 = Actor.Create(21, #SPECIAL01, -900.4265, -545.6013, 21.4256)
+01B2: give_actor $6504 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6504) = 81.1633
+01ED: clear_actor $6504 threat_search
+011A: set_actor $6504 search_threat 1
+0243: set_actor $6504 ped_stats_to 16
+02A9: set_actor $6504 immune_to_nonplayer 1
+$6505 = Actor.Create(21, #SPECIAL02, -919.222, -544.302, 10.49)
+01B2: give_actor $6505 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6505) = 8.948461
+02A9: set_actor $6505 immune_to_nonplayer 1
+0350: set_actor $6505 maintain_position_when_attacked 1
+$6539 = Car.Create(#PONY, -925.0329, -530.9766, 10.1511)
+0229: set_car $6539 color_to 70 0
+Car.Angle($6539) = 100.691
+Car.ImmuneToNonPlayer($6539) = True
+0129: $6506 = create_actor 21 #SPECIAL01 in_car $6539 driverseat
+01B2: give_actor $6506 weapon 25 ammo 300000 // Load the weapon model before using this
+01ED: clear_actor $6506 threat_search
+011A: set_actor $6506 search_threat 1
+0243: set_actor $6506 ped_stats_to 16
+02A9: set_actor $6506 immune_to_nonplayer 1
+02E2: set_actor $6506 weapon_accuracy_to 10
+01C8: $6507 = create_actor_pedtype 21 model #SPECIAL02 in_car $6539 passenger_seat 0
+01B2: give_actor $6507 weapon 25 ammo 300000 // Load the weapon model before using this
+01ED: clear_actor $6507 threat_search
+011A: set_actor $6507 search_threat 1
+0243: set_actor $6507 ped_stats_to 16
+02A9: set_actor $6507 immune_to_nonplayer 1
+02E2: set_actor $6507 weapon_accuracy_to 10
+01C8: $6508 = create_actor_pedtype 21 model #SPECIAL01 in_car $6539 passenger_seat 1
+01B2: give_actor $6508 weapon 25 ammo 300000 // Load the weapon model before using this
+01ED: clear_actor $6508 threat_search
+011A: set_actor $6508 search_threat 1
+0243: set_actor $6508 ped_stats_to 16
+02A9: set_actor $6508 immune_to_nonplayer 1
+02E2: set_actor $6508 weapon_accuracy_to 10
+01C8: $6509 = create_actor_pedtype 21 model #SPECIAL01 in_car $6539 passenger_seat 2
+01B2: give_actor $6509 weapon 25 ammo 300000 // Load the weapon model before using this
+01ED: clear_actor $6509 threat_search
+011A: set_actor $6509 search_threat 1
+0243: set_actor $6509 ped_stats_to 16
+02A9: set_actor $6509 immune_to_nonplayer 1
+02E2: set_actor $6509 weapon_accuracy_to 10
+Car.SetToNormalDriver($6539)
+$6538 = Car.Create(#ADMIRAL, -923.2911, -534.3985, 10.1921)
+Car.Angle($6538) = 95.827
+0229: set_car $6538 color_to 70 0
+Car.ImmuneToNonPlayer($6538) = True
+$6510 = Actor.Create(21, #SPECIAL02, -910.9335, -549.9265, 10.5692)
+01B2: give_actor $6510 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6510) = 357.5166
+01ED: clear_actor $6510 threat_search
+011A: set_actor $6510 search_threat 1
+0243: set_actor $6510 ped_stats_to 16
+02A9: set_actor $6510 immune_to_nonplayer 1
+0350: set_actor $6510 maintain_position_when_attacked 1
+$6511 = Actor.Create(21, #SPECIAL01, -919.4705, -564.1069, 10.1924)
+01B2: give_actor $6511 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6511) = 11.053
+01ED: clear_actor $6511 threat_search
+011A: set_actor $6511 search_threat 1
+0243: set_actor $6511 ped_stats_to 16
+02A9: set_actor $6511 immune_to_nonplayer 1
+0350: set_actor $6511 maintain_position_when_attacked 1
+$6512 = Actor.Create(21, #SPECIAL02, -907.8641, -562.6886, 10.3168)
+01B2: give_actor $6512 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6512) = 354.8635
+01ED: clear_actor $6512 threat_search
+011A: set_actor $6512 search_threat 1
+0243: set_actor $6512 ped_stats_to 16
+02A9: set_actor $6512 immune_to_nonplayer 1
+0350: set_actor $6512 maintain_position_when_attacked 1
+$6513 = Actor.Create(21, #SPECIAL02, -898.9297, -605.6819, 11.8547)
+01B2: give_actor $6513 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6513) = 182.2136
+01ED: clear_actor $6513 threat_search
+011A: set_actor $6513 search_threat 1
+0243: set_actor $6513 ped_stats_to 16
+02A9: set_actor $6513 immune_to_nonplayer 1
+0350: set_actor $6513 maintain_position_when_attacked 1
+$6514 = Actor.Create(21, #SPECIAL01, -909.2119, -602.8759, 9.5246)
+01B2: give_actor $6514 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6514) = 12.6305
+01ED: clear_actor $6514 threat_search
+011A: set_actor $6514 search_threat 1
+0243: set_actor $6514 ped_stats_to 16
+02A9: set_actor $6514 immune_to_nonplayer 1
+0350: set_actor $6514 maintain_position_when_attacked 1
+$6515 = Actor.Create(21, #SPECIAL01, -916.5301, -562.2043, 12.0173)
+01B2: give_actor $6515 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6515) = 137.803
+01ED: clear_actor $6515 threat_search
+011A: set_actor $6515 search_threat 1
+0243: set_actor $6515 ped_stats_to 16
+02A9: set_actor $6515 immune_to_nonplayer 1
+0350: set_actor $6515 maintain_position_when_attacked 1
+$6516 = Actor.Create(21, #SPECIAL02, -881.8743, -584.6597, 18.6255)
+01B2: give_actor $6516 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6516) = 192.3254
+01ED: clear_actor $6516 threat_search
+011A: set_actor $6516 search_threat 1
+0243: set_actor $6516 ped_stats_to 16
+02A9: set_actor $6516 immune_to_nonplayer 1
+$6517 = Actor.Create(21, #SPECIAL01, -931.1354, -585.5306, 9.1849)
+01B2: give_actor $6517 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6517) = 18.2377
+01ED: clear_actor $6517 threat_search
+011A: set_actor $6517 search_threat 1
+0243: set_actor $6517 ped_stats_to 16
+02A9: set_actor $6517 immune_to_nonplayer 1
+$6518 = Actor.Create(21, #SPECIAL02, -925.1932, -615.1325, 12.7716)
+01B2: give_actor $6518 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6518) = 18.3567
+01ED: clear_actor $6518 threat_search
+011A: set_actor $6518 search_threat 1
+0243: set_actor $6518 ped_stats_to 16
+02A9: set_actor $6518 immune_to_nonplayer 1
+0350: set_actor $6518 maintain_position_when_attacked 1
+$6519 = Actor.Create(21, #SPECIAL02, -929.0777, -614.6532, 14.9469)
+01B2: give_actor $6519 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6519) = 17.6835
+01ED: clear_actor $6519 threat_search
+011A: set_actor $6519 search_threat 1
+0243: set_actor $6519 ped_stats_to 16
+02A9: set_actor $6519 immune_to_nonplayer 1
+0350: set_actor $6518 maintain_position_when_attacked 1
+$6520 = Actor.Create(21, #SPECIAL01, -927.3255, -620.7064, 14.9642)
+01B2: give_actor $6520 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6520) = 1.3416
+01ED: clear_actor $6520 threat_search
+011A: set_actor $6520 search_threat 1
+0243: set_actor $6520 ped_stats_to 16
+02A9: set_actor $6520 immune_to_nonplayer 1
+0350: set_actor $6520 maintain_position_when_attacked 1
+$6521 = Actor.Create(21, #SPECIAL02, -897.9171, -632.6987, 15.5191)
+01B2: give_actor $6521 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6521) = 102.1576
+01ED: clear_actor $6521 threat_search
+011A: set_actor $6521 search_threat 1
+0243: set_actor $6521 ped_stats_to 16
+02A9: set_actor $6521 immune_to_nonplayer 1
+0350: set_actor $6521 maintain_position_when_attacked 1
+$6522 = Actor.Create(21, #SPECIAL01, -878.5259, -624.2981, 14.7945)
+01B2: give_actor $6522 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6522) = 346.1281
+01ED: clear_actor $6522 threat_search
+011A: set_actor $6522 search_threat 1
+0243: set_actor $6522 ped_stats_to 16
+02A9: set_actor $6522 immune_to_nonplayer 1
+0350: set_actor $6522 maintain_position_when_attacked 1
+$6523 = Actor.Create(21, #SPECIAL02, -867.262, -608.2192, 23.1638)
+01B2: give_actor $6523 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6523) = 138.8068
+01ED: clear_actor $6523 threat_search
+011A: set_actor $6523 search_threat 1
+0243: set_actor $6523 ped_stats_to 16
+02A9: set_actor $6523 immune_to_nonplayer 1
+0350: set_actor $6523 maintain_position_when_attacked 1
+$6524 = Actor.Create(21, #SPECIAL01, -874.3932, -605.0528, 14.7369)
+01B2: give_actor $6524 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6524) = 101.475
+01ED: clear_actor $6524 threat_search
+011A: set_actor $6524 search_threat 1
+0243: set_actor $6524 ped_stats_to 16
+02A9: set_actor $6524 immune_to_nonplayer 1
+0350: set_actor $6524 maintain_position_when_attacked 1
+$6525 = Actor.Create(21, #SPECIAL01, -924.4441, -575.0138, 9.2581)
+01B2: give_actor $6525 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6525) = 1.4189
+01ED: clear_actor $6525 threat_search
+011A: set_actor $6525 search_threat 1
+0243: set_actor $6525 ped_stats_to 16
+02A9: set_actor $6525 immune_to_nonplayer 1
+0350: set_actor $6525 maintain_position_when_attacked 1
+$6526 = Actor.Create(21, #SPECIAL01, -867.9724, -601.2151, 23.1638)
+01B2: give_actor $6526 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6526) = 127.6761
+01ED: clear_actor $6526 threat_search
+011A: set_actor $6526 search_threat 1
+0243: set_actor $6526 ped_stats_to 16
+02A9: set_actor $6526 immune_to_nonplayer 1
+0350: set_actor $6526 maintain_position_when_attacked 1
+$6527 = Actor.Create(21, #SPECIAL02, -896.634, -565.709, 12.025)
+01B2: give_actor $6527 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6527) = 37.43
+01ED: clear_actor $6527 threat_search
+011A: set_actor $6527 search_threat 1
+0243: set_actor $6527 ped_stats_to 16
+02A9: set_actor $6527 immune_to_nonplayer 1
+0350: set_actor $6527 maintain_position_when_attacked 1
+02E2: set_actor $6527 weapon_accuracy_to 90
+$6528 = Actor.Create(21, #SPECIAL02, -878.1485, -571.4688, 18.6207)
+01B2: give_actor $6528 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6528) = 138.079
+01ED: clear_actor $6528 threat_search
+011A: set_actor $6528 search_threat 1
+0243: set_actor $6528 ped_stats_to 16
+02A9: set_actor $6528 immune_to_nonplayer 1
+0350: set_actor $6528 maintain_position_when_attacked 1
+$6529 = Actor.Create(21, #SPECIAL01, -892.1982, -552.9963, 23.8094)
+01B2: give_actor $6529 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6529) = 190.8916
+01ED: clear_actor $6529 threat_search
+011A: set_actor $6529 search_threat 1
+0243: set_actor $6529 ped_stats_to 16
+02A9: set_actor $6529 immune_to_nonplayer 1
+0350: set_actor $6529 maintain_position_when_attacked 1
+$6530 = Actor.Create(21, #SPECIAL01, -929.842, -637.3516, 14.9582)
+01B2: give_actor $6530 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6530) = 10.5009
+01ED: clear_actor $6530 threat_search
+011A: set_actor $6530 search_threat 1
+0243: set_actor $6530 ped_stats_to 16
+02A9: set_actor $6530 immune_to_nonplayer 1
+0350: set_actor $6530 maintain_position_when_attacked 1
+$6531 = Actor.Create(21, #SPECIAL01, -914.1021, -530.2435, 10.1809)
+01B2: give_actor $6531 weapon 25 ammo 300000 // Load the weapon model before using this
+Actor.Angle($6531) = 45.0281
+01ED: clear_actor $6531 threat_search
+011A: set_actor $6531 search_threat 1
+0243: set_actor $6531 ped_stats_to 16
+02A9: set_actor $6531 immune_to_nonplayer 1
+0350: set_actor $6531 maintain_position_when_attacked 1
+fade 1 500
+
+:ASSIN5_4353
+if
+fading
+jf @ASSIN5_4377
+wait 0
+jump @ASSIN5_4353
+
+:ASSIN5_4377
+wait 0
+if
+  $6612 == 0 // integer values
+jf @ASSIN5_4541
+$6542 = Pickup.Create(#BODYARMOUR, 3, -883.108, -615.856, 11.134)
+$6545 = Pickup.Create(#HEALTH, 3, -867.2684, -615.3924, 15.7369)
+$6499 = Pickup.Create(#BRIEFCASE, 3, -891.4261, -516.9407, 29.1699)
+03DC: $6500 = create_marker_above_pickup $6499
+032B: $6543 = create_weapon_pickup #M4 3 ammo 130 at -973.5544 -518.9319 10.926
+032B: $6544 = create_weapon_pickup #SHOTGSPA 3 ammo 50 at -898.9763 -549.0946 22.432
+$6612 = 1 // integer values
+
+:ASSIN5_4541
+if
+  $6612 == 1 // integer values
+jf @ASSIN5_4581
+00BC: text_highpriority 'ASM5_1' 7000 ms 2  // ~g~Enter the compound behind the Cherry Popper Ice Cream Company The deal is taking place on the roof.
+$6612 = 2 // integer values
+
+:ASSIN5_4581
+if
+  $6612 == 2 // integer values
+jf @ASSIN5_12311
+if
+  $6613 == 0 // integer values
+jf @ASSIN5_4868
+if
+   not Car.Wrecked($6538)
+jf @ASSIN5_4868
+$6540 = Car.Health($6538)
+if
+   not Car.Wrecked($6539)
+jf @ASSIN5_4868
+$6541 = Car.Health($6539)
+if or
+00E3:   player $PLAYER_CHAR 0 -914.0022 -533.3141 radius 12.0 12.0
+  990 > $6540 // integer values
+  990 > $6541 // integer values
+jf @ASSIN5_4868
+if
+   not Actor.Dead($6506)
+jf @ASSIN5_4743
+01CA: actor $6506 kill_player $PLAYER_CHAR
+
+:ASSIN5_4743
+if
+   not Actor.Dead($6507)
+jf @ASSIN5_4767
+01CA: actor $6507 kill_player $PLAYER_CHAR
+
+:ASSIN5_4767
+if
+   not Actor.Dead($6508)
+jf @ASSIN5_4791
+01CA: actor $6508 kill_player $PLAYER_CHAR
+
+:ASSIN5_4791
+if
+   not Actor.Dead($6509)
+jf @ASSIN5_4815
+01CA: actor $6509 kill_player $PLAYER_CHAR
+
+:ASSIN5_4815
+if
+   not Car.Wrecked($6538)
+jf @ASSIN5_4838
+Car.ImmuneToNonPlayer($6538) = False
+
+:ASSIN5_4838
+if
+   not Car.Wrecked($6539)
+jf @ASSIN5_4861
+Car.ImmuneToNonPlayer($6539) = False
+
+:ASSIN5_4861
+$6613 = 1 // integer values
+
+:ASSIN5_4868
+if
+   not Actor.Dead($6501)
+jf @ASSIN5_5174
+if
+  $6614 == 0 // integer values
+jf @ASSIN5_4917
+01CA: actor $6501 kill_player $PLAYER_CHAR
+$6614 = 1 // integer values
+
+:ASSIN5_4917
+if
+  $6614 == 1 // integer values
+jf @ASSIN5_5174
+if
+  $6637 == 0 // integer values
+jf @ASSIN5_5073
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_5024
+if
+80E9:   not player $PLAYER_CHAR 0 $6501 radius 5.0 5.0
+jf @ASSIN5_5017
+01BD: $6551 = current_time_in_ms
+04EB: actor $6501 crouch 1 300000 ms
+
+:ASSIN5_5017
+jump @ASSIN5_5073
+
+:ASSIN5_5024
+01BD: $6549 = current_time_in_ms
+0084: $6550 = $6549 // integer values and handles
+0060: $6550 -= $6551 // integer values
+if
+  $6550 > 2500 // integer values
+jf @ASSIN5_5073
+04EB: actor $6501 crouch 0 100 ms
+
+:ASSIN5_5073
+if
+  $6637 == 0 // integer values
+jf @ASSIN5_5174
+if or
+00E9:   player $PLAYER_CHAR 0 $6501 radius 5.0 5.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_5174
+04EB: actor $6501 crouch 0 100 ms
+0350: set_actor $6501 maintain_position_when_attacked 0
+01CA: actor $6501 kill_player $PLAYER_CHAR
+$6637 = 1 // integer values
+
+:ASSIN5_5174
+if
+   not Actor.Dead($6502)
+jf @ASSIN5_5459
+if
+  $6615 == 0 // integer values
+jf @ASSIN5_5223
+01CA: actor $6502 kill_player $PLAYER_CHAR
+$6615 = 1 // integer values
+
+:ASSIN5_5223
+if
+  $6615 == 1 // integer values
+jf @ASSIN5_5459
+if
+  $6638 == 0 // integer values
+jf @ASSIN5_5379
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_5330
+if
+80E9:   not player $PLAYER_CHAR 0 $6502 radius 5.0 5.0
+jf @ASSIN5_5323
+01BD: $6554 = current_time_in_ms
+04EB: actor $6502 crouch 1 300000 ms
+
+:ASSIN5_5323
+jump @ASSIN5_5379
+
+:ASSIN5_5330
+01BD: $6552 = current_time_in_ms
+0084: $6553 = $6552 // integer values and handles
+0060: $6553 -= $6554 // integer values
+if
+  $6553 > 2000 // integer values
+jf @ASSIN5_5379
+04EB: actor $6502 crouch 0 100 ms
+
+:ASSIN5_5379
+if
+  $6638 == 0 // integer values
+jf @ASSIN5_5459
+if
+00E9:   player $PLAYER_CHAR 0 $6502 radius 5.0 5.0
+jf @ASSIN5_5459
+04EB: actor $6502 crouch 0 100 ms
+0350: set_actor $6502 maintain_position_when_attacked 0
+01CA: actor $6502 kill_player $PLAYER_CHAR
+$6638 = 1 // integer values
+
+:ASSIN5_5459
+if
+   not Actor.Dead($6505)
+jf @ASSIN5_5744
+if
+  $6616 == 0 // integer values
+jf @ASSIN5_5508
+01CA: actor $6505 kill_player $PLAYER_CHAR
+$6616 = 1 // integer values
+
+:ASSIN5_5508
+if
+  $6616 == 1 // integer values
+jf @ASSIN5_5744
+if
+  $6639 == 0 // integer values
+jf @ASSIN5_5664
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_5615
+if
+80E9:   not player $PLAYER_CHAR 0 $6505 radius 5.0 5.0
+jf @ASSIN5_5608
+01BD: $6557 = current_time_in_ms
+04EB: actor $6505 crouch 1 300000 ms
+
+:ASSIN5_5608
+jump @ASSIN5_5664
+
+:ASSIN5_5615
+01BD: $6555 = current_time_in_ms
+0084: $6556 = $6555 // integer values and handles
+0060: $6556 -= $6557 // integer values
+if
+  $6556 > 2500 // integer values
+jf @ASSIN5_5664
+04EB: actor $6505 crouch 0 100 ms
+
+:ASSIN5_5664
+if
+  $6639 == 0 // integer values
+jf @ASSIN5_5744
+if
+00E9:   player $PLAYER_CHAR 0 $6505 radius 7.0 7.0
+jf @ASSIN5_5744
+04EB: actor $6505 crouch 0 100 ms
+0350: set_actor $6505 maintain_position_when_attacked 0
+01CA: actor $6505 kill_player $PLAYER_CHAR
+$6639 = 1 // integer values
+
+:ASSIN5_5744
+if
+   not Actor.Dead($6510)
+jf @ASSIN5_6066
+if
+  $6617 == 0 // integer values
+jf @ASSIN5_5793
+01CA: actor $6510 kill_player $PLAYER_CHAR
+$6617 = 1 // integer values
+
+:ASSIN5_5793
+if
+  $6617 == 1 // integer values
+jf @ASSIN5_6066
+if
+  $6640 == 0 // integer values
+jf @ASSIN5_5949
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_5900
+if
+80E9:   not player $PLAYER_CHAR 0 $6510 radius 5.0 5.0
+jf @ASSIN5_5893
+01BD: $6560 = current_time_in_ms
+04EB: actor $6510 crouch 1 300000 ms
+
+:ASSIN5_5893
+jump @ASSIN5_5949
+
+:ASSIN5_5900
+01BD: $6558 = current_time_in_ms
+0084: $6559 = $6558 // integer values and handles
+0060: $6559 -= $6560 // integer values
+if
+  $6559 > 3500 // integer values
+jf @ASSIN5_5949
+04EB: actor $6510 crouch 0 100 ms
+
+:ASSIN5_5949
+if
+  $6640 == 0 // integer values
+jf @ASSIN5_6066
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_6066
+if or
+00E9:   player $PLAYER_CHAR 0 $6510 radius 7.0 7.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_6066
+04EB: actor $6510 crouch 0 100 ms
+0350: set_actor $6510 maintain_position_when_attacked 0
+01CA: actor $6510 kill_player $PLAYER_CHAR
+$6640 = 1 // integer values
+
+:ASSIN5_6066
+if
+   not Actor.Dead($6511)
+jf @ASSIN5_6355
+if
+  $6618 == 0 // integer values
+jf @ASSIN5_6115
+01CA: actor $6511 kill_player $PLAYER_CHAR
+$6618 = 1 // integer values
+
+:ASSIN5_6115
+if
+  $6618 == 1 // integer values
+jf @ASSIN5_6355
+if
+  $6641 == 0 // integer values
+jf @ASSIN5_6271
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_6222
+if
+80E9:   not player $PLAYER_CHAR 0 $6511 radius 5.0 5.0
+jf @ASSIN5_6215
+01BD: $6563 = current_time_in_ms
+04EB: actor $6511 crouch 1 300000 ms
+
+:ASSIN5_6215
+jump @ASSIN5_6271
+
+:ASSIN5_6222
+01BD: $6561 = current_time_in_ms
+0084: $6562 = $6561 // integer values and handles
+0060: $6562 -= $6563 // integer values
+if
+  $6562 > 2500 // integer values
+jf @ASSIN5_6271
+04EB: actor $6511 crouch 0 100 ms
+
+:ASSIN5_6271
+if
+  $6641 == 0 // integer values
+jf @ASSIN5_6355
+if or
+00E9:   player $PLAYER_CHAR 0 $6511 radius 7.0 7.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_6355
+02E2: set_actor $6511 weapon_accuracy_to 90
+$6641 = 1 // integer values
+
+:ASSIN5_6355
+if
+   not Actor.Dead($6512)
+jf @ASSIN5_6640
+if
+  $6619 == 0 // integer values
+jf @ASSIN5_6404
+01CA: actor $6512 kill_player $PLAYER_CHAR
+$6619 = 1 // integer values
+
+:ASSIN5_6404
+if
+  $6619 == 1 // integer values
+jf @ASSIN5_6640
+if
+  $6642 == 0 // integer values
+jf @ASSIN5_6560
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_6511
+if
+80E9:   not player $PLAYER_CHAR 0 $6512 radius 5.0 5.0
+jf @ASSIN5_6504
+01BD: $6566 = current_time_in_ms
+04EB: actor $6512 crouch 1 300000 ms
+
+:ASSIN5_6504
+jump @ASSIN5_6560
+
+:ASSIN5_6511
+01BD: $6564 = current_time_in_ms
+0084: $6565 = $6564 // integer values and handles
+0060: $6565 -= $6566 // integer values
+if
+  $6565 > 3500 // integer values
+jf @ASSIN5_6560
+04EB: actor $6512 crouch 0 100 ms
+
+:ASSIN5_6560
+if
+  $6642 == 0 // integer values
+jf @ASSIN5_6640
+if
+00E9:   player $PLAYER_CHAR 0 $6512 radius 10.0 10.0
+jf @ASSIN5_6640
+04EB: actor $6512 crouch 0 100 ms
+0350: set_actor $6512 maintain_position_when_attacked 0
+01CA: actor $6512 kill_player $PLAYER_CHAR
+$6642 = 1 // integer values
+
+:ASSIN5_6640
+if
+   not Actor.Dead($6514)
+jf @ASSIN5_6941
+if
+  $6621 == 0 // integer values
+jf @ASSIN5_6689
+01CA: actor $6514 kill_player $PLAYER_CHAR
+$6621 = 1 // integer values
+
+:ASSIN5_6689
+if
+  $6621 == 1 // integer values
+jf @ASSIN5_6941
+if
+  $6644 == 0 // integer values
+jf @ASSIN5_6845
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_6796
+if
+80E9:   not player $PLAYER_CHAR 0 $6514 radius 5.0 5.0
+jf @ASSIN5_6789
+01BD: $6569 = current_time_in_ms
+04EB: actor $6514 crouch 1 300000 ms
+
+:ASSIN5_6789
+jump @ASSIN5_6845
+
+:ASSIN5_6796
+01BD: $6567 = current_time_in_ms
+0084: $6568 = $6567 // integer values and handles
+0060: $6568 -= $6569 // integer values
+if
+  $6568 > 3000 // integer values
+jf @ASSIN5_6845
+04EB: actor $6514 crouch 0 100 ms
+
+:ASSIN5_6845
+if
+  $6644 == 0 // integer values
+jf @ASSIN5_6941
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_6941
+if
+00E9:   player $PLAYER_CHAR 0 $6514 radius 10.0 10.0
+jf @ASSIN5_6941
+04EB: actor $6514 crouch 0 100 ms
+0350: set_actor $6514 maintain_position_when_attacked 0
+01CA: actor $6514 kill_player $PLAYER_CHAR
+$6644 = 1 // integer values
+
+:ASSIN5_6941
+if
+   not Actor.Dead($6513)
+jf @ASSIN5_7082
+if
+  $6620 == 0 // integer values
+jf @ASSIN5_7002
+01CA: actor $6513 kill_player $PLAYER_CHAR
+04EB: actor $6513 crouch 1 800000 ms
+$6620 = 1 // integer values
+
+:ASSIN5_7002
+if
+  $6643 == 0 // integer values
+jf @ASSIN5_7082
+if
+00E9:   player $PLAYER_CHAR 0 $6513 radius 5.0 5.0
+jf @ASSIN5_7082
+04EB: actor $6513 crouch 0 100 ms
+0350: set_actor $6513 maintain_position_when_attacked 0
+01CA: actor $6513 kill_player $PLAYER_CHAR
+$6643 = 1 // integer values
+
+:ASSIN5_7082
+if
+   not Actor.Dead($6515)
+jf @ASSIN5_7223
+if
+  $6622 == 0 // integer values
+jf @ASSIN5_7143
+01CA: actor $6515 kill_player $PLAYER_CHAR
+04EB: actor $6515 crouch 1 800000 ms
+$6622 = 1 // integer values
+
+:ASSIN5_7143
+if
+  $6645 == 0 // integer values
+jf @ASSIN5_7223
+if
+00E9:   player $PLAYER_CHAR 0 $6515 radius 5.0 5.0
+jf @ASSIN5_7223
+04EB: actor $6515 crouch 0 100 ms
+0350: set_actor $6515 maintain_position_when_attacked 0
+01CA: actor $6515 kill_player $PLAYER_CHAR
+$6645 = 1 // integer values
+
+:ASSIN5_7223
+if
+  $6647 == 0 // integer values
+jf @ASSIN5_7371
+if
+   not Actor.Dead($6503)
+jf @ASSIN5_7371
+if
+02CB:   actor $6503 bounding_sphere_visible
+jf @ASSIN5_7371
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7371
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7371
+if or
+00E9:   player $PLAYER_CHAR 0 $6503 radius 30.0 30.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_7371
+02E2: set_actor $6503 weapon_accuracy_to 95
+$6647 = 1 // integer values
+
+:ASSIN5_7371
+if
+   not Actor.Dead($6518)
+jf @ASSIN5_7672
+if
+  $6623 == 0 // integer values
+jf @ASSIN5_7420
+01CA: actor $6518 kill_player $PLAYER_CHAR
+$6623 = 1 // integer values
+
+:ASSIN5_7420
+if
+  $6623 == 1 // integer values
+jf @ASSIN5_7672
+if
+  $6650 == 0 // integer values
+jf @ASSIN5_7576
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7527
+if
+80E9:   not player $PLAYER_CHAR 0 $6518 radius 5.0 5.0
+jf @ASSIN5_7520
+01BD: $6572 = current_time_in_ms
+04EB: actor $6518 crouch 1 300000 ms
+
+:ASSIN5_7520
+jump @ASSIN5_7576
+
+:ASSIN5_7527
+01BD: $6570 = current_time_in_ms
+0084: $6571 = $6570 // integer values and handles
+0060: $6571 -= $6572 // integer values
+if
+  $6571 > 2000 // integer values
+jf @ASSIN5_7576
+04EB: actor $6518 crouch 0 100 ms
+
+:ASSIN5_7576
+if
+  $6650 == 0 // integer values
+jf @ASSIN5_7672
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7672
+if
+00E9:   player $PLAYER_CHAR 0 $6518 radius 10.0 10.0
+jf @ASSIN5_7672
+04EB: actor $6518 crouch 0 100 ms
+0350: set_actor $6518 maintain_position_when_attacked 0
+01CA: actor $6518 kill_player $PLAYER_CHAR
+$6650 = 1 // integer values
+
+:ASSIN5_7672
+if
+   not Actor.Dead($6519)
+jf @ASSIN5_7977
+if
+  $6624 == 0 // integer values
+jf @ASSIN5_7721
+01CA: actor $6519 kill_player $PLAYER_CHAR
+$6624 = 1 // integer values
+
+:ASSIN5_7721
+if
+  $6624 == 1 // integer values
+jf @ASSIN5_7977
+if
+  $6651 == 0 // integer values
+jf @ASSIN5_7877
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7828
+if
+80E9:   not player $PLAYER_CHAR 0 $6519 radius 5.0 5.0
+jf @ASSIN5_7821
+01BD: $6575 = current_time_in_ms
+04EB: actor $6519 crouch 1 300000 ms
+
+:ASSIN5_7821
+jump @ASSIN5_7877
+
+:ASSIN5_7828
+01BD: $6573 = current_time_in_ms
+0084: $6574 = $6573 // integer values and handles
+0060: $6574 -= $6575 // integer values
+if
+  $6574 > 4000 // integer values
+jf @ASSIN5_7877
+04EB: actor $6519 crouch 0 100 ms
+
+:ASSIN5_7877
+if
+  $6651 == 0 // integer values
+jf @ASSIN5_7977
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_7977
+if or
+00E9:   player $PLAYER_CHAR 0 $6519 radius 10.0 10.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_7977
+02E2: set_actor $6519 weapon_accuracy_to 90
+$6651 = 1 // integer values
+
+:ASSIN5_7977
+if
+   not Actor.Dead($6520)
+jf @ASSIN5_8282
+if
+  $6625 == 0 // integer values
+jf @ASSIN5_8026
+01CA: actor $6520 kill_player $PLAYER_CHAR
+$6625 = 1 // integer values
+
+:ASSIN5_8026
+if
+  $6625 == 1 // integer values
+jf @ASSIN5_8282
+if
+  $6652 == 0 // integer values
+jf @ASSIN5_8182
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_8133
+if
+80E9:   not player $PLAYER_CHAR 0 $6520 radius 5.0 5.0
+jf @ASSIN5_8126
+01BD: $6578 = current_time_in_ms
+04EB: actor $6520 crouch 1 300000 ms
+
+:ASSIN5_8126
+jump @ASSIN5_8182
+
+:ASSIN5_8133
+01BD: $6576 = current_time_in_ms
+0084: $6577 = $6576 // integer values and handles
+0060: $6577 -= $6578 // integer values
+if
+  $6577 > 3500 // integer values
+jf @ASSIN5_8182
+04EB: actor $6520 crouch 0 100 ms
+
+:ASSIN5_8182
+if
+  $6652 == 0 // integer values
+jf @ASSIN5_8282
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_8282
+if or
+00E9:   player $PLAYER_CHAR 0 $6520 radius 7.0 7.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_8282
+02E2: set_actor $6520 weapon_accuracy_to 90
+$6652 = 1 // integer values
+
+:ASSIN5_8282
+if
+   not Actor.Dead($6521)
+jf @ASSIN5_8587
+if
+  $6626 == 0 // integer values
+jf @ASSIN5_8331
+01CA: actor $6521 kill_player $PLAYER_CHAR
+$6626 = 1 // integer values
+
+:ASSIN5_8331
+if
+  $6626 == 1 // integer values
+jf @ASSIN5_8587
+if
+  $6653 == 0 // integer values
+jf @ASSIN5_8487
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_8438
+if
+80E9:   not player $PLAYER_CHAR 0 $6521 radius 5.0 5.0
+jf @ASSIN5_8431
+01BD: $6581 = current_time_in_ms
+04EB: actor $6521 crouch 1 300000 ms
+
+:ASSIN5_8431
+jump @ASSIN5_8487
+
+:ASSIN5_8438
+01BD: $6579 = current_time_in_ms
+0084: $6580 = $6579 // integer values and handles
+0060: $6580 -= $6581 // integer values
+if
+  $6580 > 4000 // integer values
+jf @ASSIN5_8487
+04EB: actor $6521 crouch 0 100 ms
+
+:ASSIN5_8487
+if
+  $6653 == 0 // integer values
+jf @ASSIN5_8587
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_8587
+if or
+00E9:   player $PLAYER_CHAR 0 $6521 radius 10.0 10.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_8587
+02E2: set_actor $6521 weapon_accuracy_to 90
+$6653 = 1 // integer values
+
+:ASSIN5_8587
+if
+   not Actor.Dead($6522)
+jf @ASSIN5_8872
+if
+  $6627 == 0 // integer values
+jf @ASSIN5_8636
+01CA: actor $6522 kill_player $PLAYER_CHAR
+$6627 = 1 // integer values
+
+:ASSIN5_8636
+if
+  $6627 == 1 // integer values
+jf @ASSIN5_8872
+if
+  $6654 == 0 // integer values
+jf @ASSIN5_8792
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_8743
+if
+80E9:   not player $PLAYER_CHAR 0 $6522 radius 5.0 5.0
+jf @ASSIN5_8736
+01BD: $6584 = current_time_in_ms
+04EB: actor $6522 crouch 1 300000 ms
+
+:ASSIN5_8736
+jump @ASSIN5_8792
+
+:ASSIN5_8743
+01BD: $6582 = current_time_in_ms
+0084: $6583 = $6582 // integer values and handles
+0060: $6583 -= $6584 // integer values
+if
+  $6583 > 4000 // integer values
+jf @ASSIN5_8792
+04EB: actor $6522 crouch 0 100 ms
+
+:ASSIN5_8792
+if
+  $6654 == 0 // integer values
+jf @ASSIN5_8872
+if
+00E9:   player $PLAYER_CHAR 0 $6522 radius 10.0 10.0
+jf @ASSIN5_8872
+04EB: actor $6522 crouch 0 100 ms
+0350: set_actor $6522 maintain_position_when_attacked 0
+01CA: actor $6522 kill_player $PLAYER_CHAR
+$6654 = 1 // integer values
+
+:ASSIN5_8872
+if
+   not Actor.Dead($6523)
+jf @ASSIN5_9157
+if
+  $6628 == 0 // integer values
+jf @ASSIN5_8921
+01CA: actor $6523 kill_player $PLAYER_CHAR
+$6628 = 1 // integer values
+
+:ASSIN5_8921
+if
+  $6628 == 1 // integer values
+jf @ASSIN5_9157
+if
+  $6655 == 0 // integer values
+jf @ASSIN5_9077
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_9028
+if
+80E9:   not player $PLAYER_CHAR 0 $6523 radius 5.0 5.0
+jf @ASSIN5_9021
+01BD: $6587 = current_time_in_ms
+04EB: actor $6523 crouch 1 300000 ms
+
+:ASSIN5_9021
+jump @ASSIN5_9077
+
+:ASSIN5_9028
+01BD: $6585 = current_time_in_ms
+0084: $6586 = $6585 // integer values and handles
+0060: $6586 -= $6587 // integer values
+if
+  $6586 > 3000 // integer values
+jf @ASSIN5_9077
+04EB: actor $6523 crouch 0 100 ms
+
+:ASSIN5_9077
+if
+  $6655 == 0 // integer values
+jf @ASSIN5_9157
+if
+00E9:   player $PLAYER_CHAR 0 $6523 radius 10.0 10.0
+jf @ASSIN5_9157
+04EB: actor $6523 crouch 0 100 ms
+0350: set_actor $6523 maintain_position_when_attacked 0
+01CA: actor $6523 kill_player $PLAYER_CHAR
+$6655 = 1 // integer values
+
+:ASSIN5_9157
+if
+   not Actor.Dead($6524)
+jf @ASSIN5_9479
+if
+  $6629 == 0 // integer values
+jf @ASSIN5_9206
+01CA: actor $6524 kill_player $PLAYER_CHAR
+$6629 = 1 // integer values
+
+:ASSIN5_9206
+if
+  $6629 == 1 // integer values
+jf @ASSIN5_9479
+if
+  $6656 == 0 // integer values
+jf @ASSIN5_9362
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_9313
+if
+80E9:   not player $PLAYER_CHAR 0 $6524 radius 5.0 5.0
+jf @ASSIN5_9306
+01BD: $6590 = current_time_in_ms
+04EB: actor $6524 crouch 1 300000 ms
+
+:ASSIN5_9306
+jump @ASSIN5_9362
+
+:ASSIN5_9313
+01BD: $6588 = current_time_in_ms
+0084: $6589 = $6588 // integer values and handles
+0060: $6589 -= $6590 // integer values
+if
+  $6589 > 2000 // integer values
+jf @ASSIN5_9362
+04EB: actor $6524 crouch 0 100 ms
+
+:ASSIN5_9362
+if
+  $6656 == 0 // integer values
+jf @ASSIN5_9479
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_9479
+if or
+00E9:   player $PLAYER_CHAR 0 $6524 radius 2.0 2.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_9479
+04EB: actor $6524 crouch 0 100 ms
+0350: set_actor $6524 maintain_position_when_attacked 0
+01CA: actor $6524 kill_player $PLAYER_CHAR
+$6656 = 1 // integer values
+
+:ASSIN5_9479
+if
+   not Actor.Dead($6525)
+jf @ASSIN5_9764
+if
+  $6630 == 0 // integer values
+jf @ASSIN5_9528
+01CA: actor $6525 kill_player $PLAYER_CHAR
+$6630 = 1 // integer values
+
+:ASSIN5_9528
+if
+  $6630 == 1 // integer values
+jf @ASSIN5_9764
+if
+  $6657 == 0 // integer values
+jf @ASSIN5_9684
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_9635
+if
+80E9:   not player $PLAYER_CHAR 0 $6525 radius 5.0 5.0
+jf @ASSIN5_9628
+01BD: $6593 = current_time_in_ms
+04EB: actor $6525 crouch 1 300000 ms
+
+:ASSIN5_9628
+jump @ASSIN5_9684
+
+:ASSIN5_9635
+01BD: $6591 = current_time_in_ms
+0084: $6592 = $6591 // integer values and handles
+0060: $6592 -= $6593 // integer values
+if
+  $6592 > 3000 // integer values
+jf @ASSIN5_9684
+04EB: actor $6525 crouch 0 100 ms
+
+:ASSIN5_9684
+if
+  $6657 == 0 // integer values
+jf @ASSIN5_9764
+if
+00E9:   player $PLAYER_CHAR 0 $6525 radius 3.0 3.0
+jf @ASSIN5_9764
+04EB: actor $6525 crouch 0 100 ms
+0350: set_actor $6525 maintain_position_when_attacked 0
+01CA: actor $6525 kill_player $PLAYER_CHAR
+$6657 = 1 // integer values
+
+:ASSIN5_9764
+if
+  $6649 == 0 // integer values
+jf @ASSIN5_9896
+if
+   not Actor.Dead($6517)
+jf @ASSIN5_9896
+if
+02CB:   actor $6517 bounding_sphere_visible
+jf @ASSIN5_9896
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_9896
+if or
+00E9:   player $PLAYER_CHAR 0 $6517 radius 20.0 20.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_9896
+02E2: set_actor $6517 weapon_accuracy_to 90
+$6649 = 1 // integer values
+
+:ASSIN5_9896
+if
+   not Actor.Dead($6526)
+jf @ASSIN5_10218
+if
+  $6631 == 0 // integer values
+jf @ASSIN5_9945
+01CA: actor $6526 kill_player $PLAYER_CHAR
+$6631 = 1 // integer values
+
+:ASSIN5_9945
+if
+  $6631 == 1 // integer values
+jf @ASSIN5_10218
+if
+  $6658 == 0 // integer values
+jf @ASSIN5_10101
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10052
+if
+80E9:   not player $PLAYER_CHAR 0 $6526 radius 5.0 5.0
+jf @ASSIN5_10045
+01BD: $6596 = current_time_in_ms
+04EB: actor $6526 crouch 1 300000 ms
+
+:ASSIN5_10045
+jump @ASSIN5_10101
+
+:ASSIN5_10052
+01BD: $6594 = current_time_in_ms
+0084: $6595 = $6594 // integer values and handles
+0060: $6595 -= $6596 // integer values
+if
+  $6595 > 2000 // integer values
+jf @ASSIN5_10101
+04EB: actor $6526 crouch 0 100 ms
+
+:ASSIN5_10101
+if
+  $6658 == 0 // integer values
+jf @ASSIN5_10218
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10218
+if or
+00E9:   player $PLAYER_CHAR 0 $6526 radius 10.0 10.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_10218
+04EB: actor $6526 crouch 0 100 ms
+0350: set_actor $6526 maintain_position_when_attacked 0
+01CA: actor $6526 kill_player $PLAYER_CHAR
+$6658 = 1 // integer values
+
+:ASSIN5_10218
+if
+   not Actor.Dead($6527)
+jf @ASSIN5_10531
+if
+  $6632 == 0 // integer values
+jf @ASSIN5_10267
+01CA: actor $6527 kill_player $PLAYER_CHAR
+$6632 = 1 // integer values
+
+:ASSIN5_10267
+if
+  $6632 == 1 // integer values
+jf @ASSIN5_10531
+if
+  $6659 == 0 // integer values
+jf @ASSIN5_10423
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10374
+if
+80E9:   not player $PLAYER_CHAR 0 $6527 radius 5.0 5.0
+jf @ASSIN5_10367
+01BD: $6599 = current_time_in_ms
+04EB: actor $6527 crouch 1 300000 ms
+
+:ASSIN5_10367
+jump @ASSIN5_10423
+
+:ASSIN5_10374
+01BD: $6597 = current_time_in_ms
+0084: $6598 = $6597 // integer values and handles
+0060: $6598 -= $6599 // integer values
+if
+  $6598 > 2500 // integer values
+jf @ASSIN5_10423
+04EB: actor $6527 crouch 0 100 ms
+
+:ASSIN5_10423
+if
+  $6659 == 0 // integer values
+jf @ASSIN5_10531
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10531
+if or
+00E9:   player $PLAYER_CHAR 0 $6527 radius 5.0 5.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_10531
+01CA: actor $6527 kill_player $PLAYER_CHAR
+02E2: set_actor $6527 weapon_accuracy_to 90
+$6659 = 1 // integer values
+
+:ASSIN5_10531
+if
+   not Actor.Dead($6528)
+jf @ASSIN5_10816
+if
+  $6633 == 0 // integer values
+jf @ASSIN5_10580
+01CA: actor $6528 kill_player $PLAYER_CHAR
+$6633 = 1 // integer values
+
+:ASSIN5_10580
+if
+  $6633 == 1 // integer values
+jf @ASSIN5_10816
+if
+  $6660 == 0 // integer values
+jf @ASSIN5_10736
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10687
+if
+80E9:   not player $PLAYER_CHAR 0 $6528 radius 5.0 5.0
+jf @ASSIN5_10680
+01BD: $6602 = current_time_in_ms
+04EB: actor $6528 crouch 1 300000 ms
+
+:ASSIN5_10680
+jump @ASSIN5_10736
+
+:ASSIN5_10687
+01BD: $6600 = current_time_in_ms
+0084: $6601 = $6600 // integer values and handles
+0060: $6601 -= $6602 // integer values
+if
+  $6601 > 4000 // integer values
+jf @ASSIN5_10736
+04EB: actor $6528 crouch 0 100 ms
+
+:ASSIN5_10736
+if
+  $6660 == 0 // integer values
+jf @ASSIN5_10816
+if
+00E9:   player $PLAYER_CHAR 0 $6528 radius 7.0 7.0
+jf @ASSIN5_10816
+04EB: actor $6528 crouch 0 100 ms
+0350: set_actor $6528 maintain_position_when_attacked 0
+01CA: actor $6528 kill_player $PLAYER_CHAR
+$6660 = 1 // integer values
+
+:ASSIN5_10816
+if
+   not Actor.Dead($6529)
+jf @ASSIN5_11101
+if
+  $6634 == 0 // integer values
+jf @ASSIN5_10865
+01CA: actor $6529 kill_player $PLAYER_CHAR
+$6634 = 1 // integer values
+
+:ASSIN5_10865
+if
+  $6634 == 1 // integer values
+jf @ASSIN5_11101
+if
+  $6661 == 0 // integer values
+jf @ASSIN5_11021
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_10972
+if
+80E9:   not player $PLAYER_CHAR 0 $6529 radius 3.0 3.0
+jf @ASSIN5_10965
+01BD: $6605 = current_time_in_ms
+04EB: actor $6529 crouch 1 300000 ms
+
+:ASSIN5_10965
+jump @ASSIN5_11021
+
+:ASSIN5_10972
+01BD: $6603 = current_time_in_ms
+0084: $6604 = $6603 // integer values and handles
+0060: $6604 -= $6605 // integer values
+if
+  $6604 > 3000 // integer values
+jf @ASSIN5_11021
+04EB: actor $6529 crouch 0 100 ms
+
+:ASSIN5_11021
+if
+  $6661 == 0 // integer values
+jf @ASSIN5_11101
+if
+00E9:   player $PLAYER_CHAR 0 $6529 radius 3.0 3.0
+jf @ASSIN5_11101
+04EB: actor $6529 crouch 0 100 ms
+0350: set_actor $6529 maintain_position_when_attacked 0
+01CA: actor $6529 kill_player $PLAYER_CHAR
+$6661 = 1 // integer values
+
+:ASSIN5_11101
+if
+   not Actor.Dead($6530)
+jf @ASSIN5_11406
+if
+  $6635 == 0 // integer values
+jf @ASSIN5_11150
+01CA: actor $6530 kill_player $PLAYER_CHAR
+$6635 = 1 // integer values
+
+:ASSIN5_11150
+if
+  $6635 == 1 // integer values
+jf @ASSIN5_11406
+if
+  $6662 == 0 // integer values
+jf @ASSIN5_11306
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_11257
+if
+80E9:   not player $PLAYER_CHAR 0 $6530 radius 3.0 3.0
+jf @ASSIN5_11250
+01BD: $6608 = current_time_in_ms
+04EB: actor $6530 crouch 1 300000 ms
+
+:ASSIN5_11250
+jump @ASSIN5_11306
+
+:ASSIN5_11257
+01BD: $6606 = current_time_in_ms
+0084: $6607 = $6606 // integer values and handles
+0060: $6607 -= $6608 // integer values
+if
+  $6607 > 3000 // integer values
+jf @ASSIN5_11306
+04EB: actor $6530 crouch 0 100 ms
+
+:ASSIN5_11306
+if
+  $6662 == 0 // integer values
+jf @ASSIN5_11406
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_11406
+if or
+00E9:   player $PLAYER_CHAR 0 $6530 radius 3.0 3.0
+02D7:   player $PLAYER_CHAR currentweapon == 30
+02D7:   player $PLAYER_CHAR currentweapon == 28
+02D7:   player $PLAYER_CHAR currentweapon == 29
+jf @ASSIN5_11406
+02E2: set_actor $6530 weapon_accuracy_to 95
+$6662 = 1 // integer values
+
+:ASSIN5_11406
+if
+   not Actor.Dead($6531)
+jf @ASSIN5_11691
+if
+  $6636 == 0 // integer values
+jf @ASSIN5_11455
+01CA: actor $6531 kill_player $PLAYER_CHAR
+$6636 = 1 // integer values
+
+:ASSIN5_11455
+if
+  $6636 == 1 // integer values
+jf @ASSIN5_11691
+if
+  $6663 == 0 // integer values
+jf @ASSIN5_11611
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @ASSIN5_11562
+if
+80E9:   not player $PLAYER_CHAR 0 $6531 radius 3.0 3.0
+jf @ASSIN5_11555
+01BD: $6611 = current_time_in_ms
+04EB: actor $6531 crouch 1 300000 ms
+
+:ASSIN5_11555
+jump @ASSIN5_11611
+
+:ASSIN5_11562
+01BD: $6609 = current_time_in_ms
+0084: $6610 = $6609 // integer values and handles
+0060: $6610 -= $6611 // integer values
+if
+  $6610 > 3000 // integer values
+jf @ASSIN5_11611
+04EB: actor $6531 crouch 0 100 ms
+
+:ASSIN5_11611
+if
+  $6663 == 0 // integer values
+jf @ASSIN5_11691
+if
+00E9:   player $PLAYER_CHAR 0 $6531 radius 3.0 3.0
+jf @ASSIN5_11691
+04EB: actor $6531 crouch 0 100 ms
+0350: set_actor $6531 maintain_position_when_attacked 0
+01CA: actor $6531 kill_player $PLAYER_CHAR
+$6663 = 1 // integer values
+
+:ASSIN5_11691
+if
+0056:   player $PLAYER_CHAR 0 -896.5784 -551.9854 -879.3575 -504.746
+jf @ASSIN5_11769
+if
+  $6665 == 0 // integer values
+jf @ASSIN5_11769
+00BC: text_highpriority 'ASM5_2' 7000 ms 2  // ~g~Get the merchandise and take it to the helipad at the airport!
+$6665 = 1 // integer values
+
+:ASSIN5_11769
+if
+  $6664 == 0 // integer values
+jf @ASSIN5_11850
+if
+   Pickup.Picked_up($6499)
+jf @ASSIN5_11850
+Marker.Disable($6500)
+00BC: text_highpriority 'ASM5_3' 7000 ms 2  // ~g~Take the merchandise to the helipad at the airport!
+018A: $6546 = create_checkpoint_at -1368.395 -1255.998 17.2
+$6664 = 1 // integer values
+
+:ASSIN5_11850
+if
+  $6664 == 1 // integer values
+jf @ASSIN5_11928
+if
+00F5:   player $PLAYER_CHAR 1 -1368.395 -1255.998 17.2 radius 5.0 5.0 4.0
+jf @ASSIN5_11928
+Marker.Disable($6546)
+jump @ASSIN5_12394
+
+:ASSIN5_11928
+if
+   Actor.Dead($6501)
+jf @ASSIN5_11949
+Actor.RemoveReferences($6501)
+
+:ASSIN5_11949
+if
+   Actor.Dead($6502)
+jf @ASSIN5_11970
+Actor.RemoveReferences($6502)
+
+:ASSIN5_11970
+if
+   Actor.Dead($6505)
+jf @ASSIN5_11991
+Actor.RemoveReferences($6505)
+
+:ASSIN5_11991
+if
+   Actor.Dead($6506)
+jf @ASSIN5_12012
+Actor.RemoveReferences($6506)
+
+:ASSIN5_12012
+if
+   Actor.Dead($6507)
+jf @ASSIN5_12033
+Actor.RemoveReferences($6507)
+
+:ASSIN5_12033
+if
+   Actor.Dead($6508)
+jf @ASSIN5_12054
+Actor.RemoveReferences($6508)
+
+:ASSIN5_12054
+if
+   Actor.Dead($6509)
+jf @ASSIN5_12075
+Actor.RemoveReferences($6509)
+
+:ASSIN5_12075
+if
+   Actor.Dead($6510)
+jf @ASSIN5_12096
+Actor.RemoveReferences($6510)
+
+:ASSIN5_12096
+if
+   Actor.Dead($6511)
+jf @ASSIN5_12117
+Actor.RemoveReferences($6511)
+
+:ASSIN5_12117
+if
+   Actor.Dead($6514)
+jf @ASSIN5_12138
+Actor.RemoveReferences($6514)
+
+:ASSIN5_12138
+if
+   Actor.Dead($6515)
+jf @ASSIN5_12159
+Actor.RemoveReferences($6515)
+
+:ASSIN5_12159
+if
+   Actor.Dead($6518)
+jf @ASSIN5_12180
+Actor.RemoveReferences($6518)
+
+:ASSIN5_12180
+if
+   Actor.Dead($6519)
+jf @ASSIN5_12201
+Actor.RemoveReferences($6519)
+
+:ASSIN5_12201
+if
+   Actor.Dead($6520)
+jf @ASSIN5_12222
+Actor.RemoveReferences($6520)
+
+:ASSIN5_12222
+if
+   Actor.Dead($6521)
+jf @ASSIN5_12243
+Actor.RemoveReferences($6521)
+
+:ASSIN5_12243
+if
+   Car.Wrecked($6539)
+jf @ASSIN5_12269
+Car.RemoveReferences($6539)
+Model.Destroy(#PONY)
+
+:ASSIN5_12269
+if
+   Car.Wrecked($6537)
+jf @ASSIN5_12290
+Car.RemoveReferences($6537)
+
+:ASSIN5_12290
+if
+   Car.Wrecked($6538)
+jf @ASSIN5_12311
+Car.RemoveReferences($6538)
+
+:ASSIN5_12311
+jump @ASSIN5_4377
+
+:ASSIN5_12318
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+
+:ASSIN5_12333
+if
+834E:   not move_object $1818 to -973.664 -519.65 10.092 speed 0.0 1.0 0.0 collision_check 0
+jf @ASSIN5_12392
+wait 0
+jump @ASSIN5_12333
+
+:ASSIN5_12392
+return
+
+:ASSIN5_12394
+$302 = 1 // integer values
+0318: set_latest_mission_passed 'JOB_5'  // Loose Ends
+Object.RemoveReferences($1818)
+01E3: text_1number_styled 'M_PASS' number 16000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 16000
+0394: play_music 1
+030C: progress_made += 1
+0533: increment_assassination_contracts_by 1
+Marker.Disable($297)
+return
+
+:ASSIN5_12466
+$ONMISSION = 0 // integer values
+Pickup.Destroy($6542)
+Pickup.Destroy($6543)
+Pickup.Destroy($6544)
+Pickup.Destroy($6545)
+Pickup.Destroy($6499)
+Marker.Disable($6500)
+Marker.Disable($6546)
+Model.Destroy(#SGA)
+Model.Destroy(#SGB)
+Model.Destroy(#MP5LNG)
+Model.Destroy(#ADMIRAL)
+Model.Destroy(#PONY)
+Model.Destroy(#MAVERICK)
+Model.Destroy(#BARREL4)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Actor.DestroyWithFade($6501)
+Actor.DestroyWithFade($6502)
+Actor.DestroyWithFade($6503)
+Actor.DestroyWithFade($6504)
+Actor.DestroyWithFade($6505)
+Actor.DestroyWithFade($6506)
+Actor.DestroyWithFade($6507)
+Actor.DestroyWithFade($6508)
+Actor.DestroyWithFade($6509)
+Actor.DestroyWithFade($6510)
+Actor.DestroyWithFade($6511)
+Actor.DestroyWithFade($6512)
+Actor.DestroyWithFade($6513)
+Actor.DestroyWithFade($6514)
+Actor.DestroyWithFade($6515)
+Actor.DestroyWithFade($6516)
+Actor.DestroyWithFade($6517)
+Actor.DestroyWithFade($6518)
+Actor.DestroyWithFade($6519)
+Actor.DestroyWithFade($6520)
+Actor.DestroyWithFade($6521)
+Actor.DestroyWithFade($6522)
+Actor.DestroyWithFade($6523)
+Actor.DestroyWithFade($6524)
+Actor.DestroyWithFade($6525)
+Actor.DestroyWithFade($6526)
+Actor.DestroyWithFade($6527)
+Actor.DestroyWithFade($6528)
+Actor.DestroyWithFade($6529)
+Actor.DestroyWithFade($6530)
+Actor.DestroyWithFade($6531)
+Object.Destroy($6547)
+Object.Destroy($6548)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return

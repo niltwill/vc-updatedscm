@@ -1,0 +1,1669 @@
+:JUNKFUD
+$1353 = 0 // integer values
+$1354 = 0 // integer values
+$1355 = 0 // integer values
+$1356 = 0 // integer values
+$1357 = 0 // integer values
+$1366 = 0 // integer values
+$1389 = 0 // integer values
+$1390 = 0 // integer values
+$1391 = 0 // integer values
+$1400 = 0 // integer values
+$1372 = 0 // integer values
+$1373 = 0 // integer values
+$1374 = 0 // integer values
+$1375 = 0 // integer values
+$1376 = 0 // integer values
+$1377 = 0 // integer values
+$1378 = 0 // integer values
+$1379 = 0 // integer values
+$1380 = 0 // integer values
+thread 'JUNKFUD'
+set_wb_check_to 0
+create_thread @FUD
+end_thread
+
+:FUD
+thread 'FUD'
+
+:FUD_407
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_5282
+$1380 += 1 // integer values
+0054: store_player $PLAYER_CHAR position_to $1392 $1393 $1394
+
+0@ = 100
+1@ = 99
+if $389 == 1
+then
+	0@ += 50
+	1@ += 50
+end
+if $91 == 1
+then
+	0@ += 50
+	1@ += 50
+end
+
+if
+  $1380 == 1 // integer values
+jf @FUD_3328
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @FUD_3321
+if
+  $1003 == 1 // integer values
+jf @FUD_3307
+if
+  $1392 > 415.0 // floating-point values
+jf @FUD_1902
+if and
+  $1353 == 1 // integer values
+  $1180 == 0 // integer values
+jf @FUD_1500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_798
+if and
+   not Actor.Dead($1358)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_786
+if
+00F6:   player $PLAYER_CHAR 0 445.66 1100.54 18.3 radius 1.0 1.0 2.0
+jf @FUD_724
+if
+  $1372 == 0 // integer values
+jf @FUD_717
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+$1366 = 1 // integer values
+0084: $1369 = $1358 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_717
+jump @FUD_779
+
+:FUD_724
+if
+  $1372 == 1 // integer values
+jf @FUD_779
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere 445.66 1100.54 18.3 1.0
+$1372 = 0 // integer values
+
+:FUD_779
+jump @FUD_798
+
+:FUD_786
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+
+:FUD_798
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_1032
+if and
+   not Actor.Dead($1359)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_1020
+if
+00F6:   player $PLAYER_CHAR 0 436.75 1105.8 18.2 radius 1.0 1.0 2.0
+jf @FUD_958
+if
+  $1373 == 0 // integer values
+jf @FUD_951
+$1373 = 1 // integer values
+03BD: destroy_sphere $1382
+$1366 = 2 // integer values
+0084: $1369 = $1359 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_951
+jump @FUD_1013
+
+:FUD_958
+if
+  $1373 == 1 // integer values
+jf @FUD_1013
+03BD: destroy_sphere $1382
+03BC: $1382 = create_sphere 436.75 1105.8 18.2 1.0
+$1373 = 0 // integer values
+
+:FUD_1013
+jump @FUD_1032
+
+:FUD_1020
+$1373 = 1 // integer values
+03BD: destroy_sphere $1382
+
+:FUD_1032
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_1266
+if and
+   not Actor.Dead($1360)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_1254
+if
+00F6:   player $PLAYER_CHAR 0 434.5 1139.3 18.2 radius 1.0 1.0 2.0
+jf @FUD_1192
+if
+  $1374 == 0 // integer values
+jf @FUD_1185
+$1374 = 1 // integer values
+03BD: destroy_sphere $1383
+$1366 = 3 // integer values
+0084: $1369 = $1360 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_1185
+jump @FUD_1247
+
+:FUD_1192
+if
+  $1374 == 1 // integer values
+jf @FUD_1247
+03BD: destroy_sphere $1383
+03BC: $1383 = create_sphere 434.5 1139.3 18.2 1.0
+$1374 = 0 // integer values
+
+:FUD_1247
+jump @FUD_1266
+
+:FUD_1254
+$1374 = 1 // integer values
+03BD: destroy_sphere $1383
+
+:FUD_1266
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_1500
+if and
+   not Actor.Dead($1361)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_1488
+if
+00F6:   player $PLAYER_CHAR 0 451.24 1146.5 18.24 radius 1.0 1.0 2.0
+jf @FUD_1426
+if
+  $1375 == 0 // integer values
+jf @FUD_1419
+$1375 = 1 // integer values
+03BD: destroy_sphere $1384
+$1366 = 4 // integer values
+0084: $1369 = $1361 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_1419
+jump @FUD_1481
+
+:FUD_1426
+if
+  $1375 == 1 // integer values
+jf @FUD_1481
+03BD: destroy_sphere $1384
+03BC: $1384 = create_sphere 451.24 1146.5 18.24 1.0
+$1375 = 0 // integer values
+
+:FUD_1481
+jump @FUD_1500
+
+:FUD_1488
+$1375 = 1 // integer values
+03BD: destroy_sphere $1384
+
+:FUD_1500
+if
+  $1353 == 0 // integer values
+jf @FUD_1895
+023C: load_special_actor 20 'BURGER'
+
+:FUD_1530
+if
+823D:   not special_actor 20 loaded
+jf @FUD_1568
+wait 0
+jump @FUD_1530
+
+:FUD_1568
+$1358 = Actor.Create(CivMale, #SPECIAL20, 445.8, 1098.5, 18.25)
+Actor.Angle($1358) = 46.0
+0084: $1369 = $1358 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere 445.66 1100.54 18.3 1.0
+$1359 = Actor.Create(CivMale, #SPECIAL20, 435.46, 1104.0, 18.27)
+Actor.Angle($1359) = 350.0
+0084: $1369 = $1359 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1382
+03BC: $1382 = create_sphere 436.75 1105.8 18.2 1.0
+$1360 = Actor.Create(CivMale, #SPECIAL20, 433.0, 1140.5, 18.29)
+Actor.Angle($1360) = 215.0
+0084: $1369 = $1360 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1383
+03BC: $1383 = create_sphere 434.5 1139.3 18.2 1.0
+$1361 = Actor.Create(CivMale, #SPECIAL20, 451.4, 1148.42, 18.23)
+Actor.Angle($1361) = 173.0
+0084: $1369 = $1361 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1384
+03BC: $1384 = create_sphere 451.24 1146.5 18.24 1.0
+$1353 = 1 // integer values
+
+:FUD_1895
+jump @FUD_1909
+
+:FUD_1902
+gosub @FUD_9127
+
+:FUD_1909
+if
+  410.0 > $1392 // floating-point values
+jf @FUD_3293
+if and
+  $1354 == 1 // integer values
+  $1180 == 0 // integer values
+jf @FUD_2891
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_2189
+if and
+   not Actor.Dead($1362)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_2177
+if
+00F6:   player $PLAYER_CHAR 0 375.76 1147.7 18.6 radius 1.0 1.0 2.0
+jf @FUD_2115
+if
+  $1376 == 0 // integer values
+jf @FUD_2108
+$1376 = 1 // integer values
+03BD: destroy_sphere $1385
+$1366 = 1 // integer values
+0084: $1369 = $1362 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_2108
+jump @FUD_2170
+
+:FUD_2115
+if
+  $1376 == 1 // integer values
+jf @FUD_2170
+03BD: destroy_sphere $1385
+03BC: $1385 = create_sphere 375.76 1147.7 18.6 1.0
+$1376 = 0 // integer values
+
+:FUD_2170
+jump @FUD_2189
+
+:FUD_2177
+$1376 = 1 // integer values
+03BD: destroy_sphere $1385
+
+:FUD_2189
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_2423
+if and
+   not Actor.Dead($1363)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_2411
+if
+00F6:   player $PLAYER_CHAR 0 394.16 1139.12 18.6 radius 1.0 1.0 2.0
+jf @FUD_2349
+if
+  $1377 == 0 // integer values
+jf @FUD_2342
+$1377 = 1 // integer values
+03BD: destroy_sphere $1386
+$1366 = 2 // integer values
+0084: $1369 = $1363 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_2342
+jump @FUD_2404
+
+:FUD_2349
+if
+  $1377 == 1 // integer values
+jf @FUD_2404
+03BD: destroy_sphere $1386
+03BC: $1386 = create_sphere 394.16 1139.12 18.6 1.0
+$1377 = 0 // integer values
+
+:FUD_2404
+jump @FUD_2423
+
+:FUD_2411
+$1377 = 1 // integer values
+03BD: destroy_sphere $1386
+
+:FUD_2423
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_2657
+if and
+   not Actor.Dead($1364)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_2645
+if
+00F6:   player $PLAYER_CHAR 0 392.96 1108.7 18.55 radius 1.0 1.0 2.0
+jf @FUD_2583
+if
+  $1378 == 0 // integer values
+jf @FUD_2576
+$1378 = 1 // integer values
+03BD: destroy_sphere $1387
+$1366 = 3 // integer values
+0084: $1369 = $1364 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_2576
+jump @FUD_2638
+
+:FUD_2583
+if
+  $1378 == 1 // integer values
+jf @FUD_2638
+03BD: destroy_sphere $1387
+03BC: $1387 = create_sphere 392.96 1108.7 18.55 1.0
+$1378 = 0 // integer values
+
+:FUD_2638
+jump @FUD_2657
+
+:FUD_2645
+$1378 = 1 // integer values
+03BD: destroy_sphere $1387
+
+:FUD_2657
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_2891
+if and
+   not Actor.Dead($1365)
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+jf @FUD_2879
+if
+00F6:   player $PLAYER_CHAR 0 376.47 1101.7 18.58 radius 1.0 1.0 2.0
+jf @FUD_2817
+if
+  $1379 == 0 // integer values
+jf @FUD_2810
+$1379 = 1 // integer values
+03BD: destroy_sphere $1388
+$1366 = 4 // integer values
+0084: $1369 = $1365 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_2810
+jump @FUD_2872
+
+:FUD_2817
+if
+  $1379 == 1 // integer values
+jf @FUD_2872
+03BD: destroy_sphere $1388
+03BC: $1388 = create_sphere 376.47 1101.7 18.58 1.0
+$1379 = 0 // integer values
+
+:FUD_2872
+jump @FUD_2891
+
+:FUD_2879
+$1379 = 1 // integer values
+03BD: destroy_sphere $1388
+
+:FUD_2891
+if
+  $1354 == 0 // integer values
+jf @FUD_3286
+023C: load_special_actor 20 'BURGER'
+
+:FUD_2921
+if
+823D:   not special_actor 20 loaded
+jf @FUD_2959
+wait 0
+jump @FUD_2921
+
+:FUD_2959
+$1362 = Actor.Create(CivMale, #SPECIAL20, 375.9, 1149.7, 18.6)
+Actor.Angle($1362) = 224.0
+0084: $1369 = $1362 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1385
+03BC: $1385 = create_sphere 375.76 1147.7 18.6 1.0
+$1363 = Actor.Create(CivMale, #SPECIAL20, 395.0, 1141.2, 18.55)
+Actor.Angle($1363) = 165.0
+0084: $1369 = $1363 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1386
+03BC: $1386 = create_sphere 394.16 1139.12 18.6 1.0
+$1364 = Actor.Create(CivMale, #SPECIAL20, 394.4, 1107.6, 18.6)
+Actor.Angle($1364) = 49.0
+0084: $1369 = $1364 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1387
+03BC: $1387 = create_sphere 392.96 1108.7 18.55 1.0
+$1365 = Actor.Create(CivMale, #SPECIAL20, 375.87, 1099.75, 18.57)
+Actor.Angle($1365) = 344.0
+0084: $1369 = $1365 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1388
+03BC: $1388 = create_sphere 376.47 1101.7 18.58 1.0
+$1354 = 1 // integer values
+
+:FUD_3286
+jump @FUD_3300
+
+:FUD_3293
+gosub @FUD_9127
+
+:FUD_3300
+jump @FUD_3314
+
+:FUD_3307
+gosub @FUD_9127
+
+:FUD_3314
+jump @FUD_3328
+
+:FUD_3321
+gosub @FUD_9127
+
+:FUD_3328
+if and
+  $1380 == 2 // integer values
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_3948
+if
+0121:   player $PLAYER_CHAR in_zone 'HAITI'  // Little Haiti
+jf @FUD_3934
+$1389 = 1 // integer values
+$98 = 0.0 // floating-point values
+02CE: $98 = ground_z -1039.5 80.0 50.0
+if
+  $98 > 0.0 // floating-point values
+jf @FUD_3920
+if
+  $1355 == 0 // integer values
+jf @FUD_3654
+023C: load_special_actor 20 'BURGER'
+
+:FUD_3463
+if
+823D:   not special_actor 20 loaded
+jf @FUD_3501
+wait 0
+jump @FUD_3463
+
+:FUD_3501
+$1397 = Actor.Create(CivMale, #SPECIAL20, -1039.5, 80.0, 10.6)
+Actor.Angle($1397) = 80.0
+0084: $1369 = $1397 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere -1041.3 80.45 10.6 1.0
+if
+   Model.Available(#HNB)
+jf @FUD_3647
+$1398 = Actor.Create(CivMale, #HNB, -1036.2, 77.5, 10.6)
+Actor.Angle($1398) = 190.0
+01ED: clear_actor $1398 threat_search
+0372: set_actor $1398 anim 6 wait_state_time 999999 ms
+
+:FUD_3647
+$1355 = 1 // integer values
+
+:FUD_3654
+if and
+  $1355 == 1 // integer values
+  $1180 == 0 // integer values
+jf @FUD_3913
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_3913
+if and
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+   not Actor.Dead($1397)
+jf @FUD_3901
+if
+00F6:   player $PLAYER_CHAR 0 -1041.3 80.45 10.6 radius 1.0 1.0 2.0
+jf @FUD_3839
+if
+  $1372 == 0 // integer values
+jf @FUD_3832
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+$1366 = 2 // integer values
+0084: $1369 = $1397 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_3832
+jump @FUD_3894
+
+:FUD_3839
+if
+  $1372 == 1 // integer values
+jf @FUD_3894
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere -1041.3 80.45 10.6 1.0
+$1372 = 0 // integer values
+
+:FUD_3894
+jump @FUD_3913
+
+:FUD_3901
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+
+:FUD_3913
+jump @FUD_3927
+
+:FUD_3920
+gosub @FUD_9127
+
+:FUD_3927
+jump @FUD_3948
+
+:FUD_3934
+$1389 = 0 // integer values
+gosub @FUD_9127
+
+:FUD_3948
+if and
+  $1380 == 1 // integer values
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_4721
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @FUD_4677
+$1390 = 1 // integer values
+$98 = 0.0 // floating-point values
+02CE: $98 = ground_z -591.4 651.23 10.5
+if
+  $98 > 0.0 // floating-point values
+jf @FUD_4161
+if
+   Model.Available(#BKA)
+jf @FUD_4154
+if
+  $1400 == 0 // integer values
+jf @FUD_4154
+$1399 = Actor.Create(CivMale, #BKA, -591.4, 651.23, 10.5)
+Actor.Angle($1399) = 25.0
+Actor.Health($1399) = 150
+01ED: clear_actor $1399 threat_search
+0291: set_actor $1399 attack_when_provoked 1
+0243: set_actor $1399 ped_stats_to 11
+$1400 = 1 // integer values
+
+:FUD_4154
+jump @FUD_4191
+
+:FUD_4161
+if
+  $1400 == 1 // integer values
+jf @FUD_4191
+Actor.DestroyInstantly($1399)
+$1400 = 0 // integer values
+
+:FUD_4191
+$98 = 0.0 // floating-point values
+02CE: $98 = ground_z -904.7 800.4 10.5
+if
+  $98 > 0.0 // floating-point values
+jf @FUD_4663
+if
+  $1356 == 0 // integer values
+jf @FUD_4397
+023C: load_special_actor 20 'BURGER'
+
+:FUD_4272
+if
+823D:   not special_actor 20 loaded
+jf @FUD_4310
+wait 0
+jump @FUD_4272
+
+:FUD_4310
+$1396 = Actor.Create(CivMale, #SPECIAL20, -904.7, 800.4, 10.5)
+Actor.Angle($1396) = 270.0
+0084: $1369 = $1396 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere -903.0 800.3 10.5 1.0
+$1356 = 1 // integer values
+
+:FUD_4397
+if and
+  $1356 == 1 // integer values
+  $1180 == 0 // integer values
+jf @FUD_4656
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_4656
+if and
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+   not Actor.Dead($1396)
+jf @FUD_4644
+if
+00F6:   player $PLAYER_CHAR 0 -903.0 800.3 10.5 radius 1.0 1.0 2.0
+jf @FUD_4582
+if
+  $1372 == 0 // integer values
+jf @FUD_4575
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+$1366 = 2 // integer values
+0084: $1369 = $1396 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_4575
+jump @FUD_4637
+
+:FUD_4582
+if
+  $1372 == 1 // integer values
+jf @FUD_4637
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere -903.0 800.3 10.5 1.0
+$1372 = 0 // integer values
+
+:FUD_4637
+jump @FUD_4656
+
+:FUD_4644
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+
+:FUD_4656
+jump @FUD_4670
+
+:FUD_4663
+gosub @FUD_9127
+
+:FUD_4670
+jump @FUD_4721
+
+:FUD_4677
+if
+  $1400 == 1 // integer values
+jf @FUD_4707
+Actor.DestroyInstantly($1399)
+$1400 = 0 // integer values
+
+:FUD_4707
+$1390 = 0 // integer values
+gosub @FUD_9127
+
+:FUD_4721
+if and
+  $1380 == 2 // integer values
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_5275
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @FUD_5261
+$1391 = 1 // integer values
+$98 = 0.0 // floating-point values
+02CE: $98 = ground_z 419.4 89.7 50.0
+if
+  $98 > 0.0 // floating-point values
+jf @FUD_5247
+if
+  $1357 == 0 // integer values
+jf @FUD_4981
+023C: load_special_actor 20 'BURGER'
+
+:FUD_4856
+if
+823D:   not special_actor 20 loaded
+jf @FUD_4894
+wait 0
+jump @FUD_4856
+
+:FUD_4894
+$1395 = Actor.Create(CivMale, #SPECIAL20, 419.4, 89.7, 10.3)
+Actor.Angle($1395) = 250.0
+0084: $1369 = $1395 // integer values and handles
+gosub @FUD_5321
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere 421.1 88.8 10.5 1.0
+$1357 = 1 // integer values
+
+:FUD_4981
+if and
+  $1357 == 1 // integer values
+  $1180 == 0 // integer values
+jf @FUD_5240
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_5240
+if and
+   Player.Money($PLAYER_CHAR) > 0
+8183:   not player $PLAYER_CHAR health > 1@
+   not Actor.Dead($1395)
+jf @FUD_5228
+if
+00F6:   player $PLAYER_CHAR 0 421.1 88.8 10.5 radius 1.0 1.0 2.0
+jf @FUD_5166
+if
+  $1372 == 0 // integer values
+jf @FUD_5159
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+$1366 = 2 // integer values
+0084: $1369 = $1395 // integer values and handles
+gosub @FUD_5362
+jump @FUD_407
+
+:FUD_5159
+jump @FUD_5221
+
+:FUD_5166
+if
+  $1372 == 1 // integer values
+jf @FUD_5221
+03BD: destroy_sphere $1381
+03BC: $1381 = create_sphere 421.1 88.8 10.5 1.0
+$1372 = 0 // integer values
+
+:FUD_5221
+jump @FUD_5240
+
+:FUD_5228
+$1372 = 1 // integer values
+03BD: destroy_sphere $1381
+
+:FUD_5240
+jump @FUD_5254
+
+:FUD_5247
+gosub @FUD_9127
+
+:FUD_5254
+jump @FUD_5275
+
+:FUD_5261
+$1391 = 0 // integer values
+gosub @FUD_9127
+
+:FUD_5275
+jump @FUD_5289
+
+:FUD_5282
+gosub @FUD_9127
+
+:FUD_5289
+if
+  $1380 > 1 // integer values
+jf @FUD_5314
+$1380 = 0 // integer values
+
+:FUD_5314
+jump @FUD_407
+
+:FUD_5321
+01ED: clear_actor $1369 threat_search
+011A: set_actor $1369 search_threat 1048576
+011A: set_actor $1369 search_threat 8388608
+056B:  $1369 1
+0350: set_actor $1369 maintain_position_when_attacked 1
+return
+
+:FUD_5362
+$1180 = 1 // integer values
+if
+   not Actor.Dead($1369)
+jf @FUD_5438
+gosub @FUD_5447
+if
+  $ONMISSION == 0 // integer values
+jf @FUD_5424
+gosub @FUD_5533
+gosub @FUD_6225
+
+:FUD_5424
+gosub @FUD_9012
+gosub @FUD_5501
+
+:FUD_5438
+$1180 = 0 // integer values
+return
+
+:FUD_5447
+if and
+   Player.Defined($PLAYER_CHAR)
+   not Actor.Dead($1369)
+jf @FUD_5497
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+020E: actor $PLAYER_ACTOR look_at_actor $1369
+jump @FUD_5499
+
+:FUD_5497
+return
+
+:FUD_5499
+return
+
+:FUD_5501
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_5531
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+
+:FUD_5531
+return
+
+:FUD_5533
+if and
+   Player.Defined($PLAYER_CHAR)
+   not Actor.Dead($1369)
+jf @FUD_6223
+0209: $1367 = random_int_in_ranges 0 15
+if
+  $1367 == 0 // integer values
+jf @FUD_5607
+03CF: load_wav 'GIMME01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5607
+if
+  $1367 == 1 // integer values
+jf @FUD_5651
+03CF: load_wav 'GIMME02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5651
+if
+  $1367 == 2 // integer values
+jf @FUD_5695
+03CF: load_wav 'GIMME03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5695
+if
+  $1367 == 3 // integer values
+jf @FUD_5739
+03CF: load_wav 'GIMME04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5739
+if
+  $1367 == 4 // integer values
+jf @FUD_5783
+03CF: load_wav 'GIMME05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5783
+if
+  $1367 == 5 // integer values
+jf @FUD_5827
+03CF: load_wav 'GIMME06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5827
+if
+  $1367 == 6 // integer values
+jf @FUD_5871
+03CF: load_wav 'GIMME07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5871
+if
+  $1367 == 7 // integer values
+jf @FUD_5915
+03CF: load_wav 'GIMME08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5915
+if
+  $1367 == 8 // integer values
+jf @FUD_5959
+03CF: load_wav 'GIMME09' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_5959
+if
+  $1367 == 9 // integer values
+jf @FUD_6003
+03CF: load_wav 'GIMME10' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6003
+if
+  $1367 == 10 // integer values
+jf @FUD_6047
+03CF: load_wav 'GIMME11' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6047
+if
+  $1367 == 11 // integer values
+jf @FUD_6091
+03CF: load_wav 'GIMME12' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6091
+if
+  $1367 == 12 // integer values
+jf @FUD_6135
+03CF: load_wav 'GIMME13' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6135
+if
+  $1367 == 13 // integer values
+jf @FUD_6179
+03CF: load_wav 'GIMME14' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6179
+if
+  $1367 == 14 // integer values
+jf @FUD_6223
+03CF: load_wav 'GIMME15' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6223
+return
+
+:FUD_6225
+if and
+   Player.Defined($PLAYER_CHAR)
+   not Actor.Dead($1369)
+  $ONMISSION == 0 // integer values
+jf @FUD_8912
+0209: $1368 = random_int_in_ranges 0 30
+if
+  11 > $1368 // integer values
+jf @FUD_8023
+if
+  $1366 == 1 // integer values
+jf @FUD_6835
+0209: $1368 = random_int_in_ranges 0 12
+if
+  $1368 == 0 // integer values
+jf @FUD_6351
+03CF: load_wav 'BURG_01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6351
+if
+  $1368 == 1 // integer values
+jf @FUD_6395
+03CF: load_wav 'BURG_02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6395
+if
+  $1368 == 2 // integer values
+jf @FUD_6439
+03CF: load_wav 'BURG_03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6439
+if
+  $1368 == 3 // integer values
+jf @FUD_6483
+03CF: load_wav 'BURG_04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6483
+if
+  $1368 == 4 // integer values
+jf @FUD_6527
+03CF: load_wav 'BURG_05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6527
+if
+  $1368 == 5 // integer values
+jf @FUD_6571
+03CF: load_wav 'BURG_06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6571
+if
+  $1368 == 6 // integer values
+jf @FUD_6615
+03CF: load_wav 'BURG_07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6615
+if
+  $1368 == 7 // integer values
+jf @FUD_6659
+03CF: load_wav 'BURG_08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6659
+if
+  $1368 == 8 // integer values
+jf @FUD_6703
+03CF: load_wav 'BURG_09' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6703
+if
+  $1368 == 9 // integer values
+jf @FUD_6747
+03CF: load_wav 'BURG_10' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6747
+if
+  $1368 == 10 // integer values
+jf @FUD_6791
+03CF: load_wav 'BURG_11' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6791
+if
+  $1368 == 11 // integer values
+jf @FUD_6835
+03CF: load_wav 'BURG_12' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6835
+if
+  $1366 == 2 // integer values
+jf @FUD_7258
+0209: $1368 = random_int_in_ranges 0 9
+if
+  $1368 == 0 // integer values
+jf @FUD_6906
+03CF: load_wav 'CRUST01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6906
+if
+  $1368 == 1 // integer values
+jf @FUD_6950
+03CF: load_wav 'CRUST02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6950
+if
+  $1368 == 2 // integer values
+jf @FUD_6994
+03CF: load_wav 'CRUST03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_6994
+if
+  $1368 == 3 // integer values
+jf @FUD_7038
+03CF: load_wav 'CRUST04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7038
+if
+  $1368 == 4 // integer values
+jf @FUD_7082
+03CF: load_wav 'CRUST05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7082
+if
+  $1368 == 5 // integer values
+jf @FUD_7126
+03CF: load_wav 'CRUST06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7126
+if
+  $1368 == 6 // integer values
+jf @FUD_7170
+03CF: load_wav 'CRUST07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7170
+if
+  $1368 == 7 // integer values
+jf @FUD_7214
+03CF: load_wav 'CRUST08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7214
+if
+  $1368 == 8 // integer values
+jf @FUD_7258
+03CF: load_wav 'CRUST09' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7258
+if
+  $1366 == 3 // integer values
+jf @FUD_7637
+0209: $1368 = random_int_in_ranges 0 8
+if
+  $1368 == 0 // integer values
+jf @FUD_7329
+03CF: load_wav 'SHAFT01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7329
+if
+  $1368 == 1 // integer values
+jf @FUD_7373
+03CF: load_wav 'SHAFT02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7373
+if
+  $1368 == 2 // integer values
+jf @FUD_7417
+03CF: load_wav 'SHAFT03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7417
+if
+  $1368 == 3 // integer values
+jf @FUD_7461
+03CF: load_wav 'SHAFT04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7461
+if
+  $1368 == 4 // integer values
+jf @FUD_7505
+03CF: load_wav 'SHAFT05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7505
+if
+  $1368 == 5 // integer values
+jf @FUD_7549
+03CF: load_wav 'SHAFT06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7549
+if
+  $1368 == 6 // integer values
+jf @FUD_7593
+03CF: load_wav 'SHAFT07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7593
+if
+  $1368 == 7 // integer values
+jf @FUD_7637
+03CF: load_wav 'SHAFT08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7637
+if
+  $1366 == 4 // integer values
+jf @FUD_8016
+0209: $1368 = random_int_in_ranges 0 8
+if
+  $1368 == 0 // integer values
+jf @FUD_7708
+03CF: load_wav 'BAND_01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7708
+if
+  $1368 == 1 // integer values
+jf @FUD_7752
+03CF: load_wav 'BAND_02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7752
+if
+  $1368 == 2 // integer values
+jf @FUD_7796
+03CF: load_wav 'BAND_03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7796
+if
+  $1368 == 3 // integer values
+jf @FUD_7840
+03CF: load_wav 'BAND_04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7840
+if
+  $1368 == 4 // integer values
+jf @FUD_7884
+03CF: load_wav 'BAND_05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7884
+if
+  $1368 == 5 // integer values
+jf @FUD_7928
+03CF: load_wav 'BAND_06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7928
+if
+  $1368 == 6 // integer values
+jf @FUD_7972
+03CF: load_wav 'BAND_07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_7972
+if
+  $1368 == 7 // integer values
+jf @FUD_8016
+03CF: load_wav 'BAND_08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8016
+jump @FUD_8912
+
+:FUD_8023
+0209: $1368 = random_int_in_ranges 0 20
+if
+  $1368 == 0 // integer values
+jf @FUD_8076
+03CF: load_wav 'FUD_01' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8076
+if
+  $1368 == 1 // integer values
+jf @FUD_8120
+03CF: load_wav 'FUD_02' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8120
+if
+  $1368 == 2 // integer values
+jf @FUD_8164
+03CF: load_wav 'FUD_03' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8164
+if
+  $1368 == 3 // integer values
+jf @FUD_8208
+03CF: load_wav 'FUD_04' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8208
+if
+  $1368 == 4 // integer values
+jf @FUD_8252
+03CF: load_wav 'FUD_05' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8252
+if
+  $1368 == 5 // integer values
+jf @FUD_8296
+03CF: load_wav 'FUD_06' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8296
+if
+  $1368 == 6 // integer values
+jf @FUD_8340
+03CF: load_wav 'FUD_07' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8340
+if
+  $1368 == 7 // integer values
+jf @FUD_8384
+03CF: load_wav 'FUD_08' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8384
+if
+  $1368 == 8 // integer values
+jf @FUD_8428
+03CF: load_wav 'FUD_09' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8428
+if
+  $1368 == 9 // integer values
+jf @FUD_8472
+03CF: load_wav 'FUD_10' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8472
+if
+  $1368 == 10 // integer values
+jf @FUD_8516
+03CF: load_wav 'FUD_11' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8516
+if
+  $1368 == 11 // integer values
+jf @FUD_8560
+03CF: load_wav 'FUD_12' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8560
+if
+  $1368 == 12 // integer values
+jf @FUD_8604
+03CF: load_wav 'FUD_13' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8604
+if
+  $1368 == 13 // integer values
+jf @FUD_8648
+03CF: load_wav 'FUD_14' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8648
+if
+  $1368 == 14 // integer values
+jf @FUD_8692
+03CF: load_wav 'FUD_15' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8692
+if
+  $1368 == 15 // integer values
+jf @FUD_8736
+03CF: load_wav 'FUD_16' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8736
+if
+  $1368 == 16 // integer values
+jf @FUD_8780
+03CF: load_wav 'FUD_17' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8780
+if
+  $1368 == 17 // integer values
+jf @FUD_8824
+03CF: load_wav 'FUD_18' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8824
+if
+  $1368 == 18 // integer values
+jf @FUD_8868
+03CF: load_wav 'FUD_19' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8868
+if
+  $1368 == 19 // integer values
+jf @FUD_8912
+03CF: load_wav 'FUD_20' as 2
+gosub @FUD_8914
+gosub @FUD_8964
+
+:FUD_8912
+return
+
+:FUD_8914
+if
+83D0:   not wav 2 loaded
+jf @FUD_8958
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @FUD_8951
+return
+
+:FUD_8951
+jump @FUD_8914
+
+:FUD_8958
+03D1: play_wav 2
+return
+
+:FUD_8964
+if
+83D2:   not wav 2 ended
+jf @FUD_9008
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @FUD_9001
+return
+
+:FUD_9001
+jump @FUD_8964
+
+:FUD_9008
+00BE: text_clear_all
+return
+
+:FUD_9012
+if and
+   Player.Defined($PLAYER_CHAR)
+   not Actor.Dead($1369)
+jf @FUD_9125
+0225: $1370 = player $PLAYER_CHAR health
+$1370 *= -1 // integer values
+0058: $1370 += 0@ // integer values
+$1371 = Player.Money($PLAYER_CHAR)
+if
+001C:   $1370 > $1371 // integer values
+jf @FUD_9090
+0084: $1370 = $1371 // integer values and handles
+
+:FUD_9090
+$1370 *= -1 // integer values
+Player.Money($PLAYER_CHAR) += $1370
+0222: set_player $PLAYER_CHAR health_to 200
+018C: play_sound 1 at $1392 $1393 $1394
+
+:FUD_9125
+return
+
+:FUD_9127
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FUD_9164
+0054: store_player $PLAYER_CHAR position_to $1392 $1393 $1394
+jump @FUD_9206
+
+:FUD_9164
+gosub @FUD_9545
+$1353 = 0 // integer values
+$1354 = 0 // integer values
+$1355 = 0 // integer values
+$1356 = 0 // integer values
+$1357 = 0 // integer values
+
+:FUD_9206
+if
+  $1353 == 1 // integer values
+jf @FUD_9303
+if or
+  410.0 > $1392 // floating-point values
+  $1003 == 0 // integer values
+jf @FUD_9303
+Actor.DestroyInstantly($1358)
+Actor.DestroyInstantly($1359)
+Actor.DestroyInstantly($1360)
+Actor.DestroyInstantly($1361)
+03BD: destroy_sphere $1381
+03BD: destroy_sphere $1382
+03BD: destroy_sphere $1383
+03BD: destroy_sphere $1384
+0296: unload_special_actor 20
+$1353 = 0 // integer values
+
+:FUD_9303
+if
+  $1354 == 1 // integer values
+jf @FUD_9400
+if or
+  $1392 > 415.0 // floating-point values
+  $1003 == 0 // integer values
+jf @FUD_9400
+Actor.DestroyInstantly($1362)
+Actor.DestroyInstantly($1363)
+Actor.DestroyInstantly($1364)
+Actor.DestroyInstantly($1365)
+03BD: destroy_sphere $1385
+03BD: destroy_sphere $1386
+03BD: destroy_sphere $1387
+03BD: destroy_sphere $1388
+0296: unload_special_actor 20
+$1354 = 0 // integer values
+
+:FUD_9400
+if and
+  $1355 == 1 // integer values
+  $1389 == 0 // integer values
+jf @FUD_9451
+Actor.DestroyInstantly($1397)
+Actor.DestroyInstantly($1398)
+0296: unload_special_actor 20
+03BD: destroy_sphere $1381
+$1355 = 0 // integer values
+
+:FUD_9451
+if and
+  $1356 == 1 // integer values
+  $1390 == 0 // integer values
+jf @FUD_9497
+Actor.DestroyInstantly($1396)
+0296: unload_special_actor 20
+03BD: destroy_sphere $1381
+$1356 = 0 // integer values
+
+:FUD_9497
+if and
+  $1357 == 1 // integer values
+  $1391 == 0 // integer values
+jf @FUD_9543
+Actor.DestroyInstantly($1395)
+0296: unload_special_actor 20
+03BD: destroy_sphere $1381
+$1357 = 0 // integer values
+
+:FUD_9543
+return
+
+:FUD_9545
+Actor.DestroyInstantly($1358)
+Actor.DestroyInstantly($1359)
+Actor.DestroyInstantly($1360)
+Actor.DestroyInstantly($1361)
+Actor.DestroyInstantly($1362)
+Actor.DestroyInstantly($1363)
+Actor.DestroyInstantly($1364)
+Actor.DestroyInstantly($1365)
+Actor.DestroyInstantly($1395)
+Actor.DestroyInstantly($1396)
+Actor.DestroyInstantly($1397)
+Actor.DestroyInstantly($1398)
+03BD: destroy_sphere $1381
+03BD: destroy_sphere $1382
+03BD: destroy_sphere $1383
+03BD: destroy_sphere $1384
+03BD: destroy_sphere $1385
+03BD: destroy_sphere $1386
+03BD: destroy_sphere $1387
+03BD: destroy_sphere $1388
+0296: unload_special_actor 20
+return

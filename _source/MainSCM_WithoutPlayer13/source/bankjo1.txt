@@ -1,0 +1,4036 @@
+:BANKJO1
+thread 'BANKJO1'
+gosub @BANKJO1_46
+if
+wasted_or_busted
+jf @BANKJO1_37
+gosub @BANKJO1_7635
+
+:BANKJO1_37
+gosub @BANKJO1_7718
+end_thread
+
+:BANKJO1_46
+$ONMISSION = 1 // integer values
+$986 = 0 // integer values
+$997 = 1 // integer values
+increment_mission_attempts
+$3511 = 0 // integer values
+$3513 = 0 // integer values
+$3514 = 0 // integer values
+$3515 = 0 // integer values
+$3518 = 0 // integer values
+$3519 = 0 // integer values
+$3520 = 0 // integer values
+$3521 = 0 // integer values
+$3522 = 0 // integer values
+$3523 = 0 // integer values
+$3524 = 0 // integer values
+$3525 = 0 // integer values
+$3526 = 0 // integer values
+$3527 = 100 // integer values
+$3529 = 0 // integer values
+$3530 = 0 // integer values
+$3531 = 0 // integer values
+$3532 = 0 // integer values
+$3533 = 0 // integer values
+$3534 = 0 // integer values
+$3535 = 0 // integer values
+$3536 = 0 // integer values
+$3537 = 0 // integer values
+$3538 = 100 // integer values
+$3540 = 0 // integer values
+$3541 = 0 // integer values
+$3542 = 0 // integer values
+$3543 = 0 // integer values
+$3544 = 0 // integer values
+$3545 = 0 // integer values
+$3546 = 0 // integer values
+$3547 = 0 // integer values
+$3548 = 0 // integer values
+$3549 = 100 // integer values
+$3551 = 0 // integer values
+$3552 = 0 // integer values
+$3553 = 0 // integer values
+$3554 = 0 // integer values
+$3555 = 0 // integer values
+$3556 = 0 // integer values
+$3557 = 0 // integer values
+$3558 = 0 // integer values
+$3559 = 0 // integer values
+$3560 = 100 // integer values
+$3562 = 0 // integer values
+$3563 = 0 // integer values
+$3564 = 100 // integer values
+$3566 = 0 // integer values
+$3567 = 0 // integer values
+$3568 = 0 // integer values
+$3569 = 0 // integer values
+$3570 = 0 // integer values
+$3571 = 0 // integer values
+$3572 = 0 // integer values
+$3573 = 0 // integer values
+$3574 = 0 // integer values
+$3575 = 100 // integer values
+$3577 = 0 // integer values
+$3578 = 0 // integer values
+$3579 = 100 // integer values
+$3580 = 0 // integer values
+$3582 = 0 // integer values
+$3583 = 0 // integer values
+$3584 = 100 // integer values
+$3586 = 0 // integer values
+$3587 = 0 // integer values
+$3588 = 100 // integer values
+$3590 = 0 // integer values
+$3591 = 0 // integer values
+$3592 = 100 // integer values
+$3594 = 0 // integer values
+$3595 = 0 // integer values
+$3596 = 100 // integer values
+$3597 = 0 // integer values
+$3598 = 0 // integer values
+$3599 = 0 // integer values
+$3600 = 0.0 // floating-point values
+$3601 = 0.0 // floating-point values
+$3602 = 0.0 // floating-point values
+$3606 = 0 // integer values
+$3607 = 0 // integer values
+$3608 = 0 // integer values
+$3609 = 0 // integer values
+$3610 = 0 // integer values
+$3611 = 0 // integer values
+$3612 = 0 // integer values
+$3613 = 0 // integer values
+$3631 = 0 // integer values
+$3632 = 0 // integer values
+$3633 = 0 // integer values
+$3615 = 0 // integer values
+$3617 = 0 // integer values
+$3619 = 0 // integer values
+$3621 = 0 // integer values
+$3623 = 0 // integer values
+$3625 = 0 // integer values
+$3627 = 0 // integer values
+$3629 = 0 // integer values
+$3630 = 0 // integer values
+$3634 = 0 // integer values
+$3635 = 0 // integer values
+$3643 = 0 // integer values
+$3638 = 0 // integer values
+$3639 = 0 // integer values
+$3640 = 0 // integer values
+$3641 = 0 // integer values
+$3642 = 0 // integer values
+$3644 = 1 // integer values
+$3645 = 1 // integer values
+$3646 = 1 // integer values
+$3647 = 1 // integer values
+$3648 = 1 // integer values
+$3649 = 1 // integer values
+$3650 = 1 // integer values
+$3651 = 1 // integer values
+$3652 = 0 // integer values
+$3654 = 0 // integer values
+$3655 = 0 // integer values
+$3656 = 0 // integer values
+$3657 = 0 // integer values
+$3658 = 0 // integer values
+$3659 = 0 // integer values
+$3660 = 0 // integer values
+$3661 = 0 // integer values
+$3662 = 0 // integer values
+$3663 = 0 // integer values
+$3666 = 0 // integer values
+$3668 = 0 // integer values
+$3671 = 0 // integer values
+$3673 = 0 // integer values
+wait 0
+054C: use_GXT_table 'BANKJ1'
+058E: set_restart_mission_taxi_destination 512.591 -74.9 9.573 189.24
+Pickup.Destroy($1297)
+Pickup.Destroy($1298)
+Pickup.Destroy($1284)
+Pickup.Destroy($1285)
+Pickup.Destroy($1286)
+Pickup.Destroy($1287)
+Pickup.Destroy($1288)
+Pickup.Destroy($1289)
+Pickup.Destroy($1290)
+Pickup.Destroy($1291)
+Pickup.Destroy($1292)
+Pickup.Destroy($1296)
+Pickup.Destroy($2009)
+022B: create_forbidden_for_peds_cube 371.0 -503.0 -10.0 403.0 -490.0 30.0
+022B: create_forbidden_for_peds_cube 357.0 -506.0 -10.0 384.0 -475.0 30.0
+022B: create_forbidden_for_peds_cube 363.0 -476.0 -10.0 378.0 -468.0 30.0
+022B: create_forbidden_for_peds_cube 383.0 -488.0 -10.0 398.3 -470.5 30.0
+022B: create_forbidden_for_peds_cube 376.66 -453.85 -10.0 328.91 -504.02 30.0
+018D: $3665 = create_sound 0 at 385.49 -509.0 9.6
+018E: stop_sound $3665
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_1328
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_1328
+
+:BANKJO1_1328
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKEN'
+02F3: load_object #CUTOBJ01 'GCFAN'
+02F3: load_object #CUTOBJ02 'CLCHR'
+select_interior 17
+Camera.SetAtPos(481.03, -64.21, 8.98)
+038B: load_requested_models
+
+:BANKJO1_1401
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @BANKJO1_1441
+wait 0
+jump @BANKJO1_1401
+
+:BANKJO1_1441
+02E4: load_cutscene_data 'BANK_1'
+0244: set_cutscene_pos 476.972 -65.499 8.943
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $189 = create_cutscene_object #CUTOBJ01
+04BC:  'GCFAN'
+02E6: set_cutscene_anim $189 'GCFAN'
+02E5: $190 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $190 'CLCHR'
+0395: clear_area 1 at 493.1 -82.4 range 9.8 1.0
+0055: put_player $PLAYER_CHAR at 493.1 -82.4 9.8
+0171: set_player $PLAYER_CHAR z_angle_to 220.0
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BANKJO1_1643
+if
+  9500 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1678
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1643
+
+:BANKJO1_1678
+00BC: text_highpriority 'BJM1_A' 10000 ms 1  // Tommy! Hey, Tommy, look at this, this is great! I've got us this minibar installed!
+
+:BANKJO1_1693
+if
+  13934 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1728
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1693
+
+:BANKJO1_1728
+00BC: text_highpriority 'BJM1_B' 10000 ms 1  // We got a whole bar downstairs, Ken.
+
+:BANKJO1_1743
+if
+  17483 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1778
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1743
+
+:BANKJO1_1778
+00BC: text_highpriority 'BJM1_C' 10000 ms 1  // Yeah, yeah, whatever. Well, I got the chalkboard you asked for.
+
+:BANKJO1_1793
+if
+  20276 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1828
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1793
+
+:BANKJO1_1828
+00BC: text_highpriority 'BJM1_D' 10000 ms 1  // Ah, that's the benefit of a law school education: the ability to follow instructions.
+
+:BANKJO1_1843
+if
+  25517 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1878
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1843
+
+:BANKJO1_1878
+00BC: text_highpriority 'BJM1_E' 10000 ms 1  // Now, I need a safe man.
+
+:BANKJO1_1893
+if
+  27000 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1928
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1893
+
+:BANKJO1_1928
+00BC: text_highpriority 'BJM1_F' 10000 ms 1  // Oh, all right, well, let me think...safe, safe, safe, safe - I got it! This guy will blow you away!
+
+:BANKJO1_1943
+if
+  33662 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_1980
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1943
+
+:BANKJO1_1980
+00BC: text_highpriority 'BJM1_G' 10000 ms 1  // Ahh, nah, that schmuck. He's on the inside.
+
+:BANKJO1_1995
+if
+  36542 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_2032
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_1995
+
+:BANKJO1_2032
+00BC: text_highpriority 'BJM1_H' 10000 ms 1  // Where inside?
+
+:BANKJO1_2047
+if
+  38100 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_2084
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_2047
+
+:BANKJO1_2084
+00BC: text_highpriority 'BJM1_I' 10000 ms 1  // In a police headquarter cell awaiting transfer.
+
+:BANKJO1_2099
+if
+  40677 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_2136
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_2099
+
+:BANKJO1_2136
+00BC: text_highpriority 'BJM1_J' 10000 ms 1  // I think he's about to get paroled....
+
+:BANKJO1_2151
+if
+  43072 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_2188
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_2151
+
+:BANKJO1_2188
+00BE: text_clear_all
+
+:BANKJO1_2190
+if
+  47316 > $CUT_SCENE_TIME // integer values
+jf @BANKJO1_2227
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO1_2190
+
+:BANKJO1_2227
+00BE: text_clear_all
+fade 0 2000
+
+:BANKJO1_2236
+if
+fading
+jf @BANKJO1_2260
+wait 0
+jump @BANKJO1_2236
+
+:BANKJO1_2260
+00BA: text_styled 'BEACH3' 3000 ms 2  // Vice Point
+04FA: reset_sky_colors_with_fade 0
+03AD: set_rubbish 1
+02EA: end_cutscene
+01EB: set_traffic_density_multiplier_to 1.0
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Camera.SetBehindPlayer
+select_interior 0
+Camera.SetAtPos(493.1, -82.4, 9.8)
+$986 = 0 // integer values
+04E3: unknown_player $PLAYER_CHAR 0 60000
+if
+8366:   not object $1809 damaged
+jf @BANKJO1_2388
+01BC: put_object $1809 at 384.098 -505.893 9.68
+
+:BANKJO1_2388
+018A: $3516 = create_checkpoint_at -848.02 -901.72 10.1
+Marker.Disable($3516)
+03BC: $3637 = create_sphere 385.13 -509.0 8.0 1.0
+03BD: destroy_sphere $3637
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 2000
+Model.Load(#COP)
+023C: load_special_actor 3 'IGMIKE'
+04ED: load_animation 'LANCE'
+Model.Load(#UZI)
+Model.Load(#SENTINEL)
+
+:BANKJO1_2489
+if or
+   not Model.Available(#COP)
+   not Model.Available(#UZI)
+823D:   not special_actor 3 loaded
+84EE:   not animation 'LANCE' loaded
+   not Model.Available(#SENTINEL)
+jf @BANKJO1_2529
+wait 0
+jump @BANKJO1_2489
+
+:BANKJO1_2529
+$3670 = Pickup.Create(#HEALTH, 3, 366.9, -491.8, 13.5)
+$3510 = Actor.Create(CivMale, #SPECIAL03, 381.528, -504.34, 8.4)
+01ED: clear_actor $3510 threat_search
+Actor.Angle($3510) = 132.535
+04F5: unknown_actor $3510 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $3510 dismemberment_possible 0
+0568: set_actor $3510 untargetable 1
+0372: set_actor $3510 anim 21 wait_state_time 1000000 ms
+00BC: text_highpriority 'BJM1_1' 4000 ms 1  // ~g~Break Cam Jones out of police custody!
+$3512 = Marker.CreateAboveActor($3510)
+$3517 = Actor.Create(CivMale, #COP, 388.3, -473.9, 11.34)
+$3632 += 1 // integer values
+0243: set_actor $3517 ped_stats_to 16
+01ED: clear_actor $3517 threat_search
+Actor.Angle($3517) = 217.58
+0350: set_actor $3517 maintain_position_when_attacked 1
+0194: set_actor $3517 objective_to_guard_point 388.3 -473.9 11.34
+$3528 = Actor.Create(CivMale, #COP, 387.58, -471.051, 11.35)
+$3632 += 1 // integer values
+0243: set_actor $3528 ped_stats_to 16
+01ED: clear_actor $3528 threat_search
+0350: set_actor $3528 maintain_position_when_attacked 1
+Actor.Angle($3528) = 352.371
+0372: set_actor $3528 anim 21 wait_state_time 1000000 ms
+$3539 = Actor.Create(CivMale, #COP, 384.196, -472.554, 11.35)
+$3632 += 1 // integer values
+0243: set_actor $3539 ped_stats_to 16
+01ED: clear_actor $3539 threat_search
+0350: set_actor $3539 maintain_position_when_attacked 1
+Actor.Angle($3539) = 105.497
+0372: set_actor $3539 anim 21 wait_state_time 1000000 ms
+$3550 = Actor.Create(CivMale, #COP, 363.709, -475.485, 12.83)
+$3632 += 1 // integer values
+0243: set_actor $3550 ped_stats_to 16
+01ED: clear_actor $3550 threat_search
+0350: set_actor $3550 maintain_position_when_attacked 1
+Actor.Angle($3550) = 11.32
+0372: set_actor $3550 anim 21 wait_state_time 1000000 ms
+$3561 = Actor.Create(CivMale, #COP, 362.483, -485.782, 12.83)
+$3632 += 1 // integer values
+0243: set_actor $3561 ped_stats_to 16
+01ED: clear_actor $3561 threat_search
+0350: set_actor $3561 maintain_position_when_attacked 1
+Actor.Angle($3561) = 137.47
+0372: set_actor $3561 anim 21 wait_state_time 1000000 ms
+$3565 = Actor.Create(CivMale, #COP, 400.053, -493.559, 9.87)
+$3632 += 0 // integer values
+018D: $865 = create_sound 6 at 400.053 -493.559 9.87
+01ED: clear_actor $3565 threat_search
+0350: set_actor $3565 maintain_position_when_attacked 1
+Actor.Angle($3565) = 326.965
+0372: set_actor $3565 anim 34 wait_state_time 1000 ms
+$3581 = Actor.Create(CivMale, #COP, 360.686, -487.4, 12.8)
+$3632 += 1 // integer values
+0243: set_actor $3581 ped_stats_to 16
+01ED: clear_actor $3581 threat_search
+0350: set_actor $3581 maintain_position_when_attacked 1
+Actor.Angle($3581) = 289.756
+0372: set_actor $3581 anim 21 wait_state_time 1000000 ms
+$3585 = Actor.Create(CivMale, #COP, 369.358, -477.192, 12.83)
+$3632 += 1 // integer values
+0243: set_actor $3585 ped_stats_to 16
+01ED: clear_actor $3585 threat_search
+Actor.Angle($3585) = 168.022
+0372: set_actor $3585 anim 21 wait_state_time 1000000 ms
+$3589 = Actor.Create(CivMale, #COP, 373.331, -477.744, 12.8)
+$3632 += 1 // integer values
+0243: set_actor $3589 ped_stats_to 16
+01ED: clear_actor $3589 threat_search
+Actor.Angle($3589) = 177.095
+0372: set_actor $3589 anim 21 wait_state_time 1000000 ms
+$3576 = Actor.Create(CivMale, #COP, 371.0, -482.2, 12.8)
+$3632 += 1 // integer values
+0243: set_actor $3576 ped_stats_to 16
+01ED: clear_actor $3576 threat_search
+Actor.Angle($3576) = 47.54
+0372: set_actor $3576 anim 25 wait_state_time 1000 ms
+$3580 = 1 // integer values
+$3593 = Actor.Create(CivMale, #COP, 372.118, -490.603, 12.831)
+$3632 += 1 // integer values
+0243: set_actor $3593 ped_stats_to 16
+01ED: clear_actor $3593 threat_search
+Actor.Angle($3593) = 232.192
+0372: set_actor $3593 anim 25 wait_state_time 1000 ms
+$3597 = 1 // integer values
+$3604 = Pickup.Create(#KEYCARD, 3, 364.99, -472.46, 14.1)
+03BC: $3636 = create_sphere 407.9 -486.35 11.35 1.0
+018D: $3667 = create_sound 6 at 405.565 -488.547 12.69
+$123 = 1 // integer values
+16@ = 0 // integer values
+
+:BANKJO1_3519
+if or
+8101:   not actor $3510 stopped_near_point -829.62 -898.8 10.11 radius 3.0 3.0 6.0 sphere $123
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO1_6481
+wait 0
+if
+  $3673 == 0 // integer values
+jf @BANKJO1_3679
+if
+  $3513 == 1 // integer values
+jf @BANKJO1_3679
+0395: clear_area 0 at 381.942 -449.662 range 9.078 4.0
+$3672 = Car.Create(#SENTINEL, 381.942, -449.662, 9.078)
+Car.Angle($3672) = 123.277
+$3673 = 1 // integer values
+
+:BANKJO1_3679
+if
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+jf @BANKJO1_3764
+if
+  $3668 == 0 // integer values
+jf @BANKJO1_3764
+17@ = 0 // integer values
+$3668 = 1 // integer values
+
+:BANKJO1_3764
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_4646
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_4214
+if
+  17@ >= 3000 // integer values
+jf @BANKJO1_4214
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_4129
+if
+  $3663 == 0 // integer values
+jf @BANKJO1_4122
+00BC: text_highpriority 'BJM1_3' 6000 ms 1  // ~g~You will find something useful in the station's locker room.
+$3663 = 1 // integer values
+
+:BANKJO1_4122
+jump @BANKJO1_4214
+
+:BANKJO1_4129
+if
+  $3606 == 0 // integer values
+jf @BANKJO1_4214
+if
+  $3661 == 0 // integer values
+jf @BANKJO1_4214
+if
+  16@ >= 6000 // integer values
+jf @BANKJO1_4214
+00BC: text_highpriority 'BJM1_21' 5000 ms 1  // ~g~The key card to the cells can be found upstairs in the station.
+03DC: $3605 = create_marker_above_pickup $3604
+$3661 = 1 // integer values
+
+:BANKJO1_4214
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+jf @BANKJO1_4646
+if
+  17@ > 4000 // integer values
+jf @BANKJO1_4646
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_4561
+if
+  $3663 == 0 // integer values
+jf @BANKJO1_4554
+00BC: text_highpriority 'BJM1_3' 6000 ms 1  // ~g~You will find something useful in the station's locker room.
+$3663 = 1 // integer values
+
+:BANKJO1_4554
+jump @BANKJO1_4646
+
+:BANKJO1_4561
+if
+  $3606 == 0 // integer values
+jf @BANKJO1_4646
+if
+  $3661 == 0 // integer values
+jf @BANKJO1_4646
+if
+  16@ > 6000 // integer values
+jf @BANKJO1_4646
+00BC: text_highpriority 'BJM1_21' 5000 ms 1  // ~g~The key card to the cells can be found upstairs in the station.
+03DC: $3605 = create_marker_above_pickup $3604
+$3661 = 1 // integer values
+
+:BANKJO1_4646
+01BD: $3654 = current_time_in_ms
+if
+  $3598 == 1 // integer values
+jf @BANKJO1_4855
+if
+  $3657 == 0 // integer values
+jf @BANKJO1_4702
+0084: $3655 = $3654 // integer values and handles
+$3657 = 1 // integer values
+
+:BANKJO1_4702
+if
+  $3657 == 1 // integer values
+jf @BANKJO1_4762
+0084: $3656 = $3654 // integer values and handles
+0060: $3656 -= $3655 // integer values
+if
+  $3656 >= 2000 // integer values
+jf @BANKJO1_4762
+$3657 = 2 // integer values
+
+:BANKJO1_4762
+if
+  $3658 == 0 // integer values
+jf @BANKJO1_4795
+0084: $3660 = $3654 // integer values and handles
+$3658 = 1 // integer values
+
+:BANKJO1_4795
+if
+  $3658 == 1 // integer values
+jf @BANKJO1_4855
+0084: $3659 = $3654 // integer values and handles
+0060: $3659 -= $3660 // integer values
+if
+  $3659 >= 2000 // integer values
+jf @BANKJO1_4855
+$3658 = 2 // integer values
+
+:BANKJO1_4855
+if
+  $3642 == 0 // integer values
+jf @BANKJO1_4887
+17@ = 0 // integer values
+$3642 = 1 // integer values
+
+:BANKJO1_4887
+if
+  $3642 == 1 // integer values
+jf @BANKJO1_4996
+if
+  17@ >= 1000 // integer values
+jf @BANKJO1_4996
+if
+  $3598 == 1 // integer values
+jf @BANKJO1_4996
+if
+  $3643 == 0 // integer values
+jf @BANKJO1_4996
+018D: $3603 = create_sound 0 at 385.49 -509.0 9.6
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+$3643 = 1 // integer values
+
+:BANKJO1_4996
+0054: store_player $PLAYER_CHAR position_to $3600 $3601 $3602
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_5091
+if
+00E7:   player $PLAYER_CHAR stopped 0 407.9 -486.35 radius 1.0 1.0
+jf @BANKJO1_5091
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_5091
+gosub @BANKJO1_24767
+
+:BANKJO1_5091
+if
+  $3608 == 0 // integer values
+jf @BANKJO1_5116
+gosub @BANKJO1_17095
+
+:BANKJO1_5116
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_5176
+gosub @BANKJO1_21579
+gosub @BANKJO1_19459
+gosub @BANKJO1_20990
+gosub @BANKJO1_25572
+gosub @BANKJO1_22155
+jump @BANKJO1_5181
+
+:BANKJO1_5176
+03BD: destroy_sphere $3636
+
+:BANKJO1_5181
+gosub @BANKJO1_8331
+gosub @BANKJO1_10336
+if
+  $3511 == 0 // integer values
+jf @BANKJO1_6225
+if or
+   Actor.Dead($3510)
+  $3635 == 1 // integer values
+jf @BANKJO1_5338
+040D: unload_wav 1
+040D: unload_wav 2
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+Marker.Disable($3512)
+if
+02B4:   player $PLAYER_CHAR in_cube_on_foot 376.66 -453.85 9.0 328.91 -504.02 20.0 radius 50.0 sphere 0
+jf @BANKJO1_5324
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+
+:BANKJO1_5324
+jump @BANKJO1_7635
+$3511 = 1 // integer values
+
+:BANKJO1_5338
+if
+  $3513 == 0 // integer values
+jf @BANKJO1_5730
+if
+  $3608 == 1 // integer values
+jf @BANKJO1_5718
+if
+00FC:   player $PLAYER_CHAR 0 $3510 on_foot radius 4.0 4.0 4.0
+jf @BANKJO1_5711
+01DF: tie_actor $3510 to_player $PLAYER_CHAR
+01B2: give_actor $3510 weapon 23 ammo 30000 // Load the weapon model before using this
+0319: set_actor $3510 running 1
+Marker.Disable($3512)
+$3598 = 1 // integer values
+if
+  $3640 == 0 // integer values
+jf @BANKJO1_5711
+if
+  $3641 == 0 // integer values
+jf @BANKJO1_5502
+03CF: load_wav 'BNK1_12' as 1
+$3641 = 1 // integer values
+
+:BANKJO1_5502
+if
+  $3641 == 1 // integer values
+jf @BANKJO1_5542
+if
+03D0:   wav 1 loaded
+jf @BANKJO1_5542
+$3641 = 2 // integer values
+
+:BANKJO1_5542
+if
+  $3641 == 2 // integer values
+jf @BANKJO1_5588
+03D1: play_wav 1
+00BC: text_highpriority 'BNK1_12' 100000 ms 1  // Lose the heat and get me back to my place!
+$3641 = 3 // integer values
+
+:BANKJO1_5588
+if
+  $3641 == 3 // integer values
+jf @BANKJO1_5645
+if
+03D2:   wav 1 ended
+jf @BANKJO1_5645
+03D5: remove_text 'BNK1_12'  // Lose the heat and get me back to my place!
+$3513 = 1 // integer values
+$3641 = 4 // integer values
+
+:BANKJO1_5645
+if
+  $3641 == 4 // integer values
+jf @BANKJO1_5711
+018A: $3669 = create_checkpoint_at -3.8 -1265.8 12.0
+$3515 = 1 // integer values
+$3640 = 1 // integer values
+$3599 = 1 // integer values
+$3641 = 5 // integer values
+
+:BANKJO1_5711
+jump @BANKJO1_5730
+
+:BANKJO1_5718
+0372: set_actor $3510 anim 24 wait_state_time 1000000 ms
+
+:BANKJO1_5730
+if
+  $3513 == 1 // integer values
+jf @BANKJO1_6225
+if
+  $3599 == 1 // integer values
+jf @BANKJO1_6151
+if
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO1_5913
+if
+  $3640 == 1 // integer values
+jf @BANKJO1_5869
+if
+  $3515 == 0 // integer values
+jf @BANKJO1_5869
+00BC: text_highpriority 'WANTED1' 5000 ms 1  // ~g~Shake the cops and lose your wanted level!
+018A: $3669 = create_checkpoint_at -3.8 -1265.8 12.0
+$123 = 0 // integer values
+$3515 = 1 // integer values
+
+:BANKJO1_5869
+if
+  $3514 == 1 // integer values
+jf @BANKJO1_5906
+$123 = 0 // integer values
+Marker.Disable($3516)
+$3514 = 0 // integer values
+
+:BANKJO1_5906
+jump @BANKJO1_6028
+
+:BANKJO1_5913
+if
+  $3515 == 1 // integer values
+jf @BANKJO1_5943
+Marker.Disable($3669)
+$3515 = 0 // integer values
+
+:BANKJO1_5943
+if
+  $3640 == 1 // integer values
+jf @BANKJO1_6028
+if
+  $3514 == 0 // integer values
+jf @BANKJO1_6028
+$123 = 1 // integer values
+018A: $3516 = create_checkpoint_at -848.02 -901.72 10.1
+00BC: text_highpriority 'BJM1_22' 5000 ms 1  // ~g~Get Cam back to his house!
+$3514 = 1 // integer values
+
+:BANKJO1_6028
+if
+8320:   not actor $3510 in_range_of_player $PLAYER_CHAR
+jf @BANKJO1_6151
+$3512 = Marker.CreateAboveActor($3510)
+00BC: text_highpriority 'HEY' 5000 ms 1  // ~g~Don't go solo, keep your posse together!
+$123 = 0 // integer values
+if
+  $3514 == 1 // integer values
+jf @BANKJO1_6114
+$123 = 0 // integer values
+Marker.Disable($3516)
+$3514 = 0 // integer values
+
+:BANKJO1_6114
+if
+  $3515 == 1 // integer values
+jf @BANKJO1_6144
+Marker.Disable($3669)
+$3515 = 0 // integer values
+
+:BANKJO1_6144
+$3599 = 0 // integer values
+
+:BANKJO1_6151
+if
+  $3599 == 0 // integer values
+jf @BANKJO1_6225
+if
+00FB:   player $PLAYER_CHAR 0 $3510 radius 8.0 8.0 8.0
+jf @BANKJO1_6225
+01DF: tie_actor $3510 to_player $PLAYER_CHAR
+Marker.Disable($3512)
+$3599 = 1 // integer values
+
+:BANKJO1_6225
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_6282
+if or
+  $3610 == 1 // integer values
+  $3612 == 1 // integer values
+jf @BANKJO1_6275
+$3598 = 1 // integer values
+
+:BANKJO1_6275
+jump @BANKJO1_6353
+
+:BANKJO1_6282
+if
+  $3630 == 0 // integer values
+jf @BANKJO1_6314
+17@ = 0 // integer values
+$3630 = 1 // integer values
+
+:BANKJO1_6314
+if
+  $3671 == 0 // integer values
+jf @BANKJO1_6353
+gosub @BANKJO1_22715
+gosub @BANKJO1_23740
+gosub @BANKJO1_23884
+
+:BANKJO1_6353
+if
+  $3513 == 1 // integer values
+jf @BANKJO1_6474
+if
+  $3671 == 0 // integer values
+jf @BANKJO1_6474
+if
+82B4:   not player $PLAYER_CHAR in_cube_on_foot 376.66 -453.85 9.0 328.91 -504.02 20.0 radius 50.0 sphere 0
+jf @BANKJO1_6474
+$3671 = 1 // integer values
+if
+  $3671 == 1 // integer values
+jf @BANKJO1_6474
+gosub @BANKJO1_25944
+
+:BANKJO1_6474
+jump @BANKJO1_3519
+
+:BANKJO1_6481
+Marker.Disable($3516)
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Camera.SetPosition(-833.312, -904.83, 12.62, 0.0, 0.0, 0.0)
+Camera.PointAt(-832.709, -904.049, 12.49, 2)
+03CF: load_wav 'BNK1_13' as 1
+03CF: load_wav 'BNK1_14' as 2
+
+:BANKJO1_6586
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @BANKJO1_6659
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_6652
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+Marker.Disable($3512)
+jump @BANKJO1_7635
+
+:BANKJO1_6652
+jump @BANKJO1_6586
+
+:BANKJO1_6659
+0470: $3664 = actor $PLAYER_ACTOR armed_weapon
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_6704
+01B9: set_actor $3510 armed_weapon_to 0
+jump @BANKJO1_6731
+
+:BANKJO1_6704
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+Marker.Disable($3512)
+jump @BANKJO1_7635
+
+:BANKJO1_6731
+if
+   not Actor.Driving($PLAYER_ACTOR)
+jf @BANKJO1_6793
+020E: actor $PLAYER_ACTOR look_at_actor $3510
+03D1: play_wav 1
+00BC: text_highpriority 'BNK1_13' 5000 ms 1  // I'm gonna be doing a job and you're my safe cracker.
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 1000000 ms
+jump @BANKJO1_6812
+
+:BANKJO1_6793
+03D1: play_wav 1
+00BC: text_highpriority 'BNK1_13' 5000 ms 1  // I'm gonna be doing a job and you're my safe cracker.
+
+:BANKJO1_6812
+if
+83D2:   not wav 1 ended
+jf @BANKJO1_6881
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_6874
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+Marker.Disable($3512)
+jump @BANKJO1_7635
+
+:BANKJO1_6874
+jump @BANKJO1_6812
+
+:BANKJO1_6881
+03D5: remove_text 'BNK1_13'  // I'm gonna be doing a job and you're my safe cracker.
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 1 ms
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_6996
+if
+   not Actor.Driving($3510)
+jf @BANKJO1_6970
+03D1: play_wav 2
+00BC: text_highpriority 'BNK1_14' 5000 ms 1  // Beats losing my ass in a cell!
+0372: set_actor $3510 anim 19 wait_state_time 1000000 ms
+jump @BANKJO1_6989
+
+:BANKJO1_6970
+03D1: play_wav 2
+00BC: text_highpriority 'BNK1_14' 5000 ms 1  // Beats losing my ass in a cell!
+
+:BANKJO1_6989
+jump @BANKJO1_7018
+
+:BANKJO1_6996
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7018
+if
+83D2:   not wav 2 ended
+jf @BANKJO1_7093
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_7086
+040D: unload_wav 2
+00BE: text_clear_all
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+Marker.Disable($3512)
+jump @BANKJO1_7635
+
+:BANKJO1_7086
+jump @BANKJO1_7018
+
+:BANKJO1_7093
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_7140
+03D5: remove_text 'BNK1_14'  // Beats losing my ass in a cell!
+0372: set_actor $3510 anim 0 wait_state_time 1 ms
+01E0: clear_leader $3510
+jump @BANKJO1_7162
+
+:BANKJO1_7140
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7162
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_7350
+if
+   Actor.Driving($3510)
+jf @BANKJO1_7343
+00D9: $3653 = actor $3510 car // add to mission cleanup
+01D3: actor $3510 leave_car $3653
+
+:BANKJO1_7210
+if
+   Actor.Driving($3510)
+jf @BANKJO1_7343
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_7268
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7268
+if
+   Car.Wrecked($3653)
+jf @BANKJO1_7336
+if
+   Actor.Dead($3510)
+jf @BANKJO1_7329
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+jump @BANKJO1_7336
+
+:BANKJO1_7329
+jump @BANKJO1_7635
+
+:BANKJO1_7336
+jump @BANKJO1_7210
+
+:BANKJO1_7343
+jump @BANKJO1_7372
+
+:BANKJO1_7350
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7372
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_7425
+Actor.PutAt($3510, -832.446, -902.456, 10.11)
+Actor.Angle($3510) = 165.972
+jump @BANKJO1_7447
+
+:BANKJO1_7425
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7447
+Camera.SetPosition(-833.797, -908.45, 12.06, 0.0, 0.0, 0.0)
+Camera.PointAt(-833.34, -907.569, 11.94, 2)
+0211: actor $3510 walk_to -833.613 -908.439
+16@ = 0 // integer values
+
+:BANKJO1_7520
+if
+  3000 > 16@ // integer values
+jf @BANKJO1_7588
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_7581
+00BC: text_highpriority 'BJM1_2' 5000 ms 1  // ~r~You were supposed to bust Cam out, not get him killed!
+jump @BANKJO1_7635
+
+:BANKJO1_7581
+jump @BANKJO1_7520
+
+:BANKJO1_7588
+Actor.DestroyInstantly($3510)
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $3664
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Camera.Restore_WithJumpCut
+jump @BANKJO1_7652
+
+:BANKJO1_7635
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:BANKJO1_7652
+$248 = 1 // integer values
+0318: set_latest_mission_passed 'BANK_1'  // No Escape?
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 1000
+030C: progress_made += 1
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+create_thread @BANK2
+return
+
+:BANKJO1_7718
+$ONMISSION = 0 // integer values
+$997 = 0 // integer values
+Actor.DestroyWithFade($3510)
+$2009 = Pickup.Create(#NITESTICK, 15, 402.4, -488.3, 12.4)
+Pickup.Destroy($3670)
+01EB: set_traffic_density_multiplier_to 1.0
+018E: stop_sound $3665
+018E: stop_sound $865
+018E: stop_sound $3667
+Pickup.Destroy($3604)
+018E: stop_sound $3603
+Model.Destroy(#COP)
+Model.Destroy(#UZI)
+Model.Destroy(#SENTINEL)
+0296: unload_special_actor 3
+04EF: release_animation 'LANCE'
+03BD: destroy_sphere $3636
+03BD: destroy_sphere $3637
+Marker.Disable($3512)
+Marker.Disable($3516)
+Marker.Disable($3605)
+Marker.Disable($3669)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+if
+  $1278 == 1 // integer values
+jf @BANKJO1_7887
+055B: $1297 = create_clothes_pickup 1 at -384.5 -591.9 25.3
+
+:BANKJO1_7887
+if
+  $1300 == 1 // integer values
+jf @BANKJO1_7927
+055B: $1298 = create_clothes_pickup 1 at -820.2 1364.1 66.4
+
+:BANKJO1_7927
+if
+  $1277 == 1 // integer values
+jf @BANKJO1_7967
+055B: $1284 = create_clothes_pickup 1 at 226.4 -1265.6 20.1
+
+:BANKJO1_7967
+if
+  $1265 == 1 // integer values
+jf @BANKJO1_8007
+055B: $1285 = create_clothes_pickup 2 at 97.5 -1133.6 10.4
+
+:BANKJO1_8007
+if
+  $1266 == 1 // integer values
+jf @BANKJO1_8047
+055B: $1286 = create_clothes_pickup 3 at 364.2 1086.1 19.0
+
+:BANKJO1_8047
+if
+  $1267 == 1 // integer values
+jf @BANKJO1_8087
+055B: $1287 = create_clothes_pickup 4 at 327.863 205.539 11.403
+
+:BANKJO1_8087
+if
+  $1268 == 1 // integer values
+jf @BANKJO1_8127
+055B: $1288 = create_clothes_pickup 5 at -1025.2 -429.2 10.8
+
+:BANKJO1_8127
+if
+  $1269 == 1 // integer values
+jf @BANKJO1_8167
+055B: $1289 = create_clothes_pickup 6 at 405.7 -485.6 12.3
+
+:BANKJO1_8167
+if
+  $1270 == 1 // integer values
+jf @BANKJO1_8207
+055B: $1290 = create_clothes_pickup 8 at 414.3 1042.0 25.4
+
+:BANKJO1_8207
+if
+  $1271 == 1 // integer values
+jf @BANKJO1_8247
+055B: $1291 = create_clothes_pickup 9 at 158.3 -1275.9 10.6
+
+:BANKJO1_8247
+if
+  $1272 == 1 // integer values
+jf @BANKJO1_8287
+055B: $1292 = create_clothes_pickup 10 at -917.4 885.1 11.0
+
+:BANKJO1_8287
+if
+  $1276 == 1 // integer values
+jf @BANKJO1_8300
+055B: $1296 = create_clothes_pickup 7 at 465.3 -57.4 15.7
+
+:BANKJO1_8300
+if
+  $PASSED_HAT1_JUJU_SCRAMBLE == 1 // integer values
+jf @BANKJO1_8327
+055B: $2096 = create_clothes_pickup 11 at -1200.3 -322.9 10.9
+
+:BANKJO1_8327
+mission_cleanup
+return
+
+:BANKJO1_8331
+if
+  $3518 == 0 // integer values
+jf @BANKJO1_8452
+if
+   Actor.Dead($3517)
+jf @BANKJO1_8393
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3518 = 1 // integer values
+jump @BANKJO1_8452
+
+:BANKJO1_8393
+$3527 = Actor.Health($3517)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_8452
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3517
+  95 >= $3527 // integer values
+jf @BANKJO1_8452
+$3598 = 1 // integer values
+
+:BANKJO1_8452
+if
+  $3529 == 0 // integer values
+jf @BANKJO1_8642
+if
+   Actor.Dead($3528)
+jf @BANKJO1_8514
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3529 = 1 // integer values
+jump @BANKJO1_8642
+
+:BANKJO1_8514
+$3538 = Actor.Health($3528)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_8608
+if
+  $3644 == 1 // integer values
+jf @BANKJO1_8568
+0372: set_actor $3528 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_8568
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3528
+  95 >= $3538 // integer values
+jf @BANKJO1_8601
+$3598 = 1 // integer values
+
+:BANKJO1_8601
+jump @BANKJO1_8642
+
+:BANKJO1_8608
+if
+  $3644 == 1 // integer values
+jf @BANKJO1_8642
+0372: set_actor $3528 anim 0 wait_state_time 1 ms
+$3644 = 0 // integer values
+
+:BANKJO1_8642
+if
+  $3540 == 0 // integer values
+jf @BANKJO1_8832
+if
+   Actor.Dead($3539)
+jf @BANKJO1_8704
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3540 = 1 // integer values
+jump @BANKJO1_8832
+
+:BANKJO1_8704
+$3549 = Actor.Health($3539)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_8798
+if
+  $3645 == 1 // integer values
+jf @BANKJO1_8758
+0372: set_actor $3539 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_8758
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3539
+  95 >= $3549 // integer values
+jf @BANKJO1_8791
+$3598 = 1 // integer values
+
+:BANKJO1_8791
+jump @BANKJO1_8832
+
+:BANKJO1_8798
+if
+  $3645 == 1 // integer values
+jf @BANKJO1_8832
+0372: set_actor $3539 anim 0 wait_state_time 1 ms
+$3645 = 0 // integer values
+
+:BANKJO1_8832
+if
+  $3551 == 0 // integer values
+jf @BANKJO1_9022
+if
+   Actor.Dead($3550)
+jf @BANKJO1_8894
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3551 = 1 // integer values
+jump @BANKJO1_9022
+
+:BANKJO1_8894
+$3560 = Actor.Health($3550)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_8988
+if
+  $3646 == 1 // integer values
+jf @BANKJO1_8948
+0372: set_actor $3550 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_8948
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3550
+  95 >= $3560 // integer values
+jf @BANKJO1_8981
+$3598 = 1 // integer values
+
+:BANKJO1_8981
+jump @BANKJO1_9022
+
+:BANKJO1_8988
+if
+  $3646 == 1 // integer values
+jf @BANKJO1_9022
+0372: set_actor $3550 anim 0 wait_state_time 1 ms
+$3646 = 0 // integer values
+
+:BANKJO1_9022
+if
+  $3562 == 0 // integer values
+jf @BANKJO1_9184
+if
+   Actor.Dead($3561)
+jf @BANKJO1_9084
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3562 = 1 // integer values
+jump @BANKJO1_9184
+
+:BANKJO1_9084
+$3564 = Actor.Health($3561)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_9150
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3561
+  95 >= $3564 // integer values
+jf @BANKJO1_9143
+$3598 = 1 // integer values
+
+:BANKJO1_9143
+jump @BANKJO1_9184
+
+:BANKJO1_9150
+if
+  $3647 == 1 // integer values
+jf @BANKJO1_9184
+0372: set_actor $3561 anim 0 wait_state_time 1 ms
+$3647 = 0 // integer values
+
+:BANKJO1_9184
+if
+  $3566 == 0 // integer values
+jf @BANKJO1_9374
+if
+   Actor.Dead($3565)
+jf @BANKJO1_9246
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3566 = 1 // integer values
+jump @BANKJO1_9374
+
+:BANKJO1_9246
+$3575 = Actor.Health($3565)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_9340
+if
+  $3648 == 1 // integer values
+jf @BANKJO1_9300
+0372: set_actor $3565 anim 34 wait_state_time 1000 ms
+
+:BANKJO1_9300
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3565
+  95 >= $3575 // integer values
+jf @BANKJO1_9333
+$3598 = 1 // integer values
+
+:BANKJO1_9333
+jump @BANKJO1_9374
+
+:BANKJO1_9340
+if
+  $3648 == 1 // integer values
+jf @BANKJO1_9374
+0372: set_actor $3565 anim 0 wait_state_time 1 ms
+$3648 = 0 // integer values
+
+:BANKJO1_9374
+if
+  $3577 == 0 // integer values
+jf @BANKJO1_9569
+if
+   Actor.Dead($3576)
+jf @BANKJO1_9436
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3577 = 1 // integer values
+jump @BANKJO1_9569
+
+:BANKJO1_9436
+$3579 = Actor.Health($3576)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_9530
+if
+  $3580 == 1 // integer values
+jf @BANKJO1_9490
+0372: set_actor $3576 anim 25 wait_state_time 1000 ms
+
+:BANKJO1_9490
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3576
+  95 >= $3579 // integer values
+jf @BANKJO1_9523
+$3598 = 1 // integer values
+
+:BANKJO1_9523
+jump @BANKJO1_9569
+
+:BANKJO1_9530
+if
+  $3580 == 1 // integer values
+jf @BANKJO1_9569
+0372: set_actor $3576 anim 0 wait_state_time 1 ms
+053D:  $3576
+$3580 = 0 // integer values
+
+:BANKJO1_9569
+if
+  $3582 == 0 // integer values
+jf @BANKJO1_9759
+if
+   Actor.Dead($3581)
+jf @BANKJO1_9631
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3582 = 1 // integer values
+jump @BANKJO1_9759
+
+:BANKJO1_9631
+$3584 = Actor.Health($3581)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_9725
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3581
+  95 >= $3584 // integer values
+jf @BANKJO1_9690
+$3598 = 1 // integer values
+
+:BANKJO1_9690
+if
+  $3649 == 1 // integer values
+jf @BANKJO1_9718
+0372: set_actor $3581 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_9718
+jump @BANKJO1_9759
+
+:BANKJO1_9725
+if
+  $3649 == 1 // integer values
+jf @BANKJO1_9759
+0372: set_actor $3581 anim 0 wait_state_time 1 ms
+$3649 = 0 // integer values
+
+:BANKJO1_9759
+if
+  $3586 == 0 // integer values
+jf @BANKJO1_9949
+if
+   Actor.Dead($3585)
+jf @BANKJO1_9821
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3586 = 1 // integer values
+jump @BANKJO1_9949
+
+:BANKJO1_9821
+$3588 = Actor.Health($3585)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_9915
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3585
+  95 >= $3588 // integer values
+jf @BANKJO1_9880
+$3598 = 1 // integer values
+
+:BANKJO1_9880
+if
+  $3650 == 1 // integer values
+jf @BANKJO1_9908
+0372: set_actor $3585 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_9908
+jump @BANKJO1_9949
+
+:BANKJO1_9915
+if
+  $3650 == 1 // integer values
+jf @BANKJO1_9949
+0372: set_actor $3585 anim 0 wait_state_time 1 ms
+$3650 = 0 // integer values
+
+:BANKJO1_9949
+if
+  $3590 == 0 // integer values
+jf @BANKJO1_10139
+if
+   Actor.Dead($3589)
+jf @BANKJO1_10011
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3590 = 1 // integer values
+jump @BANKJO1_10139
+
+:BANKJO1_10011
+$3592 = Actor.Health($3589)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_10105
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3589
+  95 >= $3592 // integer values
+jf @BANKJO1_10070
+$3598 = 1 // integer values
+
+:BANKJO1_10070
+if
+  $3651 == 1 // integer values
+jf @BANKJO1_10098
+0372: set_actor $3589 anim 24 wait_state_time 1000 ms
+
+:BANKJO1_10098
+jump @BANKJO1_10139
+
+:BANKJO1_10105
+if
+  $3651 == 1 // integer values
+jf @BANKJO1_10139
+0372: set_actor $3589 anim 0 wait_state_time 1 ms
+$3651 = 0 // integer values
+
+:BANKJO1_10139
+if
+  $3594 == 0 // integer values
+jf @BANKJO1_10334
+if
+   Actor.Dead($3593)
+jf @BANKJO1_10201
+$3632 -= 1 // integer values
+$3598 = 1 // integer values
+$3594 = 1 // integer values
+jump @BANKJO1_10334
+
+:BANKJO1_10201
+$3596 = Actor.Health($3593)
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_10295
+if
+  $3597 == 1 // integer values
+jf @BANKJO1_10255
+0372: set_actor $3593 anim 25 wait_state_time 1000 ms
+
+:BANKJO1_10255
+if or
+0457:   player $PLAYER_CHAR aiming_at_actor $3593
+  95 >= $3596 // integer values
+jf @BANKJO1_10288
+$3598 = 1 // integer values
+
+:BANKJO1_10288
+jump @BANKJO1_10334
+
+:BANKJO1_10295
+if
+  $3597 == 1 // integer values
+jf @BANKJO1_10334
+0372: set_actor $3593 anim 0 wait_state_time 1 ms
+053D:  $3593
+$3597 = 0 // integer values
+
+:BANKJO1_10334
+return
+
+:BANKJO1_10336
+if
+  $3598 == 1 // integer values
+jf @BANKJO1_17068
+if
+  $3518 == 0 // integer values
+jf @BANKJO1_11514
+if
+   Actor.Dead($3517)
+jf @BANKJO1_10409
+$3632 -= 1 // integer values
+$3518 = 1 // integer values
+jump @BANKJO1_11514
+
+:BANKJO1_10409
+if
+  $3519 == 1 // integer values
+jf @BANKJO1_10434
+$3520 += 1 // integer values
+
+:BANKJO1_10434
+if
+  $3520 >= 100 // integer values
+jf @BANKJO1_10459
+$3519 = 0 // integer values
+
+:BANKJO1_10459
+if
+  $3522 == 1 // integer values
+jf @BANKJO1_10484
+$3521 += 1 // integer values
+
+:BANKJO1_10484
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_11514
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_11272
+if
+00EA:   player $PLAYER_CHAR 0 $3517 radius 2.0 2.0
+jf @BANKJO1_11043
+if
+  $3525 == 0 // integer values
+jf @BANKJO1_10865
+01BE: set_actor $3517 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3517 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3517 search_threat 1
+0350: set_actor $3517 maintain_position_when_attacked 1
+01CA: actor $3517 kill_player $PLAYER_CHAR
+$3525 = 1 // integer values
+
+:BANKJO1_10865
+if
+  $3519 == 0 // integer values
+jf @BANKJO1_10890
+$3522 = 0 // integer values
+
+:BANKJO1_10890
+if
+  $3524 == 0 // integer values
+jf @BANKJO1_10922
+$3526 = 0 // integer values
+$3524 = 1 // integer values
+
+:BANKJO1_10922
+if
+  $3524 == 1 // integer values
+jf @BANKJO1_10947
+$3526 += 1 // integer values
+
+:BANKJO1_10947
+if
+  $3526 >= 20 // integer values
+jf @BANKJO1_11036
+if
+  $3523 == 0 // integer values
+jf @BANKJO1_11036
+01BE: set_actor $3517 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3517 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3517 search_threat 1
+0350: set_actor $3517 maintain_position_when_attacked 1
+01CA: actor $3517 kill_player $PLAYER_CHAR
+$3523 = 1 // integer values
+
+:BANKJO1_11036
+jump @BANKJO1_11265
+
+:BANKJO1_11043
+$3524 = 0 // integer values
+if
+  $3523 == 1 // integer values
+jf @BANKJO1_11094
+011C: actor $3517 clear_objective
+01ED: clear_actor $3517 threat_search
+01B2: give_actor $3517 weapon 23 ammo 0 // Load the weapon model before using this
+$3523 = 0 // integer values
+
+:BANKJO1_11094
+if
+  $3519 == 0 // integer values
+jf @BANKJO1_11160
+011C: actor $3517 clear_objective
+01ED: clear_actor $3517 threat_search
+0372: set_actor $3517 anim 14 wait_state_time 3000 ms
+$3520 = 0 // integer values
+$3521 = 0 // integer values
+$3522 = 1 // integer values
+$3519 = 1 // integer values
+
+:BANKJO1_11160
+if and
+  $3519 == 1 // integer values
+  $3521 >= 30 // integer values
+jf @BANKJO1_11265
+0372: set_actor $3517 anim 0 wait_state_time 0 ms
+if
+  $3523 == 0 // integer values
+jf @BANKJO1_11243
+01BE: set_actor $3517 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3517 weapon 23 ammo 30000 // Load the weapon model before using this
+$3523 = 1 // integer values
+
+:BANKJO1_11243
+011A: set_actor $3517 search_threat 1
+0350: set_actor $3517 maintain_position_when_attacked 1
+01CA: actor $3517 kill_player $PLAYER_CHAR
+
+:BANKJO1_11265
+jump @BANKJO1_11514
+
+:BANKJO1_11272
+if
+  $3525 == 0 // integer values
+jf @BANKJO1_11343
+01BE: set_actor $3517 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3517 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3517 search_threat 1
+0350: set_actor $3517 maintain_position_when_attacked 1
+01CA: actor $3517 kill_player $PLAYER_CHAR
+$3525 = 1 // integer values
+
+:BANKJO1_11343
+if
+  $3519 == 0 // integer values
+jf @BANKJO1_11368
+$3522 = 0 // integer values
+
+:BANKJO1_11368
+if
+  $3524 == 0 // integer values
+jf @BANKJO1_11400
+$3526 = 0 // integer values
+$3524 = 1 // integer values
+
+:BANKJO1_11400
+if
+  $3524 == 1 // integer values
+jf @BANKJO1_11425
+$3526 += 1 // integer values
+
+:BANKJO1_11425
+if
+  $3526 >= 20 // integer values
+jf @BANKJO1_11514
+if
+  $3523 == 0 // integer values
+jf @BANKJO1_11514
+01BE: set_actor $3517 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3517 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3517 search_threat 1
+0350: set_actor $3517 maintain_position_when_attacked 1
+01CA: actor $3517 kill_player $PLAYER_CHAR
+$3523 = 1 // integer values
+
+:BANKJO1_11514
+if
+  $3529 == 0 // integer values
+jf @BANKJO1_12708
+if
+   Actor.Dead($3528)
+jf @BANKJO1_11569
+$3632 -= 1 // integer values
+$3529 = 1 // integer values
+jump @BANKJO1_12708
+
+:BANKJO1_11569
+if
+  $3530 == 1 // integer values
+jf @BANKJO1_11594
+$3531 += 1 // integer values
+
+:BANKJO1_11594
+if
+  $3531 >= 100 // integer values
+jf @BANKJO1_11619
+$3530 = 0 // integer values
+
+:BANKJO1_11619
+if
+  $3533 == 1 // integer values
+jf @BANKJO1_11644
+$3532 += 1 // integer values
+
+:BANKJO1_11644
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_12681
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_12432
+if
+00EA:   player $PLAYER_CHAR 0 $3528 radius 2.0 2.0
+jf @BANKJO1_12203
+if
+  $3536 == 0 // integer values
+jf @BANKJO1_12025
+01BE: set_actor $3528 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3528 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3528 search_threat 1
+0350: set_actor $3528 maintain_position_when_attacked 1
+01CA: actor $3528 kill_player $PLAYER_CHAR
+$3536 = 1 // integer values
+
+:BANKJO1_12025
+if
+  $3530 == 0 // integer values
+jf @BANKJO1_12050
+$3533 = 0 // integer values
+
+:BANKJO1_12050
+if
+  $3535 == 0 // integer values
+jf @BANKJO1_12082
+$3537 = 0 // integer values
+$3535 = 1 // integer values
+
+:BANKJO1_12082
+if
+  $3535 == 1 // integer values
+jf @BANKJO1_12107
+$3537 += 1 // integer values
+
+:BANKJO1_12107
+if
+  $3537 >= 20 // integer values
+jf @BANKJO1_12196
+if
+  $3534 == 0 // integer values
+jf @BANKJO1_12196
+01BE: set_actor $3528 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3528 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3528 search_threat 1
+0350: set_actor $3528 maintain_position_when_attacked 1
+01CA: actor $3528 kill_player $PLAYER_CHAR
+$3534 = 1 // integer values
+
+:BANKJO1_12196
+jump @BANKJO1_12425
+
+:BANKJO1_12203
+$3535 = 0 // integer values
+if
+  $3534 == 1 // integer values
+jf @BANKJO1_12254
+011C: actor $3528 clear_objective
+01ED: clear_actor $3528 threat_search
+01B2: give_actor $3528 weapon 23 ammo 0 // Load the weapon model before using this
+$3534 = 0 // integer values
+
+:BANKJO1_12254
+if
+  $3530 == 0 // integer values
+jf @BANKJO1_12320
+011C: actor $3528 clear_objective
+01ED: clear_actor $3528 threat_search
+0372: set_actor $3528 anim 14 wait_state_time 3000 ms
+$3531 = 0 // integer values
+$3532 = 0 // integer values
+$3533 = 1 // integer values
+$3530 = 1 // integer values
+
+:BANKJO1_12320
+if and
+  $3530 == 1 // integer values
+  $3532 >= 30 // integer values
+jf @BANKJO1_12425
+0372: set_actor $3528 anim 0 wait_state_time 0 ms
+if
+  $3534 == 0 // integer values
+jf @BANKJO1_12403
+01BE: set_actor $3528 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3528 weapon 23 ammo 30000 // Load the weapon model before using this
+$3534 = 1 // integer values
+
+:BANKJO1_12403
+011A: set_actor $3528 search_threat 1
+0350: set_actor $3528 maintain_position_when_attacked 1
+01CA: actor $3528 kill_player $PLAYER_CHAR
+
+:BANKJO1_12425
+jump @BANKJO1_12674
+
+:BANKJO1_12432
+if
+  $3536 == 0 // integer values
+jf @BANKJO1_12503
+01BE: set_actor $3528 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3528 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3528 search_threat 1
+0350: set_actor $3528 maintain_position_when_attacked 1
+01CA: actor $3528 kill_player $PLAYER_CHAR
+$3536 = 1 // integer values
+
+:BANKJO1_12503
+if
+  $3530 == 0 // integer values
+jf @BANKJO1_12528
+$3533 = 0 // integer values
+
+:BANKJO1_12528
+if
+  $3535 == 0 // integer values
+jf @BANKJO1_12560
+$3537 = 0 // integer values
+$3535 = 1 // integer values
+
+:BANKJO1_12560
+if
+  $3535 == 1 // integer values
+jf @BANKJO1_12585
+$3537 += 1 // integer values
+
+:BANKJO1_12585
+if
+  $3537 >= 20 // integer values
+jf @BANKJO1_12674
+if
+  $3534 == 0 // integer values
+jf @BANKJO1_12674
+01BE: set_actor $3528 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3528 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3528 search_threat 1
+0350: set_actor $3528 maintain_position_when_attacked 1
+01CA: actor $3528 kill_player $PLAYER_CHAR
+$3534 = 1 // integer values
+
+:BANKJO1_12674
+jump @BANKJO1_12708
+
+:BANKJO1_12681
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_12708
+0372: set_actor $3528 anim 24 wait_state_time 10 ms
+
+:BANKJO1_12708
+if
+  $3540 == 0 // integer values
+jf @BANKJO1_13902
+if
+   Actor.Dead($3539)
+jf @BANKJO1_12763
+$3632 -= 1 // integer values
+$3540 = 1 // integer values
+jump @BANKJO1_13902
+
+:BANKJO1_12763
+if
+  $3541 == 1 // integer values
+jf @BANKJO1_12788
+$3542 += 1 // integer values
+
+:BANKJO1_12788
+if
+  $3542 >= 50 // integer values
+jf @BANKJO1_12813
+$3541 = 0 // integer values
+
+:BANKJO1_12813
+if
+  $3544 == 1 // integer values
+jf @BANKJO1_12838
+$3543 += 1 // integer values
+
+:BANKJO1_12838
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_13875
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_13626
+if
+00EA:   player $PLAYER_CHAR 0 $3539 radius 2.0 2.0
+jf @BANKJO1_13397
+if
+  $3547 == 0 // integer values
+jf @BANKJO1_13219
+01BE: set_actor $3539 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3539 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3539 search_threat 1
+0350: set_actor $3539 maintain_position_when_attacked 1
+01CA: actor $3539 kill_player $PLAYER_CHAR
+$3547 = 1 // integer values
+
+:BANKJO1_13219
+if
+  $3541 == 0 // integer values
+jf @BANKJO1_13244
+$3544 = 0 // integer values
+
+:BANKJO1_13244
+if
+  $3546 == 0 // integer values
+jf @BANKJO1_13276
+$3548 = 0 // integer values
+$3546 = 1 // integer values
+
+:BANKJO1_13276
+if
+  $3546 == 1 // integer values
+jf @BANKJO1_13301
+$3548 += 1 // integer values
+
+:BANKJO1_13301
+if
+  $3548 >= 20 // integer values
+jf @BANKJO1_13390
+if
+  $3545 == 0 // integer values
+jf @BANKJO1_13390
+01BE: set_actor $3539 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3539 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3539 search_threat 1
+0350: set_actor $3539 maintain_position_when_attacked 1
+01CA: actor $3539 kill_player $PLAYER_CHAR
+$3545 = 1 // integer values
+
+:BANKJO1_13390
+jump @BANKJO1_13619
+
+:BANKJO1_13397
+$3546 = 0 // integer values
+if
+  $3545 == 1 // integer values
+jf @BANKJO1_13448
+011C: actor $3539 clear_objective
+01ED: clear_actor $3539 threat_search
+01B2: give_actor $3539 weapon 23 ammo 0 // Load the weapon model before using this
+$3545 = 0 // integer values
+
+:BANKJO1_13448
+if
+  $3541 == 0 // integer values
+jf @BANKJO1_13514
+011C: actor $3539 clear_objective
+01ED: clear_actor $3539 threat_search
+0372: set_actor $3539 anim 14 wait_state_time 3000 ms
+$3542 = 0 // integer values
+$3543 = 0 // integer values
+$3544 = 1 // integer values
+$3541 = 1 // integer values
+
+:BANKJO1_13514
+if and
+  $3541 == 1 // integer values
+  $3543 >= 30 // integer values
+jf @BANKJO1_13619
+0372: set_actor $3539 anim 0 wait_state_time 0 ms
+if
+  $3545 == 0 // integer values
+jf @BANKJO1_13597
+01BE: set_actor $3539 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3539 weapon 23 ammo 30000 // Load the weapon model before using this
+$3545 = 1 // integer values
+
+:BANKJO1_13597
+011A: set_actor $3539 search_threat 1
+0350: set_actor $3539 maintain_position_when_attacked 1
+01CA: actor $3539 kill_player $PLAYER_CHAR
+
+:BANKJO1_13619
+jump @BANKJO1_13868
+
+:BANKJO1_13626
+if
+  $3547 == 0 // integer values
+jf @BANKJO1_13697
+01BE: set_actor $3539 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3539 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3539 search_threat 1
+0350: set_actor $3539 maintain_position_when_attacked 1
+01CA: actor $3539 kill_player $PLAYER_CHAR
+$3547 = 1 // integer values
+
+:BANKJO1_13697
+if
+  $3541 == 0 // integer values
+jf @BANKJO1_13722
+$3544 = 0 // integer values
+
+:BANKJO1_13722
+if
+  $3546 == 0 // integer values
+jf @BANKJO1_13754
+$3548 = 0 // integer values
+$3546 = 1 // integer values
+
+:BANKJO1_13754
+if
+  $3546 == 1 // integer values
+jf @BANKJO1_13779
+$3548 += 1 // integer values
+
+:BANKJO1_13779
+if
+  $3548 >= 20 // integer values
+jf @BANKJO1_13868
+if
+  $3545 == 0 // integer values
+jf @BANKJO1_13868
+01BE: set_actor $3539 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3539 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3539 search_threat 1
+0350: set_actor $3539 maintain_position_when_attacked 1
+01CA: actor $3539 kill_player $PLAYER_CHAR
+$3545 = 1 // integer values
+
+:BANKJO1_13868
+jump @BANKJO1_13902
+
+:BANKJO1_13875
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_13902
+0372: set_actor $3539 anim 24 wait_state_time 10 ms
+
+:BANKJO1_13902
+if
+  $3551 == 0 // integer values
+jf @BANKJO1_14920
+if
+   Actor.Dead($3550)
+jf @BANKJO1_13957
+$3632 -= 1 // integer values
+$3551 = 1 // integer values
+jump @BANKJO1_14920
+
+:BANKJO1_13957
+if
+  $3552 == 1 // integer values
+jf @BANKJO1_13982
+$3553 += 1 // integer values
+
+:BANKJO1_13982
+if
+  $3553 >= 80 // integer values
+jf @BANKJO1_14007
+$3552 = 0 // integer values
+
+:BANKJO1_14007
+if
+  $3555 == 1 // integer values
+jf @BANKJO1_14032
+$3554 += 1 // integer values
+
+:BANKJO1_14032
+if or
+02B3:   player $PLAYER_CHAR in_cube 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+02B3:   player $PLAYER_CHAR in_cube 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+jf @BANKJO1_14893
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_14644
+if
+00EA:   player $PLAYER_CHAR 0 $3550 radius 2.0 2.0
+jf @BANKJO1_14423
+if
+  $3558 == 0 // integer values
+jf @BANKJO1_14245
+01BE: set_actor $3550 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3550 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3550 search_threat 1
+0350: set_actor $3550 maintain_position_when_attacked 1
+01CA: actor $3550 kill_player $PLAYER_CHAR
+$3558 = 1 // integer values
+
+:BANKJO1_14245
+if
+  $3552 == 0 // integer values
+jf @BANKJO1_14270
+$3555 = 0 // integer values
+
+:BANKJO1_14270
+if
+  $3557 == 0 // integer values
+jf @BANKJO1_14302
+$3559 = 0 // integer values
+$3557 = 1 // integer values
+
+:BANKJO1_14302
+if
+  $3557 == 1 // integer values
+jf @BANKJO1_14327
+$3559 += 1 // integer values
+
+:BANKJO1_14327
+if
+  $3559 >= 20 // integer values
+jf @BANKJO1_14416
+if
+  $3556 == 0 // integer values
+jf @BANKJO1_14416
+01BE: set_actor $3550 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3550 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3550 search_threat 1
+0350: set_actor $3550 maintain_position_when_attacked 1
+01CA: actor $3550 kill_player $PLAYER_CHAR
+$3556 = 1 // integer values
+
+:BANKJO1_14416
+jump @BANKJO1_14637
+
+:BANKJO1_14423
+$3557 = 0 // integer values
+if
+  $3556 == 1 // integer values
+jf @BANKJO1_14474
+011C: actor $3550 clear_objective
+01ED: clear_actor $3550 threat_search
+01B2: give_actor $3550 weapon 23 ammo 0 // Load the weapon model before using this
+$3556 = 0 // integer values
+
+:BANKJO1_14474
+if
+  $3552 == 0 // integer values
+jf @BANKJO1_14540
+011C: actor $3550 clear_objective
+01ED: clear_actor $3550 threat_search
+0372: set_actor $3550 anim 14 wait_state_time 3000 ms
+$3553 = 0 // integer values
+$3554 = 0 // integer values
+$3555 = 1 // integer values
+$3552 = 1 // integer values
+
+:BANKJO1_14540
+if and
+  $3552 == 1 // integer values
+  $3554 >= 30 // integer values
+jf @BANKJO1_14637
+0372: set_actor $3550 anim 0 wait_state_time 0 ms
+if
+  $3556 == 0 // integer values
+jf @BANKJO1_14623
+01BE: set_actor $3550 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3550 weapon 23 ammo 30000 // Load the weapon model before using this
+$3556 = 1 // integer values
+
+:BANKJO1_14623
+011A: set_actor $3550 search_threat 1
+0350: set_actor $3550 maintain_position_when_attacked 1
+
+:BANKJO1_14637
+jump @BANKJO1_14886
+
+:BANKJO1_14644
+if
+  $3558 == 0 // integer values
+jf @BANKJO1_14715
+01BE: set_actor $3550 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3550 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3550 search_threat 1
+0350: set_actor $3550 maintain_position_when_attacked 1
+01CA: actor $3550 kill_player $PLAYER_CHAR
+$3558 = 1 // integer values
+
+:BANKJO1_14715
+if
+  $3552 == 0 // integer values
+jf @BANKJO1_14740
+$3555 = 0 // integer values
+
+:BANKJO1_14740
+if
+  $3557 == 0 // integer values
+jf @BANKJO1_14772
+$3559 = 0 // integer values
+$3557 = 1 // integer values
+
+:BANKJO1_14772
+if
+  $3557 == 1 // integer values
+jf @BANKJO1_14797
+$3559 += 1 // integer values
+
+:BANKJO1_14797
+if
+  $3559 >= 20 // integer values
+jf @BANKJO1_14886
+if
+  $3556 == 0 // integer values
+jf @BANKJO1_14886
+01BE: set_actor $3550 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3550 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3550 search_threat 1
+0350: set_actor $3550 maintain_position_when_attacked 1
+01CA: actor $3550 kill_player $PLAYER_CHAR
+$3556 = 1 // integer values
+
+:BANKJO1_14886
+jump @BANKJO1_14920
+
+:BANKJO1_14893
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_14920
+0372: set_actor $3550 anim 24 wait_state_time 10 ms
+
+:BANKJO1_14920
+if
+  $3562 == 0 // integer values
+jf @BANKJO1_15086
+if
+   Actor.Dead($3561)
+jf @BANKJO1_14975
+$3632 -= 1 // integer values
+$3562 = 1 // integer values
+jump @BANKJO1_15086
+
+:BANKJO1_14975
+if
+  $3563 == 0 // integer values
+jf @BANKJO1_15039
+01B2: give_actor $3561 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3561 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3561 kill_player $PLAYER_CHAR
+$3563 = 1 // integer values
+
+:BANKJO1_15039
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_15086
+009E: set_actor $3561 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3561 kill_player $PLAYER_CHAR
+
+:BANKJO1_15086
+if
+  $3566 == 0 // integer values
+jf @BANKJO1_16238
+if
+   Actor.Dead($3565)
+jf @BANKJO1_15141
+$3632 -= 1 // integer values
+$3566 = 1 // integer values
+jump @BANKJO1_16238
+
+:BANKJO1_15141
+if
+  $3567 == 1 // integer values
+jf @BANKJO1_15166
+$3568 += 1 // integer values
+
+:BANKJO1_15166
+if
+  $3568 >= 80 // integer values
+jf @BANKJO1_15191
+$3567 = 0 // integer values
+
+:BANKJO1_15191
+if
+  $3570 == 1 // integer values
+jf @BANKJO1_15216
+$3569 += 1 // integer values
+
+:BANKJO1_15216
+if or
+02B3:   player $PLAYER_CHAR in_cube 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B3:   player $PLAYER_CHAR in_cube 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B3:   player $PLAYER_CHAR in_cube 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B3:   player $PLAYER_CHAR in_cube 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_16211
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_15962
+if
+00EA:   player $PLAYER_CHAR 0 $3565 radius 2.0 2.0
+jf @BANKJO1_15733
+if
+  $3573 == 0 // integer values
+jf @BANKJO1_15555
+01BE: set_actor $3565 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3565 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3565 search_threat 1
+0350: set_actor $3565 maintain_position_when_attacked 1
+01CA: actor $3565 kill_player $PLAYER_CHAR
+$3573 = 1 // integer values
+
+:BANKJO1_15555
+if
+  $3567 == 0 // integer values
+jf @BANKJO1_15580
+$3570 = 0 // integer values
+
+:BANKJO1_15580
+if
+  $3572 == 0 // integer values
+jf @BANKJO1_15612
+$3574 = 0 // integer values
+$3572 = 1 // integer values
+
+:BANKJO1_15612
+if
+  $3572 == 1 // integer values
+jf @BANKJO1_15637
+$3574 += 1 // integer values
+
+:BANKJO1_15637
+if
+  $3574 >= 20 // integer values
+jf @BANKJO1_15726
+if
+  $3571 == 0 // integer values
+jf @BANKJO1_15726
+01BE: set_actor $3565 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3565 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3565 search_threat 1
+0350: set_actor $3565 maintain_position_when_attacked 1
+01CA: actor $3565 kill_player $PLAYER_CHAR
+$3571 = 1 // integer values
+
+:BANKJO1_15726
+jump @BANKJO1_15955
+
+:BANKJO1_15733
+$3572 = 0 // integer values
+if
+  $3571 == 1 // integer values
+jf @BANKJO1_15784
+011C: actor $3565 clear_objective
+01ED: clear_actor $3565 threat_search
+01B2: give_actor $3565 weapon 23 ammo 0 // Load the weapon model before using this
+$3571 = 0 // integer values
+
+:BANKJO1_15784
+if
+  $3567 == 0 // integer values
+jf @BANKJO1_15850
+011C: actor $3565 clear_objective
+01ED: clear_actor $3565 threat_search
+0372: set_actor $3565 anim 14 wait_state_time 3000 ms
+$3568 = 0 // integer values
+$3569 = 0 // integer values
+$3570 = 1 // integer values
+$3567 = 1 // integer values
+
+:BANKJO1_15850
+if and
+  $3567 == 1 // integer values
+  $3569 >= 30 // integer values
+jf @BANKJO1_15955
+0372: set_actor $3565 anim 0 wait_state_time 0 ms
+if
+  $3571 == 0 // integer values
+jf @BANKJO1_15933
+01BE: set_actor $3565 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3565 weapon 23 ammo 30000 // Load the weapon model before using this
+$3571 = 1 // integer values
+
+:BANKJO1_15933
+011A: set_actor $3565 search_threat 1
+0350: set_actor $3565 maintain_position_when_attacked 1
+01CA: actor $3565 kill_player $PLAYER_CHAR
+
+:BANKJO1_15955
+jump @BANKJO1_16204
+
+:BANKJO1_15962
+if
+  $3573 == 0 // integer values
+jf @BANKJO1_16033
+01BE: set_actor $3565 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3565 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3565 search_threat 1
+01CA: actor $3565 kill_player $PLAYER_CHAR
+0350: set_actor $3565 maintain_position_when_attacked 1
+$3573 = 1 // integer values
+
+:BANKJO1_16033
+if
+  $3567 == 0 // integer values
+jf @BANKJO1_16058
+$3570 = 0 // integer values
+
+:BANKJO1_16058
+if
+  $3572 == 0 // integer values
+jf @BANKJO1_16090
+$3574 = 0 // integer values
+$3572 = 1 // integer values
+
+:BANKJO1_16090
+if
+  $3572 == 1 // integer values
+jf @BANKJO1_16115
+$3574 += 1 // integer values
+
+:BANKJO1_16115
+if
+  $3574 >= 20 // integer values
+jf @BANKJO1_16204
+if
+  $3571 == 0 // integer values
+jf @BANKJO1_16204
+01BE: set_actor $3565 to_look_at_spot $3600 $3601 $3602
+01B2: give_actor $3565 weapon 23 ammo 30000 // Load the weapon model before using this
+011A: set_actor $3565 search_threat 1
+0350: set_actor $3565 maintain_position_when_attacked 1
+01CA: actor $3565 kill_player $PLAYER_CHAR
+$3571 = 1 // integer values
+
+:BANKJO1_16204
+jump @BANKJO1_16238
+
+:BANKJO1_16211
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_16238
+0372: set_actor $3565 anim 24 wait_state_time 10 ms
+
+:BANKJO1_16238
+if
+  $3577 == 0 // integer values
+jf @BANKJO1_16404
+if
+   Actor.Dead($3576)
+jf @BANKJO1_16293
+$3632 -= 1 // integer values
+$3577 = 1 // integer values
+jump @BANKJO1_16404
+
+:BANKJO1_16293
+if
+  $3578 == 0 // integer values
+jf @BANKJO1_16357
+01B2: give_actor $3576 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3576 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3576 kill_player $PLAYER_CHAR
+$3578 = 1 // integer values
+
+:BANKJO1_16357
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_16404
+009E: set_actor $3576 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3576 kill_player $PLAYER_CHAR
+
+:BANKJO1_16404
+if
+  $3582 == 0 // integer values
+jf @BANKJO1_16570
+if
+   Actor.Dead($3581)
+jf @BANKJO1_16459
+$3632 -= 1 // integer values
+$3582 = 1 // integer values
+jump @BANKJO1_16570
+
+:BANKJO1_16459
+if
+  $3583 == 0 // integer values
+jf @BANKJO1_16523
+01B2: give_actor $3581 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3581 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3581 kill_player $PLAYER_CHAR
+$3583 = 1 // integer values
+
+:BANKJO1_16523
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_16570
+009E: set_actor $3581 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3581 kill_player $PLAYER_CHAR
+
+:BANKJO1_16570
+if
+  $3586 == 0 // integer values
+jf @BANKJO1_16736
+if
+   Actor.Dead($3585)
+jf @BANKJO1_16625
+$3632 -= 1 // integer values
+$3586 = 1 // integer values
+jump @BANKJO1_16736
+
+:BANKJO1_16625
+if
+  $3587 == 0 // integer values
+jf @BANKJO1_16689
+01B2: give_actor $3585 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3585 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3585 kill_player $PLAYER_CHAR
+$3587 = 1 // integer values
+
+:BANKJO1_16689
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_16736
+009E: set_actor $3585 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3585 kill_player $PLAYER_CHAR
+
+:BANKJO1_16736
+if
+  $3590 == 0 // integer values
+jf @BANKJO1_16902
+if
+   Actor.Dead($3589)
+jf @BANKJO1_16791
+$3632 -= 1 // integer values
+$3590 = 1 // integer values
+jump @BANKJO1_16902
+
+:BANKJO1_16791
+if
+  $3591 == 0 // integer values
+jf @BANKJO1_16855
+01B2: give_actor $3589 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3589 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3589 kill_player $PLAYER_CHAR
+$3591 = 1 // integer values
+
+:BANKJO1_16855
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_16902
+009E: set_actor $3589 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3589 kill_player $PLAYER_CHAR
+
+:BANKJO1_16902
+if
+  $3594 == 0 // integer values
+jf @BANKJO1_17068
+if
+   Actor.Dead($3593)
+jf @BANKJO1_16957
+$3632 -= 1 // integer values
+$3594 = 1 // integer values
+jump @BANKJO1_17068
+
+:BANKJO1_16957
+if
+  $3595 == 0 // integer values
+jf @BANKJO1_17021
+01B2: give_actor $3593 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3593 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3593 kill_player $PLAYER_CHAR
+$3595 = 1 // integer values
+
+:BANKJO1_17021
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_17068
+009E: set_actor $3593 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3593 kill_player $PLAYER_CHAR
+
+:BANKJO1_17068
+if
+  $3657 == 2 // integer values
+jf @BANKJO1_17093
+$3657 = 0 // integer values
+
+:BANKJO1_17093
+return
+
+:BANKJO1_17095
+if
+  $3606 == 0 // integer values
+jf @BANKJO1_17275
+if
+00F6:   player $PLAYER_CHAR 0 385.13 -509.0 8.0 radius 0.5 0.5 3.0
+jf @BANKJO1_17208
+if
+  $3662 == 0 // integer values
+jf @BANKJO1_17201
+00BC: text_highpriority 'BJM1_23' 5000 ms 1  // ~g~You need to get the key card first!
+$3662 = 1 // integer values
+
+:BANKJO1_17201
+jump @BANKJO1_17215
+
+:BANKJO1_17208
+$3662 = 0 // integer values
+
+:BANKJO1_17215
+if
+   Pickup.Picked_up($3604)
+jf @BANKJO1_17268
+Marker.Disable($3605)
+03BC: $3637 = create_sphere 385.13 -509.0 8.0 1.0
+$3606 = 1 // integer values
+
+:BANKJO1_17268
+jump @BANKJO1_19457
+
+:BANKJO1_17275
+if
+  $3608 == 0 // integer values
+jf @BANKJO1_19457
+if
+00F9:   player $PLAYER_CHAR stopped 0 385.13 -509.0 8.0 radius 0.5 0.5 3.0
+jf @BANKJO1_19457
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+0470: $3664 = actor $PLAYER_ACTOR armed_weapon
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
+03BD: destroy_sphere $3637
+0395: clear_area 0 at 387.22 -506.517 range 9.194 1.0
+Camera.SetPosition(387.22, -506.517, 9.194, 0.0, 0.0, 0.0)
+Camera.PointAt(386.633, -507.287, 9.43, 2)
+01BE: set_actor $PLAYER_ACTOR to_look_at_spot 384.932 -510.077 9.848
+0372: set_actor $PLAYER_ACTOR anim 25 wait_state_time 100000 ms
+16@ = 0 // integer values
+
+:BANKJO1_17500
+if
+  3000 > 16@ // integer values
+jf @BANKJO1_17616
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_17546
+$3635 = 1 // integer values
+
+:BANKJO1_17546
+if
+  16@ >= 2000 // integer values
+jf @BANKJO1_17609
+if
+  $3666 == 0 // integer values
+jf @BANKJO1_17609
+018C: play_sound 18 at 384.932 -510.077 9.848
+$3666 = 1 // integer values
+
+:BANKJO1_17609
+jump @BANKJO1_17500
+
+:BANKJO1_17616
+053D:  $PLAYER_ACTOR
+Camera.PointAt(386.25, -506.384, 9.373, 2)
+03CF: load_wav 'BNK1_7' as 1
+03CF: load_wav 'BNK1_10' as 2
+if
+  $3607 == 0 // integer values
+jf @BANKJO1_17919
+
+:BANKJO1_17682
+if or
+834E:   not move_object $1809 to 383.252 -506.903 9.68 speed 0.01 0.01 0.0 collision_check 0
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @BANKJO1_17863
+wait 0
+if
+  $3639 == 0 // integer values
+jf @BANKJO1_17786
+018C: play_sound 3 at 383.252 -506.903 9.68
+$3639 = 1 // integer values
+
+:BANKJO1_17786
+if
+  $3639 == 1 // integer values
+jf @BANKJO1_17833
+018D: $3665 = create_sound 2 at 383.252 -506.903 9.68
+$3639 = 2 // integer values
+
+:BANKJO1_17833
+if
+   Actor.Dead($3510)
+jf @BANKJO1_17856
+$3635 = 1 // integer values
+
+:BANKJO1_17856
+jump @BANKJO1_17682
+
+:BANKJO1_17863
+018E: stop_sound $3665
+if
+  $3639 == 2 // integer values
+jf @BANKJO1_17912
+018C: play_sound 3 at 383.252 -506.903 9.68
+$3639 = 3 // integer values
+
+:BANKJO1_17912
+$3607 = 1 // integer values
+
+:BANKJO1_17919
+0211: actor $PLAYER_ACTOR walk_to 384.12 -507.38
+16@ = 0 // integer values
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_17988
+0372: set_actor $3510 anim 0 wait_state_time 1 ms
+0211: actor $3510 walk_to 383.523 -505.34
+jump @BANKJO1_17995
+
+:BANKJO1_17988
+$3635 = 1 // integer values
+
+:BANKJO1_17995
+if
+80ED:   not actor $PLAYER_ACTOR 0 384.12 -507.38 radius 0.5 0.5
+jf @BANKJO1_18144
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18060
+$3635 = 1 // integer values
+
+:BANKJO1_18060
+if
+  16@ > 8000 // integer values
+jf @BANKJO1_18137
+if
+80ED:   not actor $PLAYER_ACTOR 0 384.12 -507.38 radius 0.5 0.5
+jf @BANKJO1_18137
+Actor.PutAt($PLAYER_ACTOR, 384.12, -507.38, 8.4)
+
+:BANKJO1_18137
+jump @BANKJO1_17995
+
+:BANKJO1_18144
+17@ = 0 // integer values
+
+:BANKJO1_18151
+if
+80ED:   not actor $3510 0 383.523 -505.34 radius 0.5 0.5
+jf @BANKJO1_18307
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18223
+$3635 = 1 // integer values
+jump @BANKJO1_18300
+
+:BANKJO1_18223
+if
+  17@ > 8000 // integer values
+jf @BANKJO1_18300
+if
+80ED:   not actor $3510 0 383.523 -505.34 radius 0.5 0.5
+jf @BANKJO1_18300
+Actor.PutAt($3510, 383.523, -505.34, 8.4)
+
+:BANKJO1_18300
+jump @BANKJO1_18151
+
+:BANKJO1_18307
+020E: actor $PLAYER_ACTOR look_at_actor $3510
+03D1: play_wav 1
+00BC: text_highpriority 'BNK1_7' 5000 ms 1  // Cam Jones?
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 1000000 ms
+
+:BANKJO1_18346
+if
+83D2:   not wav 1 ended
+jf @BANKJO1_18395
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18388
+$3635 = 1 // integer values
+
+:BANKJO1_18388
+jump @BANKJO1_18346
+
+:BANKJO1_18395
+03D5: remove_text 'BNK1_7'  // Cam Jones?
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 1 ms
+03CF: load_wav 'BNK1_8' as 1
+03D1: play_wav 2
+00BC: text_highpriority 'BNK1_10' 10000 ms 1  // Yeah, that's me..
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_18480
+0372: set_actor $3510 anim 19 wait_state_time 1000000 ms
+jump @BANKJO1_18487
+
+:BANKJO1_18480
+$3635 = 1 // integer values
+
+:BANKJO1_18487
+if or
+83D2:   not wav 2 ended
+83D0:   not wav 1 loaded
+jf @BANKJO1_18540
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18533
+$3635 = 1 // integer values
+
+:BANKJO1_18533
+jump @BANKJO1_18487
+
+:BANKJO1_18540
+03D5: remove_text 'BNK1_10'  // Yeah, that's me..
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_18582
+0372: set_actor $3510 anim 0 wait_state_time 1 ms
+jump @BANKJO1_18589
+
+:BANKJO1_18582
+$3635 = 1 // integer values
+
+:BANKJO1_18589
+03CF: load_wav 'BNK1_11' as 2
+03D1: play_wav 1
+00BC: text_highpriority 'BNK1_8' 10000 ms 1  // I'm busting you out!
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 1000000 ms
+
+:BANKJO1_18632
+if or
+83D2:   not wav 1 ended
+83D0:   not wav 2 loaded
+jf @BANKJO1_18685
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18678
+$3635 = 1 // integer values
+
+:BANKJO1_18678
+jump @BANKJO1_18632
+
+:BANKJO1_18685
+03D5: remove_text 'BNK1_8'  // I'm busting you out!
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 1 ms
+03D1: play_wav 2
+00BC: text_highpriority 'BNK1_11' 10000 ms 1  // Whatever you say!
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_18758
+0372: set_actor $3510 anim 19 wait_state_time 1000000 ms
+jump @BANKJO1_18765
+
+:BANKJO1_18758
+$3635 = 1 // integer values
+
+:BANKJO1_18765
+if
+83D2:   not wav 2 ended
+jf @BANKJO1_18814
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_18807
+$3635 = 1 // integer values
+
+:BANKJO1_18807
+jump @BANKJO1_18765
+
+:BANKJO1_18814
+03D5: remove_text 'BNK1_11'  // Whatever you say!
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_18856
+0372: set_actor $3510 anim 0 wait_state_time 1 ms
+jump @BANKJO1_18863
+
+:BANKJO1_18856
+$3635 = 1 // integer values
+
+:BANKJO1_18863
+0395: clear_area 0 at 389.95 -503.077 range 9.114 1.0
+Camera.SetPosition(389.95, -503.077, 9.114, 0.0, 0.0, 0.0)
+Camera.PointAt(389.151, -503.666, 9.229, 2)
+0211: actor $PLAYER_ACTOR walk_to 387.64 -505.7
+17@ = 0 // integer values
+
+:BANKJO1_18960
+if
+  750 > 17@ // integer values
+jf @BANKJO1_19013
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_19006
+$3635 = 1 // integer values
+
+:BANKJO1_19006
+jump @BANKJO1_18960
+
+:BANKJO1_19013
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_19044
+0211: actor $3510 walk_to 385.48 -506.76
+
+:BANKJO1_19044
+16@ = 0 // integer values
+
+:BANKJO1_19051
+if
+80ED:   not actor $PLAYER_ACTOR 0 387.64 -505.7 radius 0.5 0.5
+jf @BANKJO1_19200
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_19116
+$3635 = 1 // integer values
+
+:BANKJO1_19116
+if
+  16@ > 5000 // integer values
+jf @BANKJO1_19193
+if
+80ED:   not actor $PLAYER_ACTOR 0 387.64 -505.7 radius 0.5 0.5
+jf @BANKJO1_19193
+Actor.PutAt($PLAYER_ACTOR, 387.64, -505.7, 8.41)
+
+:BANKJO1_19193
+jump @BANKJO1_19051
+
+:BANKJO1_19200
+17@ = 0 // integer values
+
+:BANKJO1_19207
+if
+80ED:   not actor $3510 0 385.48 -506.76 radius 0.5 0.5
+jf @BANKJO1_19363
+wait 0
+if
+   Actor.Dead($3510)
+jf @BANKJO1_19279
+$3635 = 1 // integer values
+jump @BANKJO1_19356
+
+:BANKJO1_19279
+if
+  17@ > 5000 // integer values
+jf @BANKJO1_19356
+if
+80ED:   not actor $PLAYER_ACTOR 0 385.48 -506.76 radius 0.5 0.5
+jf @BANKJO1_19356
+Actor.PutAt($PLAYER_ACTOR, 385.48, -506.76, 8.41)
+
+:BANKJO1_19356
+jump @BANKJO1_19207
+
+:BANKJO1_19363
+Actor.Angle($PLAYER_ACTOR) = 333.85
+if
+   not Actor.Dead($3510)
+jf @BANKJO1_19406
+Actor.Angle($3510) = 333.85
+jump @BANKJO1_19413
+
+:BANKJO1_19406
+$3635 = 1 // integer values
+
+:BANKJO1_19413
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $3664
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+$3608 = 1 // integer values
+
+:BANKJO1_19457
+return
+
+:BANKJO1_19459
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_20988
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_20236
+if and
+82D7:   not player $PLAYER_CHAR currentweapon == 0
+82D7:   not player $PLAYER_CHAR currentweapon == 1
+jf @BANKJO1_20215
+if
+  $3638 == 0 // integer values
+jf @BANKJO1_19802
+03CF: load_wav 'BJM1_20' as 1
+$3638 = 1 // integer values
+
+:BANKJO1_19802
+if
+  $3638 == 1 // integer values
+jf @BANKJO1_19842
+if
+03D0:   wav 1 loaded
+jf @BANKJO1_19842
+$3638 = 2 // integer values
+
+:BANKJO1_19842
+if
+  $3638 == 2 // integer values
+jf @BANKJO1_19886
+03D1: play_wav 1
+00BC: text_highpriority 'BJM1_20' 5000 ms 1  // Put the weapon away or face the consequences!
+$3638 = 3 // integer values
+
+:BANKJO1_19886
+if
+  $3638 == 3 // integer values
+jf @BANKJO1_19936
+if
+03D2:   wav 1 ended
+jf @BANKJO1_19936
+03D5: remove_text 'BJM1_20'  // Put the weapon away or face the consequences!
+$3638 = 4 // integer values
+
+:BANKJO1_19936
+if
+  $3638 == 4 // integer values
+jf @BANKJO1_19968
+17@ = 0 // integer values
+$3638 = 5 // integer values
+
+:BANKJO1_19968
+if
+  $3638 == 5 // integer values
+jf @BANKJO1_20042
+if
+  17@ >= 4000 // integer values
+jf @BANKJO1_20042
+if
+  $3611 == 0 // integer values
+jf @BANKJO1_20042
+03CF: load_wav 'BJM1_4' as 2
+$3611 = 1 // integer values
+
+:BANKJO1_20042
+if
+  $3611 == 1 // integer values
+jf @BANKJO1_20082
+if
+03D0:   wav 2 loaded
+jf @BANKJO1_20082
+$3611 = 2 // integer values
+
+:BANKJO1_20082
+if
+  $3611 == 2 // integer values
+jf @BANKJO1_20126
+03D1: play_wav 2
+00BC: text_highpriority 'BJM1_4' 5000 ms 1  // He's armed! Kill him!
+$3611 = 3 // integer values
+
+:BANKJO1_20126
+if
+  $3611 == 3 // integer values
+jf @BANKJO1_20176
+if
+03D2:   wav 2 ended
+jf @BANKJO1_20176
+03D5: remove_text 'BJM1_4'  // He's armed! Kill him!
+$3611 = 4 // integer values
+
+:BANKJO1_20176
+if
+  $3611 == 4 // integer values
+jf @BANKJO1_20208
+$3610 = 1 // integer values
+$3611 = 5 // integer values
+
+:BANKJO1_20208
+jump @BANKJO1_20236
+
+:BANKJO1_20215
+$3611 = 0 // integer values
+$3638 = 0 // integer values
+$3610 = 0 // integer values
+
+:BANKJO1_20236
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+jf @BANKJO1_20988
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 0
+jf @BANKJO1_20967
+if
+  $3638 == 0 // integer values
+jf @BANKJO1_20554
+03CF: load_wav 'BJM1_20' as 1
+$3638 = 1 // integer values
+
+:BANKJO1_20554
+if
+  $3638 == 1 // integer values
+jf @BANKJO1_20594
+if
+03D0:   wav 1 loaded
+jf @BANKJO1_20594
+$3638 = 2 // integer values
+
+:BANKJO1_20594
+if
+  $3638 == 2 // integer values
+jf @BANKJO1_20638
+03D1: play_wav 1
+00BC: text_highpriority 'BJM1_20' 5000 ms 1  // Put the weapon away or face the consequences!
+$3638 = 3 // integer values
+
+:BANKJO1_20638
+if
+  $3638 == 3 // integer values
+jf @BANKJO1_20688
+if
+03D2:   wav 1 ended
+jf @BANKJO1_20688
+03D5: remove_text 'BJM1_20'  // Put the weapon away or face the consequences!
+$3638 = 4 // integer values
+
+:BANKJO1_20688
+if
+  $3638 == 4 // integer values
+jf @BANKJO1_20720
+17@ = 0 // integer values
+$3638 = 5 // integer values
+
+:BANKJO1_20720
+if
+  $3638 == 5 // integer values
+jf @BANKJO1_20794
+if
+  17@ >= 4000 // integer values
+jf @BANKJO1_20794
+if
+  $3611 == 0 // integer values
+jf @BANKJO1_20794
+03CF: load_wav 'BJM1_4' as 2
+$3611 = 1 // integer values
+
+:BANKJO1_20794
+if
+  $3611 == 1 // integer values
+jf @BANKJO1_20834
+if
+03D0:   wav 2 loaded
+jf @BANKJO1_20834
+$3611 = 2 // integer values
+
+:BANKJO1_20834
+if
+  $3611 == 2 // integer values
+jf @BANKJO1_20878
+03D1: play_wav 2
+00BC: text_highpriority 'BJM1_4' 5000 ms 1  // He's armed! Kill him!
+$3611 = 3 // integer values
+
+:BANKJO1_20878
+if
+  $3611 == 3 // integer values
+jf @BANKJO1_20928
+if
+03D2:   wav 2 ended
+jf @BANKJO1_20928
+03D5: remove_text 'BJM1_4'  // He's armed! Kill him!
+$3611 = 4 // integer values
+
+:BANKJO1_20928
+if
+  $3611 == 4 // integer values
+jf @BANKJO1_20960
+$3610 = 1 // integer values
+$3611 = 5 // integer values
+
+:BANKJO1_20960
+jump @BANKJO1_20988
+
+:BANKJO1_20967
+$3611 = 0 // integer values
+$3638 = 0 // integer values
+$3610 = 0 // integer values
+
+:BANKJO1_20988
+return
+
+:BANKJO1_20990
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_21577
+if
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_21086
+if
+  $3613 == 0 // integer values
+jf @BANKJO1_21086
+$3613 = 1 // integer values
+
+:BANKJO1_21086
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+jf @BANKJO1_21374
+if
+  $3613 == 0 // integer values
+jf @BANKJO1_21374
+$3613 = 1 // integer values
+
+:BANKJO1_21374
+if
+  $3613 == 1 // integer values
+jf @BANKJO1_21411
+03CF: load_wav 'BJM1_5' as 2
+$3613 = 2 // integer values
+
+:BANKJO1_21411
+if
+  $3613 == 2 // integer values
+jf @BANKJO1_21451
+if
+03D0:   wav 2 loaded
+jf @BANKJO1_21451
+$3613 = 3 // integer values
+
+:BANKJO1_21451
+if
+  $3613 == 3 // integer values
+jf @BANKJO1_21495
+03D1: play_wav 2
+00BC: text_highpriority 'BJM1_5' 5000 ms 1  // Only authorized personnel beyond this point!
+$3613 = 4 // integer values
+
+:BANKJO1_21495
+if
+  $3613 == 4 // integer values
+jf @BANKJO1_21545
+if
+03D2:   wav 2 ended
+jf @BANKJO1_21545
+03D5: remove_text 'BJM1_5'  // Only authorized personnel beyond this point!
+$3613 = 5 // integer values
+
+:BANKJO1_21545
+if
+  $3613 == 5 // integer values
+jf @BANKJO1_21577
+$3612 = 1 // integer values
+$3613 = 6 // integer values
+
+:BANKJO1_21577
+return
+
+:BANKJO1_21579
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_22153
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @BANKJO1_22153
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_21883
+$3598 = 1 // integer values
+
+:BANKJO1_21883
+if or
+02B4:   player $PLAYER_CHAR in_cube_on_foot 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B4:   player $PLAYER_CHAR in_cube_on_foot 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+jf @BANKJO1_22153
+$3598 = 1 // integer values
+
+:BANKJO1_22153
+return
+
+:BANKJO1_22155
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_22713
+if or
+02B5:   player $PLAYER_CHAR in_cube_in_car 393.174 -470.686 10.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 397.983 -479.156 10.0 394.546 -483.252 15.0 radius 3.3 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 401.651 -480.614 10.0 397.416 -485.66 15.0 radius 9.4 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 407.682 -480.576 10.0 405.289 -483.392 15.0 radius 4.8 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 389.12 -478.56 10.34 379.5 -489.4 14.0 radius 4.0 sphere 0
+jf @BANKJO1_22443
+$3598 = 1 // integer values
+
+:BANKJO1_22443
+if or
+02B5:   player $PLAYER_CHAR in_cube_in_car 387.811 -486.137 10.0 386.424 -487.79 15.0 radius 4.2 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 393.073 -495.966 8.0 390.441 -499.103 15.0 radius 2.2 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 378.554 -485.414 11.0 377.167 -487.068 15.0 radius 4.2 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 395.032 -484.093 8.0 388.44 -491.948 15.0 radius 11.6 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 396.233 -504.359 7.0 386.533 -496.22 15.0 radius 12.7 sphere 0
+02B5:   player $PLAYER_CHAR in_cube_in_car 368.888 -465.922 11.0 353.713 -484.155 20.0 radius 19.8 sphere 0
+jf @BANKJO1_22713
+$3598 = 1 // integer values
+
+:BANKJO1_22713
+return
+
+:BANKJO1_22715
+if
+  $3671 == 0 // integer values
+jf @BANKJO1_23738
+if
+  20 >= $3631 // integer values
+jf @BANKJO1_23738
+if
+  6 > $3632 // integer values
+jf @BANKJO1_23738
+if
+  $3633 == 2 // integer values
+jf @BANKJO1_22801
+17@ = 0 // integer values
+$3633 = 0 // integer values
+
+:BANKJO1_22801
+if
+8339:   not anything_in_cube_cornerA 380.0 -491.64 8.0 cornerB 375.62 -493.57 16.0 solid 0 car 1 actor 1 object 0 particle 0
+jf @BANKJO1_23738
+if
+  17@ >= 5000 // integer values
+jf @BANKJO1_23738
+if
+  $3633 == 0 // integer values
+jf @BANKJO1_23738
+$3634 = -1 // integer values
+if or
+  $3615 == 0 // integer values
+  $3615 == 2 // integer values
+jf @BANKJO1_22993
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3614 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3614 // integer values and handles
+$3615 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_22993
+if or
+  $3617 == 0 // integer values
+  $3617 == 2 // integer values
+jf @BANKJO1_23088
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3616 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3616 // integer values and handles
+$3617 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23088
+if or
+  $3619 == 0 // integer values
+  $3619 == 2 // integer values
+jf @BANKJO1_23183
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3618 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3618 // integer values and handles
+$3619 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23183
+if or
+  $3621 == 0 // integer values
+  $3621 == 2 // integer values
+jf @BANKJO1_23278
+0395: clear_area 0 at -379.88 -493.05 range 11.34 4.0
+$3620 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3620 // integer values and handles
+$3621 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23278
+if or
+  $3623 == 0 // integer values
+  $3623 == 2 // integer values
+jf @BANKJO1_23373
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3622 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3622 // integer values and handles
+$3623 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23373
+if or
+  $3625 == 0 // integer values
+  $3625 == 2 // integer values
+jf @BANKJO1_23468
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3624 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3624 // integer values and handles
+$3625 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23468
+if or
+  $3627 == 0 // integer values
+  $3627 == 2 // integer values
+jf @BANKJO1_23563
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3626 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3626 // integer values and handles
+$3627 = 1 // integer values
+jump @BANKJO1_23651
+
+:BANKJO1_23563
+if or
+  $3629 == 0 // integer values
+  $3629 == 2 // integer values
+jf @BANKJO1_23651
+0395: clear_area 0 at 379.88 -493.05 range 11.34 4.0
+$3628 = Actor.Create(CivMale, #COP, 379.88, -493.05, 11.34)
+0084: $3634 = $3628 // integer values and handles
+$3629 = 1 // integer values
+
+:BANKJO1_23651
+if
+   not Actor.Dead($3634)
+jf @BANKJO1_23738
+if
+   not $3634 == -1 // integer values
+jf @BANKJO1_23738
+0243: set_actor $3634 ped_stats_to 16
+Actor.Angle($3634) = 180.0
+0239: actor $3634 run_to 381.53 -490.91
+$3632 += 1 // integer values
+$3631 += 1 // integer values
+$3633 = 1 // integer values
+
+:BANKJO1_23738
+return
+
+:BANKJO1_23740
+if
+  $3633 == 1 // integer values
+jf @BANKJO1_23882
+if
+   not Actor.Dead($3634)
+jf @BANKJO1_23875
+if
+00FF:   actor $3634 0 381.53 -490.91 11.35 radius 1.0 1.0 2.0
+jf @BANKJO1_23868
+01B2: give_actor $3634 weapon 23 ammo 30000 // Load the weapon model before using this
+009E: set_actor $3634 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3634 kill_player $PLAYER_CHAR
+$3633 = 2 // integer values
+
+:BANKJO1_23868
+jump @BANKJO1_23882
+
+:BANKJO1_23875
+$3633 = 2 // integer values
+
+:BANKJO1_23882
+return
+
+:BANKJO1_23884
+if
+  $3615 == 1 // integer values
+jf @BANKJO1_23991
+if
+   Actor.Dead($3614)
+jf @BANKJO1_23944
+Actor.DestroyWithFade($3614)
+$3632 -= 1 // integer values
+$3615 = 2 // integer values
+jump @BANKJO1_23991
+
+:BANKJO1_23944
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_23991
+009E: set_actor $3614 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3614 kill_player $PLAYER_CHAR
+
+:BANKJO1_23991
+if
+  $3617 == 1 // integer values
+jf @BANKJO1_24098
+if
+   Actor.Dead($3616)
+jf @BANKJO1_24051
+Actor.DestroyWithFade($3616)
+$3632 -= 1 // integer values
+$3617 = 2 // integer values
+jump @BANKJO1_24098
+
+:BANKJO1_24051
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24098
+009E: set_actor $3616 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3616 kill_player $PLAYER_CHAR
+
+:BANKJO1_24098
+if
+  $3619 == 1 // integer values
+jf @BANKJO1_24205
+if
+   Actor.Dead($3618)
+jf @BANKJO1_24158
+Actor.DestroyWithFade($3618)
+$3632 -= 1 // integer values
+$3619 = 2 // integer values
+jump @BANKJO1_24205
+
+:BANKJO1_24158
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24205
+009E: set_actor $3618 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3618 kill_player $PLAYER_CHAR
+
+:BANKJO1_24205
+if
+  $3621 == 1 // integer values
+jf @BANKJO1_24312
+if
+   Actor.Dead($3620)
+jf @BANKJO1_24265
+Actor.DestroyWithFade($3620)
+$3632 -= 1 // integer values
+$3621 = 2 // integer values
+jump @BANKJO1_24312
+
+:BANKJO1_24265
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24312
+009E: set_actor $3620 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3620 kill_player $PLAYER_CHAR
+
+:BANKJO1_24312
+if
+  $3623 == 1 // integer values
+jf @BANKJO1_24419
+if
+   Actor.Dead($3622)
+jf @BANKJO1_24372
+Actor.DestroyWithFade($3622)
+$3632 -= 1 // integer values
+$3623 = 2 // integer values
+jump @BANKJO1_24419
+
+:BANKJO1_24372
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24419
+009E: set_actor $3622 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3622 kill_player $PLAYER_CHAR
+
+:BANKJO1_24419
+if
+  $3625 == 1 // integer values
+jf @BANKJO1_24526
+if
+   Actor.Dead($3624)
+jf @BANKJO1_24479
+Actor.DestroyWithFade($3624)
+$3632 -= 1 // integer values
+$3625 = 2 // integer values
+jump @BANKJO1_24526
+
+:BANKJO1_24479
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24526
+009E: set_actor $3624 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3624 kill_player $PLAYER_CHAR
+
+:BANKJO1_24526
+if
+  $3627 == 1 // integer values
+jf @BANKJO1_24633
+if
+   Actor.Dead($3626)
+jf @BANKJO1_24586
+Actor.DestroyWithFade($3626)
+$3632 -= 1 // integer values
+$3627 = 2 // integer values
+jump @BANKJO1_24633
+
+:BANKJO1_24586
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24633
+009E: set_actor $3626 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3626 kill_player $PLAYER_CHAR
+
+:BANKJO1_24633
+if
+  $3629 == 1 // integer values
+jf @BANKJO1_24740
+if
+   Actor.Dead($3628)
+jf @BANKJO1_24693
+Actor.DestroyWithFade($3628)
+$3632 -= 1 // integer values
+$3629 = 2 // integer values
+jump @BANKJO1_24740
+
+:BANKJO1_24693
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24740
+009E: set_actor $3628 path $3600 $3601 $3602 unknown 0.5 1
+01CA: actor $3628 kill_player $PLAYER_CHAR
+
+:BANKJO1_24740
+if
+  $3658 == 2 // integer values
+jf @BANKJO1_24765
+$3658 = 0 // integer values
+
+:BANKJO1_24765
+return
+
+:BANKJO1_24767
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_25570
+03BD: destroy_sphere $3636
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+Camera.SetPosition(399.925, -485.48, 14.542, 0.0, 0.0, 0.0)
+Camera.PointAt(400.831, -485.674, 14.162, 2)
+0211: actor $PLAYER_ACTOR walk_to 409.56 -484.36
+16@ = 0 // integer values
+
+:BANKJO1_24896
+if
+80ED:   not actor $PLAYER_ACTOR 0 409.56 -484.36 radius 1.0 1.0
+jf @BANKJO1_25079
+wait 0
+if
+  $3635 == 0 // integer values
+jf @BANKJO1_24979
+if
+   Actor.Dead($3510)
+jf @BANKJO1_24979
+$3635 = 1 // integer values
+
+:BANKJO1_24979
+if
+  16@ > 8000 // integer values
+jf @BANKJO1_25072
+if
+80ED:   not actor $PLAYER_ACTOR 0 409.56 -484.36 radius 1.0 1.0
+jf @BANKJO1_25072
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_25072
+Actor.PutAt($PLAYER_ACTOR, 409.56, -484.36, 11.35)
+
+:BANKJO1_25072
+jump @BANKJO1_24896
+
+:BANKJO1_25079
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_25131
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER6'
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_25131
+0353: refresh_actor $PLAYER_ACTOR
+
+:BANKJO1_25131
+0211: actor $PLAYER_ACTOR walk_to 407.77 -487.13
+16@ = 0 // integer values
+
+:BANKJO1_25153
+if
+80ED:   not actor $PLAYER_ACTOR 0 407.77 -487.13 radius 0.5 0.5
+jf @BANKJO1_25336
+wait 0
+if
+  16@ > 8000 // integer values
+jf @BANKJO1_25288
+if
+80ED:   not actor $PLAYER_ACTOR 0 407.77 -487.13 radius 0.5 0.5
+jf @BANKJO1_25288
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_25288
+Actor.PutAt($PLAYER_ACTOR, 407.77, -487.13, 11.35)
+
+:BANKJO1_25288
+if
+  $3635 == 0 // integer values
+jf @BANKJO1_25329
+if
+   Actor.Dead($3510)
+jf @BANKJO1_25329
+$3635 = 1 // integer values
+
+:BANKJO1_25329
+jump @BANKJO1_25153
+
+:BANKJO1_25336
+0211: actor $PLAYER_ACTOR walk_to 406.16 -487.14
+
+:BANKJO1_25351
+if
+80ED:   not actor $PLAYER_ACTOR 0 406.16 -487.14 radius 0.5 0.5
+jf @BANKJO1_25534
+wait 0
+if
+  $3635 == 0 // integer values
+jf @BANKJO1_25434
+if
+   Actor.Dead($3510)
+jf @BANKJO1_25434
+$3635 = 1 // integer values
+
+:BANKJO1_25434
+if
+  16@ > 8000 // integer values
+jf @BANKJO1_25527
+if
+80ED:   not actor $PLAYER_ACTOR 0 406.16 -487.14 radius 0.5 0.5
+jf @BANKJO1_25527
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO1_25527
+Actor.PutAt($PLAYER_ACTOR, 406.16, -487.14, 11.35)
+
+:BANKJO1_25527
+jump @BANKJO1_25351
+
+:BANKJO1_25534
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+$3609 = 1 // integer values
+
+:BANKJO1_25570
+return
+
+:BANKJO1_25572
+if
+  $3598 == 0 // integer values
+jf @BANKJO1_25942
+if
+  $3609 == 0 // integer values
+jf @BANKJO1_25942
+if
+02B4:   player $PLAYER_CHAR in_cube_on_foot 393.174 -470.686 8.0 386.992 -478.052 15.0 radius 8.2 sphere 0
+jf @BANKJO1_25686
+if
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO1_25686
+$3598 = 1 // integer values
+
+:BANKJO1_25686
+if
+02B3:   player $PLAYER_CHAR in_cube 390.82 -471.0 10.0 385.0 -468.27 15.0 radius 10.0 sphere 0
+jf @BANKJO1_25764
+if
+  $3652 == 0 // integer values
+jf @BANKJO1_25764
+$3652 = 1 // integer values
+
+:BANKJO1_25764
+if
+  $3652 == 1 // integer values
+jf @BANKJO1_25801
+03CF: load_wav 'BJM1_5' as 2
+$3652 = 2 // integer values
+
+:BANKJO1_25801
+if
+  $3652 == 2 // integer values
+jf @BANKJO1_25841
+if
+03D0:   wav 2 loaded
+jf @BANKJO1_25841
+$3652 = 3 // integer values
+
+:BANKJO1_25841
+if
+  $3652 == 3 // integer values
+jf @BANKJO1_25885
+03D1: play_wav 2
+00BC: text_highpriority 'BJM1_5' 5000 ms 1  // Only authorized personnel beyond this point!
+$3652 = 4 // integer values
+
+:BANKJO1_25885
+if
+  $3652 == 4 // integer values
+jf @BANKJO1_25942
+if
+03D2:   wav 2 ended
+jf @BANKJO1_25942
+03D5: remove_text 'BJM1_5'  // Only authorized personnel beyond this point!
+$3598 = 1 // integer values
+$3652 = 5 // integer values
+
+:BANKJO1_25942
+return
+
+:BANKJO1_25944
+Actor.RemoveReferences($3517)
+Actor.RemoveReferences($3528)
+Actor.RemoveReferences($3539)
+Actor.RemoveReferences($3550)
+Actor.RemoveReferences($3561)
+Actor.RemoveReferences($3565)
+Actor.RemoveReferences($3576)
+Actor.RemoveReferences($3581)
+Actor.RemoveReferences($3585)
+Actor.RemoveReferences($3589)
+Actor.RemoveReferences($3593)
+Actor.RemoveReferences($3614)
+Actor.RemoveReferences($3616)
+Actor.RemoveReferences($3618)
+Actor.RemoveReferences($3620)
+Actor.RemoveReferences($3622)
+Actor.RemoveReferences($3624)
+Actor.RemoveReferences($3626)
+Actor.RemoveReferences($3628)
+$3671 = 2 // integer values
+return

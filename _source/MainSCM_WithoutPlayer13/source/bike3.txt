@@ -1,0 +1,2094 @@
+:BIKE3
+thread 'BIKE3'
+gosub @BIKE3_46
+if
+wasted_or_busted
+jf @BIKE3_37
+gosub @BIKE3_4985
+
+:BIKE3_37
+gosub @BIKE3_5065
+end_thread
+
+:BIKE3_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$5291 = 0 // integer values
+$5291 = 0 // integer values
+$5292 = 0 // integer values
+$5293 = 0 // integer values
+$5294 = 0 // integer values
+$5295 = 0 // integer values
+$5296 = 0 // integer values
+$5297 = 0 // integer values
+$5298 = 0 // integer values
+$5299 = 0 // integer values
+$5300 = 0 // integer values
+$5301 = 0 // integer values
+$5302 = 0 // integer values
+$5310 = 0 // integer values
+$5312 = 0 // integer values
+$5314 = 0 // integer values
+$5316 = 0 // integer values
+$5318 = 0 // integer values
+$5320 = 0 // integer values
+$5322 = 0 // integer values
+$5324 = 0 // integer values
+$5326 = 0 // integer values
+$5328 = 0 // integer values
+$5330 = 0 // integer values
+$5332 = 0 // integer values
+$5334 = 0 // integer values
+$5336 = 0 // integer values
+$5338 = 0 // integer values
+$5340 = 0 // integer values
+$5305 = 0 // integer values
+$5307 = 0 // integer values
+$5308 = 0 // integer values
+$5341 = 0 // integer values
+$5342 = 0.0 // floating-point values
+$5343 = 0.0 // floating-point values
+$5344 = 0.0 // floating-point values
+$5354 = 0 // integer values
+$5355 = 0 // integer values
+$5360 = 0 // integer values
+$5362 = 0 // integer values
+$5363 = 0 // integer values
+$5364 = 0 // integer values
+$5365 = 0 // integer values
+$5366 = 0 // integer values
+$5367 = 0 // integer values
+$5368 = 0 // integer values
+$5369 = 0 // integer values
+$5370 = 0 // integer values
+$5371 = 0 // integer values
+$5372 = 0 // integer values
+$5373 = 0 // integer values
+wait 0
+054C: use_GXT_table 'BIKE3'
+058E: set_restart_mission_taxi_destination -609.723 658.861 9.908 279.44
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSBIGM'
+023C: load_special_actor 3 'MSERVER'
+select_interior 11
+Camera.SetAtPos(-597.02, 642.46, 11.0)
+04F9: set_extracolors 15 fade 0
+038B: load_requested_models
+
+:BIKE3_522
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+jf @BIKE3_556
+wait 0
+jump @BIKE3_522
+
+:BIKE3_556
+02E4: load_cutscene_data 'BIKE_2'
+0244: set_cutscene_pos -602.052 636.289 10.636
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $155 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $155 'CSBIGM'
+02E5: $157 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $157 'MSERVER'
+0395: clear_area 1 at -597.25 655.87 range 10.06 1.0
+0055: put_player $PLAYER_CHAR at -597.25 655.87 10.06
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BIKE3_726
+if
+  4538 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_761
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_726
+
+:BIKE3_761
+00BC: text_highpriority 'BM3_A' 10000 ms 1  // Hey there, Mitch.
+
+:BIKE3_776
+if
+  6581 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_811
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_776
+
+:BIKE3_811
+00BC: text_highpriority 'BM3_B' 10000 ms 1  // Well, if it ain't 'bad ass' Vercetti.
+
+:BIKE3_826
+if
+  8775 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_861
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_826
+
+:BIKE3_861
+00BC: text_highpriority 'BM3_C' 10000 ms 1  // Now I wanna see how good you can fight for your patch.
+
+:BIKE3_876
+if
+  11662 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_911
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_876
+
+:BIKE3_911
+00BC: text_highpriority 'BM3_D' 10000 ms 1  // A local street gang made the mistake of stealing my hog...
+
+:BIKE3_926
+if
+  14895 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_961
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_926
+
+:BIKE3_961
+00BC: text_highpriority 'BM3_E' 10000 ms 1  // probably because of some machismo thing or somethin'.
+
+:BIKE3_976
+if
+  17616 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1011
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_976
+
+:BIKE3_1011
+00BC: text_highpriority 'BM3_F' 10000 ms 1  // Me and the boys would go over there and teach them a lesson in respect an'all.
+
+:BIKE3_1026
+if
+  22783 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1061
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_1026
+
+:BIKE3_1061
+00BC: text_highpriority 'BM3_G' 10000 ms 1  // Anyways.
+
+:BIKE3_1076
+if
+  24681 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1111
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_1076
+
+:BIKE3_1111
+00BC: text_highpriority 'BM3_H' 10000 ms 1  // Then I got to thinking - this would make a good initiation for you.
+
+:BIKE3_1126
+if
+  28415 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1161
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_1126
+
+:BIKE3_1161
+00BC: text_highpriority 'BM3_I' 10000 ms 1  // You get my bike back, you can tell Paul he's got his security.
+
+:BIKE3_1176
+if
+  32256 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1211
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_1176
+
+:BIKE3_1211
+00BE: text_clear_all
+
+:BIKE3_1213
+if
+  37916 > $CUT_SCENE_TIME // integer values
+jf @BIKE3_1250
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE3_1213
+
+:BIKE3_1250
+fade 0 2000
+00BE: text_clear_all
+
+:BIKE3_1259
+if
+fading
+jf @BIKE3_1283
+wait 0
+jump @BIKE3_1259
+
+:BIKE3_1283
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+Camera.SetAtPos(-597.25, 655.87, 10.06)
+04E3: unknown_player $PLAYER_CHAR 1 60000
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+Model.Load(#DOONTOON50)
+Model.Load(#ROAD_DOWNTOWN_NEW2)
+Model.Load(#ROAD_DOWNTOWN02)
+Model.Load(#AMMUNATION_DT)
+Model.Load(#DOONTOON19)
+Model.Load(#DT_COMPOUND_ROOF)
+Model.Load(#DOONTOON51)
+Model.Load(#LODNTOON28)
+Model.Load(#AMMU_WINDOWS1)
+
+:BIKE3_1406
+if or
+   not Model.Available(#DOONTOON50)
+   not Model.Available(#ROAD_DOWNTOWN_NEW2)
+   not Model.Available(#ROAD_DOWNTOWN02)
+   not Model.Available(#AMMUNATION_DT)
+   not Model.Available(#DOONTOON19)
+   not Model.Available(#DT_COMPOUND_ROOF)
+jf @BIKE3_1458
+wait 0
+jump @BIKE3_1406
+
+:BIKE3_1458
+if or
+   not Model.Available(#DOONTOON51)
+   not Model.Available(#LODNTOON28)
+   not Model.Available(#AMMU_WINDOWS1)
+jf @BIKE3_1495
+wait 0
+jump @BIKE3_1458
+
+:BIKE3_1495
+0169: set_fade_color 0 0 0
+02A3: enable_widescreen 1
+wait 1000
+fade 1 1500
+00BC: text_highpriority 'BM3_1' 4000 ms 1  // ~g~A local gang has stolen Mitch Baker's Angel. Get it back!
+16@ = 0 // integer values
+
+:BIKE3_1541
+if
+  3500 > 16@ // integer values
+jf @BIKE3_1601
+wait 0
+if or
+00E1:   player 0 pressed_button 16
+00E1:   player 0 pressed_button 12
+jf @BIKE3_1594
+jump @BIKE3_2101
+
+:BIKE3_1594
+jump @BIKE3_1541
+
+:BIKE3_1601
+00BC: text_highpriority 'BM3_6' 6000 ms 1  // ~g~They are holed up behind Ammu-Nation in the Downtown area.
+16@ = 0 // integer values
+
+:BIKE3_1623
+if
+  5500 > 16@ // integer values
+jf @BIKE3_1763
+wait 0
+if
+  16@ >= 4000 // integer values
+jf @BIKE3_1707
+if
+  $5373 == 0 // integer values
+jf @BIKE3_1707
+fade 0 1500
+03D5: remove_text 'BM3_6'  // ~g~They are holed up behind Ammu-Nation in the Downtown area.
+$5373 = 1 // integer values
+
+:BIKE3_1707
+if
+  4000 > 16@ // integer values
+jf @BIKE3_1756
+if or
+00E1:   player 0 pressed_button 16
+00E1:   player 0 pressed_button 12
+jf @BIKE3_1756
+jump @BIKE3_2101
+
+:BIKE3_1756
+jump @BIKE3_1623
+
+:BIKE3_1763
+if
+fading
+jf @BIKE3_1787
+wait 0
+jump @BIKE3_1763
+
+:BIKE3_1787
+Camera.SetAtPos(-675.93, 1116.28, 14.35)
+Camera.SetPosition(-675.93, 1116.28, 14.35, 0.0, 0.0, 0.0)
+Camera.PointAt(-675.81, 1117.19, 14.4, 2)
+fade 1 2000
+
+:BIKE3_1862
+if
+fading
+jf @BIKE3_1886
+wait 0
+jump @BIKE3_1862
+
+:BIKE3_1886
+00BC: text_highpriority 'BM3_7' 5000 ms 1  // ~g~You will need a fast bike to gain access to the roof.
+17@ = 0 // integer values
+
+:BIKE3_1908
+if
+  4000 > 17@ // integer values
+jf @BIKE3_1968
+wait 0
+if or
+00E1:   player 0 pressed_button 16
+00E1:   player 0 pressed_button 12
+jf @BIKE3_1961
+jump @BIKE3_2101
+
+:BIKE3_1961
+jump @BIKE3_1908
+
+:BIKE3_1968
+Camera.SetPosition(-678.97, 1147.28, 25.48, 0.0, 0.0, 0.0)
+Camera.PointAt(-678.65, 1148.22, 25.44, 2)
+00BC: text_highpriority 'BM3_8' 5000 ms 1  // ~g~Use the bike to jump from these stairs to the roof on the far side of the road.
+16@ = 0 // integer values
+
+:BIKE3_2041
+if
+  4000 > 16@ // integer values
+jf @BIKE3_2101
+wait 0
+if or
+00E1:   player 0 pressed_button 16
+00E1:   player 0 pressed_button 12
+jf @BIKE3_2094
+jump @BIKE3_2101
+
+:BIKE3_2094
+jump @BIKE3_2041
+
+:BIKE3_2101
+00BE: text_clear_all
+fade 0 1500
+
+:BIKE3_2110
+if
+fading
+jf @BIKE3_2134
+wait 0
+jump @BIKE3_2110
+
+:BIKE3_2134
+Camera.SetAtPos(-597.25, 655.87, 10.06)
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+Camera.Restore_WithJumpCut
+03D5: remove_text 'BM3_8'  // ~g~Use the bike to jump from these stairs to the roof on the far side of the road.
+Model.Destroy(#DOONTOON50)
+Model.Destroy(#ROAD_DOWNTOWN_NEW2)
+Model.Destroy(#ROAD_DOWNTOWN02)
+Model.Destroy(#AMMUNATION_DT)
+Model.Destroy(#DOONTOON19)
+Model.Destroy(#DT_COMPOUND_ROOF)
+Model.Destroy(#DOONTOON51)
+Model.Destroy(#LODNTOON28)
+Model.Destroy(#AMMU_WINDOWS1)
+Model.Load(#SGA)
+Model.Load(#SGB)
+Model.Load(#BKA)
+Model.Load(#ANGEL)
+Model.Load(#TEC9)
+Model.Load(#M4)
+Model.Load(#GANGBUR)
+
+:BIKE3_2265
+if or
+   not Model.Available(#SGA)
+   not Model.Available(#SGB)
+   not Model.Available(#ANGEL)
+   not Model.Available(#TEC9)
+   not Model.Available(#M4)
+   not Model.Available(#BKA)
+jf @BIKE3_2314
+wait 0
+jump @BIKE3_2265
+
+:BIKE3_2314
+if
+   not Model.Available(#GANGBUR)
+jf @BIKE3_2341
+wait 0
+jump @BIKE3_2314
+
+:BIKE3_2341
+018D: $5306 = create_sound 0 at -702.16 1215.37 23.17
+018E: stop_sound $5306
+$5356 = Car.Create(#GANGBUR, -518.54, 694.1, 10.89)
+0129: $5346 = create_actor 9 #SGB in_car $5356 driverseat
+01C8: $5350 = create_actor_pedtype 9 model #SGB in_car $5356 passenger_seat 0
+Actor.DestroyInstantly($5346)
+Actor.DestroyInstantly($5350)
+Car.Destroy($5356)
+$5357 = Car.Create(#GANGBUR, -296.53, 1254.6, 10.11)
+0129: $5347 = create_actor 9 #SGA in_car $5357 driverseat
+01C8: $5351 = create_actor_pedtype 9 model #SGB in_car $5357 passenger_seat 0
+Actor.DestroyInstantly($5347)
+Actor.DestroyInstantly($5351)
+Car.Destroy($5357)
+$5358 = Car.Create(#GANGBUR, -857.96, 1137.78, 9.79)
+0129: $5348 = create_actor 9 #SGA in_car $5358 driverseat
+01C8: $5352 = create_actor_pedtype 9 model #SGB in_car $5358 passenger_seat 0
+Actor.DestroyInstantly($5348)
+Actor.DestroyInstantly($5352)
+Car.Destroy($5358)
+$5359 = Car.Create(#GANGBUR, -604.24, 664.34, 9.91)
+0129: $5349 = create_actor 9 #SGB in_car $5359 driverseat
+01C8: $5353 = create_actor_pedtype 9 model #SGB in_car $5359 passenger_seat 0
+Actor.DestroyInstantly($5349)
+Actor.DestroyInstantly($5353)
+Car.Destroy($5359)
+0169: set_fade_color 0 0 0
+wait 1000
+fade 1 2000
+018A: $5361 = create_checkpoint_at -674.59 1128.49 10.08
+$5362 = 1 // integer values
+$98 = 0.0 // floating-point values
+$5282 = Car.Create(#ANGEL, -700.08, 1300.14, 10.76)
+0294: set_vehicle $5282 sprayable 0
+Car.Angle($5282) = 180.0
+$5285 = Actor.Create(Gang3, #SGA, -750.93, 1235.44, 23.73)
+01ED: clear_actor $5285 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5286 = Actor.Create(Gang3, #SGA, -659.81, 1257.07, 23.17)
+01ED: clear_actor $5286 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5287 = Actor.Create(Gang3, #SGA, -692.32, 1250.27, 10.2)
+01ED: clear_actor $5287 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5288 = Actor.Create(Gang3, #SGB, -757.7, 1214.37, 10.07)
+01ED: clear_actor $5288 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5289 = Actor.Create(Gang3, #SGA, -699.21, 1300.28, 10.76)
+01ED: clear_actor $5289 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5290 = Actor.Create(Gang3, #SGB, -701.04, 1300.24, 10.76)
+01ED: clear_actor $5290 threat_search
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$123 = 0 // integer values
+
+:BIKE3_2986
+if
+81B0:   not car $5282 stopped $123 -596.63 658.2 10.06 radius 4.0 4.0 4.0
+jf @BIKE3_4138
+wait 0
+$5372 += 1 // integer values
+if
+  $5372 > 20 // integer values
+jf @BIKE3_3071
+$5372 = 0 // integer values
+
+:BIKE3_3071
+if
+  6 > $5370 // integer values
+jf @BIKE3_3096
+gosub @BIKE3_11705
+
+:BIKE3_3096
+if or
+0057:   player $PLAYER_CHAR 0 -642.32 1198.51 22.0 -768.194 1306.725 30.0
+0057:   player $PLAYER_CHAR 0 -685.75 1239.31 9.0 -768.194 1306.725 30.0
+0057:   player $PLAYER_CHAR 0 -753.43 1213.0 9.0 -768.194 1306.725 30.0
+jf @BIKE3_3378
+Player.ClearWantedLevel($PLAYER_CHAR)
+if
+  $5362 == 1 // integer values
+jf @BIKE3_3253
+Marker.Disable($5361)
+$5362 = 0 // integer values
+
+:BIKE3_3253
+if
+  $5355 == 0 // integer values
+jf @BIKE3_3364
+if
+  $5363 == 0 // integer values
+jf @BIKE3_3364
+if
+   not Car.Wrecked($5282)
+jf @BIKE3_3342
+00BC: text_highpriority 'BM3_9' 5000 ms 1  // ~g~Get Mitch's Angel and get out of there!
+$5284 = Marker.CreateAboveCar($5282)
+$5363 = 1 // integer values
+jump @BIKE3_3364
+
+:BIKE3_3342
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_3364
+$5360 = 1 // integer values
+jump @BIKE3_3496
+
+:BIKE3_3378
+if
+  $5355 == 0 // integer values
+jf @BIKE3_3426
+if
+  $5363 == 1 // integer values
+jf @BIKE3_3426
+Marker.Disable($5284)
+$5363 = 0 // integer values
+
+:BIKE3_3426
+if
+  $5355 == 0 // integer values
+jf @BIKE3_3489
+if
+  $5362 == 0 // integer values
+jf @BIKE3_3489
+018A: $5361 = create_checkpoint_at -674.59 1128.49 10.08
+$5362 = 1 // integer values
+
+:BIKE3_3489
+$5360 = 0 // integer values
+
+:BIKE3_3496
+if
+  $5354 == 0 // integer values
+jf @BIKE3_3557
+if
+  $5355 == 1 // integer values
+jf @BIKE3_3557
+if
+  $5360 == 0 // integer values
+jf @BIKE3_3557
+gosub @BIKE3_11122
+
+:BIKE3_3557
+if
+  $5354 == 1 // integer values
+jf @BIKE3_3767
+if
+   not Actor.Dead($5346)
+jf @BIKE3_3599
+01CC: actor $5346 kill_player $PLAYER_CHAR
+
+:BIKE3_3599
+if
+   not Actor.Dead($5347)
+jf @BIKE3_3623
+01CC: actor $5347 kill_player $PLAYER_CHAR
+
+:BIKE3_3623
+if
+   not Actor.Dead($5348)
+jf @BIKE3_3647
+01CC: actor $5348 kill_player $PLAYER_CHAR
+
+:BIKE3_3647
+if
+   not Actor.Dead($5349)
+jf @BIKE3_3671
+01CC: actor $5349 kill_player $PLAYER_CHAR
+
+:BIKE3_3671
+if
+   not Actor.Dead($5350)
+jf @BIKE3_3695
+01CC: actor $5350 kill_player $PLAYER_CHAR
+
+:BIKE3_3695
+if
+   not Actor.Dead($5351)
+jf @BIKE3_3719
+01CC: actor $5351 kill_player $PLAYER_CHAR
+
+:BIKE3_3719
+if
+   not Actor.Dead($5352)
+jf @BIKE3_3743
+01CC: actor $5352 kill_player $PLAYER_CHAR
+
+:BIKE3_3743
+if
+   not Actor.Dead($5353)
+jf @BIKE3_3767
+01CC: actor $5353 kill_player $PLAYER_CHAR
+
+:BIKE3_3767
+0054: store_player $PLAYER_CHAR position_to $5342 $5343 $5344
+gosub @BIKE3_5194
+if
+   Car.Wrecked($5282)
+jf @BIKE3_3833
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+jump @BIKE3_4053
+
+:BIKE3_3833
+if
+00DC:   player $PLAYER_CHAR driving $5282
+jf @BIKE3_3993
+if
+  $5291 == 0 // integer values
+jf @BIKE3_3986
+$123 = 1 // integer values
+$5298 = 1 // integer values
+if
+  $5355 == 0 // integer values
+jf @BIKE3_3932
+if
+  $5363 == 1 // integer values
+jf @BIKE3_3932
+Marker.Disable($5284)
+$5363 = 2 // integer values
+
+:BIKE3_3932
+Marker.Disable($5284)
+018A: $5283 = create_checkpoint_at -596.63 658.2 10.06
+00BC: text_highpriority 'BM3_3' 5000 ms 1  // ~g~Get the bike back to the bar!
+$5355 = 1 // integer values
+$5291 = 1 // integer values
+
+:BIKE3_3986
+jump @BIKE3_4053
+
+:BIKE3_3993
+if
+  $5291 == 1 // integer values
+jf @BIKE3_4053
+$123 = 0 // integer values
+Marker.Disable($5283)
+$5284 = Marker.CreateAboveCar($5282)
+00BC: text_highpriority 'BM3_4' 5000 ms 1  // ~g~Get on the bike!
+$5291 = 0 // integer values
+
+:BIKE3_4053
+if
+  $5298 == 1 // integer values
+jf @BIKE3_4131
+if
+  $5302 == 0 // integer values
+jf @BIKE3_4110
+17@ = 0 // integer values
+16@ = 0 // integer values
+$5302 = 1 // integer values
+
+:BIKE3_4110
+gosub @BIKE3_6788
+gosub @BIKE3_8782
+gosub @BIKE3_9154
+
+:BIKE3_4131
+jump @BIKE3_2986
+
+:BIKE3_4138
+$123 = 1 // integer values
+Marker.Disable($5284)
+Marker.Disable($5283)
+02A3: enable_widescreen 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Camera.SetPosition(-607.076, 666.146, 13.891, 0.0, 0.0, 0.0)
+0395: clear_area 0 at -596.63 658.2 range 10.06 1.0
+Camera.PointAt(-606.531, 665.364, 13.589, 2)
+01D3: actor $PLAYER_ACTOR leave_car $5282
+
+:BIKE3_4268
+if
+   Actor.InCar($PLAYER_ACTOR, $5282)
+jf @BIKE3_4336
+wait 0
+if
+   Car.Wrecked($5282)
+jf @BIKE3_4329
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4329
+jump @BIKE3_4268
+
+:BIKE3_4336
+0239: actor $PLAYER_ACTOR run_to -594.038 661.266
+16@ = 0 // integer values
+
+:BIKE3_4358
+if
+80ED:   not actor $PLAYER_ACTOR 0 -594.038 661.266 radius 1.0 1.0
+jf @BIKE3_4509
+wait 0
+if
+  16@ > 6000 // integer values
+jf @BIKE3_4464
+if
+80ED:   not actor $PLAYER_ACTOR 0 -594.038 661.266 radius 1.0 1.0
+jf @BIKE3_4464
+jump @BIKE3_4509
+
+:BIKE3_4464
+if
+   Car.Wrecked($5282)
+jf @BIKE3_4502
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4502
+jump @BIKE3_4358
+
+:BIKE3_4509
+011C: actor $PLAYER_ACTOR clear_objective
+$5345 = Actor.Create(Gang6, #BKA, -608.72, 650.2, 10.06)
+01ED: clear_actor $5345 threat_search
+0319: set_actor $5345 running 1
+0239: actor $PLAYER_ACTOR run_to -593.153 657.515
+if
+   not Car.Wrecked($5282)
+jf @BIKE3_4589
+01D5: actor $5345 go_to_and_drive_car $5282
+jump @BIKE3_4611
+
+:BIKE3_4589
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4611
+16@ = 0 // integer values
+
+:BIKE3_4618
+if
+   not Actor.Driving($5345)
+jf @BIKE3_4752
+wait 0
+if
+   Car.Wrecked($5282)
+jf @BIKE3_4676
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4676
+if
+   Actor.Dead($5345)
+jf @BIKE3_4699
+jump @BIKE3_4985
+
+:BIKE3_4699
+if
+  16@ > 20000 // integer values
+jf @BIKE3_4745
+if
+   not Actor.InCar($5345, $5282)
+jf @BIKE3_4745
+036A: put_actor $5345 in_car $5282
+
+:BIKE3_4745
+jump @BIKE3_4618
+
+:BIKE3_4752
+if
+   not Car.Wrecked($5282)
+jf @BIKE3_4797
+020E: actor $PLAYER_ACTOR look_at_actor $5345
+Car.SetMaxSpeed($5282, 30.0)
+00AE: set_vehicle $5282 traffic_behavior_to 2
+Car.SetToPsychoDriver($5282)
+jump @BIKE3_4819
+
+:BIKE3_4797
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4819
+if and
+02CA:   car $5282 bounding_sphere_visible
+  4000 > 16@ // integer values
+jf @BIKE3_4915
+wait 0
+if
+   Car.Wrecked($5282)
+jf @BIKE3_4885
+00BC: text_highpriority 'BM3_2' 5000 ms 1  // ~r~You were supposed to bring the bike back, not destroy it!
+jump @BIKE3_4985
+
+:BIKE3_4885
+if
+   Actor.Dead($5345)
+jf @BIKE3_4908
+jump @BIKE3_4985
+
+:BIKE3_4908
+jump @BIKE3_4819
+
+:BIKE3_4915
+wait 3000
+if
+   not Car.Wrecked($5282)
+jf @BIKE3_4941
+Car.SetToNormalDriver($5282)
+
+:BIKE3_4941
+Actor.DestroyInstantly($5345)
+Car.Destroy($5282)
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Camera.Restore_WithJumpCut
+jump @BIKE3_5002
+
+:BIKE3_4985
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:BIKE3_5002
+$277 = 1 // integer values
+0318: set_latest_mission_passed 'BIKE_3'  // Hog Tied
+030C: progress_made += 1
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+01E3: text_1number_styled 'M_PASS' number 4000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 4000
+Marker.Disable($274)
+return
+
+:BIKE3_5065
+$ONMISSION = 0 // integer values
+Model.Destroy(#DOONTOON50)
+Model.Destroy(#ROAD_DOWNTOWN_NEW2)
+Model.Destroy(#ROAD_DOWNTOWN02)
+Model.Destroy(#AMMUNATION_DT)
+Model.Destroy(#DOONTOON19)
+Model.Destroy(#DT_COMPOUND_ROOF)
+Model.Destroy(#DOONTOON51)
+Model.Destroy(#LODNTOON28)
+Model.Destroy(#AMMU_WINDOWS1)
+03AC: clear_route 0
+03AC: clear_route 1
+03AC: clear_route 2
+03AC: clear_route 3
+018E: stop_sound $5306
+Model.Destroy(#SGA)
+Model.Destroy(#SGB)
+Model.Destroy(#ANGEL)
+Model.Destroy(#BKA)
+Model.Destroy(#TEC9)
+Model.Destroy(#M4)
+Model.Destroy(#GANGBUR)
+Marker.Disable($5361)
+Marker.Disable($5284)
+Marker.Disable($5283)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:BIKE3_5194
+if
+  $5360 == 1 // integer values
+jf @BIKE3_6713
+if
+  $5372 == 0 // integer values
+jf @BIKE3_5594
+if
+  $5292 == 0 // integer values
+jf @BIKE3_5594
+if
+   Actor.Dead($5285)
+jf @BIKE3_5310
+$5299 -= 1 // integer values
+if
+  $5307 == 1 // integer values
+jf @BIKE3_5296
+$5298 = 1 // integer values
+
+:BIKE3_5296
+$5292 = 1 // integer values
+jump @BIKE3_5594
+
+:BIKE3_5310
+if
+  $5305 == 0 // integer values
+jf @BIKE3_5409
+if
+  $5307 == 0 // integer values
+jf @BIKE3_5409
+if or
+0123:   actor $5285 spotted_player $PLAYER_CHAR
+  $5293 == 1 // integer values
+jf @BIKE3_5409
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+0239: actor $5285 run_to -693.58 1213.18
+$5307 = 1 // integer values
+
+:BIKE3_5409
+if
+  $5305 == 0 // integer values
+jf @BIKE3_5565
+if
+  $5307 == 1 // integer values
+jf @BIKE3_5558
+if
+0102:   actor $5285 stopped_near_point_on_foot -693.58 1213.18 23.16 radius 1.0 1.0 2.0 sphere 0
+jf @BIKE3_5558
+018D: $5306 = create_sound 0 at -693.58 1213.18 23.16
+$5298 = 1 // integer values
+009E: set_actor $5285 path $5342 $5343 $5344 unknown 1.0 1
+01CA: actor $5285 kill_player $PLAYER_CHAR
+$5305 = 1 // integer values
+
+:BIKE3_5558
+jump @BIKE3_5594
+
+:BIKE3_5565
+009E: set_actor $5285 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5285 kill_player $PLAYER_CHAR
+
+:BIKE3_5594
+if
+  $5372 == 1 // integer values
+jf @BIKE3_5976
+if
+  $5293 == 0 // integer values
+jf @BIKE3_5976
+if
+   Actor.Dead($5286)
+jf @BIKE3_5692
+if
+  $5308 == 1 // integer values
+jf @BIKE3_5671
+$5298 = 1 // integer values
+
+:BIKE3_5671
+$5299 -= 1 // integer values
+$5293 = 1 // integer values
+jump @BIKE3_5976
+
+:BIKE3_5692
+if
+  $5305 == 0 // integer values
+jf @BIKE3_5791
+if
+  $5308 == 0 // integer values
+jf @BIKE3_5791
+if or
+0123:   actor $5286 spotted_player $PLAYER_CHAR
+  $5292 == 1 // integer values
+jf @BIKE3_5791
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+0239: actor $5286 run_to -693.58 1213.18
+$5308 = 1 // integer values
+
+:BIKE3_5791
+if
+  $5305 == 0 // integer values
+jf @BIKE3_5947
+if
+  $5308 == 1 // integer values
+jf @BIKE3_5940
+if
+0102:   actor $5286 stopped_near_point_on_foot -693.58 1213.18 23.16 radius 1.0 1.0 2.0 sphere 0
+jf @BIKE3_5940
+018D: $5306 = create_sound 0 at -693.58 1213.18 23.16
+$5298 = 1 // integer values
+009E: set_actor $5286 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5286 kill_player $PLAYER_CHAR
+$5305 = 1 // integer values
+
+:BIKE3_5940
+jump @BIKE3_5976
+
+:BIKE3_5947
+009E: set_actor $5286 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5286 kill_player $PLAYER_CHAR
+
+:BIKE3_5976
+if
+  $5372 == 2 // integer values
+jf @BIKE3_6155
+if
+  $5294 == 0 // integer values
+jf @BIKE3_6155
+if
+   Actor.Dead($5287)
+jf @BIKE3_6049
+$5299 -= 1 // integer values
+$5294 = 1 // integer values
+jump @BIKE3_6155
+
+:BIKE3_6049
+if
+  $5298 == 0 // integer values
+jf @BIKE3_6108
+if
+0123:   actor $5287 spotted_player $PLAYER_CHAR
+jf @BIKE3_6108
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+$5298 = 1 // integer values
+
+:BIKE3_6108
+if
+  $5298 == 1 // integer values
+jf @BIKE3_6155
+009E: set_actor $5287 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5287 kill_player $PLAYER_CHAR
+
+:BIKE3_6155
+if
+  $5372 == 3 // integer values
+jf @BIKE3_6334
+if
+  $5295 == 0 // integer values
+jf @BIKE3_6334
+if
+   Actor.Dead($5288)
+jf @BIKE3_6228
+$5299 -= 1 // integer values
+$5295 = 1 // integer values
+jump @BIKE3_6334
+
+:BIKE3_6228
+if
+  $5298 == 0 // integer values
+jf @BIKE3_6287
+if
+0123:   actor $5288 spotted_player $PLAYER_CHAR
+jf @BIKE3_6287
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+$5298 = 1 // integer values
+
+:BIKE3_6287
+if
+  $5298 == 1 // integer values
+jf @BIKE3_6334
+009E: set_actor $5288 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5288 kill_player $PLAYER_CHAR
+
+:BIKE3_6334
+if
+  $5372 == 4 // integer values
+jf @BIKE3_6520
+if
+  $5296 == 0 // integer values
+jf @BIKE3_6520
+if
+   Actor.Dead($5289)
+jf @BIKE3_6407
+$5299 -= 1 // integer values
+$5296 = 1 // integer values
+jump @BIKE3_6520
+
+:BIKE3_6407
+if
+  $5298 == 0 // integer values
+jf @BIKE3_6466
+if
+0123:   actor $5289 spotted_player $PLAYER_CHAR
+jf @BIKE3_6466
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+$5298 = 1 // integer values
+
+:BIKE3_6466
+if or
+  $5298 == 1 // integer values
+  $5297 == 1 // integer values
+jf @BIKE3_6520
+009E: set_actor $5289 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5289 kill_player $PLAYER_CHAR
+
+:BIKE3_6520
+if
+  $5372 == 5 // integer values
+jf @BIKE3_6706
+if
+  $5297 == 0 // integer values
+jf @BIKE3_6706
+if
+   Actor.Dead($5290)
+jf @BIKE3_6593
+$5299 -= 1 // integer values
+$5297 = 1 // integer values
+jump @BIKE3_6706
+
+:BIKE3_6593
+if
+  $5298 == 0 // integer values
+jf @BIKE3_6652
+if
+0123:   actor $5290 spotted_player $PLAYER_CHAR
+jf @BIKE3_6652
+00BB: text_lowpriority 'INTRUDE' 5000 ms 1  // ~g~You've been spotted!
+$5298 = 1 // integer values
+
+:BIKE3_6652
+if or
+  $5298 == 1 // integer values
+  $5296 == 1 // integer values
+jf @BIKE3_6706
+009E: set_actor $5290 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5290 kill_player $PLAYER_CHAR
+
+:BIKE3_6706
+jump @BIKE3_6761
+
+:BIKE3_6713
+if
+  $5355 == 1 // integer values
+jf @BIKE3_6761
+Actor.RemoveReferences($5285)
+Actor.RemoveReferences($5286)
+Actor.RemoveReferences($5287)
+Actor.RemoveReferences($5288)
+Actor.RemoveReferences($5289)
+Actor.RemoveReferences($5290)
+
+:BIKE3_6761
+if
+  $5371 == 2 // integer values
+jf @BIKE3_6786
+$5371 = 0 // integer values
+
+:BIKE3_6786
+return
+
+:BIKE3_6788
+if
+  $5360 == 1 // integer values
+jf @BIKE3_8780
+if
+  29 >= $5341 // integer values
+jf @BIKE3_8780
+if
+  8 > $5299 // integer values
+jf @BIKE3_8780
+if
+  $5300 == 2 // integer values
+jf @BIKE3_6874
+17@ = 0 // integer values
+$5300 = 0 // integer values
+
+:BIKE3_6874
+if
+  $5301 == 2 // integer values
+jf @BIKE3_6906
+16@ = 0 // integer values
+$5301 = 0 // integer values
+
+:BIKE3_6906
+if
+8339:   not anything_in_cube_cornerA -695.11 1301.01 8.0 cornerB -688.96 1294.68 14.0 solid 0 car 1 actor 1 object 0 particle 0
+jf @BIKE3_7843
+if
+  17@ >= 4000 // integer values
+jf @BIKE3_7843
+if
+  $5300 == 0 // integer values
+jf @BIKE3_7843
+$5303 = -1 // integer values
+if or
+  $5310 == 0 // integer values
+  $5310 == 2 // integer values
+jf @BIKE3_7098
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5309 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5309 // integer values and handles
+$5310 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7098
+if or
+  $5312 == 0 // integer values
+  $5312 == 2 // integer values
+jf @BIKE3_7193
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5311 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5311 // integer values and handles
+$5312 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7193
+if or
+  $5314 == 0 // integer values
+  $5314 == 2 // integer values
+jf @BIKE3_7288
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5313 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5313 // integer values and handles
+$5314 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7288
+if or
+  $5316 == 0 // integer values
+  $5316 == 2 // integer values
+jf @BIKE3_7383
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5315 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5315 // integer values and handles
+$5316 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7383
+if or
+  $5318 == 0 // integer values
+  $5318 == 2 // integer values
+jf @BIKE3_7478
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5317 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5317 // integer values and handles
+$5318 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7478
+if or
+  $5320 == 0 // integer values
+  $5320 == 2 // integer values
+jf @BIKE3_7573
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5319 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5319 // integer values and handles
+$5320 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7573
+if or
+  $5322 == 0 // integer values
+  $5322 == 2 // integer values
+jf @BIKE3_7668
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5321 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5321 // integer values and handles
+$5322 = 1 // integer values
+jump @BIKE3_7756
+
+:BIKE3_7668
+if or
+  $5324 == 0 // integer values
+  $5324 == 2 // integer values
+jf @BIKE3_7756
+0395: clear_area 0 at -690.84 1298.62 range 10.76 4.0
+$5323 = Actor.Create(Gang3, #SGA, -690.84, 1298.62, 10.76)
+0084: $5303 = $5323 // integer values and handles
+$5324 = 1 // integer values
+
+:BIKE3_7756
+if
+   not Actor.Dead($5303)
+jf @BIKE3_7843
+if
+   not $5303 == -1 // integer values
+jf @BIKE3_7843
+0243: set_actor $5303 ped_stats_to 16
+Actor.Angle($5303) = 174.08
+0239: actor $5303 run_to -691.25 1294.99
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5300 = 1 // integer values
+
+:BIKE3_7843
+if
+8339:   not anything_in_cube_cornerA -735.7 1261.3 8.0 cornerB -728.2 1264.8 14.0 solid 0 car 1 actor 1 object 0 particle 0
+jf @BIKE3_8780
+if
+  16@ >= 7000 // integer values
+jf @BIKE3_8780
+if
+  $5301 == 0 // integer values
+jf @BIKE3_8780
+$5304 = -1 // integer values
+if or
+  $5326 == 0 // integer values
+  $5326 == 2 // integer values
+jf @BIKE3_8035
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5325 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5325 // integer values and handles
+$5326 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8035
+if or
+  $5328 == 0 // integer values
+  $5328 == 2 // integer values
+jf @BIKE3_8130
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5327 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5327 // integer values and handles
+$5328 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8130
+if or
+  $5330 == 0 // integer values
+  $5330 == 2 // integer values
+jf @BIKE3_8225
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5329 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5329 // integer values and handles
+$5330 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8225
+if or
+  $5332 == 0 // integer values
+  $5332 == 2 // integer values
+jf @BIKE3_8320
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5331 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5331 // integer values and handles
+$5332 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8320
+if or
+  $5334 == 0 // integer values
+  $5334 == 2 // integer values
+jf @BIKE3_8415
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5333 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5333 // integer values and handles
+$5334 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8415
+if or
+  $5336 == 0 // integer values
+  $5336 == 2 // integer values
+jf @BIKE3_8510
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5335 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5335 // integer values and handles
+$5336 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8510
+if or
+  $5338 == 0 // integer values
+  $5338 == 2 // integer values
+jf @BIKE3_8605
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5337 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5337 // integer values and handles
+$5338 = 1 // integer values
+jump @BIKE3_8693
+
+:BIKE3_8605
+if or
+  $5340 == 0 // integer values
+  $5340 == 2 // integer values
+jf @BIKE3_8693
+0395: clear_area 0 at -733.7 1263.0 range 10.8 4.0
+$5339 = Actor.Create(Gang3, #SGB, -733.7, 1263.0, 10.8)
+0084: $5304 = $5339 // integer values and handles
+$5340 = 1 // integer values
+
+:BIKE3_8693
+if
+   not Actor.Dead($5304)
+jf @BIKE3_8780
+if
+   not $5304 == -1 // integer values
+jf @BIKE3_8780
+0243: set_actor $5304 ped_stats_to 16
+Actor.Angle($5304) = 174.08
+0239: actor $5304 run_to -730.6 1262.8
+$5299 += 1 // integer values
+$5341 += 1 // integer values
+$5301 = 1 // integer values
+
+:BIKE3_8780
+return
+
+:BIKE3_8782
+if
+  $5300 == 1 // integer values
+jf @BIKE3_8967
+if
+   not Actor.Dead($5303)
+jf @BIKE3_8960
+if
+00FF:   actor $5303 0 -691.25 1294.99 10.76 radius 1.0 1.0 2.0
+jf @BIKE3_8953
+if
+  $5341 > 29 // integer values
+jf @BIKE3_8907
+Actor.Health($5303) = 200
+01B2: give_actor $5303 weapon 26 ammo 30000 // Load the weapon model before using this
+jump @BIKE3_8917
+
+:BIKE3_8907
+01B2: give_actor $5303 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:BIKE3_8917
+009E: set_actor $5303 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5303 kill_player $PLAYER_CHAR
+$5300 = 2 // integer values
+
+:BIKE3_8953
+jump @BIKE3_8967
+
+:BIKE3_8960
+$5300 = 2 // integer values
+
+:BIKE3_8967
+if
+  $5301 == 1 // integer values
+jf @BIKE3_9152
+if
+   not Actor.Dead($5304)
+jf @BIKE3_9145
+if
+00FF:   actor $5304 0 -730.6 1262.8 10.8 radius 1.0 1.0 2.0
+jf @BIKE3_9138
+if
+  $5341 > 29 // integer values
+jf @BIKE3_9092
+Actor.Health($5304) = 200
+01B2: give_actor $5304 weapon 26 ammo 30000 // Load the weapon model before using this
+jump @BIKE3_9102
+
+:BIKE3_9092
+01B2: give_actor $5304 weapon 22 ammo 30000 // Load the weapon model before using this
+
+:BIKE3_9102
+009E: set_actor $5304 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5304 kill_player $PLAYER_CHAR
+$5301 = 2 // integer values
+
+:BIKE3_9138
+jump @BIKE3_9152
+
+:BIKE3_9145
+$5301 = 2 // integer values
+
+:BIKE3_9152
+return
+
+:BIKE3_9154
+if
+  $5360 == 1 // integer values
+jf @BIKE3_10784
+if
+  $5372 == 6 // integer values
+jf @BIKE3_9279
+if
+  $5310 == 1 // integer values
+jf @BIKE3_9279
+if
+   Actor.Dead($5309)
+jf @BIKE3_9250
+Actor.RemoveReferences($5309)
+$5299 -= 1 // integer values
+$5310 = 2 // integer values
+jump @BIKE3_9279
+
+:BIKE3_9250
+009E: set_actor $5309 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5309 kill_player $PLAYER_CHAR
+
+:BIKE3_9279
+if
+  $5372 == 7 // integer values
+jf @BIKE3_9386
+if
+  $5312 == 1 // integer values
+jf @BIKE3_9386
+if
+   Actor.Dead($5311)
+jf @BIKE3_9357
+Actor.RemoveReferences($5311)
+$5299 -= 1 // integer values
+$5312 = 2 // integer values
+jump @BIKE3_9386
+
+:BIKE3_9357
+009E: set_actor $5311 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5311 kill_player $PLAYER_CHAR
+
+:BIKE3_9386
+if
+  $5372 == 8 // integer values
+jf @BIKE3_9493
+if
+  $5314 == 1 // integer values
+jf @BIKE3_9493
+if
+   Actor.Dead($5313)
+jf @BIKE3_9464
+Actor.RemoveReferences($5313)
+$5299 -= 1 // integer values
+$5314 = 2 // integer values
+jump @BIKE3_9493
+
+:BIKE3_9464
+009E: set_actor $5313 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5313 kill_player $PLAYER_CHAR
+
+:BIKE3_9493
+if
+  $5372 == 9 // integer values
+jf @BIKE3_9600
+if
+  $5316 == 1 // integer values
+jf @BIKE3_9600
+if
+   Actor.Dead($5315)
+jf @BIKE3_9571
+Actor.RemoveReferences($5315)
+$5299 -= 1 // integer values
+$5316 = 2 // integer values
+jump @BIKE3_9600
+
+:BIKE3_9571
+009E: set_actor $5315 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5315 kill_player $PLAYER_CHAR
+
+:BIKE3_9600
+if
+  $5372 == 10 // integer values
+jf @BIKE3_9707
+if
+  $5318 == 1 // integer values
+jf @BIKE3_9707
+if
+   Actor.Dead($5317)
+jf @BIKE3_9678
+Actor.RemoveReferences($5317)
+$5299 -= 1 // integer values
+$5318 = 2 // integer values
+jump @BIKE3_9707
+
+:BIKE3_9678
+009E: set_actor $5317 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5317 kill_player $PLAYER_CHAR
+
+:BIKE3_9707
+if
+  $5372 == 11 // integer values
+jf @BIKE3_9814
+if
+  $5322 == 1 // integer values
+jf @BIKE3_9814
+if
+   Actor.Dead($5321)
+jf @BIKE3_9785
+Actor.RemoveReferences($5321)
+$5299 -= 1 // integer values
+$5322 = 2 // integer values
+jump @BIKE3_9814
+
+:BIKE3_9785
+009E: set_actor $5321 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5321 kill_player $PLAYER_CHAR
+
+:BIKE3_9814
+if
+  $5372 == 12 // integer values
+jf @BIKE3_9921
+if
+  $5324 == 1 // integer values
+jf @BIKE3_9921
+if
+   Actor.Dead($5323)
+jf @BIKE3_9892
+Actor.RemoveReferences($5323)
+$5299 -= 1 // integer values
+$5324 = 2 // integer values
+jump @BIKE3_9921
+
+:BIKE3_9892
+009E: set_actor $5323 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5323 kill_player $PLAYER_CHAR
+
+:BIKE3_9921
+if
+  $5372 == 13 // integer values
+jf @BIKE3_10028
+if
+  $5326 == 1 // integer values
+jf @BIKE3_10028
+if
+   Actor.Dead($5325)
+jf @BIKE3_9999
+Actor.RemoveReferences($5325)
+$5299 -= 1 // integer values
+$5326 = 2 // integer values
+jump @BIKE3_10028
+
+:BIKE3_9999
+009E: set_actor $5325 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5325 kill_player $PLAYER_CHAR
+
+:BIKE3_10028
+if
+  $5372 == 14 // integer values
+jf @BIKE3_10135
+if
+  $5328 == 1 // integer values
+jf @BIKE3_10135
+if
+   Actor.Dead($5327)
+jf @BIKE3_10106
+Actor.RemoveReferences($5327)
+$5299 -= 1 // integer values
+$5328 = 2 // integer values
+jump @BIKE3_10135
+
+:BIKE3_10106
+009E: set_actor $5327 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5327 kill_player $PLAYER_CHAR
+
+:BIKE3_10135
+if
+  $5372 == 15 // integer values
+jf @BIKE3_10242
+if
+  $5330 == 1 // integer values
+jf @BIKE3_10242
+if
+   Actor.Dead($5329)
+jf @BIKE3_10213
+Actor.RemoveReferences($5329)
+$5299 -= 1 // integer values
+$5330 = 2 // integer values
+jump @BIKE3_10242
+
+:BIKE3_10213
+009E: set_actor $5329 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5329 kill_player $PLAYER_CHAR
+
+:BIKE3_10242
+if
+  $5372 == 16 // integer values
+jf @BIKE3_10349
+if
+  $5332 == 1 // integer values
+jf @BIKE3_10349
+if
+   Actor.Dead($5331)
+jf @BIKE3_10320
+Actor.RemoveReferences($5331)
+$5299 -= 1 // integer values
+$5332 = 2 // integer values
+jump @BIKE3_10349
+
+:BIKE3_10320
+009E: set_actor $5331 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5331 kill_player $PLAYER_CHAR
+
+:BIKE3_10349
+if
+  $5372 == 17 // integer values
+jf @BIKE3_10456
+if
+  $5334 == 1 // integer values
+jf @BIKE3_10456
+if
+   Actor.Dead($5333)
+jf @BIKE3_10427
+Actor.RemoveReferences($5333)
+$5299 -= 1 // integer values
+$5334 = 2 // integer values
+jump @BIKE3_10456
+
+:BIKE3_10427
+009E: set_actor $5333 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5333 kill_player $PLAYER_CHAR
+
+:BIKE3_10456
+if
+  $5372 == 18 // integer values
+jf @BIKE3_10563
+if
+  $5336 == 1 // integer values
+jf @BIKE3_10563
+if
+   Actor.Dead($5335)
+jf @BIKE3_10534
+Actor.RemoveReferences($5335)
+$5299 -= 1 // integer values
+$5336 = 2 // integer values
+jump @BIKE3_10563
+
+:BIKE3_10534
+009E: set_actor $5335 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5335 kill_player $PLAYER_CHAR
+
+:BIKE3_10563
+if
+  $5372 == 19 // integer values
+jf @BIKE3_10670
+if
+  $5338 == 1 // integer values
+jf @BIKE3_10670
+if
+   Actor.Dead($5337)
+jf @BIKE3_10641
+Actor.RemoveReferences($5337)
+$5299 -= 1 // integer values
+$5338 = 2 // integer values
+jump @BIKE3_10670
+
+:BIKE3_10641
+009E: set_actor $5337 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5337 kill_player $PLAYER_CHAR
+
+:BIKE3_10670
+if
+  $5372 == 20 // integer values
+jf @BIKE3_10777
+if
+  $5340 == 1 // integer values
+jf @BIKE3_10777
+if
+   Actor.Dead($5339)
+jf @BIKE3_10748
+Actor.RemoveReferences($5339)
+$5299 -= 1 // integer values
+$5340 = 2 // integer values
+jump @BIKE3_10777
+
+:BIKE3_10748
+009E: set_actor $5339 path $5342 $5343 $5344 unknown 0.5 1
+01CA: actor $5339 kill_player $PLAYER_CHAR
+
+:BIKE3_10777
+jump @BIKE3_11120
+
+:BIKE3_10784
+if
+   not Actor.Dead($5309)
+jf @BIKE3_10805
+Actor.RemoveReferences($5309)
+
+:BIKE3_10805
+if
+   not Actor.Dead($5311)
+jf @BIKE3_10826
+Actor.RemoveReferences($5311)
+
+:BIKE3_10826
+if
+   not Actor.Dead($5313)
+jf @BIKE3_10847
+Actor.RemoveReferences($5313)
+
+:BIKE3_10847
+if
+   not Actor.Dead($5315)
+jf @BIKE3_10868
+Actor.RemoveReferences($5315)
+
+:BIKE3_10868
+if
+   not Actor.Dead($5317)
+jf @BIKE3_10889
+Actor.RemoveReferences($5317)
+
+:BIKE3_10889
+if
+   not Actor.Dead($5319)
+jf @BIKE3_10910
+Actor.RemoveReferences($5319)
+
+:BIKE3_10910
+if
+   not Actor.Dead($5321)
+jf @BIKE3_10931
+Actor.RemoveReferences($5321)
+
+:BIKE3_10931
+if
+   not Actor.Dead($5323)
+jf @BIKE3_10952
+Actor.RemoveReferences($5323)
+
+:BIKE3_10952
+if
+   not Actor.Dead($5325)
+jf @BIKE3_10973
+Actor.RemoveReferences($5325)
+
+:BIKE3_10973
+if
+   not Actor.Dead($5327)
+jf @BIKE3_10994
+Actor.RemoveReferences($5327)
+
+:BIKE3_10994
+if
+   not Actor.Dead($5329)
+jf @BIKE3_11015
+Actor.RemoveReferences($5329)
+
+:BIKE3_11015
+if
+   not Actor.Dead($5331)
+jf @BIKE3_11036
+Actor.RemoveReferences($5331)
+
+:BIKE3_11036
+if
+   not Actor.Dead($5333)
+jf @BIKE3_11057
+Actor.RemoveReferences($5333)
+
+:BIKE3_11057
+if
+   not Actor.Dead($5335)
+jf @BIKE3_11078
+Actor.RemoveReferences($5335)
+
+:BIKE3_11078
+if
+   not Actor.Dead($5337)
+jf @BIKE3_11099
+Actor.RemoveReferences($5337)
+
+:BIKE3_11099
+if
+   not Actor.Dead($5339)
+jf @BIKE3_11120
+Actor.RemoveReferences($5339)
+
+:BIKE3_11120
+return
+
+:BIKE3_11122
+if
+  $5354 == 0 // integer values
+jf @BIKE3_11703
+$5356 = Car.Create(#GANGBUR, -783.346, 1367.562, 10.603)
+Car.Angle($5356) = 192.0
+0129: $5346 = create_actor 9 #SGB in_car $5356 driverseat
+01C8: $5350 = create_actor_pedtype 9 model #SGA in_car $5356 passenger_seat 0
+01ED: clear_actor $5346 threat_search
+01ED: clear_actor $5350 threat_search
+011A: set_actor $5346 search_threat 1
+01B2: give_actor $5346 weapon 22 ammo 30000 // Load the weapon model before using this
+011A: set_actor $5350 search_threat 1
+01B2: give_actor $5350 weapon 22 ammo 30000 // Load the weapon model before using this
+01CC: actor $5346 kill_player $PLAYER_CHAR
+01CC: actor $5350 kill_player $PLAYER_CHAR
+04BA: set_car $5356 speed_instantly 30.0
+Car.SetMaxSpeed($5356, 40.0)
+$5357 = Car.Create(#GANGBUR, -791.841, 1376.64, 10.422)
+Car.Angle($5357) = 258.512
+0129: $5347 = create_actor 9 #SGA in_car $5357 driverseat
+01ED: clear_actor $5347 threat_search
+011A: set_actor $5347 search_threat 1
+01B2: give_actor $5347 weapon 22 ammo 30000 // Load the weapon model before using this
+01C8: $5351 = create_actor_pedtype 9 model #SGB in_car $5357 passenger_seat 0
+01ED: clear_actor $5351 threat_search
+011A: set_actor $5351 search_threat 1
+01B2: give_actor $5351 weapon 22 ammo 30000 // Load the weapon model before using this
+01CC: actor $5347 kill_player $PLAYER_CHAR
+01CC: actor $5351 kill_player $PLAYER_CHAR
+04BA: set_car $5357 speed_instantly 30.0
+Car.SetMaxSpeed($5357, 40.0)
+$5358 = Car.Create(#GANGBUR, -295.967, 1255.681, 10.142)
+Car.Angle($5358) = 357.556
+0129: $5348 = create_actor 9 #SGA in_car $5358 driverseat
+01ED: clear_actor $5348 threat_search
+011A: set_actor $5348 search_threat 1
+01B2: give_actor $5348 weapon 22 ammo 30000 // Load the weapon model before using this
+01C8: $5352 = create_actor_pedtype 9 model #SGB in_car $5358 passenger_seat 0
+01ED: clear_actor $5352 threat_search
+011A: set_actor $5352 search_threat 1
+01B2: give_actor $5352 weapon 22 ammo 30000 // Load the weapon model before using this
+01CC: actor $5348 kill_player $PLAYER_CHAR
+01CC: actor $5352 kill_player $PLAYER_CHAR
+04BA: set_car $5358 speed_instantly 30.0
+Car.SetMaxSpeed($5358, 40.0)
+$5359 = Car.Create(#GANGBUR, -585.145, 666.533, 9.917)
+Car.Angle($5359) = 286.737
+0129: $5349 = create_actor 9 #SGB in_car $5359 driverseat
+01ED: clear_actor $5349 threat_search
+011A: set_actor $5349 search_threat 1
+01B2: give_actor $5349 weapon 22 ammo 30000 // Load the weapon model before using this
+01C8: $5353 = create_actor_pedtype 9 model #SGB in_car $5359 passenger_seat 0
+01ED: clear_actor $5353 threat_search
+011A: set_actor $5353 search_threat 1
+01B2: give_actor $5353 weapon 22 ammo 30000 // Load the weapon model before using this
+01CC: actor $5349 kill_player $PLAYER_CHAR
+01CC: actor $5353 kill_player $PLAYER_CHAR
+04BA: set_car $5359 speed_instantly 30.0
+Car.SetMaxSpeed($5359, 40.0)
+$5354 = 1 // integer values
+
+:BIKE3_11703
+return
+
+:BIKE3_11705
+if
+  6 > $5370 // integer values
+jf @BIKE3_13010
+if
+  $5364 == 0 // integer values
+jf @BIKE3_12046
+if
+   not Actor.Dead($5285)
+jf @BIKE3_12046
+if
+84F0:   not is_actor_waiting_for_world_collision $5285
+jf @BIKE3_12046
+01ED: clear_actor $5285 threat_search
+011A: set_actor $5285 search_threat 1
+01B2: give_actor $5285 weapon 22 ammo 30000 // Load the weapon model before using this
+01E2: add_route_point 0 at -751.91 1212.63 23.17
+01E2: add_route_point 0 at -751.87 1204.57 23.17
+01E2: add_route_point 0 at -746.22 1200.42 23.17
+01E2: add_route_point 0 at -728.07 1200.61 23.17
+01E2: add_route_point 0 at -703.98 1201.18 23.17
+01E2: add_route_point 0 at -700.81 1200.92 23.17
+01E2: add_route_point 0 at -703.98 1201.18 23.17
+01E2: add_route_point 0 at -728.07 1200.61 23.17
+01E2: add_route_point 0 at -746.22 1200.42 23.17
+01E2: add_route_point 0 at -751.87 1204.57 23.17
+01E2: add_route_point 0 at -751.91 1212.63 23.17
+01E2: add_route_point 0 at -750.93 1235.44 23.73
+01E1: set_actor $5285 follow_route 0 3
+$5370 += 1 // integer values
+$5364 = 1 // integer values
+
+:BIKE3_12046
+if
+  $5365 == 0 // integer values
+jf @BIKE3_12369
+if
+   not Actor.Dead($5286)
+jf @BIKE3_12369
+if
+84F0:   not is_actor_waiting_for_world_collision $5286
+jf @BIKE3_12369
+01ED: clear_actor $5286 threat_search
+011A: set_actor $5286 search_threat 1
+01B2: give_actor $5286 weapon 22 ammo 30000 // Load the weapon model before using this
+01E2: add_route_point 1 at -659.65 1239.53 23.17
+01E2: add_route_point 1 at -659.42 1214.94 23.87
+01E2: add_route_point 1 at -659.33 1202.42 23.29
+01E2: add_route_point 1 at -670.12 1202.51 23.3
+01E2: add_route_point 1 at -689.49 1201.52 23.17
+01E2: add_route_point 1 at -689.02 1201.12 23.17
+01E2: add_route_point 1 at -689.49 1201.52 23.17
+01E2: add_route_point 1 at -670.12 1202.51 23.3
+01E2: add_route_point 1 at -659.33 1202.42 23.29
+01E2: add_route_point 1 at -659.42 1214.94 23.87
+01E2: add_route_point 1 at -659.65 1239.53 23.17
+01E2: add_route_point 1 at -659.81 1257.07 23.17
+01E1: set_actor $5286 follow_route 1 3
+$5370 += 1 // integer values
+$5365 = 1 // integer values
+
+:BIKE3_12369
+if
+  $5366 == 0 // integer values
+jf @BIKE3_12540
+if
+   not Actor.Dead($5287)
+jf @BIKE3_12540
+if
+84F0:   not is_actor_waiting_for_world_collision $5287
+jf @BIKE3_12540
+01ED: clear_actor $5287 threat_search
+011A: set_actor $5287 search_threat 1
+01B2: give_actor $5287 weapon 22 ammo 30000 // Load the weapon model before using this
+01E2: add_route_point 2 at -690.88 1271.5 10.76
+01E2: add_route_point 2 at -691.99 1294.35 10.76
+01E2: add_route_point 2 at -690.88 1271.5 10.76
+01E2: add_route_point 2 at -692.32 1250.27 10.2
+01E1: set_actor $5287 follow_route 2 3
+$5370 += 1 // integer values
+$5366 = 1 // integer values
+
+:BIKE3_12540
+if
+  $5367 == 0 // integer values
+jf @BIKE3_12825
+if
+   not Actor.Dead($5288)
+jf @BIKE3_12825
+if
+84F0:   not is_actor_waiting_for_world_collision $5288
+jf @BIKE3_12825
+01ED: clear_actor $5288 threat_search
+011A: set_actor $5288 search_threat 1
+01B2: give_actor $5288 weapon 22 ammo 30000 // Load the weapon model before using this
+01E2: add_route_point 3 at -756.2 1227.72 10.07
+01E2: add_route_point 3 at -755.89 1243.83 10.07
+01E2: add_route_point 3 at -755.94 1257.21 10.38
+01E2: add_route_point 3 at -755.68 1275.26 10.66
+01E2: add_route_point 3 at -755.44 1287.88 14.52
+01E2: add_route_point 3 at -755.68 1275.26 10.66
+01E2: add_route_point 3 at -755.94 1257.21 10.38
+01E2: add_route_point 3 at -755.89 1243.83 10.07
+01E2: add_route_point 3 at -756.2 1227.72 10.07
+01E2: add_route_point 3 at -757.7 1214.37 10.07
+01E1: set_actor $5288 follow_route 3 3
+$5370 += 1 // integer values
+$5367 = 1 // integer values
+
+:BIKE3_12825
+if
+  $5368 == 0 // integer values
+jf @BIKE3_12911
+if
+   not Actor.Dead($5289)
+jf @BIKE3_12911
+if
+84F0:   not is_actor_waiting_for_world_collision $5289
+jf @BIKE3_12911
+01ED: clear_actor $5289 threat_search
+011A: set_actor $5289 search_threat 1
+Actor.Angle($5289) = 66.98
+$5370 += 1 // integer values
+$5368 = 1 // integer values
+
+:BIKE3_12911
+if
+  $5369 == 0 // integer values
+jf @BIKE3_13010
+if
+   not Actor.Dead($5290)
+jf @BIKE3_13010
+if
+84F0:   not is_actor_waiting_for_world_collision $5290
+jf @BIKE3_13010
+01ED: clear_actor $5290 threat_search
+011A: set_actor $5290 search_threat 1
+Actor.Angle($5290) = 283.89
+03F9: make_actors $5289 $5290 converse_in 1000000 ms
+$5370 += 1 // integer values
+$5369 = 1 // integer values
+
+:BIKE3_13010
+return

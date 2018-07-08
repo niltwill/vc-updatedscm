@@ -1,0 +1,625 @@
+:IMPORT
+$1105 = 0 // integer values
+$1107 = 0 // integer values
+$1125 = 0 // integer values
+$1126 = 0 // integer values
+$1127 = 0 // integer values
+$1128 = 0 // integer values
+thread 'IMPORT'
+set_wb_check_to 0
+end_thread
+
+:IMPORT1
+thread 'IMPORT1'
+
+:IMPORT1_10
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT1_822
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @IMPORT1_822
+if
+   not $1105 == 6 // integer values
+jf @IMPORT1_87
+gosub @IMPGEN4_183
+jump @IMPORT1_822
+
+:IMPORT1_87
+if
+  $1107 == 0 // integer values
+jf @IMPORT1_822
+gosub @IMPGEN4_639
+02FA: garage $687 change_to_type 9
+$1114 = Object.Init(#LH_IMP_EXP02, -981.754, -841.278, 8.586)
+Object.RemoveFromMissionCleanupList($1114)
+$1175 += 1 // integer values
+$628 = 1 // integer values
+04A6: $627 = create_asset_money_pickup_at $552 $553 $554 money $626 $626
+increment_mission_attempts
+0595: mission_complete
+$1107 = 1 // integer values
+wait 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT1_793
+Player.CanMove($PLAYER_CHAR) = False
+fade 0 500
+
+:IMPORT1_226
+if
+fading
+jf @IMPORT1_250
+wait 0
+jump @IMPORT1_226
+
+:IMPORT1_250
+02A3: enable_widescreen 1
+Model.Load(#DELUXO)
+038B: load_requested_models
+
+:IMPORT1_261
+if
+   not Model.Available(#DELUXO)
+jf @IMPORT1_288
+wait 0
+jump @IMPORT1_261
+
+:IMPORT1_288
+$1121 = Car.Create(#DELUXO, -1022.3, -868.2, 12.0)
+Car.Angle($1121) = 175.0
+$1125 = 1 // integer values
+Camera.SetAtPos(-1027.755, -870.693, 13.398)
+Camera.SetPosition(-1028.692, -871.013, 13.541, 0.0, 0.0, 0.0)
+Camera.PointAt(-1027.755, -870.693, 13.398, 2)
+fade 1 500
+wait 4000
+Camera.SetAtPos(-1019.562, -865.229, 13.506)
+Camera.SetPosition(-1018.839, -864.582, 13.748, 0.0, 0.0, 0.0)
+Camera.PointAt(-1019.562, -865.229, 13.506, 2)
+wait 4000
+fade 0 500
+
+:IMPORT1_488
+if
+fading
+jf @IMPORT1_512
+wait 0
+jump @IMPORT1_488
+
+:IMPORT1_512
+Camera.SetAtPos(-1033.841, -904.032, 17.364)
+Camera.SetPosition(-1034.135, -904.978, 17.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-1033.841, -904.032, 17.364, 2)
+fade 1 500
+
+:IMPORT1_587
+if
+fading
+jf @IMPORT1_611
+wait 0
+jump @IMPORT1_587
+
+:IMPORT1_611
+0394: play_music 1
+00BA: text_styled 'CAR_AS1' 5000 ms 6  // CAR SHOWROOM ASSET COMPLETED
+wait 5000
+Camera.SetAtPos(-1008.388, -873.565, 13.218)
+Camera.SetPosition(-1007.333, -874.26, 13.824, 0.0, 0.0, 0.0)
+Camera.PointAt(-1007.34, -873.279, 13.63, 2)
+01E5: text_1number_highpriority 'CAR_AS2' $626 flag 6000 time 1  // ~g~Sunshine Auto's will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+wait 6000
+fade 0 500
+
+:IMPORT1_733
+if
+fading
+jf @IMPORT1_757
+wait 0
+jump @IMPORT1_733
+
+:IMPORT1_757
+fade 1 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT1_793
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+
+:IMPORT1_793
+gosub @IMPGEN4_581
+030C: progress_made += 1
+create_thread @IMPORT2
+create_thread @IMPGEN1
+end_thread
+
+:IMPORT1_822
+jump @IMPORT1_10
+
+:IMPORT2
+thread 'IMPORT2'
+
+:IMPORT2_10
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT2_556
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @IMPORT2_556
+if
+   not $1105 == 6 // integer values
+jf @IMPORT2_87
+gosub @IMPGEN4_183
+jump @IMPORT2_556
+
+:IMPORT2_87
+if
+  $1107 == 0 // integer values
+jf @IMPORT2_556
+gosub @IMPGEN4_639
+02FA: garage $687 change_to_type 10
+$1114 = Object.Init(#LH_IMP_EXP03, -981.754, -841.278, 8.586)
+Object.RemoveFromMissionCleanupList($1114)
+$626 += 2500 // integer values
+Pickup.Destroy($627)
+04A6: $627 = create_asset_money_pickup_at $552 $553 $554 money $626 $626
+increment_mission_attempts
+0595: mission_complete
+$1107 = 1 // integer values
+wait 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT2_527
+Player.CanMove($PLAYER_CHAR) = False
+fade 0 500
+
+:IMPORT2_225
+if
+fading
+jf @IMPORT2_249
+wait 0
+jump @IMPORT2_225
+
+:IMPORT2_249
+02A3: enable_widescreen 1
+Model.Load(#SABRETUR)
+038B: load_requested_models
+
+:IMPORT2_260
+if
+   not Model.Available(#SABRETUR)
+jf @IMPORT2_287
+wait 0
+jump @IMPORT2_260
+
+:IMPORT2_287
+$1122 = Car.Create(#SABRETUR, -1014.1, -869.4, 12.0)
+Car.Angle($1122) = 188.0
+$1126 = 1 // integer values
+Camera.SetAtPos(-1012.449, -874.397, 13.795)
+Camera.SetPosition(-1012.101, -875.321, 13.952, 0.0, 0.0, 0.0)
+Camera.PointAt(-1012.449, -874.397, 13.795, 2)
+fade 1 500
+wait 4000
+Camera.SetAtPos(-1016.831, -866.517, 13.734)
+Camera.SetPosition(-1017.595, -865.969, 14.074, 0.0, 0.0, 0.0)
+Camera.PointAt(-1016.831, -866.517, 13.734, 2)
+wait 4000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT2_527
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+01E5: text_1number_highpriority 'CAR_AS2' $626 flag 6000 time 1  // ~g~Sunshine Auto's will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+
+:IMPORT2_527
+gosub @IMPGEN4_581
+030C: progress_made += 1
+create_thread @IMPORT3
+create_thread @IMPGEN2
+end_thread
+
+:IMPORT2_556
+jump @IMPORT2_10
+
+:IMPORT3
+thread 'IMPORT3'
+
+:IMPORT3_10
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT3_556
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @IMPORT3_556
+if
+   not $1105 == 6 // integer values
+jf @IMPORT3_87
+gosub @IMPGEN4_183
+jump @IMPORT3_556
+
+:IMPORT3_87
+if
+  $1107 == 0 // integer values
+jf @IMPORT3_556
+gosub @IMPGEN4_639
+02FA: garage $687 change_to_type 22
+$1114 = Object.Init(#LH_IMP_EXP04, -981.754, -841.278, 8.586)
+Object.RemoveFromMissionCleanupList($1114)
+$626 += 2500 // integer values
+Pickup.Destroy($627)
+04A6: $627 = create_asset_money_pickup_at $552 $553 $554 money $626 $626
+increment_mission_attempts
+0595: mission_complete
+$1107 = 1 // integer values
+wait 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT3_527
+Player.CanMove($PLAYER_CHAR) = False
+fade 0 500
+
+:IMPORT3_225
+if
+fading
+jf @IMPORT3_249
+wait 0
+jump @IMPORT3_225
+
+:IMPORT3_249
+02A3: enable_widescreen 1
+Model.Load(#SANDKING)
+038B: load_requested_models
+
+:IMPORT3_260
+if
+   not Model.Available(#SANDKING)
+jf @IMPORT3_287
+wait 0
+jump @IMPORT3_260
+
+:IMPORT3_287
+$1123 = Car.Create(#SANDKING, -1014.3, -868.8, 17.7)
+Car.Angle($1123) = 195.0
+$1127 = 1 // integer values
+Camera.SetAtPos(-1009.532, -871.888, 19.307)
+Camera.SetPosition(-1008.656, -872.307, 19.548, 0.0, 0.0, 0.0)
+Camera.PointAt(-1009.532, -871.888, 19.307, 2)
+fade 1 500
+wait 4000
+Camera.SetAtPos(-1018.04, -871.539, 20.058)
+Camera.SetPosition(-1018.791, -872.077, 20.442, 0.0, 0.0, 0.0)
+Camera.PointAt(-1018.04, -871.539, 20.058, 2)
+wait 4000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT3_527
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+01E5: text_1number_highpriority 'CAR_AS2' $626 flag 6000 time 1  // ~g~Sunshine Auto's will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+
+:IMPORT3_527
+gosub @IMPGEN4_581
+030C: progress_made += 1
+create_thread @IMPORT4
+create_thread @IMPGEN3
+end_thread
+
+:IMPORT3_556
+jump @IMPORT3_10
+
+:IMPORT4
+thread 'IMPORT4'
+
+:IMPORT4_10
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT4_500
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @IMPORT4_500
+if
+   not $1105 == 6 // integer values
+jf @IMPORT4_87
+gosub @IMPGEN4_183
+jump @IMPORT4_500
+
+:IMPORT4_87
+if
+  $1107 == 0 // integer values
+jf @IMPORT4_500
+$626 += 2500 // integer values
+Pickup.Destroy($627)
+04A6: $627 = create_asset_money_pickup_at $552 $553 $554 money $626 $626
+increment_mission_attempts
+0595: mission_complete
+$1107 = 1 // integer values
+wait 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT4_486
+Player.CanMove($PLAYER_CHAR) = False
+fade 0 500
+
+:IMPORT4_184
+if
+fading
+jf @IMPORT4_208
+wait 0
+jump @IMPORT4_184
+
+:IMPORT4_208
+02A3: enable_widescreen 1
+Model.Load(#HOTRING)
+038B: load_requested_models
+
+:IMPORT4_219
+if
+   not Model.Available(#HOTRING)
+jf @IMPORT4_246
+wait 0
+jump @IMPORT4_219
+
+:IMPORT4_246
+$1124 = Car.Create(#HOTRING, -1023.2, -868.1, 17.0)
+Car.Angle($1124) = 172.0
+$1128 = 1 // integer values
+Camera.SetAtPos(-1026.903, -871.942, 19.008)
+Camera.SetPosition(-1027.585, -872.634, 19.244, 0.0, 0.0, 0.0)
+Camera.PointAt(-1026.903, -871.942, 19.008, 2)
+fade 1 500
+wait 4000
+Camera.SetAtPos(-1019.624, -869.584, 18.612)
+Camera.SetPosition(-1018.721, -869.948, 18.844, 0.0, 0.0, 0.0)
+Camera.PointAt(-1019.624, -869.584, 18.612, 2)
+wait 4000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPORT4_486
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+01E5: text_1number_highpriority 'CAR_AS2' $626 flag 6000 time 1  // ~g~Sunshine Auto's will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+
+:IMPORT4_486
+030C: progress_made += 1
+create_thread @IMPGEN4
+end_thread
+
+:IMPORT4_500
+jump @IMPORT4_10
+
+:IMPGEN1
+thread 'IMPGEN1'
+
+:IMPGEN1_10
+wait 1000
+if
+  $51 == 0 // integer values
+jf @IMPGEN1_176
+if
+  $1125 == 1 // integer values
+jf @IMPGEN1_176
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPGEN1_176
+if
+80F5:   not player $PLAYER_CHAR 0 -1023.0 -860.4 15.0 radius 100.0 100.0 40.0
+jf @IMPGEN1_176
+if
+   not Car.Wrecked($1121)
+jf @IMPGEN1_155
+Car.RemoveReferences($1121)
+Model.Destroy(#DELUXO)
+014C: set_parked_car_generator $87 cars_to_generate_to 101
+jump @IMPGEN1_167
+
+:IMPGEN1_155
+Model.Destroy(#DELUXO)
+014C: set_parked_car_generator $87 cars_to_generate_to 101
+
+:IMPGEN1_167
+$51 = 1 // integer values
+end_thread
+
+:IMPGEN1_176
+jump @IMPGEN1_10
+
+:IMPGEN2
+thread 'IMPGEN2'
+
+:IMPGEN2_10
+wait 1000
+if
+  $52 == 0 // integer values
+jf @IMPGEN2_176
+if
+  $1126 == 1 // integer values
+jf @IMPGEN2_176
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPGEN2_176
+if
+80F5:   not player $PLAYER_CHAR 0 -1023.0 -860.4 15.0 radius 100.0 100.0 40.0
+jf @IMPGEN2_176
+if
+   not Car.Wrecked($1122)
+jf @IMPGEN2_155
+Model.Destroy(#SABRETUR)
+Car.RemoveReferences($1122)
+014C: set_parked_car_generator $88 cars_to_generate_to 101
+jump @IMPGEN2_167
+
+:IMPGEN2_155
+Model.Destroy(#SABRETUR)
+014C: set_parked_car_generator $88 cars_to_generate_to 101
+
+:IMPGEN2_167
+$52 = 1 // integer values
+end_thread
+
+:IMPGEN2_176
+jump @IMPGEN2_10
+
+:IMPGEN3
+thread 'IMPGEN3'
+
+:IMPGEN3_10
+wait 1000
+if
+  $53 == 0 // integer values
+jf @IMPGEN3_176
+if
+  $1127 == 1 // integer values
+jf @IMPGEN3_176
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPGEN3_176
+if
+80F5:   not player $PLAYER_CHAR 0 -1023.0 -860.4 15.0 radius 100.0 100.0 40.0
+jf @IMPGEN3_176
+if
+   not Car.Wrecked($1123)
+jf @IMPGEN3_155
+Model.Destroy(#SANDKING)
+Car.RemoveReferences($1123)
+014C: set_parked_car_generator $89 cars_to_generate_to 101
+jump @IMPGEN3_167
+
+:IMPGEN3_155
+Model.Destroy(#SANDKING)
+014C: set_parked_car_generator $89 cars_to_generate_to 101
+
+:IMPGEN3_167
+$53 = 1 // integer values
+end_thread
+
+:IMPGEN3_176
+jump @IMPGEN3_10
+
+:IMPGEN4
+thread 'IMPGEN4'
+
+:IMPGEN4_10
+wait 1000
+if
+  $54 == 0 // integer values
+jf @IMPGEN4_176
+if
+  $1128 == 1 // integer values
+jf @IMPGEN4_176
+if
+   Player.Defined($PLAYER_CHAR)
+jf @IMPGEN4_176
+if
+80F5:   not player $PLAYER_CHAR 0 -1023.0 -860.4 15.0 radius 100.0 100.0 40.0
+jf @IMPGEN4_176
+if
+   not Car.Wrecked($1124)
+jf @IMPGEN4_155
+Model.Destroy(#HOTRING)
+Car.RemoveReferences($1124)
+014C: set_parked_car_generator $90 cars_to_generate_to 101
+jump @IMPGEN4_167
+
+:IMPGEN4_155
+Model.Destroy(#HOTRING)
+014C: set_parked_car_generator $90 cars_to_generate_to 101
+
+:IMPGEN4_167
+$54 = 1 // integer values
+end_thread
+
+:IMPGEN4_176
+jump @IMPGEN4_10
+
+:IMPGEN4_183
+if and
+03D4:   garage $687 contains_neededcar 1
+  $1108 == 0 // integer values
+jf @IMPGEN4_249
+$1105 += 1 // integer values
+$1115 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 8.378)
+Object.RemoveFromMissionCleanupList($1115)
+$1108 = 1 // integer values
+
+:IMPGEN4_249
+if and
+03D4:   garage $687 contains_neededcar 2
+  $1109 == 0 // integer values
+jf @IMPGEN4_315
+$1105 += 1 // integer values
+$1116 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 8.216)
+Object.RemoveFromMissionCleanupList($1116)
+$1109 = 1 // integer values
+
+:IMPGEN4_315
+if and
+03D4:   garage $687 contains_neededcar 3
+  $1110 == 0 // integer values
+jf @IMPGEN4_381
+$1105 += 1 // integer values
+$1117 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 8.062)
+Object.RemoveFromMissionCleanupList($1117)
+$1110 = 1 // integer values
+
+:IMPGEN4_381
+if and
+03D4:   garage $687 contains_neededcar 4
+  $1111 == 0 // integer values
+jf @IMPGEN4_447
+$1105 += 1 // integer values
+$1118 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 7.901)
+Object.RemoveFromMissionCleanupList($1118)
+$1111 = 1 // integer values
+
+:IMPGEN4_447
+if and
+03D4:   garage $687 contains_neededcar 5
+  $1112 == 0 // integer values
+jf @IMPGEN4_513
+$1105 += 1 // integer values
+$1119 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 7.74)
+Object.RemoveFromMissionCleanupList($1119)
+$1112 = 1 // integer values
+
+:IMPGEN4_513
+if and
+03D4:   garage $687 contains_neededcar 6
+  $1113 == 0 // integer values
+jf @IMPGEN4_579
+$1105 += 1 // integer values
+$1120 = Object.Init(#LH_STRIKETHROUGH, -981.519, -841.222, 7.585)
+Object.RemoveFromMissionCleanupList($1120)
+$1113 = 1 // integer values
+
+:IMPGEN4_579
+return
+
+:IMPGEN4_581
+$1108 = 0 // integer values
+$1109 = 0 // integer values
+$1110 = 0 // integer values
+$1111 = 0 // integer values
+$1112 = 0 // integer values
+$1113 = 0 // integer values
+$1105 = 0 // integer values
+$1107 = 0 // integer values
+return
+
+:IMPGEN4_639
+Object.Destroy($1115)
+Object.Destroy($1116)
+Object.Destroy($1118)
+Object.Destroy($1117)
+Object.Destroy($1119)
+Object.Destroy($1120)
+Object.Destroy($1114)
+return

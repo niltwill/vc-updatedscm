@@ -1,0 +1,651 @@
+:BMX_1
+gosub @BMX_1_36
+if
+wasted_or_busted
+jf @BMX_1_27
+gosub @BMX_1_4462
+
+:BMX_1_27
+gosub @BMX_1_4573
+end_thread
+
+:BMX_1_36
+if
+  $363 == 0 // integer values
+jf @BMX_1_56
+increment_mission_attempts
+
+:BMX_1_56
+thread 'BMX_1'
+$ONMISSION = 1 // integer values
+054C: use_GXT_table 'BMX_1'
+wait 0
+$1745 = 0 // integer values
+$1746 = 1 // integer values
+$1614 = 0 // integer values
+$1747 = 0 // integer values
+$346 = 0 // integer values
+$7885 = 0 // integer values
+$1613 = 0 // integer values
+$1757 = 0 // integer values
+$1765 = 0 // integer values
+$1766 = 0 // integer values
+$1767 = 0 // integer values
+$1670 = -456.0 // floating-point values
+$1671 = 1417.9 // floating-point values
+$1672 = 14.24 // floating-point values
+$1673 = -467.8 // floating-point values
+$1674 = 1398.7 // floating-point values
+$1675 = 8.15 // floating-point values
+$1676 = -488.4 // floating-point values
+$1677 = 1425.9 // floating-point values
+$1678 = 14.5 // floating-point values
+$1679 = -516.8 // floating-point values
+$1680 = 1409.1 // floating-point values
+$1681 = 12.6 // floating-point values
+$1682 = -529.6 // floating-point values
+$1683 = 1430.0 // floating-point values
+$1684 = 9.6 // floating-point values
+$1685 = -556.4 // floating-point values
+$1686 = 1422.7 // floating-point values
+$1687 = 10.0 // floating-point values
+$1688 = -533.55 // floating-point values
+$1689 = 1455.6 // floating-point values
+$1690 = 10.3 // floating-point values
+$1691 = -560.0 // floating-point values
+$1692 = 1460.0 // floating-point values
+$1693 = 10.3 // floating-point values
+$1694 = -528.5 // floating-point values
+$1695 = 1476.9 // floating-point values
+$1696 = 10.5 // floating-point values
+$1697 = -535.0 // floating-point values
+$1698 = 1500.0 // floating-point values
+$1699 = 9.8 // floating-point values
+$1700 = -502.4 // floating-point values
+$1701 = 1474.6 // floating-point values
+$1702 = 11.3 // floating-point values
+$1703 = -500.6 // floating-point values
+$1704 = 1507.1 // floating-point values
+$1705 = 9.8 // floating-point values
+$1706 = -472.2 // floating-point values
+$1707 = 1490.5 // floating-point values
+$1708 = 11.0 // floating-point values
+$1709 = -499.3 // floating-point values
+$1710 = 1447.5 // floating-point values
+$1711 = 15.5 // floating-point values
+$1712 = -450.2 // floating-point values
+$1713 = 1481.4 // floating-point values
+$1714 = 9.8 // floating-point values
+$1715 = -440.6 // floating-point values
+$1716 = 1455.42 // floating-point values
+$1717 = 9.8 // floating-point values
+$1718 = -429.0 // floating-point values
+$1719 = 1491.8 // floating-point values
+$1720 = 10.1 // floating-point values
+$1721 = -418.0 // floating-point values
+$1722 = 1432.1 // floating-point values
+$1723 = 10.0 // floating-point values
+$1724 = -445.0 // floating-point values
+$1725 = 1439.5 // floating-point values
+$1726 = 10.4 // floating-point values
+$1727 = -453.5 // floating-point values
+$1728 = 1434.6 // floating-point values
+$1729 = 10.0 // floating-point values
+01BD: $1749 = current_time_in_ms
+018A: $1622 = create_checkpoint_at $1670 $1671 $1672
+if
+  $1755 > 0 // integer values
+jf @BMX_1_947
+Model.Load(#BARREL4)
+
+:BMX_1_805
+if
+   not Model.Available(#BARREL4)
+jf @BMX_1_831
+wait 0
+jump @BMX_1_805
+
+:BMX_1_831
+$7886 = Object.Create(#BARREL4, -413.0, 1434.4, -100.0)
+Object.CollisionDetection($7886) = True
+$7887 = Object.Create(#BARREL4, -405.36, 1447.12, -100.0)
+Object.CollisionDetection($7887) = True
+$7888 = Object.Create(#BARREL4, -400.0, 1455.5, -100.0)
+Object.CollisionDetection($7888) = True
+$7889 = Object.Create(#BARREL4, -402.73, 1465.0, -100.0)
+Object.CollisionDetection($7889) = True
+
+:BMX_1_947
+if
+  $1755 > 2 // integer values
+jf @BMX_1_1247
+Model.Load(#HNA)
+Model.Load(#HNB)
+Model.Load(#MACHETE)
+
+:BMX_1_978
+if or
+   not Model.Available(#HNA)
+   not Model.Available(#HNB)
+   not Model.Available(#MACHETE)
+jf @BMX_1_1013
+wait 0
+jump @BMX_1_978
+
+:BMX_1_1013
+$1762 = Car.Create(#SANCHEZ, -478.7, 1524.0, 10.4)
+0229: set_car $1762 color_to 70 0
+Car.Angle($1762) = 190.0
+0129: $1759 = create_actor 4 #HNA in_car $1762 driverseat
+01B2: give_actor $1759 weapon 9 ammo 0 // Load the weapon model before using this
+Car.SetDriverBehaviour($1762, KillThePlayer)
+04E0: car $1762 abandon_path_radius 255
+$1763 = Car.Create(#SANCHEZ, -476.7, 1522.0, 10.4)
+0229: set_car $1763 color_to 70 0
+Car.Angle($1763) = 190.0
+0129: $1760 = create_actor 4 #HNA in_car $1763 driverseat
+01B2: give_actor $1760 weapon 9 ammo 0 // Load the weapon model before using this
+Car.SetDriverBehaviour($1763, KillThePlayer)
+04E0: car $1763 abandon_path_radius 255
+$1764 = Car.Create(#SANCHEZ, -480.7, 1525.0, 10.4)
+0229: set_car $1764 color_to 70 0
+Car.Angle($1764) = 190.0
+0129: $1761 = create_actor 4 #HNA in_car $1764 driverseat
+01B2: give_actor $1761 weapon 9 ammo 0 // Load the weapon model before using this
+Car.SetDriverBehaviour($1764, KillThePlayer)
+04E0: car $1764 abandon_path_radius 255
+
+:BMX_1_1247
+if
+  2 > $1745 // integer values
+jf @BMX_1_4302
+wait 0
+01BD: $1748 = current_time_in_ms
+0084: $1747 = $1748 // integer values and handles
+0060: $1747 -= $1749 // integer values
+if
+  $1613 == 0 // integer values
+jf @BMX_1_1330
+03C3: set_timer_with_text_to $1747 type 0 text 'R_TIME'  // RACE TIME:
+$1613 = 1 // integer values
+
+:BMX_1_1330
+if
+  $1757 == 0 // integer values
+jf @BMX_1_1370
+00BC: text_highpriority 'BMX_HOW' 5000 ms 1  // ~g~Do two laps of the dirt track, ~y~passing through ~g~the ~y~CHECKPOINTS ~g~as you go!
+$1757 = 1 // integer values
+
+:BMX_1_1370
+if and
+  $1757 == 1 // integer values
+  $1747 > 5000 // integer values
+jf @BMX_1_1418
+00BC: text_highpriority 'BMXREW1' 5000 ms 1  // ~g~Each time you beat your previous record for the two laps
+$1757 = 2 // integer values
+
+:BMX_1_1418
+if and
+  $1757 == 2 // integer values
+  $1747 > 10000 // integer values
+jf @BMX_1_1466
+00BC: text_highpriority 'BMXREW2' 5000 ms 1  // ~g~a larger ~y~REWARD ~g~will be awarded!
+$1757 = 3 // integer values
+
+:BMX_1_1466
+if
+  $1746 == 1 // integer values
+jf @BMX_1_1593
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1670 $1671 $1672
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1670 $1671 $1672 radius 3.0 3.0 3.0
+jf @BMX_1_1593
+Marker.Disable($1622)
+018C: play_sound 1 at $1670 $1671 $1672
+018A: $1623 = create_checkpoint_at $1673 $1674 $1675
+$1746 += 1 // integer values
+
+:BMX_1_1593
+if
+  $1746 == 2 // integer values
+jf @BMX_1_1720
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1673 $1674 $1675
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1673 $1674 $1675 radius 3.0 3.0 3.0
+jf @BMX_1_1720
+Marker.Disable($1623)
+018C: play_sound 1 at $1673 $1674 $1675
+018A: $1624 = create_checkpoint_at $1676 $1677 $1678
+$1746 += 1 // integer values
+
+:BMX_1_1720
+if
+  $1746 == 3 // integer values
+jf @BMX_1_1847
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1676 $1677 $1678
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1676 $1677 $1678 radius 3.0 3.0 3.0
+jf @BMX_1_1847
+Marker.Disable($1624)
+018C: play_sound 1 at $1676 $1677 $1678
+018A: $1625 = create_checkpoint_at $1679 $1680 $1681
+$1746 += 1 // integer values
+
+:BMX_1_1847
+if
+  $1746 == 4 // integer values
+jf @BMX_1_1974
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1679 $1680 $1681
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1679 $1680 $1681 radius 3.0 3.0 3.0
+jf @BMX_1_1974
+Marker.Disable($1625)
+018C: play_sound 1 at $1679 $1680 $1681
+018A: $1626 = create_checkpoint_at $1682 $1683 $1684
+$1746 += 1 // integer values
+
+:BMX_1_1974
+if
+  $1746 == 5 // integer values
+jf @BMX_1_2101
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1682 $1683 $1684
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1682 $1683 $1684 radius 3.0 3.0 3.0
+jf @BMX_1_2101
+Marker.Disable($1626)
+018C: play_sound 1 at $1703 $1704 $1705
+018A: $1627 = create_checkpoint_at $1685 $1686 $1687
+$1746 += 1 // integer values
+
+:BMX_1_2101
+if
+  $1746 == 6 // integer values
+jf @BMX_1_2228
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1685 $1686 $1687
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1685 $1686 $1687 radius 3.0 3.0 3.0
+jf @BMX_1_2228
+Marker.Disable($1627)
+018C: play_sound 1 at $1685 $1686 $1687
+018A: $1628 = create_checkpoint_at $1688 $1689 $1690
+$1746 += 1 // integer values
+
+:BMX_1_2228
+if
+  $1746 == 7 // integer values
+jf @BMX_1_2355
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1688 $1689 $1690
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1688 $1689 $1690 radius 3.0 3.0 3.0
+jf @BMX_1_2355
+Marker.Disable($1628)
+018C: play_sound 1 at $1688 $1689 $1690
+018A: $1629 = create_checkpoint_at $1691 $1692 $1693
+$1746 += 1 // integer values
+
+:BMX_1_2355
+if
+  $1746 == 8 // integer values
+jf @BMX_1_2482
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1691 $1692 $1693
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1691 $1692 $1693 radius 3.0 3.0 3.0
+jf @BMX_1_2482
+Marker.Disable($1629)
+018C: play_sound 1 at $1691 $1692 $1693
+018A: $1630 = create_checkpoint_at $1694 $1695 $1696
+$1746 += 1 // integer values
+
+:BMX_1_2482
+if
+  $1746 == 9 // integer values
+jf @BMX_1_2668
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1694 $1695 $1696
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1694 $1695 $1696 radius 3.0 3.0 3.0
+jf @BMX_1_2668
+Marker.Disable($1630)
+018C: play_sound 1 at $1694 $1695 $1696
+018A: $1631 = create_checkpoint_at $1697 $1698 $1699
+$1746 += 1 // integer values
+if and
+  $1757 == 3 // integer values
+  $1747 > 12000 // integer values
+  $1755 > 1 // integer values
+jf @BMX_1_2668
+01B5: force_weather 2
+00BC: text_highpriority 'BMXRAIN' 4000 ms 1  // ~g~Looks like rain...
+$1757 = 4 // integer values
+
+:BMX_1_2668
+if
+  $1746 == 10 // integer values
+jf @BMX_1_2795
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1697 $1698 $1699
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1697 $1698 $1699 radius 3.0 3.0 3.0
+jf @BMX_1_2795
+Marker.Disable($1631)
+018C: play_sound 1 at $1697 $1698 $1699
+018A: $1632 = create_checkpoint_at $1700 $1701 $1702
+$1746 += 1 // integer values
+
+:BMX_1_2795
+if
+  $1746 == 11 // integer values
+jf @BMX_1_2922
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1700 $1701 $1702
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1700 $1701 $1702 radius 3.0 3.0 3.0
+jf @BMX_1_2922
+Marker.Disable($1632)
+018C: play_sound 1 at $1700 $1701 $1702
+018A: $1633 = create_checkpoint_at $1703 $1704 $1705
+$1746 += 1 // integer values
+
+:BMX_1_2922
+if
+  $1746 == 12 // integer values
+jf @BMX_1_3049
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1703 $1704 $1705
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1703 $1704 $1705 radius 3.0 3.0 3.0
+jf @BMX_1_3049
+Marker.Disable($1633)
+018C: play_sound 1 at $1703 $1704 $1705
+018A: $1634 = create_checkpoint_at $1706 $1707 $1708
+$1746 += 1 // integer values
+
+:BMX_1_3049
+if
+  $1746 == 13 // integer values
+jf @BMX_1_3176
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1706 $1707 $1708
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1706 $1707 $1708 radius 3.0 3.0 3.0
+jf @BMX_1_3176
+Marker.Disable($1634)
+018C: play_sound 1 at $1706 $1707 $1708
+018A: $1635 = create_checkpoint_at $1709 $1710 $1711
+$1746 += 1 // integer values
+
+:BMX_1_3176
+if
+  $1746 == 14 // integer values
+jf @BMX_1_3303
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1709 $1710 $1711
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1709 $1710 $1711 radius 3.0 3.0 3.0
+jf @BMX_1_3303
+Marker.Disable($1635)
+018C: play_sound 1 at $1709 $1710 $1711
+018A: $1636 = create_checkpoint_at $1712 $1713 $1714
+$1746 += 1 // integer values
+
+:BMX_1_3303
+if
+  $1746 == 15 // integer values
+jf @BMX_1_3430
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1712 $1713 $1714
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1712 $1713 $1714 radius 3.0 3.0 3.0
+jf @BMX_1_3430
+Marker.Disable($1636)
+018C: play_sound 1 at $1712 $1713 $1714
+018A: $1637 = create_checkpoint_at $1715 $1716 $1717
+$1746 += 1 // integer values
+
+:BMX_1_3430
+if
+  $1746 == 16 // integer values
+jf @BMX_1_3557
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1715 $1716 $1717
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1715 $1716 $1717 radius 3.0 3.0 3.0
+jf @BMX_1_3557
+Marker.Disable($1637)
+018C: play_sound 1 at $1715 $1716 $1717
+018A: $1638 = create_checkpoint_at $1718 $1719 $1720
+$1746 += 1 // integer values
+
+:BMX_1_3557
+if
+  $1746 == 17 // integer values
+jf @BMX_1_3684
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1718 $1719 $1720
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1718 $1719 $1720 radius 3.0 3.0 3.0
+jf @BMX_1_3684
+Marker.Disable($1638)
+018C: play_sound 1 at $1718 $1719 $1720
+018A: $1639 = create_checkpoint_at $1721 $1722 $1723
+$1746 += 1 // integer values
+
+:BMX_1_3684
+if
+  $1746 == 18 // integer values
+jf @BMX_1_3811
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1721 $1722 $1723
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1721 $1722 $1723 radius 3.0 3.0 3.0
+jf @BMX_1_3811
+Marker.Disable($1639)
+018C: play_sound 1 at $1721 $1722 $1723
+018A: $1640 = create_checkpoint_at $1724 $1725 $1726
+$1746 += 1 // integer values
+
+:BMX_1_3811
+if
+  $1746 == 19 // integer values
+jf @BMX_1_3963
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1724 $1725 $1726
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1724 $1725 $1726 radius 3.0 3.0 3.0
+jf @BMX_1_3963
+Marker.Disable($1640)
+018C: play_sound 1 at $1724 $1725 $1726
+$1746 = 1 // integer values
+$1745 += 1 // integer values
+if
+  3 > $1745 // integer values
+jf @BMX_1_3963
+018A: $1622 = create_checkpoint_at $1670 $1671 $1672
+
+:BMX_1_3963
+0084: $1768 = $1759 // integer values and handles
+0084: $1769 = $1762 // integer values and handles
+0084: $1770 = $1765 // integer values and handles
+gosub @BMX_1_4842
+if
+  $1770 == 1 // integer values
+jf @BMX_1_4019
+$1765 = 1 // integer values
+
+:BMX_1_4019
+0084: $1768 = $1760 // integer values and handles
+0084: $1769 = $1763 // integer values and handles
+0084: $1770 = $1766 // integer values and handles
+gosub @BMX_1_4842
+if
+  $1770 == 1 // integer values
+jf @BMX_1_4075
+$1766 = 1 // integer values
+
+:BMX_1_4075
+0084: $1768 = $1761 // integer values and handles
+0084: $1769 = $1764 // integer values and handles
+0084: $1770 = $1767 // integer values and handles
+gosub @BMX_1_4842
+if
+  $1770 == 1 // integer values
+jf @BMX_1_4131
+$1767 = 1 // integer values
+
+:BMX_1_4131
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #SANCHEZ
+jf @BMX_1_4295
+01BD: $1751 = current_time_in_ms
+
+:BMX_1_4155
+if
+   not 0 > $1752 // integer values
+jf @BMX_1_4288
+wait 0
+01BD: $1748 = current_time_in_ms
+0084: $1750 = $1748 // integer values and handles
+0060: $1750 -= $1751 // integer values
+$1752 = 15000 // integer values
+0060: $1752 -= $1750 // integer values
+0084: $1753 = $1752 // integer values and handles
+$1753 /= 1000 // integer values
+01E5: text_1number_highpriority 'GETBIK2' $1753 flag 2000 time 1  // ~r~You have ~w~~1~ seconds ~g~to get on a Dirt Bike!
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SANCHEZ
+jf @BMX_1_4281
+$1752 = 1 // integer values
+jump @BMX_1_4295
+
+:BMX_1_4281
+jump @BMX_1_4155
+
+:BMX_1_4288
+jump @BMX_1_4462
+
+:BMX_1_4295
+jump @BMX_1_1247
+
+:BMX_1_4302
+if
+  $1745 == 2 // integer values
+jf @BMX_1_4462
+$1747 /= 1000 // integer values
+if
+  $363 == 0 // integer values
+jf @BMX_1_4382
+0084: $1754 = $1747 // integer values and handles
+$7885 = 1 // integer values
+$1755 = 1 // integer values
+gosub @BMX_1_4773
+jump @BMX_1_4430
+
+:BMX_1_4382
+if
+001C:   $1754 > $1747 // integer values
+jf @BMX_1_4430
+0084: $1754 = $1747 // integer values and handles
+$7885 = 1 // integer values
+$1755 += 1 // integer values
+gosub @BMX_1_4773
+
+:BMX_1_4430
+if
+  $7885 == 1 // integer values
+jf @BMX_1_4462
+042E: downdate_integer_stat 17 to $1771
+jump @BMX_1_4494
+
+:BMX_1_4462
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+00BC: text_highpriority 'BMXFAIL' 5000 ms 1  // ~r~You failed to set a new record!
+return
+
+:BMX_1_4494
+0084: $1756 = $1755 // integer values and handles
+$1756 *= 100 // integer values
+01E3: text_1number_styled 'M_PASS' number $1756 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += $1756
+if
+  $363 == 0 // integer values
+jf @BMX_1_4571
+$363 = 1 // integer values
+030C: progress_made += 1
+0595: mission_complete
+
+:BMX_1_4571
+return
+
+:BMX_1_4573
+$1752 = 1 // integer values
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+Marker.Disable($1622)
+Marker.Disable($1623)
+Marker.Disable($1624)
+Marker.Disable($1625)
+Marker.Disable($1626)
+Marker.Disable($1627)
+Marker.Disable($1628)
+Marker.Disable($1629)
+Marker.Disable($1630)
+Marker.Disable($1631)
+Marker.Disable($1632)
+Marker.Disable($1633)
+Marker.Disable($1634)
+Marker.Disable($1635)
+Marker.Disable($1636)
+Marker.Disable($1637)
+Marker.Disable($1638)
+Marker.Disable($1639)
+Marker.Disable($1640)
+Model.Destroy(#BARREL4)
+Model.Destroy(#MACHETE)
+Model.Destroy(#HNA)
+Model.Destroy(#HNB)
+Actor.RemoveReferences($1759)
+Car.RemoveReferences($1762)
+Actor.RemoveReferences($1760)
+Car.RemoveReferences($1763)
+Actor.RemoveReferences($1761)
+Car.RemoveReferences($1764)
+Object.Destroy($7886)
+Object.Destroy($7887)
+Object.Destroy($7888)
+Object.Destroy($7889)
+01B7: release_weather
+014F: stop_timer $1747
+$ONMISSION = 0 // integer values
+mission_cleanup
+return
+
+:BMX_1_4773
+$1758 = 0 // integer values
+
+:BMX_1_4780
+if
+  $1747 > 59 // integer values
+jf @BMX_1_4819
+$1747 -= 60 // integer values
+$1758 += 1 // integer values
+jump @BMX_1_4780
+
+:BMX_1_4819
+02FD: text_2numbers_lowpriority 'NEW_REC' $1758 $1747 5000 flag 1  // ~g~New Record Set!! ~w~~1~ minutes ~g~and ~w~~1~ seconds.
+return
+
+:BMX_1_4842
+if and
+   not Actor.Dead($1768)
+  $1770 == 0 // integer values
+jf @BMX_1_4942
+if
+   not Car.Wrecked($1769)
+jf @BMX_1_4927
+if or
+   not Actor.InCar($1768, $1769)
+80E0:   not player $PLAYER_CHAR driving
+jf @BMX_1_4920
+01CC: actor $1768 kill_player $PLAYER_CHAR
+$1770 = 1 // integer values
+
+:BMX_1_4920
+jump @BMX_1_4942
+
+:BMX_1_4927
+01CC: actor $1768 kill_player $PLAYER_CHAR
+$1770 = 1 // integer values
+
+:BMX_1_4942
+return

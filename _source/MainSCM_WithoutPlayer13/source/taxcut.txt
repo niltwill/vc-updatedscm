@@ -1,0 +1,427 @@
+:TAXCUT
+$ONMISSION = 1 // integer values
+Object.Destroy($1785)
+thread 'TAXCUT'
+wait 0
+054C: use_GXT_table 'TAXICUT'
+if
+  $ONMISSION == 0 // integer values
+jf @TAXCUT_70
+0570: $619 = create_asset_radar_marker_with_icon 25 at $561 $562 $563
+
+:TAXCUT_70
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Player.CanMove($PLAYER_CHAR) = False
+03AF: set_streaming 0
+03AD: set_rubbish 0
+0522:
+Model.Load(#KAUFMAN)
+
+:TAXCUT_99
+if
+   not Model.Available(#KAUFMAN)
+jf @TAXCUT_126
+wait 0
+jump @TAXCUT_99
+
+:TAXCUT_126
+0395: clear_area 1 at -1001.7 198.8 range 11.4 4.0
+3@ = Car.Create(#KAUFMAN, -1001.7, 198.8, 11.3)
+Car.Angle(3@) = 180.0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDORIS'
+023C: load_special_actor 3 'CDRIVRA'
+023C: load_special_actor 4 'CDRIVRB'
+038B: load_requested_models
+
+:TAXCUT_233
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+jf @TAXCUT_271
+wait 0
+jump @TAXCUT_233
+
+:TAXCUT_271
+02E4: load_cutscene_data 'TAX_1'
+0244: set_cutscene_pos -1002.4 202.0 10.4
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: 0@ = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim 0@ 'CSDORIS'
+02E5: 1@ = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim 1@ 'CDRIVRA'
+02E5: 2@ = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim 2@ 'CDRIVRB'
+0395: clear_area 1 at -999.1 193.0 range 10.4 1.0
+0055: put_player $PLAYER_CHAR at -999.1 193.0 10.4
+0171: set_player $PLAYER_CHAR z_angle_to 80.0
+wait 700
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:TAXCUT_466
+if
+  10228 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_501
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_466
+
+:TAXCUT_501
+00BC: text_highpriority 'TAXC_A' 10000 ms 1  // Guess you're the new owner.
+
+:TAXCUT_516
+if
+  11538 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_551
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_516
+
+:TAXCUT_551
+00BC: text_highpriority 'TAXC_B' 10000 ms 1  // What are you, mob? Cartel? You don't look Mexican...
+
+:TAXCUT_566
+if
+  15232 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_601
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_566
+
+:TAXCUT_601
+00BC: text_highpriority 'TAXC_C' 10000 ms 1  // Anyhoo, I guess you better get on with the 'things are gonna change around here' crap,
+
+:TAXCUT_616
+if
+  19887 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_651
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_616
+
+:TAXCUT_651
+00BC: text_highpriority 'TAXC_D' 10000 ms 1  // maybe threaten one of the drivers -
+
+:TAXCUT_666
+if
+  22198 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_701
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_666
+
+:TAXCUT_701
+00BC: text_highpriority 'TAXC_E' 10000 ms 1  // go steady on Ted over there, he's just had his hernia fixed.
+
+:TAXCUT_716
+if
+  27570 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_751
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_716
+
+:TAXCUT_751
+00BC: text_highpriority 'TAXC_F' 10000 ms 1  // Well, yeah. Things are going to change around here, lady.
+
+:TAXCUT_766
+if
+  30477 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_801
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_766
+
+:TAXCUT_801
+00BC: text_highpriority 'TAXC_G' 10000 ms 1  // Oh crap, sonny. Might as well leave this to me -
+
+:TAXCUT_816
+if
+  33933 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_853
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_816
+
+:TAXCUT_853
+00BC: text_highpriority 'TAXC_H' 10000 ms 1  // I've been doing this for years.
+
+:TAXCUT_868
+if
+  36327 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_905
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_868
+
+:TAXCUT_905
+00BC: text_highpriority 'TAXC_I' 10000 ms 1  // Now hear this.
+
+:TAXCUT_920
+if
+  38262 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_957
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_920
+
+:TAXCUT_957
+00BC: text_highpriority 'TAXC_J' 10000 ms 1  // We are now under new management and things are going to change around here again.
+
+:TAXCUT_972
+if
+  43042 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1009
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_972
+
+:TAXCUT_1009
+00BC: text_highpriority 'TAXC_K' 10000 ms 1  // Our new management, the
+
+:TAXCUT_1024
+if
+  45254 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1061
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1024
+
+:TAXCUT_1061
+00BC: text_highpriority 'TAXC_L' 10000 ms 1  // - Which gang are you?
+
+:TAXCUT_1076
+if
+  46583 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1113
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1076
+
+:TAXCUT_1113
+00BC: text_highpriority 'TAXC_M' 10000 ms 1  // Well, I'm not part of any gang actually.
+
+:TAXCUT_1128
+if
+  48993 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1165
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1128
+
+:TAXCUT_1165
+00BC: text_highpriority 'TAXC_N' 10000 ms 1  // What's your goddamned name, kid?
+
+:TAXCUT_1180
+if
+  51083 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1217
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1180
+
+:TAXCUT_1217
+00BC: text_highpriority 'TAXC_O' 10000 ms 1  // Vercetti, Tommy Vercetti.
+
+:TAXCUT_1232
+if
+  52858 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1269
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1232
+
+:TAXCUT_1269
+00BC: text_highpriority 'TAXC_P' 10000 ms 1  // Our new management, the Vercetti Gang,
+
+:TAXCUT_1284
+if
+  55674 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1321
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1284
+
+:TAXCUT_1321
+00BC: text_highpriority 'TAXC_Q' 10000 ms 1  // is gonna make sure we get no trouble.
+
+:TAXCUT_1336
+if
+  57991 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1373
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1336
+
+:TAXCUT_1373
+00BC: text_highpriority 'TAXC_R' 10000 ms 1  // Capiche? Out!
+
+:TAXCUT_1388
+if
+  59837 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1425
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1388
+
+:TAXCUT_1425
+00BC: text_highpriority 'TAXC_S' 10000 ms 1  // Did you like the 'capiche'? I liked the 'capiche'.
+
+:TAXCUT_1440
+if
+  62496 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1477
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1440
+
+:TAXCUT_1477
+00BC: text_highpriority 'TAXC_T' 10000 ms 1  // So this is how it's worked in the past,
+
+:TAXCUT_1492
+if
+  64179 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1529
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1492
+
+:TAXCUT_1529
+00BC: text_highpriority 'TAXC_U' 10000 ms 1  // We run the firm as usual.
+
+:TAXCUT_1544
+if
+  65671 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1581
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1544
+
+:TAXCUT_1581
+00BC: text_highpriority 'TAXC_V' 10000 ms 1  // If we get any trouble from rival firms, you beat the crap out of them.
+
+:TAXCUT_1596
+if
+  68752 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1633
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1596
+
+:TAXCUT_1633
+00BC: text_highpriority 'TAXC_W' 10000 ms 1  // Then they beat the crap out of us,
+
+:TAXCUT_1648
+if
+  70262 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1685
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1648
+
+:TAXCUT_1685
+00BC: text_highpriority 'TAXC_X' 10000 ms 1  // then you beat the crap out of them,
+
+:TAXCUT_1700
+if
+  71555 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1737
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1700
+
+:TAXCUT_1737
+00BC: text_highpriority 'TAXC_Y' 10000 ms 1  // etcetera, etcetera. You got it?
+
+:TAXCUT_1752
+if
+  73865 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1789
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1752
+
+:TAXCUT_1789
+00BC: text_highpriority 'TAXC_Z' 10000 ms 1  // Uh, yeah, I guess...
+
+:TAXCUT_1804
+if
+  76173 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1841
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1804
+
+:TAXCUT_1841
+00BC: text_highpriority 'TAXC_A1' 10000 ms 1  // Just grab a taxi from the garage if you feel like jumping in.
+
+:TAXCUT_1856
+if
+  77173 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1893
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1856
+
+:TAXCUT_1893
+if
+  81852 > $CUT_SCENE_TIME // integer values
+jf @TAXCUT_1930
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @TAXCUT_1893
+
+:TAXCUT_1930
+fade 0 1500
+00BE: text_clear_all
+
+:TAXCUT_1939
+if
+fading
+jf @TAXCUT_1963
+wait 0
+jump @TAXCUT_1939
+
+:TAXCUT_1963
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetAtPos(-999.1, 193.0, 10.4)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+Model.Destroy(#KAUFMAN)
+$307 = 1 // integer values
+wait 1000
+02A3: enable_widescreen 1
+fade 1 1500
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetAtPos(-1017.904, 207.165, 15.09)
+Camera.SetPosition(-1018.54, 207.931, 15.185, 0.0, 0.0, 0.0)
+Camera.PointAt(-1017.904, 207.165, 15.09, 2)
+0394: play_music 1
+01E3: text_1number_styled 'TAXIBUY' number $620 time 7000 style 6  // Taxi Firm purchased: $~1~
+0529: add $620 to_money_spent_on_property_stats
+0542: add_property 5 to_property_own_stats
+wait 7000
+$ONMISSION = 0 // integer values
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+Marker.Disable($619)
+Marker.Disable($306)
+02A7: $306 = create_icon_marker_and_sphere $432 at $489 $490 $491
+create_thread @PSAVE4
+030C: progress_made += 1
+Camera.Restore_WithJumpCut
+015C: set_zone_gang_info 'KAUFCAB' 1 13 0 0 0 0 0 0 1000 0 0 0
+015C: set_zone_gang_info 'KAUFCAB' 0 10 0 0 0 0 0 0 1000 0 0 0
+022A: remove_forbidden_for_peds_cube -1012.06 181.561 0.0 -982.06 216.561 30.0
+mission_cleanup
+end_thread

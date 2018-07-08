@@ -1,0 +1,5260 @@
+:BANKJO4
+gosub @BANKJO4_36
+if
+wasted_or_busted
+jf @BANKJO4_27
+gosub @BANKJO4_22188
+
+:BANKJO4_27
+gosub @BANKJO4_26040
+end_thread
+
+:BANKJO4_36
+thread 'BANKJO4'
+$ONMISSION = 1 // integer values
+054C: use_GXT_table 'BANKJ4'
+058E: set_restart_mission_taxi_destination 512.591 -74.9 9.573 189.24
+$986 = 0 // integer values
+increment_mission_attempts
+wait 0
+$4099 = 1 // integer values
+$4101 = 0 // integer values
+$4102 = 0 // integer values
+$357 = 0 // integer values
+$4104 = 0 // integer values
+$4106 = 0 // integer values
+$4105 = 0 // integer values
+$4184 = 0 // integer values
+$4185 = 0 // integer values
+$4186 = 0 // integer values
+$4123 = 0 // integer values
+$4124 = 0 // integer values
+$4125 = 0 // integer values
+$4126 = 0 // integer values
+$4137 = 0 // integer values
+$4134 = 0 // integer values
+$4212 = 0 // integer values
+$4197 = 0 // integer values
+$4198 = 0 // integer values
+$4199 = 0 // integer values
+$4103 = 0 // integer values
+$4211 = 0 // integer values
+$4204 = 0 // integer values
+$4205 = 0 // integer values
+$4206 = 0 // integer values
+$4207 = 0 // integer values
+$4194 = 0 // integer values
+$4195 = 0 // integer values
+$4196 = 0 // integer values
+$4192 = 0 // integer values
+$4153 = 0 // integer values
+$4154 = 0 // integer values
+$4155 = 0 // integer values
+$4156 = 0 // integer values
+$4157 = 0 // integer values
+$4158 = 0 // integer values
+$4159 = 0 // integer values
+$4201 = 0 // integer values
+$4160 = 0 // integer values
+$4161 = 0 // integer values
+$4162 = 0 // integer values
+$4213 = 0 // integer values
+$4182 = 0 // integer values
+$4183 = 0 // integer values
+$4214 = 0 // integer values
+$4203 = 0 // integer values
+$4200 = 0 // integer values
+$4116 = 0 // integer values
+$4200 = 0 // integer values
+0@ = 0 // integer values
+1@ = 0 // integer values
+2@ = 0 // integer values
+3@ = 0 // integer values
+4@ = 0 // integer values
+5@ = 0 // integer values
+6@ = 0 // integer values
+7@ = 0 // integer values
+8@ = 0 // integer values
+9@ = 0 // integer values
+10@ = 0 // integer values
+11@ = 0 // integer values
+$4187 = 0 // integer values
+$4163 = 0 // integer values
+$4190 = 0 // integer values
+$BANKJOB_DIALOGUE = 0 // integer values
+03AF: set_streaming 0
+select_interior 17
+01EB: set_traffic_density_multiplier_to 0.0
+Camera.SetAtPos(481.03, -64.21, 8.98)
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKEN'
+023C: load_special_actor 3 'CSPHIL'
+023C: load_special_actor 4 'CSHLARY'
+023C: load_special_actor 5 'CSCAMJ'
+02F3: load_object #CUTOBJ01 'GCFAN'
+02F3: load_object #CUTOBJ02 'CLCHR'
+038B: load_requested_models
+
+:BANKJO4_666
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @BANKJO4_708
+wait 0
+jump @BANKJO4_666
+
+:BANKJO4_708
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @BANKJO4_740
+wait 0
+jump @BANKJO4_708
+
+:BANKJO4_740
+041D: set_camera_near_clip 0.1
+02E4: load_cutscene_data 'BANK_4'
+0244: set_cutscene_pos 476.972 -65.499 8.943
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $137 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $137 'CSPHIL'
+02E5: $186 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $186 'CSHLARY'
+02E5: $188 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $188 'CSCAMJ'
+04BC:  'GCFAN'
+02E5: $189 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $189 'GCFAN'
+04BC:  'GCFAN'
+02E5: $190 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $190 'CLCHR'
+041D: set_camera_near_clip 0.1
+0395: clear_area 1 at 495.12 -83.39 range 9.02 1.0
+0055: put_player $PLAYER_CHAR at 495.12 -83.39 9.02
+0171: set_player $PLAYER_CHAR z_angle_to 223.21
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BANKJO4_1019
+if
+  3659 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1054
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1019
+
+:BANKJO4_1054
+00BC: text_highpriority 'BNK4_A' 10000 ms 1  // ~w~As you can see, gentlemen, this is going to be the easiest buck we ever made.
+
+:BANKJO4_1069
+if
+  7265 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1104
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1069
+
+:BANKJO4_1104
+00BC: text_highpriority 'BNK4_B' 10000 ms 1  // ~w~Tommy, seriously, you gotta consider going into law.
+
+:BANKJO4_1119
+if
+  11744 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1154
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1119
+
+:BANKJO4_1154
+00BC: text_highpriority 'BNK4_C' 10000 ms 1  // ~w~What the hell are you smoking, man? This ain't no simple plan!
+
+:BANKJO4_1169
+if
+  16951 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1204
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1169
+
+:BANKJO4_1204
+00BC: text_highpriority 'BNK4_D' 10000 ms 1  // ~w~Well, who needs a simple plan anyway?
+
+:BANKJO4_1219
+if
+  18806 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1254
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1219
+
+:BANKJO4_1254
+00BC: text_highpriority 'BNK4_E' 10000 ms 1  // ~w~Take communism, now that was a simple plan. Didn't do Russia any favors, huh?
+
+:BANKJO4_1269
+if
+  24030 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1304
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1269
+
+:BANKJO4_1304
+00BC: text_highpriority 'BNK4_F' 10000 ms 1  // ~w~Calm down, all right? With a team like this it's going to be no problem.
+
+:BANKJO4_1319
+if
+  28243 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1354
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1319
+
+:BANKJO4_1354
+00BC: text_highpriority 'BNK4_G' 10000 ms 1  // ~w~We got Cam on safe. Phil? You and me will handle security, and Hilary'll drive the getaway car.
+
+:BANKJO4_1369
+if
+  34410 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1406
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1369
+
+:BANKJO4_1406
+00BC: text_highpriority 'BNK4_H' 10000 ms 1  // ~w~Uh, heh heh, aren't you forgetting somebody? Somebody who helped you to no end in this town? Somebody who...
+
+:BANKJO4_1421
+if
+  39555 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1458
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1421
+
+:BANKJO4_1458
+00BC: text_highpriority 'BNK4_I' 10000 ms 1  // ~w~Ken... Ken, that's right. Ken here, he washes the money for us and he keeps the drinks on ice.
+
+:BANKJO4_1473
+if
+  46880 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1510
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1473
+
+:BANKJO4_1510
+00BC: text_highpriority 'BNK4_J' 10000 ms 1  // ~w~I don't understand what I am supposed to be doing here.
+
+:BANKJO4_1525
+if
+  49700 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1562
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1525
+
+:BANKJO4_1562
+00BC: text_highpriority 'BNK4_K' 10000 ms 1  // ~w~Look, it's easy. Haven't you ever seen a movie?
+
+:BANKJO4_1577
+if
+  52105 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1614
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1577
+
+:BANKJO4_1614
+00BC: text_highpriority 'BNK4_L' 10000 ms 1  // ~w~We walk into the bank, we wave the gun around, and leave very rich men.
+
+:BANKJO4_1629
+if
+  55224 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1666
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1629
+
+:BANKJO4_1666
+00BE: text_clear_all
+
+:BANKJO4_1668
+if
+  59584 > $CUT_SCENE_TIME // integer values
+jf @BANKJO4_1705
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO4_1668
+
+:BANKJO4_1705
+fade 0 1500
+00BE: text_clear_all
+
+:BANKJO4_1714
+if
+fading
+jf @BANKJO4_1738
+wait 0
+jump @BANKJO4_1714
+
+:BANKJO4_1738
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+$986 = 0 // integer values
+022B: create_forbidden_for_peds_cube 468.0 -77.0 0.0 490.0 -54.0 30.0
+00C0: set_current_time 8 30
+01EB: set_traffic_density_multiplier_to 1.0
+Model.Load(#M4)
+Model.Load(#MP5LNG)
+Model.Load(#TAXI)
+Model.Load(#PYTHON)
+Camera.SetAtPos(496.5, -84.0, 9.8)
+
+:BANKJO4_1868
+if or
+   not Model.Available(#M4)
+   not Model.Available(#MP5LNG)
+   not Model.Available(#PYTHON)
+   not Model.Available(#TAXI)
+jf @BANKJO4_1910
+wait 0
+jump @BANKJO4_1868
+
+:BANKJO4_1910
+0395: clear_area 1 at 496.5 -84.0 range 9.8 10.0
+$4135 = Car.Create(#TAXI, 496.5, -84.0, 9.8)
+Car.Angle($4135) = 137.0
+0190: add_vehicle $4135 to_flipped_check
+023C: load_special_actor 1 'IGPHIL'
+023C: load_special_actor 2 'IGHLARY'
+023C: load_special_actor 3 'IGMIKE'
+
+:BANKJO4_2008
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+jf @BANKJO4_2042
+wait 0
+jump @BANKJO4_2008
+
+:BANKJO4_2042
+Player.CanMove($PLAYER_CHAR) = False
+03C8: set_camera_directly_before_player
+0055: put_player $PLAYER_CHAR at 491.6465 -80.4476 10.4539
+0171: set_player $PLAYER_CHAR z_angle_to 225.0
+$4128 = Actor.Create(CivMale, #SPECIAL01, 490.6913, -79.4378, 10.4539)
+Actor.Angle($4128) = 225.0
+01ED: clear_actor $4128 threat_search
+0243: set_actor $4128 ped_stats_to 16
+04F5: unknown_actor $4128 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4128 dismemberment_possible 0
+$4129 = Actor.Create(CivMale, #SPECIAL02, 490.0092, -80.1343, 10.4539)
+Actor.Angle($4129) = 225.0
+01ED: clear_actor $4129 threat_search
+04F5: unknown_actor $4129 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4129 dismemberment_possible 0
+$4130 = Actor.Create(CivMale, #SPECIAL03, 491.371, -78.7345, 10.4539)
+Actor.Angle($4130) = 225.0
+01ED: clear_actor $4130 threat_search
+04F5: unknown_actor $4130 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4130 dismemberment_possible 0
+$4134 = 1 // integer values
+$4212 = 1 // integer values
+fade 1 750
+
+:BANKJO4_2297
+if
+fading
+jf @BANKJO4_2321
+wait 0
+jump @BANKJO4_2297
+
+:BANKJO4_2321
+Player.CanMove($PLAYER_CHAR) = True
+041E: set_radio_station 6 -1
+00BA: text_styled 'BEACH3' 3000 ms 2  // Vice Point
+03CF: load_wav 'BNK4_3A' as 2
+01BD: $358 = current_time_in_ms
+
+:BANKJO4_2366
+wait 0
+gosub @BANKJO4_24478
+gosub @BANKJO4_24725
+gosub @BANKJO4_25124
+gosub @BANKJO4_25523
+if
+  7 > $4153 // integer values
+jf @BANKJO4_2430
+gosub @BANKJO4_26857
+gosub @BANKJO4_30072
+
+:BANKJO4_2430
+if
+  $4154 == 1 // integer values
+jf @BANKJO4_2462
+gosub @BANKJO4_26857
+gosub @BANKJO4_30768
+
+:BANKJO4_2462
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_C1
+if and
+80DC:   not player $PLAYER_CHAR driving $4135
+  $4192 == 1 // integer values
+jf @BANKJO4_2593
+if
+  $4162 == 0 // integer values
+jf @BANKJO4_2586
+03CF: load_wav 'BNK4_3V' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3V' 10000 ms 1  // Hey Tommy, why have we stopped?
+gosub @BANKJO4_26980
+00BC: text_highpriority 'GETCAR' 4000 ms 1  // ~g~Get in the getaway car to do the bank job!
+$4162 = 1 // integer values
+
+:BANKJO4_2586
+jump @BANKJO4_C1
+
+:BANKJO4_2593
+$4162 = 0 // integer values
+
+:BANKJO4_C1
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_C2
+if
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_C2
+if and
+    00DC: player $PLAYER_CHAR driving $4135
+    $4192 == 1 // integer values
+jf @BANKJO4_C2
+if
+	$BANKJOB_DIALOGUE == 0 // integer values
+jf @BANKJO4_C2
+03CF: load_wav 'BNK4_3G' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3G' 10000 ms 1 // Crap, now the cops are onto us!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_3H' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3H' 10000 ms 1 // - and we're not even there yet!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$BANKJOB_DIALOGUE = 1 // integer values
+
+:BANKJO4_C2
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_C3
+if
+    010F:   player $PLAYER_CHAR wanted_level > 0
+jf @BANKJO4_C3
+if and
+    00DC: player $PLAYER_CHAR driving $4135
+   	$BANKJOB_DIALOGUE == 1 // integer values
+jf @BANKJO4_C3
+00BC: text_highpriority 'WANTED2' 5000 ms 1  // ~g~Shake the cops and lose your wanted level!
+03BD: destroy_sphere $BANKJOB_SPHERE
+Marker.Disable($4191)
+$4134 = 1 // integer values
+$BANKJOB_DIALOGUE = 2 // integer values
+
+:BANKJO4_C3
+if
+	$BANKJOB_DIALOGUE == 2 // integer values
+jf @BANKJO4_2600
+if
+    810F:   not player $PLAYER_CHAR wanted_level > 0
+jf @BANKJO4_2600
+03BD: destroy_sphere $BANKJOB_SPHERE
+Marker.Disable($4191)
+$4134 = 0 // integer values
+$BANKJOB_DIALOGUE = 1 // integer values
+
+:BANKJO4_2600
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_2687
+if and
+  $4160 == 0 // integer values
+8185:   not car $4135 health >= 800
+jf @BANKJO4_2687
+$4099 = 2 // integer values
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3A' 10000 ms 1  // Hey, watch the wheels, Tommy!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4160 = 1 // integer values
+
+:BANKJO4_2687
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_2736
+if and
+  $4160 == 1 // integer values
+8185:   not car $4135 health >= 650
+jf @BANKJO4_2736
+gosub @BANKJO4_31048
+
+:BANKJO4_2736
+if or
+  $4124 == 1 // integer values
+  $4125 == 1 // integer values
+  $4126 == 1 // integer values
+jf @BANKJO4_2782
+$4134 = 0 // integer values
+jump @BANKJO4_3296
+
+:BANKJO4_2782
+if
+  $4101 == 1 // integer values
+jf @BANKJO4_3183
+if
+  $4192 == 0 // integer values
+jf @BANKJO4_3043
+if and
+   not Car.Wrecked($4135)
+   not Actor.Dead($4128)
+jf @BANKJO4_3043
+if and
+   Actor.InCar($4128, $4135)
+   not Actor.Dead($4130)
+jf @BANKJO4_3043
+if and
+   Actor.InCar($4130, $4135)
+   not Actor.Dead($4129)
+jf @BANKJO4_3043
+if
+   Actor.InCar($4129, $4135)
+jf @BANKJO4_3043
+Actor.DestroyInstantly($4128)
+Actor.DestroyInstantly($4130)
+Actor.DestroyInstantly($4129)
+01C8: $4128 = create_actor_pedtype 4 model #SPECIAL01 in_car $4135 passenger_seat 1
+01ED: clear_actor $4128 threat_search
+0243: set_actor $4128 ped_stats_to 16
+04F5: unknown_actor $4128 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4128 dismemberment_possible 0
+01C8: $4129 = create_actor_pedtype 4 model #SPECIAL02 in_car $4135 passenger_seat 0
+01ED: clear_actor $4129 threat_search
+04F5: unknown_actor $4129 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4129 dismemberment_possible 0
+01C8: $4130 = create_actor_pedtype 4 model #SPECIAL03 in_car $4135 passenger_seat 2
+01ED: clear_actor $4130 threat_search
+04F5: unknown_actor $4130 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4130 dismemberment_possible 0
+$4192 = 1 // integer values
+
+:BANKJO4_3043
+if
+  $4134 == 0 // integer values
+jf @BANKJO4_3088
+018A: $4191 = create_checkpoint_at -833.0 -348.0 10.0
+03BC: $BANKJOB_SPHERE = create_sphere -833.0 -348.0 10.0 4.0
+$4134 = 1 // integer values
+
+:BANKJO4_3088
+if and
+   not Car.Wrecked($4135)
+  $4192 == 1 // integer values
+jf @BANKJO4_3176
+if and
+01AF:   car $4135 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+01C1:   car $4135 stopped
+81F4:   not car $4135 flipped
+810F:   not player $PLAYER_CHAR wanted_level > 0
+jf @BANKJO4_3176
+jump @BANKJO4_3328
+
+:BANKJO4_3176
+jump @BANKJO4_3296
+
+:BANKJO4_3183
+if
+  $4192 == 1 // integer values
+jf @BANKJO4_3296
+if and
+   not Car.Wrecked($4135)
+   not Actor.Dead($4128)
+jf @BANKJO4_3296
+if and
+   not Actor.InCar($4128, $4135)
+   not Actor.Dead($4130)
+jf @BANKJO4_3296
+if and
+   not Actor.InCar($4130, $4135)
+   not Actor.Dead($4129)
+jf @BANKJO4_3296
+if
+   not Actor.InCar($4129, $4135)
+jf @BANKJO4_3296
+$4192 = 0 // integer values
+
+:BANKJO4_3296
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_3321
+jump @BANKJO4_22188
+
+:BANKJO4_3321
+jump @BANKJO4_2366
+
+:BANKJO4_3328
+$4212 = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03BD: destroy_sphere $BANKJOB_SPHERE
+Marker.Disable($4191)
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_3391
+Car.Health($4135) = 1000
+Car.StorePos($4135, $4223, $4224, $4220)
+
+:BANKJO4_3391
+$4223 += 7.0 // floating-point values
+$4220 += 2.5 // floating-point values
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_3432
+01E0: clear_leader $4129
+
+:BANKJO4_3432
+Camera.SetPosition($4223, $4224, $4220, 0.0, 0.0, 0.0)
+0407: create_coordinate $4215 $4216 $4217 from_car $4135 offset 0.0 -3.5 0.0
+0407: create_coordinate $4218 $4219 $4220 from_car $4135 offset 0.0 -3.5 0.0
+0407: create_coordinate $4221 $4222 $4220 from_car $4135 offset -1.0 -4.5 0.0
+0407: create_coordinate $4223 $4224 $4220 from_car $4135 offset 1.0 -4.5 0.0
+Car.StorePos($4135, $95, $96, $97)
+$4225 = Car.Angle($4135)
+$357 = 0 // integer values
+
+:BANKJO4_3603
+wait 0
+if
+  $357 == 0 // integer values
+jf @BANKJO4_3788
+01BD: $358 = current_time_in_ms
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_3781
+Camera.OnVehicle($4135, 15, 2)
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_3679
+01D3: actor $PLAYER_ACTOR leave_car $4135
+
+:BANKJO4_3679
+wait 500
+if and
+   not Actor.Dead($4128)
+   not Car.Wrecked($4135)
+jf @BANKJO4_3713
+01D3: actor $4128 leave_car $4135
+
+:BANKJO4_3713
+wait 150
+if and
+   not Actor.Dead($4130)
+   not Car.Wrecked($4135)
+jf @BANKJO4_3747
+01D3: actor $4130 leave_car $4135
+
+:BANKJO4_3747
+wait 500
+if and
+   not Actor.Dead($4129)
+   not Car.Wrecked($4135)
+jf @BANKJO4_3781
+01D3: actor $4129 leave_car $4135
+
+:BANKJO4_3781
+$357 = 1 // integer values
+
+:BANKJO4_3788
+gosub @BANKJO4_26857
+if
+  $357 == 1 // integer values
+jf @BANKJO4_3901
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_3901
+if
+   not Actor.Driving($4129)
+jf @BANKJO4_3901
+$4099 = 1 // integer values
+03CF: load_wav 'BNK4_4A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_4A' 3000 ms 1  // ~w~Keep driving around the block, OK?
+gosub @BANKJO4_26980
+$357 = 2 // integer values
+
+:BANKJO4_3901
+if and
+  $359 > 2000 // integer values
+  $357 == 2 // integer values
+jf @BANKJO4_4086
+03CF: load_wav 'BNK4_5' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_5' 3000 ms 1  // ~w~Okay, Tommy, Okay.
+if and
+   not Actor.Dead($4129)
+   not Car.Wrecked($4135)
+jf @BANKJO4_3991
+01D5: actor $4129 go_to_and_drive_car $4135
+
+:BANKJO4_3991
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_4018
+0211: actor $PLAYER_ACTOR walk_to $4221 $4222
+
+:BANKJO4_4018
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_4045
+0211: actor $4128 walk_to $4221 $4222
+
+:BANKJO4_4045
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_4072
+0211: actor $4130 walk_to $4223 $4224
+
+:BANKJO4_4072
+gosub @BANKJO4_26980
+$357 = 3 // integer values
+
+:BANKJO4_4086
+if and
+  $359 > 4000 // integer values
+  $357 == 3 // integer values
+jf @BANKJO4_4364
+if and
+   not Actor.Dead($PLAYER_ACTOR)
+00ED:   actor $PLAYER_ACTOR 0 $4218 $4219 radius 3.0 3.0
+jf @BANKJO4_4364
+$97 += 0.25 // floating-point values
+Camera.SetPosition($95, $96, $97, 0.0, 0.0, 0.0)
+$97 += 2.0 // floating-point values
+011C: actor $PLAYER_ACTOR clear_objective
+Actor.PutAt($PLAYER_ACTOR, $4218, $4219, -100.0)
+Actor.Angle($PLAYER_ACTOR) = $4225
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_4290
+011C: actor $4128 clear_objective
+Actor.PutAt($4128, $4221, $4222, -100.0)
+$4225 += 70.0 // floating-point values
+Actor.Angle($4128) = $4225
+
+:BANKJO4_4290
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_4345
+011C: actor $4130 clear_objective
+Actor.PutAt($4130, $4223, $4224, -100.0)
+$4225 -= 140.0 // floating-point values
+Actor.Angle($4130) = $4225
+
+:BANKJO4_4345
+01BD: $358 = current_time_in_ms
+gosub @BANKJO4_26857
+$357 = 4 // integer values
+
+:BANKJO4_4364
+if and
+  $357 == 4 // integer values
+  $359 > 2000 // integer values
+jf @BANKJO4_4418
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_4418
+050B: open_trunk_of_car $4135
+$357 = 5 // integer values
+
+:BANKJO4_4418
+if and
+  $357 == 5 // integer values
+  $359 > 4000 // integer values
+jf @BANKJO4_4451
+$357 = 6 // integer values
+
+:BANKJO4_4451
+if and
+  $357 == 6 // integer values
+  $359 > 5000 // integer values
+jf @BANKJO4_4580
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_4522
+0407: create_coordinate $4218 $4219 $4220 from_car $4135 offset -6.0 -3.0 1.0
+
+:BANKJO4_4522
+Camera.SetPosition($4218, $4219, $4220, 0.0, 0.0, 0.0)
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_4573
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+
+:BANKJO4_4573
+$357 = 7 // integer values
+
+:BANKJO4_4580
+if and
+  $357 == 7 // integer values
+  $359 > 7000 // integer values
+jf @BANKJO4_4690
+if and
+   not Car.Wrecked($4135)
+   not Actor.Dead($4129)
+jf @BANKJO4_4683
+if
+   not Actor.InCar($4129, $4135)
+jf @BANKJO4_4654
+036A: put_actor $4129 in_car $4135
+
+:BANKJO4_4654
+039E: set_actor $4129 locked_while_in_vehicle 1
+Car.SetToPsychoDriver($4135)
+Car.SetMaxSpeed($4135, 15.0)
+020A: set_car $4135 door_status_to 2
+
+:BANKJO4_4683
+$357 = 8 // integer values
+
+:BANKJO4_4690
+if and
+  $357 == 8 // integer values
+  $359 > 8000 // integer values
+jf @BANKJO4_4736
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+$357 = 9 // integer values
+
+:BANKJO4_4736
+if
+   not $357 == 9 // integer values
+jf @BANKJO4_4761
+jump @BANKJO4_3603
+
+:BANKJO4_4761
+$4104 = 1 // integer values
+$4101 = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -894.0 -331.2 12.45
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_4831
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+
+:BANKJO4_4831
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_4855
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+
+:BANKJO4_4855
+if
+80F6:   not player $PLAYER_CHAR 1 -894.0 -331.2 12.45 radius 2.0 2.0 3.0
+jf @BANKJO4_4960
+wait 0
+gosub @BANKJO4_28829
+gosub @BANKJO4_28789
+gosub @BANKJO4_24398
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_4953
+jump @BANKJO4_22188
+
+:BANKJO4_4953
+jump @BANKJO4_4855
+
+:BANKJO4_4960
+00BE: text_clear_all
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+0211: actor $PLAYER_ACTOR walk_to -893.9 -324.6
+0169: set_fade_color 0 0 1
+fade 0 750
+
+:BANKJO4_5010
+if
+fading
+jf @BANKJO4_5140
+wait 0
+if and
+   not Car.Wrecked($4135)
+  $4190 == 0 // integer values
+jf @BANKJO4_5133
+if
+82CA:   not car $4135 bounding_sphere_visible
+jf @BANKJO4_5133
+059B:  $4135
+Car.PutAt($4135, -903.6, -376.6, 56.7)
+Car.Angle($4135) = 270.0
+Car.SetMaxSpeed($4135, 0.0)
+Car.Health($4135) = 1000
+Car.LockInCurrentPosition($4135) = True
+$4190 = 1 // integer values
+
+:BANKJO4_5133
+jump @BANKJO4_5010
+
+:BANKJO4_5140
+0395: clear_area 1 at -894.0 -331.2 range 12.45 10.0
+Actor.PutAt($PLAYER_ACTOR, -893.9, -327.2, 12.45)
+Actor.Angle($PLAYER_ACTOR) = 175.0
+Actor.DestroyInstantly($4128)
+Actor.DestroyInstantly($4130)
+0296: unload_special_actor 1
+0296: unload_special_actor 3
+023C: load_special_actor 1 'IGPHIL3'
+023C: load_special_actor 3 'IGMIKE2'
+038B: load_requested_models
+
+:BANKJO4_5238
+if or
+823D:   not special_actor 3 loaded
+823D:   not special_actor 1 loaded
+jf @BANKJO4_5268
+wait 0
+jump @BANKJO4_5238
+
+:BANKJO4_5268
+$4128 = Actor.Create(CivMale, #SPECIAL01, -894.1, -325.0, 12.45)
+Actor.Angle($4128) = 175.0
+01ED: clear_actor $4128 threat_search
+04F5: unknown_actor $4128 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4128 dismemberment_possible 0
+0243: set_actor $4128 ped_stats_to 30
+Actor.Health($4128) = 200
+0568: set_actor $4128 untargetable 1
+$4130 = Actor.Create(CivMale, #SPECIAL03, -894.1, -324.5, 12.45)
+Actor.Angle($4130) = 175.0
+01ED: clear_actor $4130 threat_search
+04F5: unknown_actor $4130 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4130 dismemberment_possible 0
+0243: set_actor $4130 ped_stats_to 16
+Actor.Health($4130) = 200
+0568: set_actor $4130 untargetable 1
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_5476
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER7'
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_5476
+0353: refresh_actor $PLAYER_ACTOR
+
+:BANKJO4_5476
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_5553
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_5518
+01B2: give_actor $4128 weapon 26 ammo 9999 // Load the weapon model before using this
+
+:BANKJO4_5518
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_5544
+01B2: give_actor $4130 weapon 25 ammo 9999 // Load the weapon model before using this
+
+:BANKJO4_5544
+01B2: give_actor $PLAYER_ACTOR weapon 18 ammo 24 // Load the weapon model before using this
+
+:BANKJO4_5553
+$4099 = 1 // integer values
+03CF: load_wav 'BNK4_94' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_94' 10000 ms 1  // ~w~Ok, guys. Nice an easy just as we planned.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_5635
+0211: actor $PLAYER_ACTOR walk_to -894.2 -330.25
+
+:BANKJO4_5635
+Camera.SetPosition(-894.05, -331.06, 13.3, 0.0, 0.0, 0.0)
+0054: store_player $PLAYER_CHAR position_to $4218 $4219 $4220
+$4220 += 0.8 // floating-point values
+Camera.PointAt($4218, $4219, $4220, 2)
+fade 1 750
+
+:BANKJO4_5711
+if
+fading
+jf @BANKJO4_5772
+wait 0
+0054: store_player $PLAYER_CHAR position_to $4218 $4219 $4220
+$4220 += 0.8 // floating-point values
+Camera.PointAt($4218, $4219, $4220, 2)
+jump @BANKJO4_5711
+
+:BANKJO4_5772
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_5803
+0211: actor $4130 walk_to -894.7 -328.0
+
+:BANKJO4_5803
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_5834
+0211: actor $4128 walk_to -893.25 -329.5
+
+:BANKJO4_5834
+01BD: $358 = current_time_in_ms
+gosub @BANKJO4_26857
+
+:BANKJO4_5846
+if
+  7000 > $359 // integer values
+jf @BANKJO4_5920
+wait 0
+0054: store_player $PLAYER_CHAR position_to $4218 $4219 $4220
+$4220 += 0.8 // floating-point values
+Camera.PointAt($4218, $4219, $4220, 2)
+gosub @BANKJO4_26857
+jump @BANKJO4_5846
+
+:BANKJO4_5920
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_5964
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+
+:BANKJO4_5964
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_5988
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+
+:BANKJO4_5988
+if
+80F6:   not player $PLAYER_CHAR 1 -896.0 -341.0 12.5 radius 2.0 2.0 3.0
+jf @BANKJO4_6177
+wait 0
+gosub @BANKJO4_24478
+gosub @BANKJO4_28789
+gosub @BANKJO4_28829
+gosub @BANKJO4_27077
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_6093
+jump @BANKJO4_22188
+
+:BANKJO4_6093
+if
+80F5:   not player $PLAYER_CHAR 0 -906.0 -341.0 12.5 radius 30.0 30.0 10.0
+jf @BANKJO4_6170
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+00BC: text_highpriority 'IDIOT' 5000 ms 1  // ~r~ That's right, just wander about dressed like a lunatic and draw attention to yourself, IDIOT!
+jump @BANKJO4_22188
+
+:BANKJO4_6170
+jump @BANKJO4_5988
+
+:BANKJO4_6177
+fade 0 1000
+
+:BANKJO4_6184
+if
+fading
+jf @BANKJO4_6208
+wait 0
+jump @BANKJO4_6184
+
+:BANKJO4_6208
+Model.Load(#WFYBU)
+Model.Load(#HFYBU)
+Model.Load(#HFORI)
+Model.Load(#HFYRI)
+Model.Load(#WFYRI)
+
+:BANKJO4_6220
+if or
+   not Model.Available(#WFYBU)
+   not Model.Available(#HFYBU)
+   not Model.Available(#HFORI)
+   not Model.Available(#HFYRI)
+   not Model.Available(#WFYRI)
+jf @BANKJO4_6254
+wait 0
+jump @BANKJO4_6220
+
+:BANKJO4_6254
+Model.Load(#WMOST)
+Model.Load(#WMORI)
+Model.Load(#WMYBU)
+Model.Load(#GDA)
+Model.Load(#GDB)
+
+:BANKJO4_6262
+if or
+   not Model.Available(#WMOST)
+   not Model.Available(#WMORI)
+   not Model.Available(#WMYBU)
+   not Model.Available(#GDA)
+   not Model.Available(#GDB)
+jf @BANKJO4_6292
+wait 0
+jump @BANKJO4_6262
+
+:BANKJO4_6292
+$4138 = Actor.Create(CivFemale, #HFYBU, -904.7, -328.6, 12.49)
+Actor.Angle($4138) = 190.0
+01ED: clear_actor $4138 threat_search
+0243: set_actor $4138 ped_stats_to 20
+0568: set_actor $4138 untargetable 1
+$4139 = Actor.Create(CivMale, #WMYBU, -910.1, -328.6, 12.49)
+Actor.Angle($4139) = 190.0
+01ED: clear_actor $4139 threat_search
+0243: set_actor $4139 ped_stats_to 15
+0568: set_actor $4139 untargetable 1
+$4140 = Actor.Create(CivFemale, #HFORI, -912.5, -328.6, 12.49)
+Actor.Angle($4140) = 190.0
+01ED: clear_actor $4140 threat_search
+0243: set_actor $4140 ped_stats_to 22
+0568: set_actor $4140 untargetable 1
+$4141 = Actor.Create(CivMale, #WFYRI, -907.5, -353.6, 12.49)
+Actor.Angle($4141) = 10.0
+01ED: clear_actor $4141 threat_search
+0243: set_actor $4141 ped_stats_to 21
+0568: set_actor $4141 untargetable 1
+$4142 = Actor.Create(CivFemale, #HFYRI, -910.2, -353.6, 12.49)
+Actor.Angle($4142) = 10.0
+01ED: clear_actor $4142 threat_search
+0243: set_actor $4142 ped_stats_to 21
+0568: set_actor $4142 untargetable 1
+$4143 = Actor.Create(CivFemale, #WMOST, -915.3, -353.6, 12.49)
+Actor.Angle($4143) = 10.0
+01ED: clear_actor $4143 threat_search
+0243: set_actor $4143 ped_stats_to 12
+0568: set_actor $4143 untargetable 1
+$4144 = Actor.Create(CivFemale, #WFYBU, -920.36, -343.7, 14.6)
+Actor.Angle($4144) = 65.0
+01ED: clear_actor $4144 threat_search
+0243: set_actor $4144 ped_stats_to 19
+0568: set_actor $4144 untargetable 1
+$4145 = Actor.Create(CivMale, #WMORI, -921.76, -345.15, 12.49)
+Actor.Angle($4145) = 310.0
+01ED: clear_actor $4145 threat_search
+0243: set_actor $4145 ped_stats_to 13
+0568: set_actor $4145 untargetable 1
+$4107 = Actor.Create(CivMale, #GDA, -917.3, -340.0, 12.49)
+01ED: clear_actor $4107 threat_search
+Actor.Angle($4107) = 270.0
+009F: set_actor $4107 idle
+0568: set_actor $4107 untargetable 1
+$4108 = Actor.Create(CivMale, #GDB, -908.0, -347.77, 12.49)
+01ED: clear_actor $4108 threat_search
+Actor.Angle($4108) = 270.0
+009F: set_actor $4108 idle
+0568: set_actor $4108 untargetable 1
+$4109 = Actor.Create(CivMale, #GDA, -919.14, -336.0, 12.49)
+01ED: clear_actor $4109 threat_search
+Actor.Angle($4109) = 130.0
+0350: set_actor $4109 maintain_position_when_attacked 1
+0568: set_actor $4109 untargetable 1
+jump @BANKJO4_6936
+$4112 = Actor.Create(CivMale, #GDA, -918.7, -353.3, 16.8)
+Actor.DestroyInstantly($4112)
+$4122 = Actor.Create(CivMale, #WMORI, -963.28, -337.12, 14.6)
+Actor.DestroyInstantly($4122)
+
+:BANKJO4_6936
+$4208 = 25 // integer values
+$4209 = 19 // integer values
+$4210 = 21 // integer values
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -896.5 -341.0 12.5
+select_interior 3
+03AD: set_rubbish 0
+Camera.SetAtPos(-903.0, -341.0, 13.4)
+$985 = 1 // integer values
+04F9: set_extracolors 4 fade 0
+00BE: text_clear_all
+$985 = 1 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+01B1: give_player $PLAYER_CHAR weapon 18 ammo 24 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 18
+0395: clear_area 0 at -890.0 -340.0 range 11.0 10.0
+041D: set_camera_near_clip 0.1
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_7108
+01E0: clear_leader $4128
+
+:BANKJO4_7108
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_7129
+01E0: clear_leader $4130
+
+:BANKJO4_7129
+gosub @BANKJO4_28460
+$357 = 0 // integer values
+$4099 = 1 // integer values
+
+:BANKJO4_7150
+wait 0
+gosub @BANKJO4_27077
+if
+  $357 == 0 // integer values
+jf @BANKJO4_7387
+01BD: $358 = current_time_in_ms
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_7230
+Actor.PutAt($PLAYER_ACTOR, -911.8, -341.0, 12.5)
+Actor.Angle($PLAYER_ACTOR) = 90.0
+
+:BANKJO4_7230
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_7278
+Actor.PutAt($4128, -909.8, -339.0, 12.5)
+Actor.Health($4128) = 100
+009F: set_actor $4128 idle
+
+:BANKJO4_7278
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_7326
+Actor.PutAt($4130, -909.55, -341.6, 12.5)
+Actor.Health($4130) = 100
+009F: set_actor $4130 idle
+
+:BANKJO4_7326
+Camera.SetPosition(-914.5, -341.1, 12.7, 0.0, 0.0, 0.0)
+0157: camera_on_player $PLAYER_CHAR mode 15 switchstyle 2
+$357 = 1 // integer values
+03CF: load_wav 'BNK4_6' as $4099
+
+:BANKJO4_7387
+gosub @BANKJO4_26857
+gosub @BANKJO4_28829
+gosub @BANKJO4_28789
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_7433
+jump @BANKJO4_9881
+
+:BANKJO4_7433
+if and
+  $359 > 1000 // integer values
+  $357 == 1 // integer values
+jf @BANKJO4_7571
+if and
+   not Actor.Dead($4109)
+   not Actor.Dead($4128)
+jf @BANKJO4_7496
+020E: actor $4109 look_at_actor $4128
+020E: actor $4128 look_at_actor $4109
+
+:BANKJO4_7496
+if and
+   not Actor.Dead($4108)
+   not Actor.Dead($4130)
+jf @BANKJO4_7533
+020E: actor $4108 look_at_actor $4130
+020E: actor $4130 look_at_actor $4108
+
+:BANKJO4_7533
+fade 1 1000
+
+:BANKJO4_7540
+if
+fading
+jf @BANKJO4_7564
+wait 0
+jump @BANKJO4_7540
+
+:BANKJO4_7564
+$357 = 2 // integer values
+
+:BANKJO4_7571
+if and
+  $359 > 2000 // integer values
+  $357 == 2 // integer values
+jf @BANKJO4_7670
+gosub @BANKJO4_26880
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_7628
+04C6: actor $PLAYER_ACTOR do_kung_fu_stance_towards_actor $4107
+
+:BANKJO4_7628
+00BC: text_highpriority 'BNK4_6' 3000 ms 1  // ~w~THIS IS A RAID!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_7' as $4099
+$357 = 3 // integer values
+
+:BANKJO4_7670
+if and
+  $359 > 3000 // integer values
+  $357 == 3 // integer values
+jf @BANKJO4_7873
+$4211 = 0 // integer values
+$4208 = 0 // integer values
+$4209 = 0 // integer values
+$4210 = 0 // integer values
+gosub @BANKJO4_27077
+$4211 = 0 // integer values
+$4208 = 35 // integer values
+$4209 = 35 // integer values
+$4210 = 35 // integer values
+gosub @BANKJO4_27077
+gosub @BANKJO4_26880
+if and
+   not Actor.Dead($4128)
+   not Actor.Dead($4109)
+jf @BANKJO4_7802
+04C6: actor $4128 do_kung_fu_stance_towards_actor $4109
+
+:BANKJO4_7802
+if and
+   not Actor.Dead($4130)
+   not Actor.Dead($4108)
+jf @BANKJO4_7831
+04C6: actor $4130 do_kung_fu_stance_towards_actor $4108
+
+:BANKJO4_7831
+00BC: text_highpriority 'BNK4_7' 5000 ms 1  // ~w~NOBODY MOVE!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_8' as $4099
+$357 = 4 // integer values
+
+:BANKJO4_7873
+if and
+  $359 > 4000 // integer values
+  $357 == 4 // integer values
+jf @BANKJO4_7906
+$357 = 5 // integer values
+
+:BANKJO4_7906
+if and
+  $359 > 5000 // integer values
+  $357 == 5 // integer values
+jf @BANKJO4_8038
+gosub @BANKJO4_26880
+Camera.SetPosition(-908.8, -340.2, 14.0, 0.0, 0.0, 0.0)
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_7996
+Camera.OnPed($4107, 15, 2)
+
+:BANKJO4_7996
+00BC: text_highpriority 'BNK4_8' 5000 ms 1  // ~w~EVERYBODY UP AGAINST THAT WALL!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_9' as $4099
+$357 = 6 // integer values
+
+:BANKJO4_8038
+if and
+  $359 > 6500 // integer values
+  $357 == 6 // integer values
+jf @BANKJO4_8156
+Camera.SetPosition(-919.2, -330.0, 18.75, 0.0, 0.0, 0.0)
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_8121
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+
+:BANKJO4_8121
+$4211 = 0 // integer values
+$4208 = 0 // integer values
+$4209 = 0 // integer values
+$4210 = 0 // integer values
+$357 = 7 // integer values
+
+:BANKJO4_8156
+if and
+  $359 > 7000 // integer values
+  $357 == 7 // integer values
+jf @BANKJO4_8530
+if
+   not Actor.Dead($4109)
+jf @BANKJO4_8213
+0239: actor $4109 run_to -923.0 -335.8
+
+:BANKJO4_8213
+if
+   not Actor.Dead($4108)
+jf @BANKJO4_8244
+0239: actor $4108 run_to -923.0 -335.8
+
+:BANKJO4_8244
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_8275
+0239: actor $4107 run_to -923.0 -335.8
+
+:BANKJO4_8275
+if
+   not Actor.Dead($4138)
+jf @BANKJO4_8306
+0239: actor $4138 run_to -923.0 -335.8
+
+:BANKJO4_8306
+if
+   not Actor.Dead($4139)
+jf @BANKJO4_8337
+0239: actor $4139 run_to -923.0 -335.8
+
+:BANKJO4_8337
+if
+   not Actor.Dead($4140)
+jf @BANKJO4_8368
+0239: actor $4140 run_to -923.0 -335.8
+
+:BANKJO4_8368
+if
+   not Actor.Dead($4141)
+jf @BANKJO4_8399
+0239: actor $4141 run_to -918.2 -342.0
+
+:BANKJO4_8399
+if
+   not Actor.Dead($4142)
+jf @BANKJO4_8430
+0239: actor $4142 run_to -918.0 -344.0
+
+:BANKJO4_8430
+if
+   not Actor.Dead($4143)
+jf @BANKJO4_8461
+0239: actor $4143 run_to -917.8 -346.0
+
+:BANKJO4_8461
+if
+   not Actor.Dead($4144)
+jf @BANKJO4_8492
+0239: actor $4144 run_to -917.0 -345.0
+
+:BANKJO4_8492
+if
+   not Actor.Dead($4145)
+jf @BANKJO4_8523
+0239: actor $4145 run_to -917.0 -343.0
+
+:BANKJO4_8523
+$357 = 8 // integer values
+
+:BANKJO4_8530
+if and
+  $359 > 9000 // integer values
+  $357 == 8 // integer values
+jf @BANKJO4_9496
+if
+   not Actor.Dead($4109)
+jf @BANKJO4_8673
+011C: actor $4109 clear_objective
+Actor.Angle($4109) = 84.0
+009F: set_actor $4109 idle
+0350: set_actor $4109 maintain_position_when_attacked 1
+Actor.PutAt($4109, -924.0, -339.6, 12.4)
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_8673
+Actor.PutAt($4128, -918.87, -336.2, 12.4)
+Actor.Angle($4128) = 146.0
+04C6: actor $4128 do_kung_fu_stance_towards_actor $4109
+
+:BANKJO4_8673
+if
+   not Actor.Dead($4108)
+jf @BANKJO4_8736
+011C: actor $4108 clear_objective
+Actor.Angle($4108) = 93.0
+009F: set_actor $4108 idle
+0350: set_actor $4108 maintain_position_when_attacked 1
+Actor.PutAt($4108, -923.5, -338.6, 12.4)
+
+:BANKJO4_8736
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_8799
+011C: actor $4107 clear_objective
+Actor.Angle($4107) = 90.0
+009F: set_actor $4107 idle
+0350: set_actor $4107 maintain_position_when_attacked 1
+Actor.PutAt($4107, -923.0, -337.7, 12.4)
+
+:BANKJO4_8799
+if
+   not Actor.Dead($4138)
+jf @BANKJO4_8862
+011C: actor $4138 clear_objective
+Actor.Angle($4138) = 88.0
+009F: set_actor $4138 idle
+0350: set_actor $4138 maintain_position_when_attacked 1
+Actor.PutAt($4138, -923.4, -336.6, 12.4)
+
+:BANKJO4_8862
+if
+   not Actor.Dead($4139)
+jf @BANKJO4_8925
+011C: actor $4139 clear_objective
+Actor.Angle($4139) = 98.0
+009F: set_actor $4139 idle
+0350: set_actor $4139 maintain_position_when_attacked 1
+Actor.PutAt($4139, -923.0, -335.6, 12.4)
+
+:BANKJO4_8925
+if
+   not Actor.Dead($4140)
+jf @BANKJO4_8988
+011C: actor $4140 clear_objective
+Actor.Angle($4140) = 90.0
+009F: set_actor $4140 idle
+0350: set_actor $4140 maintain_position_when_attacked 1
+Actor.PutAt($4140, -923.8, -334.3, 12.4)
+
+:BANKJO4_8988
+if
+   not Actor.Dead($4141)
+jf @BANKJO4_9051
+011C: actor $4141 clear_objective
+Actor.Angle($4141) = 82.0
+009F: set_actor $4141 idle
+0350: set_actor $4141 maintain_position_when_attacked 1
+Actor.PutAt($4141, -918.2, -342.0, 12.4)
+
+:BANKJO4_9051
+if
+   not Actor.Dead($4142)
+jf @BANKJO4_9114
+011C: actor $4142 clear_objective
+Actor.Angle($4142) = 90.0
+009F: set_actor $4142 idle
+0350: set_actor $4142 maintain_position_when_attacked 1
+Actor.PutAt($4142, -918.0, -344.0, 12.4)
+
+:BANKJO4_9114
+if
+   not Actor.Dead($4143)
+jf @BANKJO4_9177
+011C: actor $4143 clear_objective
+Actor.Angle($4143) = 93.0
+009F: set_actor $4143 idle
+0350: set_actor $4143 maintain_position_when_attacked 1
+Actor.PutAt($4143, -917.8, -346.0, 12.4)
+
+:BANKJO4_9177
+if
+   not Actor.Dead($4144)
+jf @BANKJO4_9240
+011C: actor $4144 clear_objective
+Actor.Angle($4144) = 93.0
+009F: set_actor $4144 idle
+0350: set_actor $4144 maintain_position_when_attacked 1
+Actor.PutAt($4144, -917.0, -345.0, 12.4)
+
+:BANKJO4_9240
+if
+   not Actor.Dead($4145)
+jf @BANKJO4_9357
+011C: actor $4145 clear_objective
+Actor.Angle($4145) = 93.0
+009F: set_actor $4145 idle
+0350: set_actor $4145 maintain_position_when_attacked 1
+Actor.PutAt($4145, -917.0, -343.0, 12.4)
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_9357
+Actor.PutAt($4130, -916.0, -340.0, 12.4)
+Actor.Angle($4130) = 120.0
+04C6: actor $4130 do_kung_fu_stance_towards_actor $4145
+
+:BANKJO4_9357
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_9403
+Actor.PutAt($PLAYER_ACTOR, -918.55, -337.8, 13.5)
+Actor.Angle($PLAYER_ACTOR) = 80.0
+
+:BANKJO4_9403
+Camera.SetPosition(-911.5, -344.0, 15.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-922.0, -344.295, 13.94, 2)
+$4211 = 0 // integer values
+$4208 = 35 // integer values
+$4209 = 35 // integer values
+$4210 = 35 // integer values
+gosub @BANKJO4_27077
+$357 = 9 // integer values
+
+:BANKJO4_9496
+if and
+  $359 > 11500 // integer values
+  $357 == 9 // integer values
+jf @BANKJO4_9619
+Camera.SetPosition(-917.8, -329.8, 15.8, 0.0, 0.0, 0.0)
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_9' 5000 ms 1  // Phil, hold down the fort!
+gosub @BANKJO4_27077
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_10' as $4099
+$357 = 10 // integer values
+
+:BANKJO4_9619
+if and
+  $359 > 12000 // integer values
+  $357 == 10 // integer values
+jf @BANKJO4_9694
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_10' 5000 ms 1  // Wilco roger that!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_11' as $4099
+$357 = 11 // integer values
+
+:BANKJO4_9694
+if and
+  $359 > 14000 // integer values
+  $357 == 11 // integer values
+jf @BANKJO4_9756
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_11' 5000 ms 1  // Come on Cam, the vault's upstairs...
+gosub @BANKJO4_26980
+$357 = 12 // integer values
+
+:BANKJO4_9756
+if
+   not $357 == 12 // integer values
+jf @BANKJO4_9781
+jump @BANKJO4_7150
+
+:BANKJO4_9781
+011C: actor $PLAYER_ACTOR clear_objective
+022F: set_actor $PLAYER_ACTOR stop_looking
+009F: set_actor $PLAYER_ACTOR idle
+053D:  $PLAYER_ACTOR
+Player.CanMove($PLAYER_CHAR) = True
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_9847
+01E0: clear_leader $4128
+0319: set_actor $4128 running 0
+011C: actor $4128 clear_objective
+
+:BANKJO4_9847
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_9881
+011C: actor $4130 clear_objective
+022F: set_actor $4130 stop_looking
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+
+:BANKJO4_9881
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_9906
+jump @BANKJO4_22188
+
+:BANKJO4_9906
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -938.56 -351.5 16.8
+$4110 = Actor.Create(CivMale, #GDA, -961.75, -329.1, 14.6)
+01ED: clear_actor $4110 threat_search
+011A: set_actor $4110 search_threat 1
+Actor.Angle($4110) = 240.0
+01B2: give_actor $4110 weapon 25 ammo 9999 // Load the weapon model before using this
+$4111 = Actor.Create(CivMale, #GDB, -956.75, -340.4, 14.6)
+01ED: clear_actor $4111 threat_search
+011A: set_actor $4111 search_threat 1
+Actor.Angle($4111) = 10.0
+01B2: give_actor $4111 weapon 25 ammo 9999 // Load the weapon model before using this
+$4113 = Actor.Create(CivMale, #GDA, -935.73, -348.3, 16.8)
+01ED: clear_actor $4113 threat_search
+011A: set_actor $4113 search_threat 1
+Actor.Angle($4113) = 266.0
+04EB: actor $4113 crouch 1 300000 ms
+01B2: give_actor $4113 weapon 25 ammo 9999 // Load the weapon model before using this
+$4114 = Actor.Create(CivMale, #GDB, -943.0, -343.9, 6.3)
+01ED: clear_actor $4114 threat_search
+011A: set_actor $4114 search_threat 1
+011A: set_actor $4114 search_threat 524288
+0291: set_actor $4114 attack_when_provoked 1
+Actor.Angle($4114) = 270.0
+01B2: give_actor $4114 weapon 25 ammo 9999 // Load the weapon model before using this
+01E2: add_route_point 1 at -943.0 -343.9 6.3
+01E2: add_route_point 1 at -934.8 -343.9 6.3
+01E1: set_actor $4114 follow_route 1 3
+$4151 = Object.Create(#BNK_LFT_DOOR1, -936.964, -349.488, 3.235)
+$4152 = Object.Create(#BNK_LFT_DOOR2, -936.964, -353.369, 3.235)
+$4150 = Pickup.Create(#HEALTH, 3, -959.3, -335.97, 15.59)
+$4149 = Pickup.Create(#BODYARMOUR, 3, -956.7, -337.64, 15.6)
+
+:BANKJO4_10325
+if
+80F6:   not player $PLAYER_CHAR 1 -938.56 -351.5 16.8 radius 1.5 1.5 1.5
+jf @BANKJO4_11101
+wait 0
+gosub @BANKJO4_28472
+gosub @BANKJO4_28789
+gosub @BANKJO4_28829
+gosub @BANKJO4_29105
+gosub @BANKJO4_30047
+gosub @BANKJO4_27584
+if
+  $4206 == 1 // integer values
+jf @BANKJO4_10444
+gosub @BANKJO4_29065
+
+:BANKJO4_10444
+if
+00F6:   player $PLAYER_CHAR 0 -942.5 -331.3 14.6 radius 3.0 3.0 3.0
+jf @BANKJO4_10635
+gosub @BANKJO4_27077
+if
+   not Actor.Dead($4111)
+jf @BANKJO4_10562
+if
+  $4205 == 0 // integer values
+jf @BANKJO4_10555
+0239: actor $4111 run_to -952.8 -334.6
+$4205 = 1 // integer values
+
+:BANKJO4_10555
+jump @BANKJO4_10567
+
+:BANKJO4_10562
+Actor.RemoveReferences($4111)
+
+:BANKJO4_10567
+if
+   not Actor.Dead($4110)
+jf @BANKJO4_10630
+if
+  $4204 == 0 // integer values
+jf @BANKJO4_10623
+0239: actor $4110 run_to -956.8 -331.3
+$4204 = 1 // integer values
+
+:BANKJO4_10623
+jump @BANKJO4_10635
+
+:BANKJO4_10630
+Actor.RemoveReferences($4110)
+
+:BANKJO4_10635
+if and
+   not Actor.Dead($4110)
+  $4204 == 1 // integer values
+jf @BANKJO4_10728
+if
+00FF:   actor $4110 0 -956.8 -331.3 15.6 radius 2.0 2.0 2.0
+jf @BANKJO4_10728
+0350: set_actor $4110 maintain_position_when_attacked 1
+01CA: actor $4110 kill_player $PLAYER_CHAR
+$4204 = 2 // integer values
+
+:BANKJO4_10728
+if
+  $4206 == 1 // integer values
+jf @BANKJO4_10976
+if
+00F6:   player $PLAYER_CHAR 0 -922.3 -333.0 17.8 radius 3.0 3.0 1.5
+jf @BANKJO4_10976
+gosub @BANKJO4_26857
+if
+001C:   $359 > $4193 // integer values
+jf @BANKJO4_10860
+if
+   not Actor.Dead($4112)
+jf @BANKJO4_10860
+04EB: actor $4112 crouch 0 0 ms
+0350: set_actor $4112 maintain_position_when_attacked 1
+01CA: actor $4112 kill_player $PLAYER_CHAR
+
+:BANKJO4_10860
+if
+  $359 > 4000 // integer values
+jf @BANKJO4_10920
+if
+   not Actor.Dead($4112)
+jf @BANKJO4_10920
+04EB: actor $4112 crouch 1 2000 ms
+01BD: $358 = current_time_in_ms
+0209: $4193 = random_int_in_ranges 0 4000
+
+:BANKJO4_10920
+if
+  $4207 == 0 // integer values
+jf @BANKJO4_10976
+if
+   not Actor.Dead($4113)
+jf @BANKJO4_10976
+0239: actor $4113 run_to -923.7 -348.25
+$4207 = 1 // integer values
+
+:BANKJO4_10976
+if and
+   not Actor.Dead($4113)
+  $4207 == 1 // integer values
+jf @BANKJO4_11069
+if
+00FF:   actor $4113 0 -923.7 -348.25 16.8 radius 2.0 2.0 2.0
+jf @BANKJO4_11069
+0350: set_actor $4113 maintain_position_when_attacked 1
+01CA: actor $4113 kill_player $PLAYER_CHAR
+$4207 = 2 // integer values
+
+:BANKJO4_11069
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_11094
+jump @BANKJO4_22188
+
+:BANKJO4_11094
+jump @BANKJO4_10325
+
+:BANKJO4_11101
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11163
+01E0: clear_leader $4130
+009E: set_actor $4130 path -938.56 -351.5 16.8 unknown 0.5 1
+
+:BANKJO4_11163
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11374
+16@ = 0 // integer values
+
+:BANKJO4_11186
+if
+80FF:   not actor $4130 0 -938.56 -351.5 16.8 radius 1.5 1.5 3.0
+jf @BANKJO4_11367
+wait 0
+if
+  16@ > 2500 // integer values
+jf @BANKJO4_11337
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11330
+Actor.PutAt($4130, -932.9, -351.3, 16.8)
+Actor.Angle($4130) = 90.0
+009E: set_actor $4130 path -938.56 -351.5 16.8 unknown 0.5 1
+
+:BANKJO4_11330
+16@ = 0 // integer values
+
+:BANKJO4_11337
+if
+   Actor.Dead($4130)
+jf @BANKJO4_11360
+jump @BANKJO4_11163
+
+:BANKJO4_11360
+jump @BANKJO4_11186
+
+:BANKJO4_11367
+jump @BANKJO4_11396
+
+:BANKJO4_11374
+00BC: text_highpriority 'C_DEAD' 5000 ms 1  // ~r~Cam's dead!!
+jump @BANKJO4_22188
+
+:BANKJO4_11396
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11424
+0350: set_actor $4130 maintain_position_when_attacked 1
+011C: actor $4130 clear_objective
+
+:BANKJO4_11424
+gosub @BANKJO4_32140
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11485
+Actor.PutAt($4130, -939.1, -351.12, 6.23)
+Actor.Angle($4130) = 260.0
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+
+:BANKJO4_11485
+if
+   not Actor.Dead($4114)
+jf @BANKJO4_11537
+Actor.PutAt($4114, -943.0, -343.9, 6.3)
+01E1: set_actor $4114 follow_route 1 3
+011A: set_actor $4114 search_threat 1
+
+:BANKJO4_11537
+gosub @BANKJO4_32287
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11567
+0350: set_actor $4130 maintain_position_when_attacked 0
+
+:BANKJO4_11567
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -944.5 -341.58 6.3
+$4163 = 1 // integer values
+
+:BANKJO4_11599
+if
+   not Actor.Dead($4114)
+jf @BANKJO4_11679
+wait 0
+gosub @BANKJO4_28789
+gosub @BANKJO4_30047
+gosub @BANKJO4_29065
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_11665
+jump @BANKJO4_22188
+
+:BANKJO4_11665
+gosub @BANKJO4_27584
+jump @BANKJO4_11599
+
+:BANKJO4_11679
+if
+80F6:   not player $PLAYER_CHAR 1 -944.5 -341.58 6.3 radius 1.0 1.0 1.5
+jf @BANKJO4_11791
+wait 0
+gosub @BANKJO4_28789
+gosub @BANKJO4_30047
+gosub @BANKJO4_29065
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_11777
+jump @BANKJO4_22188
+
+:BANKJO4_11777
+gosub @BANKJO4_27584
+jump @BANKJO4_11679
+
+:BANKJO4_11791
+Marker.Disable($4191)
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+01BE: set_actor $PLAYER_ACTOR to_look_at_spot -944.5 -344.12 8.0
+Camera.SetPosition(-940.2, -343.6, 8.6, 0.0, 0.0, 0.0)
+Camera.PointAt(-944.5, -343.8, 7.45, 2)
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_11921
+01E0: clear_leader $4130
+0239: actor $4130 run_to -944.5 -344.12
+
+:BANKJO4_11921
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_12120
+16@ = 0 // integer values
+
+:BANKJO4_11944
+if
+80FF:   not actor $4130 0 -944.5 -344.12 7.0 radius 1.5 1.5 3.0
+jf @BANKJO4_12113
+wait 0
+if
+  16@ > 2000 // integer values
+jf @BANKJO4_12083
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_12076
+Actor.PutAt($4130, -937.0, -343.6, 7.0)
+Actor.Angle($4130) = 90.0
+0239: actor $4130 run_to -944.5 -344.12
+
+:BANKJO4_12076
+16@ = 0 // integer values
+
+:BANKJO4_12083
+if
+   Actor.Dead($4130)
+jf @BANKJO4_12106
+jump @BANKJO4_11921
+
+:BANKJO4_12106
+jump @BANKJO4_11944
+
+:BANKJO4_12113
+jump @BANKJO4_12142
+
+:BANKJO4_12120
+00BC: text_highpriority 'C_DEAD' 5000 ms 1  // ~r~Cam's dead!!
+jump @BANKJO4_22188
+
+:BANKJO4_12142
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_12188
+Actor.Angle($4130) = 90.0
+04EB: actor $4130 crouch 1 300000 ms
+020E: actor $PLAYER_ACTOR look_at_actor $4130
+
+:BANKJO4_12188
+$4099 = 1 // integer values
+03CF: load_wav 'BK4_12A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_12A' 10000 ms 1  // Damn! It's a Flange 9000!
+gosub @BANKJO4_26980
+03CF: load_wav 'BK4_12B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_12B' 10000 ms 1  // This could take hours to crack,
+gosub @BANKJO4_26980
+03CF: load_wav 'BK4_12C' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_12C' 10000 ms 1  // Or five minutes if you could find the manager.
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_12346
+04EB: actor $4130 crouch 0 0 ms
+
+:BANKJO4_12346
+03CF: load_wav 'BNK4_13' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_13' 10000 ms 1  // I'll go find where he's holed up.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -964.0 -335.0 14.6
+
+:BANKJO4_12435
+if
+80F6:   not player $PLAYER_CHAR 0 -939.84 -351.73 6.23 radius 1.5 1.5 1.5
+jf @BANKJO4_12540
+wait 0
+gosub @BANKJO4_28789
+gosub @BANKJO4_30047
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_12526
+jump @BANKJO4_22188
+
+:BANKJO4_12526
+gosub @BANKJO4_27584
+jump @BANKJO4_12435
+
+:BANKJO4_12540
+gosub @BANKJO4_31860
+gosub @BANKJO4_27077
+
+:BANKJO4_12554
+if
+80F6:   not player $PLAYER_CHAR 0 -964.0 -337.0 14.6 radius 3.0 3.0 3.0
+jf @BANKJO4_12842
+wait 0
+gosub @BANKJO4_28472
+gosub @BANKJO4_28789
+gosub @BANKJO4_28829
+gosub @BANKJO4_29105
+gosub @BANKJO4_30047
+gosub @BANKJO4_29065
+gosub @BANKJO4_27584
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_12680
+jump @BANKJO4_22188
+
+:BANKJO4_12680
+if and
+00F6:   player $PLAYER_CHAR 0 -922.3 -348.2 16.6 radius 3.0 3.0 3.0
+  $4201 == 0 // integer values
+jf @BANKJO4_12835
+$4099 = 1 // integer values
+03CF: load_wav 'BK4_14B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_14A' 10000 ms 1  // Phil, things still sweet?
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_15' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_15' 10000 ms 1  // Sure. Everything's reeaal quiet.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4201 = 1 // integer values
+
+:BANKJO4_12835
+jump @BANKJO4_12554
+
+:BANKJO4_12842
+$4201 = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_12932
+04C6: actor $PLAYER_ACTOR do_kung_fu_stance_towards_actor $4122
+Camera.SetPosition(-961.3, -330.8, 16.6, 0.0, 0.0, 0.0)
+Camera.OnPed($4122, 15, 1)
+
+:BANKJO4_12932
+$4099 = 1 // integer values
+03CF: load_wav 'BNK4_16' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_16' 10000 ms 1  // You - you're coming with me!
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13031
+04EB: actor $4122 crouch 0 0 ms
+01ED: clear_actor $4122 threat_search
+020E: actor $4122 look_at_actor $PLAYER_ACTOR
+0372: set_actor $4122 anim 17 wait_state_time 300000 ms
+
+:BANKJO4_13031
+03CF: load_wav 'BNK4_17' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_17' 10000 ms 1  // Ok! Ok! Just don't shoot!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13108
+0372: set_actor $4122 anim 0 wait_state_time 0 ms
+01DF: tie_actor $4122 to_player $PLAYER_CHAR
+
+:BANKJO4_13108
+011C: actor $PLAYER_ACTOR clear_objective
+022F: set_actor $PLAYER_ACTOR stop_looking
+009F: set_actor $PLAYER_ACTOR idle
+053D:  $PLAYER_ACTOR
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+Camera.Restore
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -944.36 -342.0 6.3
+
+:BANKJO4_13173
+if
+80F6:   not player $PLAYER_CHAR 1 -938.56 -351.5 16.8 radius 1.5 1.5 1.5
+jf @BANKJO4_13417
+wait 0
+gosub @BANKJO4_28472
+gosub @BANKJO4_29105
+gosub @BANKJO4_30047
+gosub @BANKJO4_28789
+gosub @BANKJO4_28829
+gosub @BANKJO4_29065
+gosub @BANKJO4_27584
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_13299
+jump @BANKJO4_22188
+
+:BANKJO4_13299
+if and
+00F6:   player $PLAYER_CHAR 0 -922.3 -348.3 17.8 radius 3.0 3.0 3.0
+  $4201 == 0 // integer values
+jf @BANKJO4_13410
+$4099 = 1 // integer values
+03CF: load_wav 'BNK4_18' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_18' 10000 ms 1  // I SAID NOBODY MOVE!
+gosub @BANKJO4_26980
+$4201 = 1 // integer values
+
+:BANKJO4_13410
+jump @BANKJO4_13173
+
+:BANKJO4_13417
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13479
+01E0: clear_leader $4122
+009E: set_actor $4122 path -938.56 -351.5 16.8 unknown 0.5 1
+
+:BANKJO4_13479
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13690
+16@ = 0 // integer values
+
+:BANKJO4_13502
+if
+80FF:   not actor $4122 0 -938.56 -351.5 16.8 radius 1.5 1.5 3.0
+jf @BANKJO4_13683
+wait 0
+if
+  16@ > 2500 // integer values
+jf @BANKJO4_13653
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13646
+Actor.PutAt($4122, -932.9, -351.3, 16.8)
+Actor.Angle($4122) = 90.0
+009E: set_actor $4122 path -938.56 -351.5 16.8 unknown 0.5 1
+
+:BANKJO4_13646
+16@ = 0 // integer values
+
+:BANKJO4_13653
+if
+   Actor.Dead($4122)
+jf @BANKJO4_13676
+jump @BANKJO4_13479
+
+:BANKJO4_13676
+jump @BANKJO4_13502
+
+:BANKJO4_13683
+jump @BANKJO4_13712
+
+:BANKJO4_13690
+00BC: text_highpriority 'BM_DEAD' 5000 ms 1  // ~r~You needed the bank manager alive!!
+jump @BANKJO4_22188
+
+:BANKJO4_13712
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13740
+0350: set_actor $4122 maintain_position_when_attacked 1
+011C: actor $4122 clear_objective
+
+:BANKJO4_13740
+gosub @BANKJO4_32140
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13801
+Actor.PutAt($4122, -939.1, -351.12, 6.23)
+Actor.Angle($4122) = 260.0
+01DF: tie_actor $4122 to_player $PLAYER_CHAR
+
+:BANKJO4_13801
+gosub @BANKJO4_32287
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_13831
+0350: set_actor $4122 maintain_position_when_attacked 0
+
+:BANKJO4_13831
+if
+80F6:   not player $PLAYER_CHAR 1 -944.5 -341.58 6.3 radius 1.0 1.0 1.5
+jf @BANKJO4_13943
+wait 0
+gosub @BANKJO4_28789
+gosub @BANKJO4_29065
+gosub @BANKJO4_30047
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_13929
+jump @BANKJO4_22188
+
+:BANKJO4_13929
+gosub @BANKJO4_27584
+jump @BANKJO4_13831
+
+:BANKJO4_13943
+Marker.Disable($4191)
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+Camera.SetPosition(-940.2, -343.6, 8.6, 0.0, 0.0, 0.0)
+Camera.PointAt(-944.5, -343.8, 7.45, 2)
+if and
+   not Actor.Dead($4130)
+   not Actor.Dead($4122)
+jf @BANKJO4_14054
+020E: actor $4130 look_at_actor $4122
+022C: set_actor $4130 to_look_at_actor $4122
+
+:BANKJO4_14054
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14095
+01E0: clear_leader $4122
+01ED: clear_actor $4122 threat_search
+0239: actor $4122 run_to -943.68 -343.47
+
+:BANKJO4_14095
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14294
+16@ = 0 // integer values
+
+:BANKJO4_14118
+if
+80FF:   not actor $4122 0 -943.5 -343.5 6.2 radius 1.5 1.5 3.0
+jf @BANKJO4_14287
+wait 0
+if
+  16@ > 2500 // integer values
+jf @BANKJO4_14257
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14250
+Actor.PutAt($4122, -937.0, -343.5, 6.2)
+Actor.Angle($4122) = 90.0
+0239: actor $4122 run_to -943.68 -343.47
+
+:BANKJO4_14250
+16@ = 0 // integer values
+
+:BANKJO4_14257
+if
+   Actor.Dead($4122)
+jf @BANKJO4_14280
+jump @BANKJO4_14095
+
+:BANKJO4_14280
+jump @BANKJO4_14118
+
+:BANKJO4_14287
+jump @BANKJO4_14316
+
+:BANKJO4_14294
+00BC: text_highpriority 'BM_DEAD' 5000 ms 1  // ~r~You needed the bank manager alive!!
+jump @BANKJO4_22188
+
+:BANKJO4_14316
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14365
+0350: set_actor $4122 maintain_position_when_attacked 1
+Actor.Angle($4122) = 90.0
+020E: actor $PLAYER_ACTOR look_at_actor $4122
+04C6: actor $PLAYER_ACTOR do_kung_fu_stance_towards_actor $4122
+
+:BANKJO4_14365
+$4099 = 1 // integer values
+03CF: load_wav 'BK4_19A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_19A' 10000 ms 1  // It's on a time lock,
+gosub @BANKJO4_26980
+03CF: load_wav 'BK4_19B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_19B' 10000 ms 1  // You might as well give up now!
+gosub @BANKJO4_26980
+if and
+   not Actor.Dead($4130)
+   not Actor.Dead($PLAYER_ACTOR)
+   not Actor.Dead($4122)
+jf @BANKJO4_14586
+020E: actor $4130 look_at_actor $PLAYER_ACTOR
+Camera.SetPosition(-943.0, -343.6, 7.9, 0.0, 0.0, 0.0)
+Actor.PutAt($4122, -941.0, -345.2, 6.23)
+Actor.StorePos($4130, $4218, $4219, $4220)
+$4220 += 0.6 // floating-point values
+Camera.PointAt($4218, $4219, $4220, 2)
+041D: set_camera_near_clip 0.02
+
+:BANKJO4_14586
+03CF: load_wav 'BK4_20A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_20A' 10000 ms 1  // Hell, I can bypass the time lock,
+gosub @BANKJO4_26980
+if and
+   not Actor.Dead($4130)
+   not Actor.Dead($4122)
+jf @BANKJO4_14690
+022F: set_actor $4130 stop_looking
+Actor.PutAt($4122, -941.8, -342.9, 6.23)
+020E: actor $4130 look_at_actor $4122
+022C: set_actor $4130 to_look_at_actor $4122
+
+:BANKJO4_14690
+03CF: load_wav 'BK4_20B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_20B' 10000 ms 1  // Then we just need your key code and we're good!
+gosub @BANKJO4_26980
+if and
+   not Actor.Dead($4130)
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_14767
+022F: set_actor $4130 stop_looking
+0372: set_actor $4130 anim 0 wait_state_time 0 ms
+
+:BANKJO4_14767
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_14807
+Actor.StorePos($PLAYER_ACTOR, $4218, $4219, $4220)
+$4220 += 0.6 // floating-point values
+
+:BANKJO4_14807
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14843
+Actor.PutAt($4122, -942.37, -345.2, 6.23)
+
+:BANKJO4_14843
+Camera.PointAt($4218, $4219, $4220, 1)
+03CF: load_wav 'BNK4_21' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_21' 10000 ms 1  // Stay here. You try anything and you're dead.
+gosub @BANKJO4_26980
+03CF: load_wav 'BK4_24A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_24A' 10000 ms 1  // I'm gonna check on Phil, I'll be right back.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+011C: actor $PLAYER_ACTOR clear_objective
+022F: set_actor $PLAYER_ACTOR stop_looking
+009F: set_actor $PLAYER_ACTOR idle
+053D:  $PLAYER_ACTOR
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_14998
+Actor.PutAt($4122, -943.0, -343.6, 6.23)
+
+:BANKJO4_14998
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+Marker.Disable($4191)
+$4115 = Actor.Create(CivMale, #GDA, -920.6, -340.0, 13.4)
+Actor.Health($4115) = 50
+Actor.Angle($4115) = 270.0
+
+:BANKJO4_15023
+if
+80F6:   not player $PLAYER_CHAR 0 -939.84 -351.73 6.23 radius 1.5 1.5 1.5
+jf @BANKJO4_15135
+wait 0
+gosub @BANKJO4_28789
+gosub @BANKJO4_30047
+gosub @BANKJO4_29065
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_15121
+jump @BANKJO4_22188
+
+:BANKJO4_15121
+gosub @BANKJO4_27584
+jump @BANKJO4_15023
+
+:BANKJO4_15135
+gosub @BANKJO4_31860
+gosub @BANKJO4_27077
+
+:BANKJO4_15149
+if
+80F6:   not player $PLAYER_CHAR 0 -922.3 -348.3 17.8 radius 3.0 3.0 3.0
+jf @BANKJO4_15268
+wait 0
+gosub @BANKJO4_28829
+gosub @BANKJO4_28472
+gosub @BANKJO4_29105
+gosub @BANKJO4_30047
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_15254
+jump @BANKJO4_22188
+
+:BANKJO4_15254
+gosub @BANKJO4_27584
+jump @BANKJO4_15149
+
+:BANKJO4_15268
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+018D: $4117 = create_sound 0 at -916.0 -340.0 15.0
+03CF: load_wav 'BK4_24B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_24B' 10000 ms 1  // I told you not to touch that alarm!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+0239: actor $4115 run_to -902.0 -340.0
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_15428
+01C9: actor $4128 kill_actor $4115
+02E2: set_actor $4128 weapon_accuracy_to 80
+
+:BANKJO4_15428
+if
+   not Actor.Dead($4115)
+jf @BANKJO4_15508
+wait 0
+gosub @BANKJO4_28829
+gosub @BANKJO4_28472
+gosub @BANKJO4_29105
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_15494
+jump @BANKJO4_22188
+
+:BANKJO4_15494
+gosub @BANKJO4_27584
+jump @BANKJO4_15428
+
+:BANKJO4_15508
+03CF: load_wav 'BNK4_25' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_25' 10000 ms 1  // The SWAT team will be here any minute!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_27' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_27' 10000 ms 1  // I could do with some help here, Tommy!
+gosub @BANKJO4_26980
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -907.8 -345.87 12.4
+
+:BANKJO4_15617
+if
+80F6:   not player $PLAYER_CHAR 1 -907.8 -345.87 12.4 radius 1.5 1.5 1.5
+jf @BANKJO4_15857
+wait 0
+gosub @BANKJO4_28472
+gosub @BANKJO4_29105
+gosub @BANKJO4_28829
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_15715
+jump @BANKJO4_22188
+
+:BANKJO4_15715
+gosub @BANKJO4_27584
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_15850
+if and
+82CB:   not actor $4128 bounding_sphere_visible
+  $4213 == 0 // integer values
+jf @BANKJO4_15850
+if
+80C2:   not sphere_onscreen -917.6 -337.57 13.46 2.0
+jf @BANKJO4_15850
+Actor.PutAt($4128, -917.6, -337.57, 13.46)
+Actor.Angle($4128) = 272.0
+04EB: actor $4128 crouch 1 999999 ms
+0350: set_actor $4128 maintain_position_when_attacked 1
+$4213 = 1 // integer values
+
+:BANKJO4_15850
+jump @BANKJO4_15617
+
+:BANKJO4_15857
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_15878
+01E0: clear_leader $4128
+
+:BANKJO4_15878
+Marker.Disable($4191)
+$4115 = Actor.Create(CivMale, #GDA, -897.0, -341.1, 12.4)
+0350: set_actor $4115 maintain_position_when_attacked 1
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_15938
+04C6: actor $PLAYER_ACTOR do_kung_fu_stance_towards_actor $4115
+
+:BANKJO4_15938
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+Camera.SetPosition(-914.5, -347.25, 15.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-902.2, -341.9, 12.69, 2)
+03CF: load_wav 'BNK4_28' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_28' 10000 ms 1  // Vice City S.W.A.T! You are completely surrounded!
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_16106
+Camera.SetPosition(-915.8, -335.0, 13.8, 0.0, 0.0, 0.0)
+Camera.OnPed($4128, 15, 2)
+
+:BANKJO4_16106
+03CF: load_wav 'BNK4_29' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_29' 10000 ms 1  // Surrounded? HA HA HA HAAAAAaaa!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_30' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_30' 10000 ms 1  // They're crapping themselves, corrupt bastards!
+if and
+   not Actor.Dead($4128)
+   not Actor.Dead($4115)
+jf @BANKJO4_16212
+04C6: actor $4128 do_kung_fu_stance_towards_actor $4115
+
+:BANKJO4_16212
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_16313
+Actor.PutAt($4130, -920.0, -347.0, 16.8)
+Actor.Angle($4130) = 290.0
+Camera.SetPosition(-914.3, -345.25, 15.8, 0.0, 0.0, 0.0)
+Camera.OnPed($4130, 15, 2)
+$4163 = 0 // integer values
+
+:BANKJO4_16313
+03CF: load_wav 'BK4_31B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_31A' 10000 ms 1  // Tommy! The vault's open!
+gosub @BANKJO4_26980
+Camera.SetPosition(-905.76, -345.84, 14.0, 0.0, 0.0, 0.0)
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+03CF: load_wav 'BK4_34A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_34A' 10000 ms 1  // Ok, we got the SWAT retirement fund. Let's get out of here!
+gosub @BANKJO4_26980
+Camera.SetPosition(-914.5, -347.25, 15.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-902.2, -341.9, 12.69, 2)
+03CF: load_wav 'BK4_34B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_34B' 10000 ms 1  // Ok, you asked for it! You've had your last chance!
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_16588
+Camera.SetPosition(-915.8, -335.0, 13.8, 0.0, 0.0, 0.0)
+Camera.OnPed($4128, 15, 2)
+
+:BANKJO4_16588
+03CF: load_wav 'BK4_35A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_35A' 10000 ms 1  // They're storming the place!
+gosub @BANKJO4_26980
+03CF: load_wav 'BK4_35B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_35B' 10000 ms 1  // Take cover!
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_16695
+011C: actor $PLAYER_ACTOR clear_objective
+Camera.SetBehindPlayer
+
+:BANKJO4_16695
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_16743
+011C: actor $4128 clear_objective
+011A: set_actor $4128 search_threat 64
+
+:BANKJO4_16743
+Actor.DestroyInstantly($4115)
+Actor.DestroyInstantly($4122)
+$4213 = 0 // integer values
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_16810
+011C: actor $4128 clear_objective
+0350: set_actor $4128 maintain_position_when_attacked 1
+Actor.Health($4128) = 200
+011A: set_actor $4128 search_threat 64
+0291: set_actor $4128 attack_when_provoked 1
+
+:BANKJO4_16810
+Model.Load(#SWAT)
+Model.Load(#GASGRENADE)
+
+:BANKJO4_16819
+if or
+   not Model.Available(#SWAT)
+   not Model.Available(#GASGRENADE)
+jf @BANKJO4_16850
+wait 0
+jump @BANKJO4_16819
+
+:BANKJO4_16850
+$4208 = 0 // integer values
+$4209 = 0 // integer values
+$4210 = 0 // integer values
+$4211 = 0 // integer values
+gosub @BANKJO4_27077
+$4208 = 15 // integer values
+$4209 = 15 // integer values
+$4210 = 15 // integer values
+$4211 = 0 // integer values
+gosub @BANKJO4_27077
+Object.ToggleInMovingList($1824) = True
+Object.ToggleInMovingList($1825) = True
+Object.ToggleInMovingList($1826) = True
+Object.ToggleInMovingList($1827) = True
+Object.ToggleInMovingList($1828) = True
+Object.ToggleInMovingList($1829) = True
+Object.CollisionDetection($1824) = True
+Object.CollisionDetection($1825) = True
+Object.CollisionDetection($1826) = True
+Object.CollisionDetection($1827) = True
+Object.CollisionDetection($1828) = True
+Object.CollisionDetection($1829) = True
+$4099 = 2 // integer values
+03CF: load_wav 'BLOROOF' as $4099
+gosub @BANKJO4_26880
+gosub @BANKJO4_26980
+$4099 = 1 // integer values
+03AC: clear_route 1
+03AC: clear_route 2
+16@ = 0 // integer values
+
+:BANKJO4_17060
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANKJO4_18987
+wait 0
+gosub @BANKJO4_28829
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_17112
+jump @BANKJO4_22188
+
+:BANKJO4_17112
+gosub @BANKJO4_29105
+gosub @BANKJO4_27584
+if and
+   not Actor.Dead($4128)
+  $4182 > 1 // integer values
+jf @BANKJO4_17572
+if
+  $4116 == 0 // integer values
+jf @BANKJO4_17321
+0469: create_actor $4118 in area -919.5 -329.8 -901.5 -351.45 unknown 0 1 0 0 0
+0469: create_actor $4119 in area -919.5 -329.8 -901.5 -351.45 unknown 0 1 0 0 0
+0469: create_actor $4120 in area -919.5 -329.8 -901.5 -351.45 unknown 0 1 0 0 0
+0469: create_actor $4121 in area -919.5 -329.8 -901.5 -351.45 unknown 0 1 0 0 0
+$4116 = 1 // integer values
+jump @BANKJO4_17572
+
+:BANKJO4_17321
+if
+   not Actor.Dead($4118)
+jf @BANKJO4_17377
+if
+  $4116 == 1 // integer values
+jf @BANKJO4_17370
+01C9: actor $4128 kill_actor $4118
+$4116 = 2 // integer values
+
+:BANKJO4_17370
+jump @BANKJO4_17572
+
+:BANKJO4_17377
+Actor.RemoveReferences($4118)
+if
+   not Actor.Dead($4119)
+jf @BANKJO4_17438
+if
+  $4116 == 2 // integer values
+jf @BANKJO4_17431
+01C9: actor $4128 kill_actor $4119
+$4116 = 3 // integer values
+
+:BANKJO4_17431
+jump @BANKJO4_17572
+
+:BANKJO4_17438
+Actor.RemoveReferences($4119)
+if
+   not Actor.Dead($4120)
+jf @BANKJO4_17499
+if
+  $4116 == 3 // integer values
+jf @BANKJO4_17492
+01C9: actor $4128 kill_actor $4120
+$4116 = 4 // integer values
+
+:BANKJO4_17492
+jump @BANKJO4_17572
+
+:BANKJO4_17499
+Actor.RemoveReferences($4120)
+if
+   not Actor.Dead($4121)
+jf @BANKJO4_17560
+if
+  $4116 == 4 // integer values
+jf @BANKJO4_17553
+01C9: actor $4128 kill_actor $4121
+$4116 = 5 // integer values
+
+:BANKJO4_17553
+jump @BANKJO4_17572
+
+:BANKJO4_17560
+Actor.RemoveReferences($4121)
+$4116 = 6 // integer values
+
+:BANKJO4_17572
+if
+  2 > $4183 // integer values
+jf @BANKJO4_17939
+Object.StorePos($1826, $4215, $4216, $4217)
+if and
+  $4183 == 0 // integer values
+  16@ > 2000 // integer values
+jf @BANKJO4_17939
+Object.Destroy($1823)
+$1823 = Object.Init(#ROCKETED_WIN1, -899.851, -341.061, 14.318)
+Object.RemoveFromMissionCleanupList($1823)
+$4164 = Object.Init(#GASGRENADE, -900.7, -333.88, 14.73)
+Object.ToggleInMovingList($4164) = True
+Object.CollisionDetection($4164) = True
+038C: object $4164 scatter -0.5 0.0 0.0
+$4165 = Object.Init(#GASGRENADE, -900.7, -348.4, 14.73)
+Object.ToggleInMovingList($4165) = True
+Object.CollisionDetection($4165) = True
+038C: object $4165 scatter -0.5 0.0 0.0
+$4166 = Object.Init(#GASGRENADE, -907.307, -336.618, 18.0)
+Object.ToggleInMovingList($4166) = True
+Object.CollisionDetection($4166) = True
+$4167 = Object.Init(#GASGRENADE, -907.307, -345.504, 18.0)
+Object.ToggleInMovingList($4167) = True
+Object.CollisionDetection($4167) = True
+$4168 = Object.Init(#GASGRENADE, -915.401, -336.6184, 18.0)
+Object.ToggleInMovingList($4168) = True
+Object.CollisionDetection($4168) = True
+$4169 = Object.Init(#GASGRENADE, -915.401, -345.5, 18.0)
+Object.ToggleInMovingList($4169) = True
+Object.CollisionDetection($4169) = True
+$4183 = 1 // integer values
+17@ = 0 // integer values
+
+:BANKJO4_17939
+if
+  $4183 == 1 // integer values
+jf @BANKJO4_17989
+if
+  17@ > 50 // integer values
+jf @BANKJO4_17989
+17@ = 0 // integer values
+gosub @BANKJO4_31648
+
+:BANKJO4_17989
+if and
+  $4182 == 0 // integer values
+  16@ > 2000 // integer values
+jf @BANKJO4_18090
+0503: create_rappel_at -907.307 -336.618 26.0
+0503: create_rappel_at -907.307 -345.504 26.0
+0503: create_rappel_at -915.401 -336.6184 26.0
+0503: create_rappel_at -915.401 -345.5 26.0
+$4182 = 1 // integer values
+
+:BANKJO4_18090
+if and
+  16@ > 4000 // integer values
+  $4182 == 1 // integer values
+jf @BANKJO4_18123
+$4182 = 2 // integer values
+
+:BANKJO4_18123
+if and
+  16@ > 5000 // integer values
+  $4182 == 2 // integer values
+jf @BANKJO4_18451
+$4180 = Actor.Create(Cop, #SWAT, -899.214, -333.656, 23.0)
+Actor.Angle($4180) = 0.0
+01B2: give_actor $4180 weapon 25 ammo 9999 // Load the weapon model before using this
+$4181 = Actor.Create(Cop, #SWAT, -899.214, -348.466, 23.0)
+Actor.Angle($4181) = 180.0
+01B2: give_actor $4181 weapon 25 ammo 9999 // Load the weapon model before using this
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_18444
+01C9: actor $4180 kill_actor $4130
+01C9: actor $4181 kill_actor $4130
+01E2: add_route_point 1 at -921.5 -347.1 17.0
+01E2: add_route_point 1 at -923.0 -334.3 17.0
+01E2: add_route_point 1 at -937.2 -333.8 15.0
+01E2: add_route_point 1 at -935.0 -329.6 15.0
+01E2: add_route_point 1 at -927.3 -328.5 13.0
+01E2: add_route_point 1 at -921.1 -326.5 13.0
+01E2: add_route_point 1 at -920.7 -339.0 13.0
+01E2: add_route_point 1 at -910.6 -346.6 13.0
+01E1: set_actor $4130 follow_route 1 1
+0411: set_actor $4130 use_pednode_seek 0
+011A: set_actor $4130 search_threat 64
+
+:BANKJO4_18444
+$4182 = 3 // integer values
+
+:BANKJO4_18451
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_18633
+Actor.StorePos($4130, $4218, $4219, $4220)
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+  $4214 == 0 // integer values
+jf @BANKJO4_18626
+if or
+00FF:   actor $4130 0 $95 $96 $97 radius 5.0 5.0 2.0
+00FF:   actor $4130 0 -910.6 -346.6 13.0 radius 10.0 10.0 2.0
+jf @BANKJO4_18626
+011C: actor $4130 clear_objective
+011A: set_actor $4130 search_threat 64
+0291: set_actor $4130 attack_when_provoked 1
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+$4214 = 1 // integer values
+
+:BANKJO4_18626
+jump @BANKJO4_18716
+
+:BANKJO4_18633
+if
+  $4200 == 0 // integer values
+jf @BANKJO4_18716
+Actor.RemoveReferences($4130)
+00BC: text_highpriority 'C_DEAD' 5000 ms 1  // ~r~Cam's dead!!
+$4202 = Pickup.Create(#BRIEFCASE, 3, $4218, $4219, $4220)
+Marker.Disable($4191)
+03DC: $4191 = create_marker_above_pickup $4202
+$4200 = 1 // integer values
+$4214 = 0 // integer values
+
+:BANKJO4_18716
+if
+  $4200 == 1 // integer values
+jf @BANKJO4_18764
+if and
+   Pickup.Picked_up($4202)
+  2 > $4214 // integer values
+jf @BANKJO4_18764
+$4214 = 1 // integer values
+
+:BANKJO4_18764
+if
+  $4214 == 1 // integer values
+jf @BANKJO4_18907
+if
+  $4116 == 6 // integer values
+jf @BANKJO4_18907
+03CF: load_wav 'BNK4_38' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_38' 10000 ms 1  // That's the last of them. GO! GO! GO!
+gosub @BANKJO4_26980
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_18875
+04EB: actor $4128 crouch 0 0 ms
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+
+:BANKJO4_18875
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -900.0 -341.0 13.4
+$4214 = 2 // integer values
+
+:BANKJO4_18907
+if
+  $4214 == 2 // integer values
+jf @BANKJO4_18980
+if
+00F5:   player $PLAYER_CHAR 1 -900.0 -341.0 13.4 radius 1.4 1.4 3.0
+jf @BANKJO4_18980
+jump @BANKJO4_18987
+
+:BANKJO4_18980
+jump @BANKJO4_17060
+
+:BANKJO4_18987
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+gosub @BANKJO4_24234
+022B: create_forbidden_for_peds_cube -956.0 -355.0 5.0 -898.0 -328.0 25.0
+022B: create_forbidden_for_peds_cube -877.0 -368.0 5.0 -832.0 -317.0 25.0
+Marker.Disable($4191)
+0395: clear_area 1 at -863.0 -340.9 range 12.19 30.0
+gosub @BANKJO4_26700
+Camera.SetPosition(-889.57, -341.42, 15.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-894.3, -346.0, 13.4, 2)
+Actor.PutAt($PLAYER_ACTOR, -892.1, -349.47, 12.0)
+Actor.Angle($PLAYER_ACTOR) = 12.0
+04EB: actor $PLAYER_ACTOR crouch 1 999999 ms
+$985 = 0 // integer values
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_19275
+011C: actor $4128 clear_objective
+Actor.PutAt($4128, -892.8, -349.37, 12.7)
+Actor.Angle($4128) = 317.0
+04EB: actor $4128 crouch 1 999999 ms
+
+:BANKJO4_19275
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_19345
+011C: actor $4130 clear_objective
+Actor.PutAt($4130, -894.3, -349.5, 12.5)
+Actor.Angle($4130) = 330.0
+04EB: actor $4130 crouch 1 999999 ms
+jump @BANKJO4_19357
+
+:BANKJO4_19345
+Actor.RemoveReferences($4130)
+$4200 = 1 // integer values
+
+:BANKJO4_19357
+Model.Load(#ENFORCER)
+
+:BANKJO4_19362
+if
+   not Model.Available(#ENFORCER)
+jf @BANKJO4_19389
+wait 0
+jump @BANKJO4_19362
+
+:BANKJO4_19389
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_19414
+Camera.OnPed($4128, 15, 2)
+
+:BANKJO4_19414
+$4107 = Actor.Create(CivMale, #SWAT, -875.9, -334.0, 10.3)
+01ED: clear_actor $4107 threat_search
+Actor.Angle($4107) = 137.0
+01B2: give_actor $4107 weapon 25 ammo 9999 // Load the weapon model before using this
+04EB: actor $4107 crouch 1 9999 ms
+01CC: actor $4107 kill_player $PLAYER_CHAR
+0350: set_actor $4107 maintain_position_when_attacked 1
+$4108 = Actor.Create(CivMale, #SWAT, -876.39, -347.45, 10.3)
+01ED: clear_actor $4108 threat_search
+Actor.Angle($4108) = 130.0
+01B2: give_actor $4108 weapon 25 ammo 9999 // Load the weapon model before using this
+04EB: actor $4108 crouch 1 9999 ms
+01CC: actor $4108 kill_player $PLAYER_CHAR
+0350: set_actor $4108 maintain_position_when_attacked 1
+$4109 = Actor.Create(CivMale, #SWAT, -864.6, -341.0, 9.9)
+01ED: clear_actor $4109 threat_search
+Actor.Angle($4109) = 95.0
+01B2: give_actor $4109 weapon 25 ammo 9999 // Load the weapon model before using this
+01CC: actor $4109 kill_player $PLAYER_CHAR
+0350: set_actor $4109 maintain_position_when_attacked 1
+$4110 = Actor.Create(CivMale, #SWAT, -868.4, -339.98, 9.9)
+01ED: clear_actor $4110 threat_search
+Actor.Angle($4110) = 90.0
+01B2: give_actor $4110 weapon 25 ammo 9999 // Load the weapon model before using this
+04EB: actor $4110 crouch 1 9999 ms
+01CC: actor $4110 kill_player $PLAYER_CHAR
+0350: set_actor $4110 maintain_position_when_attacked 1
+$4111 = Actor.Create(CivMale, #SWAT, -856.3, -294.7, 10.1)
+01ED: clear_actor $4111 threat_search
+Actor.Angle($4111) = 167.0
+01B2: give_actor $4111 weapon 25 ammo 9999 // Load the weapon model before using this
+04EB: actor $4111 crouch 1 9999 ms
+011A: set_actor $4111 search_threat 1
+0291: set_actor $4111 attack_when_provoked 1
+$4112 = Actor.Create(CivMale, #SWAT, -852.1, -304.3, 10.1)
+01ED: clear_actor $4112 threat_search
+Actor.Angle($4112) = 140.0
+01B2: give_actor $4112 weapon 25 ammo 9999 // Load the weapon model before using this
+04EB: actor $4112 crouch 1 9999 ms
+011A: set_actor $4112 search_threat 1
+0291: set_actor $4112 attack_when_provoked 1
+$4146 = Car.Create(#ENFORCER, -870.0, -344.5, 10.2)
+Car.Angle($4146) = 124.0
+020A: set_car $4146 door_status_to 1
+$4147 = Car.Create(#ENFORCER, -869.43, -336.3, 10.2)
+Car.Angle($4147) = 43.0
+020A: set_car $4147 door_status_to 1
+$4148 = Car.Create(#ENFORCER, -852.73, -298.3, 10.2)
+Car.Angle($4148) = 30.0
+020A: set_car $4148 door_status_to 1
+0169: set_fade_color 0 0 1
+fade 1 1500
+
+:BANKJO4_19981
+if
+fading
+jf @BANKJO4_20005
+wait 0
+jump @BANKJO4_19981
+
+:BANKJO4_20005
+if
+  $4200 == 1 // integer values
+jf @BANKJO4_20116
+03CF: load_wav 'BNK4_36' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_36' 10000 ms 1  // Where's Cam?
+gosub @BANKJO4_26980
+Camera.OnPed($PLAYER_ACTOR, 15, 2)
+03CF: load_wav 'BNK4_37' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_37' 10000 ms 1  // History...
+gosub @BANKJO4_26980
+
+:BANKJO4_20116
+03CF: load_wav 'BNK_39' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK_39' 10000 ms 1  // Shit! Where's Hilary?
+gosub @BANKJO4_26980
+Camera.SetPosition(-888.25, -341.4, 13.9, 0.0, 0.0, 0.0)
+Camera.PointAt(-863.0, -340.9, 12.19, 2)
+03CF: load_wav 'BK4_40A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BK4_40A' 10000 ms 1  // I'll give him abandonment issues!
+gosub @BANKJO4_26980
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_20312
+Car.PutAt($4135, -884.1, -311.3, 10.8)
+Car.Angle($4135) = 180.0
+Car.Health($4135) = 1000
+020A: set_car $4135 door_status_to 1
+
+:BANKJO4_20312
+Actor.DestroyInstantly($4129)
+0296: unload_special_actor 2
+023C: load_special_actor 2 'IGHLRY2'
+038B: load_requested_models
+
+:BANKJO4_20335
+if
+823D:   not special_actor 2 loaded
+jf @BANKJO4_20361
+wait 0
+jump @BANKJO4_20335
+
+:BANKJO4_20361
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_20455
+0129: $4129 = create_actor 4 #SPECIAL02 in_car $4135 driverseat
+01ED: clear_actor $4129 threat_search
+04F5: unknown_actor $4129 kiss_player $PLAYER_CHAR on 1
+0446: set_actor $4129 dismemberment_possible 0
+0243: set_actor $4129 ped_stats_to 30
+01B2: give_actor $4129 weapon 25 ammo 9999 // Load the weapon model before using this
+Car.LockInCurrentPosition($4135) = False
+0477: set_car $4135 action 8 time 3000
+04BA: set_car $4135 speed_instantly 30.0
+
+:BANKJO4_20455
+Camera.SetPosition(-873.12, -348.1, 13.96, 0.0, 0.0, 0.0)
+Camera.PointAt(-879.4, -341.7, 10.75, 2)
+
+:BANKJO4_20506
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_20588
+if
+01AF:   car $4135 0 -884.8 -334.2 10.0 radius 3.0 3.0 3.0
+jf @BANKJO4_20577
+jump @BANKJO4_20588
+
+:BANKJO4_20577
+wait 0
+jump @BANKJO4_20506
+
+:BANKJO4_20588
+0477: set_car $4135 action 0 time 0
+0477: set_car $4135 action 3 time 3000
+16@ = 0 // integer values
+
+:BANKJO4_20614
+if
+  1000 > 16@ // integer values
+jf @BANKJO4_20644
+wait 0
+jump @BANKJO4_20614
+
+:BANKJO4_20644
+if and
+   not Actor.Dead($4129)
+   not Car.Wrecked($4135)
+jf @BANKJO4_20673
+01D3: actor $4129 leave_car $4135
+
+:BANKJO4_20673
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_20747
+if
+044B:   actor $4129 on_foot
+jf @BANKJO4_20736
+Actor.Angle($4129) = 280.0
+011A: set_actor $4129 search_threat 64
+0291: set_actor $4129 attack_when_provoked 1
+jump @BANKJO4_20747
+
+:BANKJO4_20736
+wait 0
+jump @BANKJO4_20673
+
+:BANKJO4_20747
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_20792
+0407: create_coordinate $4215 $4216 $4217 from_car $4135 offset -2.0 3.5 -0.2
+
+:BANKJO4_20792
+Camera.SetPosition($4215, $4216, $4217, 0.0, 0.0, 0.0)
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_20843
+Camera.OnPed($4129, 15, 2)
+
+:BANKJO4_20843
+03CF: load_wav 'BNK4_42' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_42' 10000 ms 1  // Hey guys! Get in! I got you covered!
+gosub @BANKJO4_26980
+if and
+   not Actor.Dead($4107)
+   not Actor.Dead($4129)
+jf @BANKJO4_20929
+Actor.Health($4129) = 100
+01CB: actor $4107 kill_actor $4129
+01CB: actor $4129 kill_actor $4107
+
+:BANKJO4_20929
+16@ = 0 // integer values
+
+:BANKJO4_20936
+if
+  2000 > 16@ // integer values
+jf @BANKJO4_20966
+wait 0
+jump @BANKJO4_20936
+
+:BANKJO4_20966
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_20987
+0321: kill_actor $4129
+
+:BANKJO4_20987
+16@ = 0 // integer values
+
+:BANKJO4_20994
+if
+  1000 > 16@ // integer values
+jf @BANKJO4_21024
+wait 0
+jump @BANKJO4_20994
+
+:BANKJO4_21024
+04EB: actor $PLAYER_ACTOR crouch 0 0 ms
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+03C8: set_camera_directly_before_player
+041E: set_radio_station 6 -1
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_21115
+04EB: actor $4128 crouch 0 0 ms
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+011A: set_actor $4128 search_threat 64
+0291: set_actor $4128 attack_when_provoked 1
+0319: set_actor $4128 running 1
+
+:BANKJO4_21115
+if
+   not Actor.Dead($4129)
+jf @BANKJO4_21158
+011C: actor $4129 clear_objective
+011A: set_actor $4129 search_threat 64
+0291: set_actor $4129 attack_when_provoked 1
+01DF: tie_actor $4129 to_player $PLAYER_CHAR
+
+:BANKJO4_21158
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_21208
+011C: actor $4130 clear_objective
+011A: set_actor $4130 search_threat 64
+0291: set_actor $4130 attack_when_provoked 1
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+0319: set_actor $4130 running 1
+
+:BANKJO4_21208
+$4124 = 0 // integer values
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_21246
+0350: set_actor $4107 maintain_position_when_attacked 0
+01CC: actor $4107 kill_player $PLAYER_CHAR
+
+:BANKJO4_21246
+if
+   not Actor.Dead($4108)
+jf @BANKJO4_21269
+0350: set_actor $4108 maintain_position_when_attacked 0
+
+:BANKJO4_21269
+if
+   not Actor.Dead($4109)
+jf @BANKJO4_21292
+0350: set_actor $4109 maintain_position_when_attacked 0
+
+:BANKJO4_21292
+if
+   not Actor.Dead($4110)
+jf @BANKJO4_21315
+0350: set_actor $4110 maintain_position_when_attacked 0
+
+:BANKJO4_21315
+Car.RemoveReferences($4135)
+
+:BANKJO4_21320
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_21381
+wait 0
+gosub @BANKJO4_28869
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_21374
+jump @BANKJO4_22188
+
+:BANKJO4_21374
+jump @BANKJO4_21320
+
+:BANKJO4_21381
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -871.57 -118.5 10.0
+
+:BANKJO4_21406
+if
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_21625
+wait 0
+gosub @BANKJO4_28869
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_21460
+jump @BANKJO4_22188
+
+:BANKJO4_21460
+if
+00F5:   player $PLAYER_CHAR 1 -879.57 -114.5 10.0 radius 3.0 3.0 2.0
+jf @BANKJO4_21508
+
+:BANKJO4_21508
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_21533
+jump @BANKJO4_21320
+
+:BANKJO4_21533
+if
+80F5:   not player $PLAYER_CHAR 0 -844.95 -901.0 10.0 radius 15.0 15.0 15.0
+jf @BANKJO4_21618
+034E: move_object $1793 to -837.134 -901.672 12.03 speed 0.0 0.0 0.025 collision_check 0
+
+:BANKJO4_21618
+jump @BANKJO4_21406
+
+:BANKJO4_21625
+Marker.Disable($4191)
+018A: $4191 = create_checkpoint_at -832.2 -901.0 10.0
+
+:BANKJO4_21650
+if
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_21913
+wait 0
+gosub @BANKJO4_28869
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_21704
+jump @BANKJO4_22188
+
+:BANKJO4_21704
+if and
+00F5:   player $PLAYER_CHAR 1 -832.2 -901.0 10.0 radius 3.0 3.0 2.0
+00FE:   actor $4128 0 -832.2 -901.0 10.0 radius 3.0 3.0 2.0
+jf @BANKJO4_21796
+jump @BANKJO4_21920
+
+:BANKJO4_21796
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_21821
+jump @BANKJO4_21320
+
+:BANKJO4_21821
+if
+80F5:   not player $PLAYER_CHAR 0 -844.95 -901.0 10.0 radius 15.0 15.0 15.0
+jf @BANKJO4_21906
+034E: move_object $1793 to -837.134 -901.672 12.03 speed 0.0 0.0 0.025 collision_check 0
+
+:BANKJO4_21906
+jump @BANKJO4_21650
+
+:BANKJO4_21913
+jump @BANKJO4_21381
+
+:BANKJO4_21920
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANKJO4_22176
+wait 0
+034E: move_object $1793 to -837.134 -901.672 15.03 speed 0.0 0.0 0.025 collision_check 0
+gosub @BANKJO4_28869
+if
+  $4105 == 1 // integer values
+jf @BANKJO4_22009
+jump @BANKJO4_22188
+
+:BANKJO4_22009
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_22034
+jump @BANKJO4_21320
+
+:BANKJO4_22034
+if
+   Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_22059
+jump @BANKJO4_21381
+
+:BANKJO4_22059
+if
+00F5:   player $PLAYER_CHAR 1 -844.95 -901.0 10.0 radius 3.5 3.5 3.5
+jf @BANKJO4_22114
+jump @BANKJO4_22176
+
+:BANKJO4_22114
+if
+80F5:   not player $PLAYER_CHAR 0 -844.95 -901.0 10.0 radius 15.0 15.0 15.0
+jf @BANKJO4_22169
+jump @BANKJO4_21625
+
+:BANKJO4_22169
+jump @BANKJO4_21920
+
+:BANKJO4_22176
+Marker.Disable($4191)
+jump @BANKJO4_22365
+
+:BANKJO4_22188
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+0169: set_fade_color 0 0 1
+022B: create_forbidden_for_peds_cube -414.0 -597.0 12.0 -332.0 -555.0 30.0
+
+:BANKJO4_22243
+if
+0057:   player $PLAYER_CHAR 0 -852.8 -915.0 10.0 -837.5 -897.2 13.0
+jf @BANKJO4_22302
+wait 0
+jump @BANKJO4_22243
+
+:BANKJO4_22302
+if and
+   Player.Defined($PLAYER_CHAR)
+  $985 == 1 // integer values
+jf @BANKJO4_22363
+gosub @BANKJO4_24234
+fade 1 1500
+
+:BANKJO4_22339
+if
+fading
+jf @BANKJO4_22363
+wait 0
+jump @BANKJO4_22339
+
+:BANKJO4_22363
+return
+
+:BANKJO4_22365
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+if and
+00E0:   player $PLAYER_CHAR driving
+   not Car.Wrecked($4135)
+jf @BANKJO4_22412
+01D3: actor $PLAYER_ACTOR leave_car $4135
+
+:BANKJO4_22412
+041E: set_radio_station 3 -1
+043C: set_game_sounds_disable_on_fade 0
+0169: set_fade_color 0 0 1
+fade 0 1500
+
+:BANKJO4_22437
+if
+fading
+jf @BANKJO4_22498
+wait 0
+034E: move_object $1793 to -837.134 -901.672 12.03 speed 0.0 0.0 0.025 collision_check 0
+jump @BANKJO4_22437
+
+:BANKJO4_22498
+Camera.SetPosition(-827.5, -894.2, 22.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-833.15, -899.4, 17.6, 2)
+fade 1 500
+
+:BANKJO4_22556
+if
+fading
+jf @BANKJO4_22580
+wait 0
+jump @BANKJO4_22556
+
+:BANKJO4_22580
+Actor.DestroyInstantly($4128)
+Actor.DestroyInstantly($4130)
+01E3: text_1number_styled 'M_PASS' number 50000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 50000
+0394: play_music 1
+03CF: load_wav 'BNK4_44' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_44' 10000 ms 1  // We made it! We're rich! RICH!
+gosub @BANKJO4_26980
+if
+  $4200 == 1 // integer values
+jf @BANKJO4_22810
+03CF: load_wav 'BNK4_45' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_45' 10000 ms 1  // Shame Cam didn't make it, he was a good guy!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_46' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_46' 10000 ms 1  // Yeah. Still... more for us!
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_47' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_47' 10000 ms 1  // Damned straight! YEEEEHAAAH!
+gosub @BANKJO4_26980
+
+:BANKJO4_22810
+03CF: load_wav 'BNK4_48' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_48' 10000 ms 1  // Tommy, would you like a massage?
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_49' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_49' 10000 ms 1  // Well, Hi there, Mercedes! Yeah, I'm a little tense...
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK450A' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK450A' 10000 ms 1  // What'd I tell you Tommy? What'd I tell you? Bent SWAT better watch out when Kent Paul is in town.
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK450B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK450B' 10000 ms 1  // Come on, gimme a bigger slice, mate, c'mon. I gotta get some new threads.
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_51' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK450C' 10000 ms 1  // New threads, huh? You need more than that, pal!
+gosub @BANKJO4_26980
+0169: set_fade_color 0 0 1
+fade 0 500
+Model.Load(#OD_CLUBOUT_DY)
+Model.Load(#OD_CLUBOUT_NT)
+Model.Load(#OD_CLUBNEON)
+Model.Load(#OD_CLUBDOORS)
+Model.Load(#OD_CLBDR_CLOSE)
+Model.Load(#OD_CLBDR_OPEN)
+Model.Load(#VEG_PALMKBB11)
+Model.Load(#ODNROAD01_NT)
+Model.Load(#ODNROAD01_DY)
+Model.Load(#OD_CLUBBACK)
+Model.Load(#MIAMIODNROADXA)
+Model.Load(#LODD_BUILD2)
+Model.Load(#SPAD_BUILDNEW)
+Model.Load(#VEG_PALMBIG14)
+
+:BANKJO4_23061
+if
+fading
+jf @BANKJO4_23085
+wait 0
+jump @BANKJO4_23061
+
+:BANKJO4_23085
+if
+   not Model.Available(#OD_CLUBOUT_DY)
+jf @BANKJO4_23112
+wait 0
+jump @BANKJO4_23085
+
+:BANKJO4_23112
+if
+   not Model.Available(#OD_CLUBOUT_NT)
+jf @BANKJO4_23139
+wait 0
+jump @BANKJO4_23112
+
+:BANKJO4_23139
+if
+   not Model.Available(#OD_CLUBNEON)
+jf @BANKJO4_23166
+wait 0
+jump @BANKJO4_23139
+
+:BANKJO4_23166
+if
+   not Model.Available(#OD_CLUBDOORS)
+jf @BANKJO4_23193
+wait 0
+jump @BANKJO4_23166
+
+:BANKJO4_23193
+if
+   not Model.Available(#OD_CLBDR_CLOSE)
+jf @BANKJO4_23219
+wait 0
+jump @BANKJO4_23193
+
+:BANKJO4_23219
+if
+   not Model.Available(#OD_CLBDR_OPEN)
+jf @BANKJO4_23245
+wait 0
+jump @BANKJO4_23219
+
+:BANKJO4_23245
+if
+   not Model.Available(#VEG_PALMKBB11)
+jf @BANKJO4_23272
+wait 0
+jump @BANKJO4_23245
+
+:BANKJO4_23272
+if
+   not Model.Available(#ODNROAD01_NT)
+jf @BANKJO4_23299
+wait 0
+jump @BANKJO4_23272
+
+:BANKJO4_23299
+if
+   not Model.Available(#ODNROAD01_DY)
+jf @BANKJO4_23326
+wait 0
+jump @BANKJO4_23299
+
+:BANKJO4_23326
+if
+   not Model.Available(#OD_CLUBBACK)
+jf @BANKJO4_23353
+wait 0
+jump @BANKJO4_23326
+
+:BANKJO4_23353
+if
+   not Model.Available(#MIAMIODNROADXA)
+jf @BANKJO4_23380
+wait 0
+jump @BANKJO4_23353
+
+:BANKJO4_23380
+if
+   not Model.Available(#LODD_BUILD2)
+jf @BANKJO4_23407
+wait 0
+jump @BANKJO4_23380
+
+:BANKJO4_23407
+if
+   not Model.Available(#SPAD_BUILDNEW)
+jf @BANKJO4_23434
+wait 0
+jump @BANKJO4_23407
+
+:BANKJO4_23434
+if
+   not Model.Available(#VEG_PALMBIG14)
+jf @BANKJO4_23461
+wait 0
+jump @BANKJO4_23434
+
+:BANKJO4_23461
+Camera.SetPosition(513.5, -44.5, 22.0, 0.0, 0.0, 0.0)
+Camera.PointAt(502.0, -60.5, 14.0, 2)
+Marker.Disable($247)
+04CE: $247 = create_icon_marker_without_sphere $422 at $564 $565 $566
+04A6: $641 = create_asset_money_pickup_at $564 $565 $566 money $640 $640
+00C0: set_current_time 21 30
+fade 1 1000
+
+:BANKJO4_23567
+if
+fading
+jf @BANKJO4_23591
+wait 0
+jump @BANKJO4_23567
+
+:BANKJO4_23591
+16@ = 0 // integer values
+
+:BANKJO4_23598
+if
+  2000 > 16@ // integer values
+jf @BANKJO4_23628
+wait 0
+jump @BANKJO4_23598
+
+:BANKJO4_23628
+00BA: text_styled 'ASSET_A' 10000 ms 6  // BANK HEIST ASSET COMPLETED!
+01E5: text_1number_highpriority 'ASSET_B' $640 flag 10000 time 1  // ~g~The Malibu Club will now generate revenue up to a maximum of $~1~ per day. Pick up your cash regularly!
+Camera.SetPosition(493.6, -87.0, 10.8, 0.0, 0.0, 0.0)
+Camera.PointAt(492.6, -77.4, 13.2, 2)
+16@ = 0 // integer values
+
+:BANKJO4_23719
+if
+  1500 > 16@ // integer values
+jf @BANKJO4_23749
+wait 0
+jump @BANKJO4_23719
+
+:BANKJO4_23749
+Camera.PointAt($564, $565, $566, 1)
+16@ = 0 // integer values
+
+:BANKJO4_23769
+if
+  1000 > 16@ // integer values
+jf @BANKJO4_23799
+wait 0
+jump @BANKJO4_23769
+
+:BANKJO4_23799
+16@ = 0 // integer values
+
+:BANKJO4_23806
+if
+  5000 > 16@ // integer values
+jf @BANKJO4_23836
+wait 0
+jump @BANKJO4_23806
+
+:BANKJO4_23836
+fade 0 500
+
+:BANKJO4_23843
+if
+fading
+jf @BANKJO4_23867
+wait 0
+jump @BANKJO4_23843
+
+:BANKJO4_23867
+Camera.SetAtPos(-833.6, -908.5, 11.11)
+0395: clear_area 1 at -833.6 -908.5 range 11.11 2.0
+if
+00E0:   player $PLAYER_CHAR driving
+jf @BANKJO4_23951
+012A: put_player $PLAYER_CHAR at -833.6 -908.5 11.11 and_remove_from_car
+jump @BANKJO4_23971
+
+:BANKJO4_23951
+0055: put_player $PLAYER_CHAR at -833.6 -908.5 11.11
+
+:BANKJO4_23971
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_24023
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER2'
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_24023
+0353: refresh_actor $PLAYER_ACTOR
+
+:BANKJO4_24023
+0171: set_player $PLAYER_CHAR z_angle_to 345.0
+01BC: put_object $1793 at -837.134 -901.672 12.03
+Camera.Restore_WithJumpCut
+00BE: text_clear_all
+fade 1 1500
+
+:BANKJO4_24064
+if
+fading
+jf @BANKJO4_24088
+wait 0
+jump @BANKJO4_24064
+
+:BANKJO4_24088
+043C: set_game_sounds_disable_on_fade 1
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+04E3: unknown_player $PLAYER_CHAR 3 60000
+02A3: enable_widescreen 0
+0318: set_latest_mission_passed 'BANK_4'  // The Job
+$642 = 1 // integer values
+$1175 += 1 // integer values
+$251 = 1 // integer values
+Player.ClearWantedLevel($PLAYER_CHAR)
+030C: progress_made += 1
+055B: $1296 = create_clothes_pickup 7 at 465.3 -57.4 15.7
+$1307 = Pickup.Create(#KNIFECUR, 2, 468.5, -54.2, 15.7)
+$1276 = 1 // integer values
+create_thread @CLOTH9
+create_thread @AMBBANK
+return
+
+:BANKJO4_24234
+fade 0 1500
+
+:BANKJO4_24241
+if
+fading
+jf @BANKJO4_24265
+wait 0
+jump @BANKJO4_24241
+
+:BANKJO4_24265
+04FA: reset_sky_colors_with_fade 0
+01EB: set_traffic_density_multiplier_to 1.0
+03AD: set_rubbish 1
+select_interior 0
+022B: create_forbidden_for_peds_cube -956.0 -355.0 5.0 -898.0 -328.0 25.0
+0395: clear_area 0 at -893.0 -341.0 range 13.5 1.0
+Camera.SetAtPos(-893.0, -341.0, 13.5)
+0055: put_player $PLAYER_CHAR at -893.0 -341.0 12.0
+$985 = 0 // integer values
+0171: set_player $PLAYER_CHAR z_angle_to 270.0
+03C8: set_camera_directly_before_player
+return
+
+:BANKJO4_24398
+if
+   Actor.Dead($4129)
+jf @BANKJO4_24438
+00BC: text_highpriority 'H_DEAD' 5000 ms 1  // ~r~Hilary's dead!!
+$4105 = 1 // integer values
+return
+
+:BANKJO4_24438
+if
+   Car.Wrecked($4135)
+jf @BANKJO4_24476
+00BC: text_highpriority 'TRASHED' 5000 ms 1  // ~r~YOU TRASHED THE GETAWAY CAR!!
+$4105 = 1 // integer values
+
+:BANKJO4_24476
+return
+
+:BANKJO4_24478
+if
+  $4104 == 0 // integer values
+jf @BANKJO4_24723
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_24701
+if
+80DC:   not player $PLAYER_CHAR driving $4135
+jf @BANKJO4_24629
+$4101 = 0 // integer values
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if and
+  $4104 == 0 // integer values
+  $4137 == 0 // integer values
+jf @BANKJO4_24592
+$4136 = Marker.CreateAboveCar($4135)
+$4137 = 1 // integer values
+
+:BANKJO4_24592
+if
+  $4134 == 1 // integer values
+jf @BANKJO4_24622
+Marker.Disable($4191)
+$4134 = 0 // integer values
+
+:BANKJO4_24622
+jump @BANKJO4_24666
+
+:BANKJO4_24629
+$4101 = 1 // integer values
+if
+  $4137 == 1 // integer values
+jf @BANKJO4_24666
+Marker.Disable($4136)
+$4137 = 0 // integer values
+
+:BANKJO4_24666
+if and
+01F4:   car $4135 flipped
+01C1:   car $4135 stopped
+jf @BANKJO4_24694
+$4105 = 1 // integer values
+
+:BANKJO4_24694
+jump @BANKJO4_24723
+
+:BANKJO4_24701
+00BC: text_highpriority 'TRASHED' 5000 ms 1  // ~r~YOU TRASHED THE GETAWAY CAR!!
+$4105 = 1 // integer values
+
+:BANKJO4_24723
+return
+
+:BANKJO4_24725
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_25122
+if
+   Actor.Dead($4128)
+jf @BANKJO4_24786
+00BC: text_highpriority 'P_DEAD' 5000 ms 1  // ~r~Phil's dead!!
+$4105 = 1 // integer values
+jump @BANKJO4_25122
+
+:BANKJO4_24786
+if
+  $4101 == 1 // integer values
+jf @BANKJO4_24902
+if
+   not Actor.InCar($4128, $4135)
+jf @BANKJO4_24895
+01D4: actor $4128 go_to_car $4135 and_enter_it_as_a_passenger
+if and
+0205:   actor $4128 near_car $4135 radius 2.5 2.5 2.5 unknown 0
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_24888
+0319: set_actor $4128 running 0
+jump @BANKJO4_24895
+
+:BANKJO4_24888
+0319: set_actor $4128 running 1
+
+:BANKJO4_24895
+jump @BANKJO4_25001
+
+:BANKJO4_24902
+if
+00E9:   player $PLAYER_CHAR 0 $4128 radius 4.0 4.0
+jf @BANKJO4_24978
+if
+  $4184 == 0 // integer values
+jf @BANKJO4_24971
+011C: actor $4128 clear_objective
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+$4184 = 1 // integer values
+
+:BANKJO4_24971
+jump @BANKJO4_25001
+
+:BANKJO4_24978
+01E0: clear_leader $4128
+0239: actor $4128 run_to $95 $96
+$4184 = 0 // integer values
+
+:BANKJO4_25001
+if
+80E9:   not player $PLAYER_CHAR 0 $4128 radius 20.0 20.0
+jf @BANKJO4_25092
+if
+  $4124 == 0 // integer values
+jf @BANKJO4_25085
+00BC: text_highpriority 'P_HIND' 5000 ms 1  // ~r~You've lost Phil!
+Marker.Disable($4191)
+$4131 = Marker.CreateAboveActor($4128)
+$4124 = 1 // integer values
+
+:BANKJO4_25085
+jump @BANKJO4_25122
+
+:BANKJO4_25092
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_25122
+Marker.Disable($4131)
+$4124 = 0 // integer values
+
+:BANKJO4_25122
+return
+
+:BANKJO4_25124
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_25521
+if
+   Actor.Dead($4130)
+jf @BANKJO4_25185
+00BC: text_highpriority 'C_DEAD' 5000 ms 1  // ~r~Cam's dead!!
+$4105 = 1 // integer values
+jump @BANKJO4_25521
+
+:BANKJO4_25185
+if
+  $4101 == 1 // integer values
+jf @BANKJO4_25301
+if
+   not Actor.InCar($4130, $4135)
+jf @BANKJO4_25294
+01D4: actor $4130 go_to_car $4135 and_enter_it_as_a_passenger
+if and
+0205:   actor $4130 near_car $4135 radius 2.5 2.5 2.5 unknown 0
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_25287
+0319: set_actor $4130 running 0
+jump @BANKJO4_25294
+
+:BANKJO4_25287
+0319: set_actor $4130 running 1
+
+:BANKJO4_25294
+jump @BANKJO4_25400
+
+:BANKJO4_25301
+if
+00E9:   player $PLAYER_CHAR 0 $4130 radius 4.0 4.0
+jf @BANKJO4_25377
+if
+  $4186 == 0 // integer values
+jf @BANKJO4_25370
+011C: actor $4130 clear_objective
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+$4186 = 1 // integer values
+
+:BANKJO4_25370
+jump @BANKJO4_25400
+
+:BANKJO4_25377
+01E0: clear_leader $4130
+0239: actor $4130 run_to $95 $96
+$4186 = 0 // integer values
+
+:BANKJO4_25400
+if
+80E9:   not player $PLAYER_CHAR 0 $4130 radius 20.0 20.0
+jf @BANKJO4_25491
+if
+  $4126 == 0 // integer values
+jf @BANKJO4_25484
+00BC: text_highpriority 'C_HIND' 5000 ms 1  // ~r~Cam's been left behind!
+Marker.Disable($4191)
+$4133 = Marker.CreateAboveActor($4130)
+$4126 = 1 // integer values
+
+:BANKJO4_25484
+jump @BANKJO4_25521
+
+:BANKJO4_25491
+if
+  $4126 == 1 // integer values
+jf @BANKJO4_25521
+Marker.Disable($4133)
+$4126 = 0 // integer values
+
+:BANKJO4_25521
+return
+
+:BANKJO4_25523
+if and
+  $4104 == 0 // integer values
+   not Car.Wrecked($4135)
+jf @BANKJO4_25927
+if
+   Actor.Dead($4129)
+jf @BANKJO4_25591
+00BC: text_highpriority 'H_DEAD' 5000 ms 1  // ~r~Hilary's dead!!
+$4105 = 1 // integer values
+jump @BANKJO4_25927
+
+:BANKJO4_25591
+if
+  $4101 == 1 // integer values
+jf @BANKJO4_25707
+if
+   not Actor.InCar($4129, $4135)
+jf @BANKJO4_25700
+01D4: actor $4129 go_to_car $4135 and_enter_it_as_a_passenger
+if and
+0205:   actor $4129 near_car $4135 radius 2.5 2.5 2.5 unknown 0
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+jf @BANKJO4_25693
+0319: set_actor $4129 running 0
+jump @BANKJO4_25700
+
+:BANKJO4_25693
+0319: set_actor $4129 running 1
+
+:BANKJO4_25700
+jump @BANKJO4_25806
+
+:BANKJO4_25707
+if
+00E9:   player $PLAYER_CHAR 0 $4129 radius 4.0 4.0
+jf @BANKJO4_25783
+if
+  $4185 == 0 // integer values
+jf @BANKJO4_25776
+011C: actor $4129 clear_objective
+01DF: tie_actor $4129 to_player $PLAYER_CHAR
+$4185 = 1 // integer values
+
+:BANKJO4_25776
+jump @BANKJO4_25806
+
+:BANKJO4_25783
+01E0: clear_leader $4129
+0239: actor $4129 run_to $95 $96
+$4185 = 0 // integer values
+
+:BANKJO4_25806
+if
+80E9:   not player $PLAYER_CHAR 0 $4129 radius 20.0 20.0
+jf @BANKJO4_25897
+if
+  $4125 == 0 // integer values
+jf @BANKJO4_25890
+00BC: text_highpriority 'H_HIND' 5000 ms 1  // ~r~Hilary's been abandoned!
+Marker.Disable($4191)
+$4132 = Marker.CreateAboveActor($4129)
+$4125 = 1 // integer values
+
+:BANKJO4_25890
+jump @BANKJO4_25927
+
+:BANKJO4_25897
+if
+  $4125 == 1 // integer values
+jf @BANKJO4_25927
+Marker.Disable($4132)
+$4125 = 0 // integer values
+
+:BANKJO4_25927
+return
+if or
+  $4124 == 1 // integer values
+  $4125 == 1 // integer values
+  $4126 == 1 // integer values
+jf @BANKJO4_25975
+$4134 = 0 // integer values
+jump @BANKJO4_26038
+
+:BANKJO4_25975
+if
+  $4101 == 1 // integer values
+jf @BANKJO4_26038
+if
+  $4134 == 0 // integer values
+jf @BANKJO4_26038
+018A: $4191 = create_checkpoint_at -896.5 -341.0 13.4
+$4134 = 1 // integer values
+
+:BANKJO4_26038
+return
+
+:BANKJO4_26040
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+wait 5
+Marker.Disable($4191)
+Marker.Disable($4131)
+Marker.Disable($4133)
+Marker.Disable($4132)
+Marker.Disable($4136)
+03AC: clear_route 1
+03AC: clear_route 2
+018E: stop_sound $4117
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BANKJO4_26108
+011C: actor $PLAYER_ACTOR clear_objective
+
+:BANKJO4_26108
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANKJO4_26138
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+
+:BANKJO4_26138
+Camera.Restore_WithJumpCut
+01BC: put_object $1793 at -837.134 -901.672 12.03
+022A: remove_forbidden_for_peds_cube -877.0 -368.0 5.0 -832.0 -317.0 25.0
+043C: set_game_sounds_disable_on_fade 1
+04FA: reset_sky_colors_with_fade 0
+Model.Destroy(#GDA)
+Model.Destroy(#GDB)
+Model.Destroy(#SWAT)
+Model.Destroy(#GASGRENADE)
+Model.Destroy(#M4)
+Model.Destroy(#MP5LNG)
+Model.Destroy(#TAXI)
+Model.Destroy(#PYTHON)
+Model.Destroy(#ENFORCER)
+Model.Destroy(#WFYBU)
+Model.Destroy(#HFYBU)
+Model.Destroy(#HFORI)
+Model.Destroy(#HFYRI)
+Model.Destroy(#WFYRI)
+Model.Destroy(#WMOST)
+Model.Destroy(#WMORI)
+Model.Destroy(#WMYBU)
+Model.Destroy(#OD_CLUBOUT_DY)
+Model.Destroy(#OD_CLUBOUT_NT)
+Model.Destroy(#OD_CLUBNEON)
+Model.Destroy(#OD_CLUBDOORS)
+Model.Destroy(#OD_CLBDR_CLOSE)
+Model.Destroy(#OD_CLBDR_OPEN)
+Model.Destroy(#VEG_PALMKBB11)
+Model.Destroy(#ODNROAD01_NT)
+Model.Destroy(#ODNROAD01_DY)
+Model.Destroy(#OD_CLUBBACK)
+Model.Destroy(#MIAMIODNROADXA)
+Model.Destroy(#LODD_BUILD2)
+Model.Destroy(#SPAD_BUILDNEW)
+Model.Destroy(#VEG_PALMBIG14)
+Actor.DestroyWithFade($4128)
+Actor.DestroyWithFade($4130)
+Actor.DestroyWithFade($4129)
+Actor.DestroyWithFade($4122)
+Pickup.Destroy($4202)
+Actor.RemoveReferences($4107)
+Actor.RemoveReferences($4108)
+Actor.RemoveReferences($4109)
+Actor.RemoveReferences($4110)
+Actor.RemoveReferences($4111)
+Actor.RemoveReferences($4112)
+Car.RemoveReferences($4146)
+Car.RemoveReferences($4147)
+Car.RemoveReferences($4148)
+Car.RemoveReferences($4135)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+gosub @BANKJO4_26700
+$1823 = Object.Init(#UNROCKETED_WIN1, -899.851, -341.061, 14.318)
+Object.RemoveFromMissionCleanupList($1823)
+$1824 = Object.Init(#BNK_GRILL01, -899.214, -333.656, 21.0)
+Object.ToggleInMovingList($1824) = False
+Object.RemoveFromMissionCleanupList($1824)
+0566: object $1824 set_interior 3
+$1825 = Object.Init(#BNK_GRILL01, -899.214, -348.466, 21.03)
+Object.ToggleInMovingList($1825) = False
+Object.RemoveFromMissionCleanupList($1825)
+0566: object $1825 set_interior 3
+$1826 = Object.Init(#BNK_GRILL01, -907.307, -336.618, 23.7)
+Object.ToggleInMovingList($1826) = False
+Object.RemoveFromMissionCleanupList($1826)
+0566: object $1826 set_interior 3
+$1827 = Object.Init(#BNK_GRILL01, -907.307, -345.504, 23.7)
+Object.ToggleInMovingList($1827) = False
+Object.RemoveFromMissionCleanupList($1827)
+0566: object $1827 set_interior 3
+$1828 = Object.Init(#BNK_GRILL01, -915.401, -336.6184, 23.7)
+Object.ToggleInMovingList($1828) = False
+Object.RemoveFromMissionCleanupList($1828)
+0566: object $1828 set_interior 3
+$1829 = Object.Init(#BNK_GRILL01, -915.401, -345.5, 23.7)
+Object.ToggleInMovingList($1829) = False
+Object.RemoveFromMissionCleanupList($1829)
+0566: object $1829 set_interior 3
+$ONMISSION = 0 // integer values
+mission_cleanup
+return
+
+:BANKJO4_26700
+Object.Destroy($1823)
+Object.Destroy($1824)
+Object.Destroy($1825)
+Object.Destroy($1826)
+Object.Destroy($1827)
+Object.Destroy($1828)
+Object.Destroy($1829)
+Actor.DestroyInstantly($4138)
+Actor.DestroyInstantly($4139)
+Actor.DestroyInstantly($4140)
+Actor.DestroyInstantly($4141)
+Actor.DestroyInstantly($4142)
+Actor.DestroyInstantly($4143)
+Actor.DestroyInstantly($4144)
+Actor.DestroyInstantly($4145)
+Actor.DestroyInstantly($4107)
+Actor.DestroyInstantly($4108)
+Actor.DestroyInstantly($4109)
+Actor.DestroyInstantly($4110)
+Actor.DestroyInstantly($4111)
+Actor.DestroyInstantly($4112)
+Actor.DestroyInstantly($4113)
+Actor.DestroyInstantly($4114)
+Actor.DestroyInstantly($4118)
+Actor.DestroyInstantly($4119)
+Actor.DestroyInstantly($4120)
+Actor.DestroyInstantly($4121)
+Pickup.Destroy($4150)
+Pickup.Destroy($4149)
+Object.Destroy($4151)
+Object.Destroy($4152)
+return
+
+:BANKJO4_26857
+01BD: $360 = current_time_in_ms
+0084: $359 = $360 // integer values and handles
+0060: $359 -= $358 // integer values
+return
+
+:BANKJO4_26880
+if
+83D0:   not wav $4099 loaded
+jf @BANKJO4_26973
+wait 0
+if
+  $4212 == 1 // integer values
+jf @BANKJO4_26966
+if
+00F5:   player $PLAYER_CHAR 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+jf @BANKJO4_26966
+
+:BANKJO4_26966
+jump @BANKJO4_26880
+
+:BANKJO4_26973
+03D1: play_wav $4099
+return
+
+:BANKJO4_26980
+if
+83D2:   not wav $4099 ended
+jf @BANKJO4_27073
+wait 0
+if
+  $4212 == 1 // integer values
+jf @BANKJO4_27066
+if
+00F5:   player $PLAYER_CHAR 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+jf @BANKJO4_27066
+
+:BANKJO4_27066
+jump @BANKJO4_26980
+
+:BANKJO4_27073
+00BE: text_clear_all
+return
+
+:BANKJO4_27077
+if
+  $4211 == 0 // integer values
+jf @BANKJO4_27582
+if
+   not Actor.Dead($4138)
+jf @BANKJO4_27133
+0372: set_actor $4138 anim 0 wait_state_time 0 ms
+0372: set_actor $4138 anim $4208 wait_state_time 999999 ms
+
+:BANKJO4_27133
+if
+   not Actor.Dead($4139)
+jf @BANKJO4_27171
+0372: set_actor $4139 anim 0 wait_state_time 0 ms
+0372: set_actor $4139 anim $4209 wait_state_time 999999 ms
+
+:BANKJO4_27171
+if
+   not Actor.Dead($4140)
+jf @BANKJO4_27209
+0372: set_actor $4140 anim 0 wait_state_time 0 ms
+0372: set_actor $4140 anim $4208 wait_state_time 999999 ms
+
+:BANKJO4_27209
+if
+   not Actor.Dead($4141)
+jf @BANKJO4_27247
+0372: set_actor $4141 anim 0 wait_state_time 0 ms
+0372: set_actor $4141 anim $4209 wait_state_time 999999 ms
+
+:BANKJO4_27247
+if
+   not Actor.Dead($4142)
+jf @BANKJO4_27285
+0372: set_actor $4142 anim 0 wait_state_time 0 ms
+0372: set_actor $4142 anim $4209 wait_state_time 999999 ms
+
+:BANKJO4_27285
+if
+   not Actor.Dead($4143)
+jf @BANKJO4_27323
+0372: set_actor $4143 anim 0 wait_state_time 0 ms
+0372: set_actor $4143 anim $4208 wait_state_time 999999 ms
+
+:BANKJO4_27323
+if
+   not Actor.Dead($4144)
+jf @BANKJO4_27361
+0372: set_actor $4144 anim 0 wait_state_time 0 ms
+0372: set_actor $4144 anim $4209 wait_state_time 999999 ms
+
+:BANKJO4_27361
+if
+   not Actor.Dead($4145)
+jf @BANKJO4_27399
+0372: set_actor $4145 anim 0 wait_state_time 0 ms
+0372: set_actor $4145 anim $4208 wait_state_time 999999 ms
+
+:BANKJO4_27399
+if
+   not Actor.Dead($4109)
+jf @BANKJO4_27437
+0372: set_actor $4109 anim 0 wait_state_time 0 ms
+0372: set_actor $4109 anim $4210 wait_state_time 999999 ms
+
+:BANKJO4_27437
+if
+   not Actor.Dead($4108)
+jf @BANKJO4_27475
+0372: set_actor $4108 anim 0 wait_state_time 0 ms
+0372: set_actor $4108 anim $4210 wait_state_time 999999 ms
+
+:BANKJO4_27475
+if
+   not Actor.Dead($4107)
+jf @BANKJO4_27513
+0372: set_actor $4107 anim 0 wait_state_time 0 ms
+0372: set_actor $4107 anim $4210 wait_state_time 999999 ms
+
+:BANKJO4_27513
+if
+   not Actor.Dead($4122)
+jf @BANKJO4_27575
+if
+  $4206 == 1 // integer values
+jf @BANKJO4_27566
+04EB: actor $4122 crouch 1 999999 ms
+jump @BANKJO4_27575
+
+:BANKJO4_27566
+04EB: actor $4122 crouch 0 0 ms
+
+:BANKJO4_27575
+$4211 = 1 // integer values
+
+:BANKJO4_27582
+return
+
+:BANKJO4_27584
+if and
+   Actor.Dead($4138)
+  1@ == 0 // integer values
+jf @BANKJO4_27621
+0@ += 1 // integer values
+1@ = 1 // integer values
+
+:BANKJO4_27621
+if and
+   Actor.Dead($4139)
+  2@ == 0 // integer values
+jf @BANKJO4_27658
+0@ += 1 // integer values
+2@ = 1 // integer values
+
+:BANKJO4_27658
+if and
+   Actor.Dead($4140)
+  3@ == 0 // integer values
+jf @BANKJO4_27695
+0@ += 1 // integer values
+3@ = 1 // integer values
+
+:BANKJO4_27695
+if and
+   Actor.Dead($4141)
+  4@ == 0 // integer values
+jf @BANKJO4_27732
+0@ += 1 // integer values
+4@ = 1 // integer values
+
+:BANKJO4_27732
+if and
+   Actor.Dead($4142)
+  5@ == 0 // integer values
+jf @BANKJO4_27769
+0@ += 1 // integer values
+5@ = 1 // integer values
+
+:BANKJO4_27769
+if and
+   Actor.Dead($4143)
+  6@ == 0 // integer values
+jf @BANKJO4_27806
+0@ += 1 // integer values
+6@ = 1 // integer values
+
+:BANKJO4_27806
+if and
+   Actor.Dead($4144)
+  7@ == 0 // integer values
+jf @BANKJO4_27843
+0@ += 1 // integer values
+7@ = 1 // integer values
+
+:BANKJO4_27843
+if and
+   Actor.Dead($4145)
+  8@ == 0 // integer values
+jf @BANKJO4_27880
+0@ += 1 // integer values
+8@ = 1 // integer values
+
+:BANKJO4_27880
+if and
+   Actor.Dead($4109)
+  9@ == 0 // integer values
+jf @BANKJO4_27917
+0@ += 1 // integer values
+9@ = 1 // integer values
+
+:BANKJO4_27917
+if and
+   Actor.Dead($4108)
+  10@ == 0 // integer values
+jf @BANKJO4_27954
+0@ += 1 // integer values
+10@ = 1 // integer values
+
+:BANKJO4_27954
+if and
+   Actor.Dead($4107)
+  11@ == 0 // integer values
+jf @BANKJO4_27991
+0@ += 1 // integer values
+11@ = 1 // integer values
+
+:BANKJO4_27991
+if and
+  0@ > 2 // integer values
+  $4187 == 0 // integer values
+jf @BANKJO4_28326
+0084: $4188 = $4138 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4139 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4140 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4141 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4142 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4143 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4144 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4145 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4107 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4108 // integer values and handles
+gosub @BANKJO4_28328
+0084: $4188 = $4109 // integer values and handles
+gosub @BANKJO4_28328
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_28227
+011A: set_actor $4128 search_threat 2048
+011A: set_actor $4128 search_threat 64
+0291: set_actor $4128 attack_when_provoked 1
+01DF: tie_actor $4128 to_player $PLAYER_CHAR
+
+:BANKJO4_28227
+if and
+   not Actor.Dead($4130)
+  $4163 == 0 // integer values
+jf @BANKJO4_28280
+011A: set_actor $4130 search_threat 2048
+011A: set_actor $4130 search_threat 64
+0291: set_actor $4130 attack_when_provoked 1
+01DF: tie_actor $4130 to_player $PLAYER_CHAR
+
+:BANKJO4_28280
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+022A: remove_forbidden_for_peds_cube -414.0 -597.0 12.0 -332.0 -555.0 30.0
+$4187 = 1 // integer values
+
+:BANKJO4_28326
+return
+
+:BANKJO4_28328
+if
+   not Actor.Dead($4188)
+jf @BANKJO4_28458
+0209: $4189 = random_int_in_ranges 0 2
+if
+  $4189 == 0 // integer values
+jf @BANKJO4_28418
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_28411
+0372: set_actor $4188 anim 0 wait_state_time 0 ms
+01CB: actor $4188 kill_actor $4128
+0350: set_actor $4188 maintain_position_when_attacked 0
+
+:BANKJO4_28411
+jump @BANKJO4_28458
+
+:BANKJO4_28418
+if
+   not Actor.Dead($4130)
+jf @BANKJO4_28458
+0372: set_actor $4188 anim 0 wait_state_time 0 ms
+01CB: actor $4188 kill_actor $4130
+0350: set_actor $4188 maintain_position_when_attacked 0
+
+:BANKJO4_28458
+return
+
+:BANKJO4_28460
+Marker.Disable($4131)
+Marker.Disable($4133)
+return
+
+:BANKJO4_28472
+if
+0057:   player $PLAYER_CHAR 0 -926.3 -330.0 12.4 -929.0 -327.67 15.0
+jf @BANKJO4_28787
+if
+  $4206 == 0 // integer values
+jf @BANKJO4_28780
+$4112 = Actor.Create(CivMale, #GDA, -918.7, -353.3, 16.8)
+01ED: clear_actor $4112 threat_search
+011A: set_actor $4112 search_threat 1
+Actor.Angle($4112) = 60.0
+04EB: actor $4112 crouch 1 300000 ms
+01B2: give_actor $4112 weapon 25 ammo 9999 // Load the weapon model before using this
+01BD: $358 = current_time_in_ms
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_28708
+01E2: add_route_point 2 at -921.0 -340.0 13.4
+01E2: add_route_point 2 at -921.0 -333.0 13.4
+Actor.PutAt($4128, -921.0, -340.0, 12.4)
+01E1: set_actor $4128 follow_route 2 3
+0411: set_actor $4128 use_pednode_seek 0
+011A: set_actor $4128 search_threat 64
+
+:BANKJO4_28708
+$4122 = Actor.Create(CivMale, #WMORI, -963.8, -336.43, 14.6)
+0489: set_actor $4122 muted 1
+Actor.Angle($4122) = 205.0
+01ED: clear_actor $4122 threat_search
+04EB: actor $4122 crouch 1 300000 ms
+0243: set_actor $4122 ped_stats_to 13
+$4206 = 1 // integer values
+
+:BANKJO4_28780
+gosub @BANKJO4_27077
+
+:BANKJO4_28787
+return
+
+:BANKJO4_28789
+if
+   Actor.Dead($4130)
+jf @BANKJO4_28827
+$4105 = 1 // integer values
+00BC: text_highpriority 'C_DEAD' 5000 ms 1  // ~r~Cam's dead!!
+
+:BANKJO4_28827
+return
+
+:BANKJO4_28829
+if
+   Actor.Dead($4128)
+jf @BANKJO4_28867
+00BC: text_highpriority 'P_DEAD' 5000 ms 1  // ~r~Phil's dead!!
+$4105 = 1 // integer values
+
+:BANKJO4_28867
+return
+
+:BANKJO4_28869
+if
+   not Actor.Dead($4128)
+jf @BANKJO4_29018
+if
+00FB:   player $PLAYER_CHAR 0 $4128 radius 10.0 10.0 10.0
+jf @BANKJO4_28958
+if
+  $4124 == 1 // integer values
+jf @BANKJO4_28951
+Marker.Disable($4131)
+$4124 = 0 // integer values
+
+:BANKJO4_28951
+jump @BANKJO4_29011
+
+:BANKJO4_28958
+if
+  $4124 == 0 // integer values
+jf @BANKJO4_29011
+Marker.Disable($4131)
+$4131 = Marker.CreateAboveActor($4128)
+00BC: text_highpriority 'P_HIND' 5000 ms 1  // ~r~You've lost Phil!
+$4124 = 1 // integer values
+
+:BANKJO4_29011
+jump @BANKJO4_29040
+
+:BANKJO4_29018
+00BC: text_highpriority 'P_DEAD' 5000 ms 1  // ~r~Phil's dead!!
+$4105 = 1 // integer values
+
+:BANKJO4_29040
+if
+   Actor.Dead($4130)
+jf @BANKJO4_29063
+$4200 = 1 // integer values
+
+:BANKJO4_29063
+return
+
+:BANKJO4_29065
+if
+   Actor.Dead($4122)
+jf @BANKJO4_29103
+00BC: text_highpriority 'BM_DEAD' 5000 ms 1  // ~r~You needed the bank manager alive!!
+$4105 = 1 // integer values
+
+:BANKJO4_29103
+return
+
+:BANKJO4_29105
+if
+00F6:   player $PLAYER_CHAR 0 -954.5 -341.87 14.6 radius 1.5 1.5 2.0
+jf @BANKJO4_30038
+if
+  $4196 == 0 // integer values
+jf @BANKJO4_30031
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+0169: set_fade_color 0 0 1
+fade 0 250
+
+:BANKJO4_29204
+if
+fading
+jf @BANKJO4_29228
+wait 0
+jump @BANKJO4_29204
+
+:BANKJO4_29228
+01BD: $358 = current_time_in_ms
+Camera.SetPosition(-916.4, -330.55, 15.86, 0.0, 0.0, 0.0)
+Camera.PointAt(-922.5, -338.75, 13.44, 2)
+04C7: toggle_camera_green_scanlines 1
+fade 1 250
+
+:BANKJO4_29295
+if
+fading
+jf @BANKJO4_29319
+wait 0
+jump @BANKJO4_29295
+
+:BANKJO4_29319
+00BC: text_highpriority 'EXIT_1' 5000 ms 1  // Press the ~h~~k~~PED_SPRINT~ ~w~button to exit.
+
+:BANKJO4_29334
+if
+  $4194 == 0 // integer values
+jf @BANKJO4_29903
+wait 0
+gosub @BANKJO4_26857
+if and
+  $359 > 2000 // integer values
+  $4195 == 0 // integer values
+jf @BANKJO4_29447
+Camera.SetPosition(-910.7, -351.9, 16.0, 0.0, 0.0, 0.0)
+Camera.PointAt(-901.5, -342.45, 13.7, 2)
+$4195 = 1 // integer values
+
+:BANKJO4_29447
+if and
+  $359 > 4000 // integer values
+  $4195 == 1 // integer values
+jf @BANKJO4_29531
+Camera.SetPosition(-926.3, -339.6, 20.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-931.0, -345.9, 17.47, 2)
+$4195 = 2 // integer values
+
+:BANKJO4_29531
+if and
+  $359 > 6000 // integer values
+  $4195 == 2 // integer values
+jf @BANKJO4_29615
+Camera.SetPosition(-959.0, -328.4, 17.85, 0.0, 0.0, 0.0)
+Camera.PointAt(-963.5, -334.6, 15.6, 2)
+$4195 = 3 // integer values
+
+:BANKJO4_29615
+if and
+  $359 > 8000 // integer values
+  $4195 == 3 // integer values
+jf @BANKJO4_29699
+Camera.SetPosition(-933.4, -340.23, 9.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-936.67, -344.34, 7.8, 2)
+$4195 = 4 // integer values
+
+:BANKJO4_29699
+if and
+  $359 > 10000 // integer values
+  $4195 == 4 // integer values
+jf @BANKJO4_29783
+Camera.SetPosition(-936.8, -343.7, 9.1, 0.0, 0.0, 0.0)
+Camera.PointAt(-942.15, -343.74, 7.4, 2)
+$4195 = 5 // integer values
+
+:BANKJO4_29783
+if and
+  $359 > 12000 // integer values
+  $4195 == 5 // integer values
+jf @BANKJO4_29872
+Camera.SetPosition(-916.4, -330.55, 15.86, 0.0, 0.0, 0.0)
+Camera.PointAt(-922.5, -338.75, 13.44, 2)
+01BD: $358 = current_time_in_ms
+$4195 = 0 // integer values
+
+:BANKJO4_29872
+if
+00E1:   player 0 pressed_button 16
+jf @BANKJO4_29896
+$4194 = 1 // integer values
+
+:BANKJO4_29896
+jump @BANKJO4_29334
+
+:BANKJO4_29903
+if
+00E1:   player 0 pressed_button 16
+jf @BANKJO4_29931
+wait 0
+jump @BANKJO4_29903
+
+:BANKJO4_29931
+fade 0 250
+
+:BANKJO4_29938
+if
+fading
+jf @BANKJO4_29962
+wait 0
+jump @BANKJO4_29938
+
+:BANKJO4_29962
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+04C7: toggle_camera_green_scanlines 0
+$4194 = 0 // integer values
+$4196 = 1 // integer values
+fade 1 250
+
+:BANKJO4_30007
+if
+fading
+jf @BANKJO4_30031
+wait 0
+jump @BANKJO4_30007
+
+:BANKJO4_30031
+jump @BANKJO4_30045
+
+:BANKJO4_30038
+$4196 = 0 // integer values
+
+:BANKJO4_30045
+return
+
+:BANKJO4_30047
+if
+  $4187 == 0 // integer values
+jf @BANKJO4_30070
+Player.ClearWantedLevel($PLAYER_CHAR)
+
+:BANKJO4_30070
+return
+
+:BANKJO4_30072
+$4099 = 1 // integer values
+if
+  $4153 == 0 // integer values
+jf @BANKJO4_30190
+03CF: load_wav 'BNK4_1' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_1' 10000 ms 1  // I'll drive.
+gosub @BANKJO4_26980
+03CF: load_wav 'BNK4_2' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_2' 10000 ms 1  // Great. A passenger. Wait 'til I tell the group about this.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4153 = 1 // integer values
+
+:BANKJO4_30190
+if and
+   not Car.Wrecked($4135)
+  $359 > 20000 // integer values
+jf @BANKJO4_30766
+if and
+00DC:   player $PLAYER_CHAR driving $4135
+   not Actor.Dead($4128)
+jf @BANKJO4_30766
+if and
+   Actor.InCar($4128, $4135)
+   not Actor.Dead($4129)
+jf @BANKJO4_30766
+if and
+   Actor.InCar($4129, $4135)
+   not Actor.Dead($4130)
+jf @BANKJO4_30766
+if
+   Actor.InCar($4130, $4135)
+jf @BANKJO4_30704
+if
+  $4153 == 6 // integer values
+jf @BANKJO4_30360
+if
+  1 > $4154 // integer values
+jf @BANKJO4_30348
+$4154 = 1 // integer values
+
+:BANKJO4_30348
+$4153 = 7 // integer values
+01BD: $358 = current_time_in_ms
+
+:BANKJO4_30360
+if
+  $4153 == 5 // integer values
+jf @BANKJO4_30429
+03CF: load_wav 'BNK4_3F' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3F' 10000 ms 1  // Yeah - HILARY.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4153 = 6 // integer values
+
+:BANKJO4_30429
+if
+  $4153 == 4 // integer values
+jf @BANKJO4_30496
+03CF: load_wav 'BNK4_3E' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3E' 10000 ms 1  // Hey, shut up you two, or you can get out and walk.
+gosub @BANKJO4_26980
+$4153 = 5 // integer values
+
+:BANKJO4_30496
+if
+  $4153 == 3 // integer values
+jf @BANKJO4_30563
+03CF: load_wav 'BNK4_3D' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3D' 10000 ms 1  // Are too!
+gosub @BANKJO4_26980
+$4153 = 4 // integer values
+
+:BANKJO4_30563
+if
+  $4153 == 2 // integer values
+jf @BANKJO4_30630
+03CF: load_wav 'BNK4_3C' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3C' 10000 ms 1  // I am not!
+gosub @BANKJO4_26980
+$4153 = 3 // integer values
+
+:BANKJO4_30630
+if
+  $4153 == 1 // integer values
+jf @BANKJO4_30697
+03CF: load_wav 'BNK4_3B' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3B' 10000 ms 1  // Tommy, Hilary's taking up too much room!
+gosub @BANKJO4_26980
+$4153 = 2 // integer values
+
+:BANKJO4_30697
+jump @BANKJO4_30766
+
+:BANKJO4_30704
+if and
+  6 > $4153 // integer values
+  $4153 > 1 // integer values
+jf @BANKJO4_30766
+$4153 = 7 // integer values
+if
+  1 > $4154 // integer values
+jf @BANKJO4_30766
+$4154 = 1 // integer values
+01BD: $358 = current_time_in_ms
+
+:BANKJO4_30766
+return
+
+:BANKJO4_30768
+$4099 = 1 // integer values
+if and
+  $359 > 40000 // integer values
+  $4154 > 0 // integer values
+jf @BANKJO4_31046
+if
+   not Car.Wrecked($4135)
+jf @BANKJO4_31046
+if and
+00DC:   player $PLAYER_CHAR driving $4135
+   not Actor.Dead($4128)
+jf @BANKJO4_31046
+if and
+   Actor.InCar($4128, $4135)
+   not Actor.Dead($4129)
+jf @BANKJO4_31046
+if and
+   Actor.InCar($4129, $4135)
+   not Actor.Dead($4130)
+jf @BANKJO4_31046
+if
+   Actor.InCar($4130, $4135)
+jf @BANKJO4_31046
+
+:BANKJO4_30977
+if
+  $4154 == 1 // integer values
+jf @BANKJO4_31046
+03CF: load_wav 'BNK4_3I' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3I' 10000 ms 1  // For god's sake, Phil, stop waving that thing around!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4154 = 2 // integer values
+
+:BANKJO4_30978
+if
+  $4154 == 2 // integer values
+jf @BANKJO4_30977
+03CF: load_wav 'BNK4_3J' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3J' 10000 ms 1  // Yeah, and you'll put somebody's eye out!
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4154 = 3 // integer values
+
+:BANKJO4_31046
+return
+
+:BANKJO4_31048
+$4099 = 1 // integer values
+0084: $4156 = $4153 // integer values and handles
+$4153 = 10 // integer values
+0084: $4157 = $4154 // integer values and handles
+$4154 = 10 // integer values
+if
+  $4155 == 7 // integer values
+jf @BANKJO4_31175
+03CF: load_wav 'BNK4_3U' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3U' 10000 ms 1  // Don't mention it.
+gosub @BANKJO4_26980
+$4160 = 1 // integer values
+0084: $4153 = $4156 // integer values and handles
+0084: $4154 = $4157 // integer values and handles
+$4155 = 8 // integer values
+
+:BANKJO4_31175
+if
+  $4155 == 6 // integer values
+jf @BANKJO4_31242
+03CF: load_wav 'BNK4_3T' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3T' 10000 ms 1  // You're right. Thanks, Cam.
+gosub @BANKJO4_26980
+$4155 = 7 // integer values
+
+:BANKJO4_31242
+if
+  $4155 == 5 // integer values
+jf @BANKJO4_31311
+03CF: load_wav 'BNK4_3S' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3S' 10000 ms 1  // All will pass or end and you must accept that.
+gosub @BANKJO4_26980
+00BE: text_clear_all
+$4155 = 6 // integer values
+
+:BANKJO4_31311
+if
+  $4155 == 4 // integer values
+jf @BANKJO4_31378
+03CF: load_wav 'BNK4_3R' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3R' 10000 ms 1  // Youth, loved ones, pizza,
+gosub @BANKJO4_26980
+$4155 = 5 // integer values
+
+:BANKJO4_31378
+if
+  $4155 == 3 // integer values
+jf @BANKJO4_31445
+03CF: load_wav 'BNK4_3Q' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3Q' 10000 ms 1  // You think all things will last.
+gosub @BANKJO4_26980
+$4155 = 4 // integer values
+
+:BANKJO4_31445
+if
+  $4155 == 2 // integer values
+jf @BANKJO4_31512
+03CF: load_wav 'BNK4_3P' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3P' 10000 ms 1  // What?
+gosub @BANKJO4_26980
+$4155 = 3 // integer values
+
+:BANKJO4_31512
+if
+  $4155 == 1 // integer values
+jf @BANKJO4_31579
+03CF: load_wav 'BNK4_3O' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3O' 10000 ms 1  // You cling to an illusion of permanence.
+gosub @BANKJO4_26980
+$4155 = 2 // integer values
+
+:BANKJO4_31579
+if
+  $4155 == 0 // integer values
+jf @BANKJO4_31646
+03CF: load_wav 'BNK4_3M' as $4099
+gosub @BANKJO4_26880
+00BC: text_highpriority 'BNK4_3M' 10000 ms 1  // The car's ruined. RUINED!
+gosub @BANKJO4_26980
+$4155 = 1 // integer values
+
+:BANKJO4_31646
+return
+
+:BANKJO4_31648
+0084: $4170 = $4164 // integer values and handles
+gosub @BANKJO4_31740
+0084: $4170 = $4165 // integer values and handles
+gosub @BANKJO4_31740
+0084: $4170 = $4166 // integer values and handles
+gosub @BANKJO4_31740
+0084: $4170 = $4167 // integer values and handles
+gosub @BANKJO4_31740
+0084: $4170 = $4168 // integer values and handles
+gosub @BANKJO4_31740
+0084: $4170 = $4169 // integer values and handles
+gosub @BANKJO4_31740
+return
+
+:BANKJO4_31740
+Object.StorePos($4170, $4171, $4172, $4173)
+0400: create_coordinate $4177 $4178 $4179 from_object $4170 offset 0.0 0.0 0.2
+0086: $4174 = $4177 // floating-point values only
+0061: $4174 -= $4171 // floating-point values
+0086: $4175 = $4178 // floating-point values only
+0061: $4175 -= $4172 // floating-point values
+0086: $4176 = $4179 // floating-point values only
+0061: $4176 -= $4173 // floating-point values
+0437: scatter_particle 23 0.3 at $4171 $4172 $4173 $4174 $4175 $4176
+return
+
+:BANKJO4_31860
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+0169: set_fade_color 0 0 1
+fade 0 1500
+
+:BANKJO4_31889
+if
+fading
+jf @BANKJO4_31987
+wait 0
+034E: move_object $4151 to -936.964 -350.688 3.235 speed 0.0 0.025 0.0 collision_check 0
+034E: move_object $4152 to -936.964 -352.169 3.235 speed 0.0 0.025 0.0 collision_check 0
+jump @BANKJO4_31889
+
+:BANKJO4_31987
+0055: put_player $PLAYER_CHAR at -938.56 -351.5 16.8
+0171: set_player $PLAYER_CHAR z_angle_to 280.0
+03C8: set_camera_directly_before_player
+fade 1 1500
+
+:BANKJO4_32026
+if
+fading
+jf @BANKJO4_32124
+wait 0
+034E: move_object $4151 to -936.964 -349.488 3.235 speed 0.0 0.025 0.0 collision_check 0
+034E: move_object $4152 to -936.964 -353.369 3.235 speed 0.0 0.025 0.0 collision_check 0
+jump @BANKJO4_32026
+
+:BANKJO4_32124
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+return
+
+:BANKJO4_32140
+0169: set_fade_color 0 0 1
+fade 0 1500
+
+:BANKJO4_32155
+if
+fading
+jf @BANKJO4_32253
+wait 0
+034E: move_object $4151 to -936.964 -350.688 3.235 speed 0.0 0.025 0.0 collision_check 0
+034E: move_object $4152 to -936.964 -352.169 3.235 speed 0.0 0.025 0.0 collision_check 0
+jump @BANKJO4_32155
+
+:BANKJO4_32253
+0055: put_player $PLAYER_CHAR at -937.84 -351.73 6.23
+0171: set_player $PLAYER_CHAR z_angle_to 280.0
+03C8: set_camera_directly_before_player
+return
+
+:BANKJO4_32287
+fade 1 1500
+
+:BANKJO4_32294
+if
+fading
+jf @BANKJO4_32392
+wait 0
+034E: move_object $4151 to -936.964 -349.488 3.235 speed 0.0 0.025 0.0 collision_check 0
+034E: move_object $4152 to -936.964 -353.369 3.235 speed 0.0 0.025 0.0 collision_check 0
+jump @BANKJO4_32294
+
+:BANKJO4_32392
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+return

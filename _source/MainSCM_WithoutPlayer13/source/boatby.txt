@@ -1,0 +1,293 @@
+:BOATBY
+$ONMISSION = 1 // integer values
+thread 'BOATBY'
+wait 0
+Object.Destroy($1786)
+054C: use_GXT_table 'BOATBUY'
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDWAYN'
+023C: load_special_actor 3 'CSJETRO'
+0@ = Object.Init(#DK_REEF, -651.0, -1481.21, 16.647)
+Object.RemoveFromMissionCleanupList(0@)
+
+if
+  $ONMISSION == 0 // integer values
+jf @BOATBY_140
+04CE: $603 = create_icon_marker_without_sphere 9 at -664.1 -1476.3 13.8
+
+:BOATBY_140
+wait 0
+Camera.SetAtPos(-649.7202, -1482.1, 14.9076)
+038B: load_requested_models
+
+:BOATBY_163
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+jf @BOATBY_197
+wait 0
+jump @BOATBY_163
+
+:BOATBY_197
+0569:  'CSPLAY'
+0569:  'CSDWAYN'
+0569:  'CSJETRO'
+02E4: load_cutscene_data 'DRUG_1'
+0244: set_cutscene_pos -690.0 -1568.0 11.4
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: 1@ = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim 1@ 'CSDWAYN'
+02E5: 2@ = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim 2@ 'CSJETRO'
+0395: clear_area 1 at -633.2 -1488.8 range 12.7 1.0
+0055: put_player $PLAYER_CHAR at -633.2 -1488.8 12.7
+0171: set_player $PLAYER_CHAR z_angle_to 250.0
+0169: set_fade_color 0 0 1
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BOATBY_405
+if
+  142 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_440
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_405
+
+:BOATBY_440
+00BC: text_highpriority 'DRUG_1' 10000 ms 1  // Hello? Hel-lo?! Hello?
+
+:BOATBY_455
+if
+  9838 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_490
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_455
+
+:BOATBY_490
+00BC: text_highpriority 'DRUG_2' 10000 ms 1  // Put it out. There's a dude here.
+
+:BOATBY_505
+if
+  12335 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_540
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_505
+
+:BOATBY_540
+00BC: text_highpriority 'DRUG_3' 10000 ms 1  // Hey suit dude! I guess you're the new owner?
+
+:BOATBY_555
+if
+  14831 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_590
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_555
+
+:BOATBY_590
+00BC: text_highpriority 'DRUG_4' 10000 ms 1  // Yeah. Which one of the boats is the fastest?
+
+:BOATBY_605
+if
+  17624 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_640
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_605
+
+:BOATBY_640
+00BC: text_highpriority 'DRUG_5' 10000 ms 1  // It's already in the water, dude,
+
+:BOATBY_655
+if
+  19626 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_690
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_655
+
+:BOATBY_690
+00BC: text_highpriority 'DRUG_6' 10000 ms 1  // I though you might want to try her out.
+
+:BOATBY_705
+if
+  21916 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_740
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_705
+
+:BOATBY_740
+00BC: text_highpriority 'DRUG_7' 10000 ms 1  // Dude, she's already running with a 300 horse power engine...
+
+:BOATBY_755
+if
+  24845 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_790
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_755
+
+:BOATBY_790
+00BC: text_highpriority 'DRUG_8' 10000 ms 1  // ...and the fiberglass hull, she just shoots through the waves.!
+
+:BOATBY_805
+if
+  29051 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_840
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_805
+
+:BOATBY_840
+00BC: text_highpriority 'DRUG_9' 10000 ms 1  // She can do like zero to sixty in four seconds flat dude...
+
+:BOATBY_855
+if
+  33053 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_892
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_855
+
+:BOATBY_892
+00BC: text_highpriority 'DRUG_10' 10000 ms 1  // and she can hold like twenty bales of the best Jamaican smoke right in the hull!
+
+:BOATBY_907
+if
+  37627 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_944
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_907
+
+:BOATBY_944
+00BC: text_highpriority 'DRUG_11' 10000 ms 1  // So go ahead dude, she's ready to fly!
+
+:BOATBY_959
+if
+  40309 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_996
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_959
+
+:BOATBY_996
+00BC: text_highpriority 'DRUG_12' 10000 ms 1  // Yo yo, uh, suit dude, you gotta light?
+
+:BOATBY_1011
+if
+  44071 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_1048
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_1011
+
+:BOATBY_1048
+00BC: text_highpriority 'DRUG_13' 10000 ms 1  // Dude?
+
+:BOATBY_1063
+if
+  45000 > $CUT_SCENE_TIME // integer values
+jf @BOATBY_1100
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BOATBY_1063
+
+:BOATBY_1100
+0169: set_fade_color 0 0 1
+fade 0 1500
+
+:BOATBY_1115
+if
+fading
+jf @BOATBY_1139
+wait 0
+jump @BOATBY_1115
+
+:BOATBY_1139
+if
+82E9:   not cutscene_reached_end
+jf @BOATBY_1163
+wait 0
+jump @BOATBY_1139
+
+:BOATBY_1163
+03AD: set_rubbish 1
+00BE: text_clear_all
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Load(#JETMAX)
+Model.Load(#SQUALO)
+038B: load_requested_models
+
+:BOATBY_1207
+if or
+   not Model.Available(#JETMAX)
+   not Model.Available(#SQUALO)
+jf @BOATBY_1239
+wait 0
+jump @BOATBY_1207
+
+:BOATBY_1239
+3@ = Car.Create(#JETMAX, -586.6, -1512.2, 5.0)
+Car.Angle(3@) = 253.0
+4@ = Car.Create(#SQUALO, -581.2, -1503.2, 5.0)
+Car.Angle(4@) = 250.0
+wait 0
+wait 0
+0169: set_fade_color 0 0 1
+fade 1 1500
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetAtPos(-565.647, -1506.333, 8.906)
+Camera.SetPosition(-564.65, -1506.31, 8.99, 0.0, 0.0, 0.0)
+Camera.PointAt(-565.647, -1506.333, 8.906, 2)
+
+:BOATBY_1407
+if
+fading
+jf @BOATBY_1431
+wait 0
+jump @BOATBY_1407
+
+:BOATBY_1431
+0394: play_music 1
+01E3: text_1number_styled 'BOATBUY' number $604 time 7000 style 6  // Boatyard purchased: $~1~
+0529: add $604 to_money_spent_on_property_stats
+0542: add_property 6 to_property_own_stats
+wait 7000
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+030C: progress_made += 1
+014C: set_parked_car_generator $1982 cars_to_generate_to 101
+014C: set_parked_car_generator $1983 cars_to_generate_to 101
+Marker.Disable($603)
+0570: $603 = create_asset_radar_marker_with_icon 12 at -664.1 -1476.3 13.8
+018B: show_on_radar $603 2
+015C: set_zone_gang_info 'BOATYRD' 1 13 0 0 0 0 0 0 1000 0 0 0
+015C: set_zone_gang_info 'BOATYRD' 0 10 0 0 0 0 0 0 1000 0 0 0
+022A: remove_forbidden_for_peds_cube -692.193 -1522.901 0.0 -575.311 -1453.378 30.0
+create_thread @PSAVE6
+create_thread @COKRUN
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+wait 0
+Model.Destroy(#JETMAX)
+Model.Destroy(#SQUALO)
+$ONMISSION = 0 // integer values
+mission_cleanup
+end_thread

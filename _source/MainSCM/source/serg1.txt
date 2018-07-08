@@ -1,0 +1,1929 @@
+:SERG1
+thread 'SERG1'
+gosub @SERG1_53
+if
+wasted_or_busted
+jf @SERG1_37
+gosub @SERG1_9799
+
+:SERG1_37
+gosub @SERG1_9919
+end_thread
+
+:SERG1_53
+increment_mission_attempts
+054C: use_GXT_table 'SERG1'
+058E: set_restart_mission_taxi_destination 252.7968 -230.9387 9.8638 333.9001
+$ONMISSION = 1 // integer values
+wait 0
+wait 500
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @SERG1_155
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @SERG1_155
+
+:SERG1_155
+$3242 = 0 // integer values
+$3243 = 0 // integer values
+$3244 = 0 // integer values
+$3247 = 5 // integer values
+$3250 = 5 // integer values
+$3252 = 0 // integer values
+$3253 = 0 // integer values
+$3254 = 5 // integer values
+$3248 = 0 // integer values
+$3249 = 0 // integer values
+$3256 = 0 // integer values
+$3268 = 0 // integer values
+$3284 = 0 // integer values
+$3263 = 0 // integer values
+$3264 = 0 // integer values
+$3265 = 0 // integer values
+$3266 = 0 // integer values
+$3257 = 0 // integer values
+$3258 = 0 // integer values
+$3259 = 0 // integer values
+$3260 = 0 // integer values
+$3261 = 0 // integer values
+$3262 = 0 // integer values
+$3285 = 0 // integer values
+$3281 = 0 // integer values
+$3282 = 0 // integer values
+$3283 = 0 // integer values
+$3257 = 0 // integer values
+$3246 = 0 // integer values
+$3286 = 0 // integer values
+$3287 = 0 // integer values
+$3290 = 0 // integer values
+$3291 = 0 // integer values
+$3292 = 0 // integer values
+$3293 = 0 // integer values
+$3288 = 0 // integer values
+$3289 = 0 // integer values
+$3294 = 0 // integer values
+$3295 = 0 // integer values
+$3296 = 0 // integer values
+$3297 = 0 // integer values
+$3298 = 0 // integer values
+$3299 = 0 // integer values
+$99 = 325.2479 // floating-point values
+$100 = 203.6996 // floating-point values
+$101 = 10.39881 // floating-point values
+$3189 = 94.725 // floating-point values
+$3190 = 268.87 // floating-point values
+$3191 = 21.764 // floating-point values
+$3181 = 101.989 // floating-point values
+$3182 = 251.821 // floating-point values
+$3183 = 21.77 // floating-point values
+$3192 = 80.339 // floating-point values
+$3193 = 579.956 // floating-point values
+$3194 = 17.442 // floating-point values
+$3208 = 319.5175 // floating-point values
+$3195 = 78.689 // floating-point values
+$3196 = 582.528 // floating-point values
+$3197 = 17.39414 // floating-point values
+$3209 = 308.28 // floating-point values
+$3198 = 85.716 // floating-point values
+$3199 = 572.613 // floating-point values
+$3200 = 17.57464 // floating-point values
+$3210 = 304.955 // floating-point values
+$3201 = 74.674 // floating-point values
+$3202 = 597.314 // floating-point values
+$3203 = 17.57464 // floating-point values
+$3211 = 238.371 // floating-point values
+$3204 = 83.422 // floating-point values
+$3205 = 596.1174 // floating-point values
+$3206 = 12.965 // floating-point values
+$3207 = 231.757 // floating-point values
+$3212 = 79.1955 // floating-point values
+$3213 = 580.3671 // floating-point values
+$3214 = 17.4168 // floating-point values
+$3219 = 93.72506 // floating-point values
+$3220 = 563.45 // floating-point values
+$3221 = 13.175 // floating-point values
+$3222 = 95.591 // floating-point values
+$3223 = 561.284 // floating-point values
+$3224 = 13.133 // floating-point values
+$3225 = 98.84 // floating-point values
+$3226 = 557.794 // floating-point values
+$3227 = 13.04 // floating-point values
+$3228 = 95.518 // floating-point values
+$3229 = 573.821 // floating-point values
+$3230 = 13.087 // floating-point values
+$3231 = 304.078 // floating-point values
+$3232 = 308.83 // floating-point values
+$3233 = 308.439 // floating-point values
+$3234 = 17.252 // floating-point values
+00C0: set_current_time 10 0
+set_weather 4
+0395: clear_area 1 at 299.0 -205.0 range 10.5 5.0
+0395: clear_area 1 at 305.0 -219.5 range 10.5 10.0
+0055: put_player $PLAYER_CHAR at 299.0 -205.0 10.5
+0171: set_player $PLAYER_CHAR z_angle_to 230.0
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetPosition(297.0, -204.7, 13.0, 0.0, 0.0, 0.0)
+Camera.PointAt(318.5, -219.23, 22.4, 2)
+Model.Load(#STRETCH)
+023C: load_special_actor 1 'BGA'
+023C: load_special_actor 2 'IGAVERY'
+Camera.SetAtPos(270.0, -218.0, 13.4)
+
+:SERG1_1097
+if or
+   not Model.Available(#STRETCH)
+   823D:   not special_actor 1 loaded
+   823D:   not special_actor 2 loaded
+jf @SERG1_1124
+wait 0
+jump @SERG1_1097
+
+:SERG1_1124
+0395: clear_area 1 at 306.9 -241.65 range 12.3 15.0
+$1602 = Car.Create(#STRETCH, 306.9, -241.65, 12.3)
+0229: set_car $1602 color_to 70 0
+Car.Angle($1602) = 0.0
+0129: 1@ = create_actor 4 #SPECIAL01 in_car $1602 driverseat
+01ED: clear_actor 1@ threat_search 
+Car.SetToNormalDriver($1602)
+01C8: 2@ = create_actor_pedtype 4 model #SPECIAL02 in_car $1602 passenger_seat 2
+01ED: clear_actor 2@ threat_search
+02A3: enable_widescreen 1
+fade 1 1500
+
+:SERG1_1197
+if
+fading
+jf @SERG1_1221
+wait 0
+jump @SERG1_1197
+
+:SERG1_1221
+if
+   not Car.Wrecked($1602)
+jf @SERG1_1257
+04BA: set_car $1602 speed_instantly 5.0
+0477: set_car $1602 action 8 time 3500
+
+:SERG1_1257
+16@ = 0 // integer values
+
+:SERG1_1264
+if
+  1000 > 16@ // integer values
+jf @SERG1_1294
+wait 0
+jump @SERG1_1264
+
+:SERG1_1294
+if
+   not Car.Wrecked($1602)
+jf @SERG1_1319
+Camera.OnVehicle($1602, 15, 1)
+
+:SERG1_1319
+16@ = 0 // integer values
+
+:SERG1_1326
+if
+  3000 > 16@ // integer values
+jf @SERG1_1356
+wait 0
+jump @SERG1_1326
+
+:SERG1_1356
+if
+   not Car.Wrecked($1602)
+jf @SERG1_1397
+Car.StorePos($1602, $1599, $1600, $1601)
+0211: actor $PLAYER_ACTOR walk_to $1599 $1600
+
+:SERG1_1397
+fade 0 1500
+
+:SERG1_1404
+if
+fading
+jf @SERG1_1428
+wait 0
+jump @SERG1_1404
+
+:SERG1_1428
+Actor.RemoveReferences(1@)
+Actor.RemoveReferences(2@)
+Car.Destroy($1602)
+Model.Destroy(#STRETCH)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Camera.Restore
+011C: actor $PLAYER_ACTOR clear_objective
+009F: set_actor $PLAYER_ACTOR idle
+16@ = 0 // integer values
+03CF: load_wav 'MONO_6' as 1
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSAVERY'
+02F3: load_object #CUTOBJ01 'CS_LIMO'
+02F3: load_object #CUTOBJ02 'GPASS'
+038B: load_requested_models
+
+:SERG1_1521
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @SERG1_1551
+wait 0
+jump @SERG1_1521
+
+:SERG1_1551
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @SERG1_1583
+wait 0
+jump @SERG1_1551
+
+:SERG1_1583
+02E4: load_cutscene_data 'TEX_1'
+0244: set_cutscene_pos 305.2 -211.9 11.3
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $149 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $149 'CSAVERY'
+02E5: $3300 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $3300 'CS_LIMO'
+02E5: $3301 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $3301 'GPASS'
+0395: clear_area 1 at 265.129 -234.531 range 11.107 1.0
+0055: put_player $PLAYER_CHAR at 265.129 -234.531 11.1013
+0171: set_player $PLAYER_CHAR z_angle_to 78.21838
+04E4: unknown_refresh_game_renderer_at 265.129 -234.531
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:SERG1_1787
+if
+  1569 > $CUT_SCENE_TIME // integer values
+jf @SERG1_1822
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_1787
+
+:SERG1_1822
+00BC: text_highpriority 'TEX1_A' 10000 ms 1  // Come in and park yourself on the hide, son.
+
+:SERG1_1837
+if
+  4896 > $CUT_SCENE_TIME // integer values
+jf @SERG1_1872
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_1837
+
+:SERG1_1872
+00BC: text_highpriority 'TEX1_B' 10000 ms 1  // Hell, my daddy used to say, never look a gift horse in the mouth, and by golly, he never did.
+
+:SERG1_1887
+if
+  10768 > $CUT_SCENE_TIME // integer values
+jf @SERG1_1922
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_1887
+
+:SERG1_1922
+00BC: text_highpriority 'TEX1_C' 10000 ms 1  // Would you like a drop of the old Kentucky?
+
+:SERG1_1937
+if
+  12947 > $CUT_SCENE_TIME // integer values
+jf @SERG1_1972
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_1937
+
+:SERG1_1972
+00BC: text_highpriority 'TEX1_D' 10000 ms 1  // No thanks.
+
+:SERG1_1987
+if
+  13927 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2022
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_1987
+
+:SERG1_2022
+00BC: text_highpriority 'TEX1_E' 10000 ms 1  // A clean thinker! I like that.
+
+:SERG1_2037
+if
+  16556 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2072
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2037
+
+:SERG1_2072
+00BC: text_highpriority 'TEX1_F' 10000 ms 1  // Now, the property business isn't all about high-falootin' paper pushing.
+
+:SERG1_2087
+if
+  20072 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2122
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2087
+
+:SERG1_2122
+00BC: text_highpriority 'TEX1_G' 10000 ms 1  // It's about dirt! And the will to claim that dirt! You with me, son?
+
+:SERG1_2137
+if
+  24493 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2172
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2137
+
+:SERG1_2172
+00BC: text_highpriority 'TEX1_H' 10000 ms 1  // Oh yeah.
+
+:SERG1_2187
+if
+  25569 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2222
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2187
+
+:SERG1_2222
+00BC: text_highpriority 'TEX1_I' 10000 ms 1  // Well, I need some tenacious bastard to let go of some dirt,
+
+:SERG1_2237
+if
+  28462 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2272
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2237
+
+:SERG1_2272
+00BC: text_highpriority 'TEX1_J' 10000 ms 1  // and you look to me like the kind of guy to persuade him.
+
+:SERG1_2287
+if
+  31069 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2322
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2287
+
+:SERG1_2322
+00BC: text_highpriority 'TEX1_K' 10000 ms 1  // Persuasion's my forte.
+
+:SERG1_2337
+if
+  32859 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2374
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2337
+
+:SERG1_2374
+00BC: text_highpriority 'TEX1_L' 10000 ms 1  // Yeh, he'll be down at the country club, down on the golf course.
+
+:SERG1_2389
+if
+  36053 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2426
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2389
+
+:SERG1_2426
+00BC: text_highpriority 'TEX1_M' 10000 ms 1  // They don't allow guns, so his bodyguards won't be packing lawgivers.
+
+:SERG1_2441
+if
+  40174 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2478
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2441
+
+:SERG1_2478
+00BC: text_highpriority 'TEX1_N' 10000 ms 1  // Go beat eight tons of crap out of him.
+
+:SERG1_2493
+if
+  42460 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2530
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2493
+
+:SERG1_2530
+00BC: text_highpriority 'TEX1_O' 10000 ms 1  // Here now - I got you a membership, and boy you're going to need more appropriate clothing.
+
+:SERG1_2545
+if
+  47168 > $CUT_SCENE_TIME // integer values
+jf @SERG1_2582
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG1_2545
+
+:SERG1_2582
+00BE: text_clear_all
+fade 0 1500
+00BE: text_clear_all
+wait 1000
+if
+856A:   not has_cutscene_been_interrupted
+jf @SERG1_2630
+if
+03D0:   wav 1 loaded
+jf @SERG1_2630
+03D1: play_wav 1
+
+:SERG1_2630
+if
+fading
+jf @SERG1_2654
+wait 0
+jump @SERG1_2630
+
+:SERG1_2654
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+select_interior 0
+fade 1 1500
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+Pickup.Destroy($1297)
+Pickup.Destroy($1298)
+Pickup.Destroy($1284)
+Pickup.Destroy($1285)
+Pickup.Destroy($1286)
+Pickup.Destroy($1287)
+Pickup.Destroy($1288)
+Pickup.Destroy($1289)
+Pickup.Destroy($1290)
+Pickup.Destroy($1291)
+Pickup.Destroy($1292)
+Pickup.Destroy($1296)
+if
+  $3242 == 0 // integer values
+jf @SERG1_2807
+02A8: $3167 = create_marker 28 at $99 $100 $101
+00BC: text_highpriority 'TEX1_1' 7000 ms 2  // ~g~Go and pick up some golfing clothes from Jocksports.
+$3242 = 1 // integer values
+
+:SERG1_2807
+Model.Load(#WMYGO)
+Model.Load(#CADDY)
+Model.Load(#GOLFCLUB)
+Model.Load(#GREENWOO)
+
+:SERG1_2826
+if or
+   not Model.Available(#WMYGO)
+   not Model.Available(#CADDY)
+   not Model.Available(#GOLFCLUB)
+   not Model.Available(#GREENWOO)
+jf @SERG1_2867
+wait 0
+jump @SERG1_2826
+
+:SERG1_2867
+023C: load_special_actor 1 'BGA'
+023C: load_special_actor 2 'BGB'
+
+:SERG1_2891
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @SERG1_2921
+wait 0
+jump @SERG1_2891
+
+:SERG1_2921
+Object.Destroy($1821)
+$1821 = Object.Init(#GOLF_GATESOPEN, 107.81, 228.072, 20.989)
+Object.RemoveFromMissionCleanupList($1821)
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 1
+0481:  2.5
+if
+  $3266 == 1 // integer values
+jf @SERG1_3008
+$3245 = Car.Create(#CADDY, 226.4403, 468.6706, 12.06724)
+
+:SERG1_3008
+wait 0
+if
+  $3242 == 1 // integer values
+jf @SERG1_3925
+if
+00F6:   player $PLAYER_CHAR 1 $99 $100 $101 radius 1.5 1.5 2.0
+jf @SERG1_3925
+Marker.Disable($3167)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(322.1945, 201.5772, 14.571, 0.0, 0.0, 0.0)
+Camera.PointAt(322.9229, 202.133, 14.17033, 2)
+0211: actor $PLAYER_ACTOR walk_to 328.3383 206.0569
+wait 1300
+fade 0 1500
+wait 1500
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @SERG1_3223
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER4'
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @SERG1_3223
+0353: refresh_actor $PLAYER_ACTOR
+
+:SERG1_3223
+03CF: load_wav 'TEX1_3' as 1
+03CF: load_wav 'TEX1_4' as 2
+
+:SERG1_3247
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @SERG1_3277
+wait 0
+jump @SERG1_3247
+
+:SERG1_3277
+0395: clear_area 0 at 325.2479 283.6996 range 1.0 1.0
+0395: clear_area 0 at 324.8611 203.3913 range 1.0 1.0
+042B: clear_peds_from_cube 316.5 207.966 9.23 335.8277 190.5509 11.3988
+011C: actor $PLAYER_ACTOR clear_objective
+0055: put_player $PLAYER_CHAR at 325.9265 204.2 10.39881
+0171: set_player $PLAYER_CHAR z_angle_to 128.1122
+01B8: set_player $PLAYER_CHAR armed_weapon_to 0
+fade 1 1500
+Camera.SetPosition(324.8611, 203.3913, 11.26842, 0.0, 0.0, 0.0)
+Camera.PointAt(325.5527, 203.925, 10.78171, 2)
+wait 1000
+0460: set_camera_pointing_time 5.0 3000
+Camera.SetPosition(324.861, 203.3913, 11.26842, 0.0, 0.0, 0.0)
+Camera.PointAt(325.5336, 203.9103, 11.79598, 1)
+17@ = 0 // integer values
+
+:SERG1_3530
+if
+   not 17@ > 5000 // integer values
+jf @SERG1_3880
+wait 0
+if
+  17@ > 450 // integer values
+jf @SERG1_3692
+if
+  $3288 == 0 // integer values
+jf @SERG1_3692
+00BC: text_highpriority 'TEX1_7' 5000 ms 2  // Is this me?
+if
+  $3291 == 0 // integer values
+jf @SERG1_3634
+03D1: play_wav 1
+$3291 = 1 // integer values
+
+:SERG1_3634
+if
+  $3291 == 1 // integer values
+jf @SERG1_3692
+if
+03D2:   wav 1 ended
+jf @SERG1_3692
+$3291 = 0 // integer values
+040D: unload_wav 1
+$3290 = 1 // integer values
+$3288 = 1 // integer values
+
+:SERG1_3692
+if
+  $3288 == 1 // integer values
+jf @SERG1_3849
+if
+  $3289 == 0 // integer values
+jf @SERG1_3849
+03D7: set_wav 1 location 311.06 218.27 11.74
+00BC: text_highpriority 'TEX1_6' 5000 ms 2  // Nice ass baby!
+if
+  $3293 == 0 // integer values
+jf @SERG1_3791
+03D1: play_wav 2
+$3293 = 1 // integer values
+
+:SERG1_3791
+if
+  $3293 == 1 // integer values
+jf @SERG1_3849
+if
+03D2:   wav 1 ended
+jf @SERG1_3849
+$3293 = 0 // integer values
+040D: unload_wav 1
+$3292 = 1 // integer values
+$3289 = 1 // integer values
+
+:SERG1_3849
+if
+00E1:   player 0 pressed_button 16
+jf @SERG1_3873
+jump @SERG1_3880
+
+:SERG1_3873
+jump @SERG1_3530
+
+:SERG1_3880
+if
+   not Player.WantedLevel($PLAYER_CHAR) > 2
+jf @SERG1_3903
+Player.ClearWantedLevel($PLAYER_CHAR)
+
+:SERG1_3903
+011C: actor $PLAYER_ACTOR clear_objective
+03EB: clear_small_messages_only
+040D: unload_wav 1
+040D: unload_wav 2
+$3242 = 2 // integer values
+
+:SERG1_3925
+if
+  $3242 == 2 // integer values
+jf @SERG1_4024
+if
+  16@ > 4000 // integer values
+jf @SERG1_4024
+0230: set_player $PLAYER_CHAR stop_looking
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+018A: $3160 = create_checkpoint_at 100.5953 251.247 20.729
+00BC: text_highpriority 'TEX1_2' 7000 ms 2  // ~g~Now head to the Leaf Links Golf Club.
+$3242 = 3 // integer values
+
+:SERG1_4024
+if
+  $3242 == 3 // integer values
+jf @SERG1_4131
+if
+  $3243 == 0 // integer values
+jf @SERG1_4131
+if
+00F5:   player $PLAYER_CHAR 1 100.5953 251.247 20.729 radius 2.0 2.0 3.0
+jf @SERG1_4131
+Marker.Disable($3160)
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+$3243 = 1 // integer values
+
+:SERG1_4131
+if
+  $3296 == 0 // integer values
+jf @SERG1_4191
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #CADDY
+jf @SERG1_4191
+03E5: text_box 'TEX1_8'  // Each time you enter a caddy you automatically receive a golf club, providing your melee weapon slot is empty.
+041E: set_radio_station 6 -1
+$3296 = 1 // integer values
+
+:SERG1_4191
+if
+  $3243 == 1 // integer values
+jf @SERG1_5098
+fade 0 1000
+
+:SERG1_4216
+if
+fading
+jf @SERG1_4240
+wait 0
+jump @SERG1_4216
+
+:SERG1_4240
+03C7: set_sensitivity_to_crime_to 0.1
+Player.WantedLevel($PLAYER_CHAR) = 0
+$3161 = Actor.Create(21, #SPECIAL01, $3192, $3193, $3194)
+01B2: give_actor $3161 weapon 3 ammo 3000 // Load the weapon model before using this
+02A9: set_actor $3161 immune_to_nonplayer 1
+Actor.Health($3161) = 250
+Actor.Angle($3161) = $3208
+$3162 = Actor.Create(21, #SPECIAL02, $3195, $3196, $3197)
+01B2: give_actor $3162 weapon 3 ammo 3000 // Load the weapon model before using this
+02A9: set_actor $3162 immune_to_nonplayer 1
+Actor.Health($3162) = 250
+Actor.Angle($3162) = $3208
+$3163 = Actor.Create(21, #SPECIAL01, $3198, $3199, $3200)
+01B2: give_actor $3163 weapon 3 ammo 3000 // Load the weapon model before using this
+02A9: set_actor $3163 immune_to_nonplayer 1
+Actor.Health($3163) = 250
+Actor.Angle($3163) = $3208
+$3164 = Actor.Create(21, #SPECIAL02, $3201, $3202, $3203)
+01B2: give_actor $3164 weapon 3 ammo 3000 // Load the weapon model before using this
+02A9: set_actor $3164 immune_to_nonplayer 1
+Actor.Health($3164) = 250
+Actor.Angle($3164) = $3208
+$3166 = Actor.Create(CivMale, #WMYGO, $3212, $3213, $3214)
+01B2: give_actor $3166 weapon 3 ammo 3000 // Load the weapon model before using this
+01ED: clear_actor $3166 threat_search
+Actor.Health($3166) = 250
+02A9: set_actor $3166 immune_to_nonplayer 1
+$3171 = Marker.CreateAboveActor($3166)
+Actor.Angle($3166) = 56.6491
+$3184 = Car.Create(#CADDY, $3219, $3220, $3221)
+Car.SetToNormalDriver($3184)
+Car.Angle($3184) = $3231
+$3185 = Car.Create(#CADDY, $3222, $3223, $3224)
+Car.SetToNormalDriver($3185)
+Car.Angle($3185) = $3232
+$3186 = Car.Create(#CADDY, $3225, $3226, $3227)
+Car.SetToNormalDriver($3186)
+Car.Angle($3186) = $3233
+$3187 = Car.Create(#CADDY, $3228, $3229, $3230)
+Car.SetToNormalDriver($3187)
+Car.Angle($3187) = $3234
+$3188 = Car.Create(#CADDY, $3204, $3205, $3206)
+0129: $3165 = create_actor 21 #SPECIAL01 in_car $3188 driverseat
+0243: set_actor $3165 ped_stats_to 16
+Car.SetToNormalDriver($3188)
+Car.Angle($3188) = $3207
+$3170 = Car.Create(#CADDY, 96.9997, 301.46, 19.448)
+Camera.SetAtPos(109.9577, 573.5403, 16.59207)
+wait 500
+fade 1 1000
+Camera.SetPosition(108.7098, 563.4672, 16.37469, 0.0, 0.0, 0.0)
+Camera.PointAt(107.7731, 563.7946, 16.25006, 2)
+16@ = 0 // integer values
+
+:SERG1_4803
+if
+  3000 > 16@ // integer values
+jf @SERG1_4880
+wait 0
+00BC: text_highpriority 'TEX1_0' 10000 ms 2  // ~g~The target is at the driving range enjoying a game of golf. Make sure it's his last.
+if and
+00E1:   player 0 pressed_button 16
+  16@ > 1000 // integer values
+jf @SERG1_4873
+jump @SERG1_5017
+
+:SERG1_4873
+jump @SERG1_4803
+
+:SERG1_4880
+Camera.SetPosition(82.77916, 583.3534, 18.74928, 0.0, 0.0, 0.0)
+Camera.PointAt(81.94122, 582.8141, 18.66525, 2)
+16@ = 0 // integer values
+if
+   not Actor.Dead($3166)
+jf @SERG1_4963
+0372: set_actor $3166 anim 33 wait_state_time -1 ms
+
+:SERG1_4963
+if
+  2500 > 16@ // integer values
+jf @SERG1_5017
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @SERG1_5010
+jump @SERG1_5017
+
+:SERG1_5010
+jump @SERG1_4963
+
+:SERG1_5017
+0395: clear_area 0 at 100.1102 254.2736 range 20.7242 1.0
+03D5: remove_text 'TEX1_0'  // ~g~The target is at the driving range enjoying a game of golf. Make sure it's his last.
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+if
+   not Actor.Dead($3166)
+jf @SERG1_5080
+0372: set_actor $3166 anim 0 wait_state_time 100 ms
+
+:SERG1_5080
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+$3243 = 2 // integer values
+
+:SERG1_5098
+if
+  $3243 == 2 // integer values
+jf @SERG1_5773
+if
+   not Actor.Dead($3161)
+jf @SERG1_5667
+if
+  $3286 == 0 // integer values
+jf @SERG1_5182
+if
+  $3297 == 1 // integer values
+jf @SERG1_5182
+$3286 = 2 // integer values
+$3287 = 0 // integer values
+
+:SERG1_5182
+if
+  $3286 == 0 // integer values
+jf @SERG1_5232
+if
+  $3297 == 2 // integer values
+jf @SERG1_5232
+$3286 = 3 // integer values
+$3287 = 0 // integer values
+
+:SERG1_5232
+if
+  $3286 == 2 // integer values
+jf @SERG1_5446
+if
+  $3287 == 0 // integer values
+jf @SERG1_5294
+03CF: load_wav 'TEX1_5' as 1
+$3287 = 1 // integer values
+jump @SERG1_5446
+
+:SERG1_5294
+if
+  $3287 == 1 // integer values
+jf @SERG1_5334
+if
+03D0:   wav 1 loaded
+jf @SERG1_5334
+$3287 = 2 // integer values
+
+:SERG1_5334
+if
+  $3287 == 2 // integer values
+jf @SERG1_5378
+00BC: text_highpriority 'TEX1_9' 5000 ms 1  // Get him!
+03D1: play_wav 1
+$3287 = 3 // integer values
+
+:SERG1_5378
+if
+  $3287 == 3 // integer values
+jf @SERG1_5446
+if
+03D2:   wav 1 ended
+jf @SERG1_5446
+$3287 = 0 // integer values
+$3286 = 0 // integer values
+040D: unload_wav 1
+03D5: remove_text 'TEX1_9'  // Get him!
+$3297 = 2 // integer values
+
+:SERG1_5446
+if
+  $3286 == 3 // integer values
+jf @SERG1_5660
+if
+  $3287 == 0 // integer values
+jf @SERG1_5508
+03CF: load_wav 'TEX1_6' as 1
+$3287 = 1 // integer values
+jump @SERG1_5660
+
+:SERG1_5508
+if
+  $3287 == 1 // integer values
+jf @SERG1_5548
+if
+03D0:   wav 1 loaded
+jf @SERG1_5548
+$3287 = 2 // integer values
+
+:SERG1_5548
+if
+  $3287 == 2 // integer values
+jf @SERG1_5592
+00BC: text_highpriority 'TEX1_10' 5000 ms 1  // Kill that Psycho!
+03D1: play_wav 1
+$3287 = 3 // integer values
+
+:SERG1_5592
+if
+  $3287 == 3 // integer values
+jf @SERG1_5660
+if
+03D2:   wav 1 ended
+jf @SERG1_5660
+$3287 = 0 // integer values
+$3286 = 0 // integer values
+040D: unload_wav 1
+03D5: remove_text 'TEX1_10'  // Kill that Psycho!
+$3297 = 3 // integer values
+
+:SERG1_5660
+jump @SERG1_5773
+
+:SERG1_5667
+if
+  $3286 == 2 // integer values
+jf @SERG1_5720
+$3287 = 0 // integer values
+$3286 = 0 // integer values
+040D: unload_wav 1
+03D5: remove_text 'TEX1_9'  // Get him!
+$3297 = 2 // integer values
+
+:SERG1_5720
+if
+  $3286 == 3 // integer values
+jf @SERG1_5773
+$3287 = 0 // integer values
+$3286 = 0 // integer values
+040D: unload_wav 1
+03D5: remove_text 'TEX1_10'  // Kill that Psycho!
+$3297 = 3 // integer values
+
+:SERG1_5773
+if
+  $3243 == 2 // integer values
+jf @SERG1_5904
+if
+  $3265 == 0 // integer values
+jf @SERG1_5904
+if
+  16@ > 1500 // integer values
+jf @SERG1_5853
+if
+   not Actor.Dead($3166)
+jf @SERG1_5853
+0372: set_actor $3166 anim 33 wait_state_time -1 ms
+
+:SERG1_5853
+if
+  16@ > 4000 // integer values
+jf @SERG1_5904
+if
+   not Actor.Dead($3166)
+jf @SERG1_5904
+0372: set_actor $3166 anim 0 wait_state_time 100 ms
+16@ = 0 // integer values
+
+:SERG1_5904
+if
+   not Actor.Dead($3166)
+jf @SERG1_7254
+if
+  $3243 == 2 // integer values
+jf @SERG1_7254
+if
+  $3265 == 0 // integer values
+jf @SERG1_6058
+if or
+00FB:   player $PLAYER_CHAR 0 $3166 radius 9.5 9.5 1.0
+8184:   not actor $3166 health >= 245
+  $3268 == 1 // integer values
+jf @SERG1_6058
+0372: set_actor $3166 anim 0 wait_state_time 100 ms
+0239: actor $3166 run_to 86.645 584.7784
+$3286 = 1 // integer values
+$3265 = 1 // integer values
+$3268 = 1 // integer values
+17@ = 0 // integer values
+16@ = 0 // integer values
+
+:SERG1_6058
+if
+  $3286 == 1 // integer values
+jf @SERG1_6355
+if
+   not Actor.Dead($3166)
+jf @SERG1_6295
+if
+  $3287 == 0 // integer values
+jf @SERG1_6136
+03CF: load_wav 'TEX1_1' as 1
+$3287 = 1 // integer values
+jump @SERG1_6288
+
+:SERG1_6136
+if
+  $3287 == 1 // integer values
+jf @SERG1_6176
+if
+03D0:   wav 1 loaded
+jf @SERG1_6176
+$3287 = 2 // integer values
+
+:SERG1_6176
+if
+  $3287 == 2 // integer values
+jf @SERG1_6220
+00BC: text_highpriority 'TEX1_3' 5000 ms 1  // Who's this guy? Boys, deal with him.
+03D1: play_wav 1
+$3287 = 3 // integer values
+
+:SERG1_6220
+if
+  $3287 == 3 // integer values
+jf @SERG1_6288
+if
+03D2:   wav 1 ended
+jf @SERG1_6288
+$3287 = 0 // integer values
+040D: unload_wav 1
+03D5: remove_text 'TEX1_3'  // Who's this guy? Boys, deal with him.
+$3286 = 0 // integer values
+$3297 = 1 // integer values
+
+:SERG1_6288
+jump @SERG1_6355
+
+:SERG1_6295
+if
+  $3286 == 1 // integer values
+jf @SERG1_6355
+040D: unload_wav 1
+03D5: remove_text 'TEX1_3'  // Who's this guy? Boys, deal with him.
+$3265 = 1 // integer values
+$3287 = 0 // integer values
+$3286 = 0 // integer values
+$3297 = 1 // integer values
+
+:SERG1_6355
+if
+  $3265 == 1 // integer values
+jf @SERG1_6435
+if
+00FF:   actor $3166 0 86.645 584.7784 13.3303 radius 7.0 7.0 2.0
+jf @SERG1_6435
+$3265 = 2 // integer values
+gosub @SERG1_10494
+
+:SERG1_6435
+if
+  $3265 == 2 // integer values
+jf @SERG1_7254
+if
+  $3264 == 1 // integer values
+jf @SERG1_6679
+if
+044B:   actor $3166 on_foot
+jf @SERG1_6501
+gosub @SERG1_10494
+jump @SERG1_6679
+
+:SERG1_6501
+if
+   not Car.Wrecked($3245)
+jf @SERG1_6679
+if
+0448:   actor $3166 in_car $3245
+jf @SERG1_6579
+Car.SetMaxSpeed($3245, 22.0)
+00AE: set_vehicle $3245 traffic_behavior_to 2
+Car.SetToPsychoDriver($3245)
+16@ = 0 // integer values
+$3264 = 3 // integer values
+jump @SERG1_6679
+
+:SERG1_6579
+if
+8203:   not actor $3166 near_car_on_foot $3245 radius 35.0 35.0 unknown 0
+jf @SERG1_6617
+gosub @SERG1_10494
+
+:SERG1_6617
+if
+   not Car.Wrecked($3245)
+jf @SERG1_6679
+if and
+00DC:   player $PLAYER_CHAR driving $3245
+8203:   not actor $3166 near_car_on_foot $3245 radius 5.0 5.0 unknown 0
+jf @SERG1_6679
+gosub @SERG1_10494
+
+:SERG1_6679
+if
+  $3264 == 3 // integer values
+jf @SERG1_6739
+if
+   not Car.Wrecked($3245)
+jf @SERG1_6739
+if
+   not Actor.InCar($3166, $3245)
+jf @SERG1_6739
+gosub @SERG1_10494
+
+:SERG1_6739
+if
+  $3264 == 4 // integer values
+jf @SERG1_6820
+if
+  17@ > 1000 // integer values
+jf @SERG1_6820
+if
+   not Actor.Dead($3166)
+jf @SERG1_6813
+009E: set_actor $3166 path $3189 $3190 $3191 unknown 2.0 1
+
+:SERG1_6813
+17@ = 0 // integer values
+
+:SERG1_6820
+if
+  $3264 == 4 // integer values
+jf @SERG1_6883
+if
+00EC:   actor $3166 0 96.0986 265.837 radius 27.0 27.0
+jf @SERG1_6883
+$3264 = 5 // integer values
+
+:SERG1_6883
+if
+  $3264 == 3 // integer values
+jf @SERG1_6977
+if
+  16@ > 75000 // integer values
+jf @SERG1_6977
+if
+   not Car.Wrecked($3245)
+jf @SERG1_6977
+if
+0448:   actor $3166 in_car $3245
+jf @SERG1_6977
+Car.DriveTo($3245, 88.973, 280.344, 21.39544)
+
+:SERG1_6977
+if
+  $3264 == 3 // integer values
+jf @SERG1_7068
+if
+00EC:   actor $3166 0 96.0986 265.837 radius 27.0 27.0
+jf @SERG1_7068
+if
+   Actor.Driving($3166)
+jf @SERG1_7068
+03E2: actor $3166 exit_car
+0319: set_actor $3166 running 1
+$3264 = 5 // integer values
+
+:SERG1_7068
+if
+  $3264 == 5 // integer values
+jf @SERG1_7165
+if
+   not Actor.Dead($3166)
+jf @SERG1_7165
+if
+   not Actor.Driving($3166)
+jf @SERG1_7165
+if
+  16@ > 1000 // integer values
+jf @SERG1_7165
+009E: set_actor $3166 path $3181 $3182 $3183 unknown 1.0 1
+16@ = 0 // integer values
+
+:SERG1_7165
+if
+  $3264 == 5 // integer values
+jf @SERG1_7254
+if
+  $3294 == 0 // integer values
+jf @SERG1_7254
+if
+   not Actor.Dead($909)
+jf @SERG1_7224
+Actor.Health($909) = 89
+
+:SERG1_7224
+if
+   not Actor.Dead($910)
+jf @SERG1_7247
+Actor.Health($910) = 89
+
+:SERG1_7247
+$3294 = 1 // integer values
+
+:SERG1_7254
+if
+  $3259 == 0 // integer values
+jf @SERG1_7384
+if
+   not Actor.Dead($3161)
+jf @SERG1_7384
+if or
+00FB:   player $PLAYER_CHAR 0 $3161 radius 10.0 10.0 0.6
+  $3268 == 1 // integer values
+   Actor.Dead($3162)
+   Actor.Dead($3163)
+   Actor.Dead($3164)
+jf @SERG1_7384
+0372: set_actor $3161 anim 0 wait_state_time 0 ms
+0243: set_actor $3161 ped_stats_to 16
+011A: set_actor $3161 search_threat 1
+01CA: actor $3161 kill_player $PLAYER_CHAR
+$3259 = 1 // integer values
+
+:SERG1_7384
+if
+  $3260 == 0 // integer values
+jf @SERG1_7514
+if
+   not Actor.Dead($3162)
+jf @SERG1_7514
+if or
+00FB:   player $PLAYER_CHAR 0 $3162 radius 10.0 10.0 0.6
+  $3268 == 1 // integer values
+   Actor.Dead($3161)
+   Actor.Dead($3163)
+   Actor.Dead($3164)
+jf @SERG1_7514
+0372: set_actor $3162 anim 0 wait_state_time 0 ms
+0243: set_actor $3162 ped_stats_to 16
+011A: set_actor $3162 search_threat 1
+01CA: actor $3162 kill_player $PLAYER_CHAR
+$3260 = 1 // integer values
+
+:SERG1_7514
+if
+  $3261 == 0 // integer values
+jf @SERG1_7651
+if
+   not Actor.Dead($3163)
+jf @SERG1_7651
+if or
+00FB:   player $PLAYER_CHAR 0 $3163 radius 5.0 5.0 0.6
+  $3268 == 1 // integer values
+   Actor.Dead($3161)
+   Actor.Dead($3162)
+   Actor.Dead($3164)
+jf @SERG1_7651
+$3268 = 1 // integer values
+0372: set_actor $3163 anim 0 wait_state_time 0 ms
+0243: set_actor $3163 ped_stats_to 16
+011A: set_actor $3163 search_threat 1
+01CA: actor $3163 kill_player $PLAYER_CHAR
+$3261 = 1 // integer values
+
+:SERG1_7651
+if
+  $3262 == 0 // integer values
+jf @SERG1_7788
+if
+   not Actor.Dead($3164)
+jf @SERG1_7788
+if or
+00FB:   player $PLAYER_CHAR 0 $3164 radius 5.0 5.0 0.6
+  $3268 == 1 // integer values
+   Actor.Dead($3161)
+   Actor.Dead($3162)
+   Actor.Dead($3163)
+jf @SERG1_7788
+0372: set_actor $3164 anim 0 wait_state_time 0 ms
+0243: set_actor $3164 ped_stats_to 16
+011A: set_actor $3164 search_threat 1
+01CA: actor $3164 kill_player $PLAYER_CHAR
+$3268 = 1 // integer values
+$3262 = 1 // integer values
+
+:SERG1_7788
+if
+  $3243 == 2 // integer values
+jf @SERG1_7897
+if
+02AD:   player $PLAYER_CHAR in_area 64.8222 613.6588 96.7488 550.3496 radius 20.0 sphere 0
+jf @SERG1_7897
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @SERG1_7897
+if
+  $3298 == 0 // integer values
+jf @SERG1_7897
+$3268 = 1 // integer values
+$3298 = 1 // integer values
+
+:SERG1_7897
+if
+  $3258 == 0 // integer values
+jf @SERG1_8144
+if
+   not Actor.Dead($3166)
+jf @SERG1_8144
+if
+   not Actor.Dead($3165)
+jf @SERG1_8144
+if
+   not Car.Wrecked($3188)
+jf @SERG1_8144
+if
+   Actor.InCar($3165, $3188)
+jf @SERG1_8122
+if
+8104:   not actor $3165 near_actor $3166 radius 30.0 30.0 30.0 sphere 0
+jf @SERG1_8115
+if or
+00FB:   player $PLAYER_CHAR 0 $3165 radius 25.0 25.0 6.0
+  $3268 == 1 // integer values
+80EC:   not actor $3165 0 $3204 $3205 radius 1.5 1.5
+jf @SERG1_8115
+Car.SetMaxSpeed($3188, 24.0)
+Car.SetDriverBehaviour($3188, KillThePlayer)
+$3258 = 1 // integer values
+$3268 = 1 // integer values
+
+:SERG1_8115
+jump @SERG1_8144
+
+:SERG1_8122
+01CA: actor $3165 kill_player $PLAYER_CHAR
+$3258 = 1 // integer values
+$3268 = 1 // integer values
+
+:SERG1_8144
+if
+  $3258 == 1 // integer values
+jf @SERG1_8268
+if
+   not Actor.Dead($3165)
+jf @SERG1_8221
+if
+00EE:   actor $3165 0 96.0986 265.837 radius 35.0 35.0
+jf @SERG1_8221
+03E2: actor $3165 exit_car
+
+:SERG1_8221
+if
+   not Actor.Dead($3165)
+jf @SERG1_8268
+if
+   not Actor.Driving($3165)
+jf @SERG1_8268
+01CA: actor $3165 kill_player $PLAYER_CHAR
+$3258 = 2 // integer values
+
+:SERG1_8268
+if
+  $3285 == 0 // integer values
+jf @SERG1_8399
+if
+  $3265 > 0 // integer values
+jf @SERG1_8399
+0395: clear_area 0 at 102.908 246.514 range 21.6 3.0
+$3180 = Car.Create(#GREENWOO, 102.111, 248.316, 21.5)
+Car.Angle($3180) = 290.299
+0129: $3179 = create_actor 21 #SPECIAL02 in_car $3180 driverseat
+0243: set_actor $3179 ped_stats_to 16
+Car.SetToNormalDriver($3180)
+Car.ImmuneToNonPlayer($3180) = True
+$3285 = 1 // integer values
+
+:SERG1_8399
+if
+  $3264 == 5 // integer values
+jf @SERG1_8657
+if
+   not Actor.Dead($3166)
+jf @SERG1_8657
+if
+   not Car.Wrecked($3180)
+jf @SERG1_8642
+if
+00ED:   actor $3166 0 $3181 $3182 radius 5.0 5.0
+jf @SERG1_8635
+if
+0202:   actor $3166 near_car $3180 radius 20.0 20.0 sphere 0
+jf @SERG1_8620
+if
+   not Actor.Dead($3179)
+jf @SERG1_8599
+if
+0448:   actor $3179 in_car $3180
+jf @SERG1_8578
+01D4: actor $3166 go_to_car $3180 and_enter_it_as_a_passenger
+$3281 = 1 // integer values
+$3264 = 6 // integer values
+jump @SERG1_8592
+
+:SERG1_8578
+$3282 = 1 // integer values
+$3264 = 6 // integer values
+
+:SERG1_8592
+jump @SERG1_8613
+
+:SERG1_8599
+$3282 = 1 // integer values
+$3264 = 6 // integer values
+
+:SERG1_8613
+jump @SERG1_8635
+
+:SERG1_8620
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+$3264 = 6 // integer values
+
+:SERG1_8635
+jump @SERG1_8657
+
+:SERG1_8642
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+$3264 = 6 // integer values
+
+:SERG1_8657
+if
+  $3281 == 1 // integer values
+jf @SERG1_9060
+if
+   not Actor.Dead($3166)
+jf @SERG1_9060
+if
+  $3283 == 0 // integer values
+jf @SERG1_8857
+if
+   not Car.Wrecked($3180)
+jf @SERG1_8857
+if
+80DC:   not player $PLAYER_CHAR driving $3180
+jf @SERG1_8849
+if
+   not Actor.Dead($3179)
+jf @SERG1_8842
+if
+0448:   actor $3179 in_car $3180
+jf @SERG1_8842
+if
+0448:   actor $3166 in_car $3180
+jf @SERG1_8842
+Car.SetMaxSpeed($3180, 26.5)
+00AE: set_vehicle $3180 traffic_behavior_to 2
+Car.DriveTo($3180, 18.47, -1420.258, 10.318)
+$3283 = 1 // integer values
+
+:SERG1_8842
+jump @SERG1_8857
+
+:SERG1_8849
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_8857
+if or
+  $3283 == 1 // integer values
+  $3283 == 2 // integer values
+jf @SERG1_8906
+if
+   not Actor.Driving($3166)
+jf @SERG1_8906
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_8906
+if
+  $3283 == 1 // integer values
+jf @SERG1_9060
+if
+   not Car.Wrecked($3180)
+jf @SERG1_9060
+if
+   not Actor.Dead($3179)
+jf @SERG1_9060
+if
+0448:   actor $3179 in_car $3180
+jf @SERG1_9060
+if
+   not Actor.Dead($3166)
+jf @SERG1_9060
+if
+0448:   actor $3166 in_car $3180
+jf @SERG1_9060
+if
+01AD:   car $3180 sphere 0 near_point 18.47 -1420.258 radius 15.0 15.0
+jf @SERG1_9060
+Car.SetToPsychoDriver($3180)
+$3283 = 2 // integer values
+
+:SERG1_9060
+if
+  $3282 == 1 // integer values
+jf @SERG1_9479
+if
+   not Actor.Dead($3166)
+jf @SERG1_9479
+if
+  $3284 == 0 // integer values
+jf @SERG1_9215
+if
+   not Actor.Driving($3166)
+jf @SERG1_9215
+if
+   not Car.Wrecked($3180)
+jf @SERG1_9207
+if
+80DC:   not player $PLAYER_CHAR driving $3180
+jf @SERG1_9192
+01D5: actor $3166 go_to_and_drive_car $3180
+0319: set_actor $3166 running 1
+$3284 = 1 // integer values
+jump @SERG1_9200
+
+:SERG1_9192
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_9200
+jump @SERG1_9215
+
+:SERG1_9207
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_9215
+if
+  $3284 == 1 // integer values
+jf @SERG1_9327
+if
+   not Car.Wrecked($3180)
+jf @SERG1_9327
+if
+   Actor.InCar($3166, $3180)
+jf @SERG1_9319
+Car.SetMaxSpeed($3180, 24.0)
+00AE: set_vehicle $3180 traffic_behavior_to 2
+Car.DriveTo($3180, 18.47, -1420.258, 10.318)
+$3284 = 2 // integer values
+jump @SERG1_9327
+
+:SERG1_9319
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_9327
+if
+  $3284 == 2 // integer values
+jf @SERG1_9430
+if
+   not Car.Wrecked($3180)
+jf @SERG1_9430
+if
+0448:   actor $3166 in_car $3180
+jf @SERG1_9430
+if
+01AD:   car $3180 sphere 0 near_point 18.47 -1420.258 radius 15.0 15.0
+jf @SERG1_9430
+Car.SetToPsychoDriver($3180)
+$3284 = 3 // integer values
+
+:SERG1_9430
+if or
+  $3284 == 2 // integer values
+  $3284 == 3 // integer values
+jf @SERG1_9479
+if
+   not Actor.Driving($3166)
+jf @SERG1_9479
+01D0: actor $3166 avoid_player $PLAYER_CHAR
+
+:SERG1_9479
+if
+   not Actor.Dead($3179)
+jf @SERG1_9526
+if
+   not Actor.Driving($3179)
+jf @SERG1_9526
+01CC: actor $3179 kill_player $PLAYER_CHAR
+0319: set_actor $3179 running 1
+
+:SERG1_9526
+if
+  $3264 == 6 // integer values
+jf @SERG1_9648
+if
+  $3299 == 0 // integer values
+jf @SERG1_9648
+if
+8121:   not player $PLAYER_CHAR in_zone 'GOLFC'  // Leaf Links
+jf @SERG1_9648
+Car.RemoveReferences($3184)
+Car.RemoveReferences($3185)
+Car.RemoveReferences($3186)
+Car.RemoveReferences($3187)
+Car.RemoveReferences($3170)
+Car.RemoveReferences($3188)
+Actor.RemoveReferences($3161)
+Actor.RemoveReferences($3162)
+Actor.RemoveReferences($3163)
+Actor.RemoveReferences($3164)
+Actor.RemoveReferences($3165)
+$3299 = 1 // integer values
+
+:SERG1_9648
+if
+   Actor.Dead($3166)
+jf @SERG1_9689
+if
+  $3243 > 1 // integer values
+jf @SERG1_9689
+jump @SERG1_9816
+
+:SERG1_9689
+if
+  $3264 > 5 // integer values
+jf @SERG1_9792
+if
+   not Actor.Dead($3166)
+jf @SERG1_9792
+if
+80E9:   not player $PLAYER_CHAR 0 $3166 radius 210.0 210.0
+jf @SERG1_9792
+if
+82CB:   not actor $3166 bounding_sphere_visible
+jf @SERG1_9792
+00BC: text_highpriority 'TEX1_5' 5000 ms 1  // ~r~He got away!
+jump @SERG1_9799
+
+:SERG1_9792
+jump @SERG1_3008
+
+:SERG1_9799
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:SERG1_9816
+$PASSED_TEX1_FOUR_IRON = 1 // integer values
+01E3: text_1number_styled 'M_PASS' number 500 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 500
+0318: set_latest_mission_passed 'TEX_1'  // Four Iron
+030C: progress_made += 1
+create_thread @SER2
+055B: $1287 = create_clothes_pickup 4 at 327.863 205.539 11.403
+$1267 = 1 // integer values
+create_thread @CLOTH3
+return
+
+:SERG1_9919
+$ONMISSION = 0 // integer values
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 0
+Player.CanMove($PLAYER_CHAR) = True
+Model.Destroy(#WMYGO)
+Model.Destroy(#CADDY)
+Model.Destroy(#GOLFCLUB)
+Model.Destroy(#GREENWOO)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Marker.Disable($3171)
+Marker.Disable($3167)
+Marker.Disable($3160)
+01B7: release_weather
+040D: unload_wav 1
+040D: unload_wav 2
+if
+  $1278 == 1 // integer values
+jf @SERG1_10032
+055B: $1297 = create_clothes_pickup 1 at -384.5 -591.9 25.3
+
+:SERG1_10032
+if
+  $1277 == 1 // integer values
+jf @SERG1_10072
+055B: $1284 = create_clothes_pickup 1 at 226.4 -1265.6 20.1
+
+:SERG1_10072
+if
+  $1300 == 1 // integer values
+jf @SERG1_10112
+055B: $1298 = create_clothes_pickup 1 at -820.2 1364.1 66.4
+
+:SERG1_10112
+if
+  $1265 == 1 // integer values
+jf @SERG1_10152
+055B: $1285 = create_clothes_pickup 2 at 97.5 -1133.6 10.4
+
+:SERG1_10152
+if
+  $1266 == 1 // integer values
+jf @SERG1_10192
+055B: $1286 = create_clothes_pickup 3 at 364.2 1086.1 19.0
+
+:SERG1_10192
+if
+  $1267 == 1 // integer values
+jf @SERG1_10250
+if
+   not $PASSED_TEX1_FOUR_IRON == 1 // integer values
+jf @SERG1_10250
+055B: $1287 = create_clothes_pickup 4 at 327.863 205.539 11.403
+
+:SERG1_10250
+if
+  $1268 == 1 // integer values
+jf @SERG1_10290
+055B: $1288 = create_clothes_pickup 5 at -1025.2 -429.2 10.8
+
+:SERG1_10290
+if
+  $1269 == 1 // integer values
+jf @SERG1_10330
+055B: $1289 = create_clothes_pickup 6 at 405.7 -485.6 12.3
+
+:SERG1_10330
+if
+  $1270 == 1 // integer values
+jf @SERG1_10370
+055B: $1290 = create_clothes_pickup 8 at 414.3 1042.0 25.4
+
+:SERG1_10370
+if
+  $1271 == 1 // integer values
+jf @SERG1_10410
+055B: $1291 = create_clothes_pickup 9 at 158.3 -1275.9 10.6
+
+:SERG1_10410
+if
+  $1272 == 1 // integer values
+jf @SERG1_10450
+055B: $1292 = create_clothes_pickup 10 at -917.4 885.1 11.0
+
+:SERG1_10450
+if
+  $1276 == 1 // integer values
+jf @SERG1_10470
+055B: $1296 = create_clothes_pickup 7 at 465.3 -57.4 15.7
+
+:SERG1_10470
+if
+  $277 == 1 // integer values
+jf @SERG1_10480
+055B: $MC_CLOTHES = create_clothes_pickup 13 at -607.544 674.889 11.05
+
+:SERG1_10480
+if
+  $PASSED_HAT1_JUJU_SCRAMBLE == 1 // integer values
+jf @SERG1_10490
+055B: $2096 = create_clothes_pickup 11 at -1200.3 -322.9 10.9
+
+:SERG1_10490
+mission_cleanup
+return
+
+:SERG1_10494
+if
+   not Actor.Dead($3166)
+jf @SERG1_11521
+$3280 = 99999.9 // floating-point values
+$3245 = -1 // integer values
+Actor.StorePos($3166, $3276, $3277, $3278)
+if
+   not Car.Wrecked($3184)
+jf @SERG1_10759
+if
+82BF:   not car $3184 sunk
+jf @SERG1_10759
+046C: $3267 = car $3184 driver
+if
+  $3267 == -1 // integer values
+jf @SERG1_10759
+if
+0203:   actor $3166 near_car_on_foot $3184 radius 35.0 35.0 unknown 0
+jf @SERG1_10759
+Car.StorePos($3184, $3273, $3274, $3275)
+0086: $3269 = $3273 // floating-point values only
+0061: $3269 -= $3276 // floating-point values
+0086: $3270 = $3274 // floating-point values only
+0061: $3270 -= $3277 // floating-point values
+0086: $3272 = $3269 // floating-point values only
+0069: $3272 *= $3269 // floating-point values
+0086: $3271 = $3270 // floating-point values only
+0069: $3271 *= $3270 // floating-point values
+0086: $3279 = $3271 // floating-point values only
+0059: $3279 += $3272 // floating-point values
+if
+0024:   $3280 > $3279 // floating-point values only
+jf @SERG1_10759
+0086: $3280 = $3279 // floating-point values only
+0084: $3245 = $3184 // integer values and handles
+
+:SERG1_10759
+if
+   not Car.Wrecked($3185)
+jf @SERG1_10977
+if
+82BF:   not car $3185 sunk
+jf @SERG1_10977
+046C: $3267 = car $3185 driver
+if
+  $3267 == -1 // integer values
+jf @SERG1_10977
+if
+0203:   actor $3166 near_car_on_foot $3185 radius 35.0 35.0 unknown 0
+jf @SERG1_10977
+Car.StorePos($3185, $3273, $3274, $3275)
+0086: $3269 = $3273 // floating-point values only
+0061: $3269 -= $3276 // floating-point values
+0086: $3270 = $3274 // floating-point values only
+0061: $3270 -= $3277 // floating-point values
+0086: $3272 = $3269 // floating-point values only
+0069: $3272 *= $3269 // floating-point values
+0086: $3271 = $3270 // floating-point values only
+0069: $3271 *= $3270 // floating-point values
+0086: $3279 = $3271 // floating-point values only
+0059: $3279 += $3272 // floating-point values
+if
+0024:   $3280 > $3279 // floating-point values only
+jf @SERG1_10977
+0086: $3280 = $3279 // floating-point values only
+0084: $3245 = $3185 // integer values and handles
+
+:SERG1_10977
+if
+   not Car.Wrecked($3186)
+jf @SERG1_11195
+if
+82BF:   not car $3186 sunk
+jf @SERG1_11195
+046C: $3267 = car $3186 driver
+if
+  $3267 == -1 // integer values
+jf @SERG1_11195
+if
+0203:   actor $3166 near_car_on_foot $3186 radius 35.0 35.0 unknown 0
+jf @SERG1_11195
+Car.StorePos($3186, $3273, $3274, $3275)
+0086: $3269 = $3273 // floating-point values only
+0061: $3269 -= $3276 // floating-point values
+0086: $3270 = $3274 // floating-point values only
+0061: $3270 -= $3277 // floating-point values
+0086: $3272 = $3269 // floating-point values only
+0069: $3272 *= $3269 // floating-point values
+0086: $3271 = $3270 // floating-point values only
+0069: $3271 *= $3270 // floating-point values
+0086: $3279 = $3271 // floating-point values only
+0059: $3279 += $3272 // floating-point values
+if
+0024:   $3280 > $3279 // floating-point values only
+jf @SERG1_11195
+0086: $3280 = $3279 // floating-point values only
+0084: $3245 = $3186 // integer values and handles
+
+:SERG1_11195
+if
+   not Car.Wrecked($3187)
+jf @SERG1_11413
+if
+82BF:   not car $3187 sunk
+jf @SERG1_11413
+046C: $3267 = car $3187 driver
+if
+  $3267 == -1 // integer values
+jf @SERG1_11413
+if
+0203:   actor $3166 near_car_on_foot $3187 radius 35.0 35.0 unknown 0
+jf @SERG1_11413
+Car.StorePos($3187, $3273, $3274, $3275)
+0086: $3269 = $3273 // floating-point values only
+0061: $3269 -= $3276 // floating-point values
+0086: $3270 = $3274 // floating-point values only
+0061: $3270 -= $3277 // floating-point values
+0086: $3272 = $3269 // floating-point values only
+0069: $3272 *= $3269 // floating-point values
+0086: $3271 = $3270 // floating-point values only
+0069: $3271 *= $3270 // floating-point values
+0086: $3279 = $3271 // floating-point values only
+0059: $3279 += $3272 // floating-point values
+if
+0024:   $3280 > $3279 // floating-point values only
+jf @SERG1_11413
+0086: $3280 = $3279 // floating-point values only
+0084: $3245 = $3187 // integer values and handles
+
+:SERG1_11413
+if or
+  $3245 == -1 // integer values
+  $3263 > 3 // integer values
+jf @SERG1_11492
+011C: actor $3166 clear_objective
+009E: set_actor $3166 path $3189 $3190 $3191 unknown 15.0 1
+0319: set_actor $3166 running 1
+$3264 = 4 // integer values
+17@ = 0 // integer values
+jump @SERG1_11521
+
+:SERG1_11492
+01D5: actor $3166 go_to_and_drive_car $3245
+0319: set_actor $3166 running 1
+$3264 = 1 // integer values
+$3263 += 1 // integer values
+
+:SERG1_11521
+return

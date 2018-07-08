@@ -1,0 +1,1650 @@
+:LAWYER3
+gosub @LAWYER3_36
+if
+wasted_or_busted
+jf @LAWYER3_27
+gosub @LAWYER3_8049
+
+:LAWYER3_27
+gosub @LAWYER3_8139
+end_thread
+
+:LAWYER3_36
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+thread 'LAWYER3'
+wait 0
+054C: use_GXT_table 'LAWYER3'
+058E: set_restart_mission_taxi_destination 110.6 -824.2 9.6 327.9
+9@ = 0 // integer values
+8@ = 0 // integer values
+10@ = 0 // integer values
+$2151 = 0 // integer values
+$2160 = 0 // integer values
+$2150 = 0 // integer values
+$2167 = 0 // integer values
+2@ = 0 // integer values
+4@ = 0 // integer values
+14@ = 0 // integer values
+$2162 = 0 // integer values
+$2152 = 0 // integer values
+03E6: remove_text_box
+03CF: load_wav 'MONO15' as 1
+select_interior 6
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKEN'
+02F3: load_object #CUTOBJ01 'LWCHARA'
+02F3: load_object #CUTOBJ02 'LWCHARB'
+02F3: load_object #CUTOBJ03 'LCFAN'
+02F3: load_object #CUTOBJ04 'LAWDOOR'
+038B: load_requested_models
+
+:LAWYER3_271
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+   not Model.Available(#CUTOBJ04)
+jf @LAWYER3_321
+wait 0
+jump @LAWYER3_271
+
+:LAWYER3_321
+Camera.SetAtPos(140.6, -1367.4, 13.1)
+02E4: load_cutscene_data 'LAW_3'
+0244: set_cutscene_pos 141.441 -1366.722 12.163
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $191 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $191 'LWCHARA'
+02E5: $192 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $192 'LWCHARB'
+02E5: $202 = create_cutscene_object #CUTOBJ03
+04BC:  'LCFAN'
+02E6: set_cutscene_anim $202 'LCFAN'
+02E5: $210 = create_cutscene_object #CUTOBJ04
+02E6: set_cutscene_anim $210 'LAWDOOR'
+0395: clear_area 1 at 119.0 -826.8 range 9.8 0.5
+0055: put_player $PLAYER_CHAR at 119.0 -826.8 9.8
+0171: set_player $PLAYER_CHAR z_angle_to 60.0
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:LAWYER3_582
+if
+  3008 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_617
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_582
+
+:LAWYER3_617
+00BC: text_highpriority 'LAW3_A' 10000 ms 1  // Aaah! Oh, for god's sake, it's you! Oh, Jeez - I'm gonna need new pants!
+
+:LAWYER3_632
+if
+  9424 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_667
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_632
+
+:LAWYER3_667
+00BC: text_highpriority 'LAW3_B' 10000 ms 1  // Hey, those psychos from up north - they've been on the horn, and they're coming down here soon.
+
+:LAWYER3_682
+if
+  13402 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_717
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_682
+
+:LAWYER3_717
+00BC: text_highpriority 'LAW3_C' 10000 ms 1  // Now where is the goddamn money?!
+
+:LAWYER3_732
+if
+  15408 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_767
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_732
+
+:LAWYER3_767
+00BC: text_highpriority 'LAW3_D' 10000 ms 1  // Relax, relax. We're not at that part yet.
+
+:LAWYER3_782
+if
+  18308 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_817
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_782
+
+:LAWYER3_817
+00BC: text_highpriority 'LAW3_E' 10000 ms 1  // Ohhh... I thought that you were taking care of this, I really did!
+
+:LAWYER3_832
+if
+  22306 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_867
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_832
+
+:LAWYER3_867
+00BC: text_highpriority 'LAW3_F' 10000 ms 1  // And now those guidos say we gotta do them a favor.
+
+:LAWYER3_882
+if
+  24656 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_917
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_882
+
+:LAWYER3_917
+00BC: text_highpriority 'LAW3_G' 10000 ms 1  // You mean I gotta do 'em a favor.
+
+:LAWYER3_932
+if
+  26240 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_967
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_932
+
+:LAWYER3_967
+00BC: text_highpriority 'LAW3_H' 10000 ms 1  // Oh, of course that's what I mean. Do I look like I can intimidate a jury?
+
+:LAWYER3_982
+if
+  30832 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1017
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_982
+
+:LAWYER3_1017
+00BC: text_highpriority 'LAW3_I' 10000 ms 1  // I couldn't intimidate a child - and believe me, I've tried.
+
+:LAWYER3_1032
+if
+  33842 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1069
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1032
+
+:LAWYER3_1069
+00BC: text_highpriority 'LAW3_J' 10000 ms 1  // Now, look. It's either that, or Forelli's cousin, Giorgio, gets five years for fraud.
+
+:LAWYER3_1084
+if
+  38624 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1121
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1084
+
+:LAWYER3_1121
+00BC: text_highpriority 'LAW3_K' 10000 ms 1  // You gotta take these guys OUT!
+
+:LAWYER3_1136
+if
+  40752 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1173
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1136
+
+:LAWYER3_1173
+00BC: text_highpriority 'LAW3_L' 10000 ms 1  // I understand. Help the jury change their minds. Don't worry about it.
+
+:LAWYER3_1188
+if
+  43488 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1225
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1188
+
+:LAWYER3_1225
+00BC: text_highpriority 'LAW3_M' 10000 ms 1  // No no no no no - NO! I tried that. The jury case didn't go so well,
+
+:LAWYER3_1240
+if
+  49133 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1277
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1240
+
+:LAWYER3_1277
+00BC: text_highpriority 'LAW3_N' 10000 ms 1  // so MAKE them change their minds.
+
+:LAWYER3_1292
+if
+  51776 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1329
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1292
+
+:LAWYER3_1329
+00BE: text_clear_all
+
+:LAWYER3_1331
+if
+  52896 > $CUT_SCENE_TIME // integer values
+jf @LAWYER3_1368
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @LAWYER3_1331
+
+:LAWYER3_1368
+fade 0 1500
+00BE: text_clear_all
+wait 1000
+if
+856A:   not has_cutscene_been_interrupted
+jf @LAWYER3_1440
+if
+03D0:   wav 1 loaded
+jf @LAWYER3_1440
+03D1: play_wav 1
+
+:LAWYER3_1414
+if
+83D2:   not wav 1 ended
+jf @LAWYER3_1440
+wait 0
+jump @LAWYER3_1414
+
+:LAWYER3_1440
+if
+fading
+jf @LAWYER3_1464
+wait 0
+jump @LAWYER3_1440
+
+:LAWYER3_1464
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#CUTOBJ04)
+Model.Load(#HMORI)
+Model.Load(#BMYBU)
+Model.Load(#ADMIRAL)
+Model.Load(#WFYBU)
+Model.Load(#SPAND)
+Model.Load(#GLENDALE)
+Model.Load(#WMYCW)
+Model.Load(#HAMMER)
+Model.Load(#SCREWDRIVER)
+Model.Load(#SENTINEL)
+Model.Load(#WMOGO)
+023C: load_special_actor 4 'SPANDXA'
+$2154 = 0 // integer values
+$2155 = 0 // integer values
+5@ = 0 // integer values
+6@ = 0 // integer values
+7@ = 0 // integer values
+$2163 = 0 // integer values
+$2164 = 0 // integer values
+$2153 = 0 // integer values
+
+:LAWYER3_1611
+if or
+   not Model.Available(#HMORI)
+   not Model.Available(#ADMIRAL)
+   not Model.Available(#WFYBU)
+   not Model.Available(#SPAND)
+   not Model.Available(#GLENDALE)
+   not Model.Available(#BMYBU)
+jf @LAWYER3_1660
+wait 0
+jump @LAWYER3_1611
+
+:LAWYER3_1660
+if or
+   not Model.Available(#WMYCW)
+   not Model.Available(#SENTINEL)
+   not Model.Available(#WMOGO)
+jf @LAWYER3_1695
+wait 0
+jump @LAWYER3_1660
+
+:LAWYER3_1695
+select_interior 0
+Camera.SetAtPos(117.1, -825.6, 9.8)
+03CF: load_wav 'LAW3_24' as 1
+wait 0
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+03C8: set_camera_directly_before_player
+fade 1 1000
+Camera.SetPosition(110.714, -816.945, 14.589, 0.0, 0.0, 0.0)
+Camera.PointAt(111.238, -817.658, 14.123, 2)
+0395: clear_area 1 at 95.8 -843.2 range 10.0 20.0
+0@ = Car.Create(#GLENDALE, 95.8, -843.2, 10.0)
+0129: 15@ = create_actor 4 #WMOGO in_car 0@ driverseat
+Car.Angle(0@) = 316.0
+0395: clear_area 1 at 113.7 -825.0 range 9.7 10.0
+1@ = Actor.Create(CivMale, #WMYCW, 113.7, -825.0, 9.7)
+Actor.Angle(1@) = 67.0
+01ED: clear_actor 1@ threat_search
+0372: set_actor 1@ anim 3 wait_state_time 3000 ms
+
+:LAWYER3_1945
+if
+fading
+jf @LAWYER3_1969
+wait 0
+jump @LAWYER3_1945
+
+:LAWYER3_1969
+wait 1000
+if
+   not Actor.Dead(1@)
+jf @LAWYER3_2005
+0211: actor 1@ walk_to 104.0 -819.8
+
+:LAWYER3_2005
+if
+   not Car.Wrecked(0@)
+jf @LAWYER3_2076
+Car.SetMaxSpeed(0@, 40.0)
+00AE: set_vehicle 0@ traffic_behavior_to 3
+04BA: set_car 0@ speed_instantly 20.0
+Actor.StorePos(1@, $2171, $2172, $2173)
+02C2: car 0@ drive_to_point $2171 $2172 $2173
+
+:LAWYER3_2076
+16@ = 0 // integer values
+
+:LAWYER3_2083
+if
+   not 16@ > 3000 // integer values
+jf @LAWYER3_2197
+wait 0
+if
+   Actor.Dead(1@)
+jf @LAWYER3_2190
+if
+  4@ == 0 // integer values
+jf @LAWYER3_2190
+Actor.StoreDeadActorPos(1@, $2174, $2175, $2176)
+$2176 += 0.5 // floating-point values
+3@ = Pickup.Create(#HAMMER, 3, $2174, $2175, $2176)
+4@ = 1 // integer values
+
+:LAWYER3_2190
+jump @LAWYER3_2083
+
+:LAWYER3_2197
+if
+   not Actor.Dead(15@)
+jf @LAWYER3_2244
+if
+   not Car.Wrecked(0@)
+jf @LAWYER3_2244
+01D3: actor 15@ leave_car 0@
+0243: set_actor 15@ ped_stats_to 39
+
+:LAWYER3_2244
+Camera.SetPosition(110.834, -827.258, 12.204, 0.0, 0.0, 0.0)
+Camera.PointAt(111.632, -826.843, 11.761, 2)
+00BC: text_highpriority 'LAW3_24' 3000 ms 2  // ~g~That hammer would be useful.
+16@ = 0 // integer values
+
+:LAWYER3_2317
+if
+   not 16@ > 3000 // integer values
+jf @LAWYER3_2413
+wait 0
+if
+   not Actor.Dead(15@)
+jf @LAWYER3_2406
+if
+   not Car.Wrecked(0@)
+jf @LAWYER3_2406
+if
+   not Actor.InCar(15@, 0@)
+jf @LAWYER3_2406
+0239: actor 15@ run_to 137.6 -786.9
+
+:LAWYER3_2406
+jump @LAWYER3_2317
+
+:LAWYER3_2413
+if
+03D0:   wav 1 loaded
+jf @LAWYER3_2432
+03D1: play_wav 1
+
+:LAWYER3_2432
+02A8: $2165 = create_marker 18 at $540 $541 $542
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+03C8: set_camera_directly_before_player
+
+:LAWYER3_2463
+if
+823D:   not special_actor 4 loaded
+jf @LAWYER3_2489
+wait 0
+jump @LAWYER3_2463
+
+:LAWYER3_2489
+Model.Destroy(#GLENDALE)
+Model.Destroy(#WMOGO)
+Model.Destroy(#WMYCW)
+Actor.RemoveReferences(15@)
+0395: clear_area 1 at 191.4 -1026.7 range 9.4 2.0
+$2147 = Actor.Create(CivMale, #HMORI, 191.4, -1026.7, 9.4)
+0243: set_actor $2147 ped_stats_to 39
+02A9: set_actor $2147 immune_to_nonplayer 1
+$2157 = Marker.CreateAboveActor($2147)
+Actor.Health($2147) = 300
+Actor.Angle($2147) = 202.0
+01ED: clear_actor $2147 threat_search
+0319: set_actor $2147 running 1
+0395: clear_area 1 at 189.3 -1033.0 range 10.2 4.0
+$2159 = Car.Create(#ADMIRAL, 189.3, -1033.0, 9.4)
+Car.Angle($2159) = 261.0
+020A: set_car $2159 door_status_to 3
+01EC: make_car $2159 very_heavy 1
+053F: set_car $2159 tires_vulnerable 0
+$2149 = Actor.Create(CivMale, #WFYBU, 191.6, -1028.0, 9.4)
+0243: set_actor $2149 ped_stats_to 39
+01ED: clear_actor $2149 threat_search
+0395: clear_area 1 at 536.4 217.4 range 13.6 4.0
+$2166 = Car.Create(#SENTINEL, 536.4, 217.4, 13.6)
+Car.Angle($2166) = 270.0
+020A: set_car $2166 door_status_to 3
+$2158 = Marker.CreateAboveCar($2166)
+Car.SetMaxSpeed($2166, 0.0)
+01EC: make_car $2166 very_heavy 1
+00BC: text_highpriority 'LAW3_7' 15000 ms 2  // ~g~Go and intimidate the two jurors, but DON'T kill them!
+wait 4000
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_2853
+Car.LockInCurrentPosition($2159) = True
+
+:LAWYER3_2853
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_2876
+Car.LockInCurrentPosition($2166) = True
+
+:LAWYER3_2876
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_2899
+Actor.LockInCurrentPosition($2147) = True
+
+:LAWYER3_2899
+if
+   not Actor.Dead($2149)
+jf @LAWYER3_2922
+Actor.LockInCurrentPosition($2149) = True
+
+:LAWYER3_2922
+03E5: text_box 'HELP23'  // You can follow the ~h~hammer blip~w~ on the radar if you want to buy melee weapons from the hardware store.
+03E7: flash_hud 8
+wait 2000
+03E7: flash_hud -1
+17@ = 0 // integer values
+0209: $2160 = random_int_in_ranges 0 6
+gosub @LAWYER3_8310
+16@ = 0 // integer values
+
+:LAWYER3_2975
+if
+   not $2153 == 2 // integer values
+jf @LAWYER3_8042
+wait 0
+if
+  $2154 == 0 // integer values
+jf @LAWYER3_3098
+if
+   Actor.Dead($2147)
+jf @LAWYER3_3060
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_3098
+
+:LAWYER3_3060
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_3098
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_3098
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_4978
+if
+  14@ == 0 // integer values
+jf @LAWYER3_3239
+if
+01FC:   player $PLAYER_CHAR near_car $2159 radius 30.0 30.0 0
+jf @LAWYER3_3239
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_3232
+Car.LockInCurrentPosition($2159) = False
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_3209
+Actor.LockInCurrentPosition($2147) = False  
+
+:LAWYER3_3209
+if
+   not Actor.Dead($2149)
+jf @LAWYER3_3232
+Actor.LockInCurrentPosition($2149) = False
+
+:LAWYER3_3232
+14@ = 1 // integer values
+
+:LAWYER3_3239
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_4978
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_4978
+if
+   Actor.InCar($2147, $2159)
+jf @LAWYER3_4978
+if
+8185:   not car $2159 health >= 700
+jf @LAWYER3_3338
+01D3: actor $2147 leave_car $2159
+020A: set_car $2159 door_status_to 1
+9@ = 1 // integer values
+$2151 = 1 // integer values
+
+:LAWYER3_3338
+if and
+  9@ == 0 // integer values
+  $2154 == 0 // integer values
+jf @LAWYER3_4978
+if
+00E0:   player $PLAYER_CHAR driving
+jf @LAWYER3_3481
+00DA: $2156 = player $PLAYER_CHAR car
+if
+   not Car.Wrecked($2156)
+jf @LAWYER3_3481
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car 197.1 -1033.8 10.2 radius 8.0 6.0 4.0
+jf @LAWYER3_3481
+Car.PutAt($2156, 201.9, -1020.8, 9.4)
+Car.Angle($2156) = 180.0
+
+:LAWYER3_3481
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_3504
+01EC: make_car $2159 very_heavy 0
+
+:LAWYER3_3504
+020A: set_car $2159 door_status_to 7
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Car.SetMaxSpeed($2159, 0.0)
+Camera.SetPosition(183.803, -1029.408, 11.956, 0.0, 0.0, 0.0)
+Camera.PointAt(184.615, -1029.963, 11.78, 2)
+0395: clear_area 1 at 189.3 -1033.0 range 10.2 10.0
+0395: clear_area 1 at 208.8 -1008.1 range 9.5 10.0
+$2161 = Car.Create(#SPAND, 208.8, -1008.1, 9.5)
+0129: 11@ = create_actor 4 #SPECIAL04 in_car $2161 driverseat
+0243: set_actor 11@ ped_stats_to 14
+Car.Angle($2161) = 165.0
+Car.SetMaxSpeed($2161, 40.0)
+04BA: set_car $2161 speed_instantly 19.0
+00AE: set_vehicle $2161 traffic_behavior_to 3
+Car.DriveTo($2161, 203.5, -1037.7, 10.1)
+01EC: make_car $2161 very_heavy 1
+0395: clear_area 1 at 202.8 -1035.7 range 10.1 10.0
+Car.DriveTo($2159, 202.8, -1035.7, 10.1)
+Car.SetMaxSpeed($2159, 50.0)
+00AE: set_vehicle $2159 traffic_behavior_to 3
+17@ = 0 // integer values
+
+:LAWYER3_3805
+if
+   not 17@ > 1200 // integer values
+jf @LAWYER3_3918
+wait 0
+if
+   Actor.Dead($2147)
+jf @LAWYER3_3873
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_3911
+
+:LAWYER3_3873
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_3911
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_3911
+jump @LAWYER3_3805
+
+:LAWYER3_3918
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_4015
+053F: set_car $2159 tires_vulnerable 1
+04FE: set_vehicle $2159 deflate_tire 0
+050B: open_trunk_of_car $2159
+if
+   not Car.Wrecked($2161)
+jf @LAWYER3_3974
+050B: open_trunk_of_car $2161
+
+:LAWYER3_3974
+Car.SetToNormalDriver($2159)
+Car.SetMaxSpeed($2159, 0.0)
+if
+   not Car.Wrecked($2161)
+jf @LAWYER3_4015
+Car.SetMaxSpeed($2161, 0.0)
+
+:LAWYER3_4015
+17@ = 0 // integer values
+
+:LAWYER3_4022
+if
+   not 17@ > 250 // integer values
+jf @LAWYER3_4135
+wait 0
+if
+   Actor.Dead($2147)
+jf @LAWYER3_4090
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_4128
+
+:LAWYER3_4090
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_4128
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_4128
+jump @LAWYER3_4022
+
+:LAWYER3_4135
+if
+   not Car.Wrecked($2161)
+jf @LAWYER3_4199
+0407: create_coordinate $2168 $2169 $2170 from_car $2161 offset 0.0 -3.0 0.0
+12@ = Pickup.Create(#HAMMER, 3, $2168, $2169, $2170)
+
+:LAWYER3_4199
+if
+   not 17@ > 500 // integer values
+jf @LAWYER3_4312
+wait 0
+if
+   Actor.Dead($2147)
+jf @LAWYER3_4267
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_4305
+
+:LAWYER3_4267
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_4305
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_4305
+jump @LAWYER3_4199
+
+:LAWYER3_4312
+if
+   not Car.Wrecked($2161)
+jf @LAWYER3_4376
+0407: create_coordinate $2168 $2169 $2170 from_car $2161 offset 0.0 -3.0 0.0
+13@ = Pickup.Create(#SCREWDRIVER, 3, $2168, $2169, $2170)
+
+:LAWYER3_4376
+17@ = 0 // integer values
+
+:LAWYER3_4383
+if
+   not 17@ > 1500 // integer values
+jf @LAWYER3_4496
+wait 0
+if
+   Actor.Dead($2147)
+jf @LAWYER3_4451
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_4489
+
+:LAWYER3_4451
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_4489
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_4489
+jump @LAWYER3_4383
+
+:LAWYER3_4496
+02A3: enable_widescreen 0
+Camera.SetPosition(206.657, -1030.398, 13.139, 0.0, 0.0, 0.0)
+Camera.PointAt(206.057, -1031.136, 12.829, 2)
+if
+  $2152 == 0 // integer values
+jf @LAWYER3_4600
+03E5: text_box 'HELP40'  // You can smash cars up by using the hammer or a similar weapon.
+Actor.RemoveReferences($2149)
+16@ = 0 // integer values
+$2152 = 1 // integer values
+jump @LAWYER3_4615
+
+:LAWYER3_4600
+00BC: text_highpriority 'LAW3_9' 4000 ms 2  // ~g~Smash up the Juror's car to get him out!
+
+:LAWYER3_4615
+17@ = 0 // integer values
+
+:LAWYER3_4622
+if
+   not 17@ > 4000 // integer values
+jf @LAWYER3_4896
+wait 0
+if
+   Actor.Dead($2147)
+jf @LAWYER3_4690
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_4728
+
+:LAWYER3_4690
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_4728
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_4728
+if
+00E1:   player 0 pressed_button 16
+jf @LAWYER3_4889
+
+:LAWYER3_4745
+if
+00E1:   player 0 pressed_button 16
+jf @LAWYER3_4882
+wait 0
+if
+  17@ > 4000 // integer values
+jf @LAWYER3_4792
+jump @LAWYER3_4896
+
+:LAWYER3_4792
+if
+   Actor.Dead($2147)
+jf @LAWYER3_4837
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_4875
+
+:LAWYER3_4837
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_4875
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_4875
+jump @LAWYER3_4745
+
+:LAWYER3_4882
+jump @LAWYER3_4896
+
+:LAWYER3_4889
+jump @LAWYER3_4622
+
+:LAWYER3_4896
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_4920
+Actor.Health($2147) = 300
+
+:LAWYER3_4920
+if
+   not Car.Wrecked($2161)
+jf @LAWYER3_4943
+01EC: make_car $2161 very_heavy 0
+
+:LAWYER3_4943
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+00BC: text_highpriority 'LAW3_9' 6000 ms 2  // ~g~Smash up the Juror's car to get him out!
+9@ = 1 // integer values
+
+:LAWYER3_4978
+if
+   Car.Wrecked($2159)
+jf @LAWYER3_5008
+gosub @LAWYER3_8492
+jump @LAWYER3_6065
+
+:LAWYER3_5008
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6065
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_5221
+if
+  $2162 == 0 // integer values
+jf @LAWYER3_5221
+if
+01FC:   player $PLAYER_CHAR near_car $2159 radius 20.0 20.0 0
+jf @LAWYER3_5221
+if or
+02DF:   player $PLAYER_CHAR aggressive
+8184:   not actor $2147 health >= 299
+8185:   not car $2159 health >= 990
+0457:   player $PLAYER_CHAR aiming_at_actor $2147
+jf @LAWYER3_5221
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_5214
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_5176
+01D5: actor $2147 go_to_and_drive_car $2159
+02A9: set_actor $2147 immune_to_nonplayer 1
+Actor.Health($2147) = 300
+
+:LAWYER3_5176
+if
+   not Actor.Dead($2149)
+jf @LAWYER3_5214
+0239: actor $2149 run_to 241.682 -1044.379
+10@ = 1 // integer values
+
+:LAWYER3_5214
+$2162 = 1 // integer values
+
+:LAWYER3_5221
+if
+81AF:   not car $2159 0 189.3 -1033.0 9.4 radius 2.0 2.0 2.0
+jf @LAWYER3_5318
+if
+8185:   not car $2159 health >= 600
+jf @LAWYER3_5318
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_5318
+9@ = 1 // integer values
+$2151 = 1 // integer values
+
+:LAWYER3_5318
+if
+  $2154 == 0 // integer values
+jf @LAWYER3_6065
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_5579
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_5579
+if
+   Actor.InCar($2147, $2159)
+jf @LAWYER3_5579
+if
+8185:   not car $2159 health >= 950
+jf @LAWYER3_5579
+if
+  $2167 == 0 // integer values
+jf @LAWYER3_5579
+03CF: load_wav 'LAW3_11' as 2
+
+:LAWYER3_5436
+if
+83D0:   not wav 2 loaded
+jf @LAWYER3_5568
+wait 0
+if
+   Car.Wrecked($2159)
+jf @LAWYER3_5478
+gosub @LAWYER3_8492
+
+:LAWYER3_5478
+if
+   Actor.Dead($2147)
+jf @LAWYER3_5523
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_5561
+
+:LAWYER3_5523
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_5561
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_5561
+jump @LAWYER3_5436
+
+:LAWYER3_5568
+03D1: play_wav 2
+$2167 = 1 // integer values
+
+:LAWYER3_5579
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_5822
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_5822
+if
+   Actor.InCar($2147, $2159)
+jf @LAWYER3_5822
+if
+8185:   not car $2159 health >= 850
+jf @LAWYER3_5822
+if
+  $2167 == 1 // integer values
+jf @LAWYER3_5822
+03CF: load_wav 'LAW3_13' as 2
+
+:LAWYER3_5679
+if
+83D0:   not wav 2 loaded
+jf @LAWYER3_5811
+wait 0
+if
+   Car.Wrecked($2159)
+jf @LAWYER3_5721
+gosub @LAWYER3_8492
+
+:LAWYER3_5721
+if
+   Actor.Dead($2147)
+jf @LAWYER3_5766
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_5804
+
+:LAWYER3_5766
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_5804
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_5804
+jump @LAWYER3_5679
+
+:LAWYER3_5811
+03D1: play_wav 2
+$2167 = 2 // integer values
+
+:LAWYER3_5822
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6065
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_6065
+if
+   Actor.InCar($2147, $2159)
+jf @LAWYER3_6065
+if
+8185:   not car $2159 health >= 750
+jf @LAWYER3_6065
+if
+  $2167 == 2 // integer values
+jf @LAWYER3_6065
+03CF: load_wav 'LAW3_12' as 2
+
+:LAWYER3_5922
+if
+83D0:   not wav 2 loaded
+jf @LAWYER3_6054
+wait 0
+if
+   Car.Wrecked($2159)
+jf @LAWYER3_5964
+gosub @LAWYER3_8492
+
+:LAWYER3_5964
+if
+   Actor.Dead($2147)
+jf @LAWYER3_6009
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+jump @LAWYER3_6047
+
+:LAWYER3_6009
+if
+050D:   unknown_actor $2147 dead
+jf @LAWYER3_6047
+00BC: text_highpriority 'LAW3_8' 5000 ms 2  // ~r~You killed a Juror!
+jump @LAWYER3_8049
+
+:LAWYER3_6047
+jump @LAWYER3_5922
+
+:LAWYER3_6054
+03D1: play_wav 2
+$2167 = 3 // integer values
+
+:LAWYER3_6065
+if
+   not Actor.Dead($2149)
+jf @LAWYER3_6184
+if
+  10@ == 0 // integer values
+jf @LAWYER3_6177
+if or
+8184:   not actor $2149 health >= 99
+  5@ == 1 // integer values
+jf @LAWYER3_6177
+0239: actor $2149 run_to 227.2 -1040.8
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_6170
+02A9: set_actor $2147 immune_to_nonplayer 1
+Actor.Health($2147) = 300
+
+:LAWYER3_6170
+10@ = 1 // integer values
+
+:LAWYER3_6177
+jump @LAWYER3_6191
+
+:LAWYER3_6184
+10@ = 1 // integer values
+
+:LAWYER3_6191
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_6869
+if
+   not Actor.Dead($2149)
+jf @LAWYER3_6321
+if
+  8@ == 0 // integer values
+jf @LAWYER3_6321
+if
+00E9:   player $PLAYER_CHAR 0 $2147 radius 50.0 50.0
+jf @LAWYER3_6321
+020E: actor $2147 look_at_actor $2149
+020E: actor $2149 look_at_actor $2147
+03F9: make_actors $2147 $2149 converse_in 999999999 ms
+03F9: make_actors $2149 $2147 converse_in 999999999 ms
+8@ = 1 // integer values
+
+:LAWYER3_6321
+if
+  10@ == 1 // integer values
+jf @LAWYER3_6411
+if
+  5@ == 0 // integer values
+jf @LAWYER3_6411
+if
+  $2150 == 0 // integer values
+jf @LAWYER3_6411
+0467: set_actor $2147 clear_last_weapon_damage
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6404
+01D5: actor $2147 go_to_and_drive_car $2159
+
+:LAWYER3_6404
+$2150 = 1 // integer values
+
+:LAWYER3_6411
+if or
+031D:   actor $2147 hit_by_weapon 46
+031D:   actor $2147 hit_by_weapon 40
+031D:   actor $2147 hit_by_weapon 39
+jf @LAWYER3_6530
+if
+  5@ == 0 // integer values
+jf @LAWYER3_6530
+$2163 += 1 // integer values
+0467: set_actor $2147 clear_last_weapon_damage
+if
+  $2151 == 0 // integer values
+jf @LAWYER3_6515
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6515
+01D5: actor $2147 go_to_and_drive_car $2159
+
+:LAWYER3_6515
+Actor.Health($2147) = 300
+5@ = 1 // integer values
+
+:LAWYER3_6530
+if or
+031D:   actor $2147 hit_by_weapon 46
+031D:   actor $2147 hit_by_weapon 40
+031D:   actor $2147 hit_by_weapon 39
+jf @LAWYER3_6649
+if
+  6@ == 0 // integer values
+jf @LAWYER3_6649
+$2163 += 1 // integer values
+0467: set_actor $2147 clear_last_weapon_damage
+if
+  $2151 == 0 // integer values
+jf @LAWYER3_6634
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6634
+01D5: actor $2147 go_to_and_drive_car $2159
+
+:LAWYER3_6634
+Actor.Health($2147) = 300
+6@ = 1 // integer values
+
+:LAWYER3_6649
+if or
+031D:   actor $2147 hit_by_weapon 46
+031D:   actor $2147 hit_by_weapon 40
+031D:   actor $2147 hit_by_weapon 39
+jf @LAWYER3_6768
+if
+  7@ == 0 // integer values
+jf @LAWYER3_6768
+$2163 += 1 // integer values
+0467: set_actor $2147 clear_last_weapon_damage
+if
+  $2151 == 0 // integer values
+jf @LAWYER3_6753
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6753
+01D5: actor $2147 go_to_and_drive_car $2159
+
+:LAWYER3_6753
+Actor.Health($2147) = 300
+7@ = 1 // integer values
+
+:LAWYER3_6768
+if
+  $2163 == 3 // integer values
+jf @LAWYER3_6793
+gosub @LAWYER3_8492
+
+:LAWYER3_6793
+if
+  9@ == 1 // integer values
+jf @LAWYER3_6869
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_6869
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_6869
+if
+   not Actor.InCar($2147, $2159)
+jf @LAWYER3_6869
+gosub @LAWYER3_8492
+
+:LAWYER3_6869
+if
+  $2152 == 1 // integer values
+jf @LAWYER3_6923
+if
+  16@ > 5000 // integer values
+jf @LAWYER3_6923
+03E5: text_box 'HELP53'  // Press ~h~~k~~PED_CYCLE_WEAPON_LEFT~~w~ button or ~h~~k~~PED_CYCLE_WEAPON_RIGHT~~w~ button to cycle through your available weapons.
+$2152 = 2 // integer values
+
+:LAWYER3_6923
+if
+   Car.Wrecked($2166)
+jf @LAWYER3_6946
+jump @LAWYER3_7117
+
+:LAWYER3_6946
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_8035
+if
+  2@ == 0 // integer values
+jf @LAWYER3_7098
+if
+01FC:   player $PLAYER_CHAR near_car $2166 radius 20.0 20.0 0
+jf @LAWYER3_7098
+00BC: text_highpriority 'LAW3_20' 15000 ms 2  // ~g~Smash up the Juror's car!
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_7049
+Car.LockInCurrentPosition($2166) = False
+
+:LAWYER3_7049
+if
+  $2152 == 0 // integer values
+jf @LAWYER3_7091
+03E5: text_box 'HELP40'  // You can smash cars up by using the hammer or a similar weapon.
+16@ = 0 // integer values
+$2152 = 1 // integer values
+
+:LAWYER3_7091
+2@ = 1 // integer values
+
+:LAWYER3_7098
+if
+8185:   not car $2166 health >= 600
+jf @LAWYER3_8035
+
+:LAWYER3_7117
+if
+  $2155 == 0 // integer values
+jf @LAWYER3_8035
+fade 0 500
+03CF: load_wav 'LAW3_20' as 2
+
+:LAWYER3_7154
+if
+fading
+jf @LAWYER3_7178
+wait 0
+jump @LAWYER3_7154
+
+:LAWYER3_7178
+Camera.SetAtPos(551.8, 194.5, 13.6)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_7229
+020A: set_car $2166 door_status_to 1
+
+:LAWYER3_7229
+0395: clear_area 1 at 542.0 207.8 range 13.8 1.0
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @LAWYER3_7296
+0055: put_player $PLAYER_CHAR at 542.0 207.8 13.8
+jump @LAWYER3_7316
+
+:LAWYER3_7296
+012A: put_player $PLAYER_CHAR at 542.0 207.8 13.8 and_remove_from_car
+
+:LAWYER3_7316
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_7390
+if
+01AD:   car $2166 sphere 0 near_point 551.8 194.5 radius 4.0 4.0
+jf @LAWYER3_7390
+Car.PutAt($2166, 541.7, 196.0, 13.8)
+
+:LAWYER3_7390
+0171: set_player $PLAYER_CHAR z_angle_to 225.0
+0395: clear_area 1 at 551.8 194.5 range 13.8 1.0
+$2148 = Actor.Create(CivMale, #BMYBU, 551.8, 194.5, 13.6)
+Actor.Angle($2148) = 35.0
+Marker.Disable($2158)
+Camera.SetPosition(553.126, 190.922, 15.789, 0.0, 0.0, 0.0)
+Camera.PointAt(552.636, 191.782, 15.65, 2)
+0211: actor $PLAYER_ACTOR walk_to 551.8 194.5
+
+:LAWYER3_7529
+if
+83D0:   not wav 2 loaded
+jf @LAWYER3_7555
+wait 0
+jump @LAWYER3_7529
+
+:LAWYER3_7555
+fade 1 500
+03D1: play_wav 2
+00BC: text_highpriority 'LAW3_21' 3000 ms 2  // I can't believe this is happening!
+wait 1500
+if
+03D0:   wav 1 loaded
+jf @LAWYER3_7605
+03D1: play_wav 1
+
+:LAWYER3_7605
+03CF: load_wav 'LAW3_23' as 2
+if
+  $2160 == 0 // integer values
+jf @LAWYER3_7650
+00BC: text_highpriority 'LAW3_1' 3000 ms 1  // Giorgio sends his regards.
+
+:LAWYER3_7650
+if
+  $2160 == 1 // integer values
+jf @LAWYER3_7683
+00BC: text_highpriority 'LAW3_2' 3000 ms 1  // Remember, guilty is a dirty word.
+
+:LAWYER3_7683
+if
+  $2160 == 2 // integer values
+jf @LAWYER3_7716
+00BC: text_highpriority 'LAW3_3' 3000 ms 1  // Innocent until I say otherwise.
+
+:LAWYER3_7716
+if
+  $2160 == 3 // integer values
+jf @LAWYER3_7749
+00BC: text_highpriority 'LAW3_4' 3000 ms 1  // You know he's not guilty.
+
+:LAWYER3_7749
+if
+  $2160 == 4 // integer values
+jf @LAWYER3_7782
+00BC: text_highpriority 'LAW3_5' 3000 ms 1  // You remember Giorgio? You remember he's innocent.
+
+:LAWYER3_7782
+if
+  $2160 == 5 // integer values
+jf @LAWYER3_7815
+00BC: text_highpriority 'LAW3_6' 3000 ms 1  // Not guilty, understand? Good.
+
+:LAWYER3_7815
+wait 1500
+
+:LAWYER3_7820
+if
+83D2:   not wav 1 ended
+jf @LAWYER3_7846
+wait 0
+jump @LAWYER3_7820
+
+:LAWYER3_7846
+if
+   not Actor.Dead($2148)
+jf @LAWYER3_7877
+0239: actor $2148 run_to 535.7 177.3
+
+:LAWYER3_7877
+if
+03D0:   wav 2 loaded
+jf @LAWYER3_7896
+03D1: play_wav 2
+
+:LAWYER3_7896
+Camera.SetPosition(548.683, 203.05, 13.808, 0.0, 0.0, 0.0)
+Camera.PointAt(548.314, 202.122, 13.859, 2)
+wait 3000
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+011C: actor $PLAYER_ACTOR clear_objective
+Actor.DestroyInstantly($2148)
+Car.RemoveReferences($2166)
+0209: $2160 = random_int_in_ranges 0 6
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_8014
+01EC: make_car $2166 very_heavy 0
+
+:LAWYER3_8014
+gosub @LAWYER3_8310
+$2153 += 1 // integer values
+$2155 = 1 // integer values
+
+:LAWYER3_8035
+jump @LAWYER3_2975
+
+:LAWYER3_8042
+jump @LAWYER3_8066
+
+:LAWYER3_8049
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:LAWYER3_8066
+$PASSED_LAW3_JURY_FURY = 1 // integer values
+0394: play_music 1
+01E3: text_1number_styled 'M_PASS' number 400 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 400
+0318: set_latest_mission_passed 'LAW_3'  // Jury Fury
+030C: progress_made += 1
+$867 = 1 // integer values
+create_thread @LAW4
+return
+
+:LAWYER3_8139
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+$ONMISSION = 0 // integer values
+Marker.Disable($2157)
+Marker.Disable($2158)
+Marker.Disable($2165)
+Model.Destroy(#HMORI)
+Model.Destroy(#BMYBU)
+Model.Destroy(#ADMIRAL)
+Model.Destroy(#WFYBU)
+Model.Destroy(#SPAND)
+Model.Destroy(#GLENDALE)
+Model.Destroy(#WMYCW)
+Model.Destroy(#HAMMER)
+Model.Destroy(#SCREWDRIVER)
+Model.Destroy(#SENTINEL)
+Model.Destroy(#WMOGO)
+Car.RemoveReferences(0@)
+Car.RemoveReferences($2159)
+Car.RemoveReferences($2166)
+Pickup.Destroy(12@)
+Pickup.Destroy(13@)
+Pickup.Destroy(3@)
+0296: unload_special_actor 4
+040D: unload_wav 1
+040D: unload_wav 2
+mission_cleanup
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_8285
+01EC: make_car $2159 very_heavy 0
+053F: set_car $2159 tires_vulnerable 1
+
+:LAWYER3_8285
+if
+   not Car.Wrecked($2166)
+jf @LAWYER3_8308
+01EC: make_car $2166 very_heavy 0
+
+:LAWYER3_8308
+return
+
+:LAWYER3_8310
+if
+  $2160 == 0 // integer values
+jf @LAWYER3_8340
+03CF: load_wav 'LAW3_1' as 1
+
+:LAWYER3_8340
+if
+  $2160 == 1 // integer values
+jf @LAWYER3_8370
+03CF: load_wav 'LAW3_2' as 1
+
+:LAWYER3_8370
+if
+  $2160 == 2 // integer values
+jf @LAWYER3_8400
+03CF: load_wav 'LAW3_3' as 1
+
+:LAWYER3_8400
+if
+  $2160 == 3 // integer values
+jf @LAWYER3_8430
+03CF: load_wav 'LAW3_4' as 1
+
+:LAWYER3_8430
+if
+  $2160 == 4 // integer values
+jf @LAWYER3_8460
+03CF: load_wav 'LAW3_5' as 1
+
+:LAWYER3_8460
+if
+  $2160 == 5 // integer values
+jf @LAWYER3_8490
+03CF: load_wav 'LAW3_6' as 1
+
+:LAWYER3_8490
+return
+
+:LAWYER3_8492
+if
+  $2154 == 0 // integer values
+jf @LAWYER3_9225
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_9225
+fade 0 500
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 1
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+022E: set_player $PLAYER_CHAR to_look_at_actor $2147
+Marker.Disable($2157)
+011C: actor $2147 clear_objective
+if
+03D0:   wav 1 loaded
+jf @LAWYER3_8588
+03D1: play_wav 1
+
+:LAWYER3_8588
+03CF: load_wav 'LAW3_22' as 2
+if
+  $2160 == 0 // integer values
+jf @LAWYER3_8633
+00BC: text_highpriority 'LAW3_1' 3000 ms 1  // Giorgio sends his regards.
+
+:LAWYER3_8633
+if
+  $2160 == 1 // integer values
+jf @LAWYER3_8666
+00BC: text_highpriority 'LAW3_2' 3000 ms 1  // Remember, guilty is a dirty word.
+
+:LAWYER3_8666
+if
+  $2160 == 2 // integer values
+jf @LAWYER3_8699
+00BC: text_highpriority 'LAW3_3' 3000 ms 1  // Innocent until I say otherwise.
+
+:LAWYER3_8699
+if
+  $2160 == 3 // integer values
+jf @LAWYER3_8732
+00BC: text_highpriority 'LAW3_4' 3000 ms 1  // You know he's not guilty.
+
+:LAWYER3_8732
+if
+  $2160 == 4 // integer values
+jf @LAWYER3_8765
+00BC: text_highpriority 'LAW3_5' 3000 ms 1  // You remember Giorgio? You remember he's innocent.
+
+:LAWYER3_8765
+if
+  $2160 == 5 // integer values
+jf @LAWYER3_8798
+00BC: text_highpriority 'LAW3_6' 3000 ms 1  // Not guilty, understand? Good.
+
+:LAWYER3_8798
+if
+fading
+jf @LAWYER3_8822
+wait 0
+jump @LAWYER3_8798
+
+:LAWYER3_8822
+Camera.SetAtPos(204.5, -1007.6, 9.4)
+17@ = 0 // integer values
+Camera.SetPosition(203.625, -1010.455, 10.988, 0.0, 0.0, 0.0)
+Camera.PointAt(203.922, -1009.509, 10.862, 2)
+0230: set_player $PLAYER_CHAR stop_looking
+0395: clear_area 1 at 202.7 -1016.4 range 9.6 1.0
+0055: put_player $PLAYER_CHAR at 202.7 -1016.4 9.6
+Actor.DestroyInstantly($2147)
+0395: clear_area 1 at 204.5 -1007.6 range 9.4 5.0
+$2147 = Actor.Create(CivMale, #HMORI, 204.5, -1007.6, 9.4)
+fade 1 500
+if
+   not Actor.Dead($2147)
+jf @LAWYER3_9051
+011A: set_actor $2147 search_threat 1
+0319: set_actor $2147 running 1
+0239: actor $2147 run_to 215.6 -958.6
+
+:LAWYER3_9051
+17@ = 0 // integer values
+
+:LAWYER3_9058
+if
+   not 17@ > 5000 // integer values
+jf @LAWYER3_9122
+wait 0
+if
+03D2:   wav 1 ended
+jf @LAWYER3_9115
+if
+03D0:   wav 2 loaded
+jf @LAWYER3_9115
+03D1: play_wav 2
+
+:LAWYER3_9115
+jump @LAWYER3_9058
+
+:LAWYER3_9122
+0209: $2160 = random_int_in_ranges 0 6
+gosub @LAWYER3_8310
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 0
+$2153 += 1 // integer values
+Actor.DestroyInstantly($2147)
+Car.RemoveReferences($2159)
+Car.RemoveReferences($2161)
+Actor.RemoveReferences(11@)
+if
+   not Car.Wrecked($2159)
+jf @LAWYER3_9218
+020A: set_car $2159 door_status_to 1
+
+:LAWYER3_9218
+$2154 = 1 // integer values
+
+:LAWYER3_9225
+return

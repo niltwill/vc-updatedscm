@@ -1,0 +1,3056 @@
+:HAIT2
+gosub @HAIT2_36
+if
+wasted_or_busted
+jf @HAIT2_27
+gosub @HAIT2_17554
+
+:HAIT2_27
+gosub @HAIT2_17662
+end_thread
+
+:HAIT2_36
+$ONMISSION = 1 // integer values
+$1084 = 1 // integer values
+increment_mission_attempts
+thread 'HAIT2'
+wait 0
+054C: use_GXT_table 'HAIT2'
+058E: set_restart_mission_taxi_destination -957.904 122.843 8.278 356.948
+$5883 = -1 // integer values
+$5868 = 3 // integer values
+$5863 = 0 // integer values
+$5864 = 0 // integer values
+$5870 = 0 // integer values
+$5869 = 0 // integer values
+$5871 = 0 // integer values
+$5866 = 0 // integer values
+$5865 = 0 // integer values
+$5867 = 0 // integer values
+$5872 = 0 // integer values
+$61 = 0 // integer values
+$5879 = 0 // integer values
+$5880 = 0 // integer values
+$5881 = 0 // integer values
+$5882 = 0 // integer values
+0@ = 0 // integer values
+1@ = 0 // integer values
+2@ = 0 // integer values
+3@ = 0 // integer values
+4@ = 0 // integer values
+5@ = 0 // integer values
+6@ = 0 // integer values
+7@ = 0 // integer values
+8@ = 0 // integer values
+9@ = 0 // integer values
+10@ = 0 // integer values
+11@ = 0 // integer values
+12@ = 0 // integer values
+13@ = 0 // integer values
+14@ = 0 // integer values
+15@ = 0 // integer values
+$5873 = 0 // integer values
+$5874 = 0 // integer values
+$5875 = 0 // integer values
+$5876 = 0 // integer values
+$5877 = 0 // integer values
+$5878 = 0 // integer values
+select_interior 12
+04F9: set_extracolors 13 fade 0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'APOULET'
+02F3: load_object #CUTOBJ01 'HTABLE'
+02F3: load_object #CUTOBJ02 'DRUGPAK'
+02F3: load_object #CUTOBJ03 'KETTLE'
+Camera.SetAtPos(-962.799, 148.391, 8.355)
+038B: load_requested_models
+
+:HAIT2_456
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+jf @HAIT2_501
+wait 0
+jump @HAIT2_456
+
+:HAIT2_501
+041D: set_camera_near_clip 0.1
+04F9: set_extracolors 13 fade 0
+02E4: load_cutscene_data 'HAT_2'
+0244: set_cutscene_pos -962.799 148.391 8.355
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'APOULET'
+02E5: $214 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $214 'HTABLE'
+02E5: $5900 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $5900 'DRUGPAK'
+02E5: $213 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $213 'KETTLE'
+0395: clear_area 1 at -962.53 141.69 range 8.25 1.0
+0055: put_player $PLAYER_CHAR at -962.53 141.69 8.25
+0171: set_player $PLAYER_CHAR z_angle_to 183.42
+0169: set_fade_color 0 0 1
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:HAIT2_728
+if
+  4054 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_763
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_728
+
+:HAIT2_763
+00BC: text_highpriority 'HAT2_1' 10000 ms 1  // Oh, sorry, I - I must have the wrong address...
+
+:HAIT2_778
+if
+  7163 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_813
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_778
+
+:HAIT2_813
+00BC: text_highpriority 'HAT2_2' 10000 ms 1  // Well, you might as well come in and rest your soles and have some tea.
+
+:HAIT2_828
+if
+  11419 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_863
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_828
+
+:HAIT2_863
+00BC: text_highpriority 'HAT2_3' 10000 ms 1  // Do you have something there for me, Tommy?
+
+:HAIT2_878
+if
+  13873 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_913
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_878
+
+:HAIT2_913
+00BC: text_highpriority 'HAT2_4' 10000 ms 1  // Yeah...
+
+:HAIT2_928
+if
+  16370 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_963
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_928
+
+:HAIT2_963
+00BC: text_highpriority 'HAT2_5' 10000 ms 1  // This place feels familiar to me, uh - it's - a smell from childhood - a deja vu...
+
+:HAIT2_978
+if
+  22166 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1013
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_978
+
+:HAIT2_1013
+00BC: text_highpriority 'HAT2_6' 10000 ms 1  // Now Tommy, I'm going to whisper a lickle errand for you. Hear me well, aye?
+
+:HAIT2_1028
+if
+  28339 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1063
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1028
+
+:HAIT2_1063
+00BC: text_highpriority 'HAT2_7' 10000 ms 1  // You look like someone I, I...
+
+:HAIT2_1078
+if
+  30139 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1113
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1078
+
+:HAIT2_1113
+00BC: text_highpriority 'HAT2_8' 10000 ms 1  // The Cubans have fast boats they use to cross the seas with drugs.
+
+:HAIT2_1128
+if
+  34861 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1165
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1128
+
+:HAIT2_1165
+00BC: text_highpriority 'HAT2_9' 10000 ms 1  // It is their livelihood.
+
+:HAIT2_1180
+if
+  37790 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1217
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1180
+
+:HAIT2_1217
+00BC: text_highpriority 'HAT2_10' 10000 ms 1  // Me nephew bin making lickle flying bombs to take dem out.
+
+:HAIT2_1232
+if
+  42538 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1269
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1232
+
+:HAIT2_1269
+00BC: text_highpriority 'HAT2_11' 10000 ms 1  // Blow de boats to coffin wood.
+
+:HAIT2_1284
+if
+  51176 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1321
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1284
+
+:HAIT2_1321
+00BC: text_highpriority 'HAT2_12' 10000 ms 1  // Thanks for the tea.
+
+:HAIT2_1336
+if
+  56400 > $CUT_SCENE_TIME // integer values
+jf @HAIT2_1373
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @HAIT2_1336
+
+:HAIT2_1373
+0169: set_fade_color 0 0 1
+fade 0 1500
+00BE: text_clear_all
+
+:HAIT2_1390
+if
+fading
+jf @HAIT2_1414
+wait 0
+jump @HAIT2_1390
+
+:HAIT2_1414
+if
+82E9:   not cutscene_reached_end
+jf @HAIT2_1438
+wait 0
+jump @HAIT2_1414
+
+:HAIT2_1438
+04FA: reset_sky_colors_with_fade 0
+select_interior 0
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+04E3: unknown_player $PLAYER_CHAR 0 60000
+Model.Load(#TOPFUN)
+Model.Load(#RCBARON)
+Model.Load(#SPEEDER)
+Model.Load(#JETMAX)
+Model.Load(#COASTG)
+Model.Load(#CUBAN)
+Model.Load(#CBA)
+Model.Load(#CBB)
+Model.Load(#RUGER)
+Camera.SetAtPos(-962.53, 141.69, 8.25)
+038B: load_requested_models
+0169: set_fade_color 0 0 1
+fade 1 1500
+
+:HAIT2_1566
+if or
+   not Model.Available(#TOPFUN)
+   not Model.Available(#RCBARON)
+   not Model.Available(#SPEEDER)
+   not Model.Available(#JETMAX)
+   not Model.Available(#COASTG)
+jf @HAIT2_1613
+wait 0
+jump @HAIT2_1566
+
+:HAIT2_1613
+if or
+   not Model.Available(#CUBAN)
+   not Model.Available(#CBA)
+   not Model.Available(#CBB)
+   not Model.Available(#RUGER)
+jf @HAIT2_1653
+wait 0
+jump @HAIT2_1613
+
+:HAIT2_1653
+00BC: text_highpriority 'HAT2_B1' 15000 ms 1  // ~g~Get to the van that contains the flying bombs.
+$5884 = Car.Create(#TOPFUN, -808.9448, -162.9215, 10.0458)
+Car.Angle($5884) = 0.0
+$5901 = Marker.CreateAboveCar($5884)
+Car.LockInCurrentPosition($5884) = True
+
+:HAIT2_1716
+if
+8442:   not player $PLAYER_CHAR in_car $5884
+jf @HAIT2_1769
+wait 0
+if
+   Car.Wrecked($5884)
+jf @HAIT2_1762
+jump @HAIT2_17554
+
+:HAIT2_1762
+jump @HAIT2_1716
+
+:HAIT2_1769
+Marker.Disable($5901)
+$5888 = Car.Create(#JETMAX, -524.3332, -227.5792, 5.3)
+Car.Angle($5888) = 25.0
+0323: enable_boat $5888 anchor 1
+02DB: set_boat $5888 speed_to 12.0
+$5902 = Marker.CreateAboveCar($5888)
+$5887 = Car.Create(#SPEEDER, -533.5898, -230.4594, 5.3)
+Car.Angle($5887) = 88.4134
+0323: enable_boat $5887 anchor 1
+02DB: set_boat $5887 speed_to 12.0
+$5889 = Car.Create(#COASTG, -514.9578, -230.6103, 5.3)
+Car.Angle($5889) = 265.6394
+0323: enable_boat $5889 anchor 1
+02DB: set_boat $5889 speed_to 12.0
+$5890 = Car.Create(#CUBAN, -524.328, -255.0365, 9.534)
+Car.Angle($5890) = 183.1269
+$5891 = Actor.Create(CivMale, #CBA, -535.1575, -233.1016, 7.2104)
+Actor.Angle($5891) = 27.113
+0350: set_actor $5891 maintain_position_when_attacked 1
+01ED: clear_actor $5891 threat_search
+$5892 = Actor.Create(CivMale, #CBA, -538.0, -235.1073, 7.2104)
+Actor.Angle($5892) = 273.988
+0350: set_actor $5892 maintain_position_when_attacked 1
+01ED: clear_actor $5892 threat_search
+0372: set_actor $5892 anim 25 wait_state_time 100 ms
+$5893 = Actor.Create(CivMale, #CBB, -528.9341, -237.8728, 7.2056)
+Actor.Angle($5893) = 6.0796
+0350: set_actor $5893 maintain_position_when_attacked 1
+01ED: clear_actor $5893 threat_search
+$5894 = Actor.Create(CivMale, #CBB, -527.7787, -236.5049, 7.2104)
+Actor.Angle($5894) = 93.2798
+0350: set_actor $5894 maintain_position_when_attacked 1
+01ED: clear_actor $5894 threat_search
+0372: set_actor $5894 anim 24 wait_state_time 100 ms
+$5895 = Actor.Create(CivMale, #CBA, -519.8645, -242.7792, 9.5542)
+Actor.Angle($5895) = 244.8008
+0350: set_actor $5895 maintain_position_when_attacked 1
+01ED: clear_actor $5895 threat_search
+0372: set_actor $5895 anim 3 wait_state_time 100 ms
+$5896 = Actor.Create(CivMale, #CBA, -517.9925, -243.0342, 9.5542)
+Actor.Angle($5896) = 118.988
+0350: set_actor $5896 maintain_position_when_attacked 1
+01ED: clear_actor $5896 threat_search
+$5897 = Actor.Create(CivMale, #CBB, -509.3864, -237.7915, 7.2103)
+Actor.Angle($5897) = 6.0796
+0350: set_actor $5897 maintain_position_when_attacked 1
+01ED: clear_actor $5897 threat_search
+0372: set_actor $5897 anim 25 wait_state_time 100 ms
+$5898 = Actor.Create(CivMale, #CBB, -519.7886, -244.7169, 9.5542)
+Actor.Angle($5898) = 357.2437
+0350: set_actor $5898 maintain_position_when_attacked 1
+01ED: clear_actor $5898 threat_search
+03F9: make_actors $5896 $5898 converse_in 600000000 ms
+$5899 = Actor.Create(CivMale, #CBB, -524.5753, -251.0094, 9.537)
+Actor.Angle($5899) = 185.2318
+0350: set_actor $5899 maintain_position_when_attacked 1
+01ED: clear_actor $5899 threat_search
+0372: set_actor $5899 anim 25 wait_state_time 100 ms
+if
+  $ONMISSION == 0 // integer values
+jf @HAIT2_2510
+$5885 = Object.Create(#RCBOMB, 0.0, 0.0, 0.0)
+$5883 = Player.RC_car($PLAYER_CHAR)
+$5902 = Marker.CreateAboveCar($5888)
+$5903 = Marker.CreateAboveCar($5887)
+$5904 = Marker.CreateAboveCar($5889)
+
+:HAIT2_2510
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:HAIT2_2550
+if
+fading
+jf @HAIT2_2574
+wait 0
+jump @HAIT2_2550
+
+:HAIT2_2574
+0169: set_fade_color 0 0 1
+fade 1 500
+02A3: enable_widescreen 1
+Camera.SetPosition(-552.6316, -220.1019, 22.1608, 0.0, 0.0, 0.0)
+Camera.PointAt(-551.9008, -220.5808, 21.6745, 2)
+Camera.SetAtPos(-524.1709, -234.6104, 8.1665)
+00BC: text_highpriority 'HAT2_B2' 4500 ms 1  // Kill the Cubans...
+01BD: $4811 = current_time_in_ms
+0084: $2274 = $4811 // integer values and handles
+$2274 += 4500 // integer values
+
+:HAIT2_2697
+if
+001C:   $2274 > $4811 // integer values
+jf @HAIT2_2813
+wait 0
+01BD: $4811 = current_time_in_ms
+if
+00E1:   player 0 pressed_button 16
+jf @HAIT2_2781
+if
+  $61 == 1 // integer values
+jf @HAIT2_2774
+$61 = 0 // integer values
+jump @HAIT2_3016
+
+:HAIT2_2774
+jump @HAIT2_2806
+
+:HAIT2_2781
+if
+  $61 == 0 // integer values
+jf @HAIT2_2806
+$61 = 1 // integer values
+
+:HAIT2_2806
+jump @HAIT2_2697
+
+:HAIT2_2813
+Camera.SetPosition(-541.3336, -237.3457, 9.8484, 0.0, 0.0, 0.0)
+Camera.PointAt(-540.4141, -237.0497, 9.5899, 2)
+00BC: text_highpriority 'HAT2_B4' 4000 ms 1  // ...and destroy their boats!
+01BD: $4811 = current_time_in_ms
+0084: $2274 = $4811 // integer values and handles
+$2274 += 4000 // integer values
+
+:HAIT2_2900
+if
+001C:   $2274 > $4811 // integer values
+jf @HAIT2_3016
+wait 0
+01BD: $4811 = current_time_in_ms
+if
+00E1:   player 0 pressed_button 16
+jf @HAIT2_2984
+if
+  $61 == 1 // integer values
+jf @HAIT2_2977
+$61 = 0 // integer values
+jump @HAIT2_3016
+
+:HAIT2_2977
+jump @HAIT2_3009
+
+:HAIT2_2984
+if
+  $61 == 0 // integer values
+jf @HAIT2_3009
+$61 = 1 // integer values
+
+:HAIT2_3009
+jump @HAIT2_2900
+
+:HAIT2_3016
+$61 = 0 // integer values
+if
+   Car.Wrecked($5884)
+jf @HAIT2_3046
+jump @HAIT2_17554
+
+:HAIT2_3046
+Car.PutAt($5884, -808.9448, -162.9215, 10.0458)
+Player.CanMove($PLAYER_CHAR) = True
+Camera.Restore_WithJumpCut
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+03F4: set_all_vehicles_apply_damage_rules 1
+
+:HAIT2_3097
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @HAIT2_15146
+wait 0
+01BD: $4811 = current_time_in_ms
+if
+   Car.Wrecked($5884)
+jf @HAIT2_3145
+jump @HAIT2_17554
+
+:HAIT2_3145
+if
+  $5882 == 0 // integer values
+jf @HAIT2_5370
+if
+0442:   player $PLAYER_CHAR in_car $5884
+jf @HAIT2_4579
+if
+   not Player.InRemoteMode($PLAYER_CHAR)
+jf @HAIT2_3417
+if
+   not $5868 == 0 // integer values
+jf @HAIT2_3348
+if
+838A:   not car_in_cube -812.0 -168.0 10.0457 0.6 0.6 1.0
+jf @HAIT2_3334
+046E: put_player $PLAYER_CHAR in_RC_mode_at -812.0 -168.0 10.0457 angle 180.0 RC_model #RCBARON
+$5868 -= 1 // integer values
+if
+  $5868 == 2 // integer values
+jf @HAIT2_3327
+03C4: set_status_text_to $5868 0 'HAT2_B9'  // RC Planes:
+
+:HAIT2_3327
+jump @HAIT2_3341
+
+:HAIT2_3334
+jump @HAIT2_3016
+
+:HAIT2_3341
+jump @HAIT2_3386
+
+:HAIT2_3348
+00BC: text_highpriority 'HAT2_B8' 5000 ms 1  // ~r~You have no RC planes left!
+$5882 = 1 // integer values
+0084: $5881 = $4811 // integer values and handles
+$5881 += 2000 // integer values
+
+:HAIT2_3386
+$5883 = Player.RC_car($PLAYER_CHAR)
+048A: enable_rc_vehicle_detonation 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.CanMove($PLAYER_CHAR) = True
+
+:HAIT2_3417
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @HAIT2_4572
+if
+  $5879 == 0 // integer values
+jf @HAIT2_3526
+03E6: remove_text_box
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @HAIT2_3493
+03E5: text_box 'PLANE_4'  // Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+jump @HAIT2_3503
+
+:HAIT2_3493
+03E5: text_box 'PLANE_H'  // Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+
+:HAIT2_3503
+$5879 += 1 // integer values
+0084: $5880 = $4811 // integer values and handles
+$5880 += 6000 // integer values
+
+:HAIT2_3526
+if
+  $5879 == 1 // integer values
+jf @HAIT2_3622
+if
+001C:   $4811 > $5880 // integer values
+jf @HAIT2_3622
+03E6: remove_text_box
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @HAIT2_3605
+03E5: text_box 'BOLLOX'  // Press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button to drop a bomb. Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to cancel.
+jump @HAIT2_3615
+
+:HAIT2_3605
+03E5: text_box 'HAT2_B3'  // Press the ~h~~k~~PED_FIREWEAPON~ ~w~button to drop a bomb. Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to cancel.
+
+:HAIT2_3615
+$5879 += 1 // integer values
+
+:HAIT2_3622
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_4367
+if
+01FE:   player $PLAYER_CHAR near_car_in_car $5883 radius 500.0 750.0 0
+jf @HAIT2_4295
+if
+81FE:   not player $PLAYER_CHAR near_car_in_car $5883 radius 450.0 700.0 0
+jf @HAIT2_3714
+00BC: text_highpriority 'HAT2_B6' 100 ms 1  // ~r~The RC plane is getting too far out of range!
+
+:HAIT2_3714
+$5869 = 0 // integer values
+Car.StorePos($5883, $5915, $5916, $5917)
+if
+83CA:   not object $5885 exists
+jf @HAIT2_3818
+if
+001C:   $4811 > $5871 // integer values
+jf @HAIT2_3811
+$5885 = Object.Create(#RCBOMB, $5915, $5916, $5917)
+Object.CollisionDetection($5885) = False
+Object.ToggleInMovingList($5885) = False
+$5918 = 0.0 // floating-point values
+
+:HAIT2_3811
+jump @HAIT2_4046
+
+:HAIT2_3818
+02CE: $98 = ground_z $5915 $5916 $5917
+0086: $5914 = $5917 // floating-point values only
+0061: $5914 -= $98 // floating-point values
+if
+  $5914 > 0.5 // floating-point values
+jf @HAIT2_3945
+0363: toggle_model_render_at $5915 $5916 $5917 radius 10.0 object #RCBOMB 1
+007E: $5918 -= frame_delta_time * 0.05 // floating-point values
+if
+  -0.5 > $5918 // floating-point values
+jf @HAIT2_3938
+$5918 = -0.5 // floating-point values
+$5869 = 1 // integer values
+
+:HAIT2_3938
+jump @HAIT2_4025
+
+:HAIT2_3945
+0086: $5918 = $5914 // floating-point values only
+$5918 -= 1.0 // floating-point values
+$5918 *= -1.0 // floating-point values
+if
+  $5918 > 0.0 // floating-point values
+jf @HAIT2_4025
+$5918 = 0.0 // floating-point values
+0363: toggle_model_render_at $5915 $5916 $5917 radius 10.0 object #RCBOMB 0
+
+:HAIT2_4025
+035C: place_object $5885 relative_to_car $5883 offset 0.0 0.0 $5918
+
+:HAIT2_4046
+if
+0585:
+jf @HAIT2_4244
+if
+  $5863 == 0 // integer values
+jf @HAIT2_4237
+if
+  $5869 == 1 // integer values
+jf @HAIT2_4237
+$5918 -= 0.5 // floating-point values
+035C: place_object $5885 relative_to_car $5883 offset 0.0 0.0 $5918
+Object.ToggleInMovingList($5885) = True
+Object.CollisionDetection($5885) = True
+038C: object $5885 scatter 0.0 0.0 0.0
+0084: $5871 = $4811 // integer values and handles
+$5871 += 500 // integer values
+0084: $5886 = $5885 // integer values and handles
+$5885 = -1 // integer values
+04D9: object $5886 set_scripted_collision_check 1
+0084: $5864 = $4811 // integer values and handles
+$5864 += 250 // integer values
+0084: $5870 = $4811 // integer values and handles
+$5870 += 3000 // integer values
+$5863 = 1 // integer values
+
+:HAIT2_4237
+jump @HAIT2_4288
+
+:HAIT2_4244
+if
+  $5863 == 2 // integer values
+jf @HAIT2_4288
+if
+001C:   $4811 > $5864 // integer values
+jf @HAIT2_4288
+$5863 = 0 // integer values
+
+:HAIT2_4288
+jump @HAIT2_4360
+
+:HAIT2_4295
+if
+   not $5883 == -1 // integer values
+jf @HAIT2_4360
+04DB: exit_rc_mode
+Player.CanMove($PLAYER_CHAR) = False
+Object.RemoveReferences($5885)
+Object.RemoveReferences($5886)
+$5885 = -1 // integer values
+$5886 = -1 // integer values
+$5883 = -1 // integer values
+$5863 = 0 // integer values
+
+:HAIT2_4360
+jump @HAIT2_4425
+
+:HAIT2_4367
+if
+   not $5883 == -1 // integer values
+jf @HAIT2_4425
+04DB: exit_rc_mode
+Object.RemoveReferences($5885)
+Object.RemoveReferences($5886)
+$5885 = -1 // integer values
+$5886 = -1 // integer values
+$5883 = -1 // integer values
+$5863 = 0 // integer values
+
+:HAIT2_4425
+if
+00E1:   player 0 pressed_button 15
+jf @HAIT2_4547
+if
+  $61 == 1 // integer values
+jf @HAIT2_4540
+if
+   not $5883 == -1 // integer values
+jf @HAIT2_4533
+00BC: text_highpriority 'RCCANX' 2000 ms 1  // ~r~RC plane cancelled.
+04DB: exit_rc_mode
+Object.RemoveReferences($5885)
+Object.RemoveReferences($5886)
+$5885 = -1 // integer values
+$5886 = -1 // integer values
+$5883 = -1 // integer values
+$5863 = 0 // integer values
+
+:HAIT2_4533
+$61 = 0 // integer values
+
+:HAIT2_4540
+jump @HAIT2_4572
+
+:HAIT2_4547
+if
+  $61 == 0 // integer values
+jf @HAIT2_4572
+$61 = 1 // integer values
+
+:HAIT2_4572
+jump @HAIT2_4637
+
+:HAIT2_4579
+if
+   not $5883 == -1 // integer values
+jf @HAIT2_4637
+04DB: exit_rc_mode
+Object.RemoveReferences($5885)
+Object.RemoveReferences($5886)
+$5885 = -1 // integer values
+$5886 = -1 // integer values
+$5883 = -1 // integer values
+$5863 = 0 // integer values
+
+:HAIT2_4637
+if
+  $5863 == 1 // integer values
+jf @HAIT2_4808
+if
+03CA:   object $5886 exists
+jf @HAIT2_4808
+Object.StorePos($5886, $5915, $5916, $5917)
+02CE: $98 = ground_z $5915 $5916 $5917
+$98 += 0.5 // floating-point values
+if
+  6.0 > $98 // floating-point values
+jf @HAIT2_4740
+$98 = 6.0 // floating-point values
+
+:HAIT2_4740
+if or
+04DA:   has_object $5886 collided
+001C:   $4811 > $5870 // integer values
+04E7:   object $5886 in_water
+jf @HAIT2_4808
+04D9: object $5886 set_scripted_collision_check 0
+020C: create_explosion_with_radius 0 at $5915 $5916 $5917
+Object.RemoveReferences($5886)
+$5886 = -1 // integer values
+$5863 = 2 // integer values
+
+:HAIT2_4808
+if
+  $5866 == 0 // integer values
+jf @HAIT2_5363
+if
+03CA:   object $5886 exists
+jf @HAIT2_5363
+if or
+04EA:   object $5886 in_cube -554.2964 -277.5887 0.0 -492.513 -212.6366 20.0 flag 0
+0057:   player $PLAYER_CHAR 0 -554.2964 -277.5887 0.0 -492.513 -212.6366 20.0
+jf @HAIT2_5363
+if
+   not Actor.Dead($5891)
+jf @HAIT2_4965
+$5905 = Marker.CreateAboveActor($5891)
+018B: show_on_radar $5905 2
+0168: set_blip $5905 size 2
+
+:HAIT2_4965
+if
+   not Actor.Dead($5892)
+jf @HAIT2_5003
+$5906 = Marker.CreateAboveActor($5892)
+018B: show_on_radar $5906 2
+0168: set_blip $5906 size 2
+
+:HAIT2_5003
+if
+   not Actor.Dead($5893)
+jf @HAIT2_5041
+$5907 = Marker.CreateAboveActor($5893)
+018B: show_on_radar $5907 2
+0168: set_blip $5907 size 2
+
+:HAIT2_5041
+if
+   not Actor.Dead($5894)
+jf @HAIT2_5079
+$5908 = Marker.CreateAboveActor($5894)
+018B: show_on_radar $5908 2
+0168: set_blip $5908 size 2
+
+:HAIT2_5079
+if
+   not Actor.Dead($5895)
+jf @HAIT2_5117
+$5909 = Marker.CreateAboveActor($5895)
+018B: show_on_radar $5909 2
+0168: set_blip $5909 size 2
+
+:HAIT2_5117
+if
+   not Actor.Dead($5896)
+jf @HAIT2_5155
+$5910 = Marker.CreateAboveActor($5896)
+018B: show_on_radar $5910 2
+0168: set_blip $5910 size 2
+
+:HAIT2_5155
+if
+   not Actor.Dead($5897)
+jf @HAIT2_5193
+$5911 = Marker.CreateAboveActor($5897)
+018B: show_on_radar $5911 2
+0168: set_blip $5911 size 2
+
+:HAIT2_5193
+if
+   not Actor.Dead($5898)
+jf @HAIT2_5231
+$5912 = Marker.CreateAboveActor($5898)
+018B: show_on_radar $5912 2
+0168: set_blip $5912 size 2
+
+:HAIT2_5231
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_5260
+Marker.Disable($5902)
+$5902 = Marker.CreateAboveCar($5888)
+
+:HAIT2_5260
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_5289
+Marker.Disable($5903)
+$5903 = Marker.CreateAboveCar($5887)
+
+:HAIT2_5289
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_5318
+Marker.Disable($5904)
+$5904 = Marker.CreateAboveCar($5889)
+
+:HAIT2_5318
+if
+   not Actor.Dead($5899)
+jf @HAIT2_5356
+$5913 = Marker.CreateAboveActor($5899)
+018B: show_on_radar $5913 2
+0168: set_blip $5913 size 2
+
+:HAIT2_5356
+$5866 = 1 // integer values
+
+:HAIT2_5363
+jump @HAIT2_5396
+
+:HAIT2_5370
+if
+001C:   $4811 > $5881 // integer values
+jf @HAIT2_5396
+jump @HAIT2_17554
+
+:HAIT2_5396
+$5872 = 0 // integer values
+if
+   not Actor.Dead($5891)
+jf @HAIT2_5858
+if
+  $5866 == 1 // integer values
+jf @HAIT2_5851
+if
+  0@ == 0 // integer values
+jf @HAIT2_5541
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_5519
+01B2: give_actor $5891 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5891 destroy_car $5883
+008B: 1@ = $4811 // integer values and handles
+1@ += 3500 // integer values
+0@ = 1 // integer values
+jump @HAIT2_5541
+
+:HAIT2_5519
+008B: 1@ = $4811 // integer values and handles
+1@ -= 100 // integer values
+0@ = 1 // integer values
+
+:HAIT2_5541
+if
+  0@ == 1 // integer values
+jf @HAIT2_5675
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_5583
+01D9: actor $5891 destroy_car $5883
+
+:HAIT2_5583
+if
+001E:   $4811 > 1@ // integer values
+jf @HAIT2_5675
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_5668
+011C: actor $5891 clear_objective
+0239: actor $5891 run_to -535.0269 -230.2825
+008B: 1@ = $4811 // integer values and handles
+1@ += 700 // integer values
+0@ = 2 // integer values
+jump @HAIT2_5675
+
+:HAIT2_5668
+0@ = 100 // integer values
+
+:HAIT2_5675
+if
+  0@ == 2 // integer values
+jf @HAIT2_5809
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_5802
+if
+0185:   car $5887 health >= 250
+jf @HAIT2_5788
+if
+001E:   $4811 > 1@ // integer values
+jf @HAIT2_5781
+011C: actor $5891 clear_objective
+Marker.Disable($5905)
+Actor.DestroyInstantly($5891)
+0129: $5891 = create_actor 4 #CBA in_car $5887 driverseat
+0@ = 3 // integer values
+
+:HAIT2_5781
+jump @HAIT2_5795
+
+:HAIT2_5788
+0@ = 100 // integer values
+
+:HAIT2_5795
+jump @HAIT2_5809
+
+:HAIT2_5802
+0@ = 100 // integer values
+
+:HAIT2_5809
+if
+  0@ == 100 // integer values
+jf @HAIT2_5851
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_5851
+01D9: actor $5891 destroy_car $5883
+
+:HAIT2_5851
+jump @HAIT2_5914
+
+:HAIT2_5858
+if
+   not 0@ == -10 // integer values
+jf @HAIT2_5907
+Marker.Disable($5905)
+018C: play_sound 1 at 0.0 0.0 0.0
+0@ = -10 // integer values
+
+:HAIT2_5907
+$5872 += 1 // integer values
+
+:HAIT2_5914
+if
+   not Actor.Dead($5892)
+jf @HAIT2_6672
+if
+  $5866 == 1 // integer values
+jf @HAIT2_6656
+if
+  2@ == 0 // integer values
+jf @HAIT2_6061
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_6039
+0372: set_actor $5892 anim 0 wait_state_time 17 ms
+01B2: give_actor $5892 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5892 destroy_car $5883
+008B: 3@ = $4811 // integer values and handles
+3@ += 3700 // integer values
+2@ = 1 // integer values
+jump @HAIT2_6061
+
+:HAIT2_6039
+008B: 3@ = $4811 // integer values and handles
+3@ -= 100 // integer values
+2@ = 1 // integer values
+
+:HAIT2_6061
+if
+  2@ == 1 // integer values
+jf @HAIT2_6179
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_6103
+01D9: actor $5892 destroy_car $5883
+
+:HAIT2_6103
+if
+001E:   $4811 > 3@ // integer values
+jf @HAIT2_6179
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_6172
+011C: actor $5892 clear_objective
+0239: actor $5892 run_to -537.8747 -233.085
+2@ = 2 // integer values
+jump @HAIT2_6179
+
+:HAIT2_6172
+2@ = 100 // integer values
+
+:HAIT2_6179
+if
+  2@ == 2 // integer values
+jf @HAIT2_6287
+if
+00ED:   actor $5892 0 -537.8747 -233.085 radius 1.0 1.0
+jf @HAIT2_6287
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_6280
+0239: actor $5892 run_to -535.1575 -233.1016
+2@ = 3 // integer values
+jump @HAIT2_6287
+
+:HAIT2_6280
+2@ = 100 // integer values
+
+:HAIT2_6287
+if
+  2@ == 3 // integer values
+jf @HAIT2_6411
+if
+00ED:   actor $5892 0 -535.1575 -233.1016 radius 1.0 1.0
+jf @HAIT2_6411
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_6404
+0239: actor $5892 run_to -535.0269 -230.2825
+008B: 3@ = $4811 // integer values and handles
+3@ += 700 // integer values
+2@ = 4 // integer values
+jump @HAIT2_6411
+
+:HAIT2_6404
+2@ = 100 // integer values
+
+:HAIT2_6411
+if
+  2@ == 4 // integer values
+jf @HAIT2_6607
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_6600
+if
+0185:   car $5887 health >= 250
+jf @HAIT2_6586
+if
+001E:   $4811 > 3@ // integer values
+jf @HAIT2_6579
+if
+   not Actor.Dead($5891)
+jf @HAIT2_6550
+0464: put_actor $5892 into_turret_on_car $5887 at_car_offset 0.6462 1.4897 1.3333 position 2 angle 360.0 with_weapon 27
+Marker.Disable($5906)
+2@ = 100 // integer values
+jump @HAIT2_6579
+
+:HAIT2_6550
+Marker.Disable($5906)
+Actor.DestroyInstantly($5892)
+0129: $5892 = create_actor 4 #CBA in_car $5887 driverseat
+2@ = 5 // integer values
+
+:HAIT2_6579
+jump @HAIT2_6593
+
+:HAIT2_6586
+2@ = 100 // integer values
+
+:HAIT2_6593
+jump @HAIT2_6607
+
+:HAIT2_6600
+2@ = 100 // integer values
+
+:HAIT2_6607
+if
+  2@ == 100 // integer values
+jf @HAIT2_6649
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_6649
+01D9: actor $5892 destroy_car $5883
+
+:HAIT2_6649
+jump @HAIT2_6665
+
+:HAIT2_6656
+0372: set_actor $5892 anim 25 wait_state_time 100 ms
+
+:HAIT2_6665
+jump @HAIT2_6733
+
+:HAIT2_6672
+if
+   not 2@ == -10 // integer values
+jf @HAIT2_6726
+Marker.Disable($5906)
+0465: remove_actor $5892 from_turret_mode
+018C: play_sound 1 at 0.0 0.0 0.0
+2@ = -10 // integer values
+
+:HAIT2_6726
+$5872 += 1 // integer values
+
+:HAIT2_6733
+if
+   not Actor.Dead($5893)
+jf @HAIT2_7363
+if
+  $5866 == 1 // integer values
+jf @HAIT2_7356
+if
+  4@ == 0 // integer values
+jf @HAIT2_6871
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_6849
+01B2: give_actor $5893 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5893 destroy_car $5883
+008B: 5@ = $4811 // integer values and handles
+5@ += 3900 // integer values
+4@ = 1 // integer values
+jump @HAIT2_6871
+
+:HAIT2_6849
+008B: 5@ = $4811 // integer values and handles
+5@ -= 100 // integer values
+4@ = 1 // integer values
+
+:HAIT2_6871
+if
+  4@ == 1 // integer values
+jf @HAIT2_6989
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_6913
+01D9: actor $5893 destroy_car $5883
+
+:HAIT2_6913
+if
+001E:   $4811 > 5@ // integer values
+jf @HAIT2_6989
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_6982
+011C: actor $5893 clear_objective
+0239: actor $5893 run_to -535.1575 -233.1016
+4@ = 2 // integer values
+jump @HAIT2_6989
+
+:HAIT2_6982
+4@ = 100 // integer values
+
+:HAIT2_6989
+if
+  4@ == 2 // integer values
+jf @HAIT2_7113
+if
+00ED:   actor $5893 0 -535.1575 -233.1016 radius 1.0 1.0
+jf @HAIT2_7113
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_7106
+0239: actor $5893 run_to -535.0269 -230.2825
+008B: 5@ = $4811 // integer values and handles
+5@ += 700 // integer values
+4@ = 3 // integer values
+jump @HAIT2_7113
+
+:HAIT2_7106
+4@ = 100 // integer values
+
+:HAIT2_7113
+if
+  4@ == 3 // integer values
+jf @HAIT2_7314
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_7307
+if
+0185:   car $5887 health >= 250
+jf @HAIT2_7293
+if
+001E:   $4811 > 5@ // integer values
+jf @HAIT2_7286
+if or
+   not Actor.Dead($5891)
+   not Actor.Dead($5892)
+jf @HAIT2_7257
+0464: put_actor $5893 into_turret_on_car $5887 at_car_offset -0.6107 1.4015 1.3205 position 2 angle 360.0 with_weapon 27
+Marker.Disable($5907)
+4@ = 100 // integer values
+jump @HAIT2_7286
+
+:HAIT2_7257
+Marker.Disable($5907)
+Actor.DestroyInstantly($5893)
+0129: $5893 = create_actor 4 #CBB in_car $5887 driverseat
+4@ = 4 // integer values
+
+:HAIT2_7286
+jump @HAIT2_7300
+
+:HAIT2_7293
+4@ = 100 // integer values
+
+:HAIT2_7300
+jump @HAIT2_7314
+
+:HAIT2_7307
+4@ = 100 // integer values
+
+:HAIT2_7314
+if
+  4@ == 100 // integer values
+jf @HAIT2_7356
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_7356
+01D9: actor $5893 destroy_car $5883
+
+:HAIT2_7356
+jump @HAIT2_7424
+
+:HAIT2_7363
+if
+   not 4@ == -10 // integer values
+jf @HAIT2_7417
+Marker.Disable($5907)
+0465: remove_actor $5893 from_turret_mode
+018C: play_sound 1 at 0.0 0.0 0.0
+4@ = -10 // integer values
+
+:HAIT2_7417
+$5872 += 1 // integer values
+
+:HAIT2_7424
+if
+   not Actor.Dead($5894)
+jf @HAIT2_8007
+if
+  $5866 == 1 // integer values
+jf @HAIT2_7991
+if
+  6@ == 0 // integer values
+jf @HAIT2_7571
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_7549
+0372: set_actor $5894 anim 0 wait_state_time 17 ms
+01B2: give_actor $5894 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5894 destroy_car $5883
+008B: 7@ = $4811 // integer values and handles
+7@ += 1200 // integer values
+6@ = 1 // integer values
+jump @HAIT2_7571
+
+:HAIT2_7549
+008B: 7@ = $4811 // integer values and handles
+7@ -= 100 // integer values
+6@ = 1 // integer values
+
+:HAIT2_7571
+if
+  6@ == 1 // integer values
+jf @HAIT2_7689
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_7613
+01D9: actor $5894 destroy_car $5883
+
+:HAIT2_7613
+if
+001E:   $4811 > 7@ // integer values
+jf @HAIT2_7689
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_7682
+011C: actor $5894 clear_objective
+0239: actor $5894 run_to -524.5031 -232.6815
+6@ = 2 // integer values
+jump @HAIT2_7689
+
+:HAIT2_7682
+6@ = 100 // integer values
+
+:HAIT2_7689
+if
+  6@ == 2 // integer values
+jf @HAIT2_7813
+if
+00ED:   actor $5894 0 -524.5031 -232.6815 radius 1.0 1.0
+jf @HAIT2_7813
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_7806
+0239: actor $5894 run_to -524.4131 -229.7234
+008B: 7@ = $4811 // integer values and handles
+7@ += 700 // integer values
+6@ = 3 // integer values
+jump @HAIT2_7813
+
+:HAIT2_7806
+6@ = 100 // integer values
+
+:HAIT2_7813
+if
+  6@ == 3 // integer values
+jf @HAIT2_7942
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_7935
+if
+0185:   car $5888 health >= 250
+jf @HAIT2_7921
+if
+001E:   $4811 > 7@ // integer values
+jf @HAIT2_7914
+Marker.Disable($5908)
+Actor.DestroyInstantly($5894)
+0129: $5894 = create_actor 4 #CBB in_car $5888 driverseat
+6@ = 4 // integer values
+
+:HAIT2_7914
+jump @HAIT2_7928
+
+:HAIT2_7921
+6@ = 100 // integer values
+
+:HAIT2_7928
+jump @HAIT2_7942
+
+:HAIT2_7935
+6@ = 100 // integer values
+
+:HAIT2_7942
+if
+  6@ == 100 // integer values
+jf @HAIT2_7984
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_7984
+01D9: actor $5894 destroy_car $5883
+
+:HAIT2_7984
+jump @HAIT2_8000
+
+:HAIT2_7991
+0372: set_actor $5894 anim 24 wait_state_time 100 ms
+
+:HAIT2_8000
+jump @HAIT2_8063
+
+:HAIT2_8007
+if
+   not 6@ == -10 // integer values
+jf @HAIT2_8056
+Marker.Disable($5908)
+018C: play_sound 1 at 0.0 0.0 0.0
+6@ = -10 // integer values
+
+:HAIT2_8056
+$5872 += 1 // integer values
+
+:HAIT2_8063
+if
+   not Actor.Dead($5895)
+jf @HAIT2_8713
+if
+  $5866 == 1 // integer values
+jf @HAIT2_8697
+if
+  8@ == 0 // integer values
+jf @HAIT2_8210
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_8188
+0372: set_actor $5895 anim 0 wait_state_time 17 ms
+01B2: give_actor $5895 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5895 destroy_car $5883
+008B: 9@ = $4811 // integer values and handles
+9@ += 1500 // integer values
+8@ = 1 // integer values
+jump @HAIT2_8210
+
+:HAIT2_8188
+008B: 9@ = $4811 // integer values and handles
+9@ -= 100 // integer values
+8@ = 1 // integer values
+
+:HAIT2_8210
+if
+  8@ == 1 // integer values
+jf @HAIT2_8328
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_8252
+01D9: actor $5895 destroy_car $5883
+
+:HAIT2_8252
+if
+001E:   $4811 > 9@ // integer values
+jf @HAIT2_8328
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_8321
+011C: actor $5895 clear_objective
+0239: actor $5895 run_to -524.5031 -232.6815
+8@ = 2 // integer values
+jump @HAIT2_8328
+
+:HAIT2_8321
+8@ = 100 // integer values
+
+:HAIT2_8328
+if
+  8@ == 2 // integer values
+jf @HAIT2_8452
+if
+00ED:   actor $5895 0 -524.5031 -232.6815 radius 1.0 1.0
+jf @HAIT2_8452
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_8445
+0239: actor $5895 run_to -524.4131 -229.7234
+008B: 9@ = $4811 // integer values and handles
+9@ += 700 // integer values
+8@ = 3 // integer values
+jump @HAIT2_8452
+
+:HAIT2_8445
+8@ = 100 // integer values
+
+:HAIT2_8452
+if
+  8@ == 3 // integer values
+jf @HAIT2_8648
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_8641
+if
+0185:   car $5888 health >= 250
+jf @HAIT2_8627
+if
+001E:   $4811 > 9@ // integer values
+jf @HAIT2_8620
+if
+   not Actor.Dead($5894)
+jf @HAIT2_8591
+0464: put_actor $5895 into_turret_on_car $5888 at_car_offset 0.2534 -0.2957 1.4395 position 2 angle 360.0 with_weapon 27
+Marker.Disable($5909)
+8@ = 100 // integer values
+jump @HAIT2_8620
+
+:HAIT2_8591
+Marker.Disable($5909)
+Actor.DestroyInstantly($5895)
+0129: $5895 = create_actor 4 #CBA in_car $5888 driverseat
+8@ = 4 // integer values
+
+:HAIT2_8620
+jump @HAIT2_8634
+
+:HAIT2_8627
+8@ = 100 // integer values
+
+:HAIT2_8634
+jump @HAIT2_8648
+
+:HAIT2_8641
+8@ = 100 // integer values
+
+:HAIT2_8648
+if
+  8@ == 100 // integer values
+jf @HAIT2_8690
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_8690
+01D9: actor $5895 destroy_car $5883
+
+:HAIT2_8690
+jump @HAIT2_8706
+
+:HAIT2_8697
+0372: set_actor $5895 anim 3 wait_state_time 100 ms
+
+:HAIT2_8706
+jump @HAIT2_8774
+
+:HAIT2_8713
+if
+   not 8@ == -10 // integer values
+jf @HAIT2_8767
+Marker.Disable($5909)
+0465: remove_actor $5895 from_turret_mode
+018C: play_sound 1 at 0.0 0.0 0.0
+8@ = -10 // integer values
+
+:HAIT2_8767
+$5872 += 1 // integer values
+
+:HAIT2_8774
+if
+   not Actor.Dead($5896)
+jf @HAIT2_9548
+if
+  $5866 == 1 // integer values
+jf @HAIT2_9541
+if
+  10@ == 0 // integer values
+jf @HAIT2_8912
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_8890
+01B2: give_actor $5896 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5896 destroy_car $5883
+008B: 11@ = $4811 // integer values and handles
+11@ += 1800 // integer values
+10@ = 1 // integer values
+jump @HAIT2_8912
+
+:HAIT2_8890
+008B: 11@ = $4811 // integer values and handles
+11@ -= 100 // integer values
+10@ = 1 // integer values
+
+:HAIT2_8912
+if
+  10@ == 1 // integer values
+jf @HAIT2_9030
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_8954
+01D9: actor $5896 destroy_car $5883
+
+:HAIT2_8954
+if
+001E:   $4811 > 11@ // integer values
+jf @HAIT2_9030
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9023
+011C: actor $5896 clear_objective
+0239: actor $5896 run_to -521.9704 -240.8421
+10@ = 2 // integer values
+jump @HAIT2_9030
+
+:HAIT2_9023
+10@ = 100 // integer values
+
+:HAIT2_9030
+if
+  10@ == 2 // integer values
+jf @HAIT2_9138
+if
+00ED:   actor $5896 0 -521.9704 -240.8421 radius 1.0 1.0
+jf @HAIT2_9138
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9131
+0239: actor $5896 run_to -522.0861 -235.0635
+10@ = 3 // integer values
+jump @HAIT2_9138
+
+:HAIT2_9131
+10@ = 100 // integer values
+
+:HAIT2_9138
+if
+  10@ == 3 // integer values
+jf @HAIT2_9246
+if
+00ED:   actor $5896 0 -522.0861 -235.0635 radius 1.0 1.0
+jf @HAIT2_9246
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9239
+0239: actor $5896 run_to -517.2231 -232.8405
+10@ = 4 // integer values
+jump @HAIT2_9246
+
+:HAIT2_9239
+10@ = 100 // integer values
+
+:HAIT2_9246
+if
+  10@ == 4 // integer values
+jf @HAIT2_9370
+if
+00ED:   actor $5896 0 -517.2231 -232.8405 radius 1.0 1.0
+jf @HAIT2_9370
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9363
+0239: actor $5896 run_to -515.7076 -230.4083
+008B: 11@ = $4811 // integer values and handles
+11@ += 700 // integer values
+10@ = 5 // integer values
+jump @HAIT2_9370
+
+:HAIT2_9363
+10@ = 100 // integer values
+
+:HAIT2_9370
+if
+  10@ == 5 // integer values
+jf @HAIT2_9499
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9492
+if
+0185:   car $5889 health >= 250
+jf @HAIT2_9478
+if
+001E:   $4811 > 11@ // integer values
+jf @HAIT2_9471
+Marker.Disable($5910)
+Actor.DestroyInstantly($5896)
+0129: $5896 = create_actor 4 #CBA in_car $5889 driverseat
+10@ = 6 // integer values
+
+:HAIT2_9471
+jump @HAIT2_9485
+
+:HAIT2_9478
+10@ = 100 // integer values
+
+:HAIT2_9485
+jump @HAIT2_9499
+
+:HAIT2_9492
+10@ = 100 // integer values
+
+:HAIT2_9499
+if
+  10@ == 100 // integer values
+jf @HAIT2_9541
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_9541
+01D9: actor $5896 destroy_car $5883
+
+:HAIT2_9541
+jump @HAIT2_9604
+
+:HAIT2_9548
+if
+   not 10@ == -10 // integer values
+jf @HAIT2_9597
+Marker.Disable($5910)
+018C: play_sound 1 at 0.0 0.0 0.0
+10@ = -10 // integer values
+
+:HAIT2_9597
+$5872 += 1 // integer values
+
+:HAIT2_9604
+if
+   not Actor.Dead($5897)
+jf @HAIT2_10362
+if
+  $5866 == 1 // integer values
+jf @HAIT2_10346
+if
+  12@ == 0 // integer values
+jf @HAIT2_9751
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_9729
+0372: set_actor $5897 anim 0 wait_state_time 17 ms
+01B2: give_actor $5897 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5897 destroy_car $5883
+008B: 13@ = $4811 // integer values and handles
+13@ += 4100 // integer values
+12@ = 1 // integer values
+jump @HAIT2_9751
+
+:HAIT2_9729
+008B: 13@ = $4811 // integer values and handles
+13@ -= 100 // integer values
+12@ = 1 // integer values
+
+:HAIT2_9751
+if
+  12@ == 1 // integer values
+jf @HAIT2_9869
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_9793
+01D9: actor $5897 destroy_car $5883
+
+:HAIT2_9793
+if
+001E:   $4811 > 13@ // integer values
+jf @HAIT2_9869
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9862
+011C: actor $5897 clear_objective
+0239: actor $5897 run_to -512.1264 -237.3874
+12@ = 2 // integer values
+jump @HAIT2_9869
+
+:HAIT2_9862
+12@ = 100 // integer values
+
+:HAIT2_9869
+if
+  12@ == 2 // integer values
+jf @HAIT2_9977
+if
+00ED:   actor $5897 0 -512.1264 -237.3874 radius 1.0 1.0
+jf @HAIT2_9977
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_9970
+0239: actor $5897 run_to -512.0654 -232.852
+12@ = 3 // integer values
+jump @HAIT2_9977
+
+:HAIT2_9970
+12@ = 100 // integer values
+
+:HAIT2_9977
+if
+  12@ == 3 // integer values
+jf @HAIT2_10101
+if
+00ED:   actor $5897 0 -512.0654 -232.852 radius 1.0 1.0
+jf @HAIT2_10101
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_10094
+0239: actor $5897 run_to -513.3506 -230.3167
+008B: 13@ = $4811 // integer values and handles
+13@ += 700 // integer values
+12@ = 4 // integer values
+jump @HAIT2_10101
+
+:HAIT2_10094
+12@ = 100 // integer values
+
+:HAIT2_10101
+if
+  12@ == 4 // integer values
+jf @HAIT2_10297
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_10290
+if
+0185:   car $5889 health >= 250
+jf @HAIT2_10276
+if
+001E:   $4811 > 13@ // integer values
+jf @HAIT2_10269
+if
+   not Actor.Dead($5896)
+jf @HAIT2_10240
+0464: put_actor $5897 into_turret_on_car $5889 at_car_offset -0.1968 2.0053 0.8746 position 2 angle 360.0 with_weapon 27
+Marker.Disable($5911)
+12@ = 100 // integer values
+jump @HAIT2_10269
+
+:HAIT2_10240
+Marker.Disable($5911)
+Actor.DestroyInstantly($5897)
+0129: $5897 = create_actor 4 #CBB in_car $5889 driverseat
+12@ = 5 // integer values
+
+:HAIT2_10269
+jump @HAIT2_10283
+
+:HAIT2_10276
+12@ = 100 // integer values
+
+:HAIT2_10283
+jump @HAIT2_10297
+
+:HAIT2_10290
+12@ = 100 // integer values
+
+:HAIT2_10297
+if
+  12@ == 100 // integer values
+jf @HAIT2_10339
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_10339
+01D9: actor $5897 destroy_car $5883
+
+:HAIT2_10339
+jump @HAIT2_10355
+
+:HAIT2_10346
+0372: set_actor $5897 anim 25 wait_state_time 100 ms
+
+:HAIT2_10355
+jump @HAIT2_10423
+
+:HAIT2_10362
+if
+   not 12@ == -10 // integer values
+jf @HAIT2_10416
+Marker.Disable($5911)
+0465: remove_actor $5897 from_turret_mode
+018C: play_sound 1 at 0.0 0.0 0.0
+12@ = -10 // integer values
+
+:HAIT2_10416
+$5872 += 1 // integer values
+
+:HAIT2_10423
+if
+   not Actor.Dead($5898)
+jf @HAIT2_11278
+if
+  $5866 == 1 // integer values
+jf @HAIT2_11271
+if
+  14@ == 0 // integer values
+jf @HAIT2_10570
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_10548
+0372: set_actor $5898 anim 0 wait_state_time 17 ms
+01B2: give_actor $5898 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5898 destroy_car $5883
+008B: 15@ = $4811 // integer values and handles
+15@ += 3400 // integer values
+14@ = 1 // integer values
+jump @HAIT2_10570
+
+:HAIT2_10548
+008B: 15@ = $4811 // integer values and handles
+15@ -= 100 // integer values
+14@ = 1 // integer values
+
+:HAIT2_10570
+if
+  14@ == 1 // integer values
+jf @HAIT2_10688
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_10612
+01D9: actor $5898 destroy_car $5883
+
+:HAIT2_10612
+if
+001E:   $4811 > 15@ // integer values
+jf @HAIT2_10688
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_10681
+011C: actor $5898 clear_objective
+0239: actor $5898 run_to -521.9704 -240.8421
+14@ = 2 // integer values
+jump @HAIT2_10688
+
+:HAIT2_10681
+14@ = 100 // integer values
+
+:HAIT2_10688
+if
+  14@ == 2 // integer values
+jf @HAIT2_10796
+if
+00ED:   actor $5898 0 -521.9704 -240.8421 radius 1.0 1.0
+jf @HAIT2_10796
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_10789
+0239: actor $5898 run_to -522.0861 -235.0635
+14@ = 3 // integer values
+jump @HAIT2_10796
+
+:HAIT2_10789
+14@ = 100 // integer values
+
+:HAIT2_10796
+if
+  14@ == 3 // integer values
+jf @HAIT2_10904
+if
+00ED:   actor $5898 0 -522.0861 -235.0635 radius 1.0 1.0
+jf @HAIT2_10904
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_10897
+0239: actor $5898 run_to -517.2231 -232.8405
+14@ = 4 // integer values
+jump @HAIT2_10904
+
+:HAIT2_10897
+14@ = 100 // integer values
+
+:HAIT2_10904
+if
+  14@ == 4 // integer values
+jf @HAIT2_11028
+if
+00ED:   actor $5898 0 -517.2231 -232.8405 radius 1.0 1.0
+jf @HAIT2_11028
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_11021
+0239: actor $5898 run_to -515.7076 -230.4083
+008B: 15@ = $4811 // integer values and handles
+15@ += 700 // integer values
+14@ = 5 // integer values
+jump @HAIT2_11028
+
+:HAIT2_11021
+14@ = 100 // integer values
+
+:HAIT2_11028
+if
+  14@ == 5 // integer values
+jf @HAIT2_11229
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_11222
+if
+0185:   car $5889 health >= 250
+jf @HAIT2_11208
+if
+001E:   $4811 > 15@ // integer values
+jf @HAIT2_11201
+if or
+   not Actor.Dead($5896)
+   not Actor.Dead($5897)
+jf @HAIT2_11172
+0464: put_actor $5898 into_turret_on_car $5889 at_car_offset 0.0444 -1.8993 1.0885 position 2 angle 360.0 with_weapon 27
+Marker.Disable($5912)
+14@ = 100 // integer values
+jump @HAIT2_11201
+
+:HAIT2_11172
+Marker.Disable($5912)
+Actor.DestroyInstantly($5898)
+0129: $5898 = create_actor 4 #CBB in_car $5889 driverseat
+14@ = 6 // integer values
+
+:HAIT2_11201
+jump @HAIT2_11215
+
+:HAIT2_11208
+14@ = 100 // integer values
+
+:HAIT2_11215
+jump @HAIT2_11229
+
+:HAIT2_11222
+14@ = 100 // integer values
+
+:HAIT2_11229
+if
+  14@ == 100 // integer values
+jf @HAIT2_11271
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_11271
+01D9: actor $5898 destroy_car $5883
+
+:HAIT2_11271
+jump @HAIT2_11339
+
+:HAIT2_11278
+if
+   not 14@ == -10 // integer values
+jf @HAIT2_11332
+Marker.Disable($5912)
+0465: remove_actor $5898 from_turret_mode
+018C: play_sound 1 at 0.0 0.0 0.0
+14@ = -10 // integer values
+
+:HAIT2_11332
+$5872 += 1 // integer values
+
+:HAIT2_11339
+if
+   not Actor.Dead($5899)
+jf @HAIT2_11815
+if
+  $5866 == 1 // integer values
+jf @HAIT2_11808
+if
+  $5873 == 0 // integer values
+jf @HAIT2_11486
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_11464
+0372: set_actor $5899 anim 0 wait_state_time 17 ms
+01B2: give_actor $5899 weapon 27 ammo 9999 // Load the weapon model before using this
+01D9: actor $5899 destroy_car $5883
+0084: $5874 = $4811 // integer values and handles
+$5874 += 7000 // integer values
+$5873 = 1 // integer values
+jump @HAIT2_11486
+
+:HAIT2_11464
+0084: $5874 = $4811 // integer values and handles
+$5874 -= 100 // integer values
+$5873 = 1 // integer values
+
+:HAIT2_11486
+if
+  $5873 == 2 // integer values
+jf @HAIT2_11659
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_11528
+01D9: actor $5899 destroy_car $5883
+
+:HAIT2_11528
+if
+001C:   $4811 > $5874 // integer values
+jf @HAIT2_11659
+if
+   not Car.Wrecked($5890)
+jf @HAIT2_11652
+if
+0185:   car $5890 health >= 250
+jf @HAIT2_11638
+011C: actor $5899 clear_objective
+018B: show_on_radar $5913 3
+0168: set_blip $5905 size 3
+00BC: text_highpriority 'HAT2_B7' 6000 ms 1  // ~g~One of the Cubans in escaping in a car. Don't leave any witnesses!
+01D5: actor $5899 go_to_and_drive_car $5890
+$5873 = 3 // integer values
+jump @HAIT2_11645
+
+:HAIT2_11638
+$5873 = 100 // integer values
+
+:HAIT2_11645
+jump @HAIT2_11659
+
+:HAIT2_11652
+$5873 = 100 // integer values
+
+:HAIT2_11659
+if
+  $5873 == 3 // integer values
+jf @HAIT2_11766
+if
+   not Car.Wrecked($5890)
+jf @HAIT2_11759
+if
+0185:   car $5890 health >= 250
+jf @HAIT2_11745
+if
+   Actor.InCar($5899, $5890)
+jf @HAIT2_11738
+$5873 = 4 // integer values
+
+:HAIT2_11738
+jump @HAIT2_11752
+
+:HAIT2_11745
+$5873 = 100 // integer values
+
+:HAIT2_11752
+jump @HAIT2_11766
+
+:HAIT2_11759
+$5873 = 100 // integer values
+
+:HAIT2_11766
+if
+  $5873 == 100 // integer values
+jf @HAIT2_11808
+if
+   not Car.Wrecked($5883)
+jf @HAIT2_11808
+01D9: actor $5899 destroy_car $5883
+
+:HAIT2_11808
+jump @HAIT2_11871
+
+:HAIT2_11815
+if
+   not $5873 == -10 // integer values
+jf @HAIT2_11864
+Marker.Disable($5913)
+018C: play_sound 1 at 0.0 0.0 0.0
+$5873 = -10 // integer values
+
+:HAIT2_11864
+$5872 += 1 // integer values
+
+:HAIT2_11871
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_12058
+if
+  $5875 == 0 // integer values
+jf @HAIT2_12018
+if or
+  6@ == 4 // integer values
+   Actor.Dead($5894)
+jf @HAIT2_12018
+if or
+  8@ == 4 // integer values
+  8@ == 100 // integer values
+   Actor.Dead($5895)
+jf @HAIT2_12018
+if or
+  6@ == 4 // integer values
+  8@ == 4 // integer values
+jf @HAIT2_12018
+$5875 = 1 // integer values
+00BC: text_highpriority 'HAT2_B5' 5000 ms 1  // ~g~The Cubans are making a run for it. Don't let them get away!
+Marker.Disable($5902)
+$5902 = Marker.CreateAboveCar($5888)
+
+:HAIT2_12018
+if
+  $5875 == 1 // integer values
+jf @HAIT2_12051
+0084: $2731 = $5888 // integer values and handles
+gosub @HAIT2_15146
+
+:HAIT2_12051
+jump @HAIT2_12070
+
+:HAIT2_12058
+Marker.Disable($5902)
+$5872 += 1 // integer values
+
+:HAIT2_12070
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_12936
+if
+  $5876 == 0 // integer values
+jf @HAIT2_12254
+if or
+  0@ == 3 // integer values
+   Actor.Dead($5891)
+jf @HAIT2_12254
+if or
+  2@ == 5 // integer values
+  2@ == 100 // integer values
+   Actor.Dead($5892)
+jf @HAIT2_12254
+if or
+  4@ == 4 // integer values
+  4@ == 100 // integer values
+   Actor.Dead($5893)
+jf @HAIT2_12254
+if or
+  0@ == 3 // integer values
+  2@ == 5 // integer values
+  4@ == 4 // integer values
+jf @HAIT2_12254
+$5876 = 1 // integer values
+00BC: text_highpriority 'HAT2_B5' 5000 ms 1  // ~g~The Cubans are making a run for it. Don't let them get away!
+Marker.Disable($5903)
+$5903 = Marker.CreateAboveCar($5887)
+
+:HAIT2_12254
+if
+  $5876 == 1 // integer values
+jf @HAIT2_12896
+if or
+  $5875 > 0 // integer values
+   Car.Wrecked($5888)
+jf @HAIT2_12896
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_12847
+0407: create_coordinate $445 $446 $447 from_car $5888 offset -10.879 -15.176 0.0
+if
+01AF:   car $5887 0 $445 $446 6.0 radius 5.0 5.0 5.0
+jf @HAIT2_12582
+02DB: set_boat $5887 speed_to 2.0
+$5919 = Car.Angle($5888)
+$5920 = Car.Angle($5887)
+0086: $5922 = $5919 // floating-point values only
+0061: $5922 -= $5920 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_12457
+$5922 += 360.0 // floating-point values
+
+:HAIT2_12457
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_12488
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_12488
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_12526
+0078: $5920 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_12536
+
+:HAIT2_12526
+007E: $5920 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_12536
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_12575
+Car.Angle($5887) = $5920
+
+:HAIT2_12575
+jump @HAIT2_12824
+
+:HAIT2_12582
+if
+01AD:   car $5887 sphere 0 near_point $445 $446 radius 10.0 10.0
+jf @HAIT2_12814
+02DB: set_boat $5887 speed_to 12.0
+$5919 = Car.Angle($5888)
+$5920 = Car.Angle($5887)
+0086: $5922 = $5919 // floating-point values only
+0061: $5922 -= $5920 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_12689
+$5922 += 360.0 // floating-point values
+
+:HAIT2_12689
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_12720
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_12720
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_12758
+0078: $5920 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_12768
+
+:HAIT2_12758
+007E: $5920 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_12768
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_12807
+Car.Angle($5887) = $5920
+
+:HAIT2_12807
+jump @HAIT2_12824
+
+:HAIT2_12814
+02DB: set_boat $5887 speed_to 20.0
+
+:HAIT2_12824
+02D3: boat $5887 drive_to $445 $446 6.0
+jump @HAIT2_12896
+
+:HAIT2_12847
+if
+   not $5865 == 0 // integer values
+jf @HAIT2_12879
+$5865 -= 1 // integer values
+$5867 = 1 // integer values
+
+:HAIT2_12879
+02DB: set_boat $5887 speed_to 12.0
+$5876 = 2 // integer values
+
+:HAIT2_12896
+if
+  $5876 == 2 // integer values
+jf @HAIT2_12929
+0084: $2731 = $5887 // integer values and handles
+gosub @HAIT2_15146
+
+:HAIT2_12929
+jump @HAIT2_12948
+
+:HAIT2_12936
+Marker.Disable($5903)
+$5872 += 1 // integer values
+
+:HAIT2_12948
+if
+   not Car.Wrecked($5889)
+jf @HAIT2_14333
+if
+  $5877 == 0 // integer values
+jf @HAIT2_13132
+if or
+  10@ == 6 // integer values
+   Actor.Dead($5896)
+jf @HAIT2_13132
+if or
+  12@ == 7 // integer values
+  12@ == 100 // integer values
+   Actor.Dead($5897)
+jf @HAIT2_13132
+if or
+  14@ == 6 // integer values
+  14@ == 100 // integer values
+   Actor.Dead($5898)
+jf @HAIT2_13132
+if or
+  10@ == 6 // integer values
+  12@ == 7 // integer values
+  14@ == 6 // integer values
+jf @HAIT2_13132
+$5877 = 1 // integer values
+00BC: text_highpriority 'HAT2_B5' 5000 ms 1  // ~g~The Cubans are making a run for it. Don't let them get away!
+Marker.Disable($5904)
+$5904 = Marker.CreateAboveCar($5889)
+
+:HAIT2_13132
+if
+  $5877 == 1 // integer values
+jf @HAIT2_14293
+if
+   not Car.Wrecked($5888)
+jf @HAIT2_13702
+0407: create_coordinate $445 $446 $447 from_car $5888 offset 11.702 -13.377 0.0
+if
+01AF:   car $5889 0 $445 $446 6.0 radius 5.0 5.0 5.0
+jf @HAIT2_13437
+02DB: set_boat $5889 speed_to 2.0
+$5919 = Car.Angle($5888)
+$5921 = Car.Angle($5889)
+0086: $5922 = $5919 // floating-point values only
+0061: $5922 -= $5921 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_13312
+$5922 += 360.0 // floating-point values
+
+:HAIT2_13312
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_13343
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_13343
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_13381
+0078: $5921 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_13391
+
+:HAIT2_13381
+007E: $5921 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_13391
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_13430
+Car.Angle($5889) = $5921
+
+:HAIT2_13430
+jump @HAIT2_13679
+
+:HAIT2_13437
+if
+01AD:   car $5889 sphere 0 near_point $445 $446 radius 10.0 10.0
+jf @HAIT2_13669
+$5919 = Car.Angle($5888)
+$5921 = Car.Angle($5889)
+0086: $5922 = $5919 // floating-point values only
+0061: $5922 -= $5921 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_13534
+$5922 += 360.0 // floating-point values
+
+:HAIT2_13534
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_13565
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_13565
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_13603
+0078: $5921 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_13613
+
+:HAIT2_13603
+007E: $5921 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_13613
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_13652
+Car.Angle($5889) = $5921
+
+:HAIT2_13652
+02DB: set_boat $5889 speed_to 12.0
+jump @HAIT2_13679
+
+:HAIT2_13669
+02DB: set_boat $5889 speed_to 20.0
+
+:HAIT2_13679
+02D3: boat $5889 drive_to $445 $446 6.0
+jump @HAIT2_14293
+
+:HAIT2_13702
+if
+   not Car.Wrecked($5887)
+jf @HAIT2_14244
+0407: create_coordinate $445 $446 $447 from_car $5887 offset 11.702 -13.377 0.0
+if
+01AD:   car $5889 sphere 0 near_point $445 $446 radius 4.0 4.0
+jf @HAIT2_13979
+$5920 = Car.Angle($5887)
+$5921 = Car.Angle($5889)
+0086: $5922 = $5920 // floating-point values only
+0061: $5922 -= $5921 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_13844
+$5922 += 360.0 // floating-point values
+
+:HAIT2_13844
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_13875
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_13875
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_13913
+0078: $5921 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_13923
+
+:HAIT2_13913
+007E: $5921 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_13923
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_13962
+Car.Angle($5889) = $5921
+
+:HAIT2_13962
+02DB: set_boat $5889 speed_to 2.0
+jump @HAIT2_14221
+
+:HAIT2_13979
+if
+01AD:   car $5889 sphere 0 near_point $445 $446 radius 10.0 10.0
+jf @HAIT2_14211
+$5920 = Car.Angle($5887)
+$5921 = Car.Angle($5889)
+0086: $5922 = $5920 // floating-point values only
+0061: $5922 -= $5921 // floating-point values
+if
+  -180.0 > $5922 // floating-point values
+jf @HAIT2_14076
+$5922 += 360.0 // floating-point values
+
+:HAIT2_14076
+if
+  $5922 > 180.0 // floating-point values
+jf @HAIT2_14107
+$5922 -= 360.0 // floating-point values
+
+:HAIT2_14107
+if
+  0.0 > $5922 // floating-point values
+jf @HAIT2_14145
+0078: $5921 += frame_delta_time * 1.0 // floating-point values
+jump @HAIT2_14155
+
+:HAIT2_14145
+007E: $5921 -= frame_delta_time * 1.0 // floating-point values
+
+:HAIT2_14155
+if and
+  $5922 > 5.0 // floating-point values
+  -5.0 > $5922 // floating-point values
+jf @HAIT2_14194
+Car.Angle($5889) = $5921
+
+:HAIT2_14194
+02DB: set_boat $5889 speed_to 12.0
+jump @HAIT2_14221
+
+:HAIT2_14211
+02DB: set_boat $5889 speed_to 20.0
+
+:HAIT2_14221
+02D3: boat $5889 drive_to $445 $446 6.0
+jump @HAIT2_14293
+
+:HAIT2_14244
+if
+   not $5865 == 0 // integer values
+jf @HAIT2_14276
+$5865 -= 1 // integer values
+$5867 = 1 // integer values
+
+:HAIT2_14276
+02DB: set_boat $5889 speed_to 12.0
+$5877 = 2 // integer values
+
+:HAIT2_14293
+if
+  $5877 == 2 // integer values
+jf @HAIT2_14326
+0084: $2731 = $5889 // integer values and handles
+gosub @HAIT2_15146
+
+:HAIT2_14326
+jump @HAIT2_14345
+
+:HAIT2_14333
+Marker.Disable($5904)
+$5872 += 1 // integer values
+
+:HAIT2_14345
+if
+   not Car.Wrecked($5890)
+jf @HAIT2_15063
+if
+  $5878 == 0 // integer values
+jf @HAIT2_14465
+if
+  $5873 == 4 // integer values
+jf @HAIT2_14465
+if
+   not Actor.Dead($5899)
+jf @HAIT2_14465
+04E0: car $5890 abandon_path_radius 200
+02C2: car $5890 drive_to_point -508.7597 -311.8881 10.4693
+Car.SetMaxSpeed($5890, 15.0)
+00AE: set_vehicle $5890 traffic_behavior_to 2
+$5878 = 1 // integer values
+
+:HAIT2_14465
+if
+  $5878 == 1 // integer values
+jf @HAIT2_14548
+if
+01AD:   car $5890 sphere 0 near_point -508.7597 -311.8881 radius 6.0 6.0
+jf @HAIT2_14548
+02C2: car $5890 drive_to_point -523.6951 -342.9825 10.9509
+$5878 = 2 // integer values
+
+:HAIT2_14548
+if
+  $5878 == 2 // integer values
+jf @HAIT2_14648
+if
+01AD:   car $5890 sphere 0 near_point -523.6951 -342.9825 radius 4.0 4.0
+jf @HAIT2_14648
+04E0: car $5890 abandon_path_radius 20
+Car.SetMaxSpeed($5890, 20.0)
+02C2: car $5890 drive_to_point -761.7885 -492.003 14.0889
+$5878 = 3 // integer values
+
+:HAIT2_14648
+if
+  $5878 == 3 // integer values
+jf @HAIT2_14731
+if
+01AD:   car $5890 sphere 0 near_point -761.7885 -492.003 radius 6.0 6.0
+jf @HAIT2_14731
+02C2: car $5890 drive_to_point -942.2122 -278.2615 10.3119
+$5878 = 4 // integer values
+
+:HAIT2_14731
+if
+  $5878 == 4 // integer values
+jf @HAIT2_14814
+if
+01AD:   car $5890 sphere 0 near_point -942.2122 -278.2615 radius 6.0 6.0
+jf @HAIT2_14814
+02C2: car $5890 drive_to_point -1067.287 -1.6537 11.2119
+$5878 = 5 // integer values
+
+:HAIT2_14814
+if
+  $5878 == 5 // integer values
+jf @HAIT2_14897
+if
+01AD:   car $5890 sphere 0 near_point -1067.287 -1.6537 radius 6.0 6.0
+jf @HAIT2_14897
+02C2: car $5890 drive_to_point -964.8415 321.9443 11.0549
+$5878 = 6 // integer values
+
+:HAIT2_14897
+if
+  $5878 == 6 // integer values
+jf @HAIT2_14980
+if
+01AD:   car $5890 sphere 0 near_point -964.8415 321.9443 radius 6.0 6.0
+jf @HAIT2_14980
+02C2: car $5890 drive_to_point -863.3309 -261.5879 10.7002
+$5878 = 7 // integer values
+
+:HAIT2_14980
+if
+  $5878 == 7 // integer values
+jf @HAIT2_15063
+if
+01AD:   car $5890 sphere 0 near_point -863.3309 -261.5879 radius 6.0 6.0
+jf @HAIT2_15063
+02C2: car $5890 drive_to_point -942.2122 -278.2615 10.3119
+$5878 = 4 // integer values
+
+:HAIT2_15063
+if and
+   Car.Wrecked($5888)
+   Car.Wrecked($5887)
+   Car.Wrecked($5889)
+jf @HAIT2_15114
+if
+  $5873 == 1 // integer values
+jf @HAIT2_15114
+$5873 = 2 // integer values
+
+:HAIT2_15114
+if
+  $5872 == 12 // integer values
+jf @HAIT2_15139
+jump @HAIT2_17571
+
+:HAIT2_15139
+jump @HAIT2_3097
+
+:HAIT2_15146
+if
+  $5865 == 0 // integer values
+jf @HAIT2_15198
+02D3: boat $2731 drive_to -555.308 -141.189 6.0
+$5865 = 1 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15198
+if
+  $5865 == 1 // integer values
+jf @HAIT2_15305
+if or
+01AF:   car $2731 0 -555.308 -141.189 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15305
+02D3: boat $2731 drive_to -626.792 -78.237 6.0
+$5865 = 2 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15305
+if
+  $5865 == 2 // integer values
+jf @HAIT2_15412
+if or
+01AF:   car $2731 0 -626.792 -78.237 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15412
+02D3: boat $2731 drive_to -649.263 -5.788 6.0
+$5865 = 3 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15412
+if
+  $5865 == 3 // integer values
+jf @HAIT2_15519
+if or
+01AF:   car $2731 0 -649.263 -5.788 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15519
+02D3: boat $2731 drive_to -602.947 296.718 6.0
+$5865 = 4 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15519
+if
+  $5865 == 4 // integer values
+jf @HAIT2_15626
+if or
+01AF:   car $2731 0 -602.947 296.718 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15626
+02D3: boat $2731 drive_to -587.552 427.51 6.0
+$5865 = 5 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15626
+if
+  $5865 == 5 // integer values
+jf @HAIT2_15733
+if or
+01AF:   car $2731 0 -587.552 427.51 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15733
+02D3: boat $2731 drive_to -528.738 507.634 6.0
+$5865 = 6 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15733
+if
+  $5865 == 6 // integer values
+jf @HAIT2_15840
+if or
+01AF:   car $2731 0 -528.738 507.634 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15840
+02D3: boat $2731 drive_to -443.897 470.554 6.0
+$5865 = 7 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15840
+if
+  $5865 == 7 // integer values
+jf @HAIT2_15947
+if or
+01AF:   car $2731 0 -443.897 470.554 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_15947
+02D3: boat $2731 drive_to -490.341 377.161 6.0
+$5865 = 8 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_15947
+if
+  $5865 == 8 // integer values
+jf @HAIT2_16054
+if or
+01AF:   car $2731 0 -490.341 377.161 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16054
+02D3: boat $2731 drive_to -602.947 296.718 6.0
+$5865 = 9 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16054
+if
+  $5865 == 9 // integer values
+jf @HAIT2_16161
+if or
+01AF:   car $2731 0 -602.947 296.718 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16161
+02D3: boat $2731 drive_to -649.263 -5.788 6.0
+$5865 = 10 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16161
+if
+  $5865 == 10 // integer values
+jf @HAIT2_16268
+if or
+01AF:   car $2731 0 -649.263 -5.788 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16268
+02D3: boat $2731 drive_to -749.833 -327.552 6.0
+$5865 = 11 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16268
+if
+  $5865 == 11 // integer values
+jf @HAIT2_16375
+if or
+01AF:   car $2731 0 -749.833 -327.552 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16375
+02D3: boat $2731 drive_to -750.703 -447.009 6.0
+$5865 = 12 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16375
+if
+  $5865 == 12 // integer values
+jf @HAIT2_16482
+if or
+01AF:   car $2731 0 -750.703 -447.009 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16482
+02D3: boat $2731 drive_to -739.379 -573.229 6.0
+$5865 = 13 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16482
+if
+  $5865 == 13 // integer values
+jf @HAIT2_16589
+if or
+01AF:   car $2731 0 -739.379 -573.229 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16589
+02D3: boat $2731 drive_to -743.073 -674.655 6.0
+$5865 = 14 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16589
+if
+  $5865 == 14 // integer values
+jf @HAIT2_16696
+if or
+01AF:   car $2731 0 -743.073 -674.655 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16696
+02D3: boat $2731 drive_to -710.041 -787.354 6.0
+$5865 = 15 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16696
+if
+  $5865 == 15 // integer values
+jf @HAIT2_16803
+if or
+01AF:   car $2731 0 -710.041 -787.354 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16803
+02D3: boat $2731 drive_to -600.638 -835.484 6.0
+$5865 = 16 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16803
+if
+  $5865 == 16 // integer values
+jf @HAIT2_16910
+if or
+01AF:   car $2731 0 -600.638 -835.484 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_16910
+02D3: boat $2731 drive_to -509.722 -756.564 6.0
+$5865 = 17 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_16910
+if
+  $5865 == 17 // integer values
+jf @HAIT2_17017
+if or
+01AF:   car $2731 0 -509.722 -756.564 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17017
+02D3: boat $2731 drive_to -571.734 -697.569 6.0
+$5865 = 18 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17017
+if
+  $5865 == 18 // integer values
+jf @HAIT2_17124
+if or
+01AF:   car $2731 0 -571.734 -697.569 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17124
+02D3: boat $2731 drive_to -661.336 -662.576 6.0
+$5865 = 19 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17124
+if
+  $5865 == 19 // integer values
+jf @HAIT2_17231
+if or
+01AF:   car $2731 0 -661.336 -662.576 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17231
+02D3: boat $2731 drive_to -739.379 -573.229 6.0
+$5865 = 20 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17231
+if
+  $5865 == 20 // integer values
+jf @HAIT2_17338
+if or
+01AF:   car $2731 0 -739.379 -573.229 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17338
+02D3: boat $2731 drive_to -750.703 -447.009 6.0
+$5865 = 21 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17338
+if
+  $5865 == 21 // integer values
+jf @HAIT2_17445
+if or
+01AF:   car $2731 0 -750.703 -447.009 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17445
+02D3: boat $2731 drive_to -749.833 -327.552 6.0
+$5865 = 22 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17445
+if
+  $5865 == 22 // integer values
+jf @HAIT2_17552
+if or
+01AF:   car $2731 0 -749.833 -327.552 6.0 radius 6.0 6.0 6.0
+  $5867 == 1 // integer values
+jf @HAIT2_17552
+02D3: boat $2731 drive_to -649.263 -5.788 6.0
+$5865 = 3 // integer values
+$5867 = 0 // integer values
+
+:HAIT2_17552
+return
+
+:HAIT2_17554
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:HAIT2_17571
+$PASSED_HAT2_BOMBS_AWAY = 1 // integer values
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 2000
+0318: set_latest_mission_passed 'HAT_2'  // Bombs Away!
+030C: progress_made += 1
+0394: play_music 1
+if
+840C:   not german_game
+jf @HAIT2_17655
+create_thread @HAT3
+jump @HAIT2_17660
+
+:HAIT2_17655
+Marker.Disable($283)
+
+:HAIT2_17660
+return
+
+:HAIT2_17662
+$ONMISSION = 0 // integer values
+if
+   not $5883 == -1 // integer values
+jf @HAIT2_17706
+04DB: exit_rc_mode
+Object.RemoveReferences($5885)
+Object.RemoveReferences($5886)
+$5883 = -1 // integer values
+
+:HAIT2_17706
+if
+   not Car.Wrecked($5884)
+jf @HAIT2_17729
+Car.LockInCurrentPosition($5884) = False
+020A: set_car $5884 door_status_to 1
+
+:HAIT2_17729
+Model.Destroy(#TOPFUN)
+Model.Destroy(#RCBARON)
+Model.Destroy(#SPEEDER)
+Model.Destroy(#JETMAX)
+Model.Destroy(#COASTG)
+Model.Destroy(#CUBAN)
+Model.Destroy(#CBA)
+Model.Destroy(#CBB)
+Model.Destroy(#RUGER)
+Marker.Disable($5901)
+Marker.Disable($5902)
+Marker.Disable($5903)
+Marker.Disable($5904)
+Marker.Disable($5905)
+Marker.Disable($5906)
+Marker.Disable($5907)
+Marker.Disable($5908)
+Marker.Disable($5909)
+Marker.Disable($5910)
+Marker.Disable($5911)
+Marker.Disable($5912)
+Marker.Disable($5913)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+0151: remove_status_text $5868
+$1084 = 0 // integer values
+mission_cleanup
+return

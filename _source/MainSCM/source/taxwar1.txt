@@ -1,0 +1,664 @@
+:TAXWAR1
+gosub @TAXWAR1_36
+if
+wasted_or_busted
+jf @TAXWAR1_27
+gosub @TAXWAR1_3908
+
+:TAXWAR1_27
+gosub @TAXWAR1_3991
+end_thread
+
+:TAXWAR1_36
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+thread 'TAXWAR1'
+wait 0
+054C: use_GXT_table 'TAXIWA1'
+058E: set_restart_mission_taxi_destination -1020.8 191.1 10.5 350.0
+$6678 = 0 // integer values
+4@ = 0 // integer values
+2@ = 0 // integer values
+1@ = 0 // integer values
+3@ = 0 // integer values
+03CF: load_wav 'TAX1_1' as 1
+03CF: load_wav 'TAX1_2' as 2
+
+:TAXWAR1_143
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @TAXWAR1_173
+wait 0
+jump @TAXWAR1_143
+
+:TAXWAR1_173
+03D1: play_wav 1
+00BC: text_highpriority 'TAX1_1' 4500 ms 1  // Ok, we got a high class fare needs picking up from Starfish island - any takers?
+wait 500
+16@ = 0 // integer values
+
+:TAXWAR1_204
+if
+   not 16@ > 4000 // integer values
+jf @TAXWAR1_258
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @TAXWAR1_251
+jump @TAXWAR1_338
+
+:TAXWAR1_251
+jump @TAXWAR1_204
+
+:TAXWAR1_258
+03D1: play_wav 2
+00BC: text_highpriority 'TAX1_2' 3000 ms 1  // Tommy here, I'll take it!
+16@ = 0 // integer values
+
+:TAXWAR1_284
+if
+   not 16@ > 3000 // integer values
+jf @TAXWAR1_338
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @TAXWAR1_331
+jump @TAXWAR1_338
+
+:TAXWAR1_331
+jump @TAXWAR1_284
+
+:TAXWAR1_338
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+040D: unload_wav 1
+040D: unload_wav 2
+Model.Load(#TAXI)
+Model.Load(#WMOCA)
+Model.Load(#WMOBU)
+Model.Load(#KAUFMAN)
+
+:TAXWAR1_377
+if or
+   not Model.Available(#TAXI)
+   not Model.Available(#WMOCA)
+   not Model.Available(#WMOBU)
+   not Model.Available(#KAUFMAN)
+jf @TAXWAR1_417
+wait 0
+jump @TAXWAR1_377
+
+:TAXWAR1_417
+018A: $6672 = create_checkpoint_at -576.7 -480.1 10.8
+00BC: text_highpriority 'TAXW1_1' 10000 ms 1  // ~g~Pick up the V.I.P. on Starfish Island.
+$6685 = 61000 // integer values
+014E: start_timer_at $6685 count_in_direction 1
+if
+00E0:   player $PLAYER_CHAR driving
+jf @TAXWAR1_493
+00DA: $311 = player $PLAYER_CHAR car
+
+:TAXWAR1_493
+if
+   Car.Wrecked($311)
+jf @TAXWAR1_509
+
+:TAXWAR1_509
+if or
+80F8:   not player $PLAYER_CHAR stopped 1 -576.7 -480.1 10.5 radius 2.5 2.5 3.0
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+   not Player.PressingHorn($PLAYER_CHAR)
+jf @TAXWAR1_757
+wait 0
+if
+   Car.Wrecked($311)
+jf @TAXWAR1_590
+
+:TAXWAR1_590
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+jf @TAXWAR1_624
+00DA: $311 = player $PLAYER_CHAR car
+jump @TAXWAR1_639
+
+:TAXWAR1_624
+00BC: text_highpriority 'TAXW1_5' 1000 ms 1  // ~g~You need to be in a Kaufman cab!
+
+:TAXWAR1_639
+if
+  $6685 == 0 // integer values
+jf @TAXWAR1_679
+00BC: text_highpriority 'OUTTIME' 5000 ms 1  // ~r~Too slow, man, too slow!
+jump @TAXWAR1_3908
+
+:TAXWAR1_679
+if and
+00F8:   player $PLAYER_CHAR stopped 1 -576.7 -480.1 11.0 radius 2.5 2.5 3.0
+00DE:   player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+jf @TAXWAR1_750
+00BC: text_highpriority 'HORN' 1000 ms 1  // ~g~Sound the horn.
+
+:TAXWAR1_750
+jump @TAXWAR1_509
+
+:TAXWAR1_757
+if
+   not Car.Wrecked($311)
+jf @TAXWAR1_780
+020A: set_car $311 door_status_to 4
+
+:TAXWAR1_780
+wait 500
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+014F: stop_timer $6685
+0@ = Actor.Create(CivMale, #WMOBU, -573.9, -448.1, 14.1)
+Actor.Angle(0@) = 270.0
+01ED: clear_actor 0@ threat_search
+0211: actor 0@ walk_to -564.3 -447.9
+Camera.SetPosition(-576.171, -461.122, 11.516, 0.0, 0.0, 0.0)
+Camera.PointAt(-575.533, -460.37, 11.682, 2)
+03CF: load_wav 'TAX1_3' as 1
+wait 3000
+Camera.SetPosition(-584.096, -471.163, 12.693, 0.0, 0.0, 0.0)
+Camera.PointAt(-583.402, -471.861, 12.514, 2)
+$6698 = Car.Create(#TAXI, -546.0, -474.3, 10.0)
+03BA: clear_cars_from_cube -600.8 -487.6 0.0 -463.6 -433.6 20.0
+0129: $6679 = create_actor 4 #WMOCA in_car $6698 driverseat
+Car.Angle($6698) = 90.0
+Car.SetMaxSpeed($6698, 30.0)
+04BA: set_car $6698 speed_instantly 10.0
+00AE: set_vehicle $6698 traffic_behavior_to 3
+Car.ImmuneToNonPlayer($6698) = True
+0243: set_actor $6679 ped_stats_to 16
+Marker.Disable($6672)
+04E0: car $6698 abandon_path_radius 100
+Car.DriveTo($6698, -578.0, -474.3, 10.8)
+17@ = 0 // integer values
+
+:TAXWAR1_1131
+if
+81AD:   not car $6698 sphere 0 near_point -578.0 -474.3 radius 6.0 4.0
+jf @TAXWAR1_1290
+wait 0
+if
+   Car.Wrecked($6698)
+jf @TAXWAR1_1196
+jump @TAXWAR1_3908
+
+:TAXWAR1_1196
+if
+   Actor.Dead($6679)
+jf @TAXWAR1_1234
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_1234
+if
+   Actor.Dead($6679)
+jf @TAXWAR1_1257
+jump @TAXWAR1_3908
+
+:TAXWAR1_1257
+if
+  17@ > 10000 // integer values
+jf @TAXWAR1_1283
+jump @TAXWAR1_1290
+
+:TAXWAR1_1283
+jump @TAXWAR1_1131
+
+:TAXWAR1_1290
+if
+03D0:   wav 1 loaded
+jf @TAXWAR1_1324
+03D1: play_wav 1
+00BC: text_highpriority 'TAX1_3' 4000 ms 1  // This is my fare, back off asshole!
+
+:TAXWAR1_1324
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_1376
+Actor.PutAt(0@, -576.2, -471.1, 10.4)
+01D4: actor 0@ go_to_car $6698 and_enter_it_as_a_passenger
+Marker.Disable($6699)
+$6699 = Marker.CreateAboveActor(0@)
+
+:TAXWAR1_1376
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_1402
+Car.SetMaxSpeed($6698, 0.0)
+
+:TAXWAR1_1402
+if
+   not Actor.InCar(0@, $6698)
+jf @TAXWAR1_1531
+wait 0
+if
+   Car.Wrecked($6698)
+jf @TAXWAR1_1463
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_1463
+if
+   Actor.Dead($6679)
+jf @TAXWAR1_1501
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_1501
+if
+   Actor.Dead(0@)
+jf @TAXWAR1_1524
+jump @TAXWAR1_3908
+
+:TAXWAR1_1524
+jump @TAXWAR1_1402
+
+:TAXWAR1_1531
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_1554
+020A: set_car $6698 door_status_to 3
+
+:TAXWAR1_1554
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore
+if
+   not Car.Wrecked($311)
+jf @TAXWAR1_1590
+020A: set_car $311 door_status_to 1
+
+:TAXWAR1_1590
+00BC: text_highpriority 'TAXW1_2' 5000 ms 1  // ~g~Get the V.I.P back! Take the other car out!
+Car.DriveTo($6698, -683.0, -488.6, 10.6)
+Car.SetMaxSpeed($6698, 30.0)
+00AE: set_vehicle $6698 traffic_behavior_to 2
+Car.ImmuneToNonPlayer($6698) = False
+0593:  0@ 1
+018A: $6672 = create_checkpoint_at -1438.1 -833.6 11.3
+03CF: load_wav 'TAX1_4' as 1
+
+:TAXWAR1_1688
+if
+8101:   not actor 0@ stopped_near_point -1438.1 -833.6 11.3 radius 5.0 5.0 5.0 sphere 1
+jf @TAXWAR1_3060
+wait 0
+if
+   Actor.Dead(0@)
+jf @TAXWAR1_1778
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_1778
+if
+   Car.Wrecked($311)
+jf @TAXWAR1_1794
+
+:TAXWAR1_1794
+if
+00E0:   player $PLAYER_CHAR driving
+jf @TAXWAR1_1818
+00DA: $311 = player $PLAYER_CHAR car
+
+:TAXWAR1_1818
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -683.0 -488.6 10.6 radius 5.0 5.0 5.0
+jf @TAXWAR1_1921
+Car.DriveTo($6698, -847.1, -516.6, 10.6)
+
+:TAXWAR1_1921
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -847.1 -516.6 10.6 radius 5.0 5.0 5.0
+jf @TAXWAR1_1989
+Car.DriveTo($6698, -831.4, -639.5, 10.6)
+
+:TAXWAR1_1989
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -831.4 -639.5 10.6 radius 5.0 5.0 5.0
+jf @TAXWAR1_2057
+Car.DriveTo($6698, -1131.7, -687.8, 10.6)
+
+:TAXWAR1_2057
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -1131.7 -687.8 10.6 radius 5.0 5.0 5.0
+jf @TAXWAR1_2125
+Car.DriveTo($6698, -914.3, -1067.2, 10.6)
+
+:TAXWAR1_2125
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -914.3 -1067.2 10.6 radius 5.0 5.0 5.0
+jf @TAXWAR1_2193
+Car.DriveTo($6698, -1197.3, -1070.9, 11.3)
+
+:TAXWAR1_2193
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -1197.3 -1070.9 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_2261
+Car.DriveTo($6698, -1407.5, -785.4, 11.3)
+
+:TAXWAR1_2261
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2329
+if
+80DC:   not player $PLAYER_CHAR driving $6698
+jf @TAXWAR1_2329
+if
+01AF:   car $6698 0 -1407.5 -785.4 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_2329
+Car.DriveTo($6698, -1438.1, -833.6, 11.3)
+
+:TAXWAR1_2329
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2716
+if or
+8185:   not car $6698 health >= 500
+   Actor.Dead($6679)
+jf @TAXWAR1_2716
+if
+  1@ == 0 // integer values
+jf @TAXWAR1_2716
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_2410
+020A: set_car $6698 door_status_to 1
+
+:TAXWAR1_2410
+01D3: actor 0@ leave_car $6698
+
+:TAXWAR1_2418
+if
+   Actor.InCar(0@, $6698)
+jf @TAXWAR1_2597
+wait 0
+if
+   Car.Wrecked($311)
+jf @TAXWAR1_2457
+
+:TAXWAR1_2457
+if
+00E0:   player $PLAYER_CHAR driving
+jf @TAXWAR1_2481
+00DA: $311 = player $PLAYER_CHAR car
+
+:TAXWAR1_2481
+if
+   Car.Wrecked($6698)
+jf @TAXWAR1_2497
+
+:TAXWAR1_2497
+if
+   Actor.Dead(0@)
+jf @TAXWAR1_2535
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_2535
+if
+0101:   actor 0@ stopped_near_point -1438.1 -833.6 11.3 radius 4.0 4.0 5.0 sphere 1
+jf @TAXWAR1_2590
+jump @TAXWAR1_3060
+
+:TAXWAR1_2590
+jump @TAXWAR1_2418
+
+:TAXWAR1_2597
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_2620
+0593:  0@ 0
+
+:TAXWAR1_2620
+if
+03D0:   wav 1 loaded
+jf @TAXWAR1_2654
+03D1: play_wav 1
+00BC: text_highpriority 'TAX1_4' 4000 ms 1  // Come on come on, Get in, quick!
+
+:TAXWAR1_2654
+17@ = 0 // integer values
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_2709
+03CF: load_wav 'TAX1_5' as 2
+011C: actor 0@ clear_objective
+0319: set_actor 0@ running 1
+01DE: tie_actor 0@ to_actor $PLAYER_ACTOR
+
+:TAXWAR1_2709
+1@ = 1 // integer values
+
+:TAXWAR1_2716
+if
+  1@ == 1 // integer values
+jf @TAXWAR1_3053
+if
+  16@ > 500 // integer values
+jf @TAXWAR1_2805
+if and
+   not Car.Wrecked($6698)
+   not Actor.Dead($6679)
+jf @TAXWAR1_2805
+Car.SetMaxSpeed($6698, 50.0)
+00AE: set_vehicle $6698 traffic_behavior_to 3
+Car.SetDriverBehaviour($6698, KillThePlayer)
+16@ = 0 // integer values
+
+:TAXWAR1_2805
+if
+   not Car.Wrecked($311)
+jf @TAXWAR1_2865
+if
+   Actor.InCar(0@, $311)
+jf @TAXWAR1_2852
+Marker.Disable($6699)
+4@ = 0
+jump @TAXWAR1_2865
+
+:TAXWAR1_2852
+if
+    4@ == 0
+then
+    Marker.Disable($6699)
+    $6699 = Marker.CreateAboveActor(0@)
+    4@ = 1
+end
+
+:TAXWAR1_2865
+if
+  3@ == 0 // integer values
+jf @TAXWAR1_3015
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3015
+if
+00FB:   player $PLAYER_CHAR 0 0@ radius 15.0 15.0 6.0
+jf @TAXWAR1_3015
+if
+  17@ > 2000 // integer values
+jf @TAXWAR1_3015
+if
+03D0:   wav 2 loaded
+jf @TAXWAR1_3015
+03D1: play_wav 2
+00BC: text_highpriority 'TAX1_5' 4000 ms 1  // Ok, ok! Just don't hurt me!
+wait 4000
+00BC: text_highpriority 'TAXW1_6' 8000 ms 1  // ~g~Take the V.I.P. to the airport!
+3@ = 1 // integer values
+
+:TAXWAR1_3015
+if
+   Actor.Dead(0@)
+jf @TAXWAR1_3053
+00BC: text_highpriority 'TAXW1_3' 5000 ms 1  // ~r~The V.I.P. is dead!
+jump @TAXWAR1_3908
+
+:TAXWAR1_3053
+jump @TAXWAR1_1688
+
+:TAXWAR1_3060
+if
+   not Car.Wrecked($6698)
+jf @TAXWAR1_3170
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3170
+if and
+   Actor.InCar(0@, $6698)
+01AF:   car $6698 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+80F5:   not player $PLAYER_CHAR 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_3170
+00BC: text_highpriority 'TAXW1_4' 5000 ms 1  // ~r~The V.I.P. has been dropped off!
+jump @TAXWAR1_3908
+
+:TAXWAR1_3170
+if
+   not Car.Wrecked($311)
+jf @TAXWAR1_3309
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3309
+if and
+0101:   actor 0@ stopped_near_point -1438.1 -833.6 11.3 radius 5.0 5.0 5.0 sphere 1
+80F5:   not player $PLAYER_CHAR 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_3309
+00BC: text_highpriority 'TAXW1_4' 5000 ms 1  // ~r~The V.I.P. has been dropped off!
+jump @TAXWAR1_3908
+
+:TAXWAR1_3309
+if
+   not Car.Wrecked($311)
+jf @TAXWAR1_3602
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3602
+if and
+   Actor.InCar(0@, $311)
+01B0:   car $311 stopped 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_3602
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-1462.635, -791.768, 15.662, 0.0, 0.0, 0.0)
+Camera.PointAt(-1462.162, -792.641, 15.783, 2)
+wait 2000
+Camera.SetPosition(-1468.559, -834.603, 16.36, 0.0, 0.0, 0.0)
+Camera.PointAt(-1467.827, -833.977, 16.091, 2)
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3588
+01E0: clear_leader 0@
+0319: set_actor 0@ running 0
+0362: put_actor 0@ at -1459.6 -825.3 13.9 and_remove_from_car
+Actor.Angle(0@) = 146.0
+0211: actor 0@ walk_to -1465.7 -832.2
+
+:TAXWAR1_3588
+wait 3500
+Camera.Restore_WithJumpCut
+jump @TAXWAR1_3925
+
+:TAXWAR1_3602
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3908
+if and
+00FF:   actor 0@ 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+00F6:   player $PLAYER_CHAR 1 -1438.1 -833.6 11.3 radius 5.0 5.0 5.0
+jf @TAXWAR1_3908
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-1462.635, -791.768, 15.662, 0.0, 0.0, 0.0)
+Camera.PointAt(-1462.162, -792.641, 15.783, 2)
+wait 2000
+Camera.SetPosition(-1468.559, -834.603, 16.36, 0.0, 0.0, 0.0)
+Camera.PointAt(-1467.827, -833.977, 16.091, 2)
+if
+   not Actor.Dead(0@)
+jf @TAXWAR1_3894
+01E0: clear_leader 0@
+0319: set_actor 0@ running 0
+Actor.PutAt(0@, -1459.6, -825.3, 13.9)
+Actor.Angle(0@) = 146.0
+0211: actor 0@ walk_to -1465.7 -832.2
+
+:TAXWAR1_3894
+wait 3500
+Camera.Restore_WithJumpCut
+jump @TAXWAR1_3925
+
+:TAXWAR1_3908
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:TAXWAR1_3925
+$308 = 1 // integer values
+0394: play_music 1
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 1000
+0318: set_latest_mission_passed 'TAXI_1'  // V.I.P.
+030C: progress_made += 1
+create_thread @TWAR2
+return
+
+:TAXWAR1_3991
+$ONMISSION = 0 // integer values
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+01C3: remove_references_to_car $6698
+01C2: remove_references_to_actor $6679
+01C2: remove_references_to_actor 0@
+Marker.Disable($6699)
+Marker.Disable($6672)
+Model.Destroy(#TAXI)
+Model.Destroy(#WMOCA)
+Model.Destroy(#WMOBU)
+Model.Destroy(#KAUFMAN)
+014F: stop_timer $6685
+$371 = 0 // integer values
+040D: unload_wav 1
+040D: unload_wav 2
+mission_cleanup
+return

@@ -1,0 +1,1060 @@
+:SHOPS
+$1524 = -60000 // integer values
+$1525 = -60000 // integer values
+$1526 = -60000 // integer values
+$1527 = 0 // integer values
+$1530 = 0 // integer values
+$864 = 0 // integer values
+$1540 = 0 // integer values
+$1541 = 0 // integer values
+$1542 = 0 // integer values
+$1543 = 0 // integer values
+$1544 = 0 // integer values
+$1545 = 0 // integer values
+$1546 = 0 // integer values
+$1547 = 0 // integer values
+$1548 = 0 // integer values
+$1549 = 0 // integer values
+$1550 = 0 // integer values
+$1551 = 0 // integer values
+$1552 = 0 // integer values
+$1553 = 0 // integer values
+$1554 = 0 // integer values
+$1555 = 0 // integer values
+$1531 = 0 // integer values
+thread 'SHOPS'
+set_wb_check_to 0
+create_thread @SHOP1
+create_thread @SHOP2
+create_thread @SHOP3
+create_thread @SHOP4
+create_thread @SHOP5
+end_thread
+
+:SHOP1
+thread 'SHOP1'
+
+:SHOP1_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP1_999
+if and
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+  $1003 == 0 // integer values
+jf @SHOP1_992
+if
+00F5:   player $PLAYER_CHAR 0 449.7 781.5 12.2 radius 30.0 30.0 30.0
+jf @SHOP1_329
+if
+  $1527 == 0 // integer values
+jf @SHOP1_216
+gosub @SHOP5_1792
+0084: $1533 = $859 // integer values and handles
+0060: $1533 -= $1524 // integer values
+if
+  $1533 > 60000 // integer values
+jf @SHOP1_202
+$1532 = Actor.Create(CivMale, #SPECIAL16, 450.0, 782.5, 12.2)
+gosub @SHOP5_2200
+
+:SHOP1_202
+$1527 = 1 // integer values
+jump @SHOP1_322
+
+:SHOP1_216
+if
+  $1533 > 60000 // integer values
+jf @SHOP1_322
+if
+   not Actor.Dead($1532)
+jf @SHOP1_315
+if
+0057:   player $PLAYER_CHAR 0 472.7 800.4 11.5 438.1 779.0 17.0
+jf @SHOP1_308
+gosub @SHOP5_1010
+
+:SHOP1_308
+jump @SHOP1_322
+
+:SHOP1_315
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP1_322
+jump @SHOP1_354
+
+:SHOP1_329
+if
+  $1527 == 1 // integer values
+jf @SHOP1_354
+gosub @SHOP5_1854
+
+:SHOP1_354
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP1_673
+if
+00F5:   player $PLAYER_CHAR 0 383.2 759.7 11.0 radius 30.0 30.0 30.0
+jf @SHOP1_648
+if
+  $1528 == 0 // integer values
+jf @SHOP1_535
+gosub @SHOP5_1792
+0084: $1534 = $859 // integer values and handles
+0060: $1534 -= $1525 // integer values
+if
+  $1534 > 60000 // integer values
+jf @SHOP1_521
+$1532 = Actor.Create(CivMale, #SPECIAL16, 383.2, 759.7, 11.0)
+Actor.Angle($1532) = 180.0
+gosub @SHOP5_2200
+
+:SHOP1_521
+$1528 = 1 // integer values
+jump @SHOP1_641
+
+:SHOP1_535
+if
+  $1534 > 60000 // integer values
+jf @SHOP1_641
+if
+   not Actor.Dead($1532)
+jf @SHOP1_634
+if
+00F5:   player $PLAYER_CHAR 0 383.2 759.7 11.0 radius 8.0 8.0 6.0
+jf @SHOP1_627
+gosub @SHOP5_1010
+
+:SHOP1_627
+jump @SHOP1_641
+
+:SHOP1_634
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP1_641
+jump @SHOP1_673
+
+:SHOP1_648
+if
+  $1528 == 1 // integer values
+jf @SHOP1_673
+gosub @SHOP5_1854
+
+:SHOP1_673
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP1_992
+if
+00F5:   player $PLAYER_CHAR 0 379.9 210.2 10.6 radius 30.0 30.0 30.0
+jf @SHOP1_967
+if
+  $1529 == 0 // integer values
+jf @SHOP1_854
+gosub @SHOP5_1792
+0084: $1535 = $859 // integer values and handles
+0060: $1535 -= $1526 // integer values
+if
+  $1535 > 60000 // integer values
+jf @SHOP1_840
+$1532 = Actor.Create(CivMale, #SPECIAL16, 379.9, 210.2, 10.6)
+Actor.Angle($1532) = 280.0
+gosub @SHOP5_2200
+
+:SHOP1_840
+$1529 = 1 // integer values
+jump @SHOP1_960
+
+:SHOP1_854
+if
+  $1535 > 60000 // integer values
+jf @SHOP1_960
+if
+   not Actor.Dead($1532)
+jf @SHOP1_953
+if
+00F5:   player $PLAYER_CHAR 0 379.9 210.2 10.6 radius 8.0 8.0 6.0
+jf @SHOP1_946
+gosub @SHOP5_1010
+
+:SHOP1_946
+jump @SHOP1_960
+
+:SHOP1_953
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP1_960
+jump @SHOP1_992
+
+:SHOP1_967
+if
+  $1529 == 1 // integer values
+jf @SHOP1_992
+gosub @SHOP5_1854
+
+:SHOP1_992
+jump @SHOP1_1006
+
+:SHOP1_999
+gosub @SHOP5_1854
+
+:SHOP1_1006
+jump @SHOP1_10
+
+:SHOP2
+thread 'SHOP2'
+
+:SHOP2_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP2_364
+if
+0121:   player $PLAYER_CHAR in_zone 'HAITI'  // Little Haiti
+jf @SHOP2_357
+if
+00F5:   player $PLAYER_CHAR 0 -846.6 -72.6 10.8 radius 30.0 30.0 30.0
+jf @SHOP2_332
+if
+  $1527 == 0 // integer values
+jf @SHOP2_219
+gosub @SHOP5_1792
+0084: $1533 = $859 // integer values and handles
+0060: $1533 -= $1524 // integer values
+if
+  $1533 > 60000 // integer values
+jf @SHOP2_205
+$1532 = Actor.Create(CivMale, #SPECIAL16, -846.6, -72.6, 10.8)
+Actor.Angle($1532) = 166.0
+gosub @SHOP5_2200
+
+:SHOP2_205
+$1527 = 1 // integer values
+jump @SHOP2_325
+
+:SHOP2_219
+if
+  $1533 > 60000 // integer values
+jf @SHOP2_325
+if
+   not Actor.Dead($1532)
+jf @SHOP2_318
+if
+00F5:   player $PLAYER_CHAR 0 -846.6 -72.6 10.8 radius 8.0 8.0 6.0
+jf @SHOP2_311
+gosub @SHOP5_1010
+
+:SHOP2_311
+jump @SHOP2_325
+
+:SHOP2_318
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP2_325
+jump @SHOP2_357
+
+:SHOP2_332
+if
+  $1527 == 1 // integer values
+jf @SHOP2_357
+gosub @SHOP5_1854
+
+:SHOP2_357
+jump @SHOP2_371
+
+:SHOP2_364
+gosub @SHOP5_1854
+
+:SHOP2_371
+jump @SHOP2_10
+
+:SHOP3
+thread 'SHOP3'
+
+:SHOP3_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP3_683
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @SHOP3_676
+if
+00F5:   player $PLAYER_CHAR 0 -830.4 741.9 10.6 radius 30.0 30.0 30.0
+jf @SHOP3_332
+if
+  $1527 == 0 // integer values
+jf @SHOP3_219
+gosub @SHOP5_1792
+0084: $1533 = $859 // integer values and handles
+0060: $1533 -= $1524 // integer values
+if
+  $1533 > 60000 // integer values
+jf @SHOP3_205
+$1532 = Actor.Create(CivMale, #SPECIAL16, -830.4, 741.9, 10.6)
+Actor.Angle($1532) = 90.0
+gosub @SHOP5_2200
+
+:SHOP3_205
+$1527 = 1 // integer values
+jump @SHOP3_325
+
+:SHOP3_219
+if
+  $1533 > 60000 // integer values
+jf @SHOP3_325
+if
+   not Actor.Dead($1532)
+jf @SHOP3_318
+if
+00F5:   player $PLAYER_CHAR 0 -830.4 741.9 10.6 radius 8.0 8.0 6.0
+jf @SHOP3_311
+gosub @SHOP5_1010
+
+:SHOP3_311
+jump @SHOP3_325
+
+:SHOP3_318
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP3_325
+jump @SHOP3_357
+
+:SHOP3_332
+if
+  $1527 == 1 // integer values
+jf @SHOP3_357
+gosub @SHOP5_1854
+
+:SHOP3_357
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP3_676
+if
+00F5:   player $PLAYER_CHAR 0 -854.3 850.0 10.6 radius 30.0 30.0 30.0
+jf @SHOP3_651
+if
+  $1528 == 0 // integer values
+jf @SHOP3_538
+gosub @SHOP5_1792
+0084: $1534 = $859 // integer values and handles
+0060: $1534 -= $1525 // integer values
+if
+  $1534 > 60000 // integer values
+jf @SHOP3_524
+$1532 = Actor.Create(CivMale, #SPECIAL16, -854.3, 850.0, 10.6)
+Actor.Angle($1532) = 110.0
+gosub @SHOP5_2200
+
+:SHOP3_524
+$1528 = 1 // integer values
+jump @SHOP3_644
+
+:SHOP3_538
+if
+  $1534 > 60000 // integer values
+jf @SHOP3_644
+if
+   not Actor.Dead($1532)
+jf @SHOP3_637
+if
+00F5:   player $PLAYER_CHAR 0 -854.3 850.0 10.6 radius 8.0 8.0 6.0
+jf @SHOP3_630
+gosub @SHOP5_1010
+
+:SHOP3_630
+jump @SHOP3_644
+
+:SHOP3_637
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP3_644
+jump @SHOP3_676
+
+:SHOP3_651
+if
+  $1528 == 1 // integer values
+jf @SHOP3_676
+gosub @SHOP5_1854
+
+:SHOP3_676
+jump @SHOP3_690
+
+:SHOP3_683
+gosub @SHOP5_1854
+
+:SHOP3_690
+jump @SHOP3_10
+
+:SHOP4
+thread 'SHOP4'
+
+:SHOP4_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP4_1034
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @SHOP4_1027
+if
+00F5:   player $PLAYER_CHAR 0 -859.2 -632.7 10.6 radius 30.0 30.0 30.0
+jf @SHOP4_332
+if
+  $1527 == 0 // integer values
+jf @SHOP4_219
+gosub @SHOP5_1792
+0084: $1533 = $859 // integer values and handles
+0060: $1533 -= $1524 // integer values
+if
+  $1533 > 60000 // integer values
+jf @SHOP4_205
+$1532 = Actor.Create(CivMale, #SPECIAL16, -858.8, -632.66, 10.6)
+Actor.Angle($1532) = 193.0
+gosub @SHOP5_2200
+
+:SHOP4_205
+$1527 = 1 // integer values
+jump @SHOP4_325
+
+:SHOP4_219
+if
+  $1533 > 60000 // integer values
+jf @SHOP4_325
+if
+   not Actor.Dead($1532)
+jf @SHOP4_318
+if
+00F5:   player $PLAYER_CHAR 0 -859.2 -632.7 10.6 radius 8.0 8.0 6.0
+jf @SHOP4_311
+gosub @SHOP5_1010
+
+:SHOP4_311
+jump @SHOP4_325
+
+:SHOP4_318
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP4_325
+jump @SHOP4_357
+
+:SHOP4_332
+if
+  $1527 == 1 // integer values
+jf @SHOP4_357
+gosub @SHOP5_1854
+
+:SHOP4_357
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP4_692
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP4_692
+if
+00F5:   player $PLAYER_CHAR 0 -1167.1 -615.8 11.0 radius 30.0 30.0 30.0
+jf @SHOP4_667
+if
+  $1528 == 0 // integer values
+jf @SHOP4_554
+gosub @SHOP5_1792
+0084: $1534 = $859 // integer values and handles
+0060: $1534 -= $1525 // integer values
+if
+  $1534 > 60000 // integer values
+jf @SHOP4_540
+$1532 = Actor.Create(CivMale, #SPECIAL16, -1167.1, -615.8, 11.0)
+Actor.Angle($1532) = 90.0
+gosub @SHOP5_2200
+
+:SHOP4_540
+$1528 = 1 // integer values
+jump @SHOP4_660
+
+:SHOP4_554
+if
+  $1534 > 60000 // integer values
+jf @SHOP4_660
+if
+   not Actor.Dead($1532)
+jf @SHOP4_653
+if
+00F5:   player $PLAYER_CHAR 0 -1167.1 -615.8 11.0 radius 8.0 8.0 6.0
+jf @SHOP4_646
+gosub @SHOP5_1010
+
+:SHOP4_646
+jump @SHOP4_660
+
+:SHOP4_653
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP4_660
+jump @SHOP4_692
+
+:SHOP4_667
+if
+  $1528 == 1 // integer values
+jf @SHOP4_692
+gosub @SHOP5_1854
+
+:SHOP4_692
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP4_1027
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP4_1027
+if
+00F5:   player $PLAYER_CHAR 0 -1192.2 -323.7 11.1 radius 30.0 30.0 30.0
+jf @SHOP4_1002
+if
+  $1529 == 0 // integer values
+jf @SHOP4_889
+gosub @SHOP5_1792
+0084: $1535 = $859 // integer values and handles
+0060: $1535 -= $1526 // integer values
+if
+  $1535 > 60000 // integer values
+jf @SHOP4_875
+$1532 = Actor.Create(CivMale, #SPECIAL16, -1192.2, -323.7, 11.1)
+Actor.Angle($1532) = 90.0
+gosub @SHOP5_2200
+
+:SHOP4_875
+$1529 = 1 // integer values
+jump @SHOP4_995
+
+:SHOP4_889
+if
+  $1535 > 60000 // integer values
+jf @SHOP4_995
+if
+   not Actor.Dead($1532)
+jf @SHOP4_988
+if
+00F5:   player $PLAYER_CHAR 0 -1192.2 -323.7 11.1 radius 8.0 8.0 6.0
+jf @SHOP4_981
+gosub @SHOP5_1010
+
+:SHOP4_981
+jump @SHOP4_995
+
+:SHOP4_988
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP4_995
+jump @SHOP4_1027
+
+:SHOP4_1002
+if
+  $1529 == 1 // integer values
+jf @SHOP4_1027
+gosub @SHOP5_1854
+
+:SHOP4_1027
+jump @SHOP4_1041
+
+:SHOP4_1034
+gosub @SHOP5_1854
+
+:SHOP4_1041
+jump @SHOP4_10
+
+:SHOP5
+thread 'SHOP5'
+
+:SHOP5_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP5_996
+if
+  $1003 == 1 // integer values
+jf @SHOP5_989
+if
+00F5:   player $PLAYER_CHAR 0 352.7 1111.3 24.5 radius 30.0 30.0 15.0
+jf @SHOP5_326
+if
+  $1527 == 0 // integer values
+jf @SHOP5_213
+gosub @SHOP5_1792
+0084: $1533 = $859 // integer values and handles
+0060: $1533 -= $1524 // integer values
+if
+  $1533 > 60000 // integer values
+jf @SHOP5_199
+$1532 = Actor.Create(CivMale, #SPECIAL16, 352.7, 1111.3, 24.5)
+Actor.Angle($1532) = 290.0
+gosub @SHOP5_2200
+
+:SHOP5_199
+$1527 = 1 // integer values
+jump @SHOP5_319
+
+:SHOP5_213
+if
+  $1533 > 60000 // integer values
+jf @SHOP5_319
+if
+   not Actor.Dead($1532)
+jf @SHOP5_312
+if
+00F5:   player $PLAYER_CHAR 0 352.7 1111.3 24.5 radius 8.0 8.0 6.0
+jf @SHOP5_305
+gosub @SHOP5_1010
+
+:SHOP5_305
+jump @SHOP5_319
+
+:SHOP5_312
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP5_319
+jump @SHOP5_351
+
+:SHOP5_326
+if
+  $1527 == 1 // integer values
+jf @SHOP5_351
+gosub @SHOP5_1854
+
+:SHOP5_351
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP5_670
+if
+00F5:   player $PLAYER_CHAR 0 423.5 1039.4 18.1 radius 30.0 30.0 15.0
+jf @SHOP5_645
+if
+  $1528 == 0 // integer values
+jf @SHOP5_532
+gosub @SHOP5_1792
+0084: $1534 = $859 // integer values and handles
+0060: $1534 -= $1525 // integer values
+if
+  $1534 > 60000 // integer values
+jf @SHOP5_518
+$1532 = Actor.Create(CivMale, #SPECIAL16, 423.5, 1039.4, 18.1)
+Actor.Angle($1532) = 136.0
+gosub @SHOP5_2200
+
+:SHOP5_518
+$1528 = 1 // integer values
+jump @SHOP5_638
+
+:SHOP5_532
+if
+  $1534 > 60000 // integer values
+jf @SHOP5_638
+if
+   not Actor.Dead($1532)
+jf @SHOP5_631
+if
+00F5:   player $PLAYER_CHAR 0 423.5 1039.4 18.1 radius 8.0 8.0 6.0
+jf @SHOP5_624
+gosub @SHOP5_1010
+
+:SHOP5_624
+jump @SHOP5_638
+
+:SHOP5_631
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP5_638
+jump @SHOP5_670
+
+:SHOP5_645
+if
+  $1528 == 1 // integer values
+jf @SHOP5_670
+gosub @SHOP5_1854
+
+:SHOP5_670
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP5_989
+if
+00F5:   player $PLAYER_CHAR 0 468.7 1206.6 19.0 radius 30.0 30.0 15.0
+jf @SHOP5_964
+if
+  $1529 == 0 // integer values
+jf @SHOP5_851
+gosub @SHOP5_1792
+0084: $1535 = $859 // integer values and handles
+0060: $1535 -= $1526 // integer values
+if
+  $1535 > 60000 // integer values
+jf @SHOP5_837
+$1532 = Actor.Create(CivMale, #SPECIAL16, 468.7, 1206.6, 19.0)
+Actor.Angle($1532) = 90.0
+gosub @SHOP5_2200
+
+:SHOP5_837
+$1529 = 1 // integer values
+jump @SHOP5_957
+
+:SHOP5_851
+if
+  $1535 > 60000 // integer values
+jf @SHOP5_957
+if
+   not Actor.Dead($1532)
+jf @SHOP5_950
+if
+00F5:   player $PLAYER_CHAR 0 468.7 1206.6 19.0 radius 8.0 8.0 6.0
+jf @SHOP5_943
+gosub @SHOP5_1010
+
+:SHOP5_943
+jump @SHOP5_957
+
+:SHOP5_950
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+
+:SHOP5_957
+jump @SHOP5_989
+
+:SHOP5_964
+if
+  $1529 == 1 // integer values
+jf @SHOP5_989
+gosub @SHOP5_1854
+
+:SHOP5_989
+jump @SHOP5_1003
+
+:SHOP5_996
+gosub @SHOP5_1854
+
+:SHOP5_1003
+jump @SHOP5_10
+
+:SHOP5_1010
+if
+   not Actor.Dead($1532)
+jf @SHOP5_1790
+if
+0457:   player $PLAYER_CHAR aiming_at_actor $1532
+jf @SHOP5_1636
+if
+  $1530 == 0 // integer values
+jf @SHOP5_1167
+022F: set_actor $1532 stop_looking
+if
+   not Actor.Dead($1532)
+jf @SHOP5_1146
+04EB: actor $1532 crouch 0 9999999 ms
+0372: set_actor $1532 anim 0 wait_state_time 0 ms
+0372: set_actor $1532 anim 17 wait_state_time 9999999 ms
+04C4: create_coordinate $896 $897 $898 from_actor $1532 offset 0.0 1.2 0.0
+
+:SHOP5_1146
+16@ = 0 // integer values
+$1530 = 1 // integer values
+jump @SHOP5_1599
+
+:SHOP5_1167
+if
+  $864 == 0 // integer values
+jf @SHOP5_1599
+if and
+  16@ > 2000 // integer values
+  6000 > 16@ // integer values
+jf @SHOP5_1283
+if
+  $1540 == 0 // integer values
+jf @SHOP5_1283
+$898 += 0.15 // floating-point values
+02E1: $1536 = create_cash_pickup 50 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+gosub @SHOP5_2245
+$1540 = 1 // integer values
+
+:SHOP5_1283
+if and
+  16@ > 6000 // integer values
+  10000 > 16@ // integer values
+jf @SHOP5_1391
+if
+  $1541 == 0 // integer values
+jf @SHOP5_1391
+$897 += 0.1 // floating-point values
+$896 += 0.1 // floating-point values
+02E1: $1537 = create_cash_pickup 100 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+$1541 = 1 // integer values
+
+:SHOP5_1391
+if and
+  16@ > 10000 // integer values
+  14000 > 16@ // integer values
+jf @SHOP5_1490
+if
+  $1542 == 0 // integer values
+jf @SHOP5_1490
+$897 += 0.1 // floating-point values
+02E1: $1538 = create_cash_pickup 250 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$1542 = 1 // integer values
+
+:SHOP5_1490
+if and
+  16@ > 14000 // integer values
+  20000 > 16@ // integer values
+jf @SHOP5_1599
+if
+  $1543 == 0 // integer values
+jf @SHOP5_1599
+$897 += 0.1 // floating-point values
+$896 += 0.1 // floating-point values
+02E1: $1539 = create_cash_pickup 600 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+$1543 = 1 // integer values
+
+:SHOP5_1599
+if or
+02DF:   player $PLAYER_CHAR aggressive
+031D:   actor $1532 hit_by_weapon 47
+jf @SHOP5_1629
+jump @SHOP5_1636
+
+:SHOP5_1629
+jump @SHOP5_1790
+
+:SHOP5_1636
+if
+  $1530 == 0 // integer values
+jf @SHOP5_1691
+if or
+02DF:   player $PLAYER_CHAR aggressive
+031D:   actor $1532 hit_by_weapon 47
+jf @SHOP5_1684
+$1530 = 1 // integer values
+
+:SHOP5_1684
+jump @SHOP5_1790
+
+:SHOP5_1691
+if
+   not Actor.Dead($1532)
+jf @SHOP5_1790
+0372: set_actor $1532 anim 0 wait_state_time 0 ms
+04EB: actor $1532 crouch 1 9999999 ms
+if
+  $864 == 0 // integer values
+jf @SHOP5_1790
+Actor.StorePos($1532, $896, $897, $898)
+018D: $865 = create_sound 0 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$864 = 1 // integer values
+
+:SHOP5_1790
+return
+
+:SHOP5_1792
+023C: load_special_actor 16 'S_KEEP'
+
+:SHOP5_1804
+if
+823D:   not special_actor 16 loaded
+jf @SHOP5_1842
+wait 0
+023C: load_special_actor 16 'S_KEEP'
+jump @SHOP5_1804
+
+:SHOP5_1842
+01BD: $859 = current_time_in_ms
+Actor.DestroyInstantly($1532)
+return
+
+:SHOP5_1854
+if
+  $1527 == 1 // integer values
+jf @SHOP5_1921
+if or
+   Actor.Dead($1532)
+  $1530 == 1 // integer values
+jf @SHOP5_1921
+if
+  $1533 > 60000 // integer values
+jf @SHOP5_1921
+01BD: $1524 = current_time_in_ms
+
+:SHOP5_1921
+if
+  $1528 == 1 // integer values
+jf @SHOP5_1988
+if or
+   Actor.Dead($1532)
+  $1530 == 1 // integer values
+jf @SHOP5_1988
+if
+  $1534 > 60000 // integer values
+jf @SHOP5_1988
+01BD: $1525 = current_time_in_ms
+
+:SHOP5_1988
+if
+  $1529 == 1 // integer values
+jf @SHOP5_2055
+if or
+   Actor.Dead($1532)
+  $1530 == 1 // integer values
+jf @SHOP5_2055
+if
+  $1535 > 60000 // integer values
+jf @SHOP5_2055
+01BD: $1526 = current_time_in_ms
+
+:SHOP5_2055
+$1527 = 0 // integer values
+$1528 = 0 // integer values
+$1529 = 0 // integer values
+$1530 = 0 // integer values
+$864 = 0 // integer values
+$1540 = 0 // integer values
+$1541 = 0 // integer values
+$1542 = 0 // integer values
+$1543 = 0 // integer values
+Pickup.Destroy($1536)
+Pickup.Destroy($1537)
+Pickup.Destroy($1538)
+Pickup.Destroy($1539)
+0296: unload_special_actor 16
+Actor.DestroyInstantly($1532)
+018E: stop_sound $865
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @SHOP5_2198
+$1524 = -60000 // integer values
+$1525 = -60000 // integer values
+$1526 = -60000 // integer values
+
+:SHOP5_2198
+return
+
+:SHOP5_2200
+0243: set_actor $1532 ped_stats_to 16
+01ED: clear_actor $1532 threat_search
+0350: set_actor $1532 maintain_position_when_attacked 1
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOP5_2243
+022D: set_actor $1532 to_look_at_player $PLAYER_CHAR
+
+:SHOP5_2243
+return
+
+:SHOP5_2245
+if and
+00F5:   player $PLAYER_CHAR 0 -859.2 -632.7 10.6 radius 30.0 30.0 30.0
+  $1544 == 0 // integer values
+jf @SHOP5_2318
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1544 = 1 // integer values
+
+:SHOP5_2318
+if and
+00F5:   player $PLAYER_CHAR 0 -854.3 850.0 10.6 radius 30.0 30.0 30.0
+  $1545 == 0 // integer values
+jf @SHOP5_2391
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1545 = 1 // integer values
+
+:SHOP5_2391
+if and
+00F5:   player $PLAYER_CHAR 0 -830.4 741.9 10.6 radius 30.0 30.0 30.0
+  $1546 == 0 // integer values
+jf @SHOP5_2464
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1546 = 1 // integer values
+
+:SHOP5_2464
+if and
+00F5:   player $PLAYER_CHAR 0 -846.6 -72.6 10.8 radius 30.0 30.0 30.0
+  $1547 == 0 // integer values
+jf @SHOP5_2537
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1547 = 1 // integer values
+
+:SHOP5_2537
+if and
+00F5:   player $PLAYER_CHAR 0 379.9 210.2 10.6 radius 30.0 30.0 30.0
+  $1548 == 0 // integer values
+jf @SHOP5_2610
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1548 = 1 // integer values
+
+:SHOP5_2610
+if and
+00F5:   player $PLAYER_CHAR 0 383.2 759.7 11.0 radius 30.0 30.0 30.0
+  $1549 == 0 // integer values
+jf @SHOP5_2683
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1549 = 1 // integer values
+
+:SHOP5_2683
+if and
+00F5:   player $PLAYER_CHAR 0 449.7 781.5 12.2 radius 30.0 30.0 30.0
+  $1550 == 0 // integer values
+jf @SHOP5_2756
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1550 = 1 // integer values
+
+:SHOP5_2756
+if and
+00F5:   player $PLAYER_CHAR 0 352.7 1111.3 24.5 radius 30.0 30.0 15.0
+  $1551 == 0 // integer values
+jf @SHOP5_2829
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1551 = 1 // integer values
+
+:SHOP5_2829
+if and
+00F5:   player $PLAYER_CHAR 0 423.5 1039.4 18.1 radius 30.0 30.0 15.0
+  $1552 == 0 // integer values
+jf @SHOP5_2902
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1552 = 1 // integer values
+
+:SHOP5_2902
+if and
+00F5:   player $PLAYER_CHAR 0 468.7 1206.6 18.2 radius 30.0 30.0 15.0
+  $1553 == 0 // integer values
+jf @SHOP5_2975
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1553 = 1 // integer values
+
+:SHOP5_2975
+if and
+00F5:   player $PLAYER_CHAR 0 -1167.5 -613.5 11.0 radius 30.0 30.0 30.0
+  $1554 == 0 // integer values
+jf @SHOP5_3048
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1554 = 1 // integer values
+
+:SHOP5_3048
+if and
+00F5:   player $PLAYER_CHAR 0 -1192.2 -323.7 11.1 radius 30.0 30.0 30.0
+  $1555 == 0 // integer values
+jf @SHOP5_3121
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$1555 = 1 // integer values
+
+:SHOP5_3121
+return

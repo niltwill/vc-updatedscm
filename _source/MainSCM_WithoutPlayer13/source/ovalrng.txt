@@ -1,0 +1,2847 @@
+:OVALRNG
+gosub @OVALRNG_36
+if
+wasted_or_busted
+jf @OVALRNG_27
+gosub @OVALRNG_17790
+
+:OVALRNG_27
+gosub @OVALRNG_18173
+end_thread
+
+:OVALRNG_36
+$ONMISSION = 1 // integer values
+thread 'OVALRNG'
+wait 0
+if
+  $1597 == 0 // integer values
+jf @OVALRNG_77
+increment_mission_attempts
+
+:OVALRNG_77
+054C: use_GXT_table 'OVALRIG'
+$7440 = 0 // integer values
+$7436 = 0 // integer values
+$7437 = 0 // integer values
+$7438 = 0 // integer values
+$7439 = 0 // integer values
+$7021 = 0 // integer values
+$7027 = 0 // integer values
+$7033 = 0 // integer values
+$7039 = 0 // integer values
+$7045 = 0 // integer values
+$7051 = 0 // integer values
+$7057 = 0 // integer values
+$7063 = 0 // integer values
+$7069 = 0 // integer values
+$7057 = 0 // integer values
+$7081 = 0 // integer values
+$7087 = 0 // integer values
+$7008 = 0 // integer values
+$7012 = 0 // integer values
+$7016 = 0 // integer values
+$7022 = 0 // integer values
+$7028 = 0 // integer values
+$7034 = 0 // integer values
+$7040 = 0 // integer values
+$7046 = 0 // integer values
+$7052 = 0 // integer values
+$7058 = 0 // integer values
+$7064 = 0 // integer values
+$7070 = 0 // integer values
+$7076 = 0 // integer values
+$7082 = 0 // integer values
+$7088 = 0 // integer values
+$7443 = 0 // integer values
+$7444 = 0 // integer values
+$7445 = 0 // integer values
+$7091 = 0 // integer values
+$7092 = 0 // integer values
+$7093 = 0 // integer values
+$7094 = 0 // integer values
+$7095 = 0 // integer values
+$7096 = 0 // integer values
+$7097 = 0 // integer values
+$7098 = 0 // integer values
+$7099 = 0 // integer values
+$7100 = 0 // integer values
+$7101 = 0 // integer values
+$7102 = 0 // integer values
+$7010 = 0 // integer values
+$7014 = 0 // integer values
+$7018 = 0 // integer values
+$7024 = 0 // integer values
+$7030 = 0 // integer values
+$7036 = 0 // integer values
+$7042 = 0 // integer values
+$7048 = 0 // integer values
+$7054 = 0 // integer values
+$7060 = 0 // integer values
+$7066 = 0 // integer values
+$7072 = 0 // integer values
+$7078 = 0 // integer values
+$7084 = 0 // integer values
+$7090 = 0 // integer values
+$6999 = 0 // integer values
+$6986 = -1 // integer values
+$6987 = 0 // integer values
+$6988 = 0 // integer values
+$6989 = 0 // integer values
+$6990 = 0 // integer values
+$6991 = 0 // integer values
+$6992 = -1 // integer values
+$6993 = -1 // integer values
+$6995 = 0 // integer values
+$6997 = 0 // integer values
+$7004 = 0 // integer values
+$7441 = 0 // integer values
+$7002 = 0 // integer values
+$7005 = 0 // integer values
+$6998 = 0 // integer values
+$7001 = 100 // integer values
+$7498 = 0.0 // floating-point values
+$7499 = 0.0 // floating-point values
+$7500 = 0.0 // floating-point values
+$7507 = -1288.976 // floating-point values
+$7508 = 1190.669 // floating-point values
+$7509 = 264.291 // floating-point values
+$7510 = -1257.085 // floating-point values
+$7511 = 1245.841 // floating-point values
+$7512 = 264.296 // floating-point values
+$7513 = -1296.749 // floating-point values
+$7514 = 1306.123 // floating-point values
+$7515 = 264.296 // floating-point values
+$7516 = -1366.372 // floating-point values
+$7517 = 1326.72 // floating-point values
+$7518 = 264.296 // floating-point values
+$7519 = -1419.235 // floating-point values
+$7520 = 1327.06 // floating-point values
+$7521 = 264.296 // floating-point values
+$7522 = -1500.381 // floating-point values
+$7523 = 1306.066 // floating-point values
+$7524 = 264.296 // floating-point values
+$7525 = -1540.008 // floating-point values
+$7526 = 1245.841 // floating-point values
+$7527 = 264.296 // floating-point values
+$7528 = -1500.446 // floating-point values
+$7529 = 1185.51 // floating-point values
+$7530 = 264.296 // floating-point values
+$7531 = -1419.234 // floating-point values
+$7532 = 1164.33 // floating-point values
+$7533 = 264.296 // floating-point values
+$7534 = -1355.087 // floating-point values
+$7535 = 1165.782 // floating-point values
+$7536 = 264.296 // floating-point values
+select_interior 16
+057E: make_radar_grey 1
+0581: enable_radar 0
+04F9: set_extracolors 11 fade 0
+0055: put_player $PLAYER_CHAR at -1420.856 1245.843 251.379
+Model.Load(#WMYCR)
+Model.Load(#HOTRINA)
+Model.Load(#HOTRINB)
+Model.Load(#HOTRING)
+Camera.SetAtPos(-1343.743, 1151.814, 275.7988)
+038B: load_requested_models
+
+:OVALRNG_1046
+if or
+   not Model.Available(#WMYCR)
+   not Model.Available(#HOTRINA)
+   not Model.Available(#HOTRINB)
+   not Model.Available(#HOTRING)
+jf @OVALRNG_1087
+wait 0
+jump @OVALRNG_1046
+
+:OVALRNG_1087
+Camera.SetPosition(-1318.205, 1163.39, 273.7596, 0.0, 0.0, 0.0)
+Camera.PointAt(-1319.118, 1163.731, 273.5374, 2)
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+$7007 = Car.Create(#HOTRINA, -1344.487, 1172.733, 263.8694)
+Car.Angle($7007) = 284.8876
+Car.StorePos($7007, $7489, $7490, $7491)
+0084: $6992 = $7007 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7422 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 0 -1
+$7011 = Car.Create(#HOTRINA, -1343.438, 1167.837, 264.6195)
+Car.Angle($7011) = 281.5068
+Car.StorePos($7011, $7492, $7493, $7494)
+0084: $6992 = $7011 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7423 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 1 -1
+$7015 = Car.Create(#HOTRINA, -1354.297, 1170.289, 263.9862)
+Car.Angle($7015) = 282.7367
+Car.StorePos($7015, $7495, $7496, $7497)
+0084: $6992 = $7015 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7424 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 2 -1
+$7019 = Car.Create(#HOTRINA, -1352.847, 1165.527, 264.7497)
+Car.Angle($7019) = 284.2442
+Car.StorePos($7019, 0@, 1@, 2@)
+0084: $6992 = $7019 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7020 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 3 -1
+$7025 = Car.Create(#HOTRINA, -1363.758, 1169.078, 264.0151)
+Car.Angle($7025) = 276.4275
+Car.StorePos($7025, 3@, 4@, 5@)
+0084: $6992 = $7025 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7026 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 4 -1
+$7031 = Car.Create(#HOTRINA, -1363.67, 1164.15, 264.7848)
+Car.Angle($7031) = 277.8466
+Car.StorePos($7031, 6@, 7@, 8@)
+0084: $6992 = $7031 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7032 = $6993 // integer values and handles
+0506: vehicle_model 232 set_next_variation 5 -1
+$7037 = Car.Create(#HOTRINA, -1373.879, 1168.654, 264.0179)
+Car.Angle($7037) = 273.302
+Car.StorePos($7037, 9@, 10@, 11@)
+0084: $6992 = $7037 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7038 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 0 -1
+$7043 = Car.Create(#HOTRINB, -1374.561, 1163.055, 264.9375)
+Car.Angle($7043) = 272.9799
+Car.StorePos($7043, 12@, 13@, 14@)
+0084: $6992 = $7043 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7044 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 1 -1
+$7049 = Car.Create(#HOTRINB, -1383.668, 1167.947, 264.1144)
+Car.Angle($7049) = 273.0015
+Car.StorePos($7049, $7103, $7104, $7105)
+0084: $6992 = $7049 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7050 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 2 -1
+$7055 = Car.Create(#HOTRINB, -1383.582, 1162.903, 264.9546)
+Car.Angle($7055) = 269.9305
+Car.StorePos($7055, $7106, $7107, $7108)
+0084: $6992 = $7055 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7056 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 3 -1
+$7061 = Car.Create(#HOTRINB, -1393.223, 1167.712, 264.1403)
+Car.Angle($7061) = 270.1651
+Car.StorePos($7061, $7109, $7110, $7111)
+0084: $6992 = $7061 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7062 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 4 -1
+$7067 = Car.Create(#HOTRINB, -1393.104, 1163.053, 264.914)
+Car.Angle($7067) = 270.334
+Car.StorePos($7067, $7112, $7113, $7114)
+0084: $6992 = $7067 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7068 = $6993 // integer values and handles
+0506: vehicle_model 233 set_next_variation 5 -1
+$7073 = Car.Create(#HOTRINB, -1402.184, 1167.193, 264.2093)
+Car.Angle($7073) = 271.0722
+Car.StorePos($7073, $7115, $7116, $7117)
+0084: $6992 = $7073 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7074 = $6993 // integer values and handles
+$7079 = Car.Create(#HOTRINA, -1402.375, 1163.057, 264.9016)
+Car.Angle($7079) = 266.2549
+Car.StorePos($7079, $7118, $7119, $7120)
+0084: $6992 = $7079 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7080 = $6993 // integer values and handles
+$7085 = Car.Create(#HOTRINB, -1412.111, 1167.211, 264.2081)
+Car.Angle($7085) = 273.8779
+Car.StorePos($7085, $7121, $7122, $7123)
+0084: $6992 = $7085 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7086 = $6993 // integer values and handles
+$7000 = Car.Create(#HOTRING, -1411.949, 1162.92, 264.916)
+Car.Angle($7000) = 271.2772
+Car.Health($7000) = 1250
+Car.SetImmunities($7000, 0, 1, 1, 0, 0)
+Car.StorePos($7000, $7483, $7484, $7485)
+0169: set_fade_color 0 0 1
+fade 1 1500
+wait 250
+$6994 = 1 // integer values
+gosub @OVALRNG_18808
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @OVALRNG_2871
+if
+   not Car.Wrecked($7000)
+jf @OVALRNG_2864
+0369: put_player $PLAYER_CHAR in_car $7000
+
+:OVALRNG_2864
+jump @OVALRNG_2919
+
+:OVALRNG_2871
+012A: put_player $PLAYER_CHAR at -1504.198 1314.846 265.2744 and_remove_from_car
+wait 0
+if
+   not Car.Wrecked($7000)
+jf @OVALRNG_2919
+0369: put_player $PLAYER_CHAR in_car $7000
+
+:OVALRNG_2919
+00BC: text_highpriority 'HOTR_01' 8000 ms 1  // ~g~The Race lasts for 12 laps. Only 1st, 2nd and 3rd places qualify for winnings.
+01BD: $4811 = current_time_in_ms
+$6991 = 1 // integer values
+03F0: enable_text_draw 1
+16@ = 0 // integer values
+
+:OVALRNG_2957
+wait 0
+01BD: $4811 = current_time_in_ms
+if
+00F6:   player $PLAYER_CHAR 1 -1414.753 1155.434 266.3521 radius 1.5 2.0 1.5
+jf @OVALRNG_3036
+00BC: text_highpriority 'HOTR_14' 2500 ms 1  // ~r~You have been disqualified!
+jump @OVALRNG_17790
+
+:OVALRNG_3036
+if
+  5 > $6986 // integer values
+jf @OVALRNG_3163
+if
+  $6986 > -1 // integer values
+jf @OVALRNG_3163
+if
+00E1:   player 0 pressed_button 16
+jf @OVALRNG_3138
+if
+  $7002 == 1 // integer values
+jf @OVALRNG_3131
+03EB: clear_small_messages_only
+0084: $6987 = $4811 // integer values and handles
+$6987 -= 100 // integer values
+$6986 = 5 // integer values
+
+:OVALRNG_3131
+jump @OVALRNG_3163
+
+:OVALRNG_3138
+if
+  $7002 == 0 // integer values
+jf @OVALRNG_3163
+$7002 = 1 // integer values
+
+:OVALRNG_3163
+if
+  $6986 == -1 // integer values
+jf @OVALRNG_3224
+$6999 = 2 // integer values
+if
+   not fading
+jf @OVALRNG_3224
+0084: $6987 = $4811 // integer values and handles
+$6987 += 3000 // integer values
+$6986 = 0 // integer values
+
+:OVALRNG_3224
+if
+  $6986 == 0 // integer values
+jf @OVALRNG_3335
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3335
+Camera.SetPosition(-1334.666, 1172.511, 266.2422, 0.0, 0.0, 0.0)
+Camera.PointAt(-1335.628, 1172.264, 266.1259, 2)
+0084: $6987 = $4811 // integer values and handles
+$6987 += 3000 // integer values
+$6986 = 1 // integer values
+
+:OVALRNG_3335
+if
+  $6986 == 1 // integer values
+jf @OVALRNG_3461
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3461
+Camera.SetPosition(-1323.005, 1328.07, 270.0141, 0.0, 0.0, 0.0)
+Camera.PointAt(-1323.981, 1328.235, 269.8705, 2)
+00BC: text_highpriority 'HOTR_02' 3500 ms 1  // ~g~If your car is destroyed you will be disqualified.
+0084: $6987 = $4811 // integer values and handles
+$6987 += 3500 // integer values
+$6986 = 2 // integer values
+
+:OVALRNG_3461
+if
+  $6986 == 2 // integer values
+jf @OVALRNG_3587
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3587
+Camera.SetPosition(-1378.531, 1355.834, 271.5822, 0.0, 0.0, 0.0)
+Camera.PointAt(-1379.45, 1355.702, 271.2112, 2)
+00BB: text_lowpriority 'HOTR_03' 4500 ms 1  // ~g~When your car is damaged you can get it repaired at the pitstop.
+0084: $6987 = $4811 // integer values and handles
+$6987 += 4500 // integer values
+$6986 = 3 // integer values
+
+:OVALRNG_3587
+if
+  $6986 == 3 // integer values
+jf @OVALRNG_3713
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3713
+Camera.SetPosition(-1394.765, 1175.184, 269.201, 0.0, 0.0, 0.0)
+Camera.PointAt(-1395.474, 1174.495, 269.0483, 2)
+00BC: text_highpriority 'HOTR_04' 4500 ms 1  // ~g~This is the way to leave the stadium.
+0084: $6987 = $4811 // integer values and handles
+$6987 += 2500 // integer values
+$6986 = 4 // integer values
+
+:OVALRNG_3713
+if
+  $6986 == 4 // integer values
+jf @OVALRNG_3824
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3824
+Camera.SetPosition(-1405.329, 1161.493, 270.4964, 0.0, 0.0, 0.0)
+Camera.PointAt(-1406.135, 1160.961, 270.2356, 1)
+0084: $6987 = $4811 // integer values and handles
+$6987 += 2000 // integer values
+$6986 = 5 // integer values
+
+:OVALRNG_3824
+if
+  $6986 == 5 // integer values
+jf @OVALRNG_3937
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_3937
+03F0: enable_text_draw 0
+$6999 = 0 // integer values
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+00BA: text_styled 'RACES_4' 1100 ms 4  // 3
+018C: play_sound 7 at 0.0 0.0 0.0
+0084: $6987 = $4811 // integer values and handles
+$6987 += 1000 // integer values
+$6986 = 6 // integer values
+
+:OVALRNG_3937
+if
+  $6986 == 6 // integer values
+jf @OVALRNG_4031
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_4031
+00BA: text_styled 'RACES_5' 1100 ms 4  // 2
+018C: play_sound 8 at 0.0 0.0 0.0
+0084: $6987 = $4811 // integer values and handles
+$6987 += 1000 // integer values
+$6986 = 7 // integer values
+
+:OVALRNG_4031
+if
+  $6986 == 7 // integer values
+jf @OVALRNG_4125
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_4125
+00BA: text_styled 'RACES_6' 1100 ms 4  // 1
+018C: play_sound 9 at 0.0 0.0 0.0
+0084: $6987 = $4811 // integer values and handles
+$6987 += 1000 // integer values
+$6986 = 8 // integer values
+
+:OVALRNG_4125
+if
+  $6986 == 8 // integer values
+jf @OVALRNG_4372
+if
+001C:   $4811 > $6987 // integer values
+jf @OVALRNG_4372
+if
+   not Car.Wrecked($7000)
+jf @OVALRNG_4372
+$6994 = 0 // integer values
+gosub @OVALRNG_18808
+00BA: text_styled 'RACES_7' 800 ms 4  // GO!
+018C: play_sound 10 at 0.0 0.0 0.0
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+04F7: status_text $7001 1 line 1 'HOTR_05'  // Car Health:
+0084: $7440 = $7436 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7483 = $7498 // floating-point values only
+0086: $7484 = $7499 // floating-point values only
+0086: $7485 = $7500 // floating-point values only
+0084: $7436 = $7440 // integer values and handles
+04F7: status_text $6988 0 line 2 'HOTR_06'  // Laps:
+04F7: status_text $7441 0 line 3 'HOTR_09'  // Position:
+03C3: set_timer_with_text_to $6997 type 0 text 'HOTR_10'  // Race Time:
+0084: $6998 = $4811 // integer values and handles
+$6986 = 9 // integer values
+
+:OVALRNG_4372
+if
+  $6986 == 9 // integer values
+jf @OVALRNG_14261
+$7441 = 1 // integer values
+if
+   Car.Wrecked($7000)
+jf @OVALRNG_4442
+00BC: text_highpriority 'HOTR_12' 2000 ms 1  // ~r~Your car has been destroyed!
+jump @OVALRNG_17790
+jump @OVALRNG_4607
+
+:OVALRNG_4442
+if
+01B0:   car $7000 stopped 1 -1396.369 1354.573 265.0766 radius 9.0 4.0 5.0
+jf @OVALRNG_4559
+if
+0442:   player $PLAYER_CHAR in_car $7000
+jf @OVALRNG_4559
+$7001 = Car.Health($7000)
+$7001 += 5 // integer values
+if
+  $7001 > 1250 // integer values
+jf @OVALRNG_4551
+$7001 = 1250 // integer values
+
+:OVALRNG_4551
+Car.Health($7000) = $7001
+
+:OVALRNG_4559
+$7001 = Car.Health($7000)
+$7001 -= 250 // integer values
+$7001 /= 10 // integer values
+if
+  0 > $7001 // integer values
+jf @OVALRNG_4607
+$7001 = 0 // integer values
+
+:OVALRNG_4607
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $7483 $7484 $7485 radius 24.0 24.0 24.0
+jf @OVALRNG_4928
+0084: $7440 = $7436 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7483 = $7498 // floating-point values only
+0086: $7484 = $7499 // floating-point values only
+0086: $7485 = $7500 // floating-point values only
+0084: $7436 = $7440 // integer values and handles
+if
+  $7436 == 0 // integer values
+jf @OVALRNG_4928
+$6988 += 1 // integer values
+0084: $6996 = $4811 // integer values and handles
+0060: $6996 -= $6998 // integer values
+0084: $7458 = $6996 // integer values and handles
+$7458 /= 1000 // integer values
+0084: $7003 = $7458 // integer values and handles
+$7003 *= 1000 // integer values
+0084: $7451 = $6996 // integer values and handles
+0060: $7451 -= $7003 // integer values
+0084: $7003 = $7451 // integer values and handles
+$7003 /= 10 // integer values
+if
+001C:   $1594 > $6996 // integer values
+jf @OVALRNG_4901
+0084: $1594 = $6996 // integer values and handles
+042E: downdate_integer_stat 21 to $1594
+if
+  $7003 > 9 // integer values
+jf @OVALRNG_4880
+02FD: text_2numbers_lowpriority 'HOTR_11' $7458 $7003 5000 flag 1  // New best lap time: ~1~.~1~ seconds
+jump @OVALRNG_4901
+
+:OVALRNG_4880
+02FD: text_2numbers_lowpriority 'HOTR_34' $7458 $7003 5000 flag 1  // New best lap time: ~1~.0~1~ seconds
+
+:OVALRNG_4901
+0084: $6998 = $4811 // integer values and handles
+018C: play_sound 1 at 0.0 0.0 0.0
+
+:OVALRNG_4928
+0084: $6989 = $6988 // integer values and handles
+$6989 *= 100 // integer values
+0058: $6989 += $7436 // integer values
+if
+   Car.Wrecked($7007)
+jf @OVALRNG_5170
+Car.RemoveReferences($7007)
+Actor.RemoveReferences($7422)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_5163
+$7007 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7007 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7422 = $6993 // integer values and handles
+if
+001C:   $6988 > $7008 // integer values
+jf @OVALRNG_5093
+0084: $7008 = $6988 // integer values and handles
+
+:OVALRNG_5093
+$7437 = 0 // integer values
+0084: $7440 = $7437 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7489 = $7498 // floating-point values only
+0086: $7490 = $7499 // floating-point values only
+0086: $7491 = $7500 // floating-point values only
+Car.DriveTo($7007, $7489, $7490, $7491)
+04BA: set_car $7007 speed_instantly 30.0
+
+:OVALRNG_5163
+jump @OVALRNG_5541
+
+:OVALRNG_5170
+if
+01AF:   car $7007 0 $7489 $7490 $7491 radius 24.0 24.0 24.0
+jf @OVALRNG_5321
+0084: $7440 = $7437 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7489 = $7498 // floating-point values only
+0086: $7490 = $7499 // floating-point values only
+0086: $7491 = $7500 // floating-point values only
+0084: $7437 = $7440 // integer values and handles
+if
+  $7437 == 0 // integer values
+jf @OVALRNG_5284
+$7008 += 1 // integer values
+
+:OVALRNG_5284
+Car.DriveTo($7007, $7489, $7490, $7491)
+0084: $7009 = $7008 // integer values and handles
+$7009 *= 100 // integer values
+0058: $7009 += $7437 // integer values
+
+:OVALRNG_5321
+if
+01AF:   car $7007 0 $4853 $4854 $4855 radius 3.0 3.0 3.0
+jf @OVALRNG_5397
+if
+001C:   $4811 > $7443 // integer values
+jf @OVALRNG_5390
+Car.Health($7007) = 230
+
+:OVALRNG_5390
+jump @OVALRNG_5427
+
+:OVALRNG_5397
+Car.StorePos($7007, $4853, $4854, $4855)
+0084: $7443 = $4811 // integer values and handles
+$7443 += 5000 // integer values
+
+:OVALRNG_5427
+if
+01AF:   car $7007 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_5525
+if
+001C:   $4811 > $7010 // integer values
+jf @OVALRNG_5518
+Car.Health($7007) = 100
+Car.RemoveReferences($7007)
+Actor.RemoveReferences($7422)
+$7007 = -1 // integer values
+
+:OVALRNG_5518
+jump @OVALRNG_5541
+
+:OVALRNG_5525
+0084: $7010 = $4811 // integer values and handles
+$7010 += 3000 // integer values
+
+:OVALRNG_5541
+0084: $6990 = $7009 // integer values and handles
+0084: $451 = $7007 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7011)
+jf @OVALRNG_5792
+Car.RemoveReferences($7011)
+Actor.RemoveReferences($7423)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_5785
+0506: vehicle_model 232 set_next_variation 0 -1
+$7011 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7011 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7423 = $6993 // integer values and handles
+if
+001C:   $6988 > $7012 // integer values
+jf @OVALRNG_5715
+0084: $7012 = $6988 // integer values and handles
+
+:OVALRNG_5715
+$7438 = 0 // integer values
+0084: $7440 = $7438 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7492 = $7498 // floating-point values only
+0086: $7493 = $7499 // floating-point values only
+0086: $7494 = $7500 // floating-point values only
+Car.DriveTo($7011, $7492, $7493, $7494)
+04BA: set_car $7011 speed_instantly 30.0
+
+:OVALRNG_5785
+jump @OVALRNG_6163
+
+:OVALRNG_5792
+if
+01AF:   car $7011 0 $7492 $7493 $7494 radius 24.0 24.0 24.0
+jf @OVALRNG_5943
+0084: $7440 = $7438 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7492 = $7498 // floating-point values only
+0086: $7493 = $7499 // floating-point values only
+0086: $7494 = $7500 // floating-point values only
+0084: $7438 = $7440 // integer values and handles
+if
+  $7438 == 0 // integer values
+jf @OVALRNG_5906
+$7012 += 1 // integer values
+
+:OVALRNG_5906
+Car.DriveTo($7011, $7492, $7493, $7494)
+0084: $7013 = $7012 // integer values and handles
+$7013 *= 100 // integer values
+0058: $7013 += $7438 // integer values
+
+:OVALRNG_5943
+if
+01AF:   car $7011 0 $4856 $4857 $4858 radius 3.0 3.0 3.0
+jf @OVALRNG_6019
+if
+001C:   $4811 > $7444 // integer values
+jf @OVALRNG_6012
+Car.Health($7011) = 230
+
+:OVALRNG_6012
+jump @OVALRNG_6049
+
+:OVALRNG_6019
+Car.StorePos($7011, $4856, $4857, $4858)
+0084: $7444 = $4811 // integer values and handles
+$7444 += 5000 // integer values
+
+:OVALRNG_6049
+if
+01AF:   car $7011 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_6147
+if
+001C:   $4811 > $7014 // integer values
+jf @OVALRNG_6140
+Car.Health($7011) = 100
+Car.RemoveReferences($7011)
+Actor.RemoveReferences($7423)
+$7011 = -1 // integer values
+
+:OVALRNG_6140
+jump @OVALRNG_6163
+
+:OVALRNG_6147
+0084: $7014 = $4811 // integer values and handles
+$7014 += 3000 // integer values
+
+:OVALRNG_6163
+0084: $6990 = $7013 // integer values and handles
+0084: $451 = $7011 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7015)
+jf @OVALRNG_6414
+Car.RemoveReferences($7015)
+Actor.RemoveReferences($7424)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_6407
+0506: vehicle_model 232 set_next_variation 1 -1
+$7015 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7015 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7424 = $6993 // integer values and handles
+if
+001C:   $6988 > $7016 // integer values
+jf @OVALRNG_6337
+0084: $7016 = $6988 // integer values and handles
+
+:OVALRNG_6337
+$7439 = 0 // integer values
+0084: $7440 = $7439 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7495 = $7498 // floating-point values only
+0086: $7496 = $7499 // floating-point values only
+0086: $7497 = $7500 // floating-point values only
+Car.DriveTo($7015, $7495, $7496, $7497)
+04BA: set_car $7015 speed_instantly 30.0
+
+:OVALRNG_6407
+jump @OVALRNG_6785
+
+:OVALRNG_6414
+if
+01AF:   car $7015 0 $7495 $7496 $7497 radius 24.0 24.0 24.0
+jf @OVALRNG_6565
+0084: $7440 = $7439 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7495 = $7498 // floating-point values only
+0086: $7496 = $7499 // floating-point values only
+0086: $7497 = $7500 // floating-point values only
+0084: $7439 = $7440 // integer values and handles
+if
+  $7439 == 0 // integer values
+jf @OVALRNG_6528
+$7016 += 1 // integer values
+
+:OVALRNG_6528
+Car.DriveTo($7015, $7495, $7496, $7497)
+0084: $7017 = $7016 // integer values and handles
+$7017 *= 100 // integer values
+0058: $7017 += $7439 // integer values
+
+:OVALRNG_6565
+if
+01AF:   car $7015 0 $4859 $4860 $4861 radius 3.0 3.0 3.0
+jf @OVALRNG_6641
+if
+001C:   $4811 > $7445 // integer values
+jf @OVALRNG_6634
+Car.Health($7015) = 230
+
+:OVALRNG_6634
+jump @OVALRNG_6671
+
+:OVALRNG_6641
+Car.StorePos($7015, $4859, $4860, $4861)
+0084: $7445 = $4811 // integer values and handles
+$7445 += 5000 // integer values
+
+:OVALRNG_6671
+if
+01AF:   car $7015 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_6769
+if
+001C:   $4811 > $7018 // integer values
+jf @OVALRNG_6762
+Car.Health($7015) = 100
+Car.RemoveReferences($7015)
+Actor.RemoveReferences($7424)
+$7015 = -1 // integer values
+
+:OVALRNG_6762
+jump @OVALRNG_6785
+
+:OVALRNG_6769
+0084: $7018 = $4811 // integer values and handles
+$7018 += 3000 // integer values
+
+:OVALRNG_6785
+0084: $6990 = $7017 // integer values and handles
+0084: $451 = $7015 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7019)
+jf @OVALRNG_7036
+Car.RemoveReferences($7019)
+Actor.RemoveReferences($7020)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_7029
+0506: vehicle_model 232 set_next_variation 2 -1
+$7019 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7019 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7020 = $6993 // integer values and handles
+if
+001C:   $6988 > $7022 // integer values
+jf @OVALRNG_6959
+0084: $7022 = $6988 // integer values and handles
+
+:OVALRNG_6959
+$7021 = 0 // integer values
+0084: $7440 = $7021 // integer values and handles
+gosub @OVALRNG_18246
+0089: 0@ = $7498 // floating-point values only
+0089: 1@ = $7499 // floating-point values only
+0089: 2@ = $7500 // floating-point values only
+Car.DriveTo($7019, 0@, 1@, 2@)
+04BA: set_car $7019 speed_instantly 30.0
+
+:OVALRNG_7029
+jump @OVALRNG_7407
+
+:OVALRNG_7036
+if
+01AF:   car $7019 0 0@ 1@ 2@ radius 24.0 24.0 24.0
+jf @OVALRNG_7187
+0084: $7440 = $7021 // integer values and handles
+gosub @OVALRNG_18246
+0089: 0@ = $7498 // floating-point values only
+0089: 1@ = $7499 // floating-point values only
+0089: 2@ = $7500 // floating-point values only
+0084: $7021 = $7440 // integer values and handles
+if
+  $7021 == 0 // integer values
+jf @OVALRNG_7150
+$7022 += 1 // integer values
+
+:OVALRNG_7150
+Car.DriveTo($7019, 0@, 1@, 2@)
+0084: $7023 = $7022 // integer values and handles
+$7023 *= 100 // integer values
+0058: $7023 += $7021 // integer values
+
+:OVALRNG_7187
+if
+01AF:   car $7019 0 $7124 $7125 $7126 radius 3.0 3.0 3.0
+jf @OVALRNG_7263
+if
+001C:   $4811 > $7091 // integer values
+jf @OVALRNG_7256
+Car.Health($7019) = 230
+
+:OVALRNG_7256
+jump @OVALRNG_7293
+
+:OVALRNG_7263
+Car.StorePos($7019, $7124, $7125, $7126)
+0084: $7091 = $4811 // integer values and handles
+$7091 += 5000 // integer values
+
+:OVALRNG_7293
+if
+01AF:   car $7019 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_7391
+if
+001C:   $4811 > $7024 // integer values
+jf @OVALRNG_7384
+Car.Health($7019) = 100
+Car.RemoveReferences($7019)
+Actor.RemoveReferences($7020)
+$7019 = -1 // integer values
+
+:OVALRNG_7384
+jump @OVALRNG_7407
+
+:OVALRNG_7391
+0084: $7024 = $4811 // integer values and handles
+$7024 += 3000 // integer values
+
+:OVALRNG_7407
+0084: $6990 = $7023 // integer values and handles
+0084: $451 = $7019 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7025)
+jf @OVALRNG_7658
+Car.RemoveReferences($7025)
+Actor.RemoveReferences($7026)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_7651
+0506: vehicle_model 232 set_next_variation 3 -1
+$7025 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7025 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7026 = $6993 // integer values and handles
+if
+001C:   $6988 > $7028 // integer values
+jf @OVALRNG_7581
+0084: $7028 = $6988 // integer values and handles
+
+:OVALRNG_7581
+$7027 = 0 // integer values
+0084: $7440 = $7027 // integer values and handles
+gosub @OVALRNG_18246
+0089: 3@ = $7498 // floating-point values only
+0089: 4@ = $7499 // floating-point values only
+0089: 5@ = $7500 // floating-point values only
+Car.DriveTo($7025, 3@, 4@, 5@)
+04BA: set_car $7025 speed_instantly 30.0
+
+:OVALRNG_7651
+jump @OVALRNG_8029
+
+:OVALRNG_7658
+if
+01AF:   car $7025 0 3@ 4@ 5@ radius 24.0 24.0 24.0
+jf @OVALRNG_7809
+0084: $7440 = $7027 // integer values and handles
+gosub @OVALRNG_18246
+0089: 3@ = $7498 // floating-point values only
+0089: 4@ = $7499 // floating-point values only
+0089: 5@ = $7500 // floating-point values only
+0084: $7027 = $7440 // integer values and handles
+if
+  $7027 == 0 // integer values
+jf @OVALRNG_7772
+$7028 += 1 // integer values
+
+:OVALRNG_7772
+Car.DriveTo($7025, 3@, 4@, 5@)
+0084: $7029 = $7028 // integer values and handles
+$7029 *= 100 // integer values
+0058: $7029 += $7027 // integer values
+
+:OVALRNG_7809
+if
+01AF:   car $7025 0 $7127 $7128 $7129 radius 3.0 3.0 3.0
+jf @OVALRNG_7885
+if
+001C:   $4811 > $7092 // integer values
+jf @OVALRNG_7878
+Car.Health($7025) = 230
+
+:OVALRNG_7878
+jump @OVALRNG_7915
+
+:OVALRNG_7885
+Car.StorePos($7025, $7127, $7128, $7129)
+0084: $7092 = $4811 // integer values and handles
+$7092 += 5000 // integer values
+
+:OVALRNG_7915
+if
+01AF:   car $7025 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_8013
+if
+001C:   $4811 > $7030 // integer values
+jf @OVALRNG_8006
+Car.Health($7025) = 100
+Car.RemoveReferences($7025)
+Actor.RemoveReferences($7026)
+$7025 = -1 // integer values
+
+:OVALRNG_8006
+jump @OVALRNG_8029
+
+:OVALRNG_8013
+0084: $7030 = $4811 // integer values and handles
+$7030 += 3000 // integer values
+
+:OVALRNG_8029
+0084: $6990 = $7029 // integer values and handles
+0084: $451 = $7025 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7031)
+jf @OVALRNG_8280
+Car.RemoveReferences($7031)
+Actor.RemoveReferences($7032)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_8273
+0506: vehicle_model 232 set_next_variation 4 -1
+$7031 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7031 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7032 = $6993 // integer values and handles
+if
+001C:   $6988 > $7034 // integer values
+jf @OVALRNG_8203
+0084: $7034 = $6988 // integer values and handles
+
+:OVALRNG_8203
+$7033 = 0 // integer values
+0084: $7440 = $7033 // integer values and handles
+gosub @OVALRNG_18246
+0089: 6@ = $7498 // floating-point values only
+0089: 7@ = $7499 // floating-point values only
+0089: 8@ = $7500 // floating-point values only
+Car.DriveTo($7031, 6@, 7@, 8@)
+04BA: set_car $7031 speed_instantly 30.0
+
+:OVALRNG_8273
+jump @OVALRNG_8651
+
+:OVALRNG_8280
+if
+01AF:   car $7031 0 6@ 7@ 8@ radius 24.0 24.0 24.0
+jf @OVALRNG_8431
+0084: $7440 = $7033 // integer values and handles
+gosub @OVALRNG_18246
+0089: 6@ = $7498 // floating-point values only
+0089: 7@ = $7499 // floating-point values only
+0089: 8@ = $7500 // floating-point values only
+0084: $7033 = $7440 // integer values and handles
+if
+  $7033 == 0 // integer values
+jf @OVALRNG_8394
+$7034 += 1 // integer values
+
+:OVALRNG_8394
+Car.DriveTo($7031, 6@, 7@, 8@)
+0084: $7035 = $7034 // integer values and handles
+$7035 *= 100 // integer values
+0058: $7035 += $7033 // integer values
+
+:OVALRNG_8431
+if
+01AF:   car $7031 0 $7130 $7131 $7132 radius 3.0 3.0 3.0
+jf @OVALRNG_8507
+if
+001C:   $4811 > $7093 // integer values
+jf @OVALRNG_8500
+Car.Health($7031) = 230
+
+:OVALRNG_8500
+jump @OVALRNG_8537
+
+:OVALRNG_8507
+Car.StorePos($7031, $7130, $7131, $7132)
+0084: $7093 = $4811 // integer values and handles
+$7093 += 5000 // integer values
+
+:OVALRNG_8537
+if
+01AF:   car $7031 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_8635
+if
+001C:   $4811 > $7036 // integer values
+jf @OVALRNG_8628
+Car.Health($7031) = 100
+Car.RemoveReferences($7031)
+Actor.RemoveReferences($7032)
+$7031 = -1 // integer values
+
+:OVALRNG_8628
+jump @OVALRNG_8651
+
+:OVALRNG_8635
+0084: $7036 = $4811 // integer values and handles
+$7036 += 3000 // integer values
+
+:OVALRNG_8651
+0084: $6990 = $7035 // integer values and handles
+0084: $451 = $7031 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7037)
+jf @OVALRNG_8893
+Car.RemoveReferences($7037)
+Actor.RemoveReferences($7038)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_8886
+$7037 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7037 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7038 = $6993 // integer values and handles
+if
+001C:   $6988 > $7040 // integer values
+jf @OVALRNG_8816
+0084: $7040 = $6988 // integer values and handles
+
+:OVALRNG_8816
+$7039 = 0 // integer values
+0084: $7440 = $7039 // integer values and handles
+gosub @OVALRNG_18246
+0089: 9@ = $7498 // floating-point values only
+0089: 10@ = $7499 // floating-point values only
+0089: 11@ = $7500 // floating-point values only
+Car.DriveTo($7037, 9@, 10@, 11@)
+04BA: set_car $7037 speed_instantly 30.0
+
+:OVALRNG_8886
+jump @OVALRNG_9264
+
+:OVALRNG_8893
+if
+01AF:   car $7037 0 9@ 10@ 11@ radius 24.0 24.0 24.0
+jf @OVALRNG_9044
+0084: $7440 = $7039 // integer values and handles
+gosub @OVALRNG_18246
+0089: 9@ = $7498 // floating-point values only
+0089: 10@ = $7499 // floating-point values only
+0089: 11@ = $7500 // floating-point values only
+0084: $7039 = $7440 // integer values and handles
+if
+  $7039 == 0 // integer values
+jf @OVALRNG_9007
+$7040 += 1 // integer values
+
+:OVALRNG_9007
+Car.DriveTo($7037, 9@, 10@, 11@)
+0084: $7041 = $7040 // integer values and handles
+$7041 *= 100 // integer values
+0058: $7041 += $7039 // integer values
+
+:OVALRNG_9044
+if
+01AF:   car $7037 0 $7133 $7134 $7135 radius 3.0 3.0 3.0
+jf @OVALRNG_9120
+if
+001C:   $4811 > $7094 // integer values
+jf @OVALRNG_9113
+Car.Health($7037) = 230
+
+:OVALRNG_9113
+jump @OVALRNG_9150
+
+:OVALRNG_9120
+Car.StorePos($7037, $7133, $7134, $7135)
+0084: $7094 = $4811 // integer values and handles
+$7094 += 5000 // integer values
+
+:OVALRNG_9150
+if
+01AF:   car $7037 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_9248
+if
+001C:   $4811 > $7042 // integer values
+jf @OVALRNG_9241
+Car.Health($7037) = 100
+Car.RemoveReferences($7037)
+Actor.RemoveReferences($7038)
+$7037 = -1 // integer values
+
+:OVALRNG_9241
+jump @OVALRNG_9264
+
+:OVALRNG_9248
+0084: $7042 = $4811 // integer values and handles
+$7042 += 3000 // integer values
+
+:OVALRNG_9264
+0084: $6990 = $7041 // integer values and handles
+0084: $451 = $7037 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7043)
+jf @OVALRNG_9515
+Car.RemoveReferences($7043)
+Actor.RemoveReferences($7044)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_9508
+0506: vehicle_model 233 set_next_variation 0 -1
+$7043 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7043 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7044 = $6993 // integer values and handles
+if
+001C:   $6988 > $7046 // integer values
+jf @OVALRNG_9438
+0084: $7046 = $6988 // integer values and handles
+
+:OVALRNG_9438
+$7045 = 0 // integer values
+0084: $7440 = $7045 // integer values and handles
+gosub @OVALRNG_18246
+0089: 12@ = $7498 // floating-point values only
+0089: 13@ = $7499 // floating-point values only
+0089: 14@ = $7500 // floating-point values only
+Car.DriveTo($7043, 12@, 13@, 14@)
+04BA: set_car $7043 speed_instantly 30.0
+
+:OVALRNG_9508
+jump @OVALRNG_9886
+
+:OVALRNG_9515
+if
+01AF:   car $7043 0 12@ 13@ 14@ radius 24.0 24.0 24.0
+jf @OVALRNG_9666
+0084: $7440 = $7045 // integer values and handles
+gosub @OVALRNG_18246
+0089: 12@ = $7498 // floating-point values only
+0089: 13@ = $7499 // floating-point values only
+0089: 14@ = $7500 // floating-point values only
+0084: $7045 = $7440 // integer values and handles
+if
+  $7045 == 0 // integer values
+jf @OVALRNG_9629
+$7046 += 1 // integer values
+
+:OVALRNG_9629
+Car.DriveTo($7043, 12@, 13@, 14@)
+0084: $7047 = $7046 // integer values and handles
+$7047 *= 100 // integer values
+0058: $7047 += $7045 // integer values
+
+:OVALRNG_9666
+if
+01AF:   car $7043 0 $7136 $7137 $7138 radius 3.0 3.0 3.0
+jf @OVALRNG_9742
+if
+001C:   $4811 > $7095 // integer values
+jf @OVALRNG_9735
+Car.Health($7043) = 230
+
+:OVALRNG_9735
+jump @OVALRNG_9772
+
+:OVALRNG_9742
+Car.StorePos($7043, $7136, $7137, $7138)
+0084: $7095 = $4811 // integer values and handles
+$7095 += 5000 // integer values
+
+:OVALRNG_9772
+if
+01AF:   car $7043 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_9870
+if
+001C:   $4811 > $7048 // integer values
+jf @OVALRNG_9863
+Car.Health($7043) = 100
+Car.RemoveReferences($7043)
+Actor.RemoveReferences($7044)
+$7043 = -1 // integer values
+
+:OVALRNG_9863
+jump @OVALRNG_9886
+
+:OVALRNG_9870
+0084: $7048 = $4811 // integer values and handles
+$7048 += 3000 // integer values
+
+:OVALRNG_9886
+0084: $6990 = $7047 // integer values and handles
+0084: $451 = $7043 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7049)
+jf @OVALRNG_10137
+Car.RemoveReferences($7049)
+Actor.RemoveReferences($7050)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_10130
+0506: vehicle_model 233 set_next_variation 1 -1
+$7049 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7049 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7050 = $6993 // integer values and handles
+if
+001C:   $6988 > $7052 // integer values
+jf @OVALRNG_10060
+0084: $7052 = $6988 // integer values and handles
+
+:OVALRNG_10060
+$7051 = 0 // integer values
+0084: $7440 = $7051 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7103 = $7498 // floating-point values only
+0086: $7104 = $7499 // floating-point values only
+0086: $7105 = $7500 // floating-point values only
+Car.DriveTo($7049, $7103, $7104, $7105)
+04BA: set_car $7049 speed_instantly 30.0
+
+:OVALRNG_10130
+jump @OVALRNG_10508
+
+:OVALRNG_10137
+if
+01AF:   car $7049 0 $7103 $7104 $7105 radius 24.0 24.0 24.0
+jf @OVALRNG_10288
+0084: $7440 = $7051 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7103 = $7498 // floating-point values only
+0086: $7104 = $7499 // floating-point values only
+0086: $7105 = $7500 // floating-point values only
+0084: $7051 = $7440 // integer values and handles
+if
+  $7051 == 0 // integer values
+jf @OVALRNG_10251
+$7052 += 1 // integer values
+
+:OVALRNG_10251
+Car.DriveTo($7049, $7103, $7104, $7105)
+0084: $7053 = $7052 // integer values and handles
+$7053 *= 100 // integer values
+0058: $7053 += $7051 // integer values
+
+:OVALRNG_10288
+if
+01AF:   car $7049 0 $7139 $7140 $7141 radius 3.0 3.0 3.0
+jf @OVALRNG_10364
+if
+001C:   $4811 > $7096 // integer values
+jf @OVALRNG_10357
+Car.Health($7049) = 230
+
+:OVALRNG_10357
+jump @OVALRNG_10394
+
+:OVALRNG_10364
+Car.StorePos($7049, $7139, $7140, $7141)
+0084: $7096 = $4811 // integer values and handles
+$7096 += 5000 // integer values
+
+:OVALRNG_10394
+if
+01AF:   car $7049 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_10492
+if
+001C:   $4811 > $7054 // integer values
+jf @OVALRNG_10485
+Car.Health($7049) = 100
+Car.RemoveReferences($7049)
+Actor.RemoveReferences($7050)
+$7049 = -1 // integer values
+
+:OVALRNG_10485
+jump @OVALRNG_10508
+
+:OVALRNG_10492
+0084: $7054 = $4811 // integer values and handles
+$7054 += 3000 // integer values
+
+:OVALRNG_10508
+0084: $6990 = $7053 // integer values and handles
+0084: $451 = $7049 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7055)
+jf @OVALRNG_10759
+Car.RemoveReferences($7055)
+Actor.RemoveReferences($7056)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_10752
+0506: vehicle_model 233 set_next_variation 2 -1
+$7055 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7055 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7056 = $6993 // integer values and handles
+if
+001C:   $6988 > $7058 // integer values
+jf @OVALRNG_10682
+0084: $7058 = $6988 // integer values and handles
+
+:OVALRNG_10682
+$7057 = 0 // integer values
+0084: $7440 = $7057 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7106 = $7498 // floating-point values only
+0086: $7107 = $7499 // floating-point values only
+0086: $7108 = $7500 // floating-point values only
+Car.DriveTo($7055, $7106, $7107, $7108)
+04BA: set_car $7055 speed_instantly 30.0
+
+:OVALRNG_10752
+jump @OVALRNG_11130
+
+:OVALRNG_10759
+if
+01AF:   car $7055 0 $7106 $7107 $7108 radius 24.0 24.0 24.0
+jf @OVALRNG_10910
+0084: $7440 = $7057 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7106 = $7498 // floating-point values only
+0086: $7107 = $7499 // floating-point values only
+0086: $7108 = $7500 // floating-point values only
+0084: $7057 = $7440 // integer values and handles
+if
+  $7057 == 0 // integer values
+jf @OVALRNG_10873
+$7058 += 1 // integer values
+
+:OVALRNG_10873
+Car.DriveTo($7055, $7106, $7107, $7108)
+0084: $7059 = $7058 // integer values and handles
+$7059 *= 100 // integer values
+0058: $7059 += $7057 // integer values
+
+:OVALRNG_10910
+if
+01AF:   car $7055 0 $7142 $7143 $7144 radius 3.0 3.0 3.0
+jf @OVALRNG_10986
+if
+001C:   $4811 > $7097 // integer values
+jf @OVALRNG_10979
+Car.Health($7055) = 230
+
+:OVALRNG_10979
+jump @OVALRNG_11016
+
+:OVALRNG_10986
+Car.StorePos($7055, $7142, $7143, $7144)
+0084: $7097 = $4811 // integer values and handles
+$7097 += 5000 // integer values
+
+:OVALRNG_11016
+if
+01AF:   car $7055 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_11114
+if
+001C:   $4811 > $7060 // integer values
+jf @OVALRNG_11107
+Car.Health($7055) = 100
+Car.RemoveReferences($7055)
+Actor.RemoveReferences($7056)
+$7055 = -1 // integer values
+
+:OVALRNG_11107
+jump @OVALRNG_11130
+
+:OVALRNG_11114
+0084: $7060 = $4811 // integer values and handles
+$7060 += 3000 // integer values
+
+:OVALRNG_11130
+0084: $6990 = $7059 // integer values and handles
+0084: $451 = $7055 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7061)
+jf @OVALRNG_11381
+Car.RemoveReferences($7061)
+Actor.RemoveReferences($7062)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_11374
+0506: vehicle_model 233 set_next_variation 3 -1
+$7061 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7061 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7062 = $6993 // integer values and handles
+if
+001C:   $6988 > $7064 // integer values
+jf @OVALRNG_11304
+0084: $7064 = $6988 // integer values and handles
+
+:OVALRNG_11304
+$7063 = 0 // integer values
+0084: $7440 = $7063 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7109 = $7498 // floating-point values only
+0086: $7110 = $7499 // floating-point values only
+0086: $7111 = $7500 // floating-point values only
+Car.DriveTo($7061, $7109, $7110, $7111)
+04BA: set_car $7061 speed_instantly 30.0
+
+:OVALRNG_11374
+jump @OVALRNG_11752
+
+:OVALRNG_11381
+if
+01AF:   car $7061 0 $7109 $7110 $7111 radius 24.0 24.0 24.0
+jf @OVALRNG_11532
+0084: $7440 = $7063 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7109 = $7498 // floating-point values only
+0086: $7110 = $7499 // floating-point values only
+0086: $7111 = $7500 // floating-point values only
+0084: $7063 = $7440 // integer values and handles
+if
+  $7063 == 0 // integer values
+jf @OVALRNG_11495
+$7064 += 1 // integer values
+
+:OVALRNG_11495
+Car.DriveTo($7061, $7109, $7110, $7111)
+0084: $7065 = $7064 // integer values and handles
+$7065 *= 100 // integer values
+0058: $7065 += $7063 // integer values
+
+:OVALRNG_11532
+if
+01AF:   car $7061 0 $7145 $7146 $7147 radius 3.0 3.0 3.0
+jf @OVALRNG_11608
+if
+001C:   $4811 > $7098 // integer values
+jf @OVALRNG_11601
+Car.Health($7061) = 230
+
+:OVALRNG_11601
+jump @OVALRNG_11638
+
+:OVALRNG_11608
+Car.StorePos($7061, $7145, $7146, $7147)
+0084: $7098 = $4811 // integer values and handles
+$7098 += 5000 // integer values
+
+:OVALRNG_11638
+if
+01AF:   car $7061 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_11736
+if
+001C:   $4811 > $7066 // integer values
+jf @OVALRNG_11729
+Car.Health($7061) = 100
+Car.RemoveReferences($7061)
+Actor.RemoveReferences($7062)
+$7061 = -1 // integer values
+
+:OVALRNG_11729
+jump @OVALRNG_11752
+
+:OVALRNG_11736
+0084: $7066 = $4811 // integer values and handles
+$7066 += 3000 // integer values
+
+:OVALRNG_11752
+0084: $6990 = $7065 // integer values and handles
+0084: $451 = $7061 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7067)
+jf @OVALRNG_12003
+Car.RemoveReferences($7067)
+Actor.RemoveReferences($7068)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_11996
+0506: vehicle_model 233 set_next_variation 4 -1
+$7067 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7067 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7068 = $6993 // integer values and handles
+if
+001C:   $6988 > $7070 // integer values
+jf @OVALRNG_11926
+0084: $7070 = $6988 // integer values and handles
+
+:OVALRNG_11926
+$7069 = 0 // integer values
+0084: $7440 = $7069 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7112 = $7498 // floating-point values only
+0086: $7113 = $7499 // floating-point values only
+0086: $7114 = $7500 // floating-point values only
+Car.DriveTo($7067, $7112, $7113, $7114)
+04BA: set_car $7067 speed_instantly 30.0
+
+:OVALRNG_11996
+jump @OVALRNG_12374
+
+:OVALRNG_12003
+if
+01AF:   car $7067 0 $7112 $7113 $7114 radius 24.0 24.0 24.0
+jf @OVALRNG_12154
+0084: $7440 = $7069 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7112 = $7498 // floating-point values only
+0086: $7113 = $7499 // floating-point values only
+0086: $7114 = $7500 // floating-point values only
+0084: $7069 = $7440 // integer values and handles
+if
+  $7069 == 0 // integer values
+jf @OVALRNG_12117
+$7070 += 1 // integer values
+
+:OVALRNG_12117
+Car.DriveTo($7067, $7112, $7113, $7114)
+0084: $7071 = $7070 // integer values and handles
+$7071 *= 100 // integer values
+0058: $7071 += $7069 // integer values
+
+:OVALRNG_12154
+if
+01AF:   car $7067 0 $7148 $7149 $7150 radius 3.0 3.0 3.0
+jf @OVALRNG_12230
+if
+001C:   $4811 > $7099 // integer values
+jf @OVALRNG_12223
+Car.Health($7067) = 230
+
+:OVALRNG_12223
+jump @OVALRNG_12260
+
+:OVALRNG_12230
+Car.StorePos($7067, $7148, $7149, $7150)
+0084: $7099 = $4811 // integer values and handles
+$7099 += 5000 // integer values
+
+:OVALRNG_12260
+if
+01AF:   car $7067 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_12358
+if
+001C:   $4811 > $7072 // integer values
+jf @OVALRNG_12351
+Car.Health($7067) = 100
+Car.RemoveReferences($7067)
+Actor.RemoveReferences($7068)
+$7067 = -1 // integer values
+
+:OVALRNG_12351
+jump @OVALRNG_12374
+
+:OVALRNG_12358
+0084: $7072 = $4811 // integer values and handles
+$7072 += 3000 // integer values
+
+:OVALRNG_12374
+0084: $6990 = $7071 // integer values and handles
+0084: $451 = $7067 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7073)
+jf @OVALRNG_12616
+Car.RemoveReferences($7073)
+Actor.RemoveReferences($7074)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_12609
+$7073 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7073 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7074 = $6993 // integer values and handles
+if
+001C:   $6988 > $7076 // integer values
+jf @OVALRNG_12539
+0084: $7076 = $6988 // integer values and handles
+
+:OVALRNG_12539
+$7075 = 0 // integer values
+0084: $7440 = $7075 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7115 = $7498 // floating-point values only
+0086: $7116 = $7499 // floating-point values only
+0086: $7117 = $7500 // floating-point values only
+Car.DriveTo($7073, $7115, $7116, $7117)
+04BA: set_car $7073 speed_instantly 30.0
+
+:OVALRNG_12609
+jump @OVALRNG_12987
+
+:OVALRNG_12616
+if
+01AF:   car $7073 0 $7115 $7116 $7117 radius 24.0 24.0 24.0
+jf @OVALRNG_12767
+0084: $7440 = $7075 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7115 = $7498 // floating-point values only
+0086: $7116 = $7499 // floating-point values only
+0086: $7117 = $7500 // floating-point values only
+0084: $7075 = $7440 // integer values and handles
+if
+  $7075 == 0 // integer values
+jf @OVALRNG_12730
+$7076 += 1 // integer values
+
+:OVALRNG_12730
+Car.DriveTo($7073, $7115, $7116, $7117)
+0084: $7077 = $7076 // integer values and handles
+$7077 *= 100 // integer values
+0058: $7077 += $7075 // integer values
+
+:OVALRNG_12767
+if
+01AF:   car $7073 0 $7151 $7152 $7153 radius 3.0 3.0 3.0
+jf @OVALRNG_12843
+if
+001C:   $4811 > $7100 // integer values
+jf @OVALRNG_12836
+Car.Health($7073) = 230
+
+:OVALRNG_12836
+jump @OVALRNG_12873
+
+:OVALRNG_12843
+Car.StorePos($7073, $7151, $7152, $7153)
+0084: $7100 = $4811 // integer values and handles
+$7100 += 5000 // integer values
+
+:OVALRNG_12873
+if
+01AF:   car $7073 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_12971
+if
+001C:   $4811 > $7078 // integer values
+jf @OVALRNG_12964
+Car.Health($7073) = 100
+Car.RemoveReferences($7073)
+Actor.RemoveReferences($7074)
+$7073 = -1 // integer values
+
+:OVALRNG_12964
+jump @OVALRNG_12987
+
+:OVALRNG_12971
+0084: $7078 = $4811 // integer values and handles
+$7078 += 3000 // integer values
+
+:OVALRNG_12987
+0084: $6990 = $7077 // integer values and handles
+0084: $451 = $7073 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7079)
+jf @OVALRNG_13238
+Car.RemoveReferences($7079)
+Actor.RemoveReferences($7080)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_13231
+0506: vehicle_model 232 set_next_variation 0 -1
+$7079 = Car.Create(#HOTRINA, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7079 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7080 = $6993 // integer values and handles
+if
+001C:   $6988 > $7082 // integer values
+jf @OVALRNG_13161
+0084: $7082 = $6988 // integer values and handles
+
+:OVALRNG_13161
+$7081 = 0 // integer values
+0084: $7440 = $7081 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7118 = $7498 // floating-point values only
+0086: $7119 = $7499 // floating-point values only
+0086: $7120 = $7500 // floating-point values only
+Car.DriveTo($7079, $7118, $7119, $7120)
+04BA: set_car $7079 speed_instantly 30.0
+
+:OVALRNG_13231
+jump @OVALRNG_13609
+
+:OVALRNG_13238
+if
+01AF:   car $7079 0 $7118 $7119 $7120 radius 24.0 24.0 24.0
+jf @OVALRNG_13389
+0084: $7440 = $7081 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7118 = $7498 // floating-point values only
+0086: $7119 = $7499 // floating-point values only
+0086: $7120 = $7500 // floating-point values only
+0084: $7081 = $7440 // integer values and handles
+if
+  $7081 == 0 // integer values
+jf @OVALRNG_13352
+$7082 += 1 // integer values
+
+:OVALRNG_13352
+Car.DriveTo($7079, $7118, $7119, $7120)
+0084: $7083 = $7082 // integer values and handles
+$7083 *= 100 // integer values
+0058: $7083 += $7081 // integer values
+
+:OVALRNG_13389
+if
+01AF:   car $7079 0 $7154 $7155 $7156 radius 3.0 3.0 3.0
+jf @OVALRNG_13465
+if
+001C:   $4811 > $7101 // integer values
+jf @OVALRNG_13458
+Car.Health($7079) = 230
+
+:OVALRNG_13458
+jump @OVALRNG_13495
+
+:OVALRNG_13465
+Car.StorePos($7079, $7154, $7155, $7156)
+0084: $7101 = $4811 // integer values and handles
+$7101 += 5000 // integer values
+
+:OVALRNG_13495
+if
+01AF:   car $7079 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_13593
+if
+001C:   $4811 > $7084 // integer values
+jf @OVALRNG_13586
+Car.Health($7079) = 100
+Car.RemoveReferences($7079)
+Actor.RemoveReferences($7080)
+$7079 = -1 // integer values
+
+:OVALRNG_13586
+jump @OVALRNG_13609
+
+:OVALRNG_13593
+0084: $7084 = $4811 // integer values and handles
+$7084 += 3000 // integer values
+
+:OVALRNG_13609
+0084: $6990 = $7083 // integer values and handles
+0084: $451 = $7079 // integer values and handles
+gosub @OVALRNG_17639
+if
+   Car.Wrecked($7085)
+jf @OVALRNG_13860
+Car.RemoveReferences($7085)
+Actor.RemoveReferences($7086)
+if
+838A:   not car_in_cube -1409.717 1144.97 266.3857 4.0 4.0 2.0
+jf @OVALRNG_13853
+0506: vehicle_model 233 set_next_variation 0 -1
+$7085 = Car.Create(#HOTRINB, -1409.717, 1144.97, 266.3857)
+0084: $6992 = $7085 // integer values and handles
+gosub @OVALRNG_18682
+0084: $7086 = $6993 // integer values and handles
+if
+001C:   $6988 > $7088 // integer values
+jf @OVALRNG_13783
+0084: $7088 = $6988 // integer values and handles
+
+:OVALRNG_13783
+$7087 = 0 // integer values
+0084: $7440 = $7087 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7121 = $7498 // floating-point values only
+0086: $7122 = $7499 // floating-point values only
+0086: $7123 = $7500 // floating-point values only
+Car.DriveTo($7085, $7121, $7122, $7123)
+04BA: set_car $7085 speed_instantly 30.0
+
+:OVALRNG_13853
+jump @OVALRNG_14231
+
+:OVALRNG_13860
+if
+01AF:   car $7085 0 $7121 $7122 $7123 radius 24.0 24.0 24.0
+jf @OVALRNG_14011
+0084: $7440 = $7087 // integer values and handles
+gosub @OVALRNG_18246
+0086: $7121 = $7498 // floating-point values only
+0086: $7122 = $7499 // floating-point values only
+0086: $7123 = $7500 // floating-point values only
+0084: $7087 = $7440 // integer values and handles
+if
+  $7087 == 0 // integer values
+jf @OVALRNG_13974
+$7088 += 1 // integer values
+
+:OVALRNG_13974
+Car.DriveTo($7085, $7121, $7122, $7123)
+0084: $7089 = $7088 // integer values and handles
+$7089 *= 100 // integer values
+0058: $7089 += $7087 // integer values
+
+:OVALRNG_14011
+if
+01AF:   car $7085 0 $7157 $7158 $7159 radius 3.0 3.0 3.0
+jf @OVALRNG_14087
+if
+001C:   $4811 > $7102 // integer values
+jf @OVALRNG_14080
+Car.Health($7085) = 230
+
+:OVALRNG_14080
+jump @OVALRNG_14117
+
+:OVALRNG_14087
+Car.StorePos($7085, $7157, $7158, $7159)
+0084: $7102 = $4811 // integer values and handles
+$7102 += 5000 // integer values
+
+:OVALRNG_14117
+if
+01AF:   car $7085 0 -1409.717 1144.97 266.3857 radius 5.0 5.0 3.0
+jf @OVALRNG_14215
+if
+001C:   $4811 > $7090 // integer values
+jf @OVALRNG_14208
+Car.Health($7085) = 100
+Car.RemoveReferences($7085)
+Actor.RemoveReferences($7086)
+$7085 = -1 // integer values
+
+:OVALRNG_14208
+jump @OVALRNG_14231
+
+:OVALRNG_14215
+0084: $7090 = $4811 // integer values and handles
+$7090 += 3000 // integer values
+
+:OVALRNG_14231
+0084: $6990 = $7089 // integer values and handles
+0084: $451 = $7085 // integer values and handles
+gosub @OVALRNG_17639
+jump @OVALRNG_14651
+
+:OVALRNG_14261
+if
+   not Car.Wrecked($7007)
+jf @OVALRNG_14287
+0477: set_car $7007 action 1 time 200
+
+:OVALRNG_14287
+if
+   not Car.Wrecked($7011)
+jf @OVALRNG_14313
+0477: set_car $7011 action 1 time 200
+
+:OVALRNG_14313
+if
+   not Car.Wrecked($7015)
+jf @OVALRNG_14339
+0477: set_car $7015 action 1 time 200
+
+:OVALRNG_14339
+if
+   not Car.Wrecked($7019)
+jf @OVALRNG_14365
+0477: set_car $7019 action 1 time 200
+
+:OVALRNG_14365
+if
+   not Car.Wrecked($7025)
+jf @OVALRNG_14391
+0477: set_car $7025 action 1 time 200
+
+:OVALRNG_14391
+if
+   not Car.Wrecked($7031)
+jf @OVALRNG_14417
+0477: set_car $7031 action 1 time 200
+
+:OVALRNG_14417
+if
+   not Car.Wrecked($7037)
+jf @OVALRNG_14443
+0477: set_car $7037 action 1 time 200
+
+:OVALRNG_14443
+if
+   not Car.Wrecked($7043)
+jf @OVALRNG_14469
+0477: set_car $7043 action 1 time 200
+
+:OVALRNG_14469
+if
+   not Car.Wrecked($7049)
+jf @OVALRNG_14495
+0477: set_car $7049 action 1 time 200
+
+:OVALRNG_14495
+if
+   not Car.Wrecked($7055)
+jf @OVALRNG_14521
+0477: set_car $7055 action 1 time 200
+
+:OVALRNG_14521
+if
+   not Car.Wrecked($7061)
+jf @OVALRNG_14547
+0477: set_car $7061 action 1 time 200
+
+:OVALRNG_14547
+if
+   not Car.Wrecked($7067)
+jf @OVALRNG_14573
+0477: set_car $7067 action 1 time 200
+
+:OVALRNG_14573
+if
+   not Car.Wrecked($7073)
+jf @OVALRNG_14599
+0477: set_car $7073 action 1 time 200
+
+:OVALRNG_14599
+if
+   not Car.Wrecked($7079)
+jf @OVALRNG_14625
+0477: set_car $7079 action 1 time 200
+
+:OVALRNG_14625
+if
+   not Car.Wrecked($7085)
+jf @OVALRNG_14651
+0477: set_car $7085 action 1 time 200
+
+:OVALRNG_14651
+if
+  $6999 == 1 // integer values
+jf @OVALRNG_14696
+03F0: enable_text_draw 1
+0084: $7006 = $4811 // integer values and handles
+$7006 += 5000 // integer values
+$6999 = 3 // integer values
+
+:OVALRNG_14696
+if
+  $6999 == 0 // integer values
+jf @OVALRNG_15158
+if
+  $6988 == 12 // integer values
+jf @OVALRNG_15158
+0151: remove_status_text $7001
+0151: remove_status_text $6988
+0151: remove_status_text $7441
+014F: stop_timer $6997
+if
+001C:   $1596 > $7441 // integer values
+jf @OVALRNG_14779
+0084: $1596 = $7441 // integer values and handles
+
+:OVALRNG_14779
+$6997 /= 1000 // integer values
+0084: $6995 = $1595 // integer values and handles
+if
+001C:   $1595 > $6997 // integer values
+jf @OVALRNG_14829
+0084: $1595 = $6997 // integer values and handles
+042E: downdate_integer_stat 20 to $1595
+
+:OVALRNG_14829
+$6999 = 1 // integer values
+if
+  $7441 == 1 // integer values
+jf @OVALRNG_14933
+00BA: text_styled 'HOTR_30' 6000 ms 5  // 1ST PLACE
+01E3: text_1number_styled 'HOTR_29' number 5000 time 6000 style 6  // $~1~
+0582:  0 $7441
+Player.Money($PLAYER_CHAR) += 5000
+if
+  $1597 == 0 // integer values
+jf @OVALRNG_14933
+014C: set_parked_car_generator $PARKED_HOTRINA cars_to_generate_to 101
+014C: set_parked_car_generator $PARKED_HOTRINB cars_to_generate_to 101
+030C: progress_made += 1
+0595: mission_complete
+$1597 = 1 // integer values
+
+:OVALRNG_14933
+if
+  $7441 == 2 // integer values
+jf @OVALRNG_14999
+00BA: text_styled 'HOTR_31' 6000 ms 5  // 2ND PLACE
+01E3: text_1number_styled 'HOTR_29' number 1500 time 6000 style 6  // $~1~
+0582:  0 $7441
+Player.Money($PLAYER_CHAR) += 1500
+
+:OVALRNG_14999
+if
+  $7441 == 3 // integer values
+jf @OVALRNG_15065
+00BA: text_styled 'HOTR_32' 6000 ms 5  // 3RD PLACE
+01E3: text_1number_styled 'HOTR_29' number 500 time 6000 style 6  // $~1~
+0582:  0 $7441
+Player.Money($PLAYER_CHAR) += 500
+
+:OVALRNG_15065
+if
+  $7441 > 3 // integer values
+jf @OVALRNG_15158
+0582:  0 $7441
+$6999 = 0 // integer values
+00BC: text_highpriority 'HOTR_13' 2000 ms 1  // ~r~You didn't win the race!
+0169: set_fade_color 0 0 1
+fade 0 1500
+
+:OVALRNG_15127
+if
+fading
+jf @OVALRNG_15151
+wait 0
+jump @OVALRNG_15127
+
+:OVALRNG_15151
+jump @OVALRNG_18001
+
+:OVALRNG_15158
+if
+  $6999 > 1 // integer values
+jf @OVALRNG_16712
+if
+  $6999 == 4 // integer values
+jf @OVALRNG_15214
+if
+   not fading
+jf @OVALRNG_15214
+jump @OVALRNG_18001
+
+:OVALRNG_15214
+if
+  $6999 == 3 // integer values
+jf @OVALRNG_15265
+if
+001C:   $4811 > $7006 // integer values
+jf @OVALRNG_15265
+fade 0 1500
+$6999 = 4 // integer values
+
+:OVALRNG_15265
+if
+00E0:   player $PLAYER_CHAR driving
+jf @OVALRNG_15305
+03C1: $4790 = player $PLAYER_CHAR car_no_save
+$7001 = Car.Health($4790)
+Car.Health($4790) = $7001
+
+:OVALRNG_15305
+if
+  $6999 > 2 // integer values
+jf @OVALRNG_15577
+gosub @OVALRNG_17584
+033F: set_text_draw_letter_width_height 0.8 2.0
+0084: $7457 = $6997 // integer values and handles
+$7457 /= 60 // integer values
+0084: $7451 = $7457 // integer values and handles
+$7451 *= 60 // integer values
+0084: $7458 = $6997 // integer values and handles
+0060: $7458 -= $7451 // integer values
+if
+  $7458 > 9 // integer values
+jf @OVALRNG_15495
+0340: set_text_draw_color 0 0 0 255
+045B: text_draw_2numbers 32.0 232.0 'HOTR_15' $7457 $7458  // Time: ~1~:~1~
+gosub @OVALRNG_17584
+033F: set_text_draw_letter_width_height 0.8 2.0
+045B: text_draw_2numbers 30.0 230.0 'HOTR_15' $7457 $7458  // Time: ~1~:~1~
+jump @OVALRNG_15577
+
+:OVALRNG_15495
+0340: set_text_draw_color 0 0 0 255
+045B: text_draw_2numbers 32.0 232.0 'HOTR_16' $7457 $7458  // Time: ~1~:0~1~
+gosub @OVALRNG_17584
+033F: set_text_draw_letter_width_height 0.8 2.0
+045B: text_draw_2numbers 30.0 230.0 'HOTR_16' $7457 $7458  // Time: ~1~:0~1~
+
+:OVALRNG_15577
+gosub @OVALRNG_17584
+0340: set_text_draw_color 0 0 0 255
+if
+  $1595 == 999999 // integer values
+jf @OVALRNG_15670
+033E: text_draw 32.0 302.0 'HOTR_19'  // Best Time: NA
+gosub @OVALRNG_17584
+033E: text_draw 30.0 300.0 'HOTR_19'  // Best Time: NA
+jump @OVALRNG_16054
+
+:OVALRNG_15670
+0084: $7457 = $1595 // integer values and handles
+$7457 /= 60 // integer values
+0084: $7451 = $7457 // integer values and handles
+$7451 *= 60 // integer values
+0084: $7458 = $1595 // integer values and handles
+0060: $7458 -= $7451 // integer values
+if
+001C:   $1595 > $6995 // integer values
+jf @OVALRNG_15885
+if
+  $7458 > 9 // integer values
+jf @OVALRNG_15819
+045B: text_draw_2numbers 32.0 302.0 'HOTR_17' $7457 $7458  // Best Time: ~1~:~1~
+gosub @OVALRNG_17584
+045B: text_draw_2numbers 30.0 300.0 'HOTR_17' $7457 $7458  // Best Time: ~1~:~1~
+jump @OVALRNG_15878
+
+:OVALRNG_15819
+045B: text_draw_2numbers 32.0 302.0 'HOTR_18' $7457 $7458  // Best Time: ~1~:0~1~
+gosub @OVALRNG_17584
+045B: text_draw_2numbers 30.0 300.0 'HOTR_18' $7457 $7458  // Best Time: ~1~:0~1~
+
+:OVALRNG_15878
+jump @OVALRNG_16054
+
+:OVALRNG_15885
+if
+  $7458 > 9 // integer values
+jf @OVALRNG_15982
+045B: text_draw_2numbers 32.0 302.0 'HOTR_20' $7457 $7458  // New Best Time: ~1~:~1~
+gosub @OVALRNG_17584
+0340: set_text_draw_color 255 128 0 255
+045B: text_draw_2numbers 30.0 300.0 'HOTR_20' $7457 $7458  // New Best Time: ~1~:~1~
+jump @OVALRNG_16054
+
+:OVALRNG_15982
+045B: text_draw_2numbers 32.0 302.0 'HOTR_21' $7457 $7458  // New Best Time: ~1~:0~1~
+gosub @OVALRNG_17584
+0340: set_text_draw_color 255 128 0 255
+045B: text_draw_2numbers 30.0 300.0 'HOTR_21' $7457 $7458  // New Best Time: ~1~:0~1~
+
+:OVALRNG_16054
+gosub @OVALRNG_17584
+0340: set_text_draw_color 0 0 0 255
+if
+  $1596 == 999999 // integer values
+jf @OVALRNG_16140
+033E: text_draw 32.0 317.0 'HOTR_22'  // Best Result: NA
+gosub @OVALRNG_17584
+033E: text_draw 30.0 315.0 'HOTR_22'  // Best Result: NA
+
+:OVALRNG_16140
+if
+  $1596 == 1 // integer values
+jf @OVALRNG_16205
+033E: text_draw 32.0 317.0 'HOTR_23'  // Best Result: 1st
+gosub @OVALRNG_17584
+033E: text_draw 30.0 315.0 'HOTR_23'  // Best Result: 1st
+
+:OVALRNG_16205
+if
+  $1596 == 2 // integer values
+jf @OVALRNG_16270
+033E: text_draw 32.0 317.0 'HOTR_24'  // Best Result: 2nd
+gosub @OVALRNG_17584
+033E: text_draw 30.0 315.0 'HOTR_24'  // Best Result: 2nd
+
+:OVALRNG_16270
+if
+  $1596 == 3 // integer values
+jf @OVALRNG_16335
+033E: text_draw 32.0 317.0 'HOTR_25'  // Best Result: 3rd
+gosub @OVALRNG_17584
+033E: text_draw 30.0 315.0 'HOTR_25'  // Best Result: 3rd
+
+:OVALRNG_16335
+if and
+  $1596 > 3 // integer values
+  17 > $1596 // integer values
+jf @OVALRNG_16413
+045A: text_draw_1number 32.0 317.0 'HOTR_26' $1596  // Best Result: ~1~th
+gosub @OVALRNG_17584
+045A: text_draw_1number 30.0 315.0 'HOTR_26' $1596  // Best Result: ~1~th
+
+:OVALRNG_16413
+gosub @OVALRNG_17584
+0340: set_text_draw_color 0 0 0 255
+if
+  $1594 == 999999 // integer values
+jf @OVALRNG_16506
+033E: text_draw 32.0 332.0 'HOTR_33'  // Best Lap Time: NA
+gosub @OVALRNG_17584
+033E: text_draw 30.0 330.0 'HOTR_33'  // Best Lap Time: NA
+jump @OVALRNG_16712
+
+:OVALRNG_16506
+0084: $7458 = $1594 // integer values and handles
+$7458 /= 1000 // integer values
+0084: $7003 = $7458 // integer values and handles
+$7003 *= 1000 // integer values
+0084: $7451 = $1594 // integer values and handles
+0060: $7451 -= $7003 // integer values
+0084: $7003 = $7451 // integer values and handles
+$7003 /= 10 // integer values
+if
+  $7003 > 9 // integer values
+jf @OVALRNG_16653
+045B: text_draw_2numbers 32.0 332.0 'HOTR_27' $7458 $7003  // Best Lap Time: ~1~.~1~ seconds
+gosub @OVALRNG_17584
+045B: text_draw_2numbers 30.0 330.0 'HOTR_27' $7458 $7003  // Best Lap Time: ~1~.~1~ seconds
+jump @OVALRNG_16712
+
+:OVALRNG_16653
+045B: text_draw_2numbers 32.0 332.0 'HOTR_28' $7458 $7003  // Best Lap Time: ~1~.0~1~ seconds
+gosub @OVALRNG_17584
+045B: text_draw_2numbers 30.0 330.0 'HOTR_28' $7458 $7003  // Best Lap Time: ~1~.0~1~ seconds
+
+:OVALRNG_16712
+if
+  16@ > 2500 // integer values
+jf @OVALRNG_16763
+16@ = 0 // integer values
+if
+  $7004 == 0 // integer values
+jf @OVALRNG_16763
+$7004 = 1 // integer values
+
+:OVALRNG_16763
+if
+  $7004 == 3 // integer values
+jf @OVALRNG_16803
+if
+03D2:   wav 1 ended
+jf @OVALRNG_16803
+$7004 = 0 // integer values
+
+:OVALRNG_16803
+if
+  $7004 == 2 // integer values
+jf @OVALRNG_16847
+if
+03D0:   wav 1 loaded
+jf @OVALRNG_16847
+03D1: play_wav 1
+$7004 = 3 // integer values
+
+:OVALRNG_16847
+if
+  $7004 == 1 // integer values
+jf @OVALRNG_17577
+0209: $7451 = random_int_in_ranges 1 23
+if
+003A:   $7005 == $7451 // integer values and handles
+jf @OVALRNG_16925
+$7451 += 1 // integer values
+if
+  $7451 > 22 // integer values
+jf @OVALRNG_16925
+$7451 = 1 // integer values
+
+:OVALRNG_16925
+if
+  $7451 == 1 // integer values
+jf @OVALRNG_16955
+03CF: load_wav 'HOT1' as 1
+
+:OVALRNG_16955
+if
+  $7451 == 2 // integer values
+jf @OVALRNG_16985
+03CF: load_wav 'HOT2' as 1
+
+:OVALRNG_16985
+if
+  $7451 == 3 // integer values
+jf @OVALRNG_17015
+03CF: load_wav 'HOT3' as 1
+
+:OVALRNG_17015
+if
+  $7451 == 4 // integer values
+jf @OVALRNG_17045
+03CF: load_wav 'HOT4' as 1
+
+:OVALRNG_17045
+if
+  $7451 == 5 // integer values
+jf @OVALRNG_17075
+03CF: load_wav 'HOT5' as 1
+
+:OVALRNG_17075
+if
+  $7451 == 6 // integer values
+jf @OVALRNG_17105
+03CF: load_wav 'HOT6' as 1
+
+:OVALRNG_17105
+if
+  $7451 == 7 // integer values
+jf @OVALRNG_17135
+03CF: load_wav 'HOT7' as 1
+
+:OVALRNG_17135
+if
+  $7451 == 8 // integer values
+jf @OVALRNG_17165
+03CF: load_wav 'HOT8' as 1
+
+:OVALRNG_17165
+if
+  $7451 == 9 // integer values
+jf @OVALRNG_17195
+03CF: load_wav 'HOT9' as 1
+
+:OVALRNG_17195
+if
+  $7451 == 10 // integer values
+jf @OVALRNG_17225
+03CF: load_wav 'HOT10' as 1
+
+:OVALRNG_17225
+if
+  $7451 == 11 // integer values
+jf @OVALRNG_17255
+03CF: load_wav 'HOT11' as 1
+
+:OVALRNG_17255
+if
+  $7451 == 12 // integer values
+jf @OVALRNG_17285
+03CF: load_wav 'HOT12' as 1
+
+:OVALRNG_17285
+if
+  $7451 == 13 // integer values
+jf @OVALRNG_17315
+03CF: load_wav 'HOT13' as 1
+
+:OVALRNG_17315
+if
+  $7451 == 14 // integer values
+jf @OVALRNG_17345
+03CF: load_wav 'HOT14' as 1
+
+:OVALRNG_17345
+if
+  $7451 == 15 // integer values
+jf @OVALRNG_17375
+03CF: load_wav 'HOT15' as 1
+
+:OVALRNG_17375
+if or
+  $7451 == 16 // integer values
+  $7451 == 22 // integer values
+jf @OVALRNG_17412
+03CF: load_wav 'CHEER1' as 1
+
+:OVALRNG_17412
+if
+  $7451 == 17 // integer values
+jf @OVALRNG_17442
+03CF: load_wav 'CHEER2' as 1
+
+:OVALRNG_17442
+if
+  $7451 == 18 // integer values
+jf @OVALRNG_17472
+03CF: load_wav 'CHEER3' as 1
+
+:OVALRNG_17472
+if
+  $7451 == 19 // integer values
+jf @OVALRNG_17502
+03CF: load_wav 'CHEER4' as 1
+
+:OVALRNG_17502
+if
+  $7451 == 20 // integer values
+jf @OVALRNG_17532
+03CF: load_wav 'OOH1' as 1
+
+:OVALRNG_17532
+if
+  $7451 == 21 // integer values
+jf @OVALRNG_17562
+03CF: load_wav 'OOH2' as 1
+
+:OVALRNG_17562
+0084: $7005 = $7451 // integer values and handles
+$7004 = 2 // integer values
+
+:OVALRNG_17577
+jump @OVALRNG_2957
+
+:OVALRNG_17584
+0340: set_text_draw_color 180 180 180 255
+0341: set_text_draw_align_justify 1
+03E4: set_text_draw_align_right 0
+0343: set_text_linewidth 500.0
+0348: set_text_draw_proportional 1
+0342: set_text_draw_centered 0
+0345: set_text_draw_in_box 0
+033F: set_text_draw_letter_width_height 0.6 1.6
+return
+
+:OVALRNG_17639
+if
+003A:   $6989 == $6990 // integer values and handles
+jf @OVALRNG_17762
+if
+   not Car.Wrecked($451)
+jf @OVALRNG_17762
+Car.StorePos($451, $7465, $7466, $447)
+0509: $7475 = distance_between_point $7465 $7466 and_point $7483 $7484
+0054: store_player $PLAYER_CHAR position_to $7465 $7466 $447
+0509: $7476 = distance_between_point $7465 $7466 and_point $7483 $7484
+if
+0024:   $7476 > $7475 // floating-point values only
+jf @OVALRNG_17762
+$7441 += 1 // integer values
+
+:OVALRNG_17762
+if
+001C:   $6990 > $6989 // integer values
+jf @OVALRNG_17788
+$7441 += 1 // integer values
+
+:OVALRNG_17788
+return
+
+:OVALRNG_17790
+if
+   not wasted_or_busted
+jf @OVALRNG_17999
+0169: set_fade_color 0 0 1
+fade 0 1000
+
+:OVALRNG_17818
+if
+fading
+jf @OVALRNG_17842
+wait 0
+jump @OVALRNG_17818
+
+:OVALRNG_17842
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+057E: make_radar_grey 0
+0581: enable_radar 1
+
+:OVALRNG_17858
+if and
+80E0:   not player $PLAYER_CHAR driving
+844A:   not player $PLAYER_CHAR on_foot
+jf @OVALRNG_17890
+wait 0
+jump @OVALRNG_17858
+
+:OVALRNG_17890
+if
+00E0:   player $PLAYER_CHAR driving
+jf @OVALRNG_17933
+012A: put_player $PLAYER_CHAR at -1102.723 1330.958 19.029 and_remove_from_car
+jump @OVALRNG_17953
+
+:OVALRNG_17933
+0055: put_player $PLAYER_CHAR at -1102.723 1330.958 19.029
+
+:OVALRNG_17953
+0171: set_player $PLAYER_CHAR z_angle_to 274.1051
+Camera.SetAtPos(-1102.723, 1330.958, 19.029)
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+0169: set_fade_color 0 0 1
+fade 1 1000
+
+:OVALRNG_17999
+return
+
+:OVALRNG_18001
+if
+   not wasted_or_busted
+jf @OVALRNG_18171
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+057E: make_radar_grey 0
+0581: enable_radar 1
+
+:OVALRNG_18030
+if and
+80E0:   not player $PLAYER_CHAR driving
+844A:   not player $PLAYER_CHAR on_foot
+jf @OVALRNG_18062
+wait 0
+jump @OVALRNG_18030
+
+:OVALRNG_18062
+if
+00E0:   player $PLAYER_CHAR driving
+jf @OVALRNG_18105
+012A: put_player $PLAYER_CHAR at -1102.723 1330.958 19.029 and_remove_from_car
+jump @OVALRNG_18125
+
+:OVALRNG_18105
+0055: put_player $PLAYER_CHAR at -1102.723 1330.958 19.029
+
+:OVALRNG_18125
+0171: set_player $PLAYER_CHAR z_angle_to 274.1051
+Camera.SetAtPos(-1102.723, 1330.958, 19.029)
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+0169: set_fade_color 0 0 1
+fade 1 1500
+
+:OVALRNG_18171
+return
+
+:OVALRNG_18173
+Model.Destroy(#WMYCR)
+Model.Destroy(#HOTRINA)
+Model.Destroy(#HOTRINB)
+Model.Destroy(#HOTRING)
+0151: remove_status_text $7001
+0151: remove_status_text $6988
+0151: remove_status_text $7441
+014F: stop_timer $6997
+03F0: enable_text_draw 0
+057E: make_radar_grey 0
+0581: enable_radar 1
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+0581: enable_radar 1
+03E6: remove_text_box
+$ONMISSION = 0 // integer values
+mission_cleanup
+return
+
+:OVALRNG_18246
+if
+  $7440 == 0 // integer values
+jf @OVALRNG_18288
+0086: $7498 = $7507 // floating-point values only
+0086: $7499 = $7508 // floating-point values only
+0086: $7500 = $7509 // floating-point values only
+
+:OVALRNG_18288
+if
+  $7440 == 1 // integer values
+jf @OVALRNG_18330
+0086: $7498 = $7510 // floating-point values only
+0086: $7499 = $7511 // floating-point values only
+0086: $7500 = $7512 // floating-point values only
+
+:OVALRNG_18330
+if
+  $7440 == 2 // integer values
+jf @OVALRNG_18372
+0086: $7498 = $7513 // floating-point values only
+0086: $7499 = $7514 // floating-point values only
+0086: $7500 = $7515 // floating-point values only
+
+:OVALRNG_18372
+if
+  $7440 == 3 // integer values
+jf @OVALRNG_18414
+0086: $7498 = $7516 // floating-point values only
+0086: $7499 = $7517 // floating-point values only
+0086: $7500 = $7518 // floating-point values only
+
+:OVALRNG_18414
+if
+  $7440 == 4 // integer values
+jf @OVALRNG_18456
+0086: $7498 = $7519 // floating-point values only
+0086: $7499 = $7520 // floating-point values only
+0086: $7500 = $7521 // floating-point values only
+
+:OVALRNG_18456
+if
+  $7440 == 5 // integer values
+jf @OVALRNG_18498
+0086: $7498 = $7522 // floating-point values only
+0086: $7499 = $7523 // floating-point values only
+0086: $7500 = $7524 // floating-point values only
+
+:OVALRNG_18498
+if
+  $7440 == 6 // integer values
+jf @OVALRNG_18540
+0086: $7498 = $7525 // floating-point values only
+0086: $7499 = $7526 // floating-point values only
+0086: $7500 = $7527 // floating-point values only
+
+:OVALRNG_18540
+if
+  $7440 == 7 // integer values
+jf @OVALRNG_18582
+0086: $7498 = $7528 // floating-point values only
+0086: $7499 = $7529 // floating-point values only
+0086: $7500 = $7530 // floating-point values only
+
+:OVALRNG_18582
+if
+  $7440 == 8 // integer values
+jf @OVALRNG_18624
+0086: $7498 = $7531 // floating-point values only
+0086: $7499 = $7532 // floating-point values only
+0086: $7500 = $7533 // floating-point values only
+
+:OVALRNG_18624
+if
+  $7440 == 9 // integer values
+jf @OVALRNG_18673
+0086: $7498 = $7534 // floating-point values only
+0086: $7499 = $7535 // floating-point values only
+0086: $7500 = $7536 // floating-point values only
+$7440 = -1 // integer values
+
+:OVALRNG_18673
+$7440 += 1 // integer values
+return
+
+:OVALRNG_18682
+if
+  $6991 == 1 // integer values
+jf @OVALRNG_18710
+Car.Angle($6992) = 301.748
+
+:OVALRNG_18710
+020A: set_car $6992 door_status_to 2
+Car.SetImmunities($6992, 0, 1, 1, 0, 0)
+04E0: car $6992 abandon_path_radius 5
+Car.SetToNormalDriver($6992)
+00AE: set_vehicle $6992 traffic_behavior_to 2
+Car.SetMaxSpeed($6992, 100.0)
+046C: $6993 = car $6992 driver
+if
+  $6993 == -1 // integer values
+jf @OVALRNG_18806
+0129: $6993 = create_actor 4 #WMYCR in_car $6992 driverseat
+039E: set_actor $6993 locked_while_in_vehicle 1
+
+:OVALRNG_18806
+return
+
+:OVALRNG_18808
+if
+   not Car.Wrecked($7007)
+jf @OVALRNG_18832
+Car.LockInCurrentPosition($7007) = $6994
+
+:OVALRNG_18832
+if
+   not Car.Wrecked($7011)
+jf @OVALRNG_18856
+Car.LockInCurrentPosition($7011) = $6994
+
+:OVALRNG_18856
+if
+   not Car.Wrecked($7015)
+jf @OVALRNG_18880
+Car.LockInCurrentPosition($7015) = $6994
+
+:OVALRNG_18880
+if
+   not Car.Wrecked($7019)
+jf @OVALRNG_18904
+Car.LockInCurrentPosition($7019) = $6994
+
+:OVALRNG_18904
+if
+   not Car.Wrecked($7025)
+jf @OVALRNG_18928
+Car.LockInCurrentPosition($7025) = $6994
+
+:OVALRNG_18928
+if
+   not Car.Wrecked($7031)
+jf @OVALRNG_18952
+Car.LockInCurrentPosition($7031) = $6994
+
+:OVALRNG_18952
+if
+   not Car.Wrecked($7037)
+jf @OVALRNG_18976
+Car.LockInCurrentPosition($7037) = $6994
+
+:OVALRNG_18976
+if
+   not Car.Wrecked($7043)
+jf @OVALRNG_19000
+Car.LockInCurrentPosition($7043) = $6994
+
+:OVALRNG_19000
+if
+   not Car.Wrecked($7049)
+jf @OVALRNG_19024
+Car.LockInCurrentPosition($7049) = $6994
+
+:OVALRNG_19024
+if
+   not Car.Wrecked($7055)
+jf @OVALRNG_19048
+Car.LockInCurrentPosition($7055) = $6994
+
+:OVALRNG_19048
+if
+   not Car.Wrecked($7061)
+jf @OVALRNG_19072
+Car.LockInCurrentPosition($7061) = $6994
+
+:OVALRNG_19072
+if
+   not Car.Wrecked($7067)
+jf @OVALRNG_19096
+Car.LockInCurrentPosition($7067) = $6994
+
+:OVALRNG_19096
+if
+   not Car.Wrecked($7073)
+jf @OVALRNG_19120
+Car.LockInCurrentPosition($7073) = $6994
+
+:OVALRNG_19120
+if
+   not Car.Wrecked($7079)
+jf @OVALRNG_19144
+Car.LockInCurrentPosition($7079) = $6994
+
+:OVALRNG_19144
+if
+   not Car.Wrecked($7085)
+jf @OVALRNG_19168
+Car.LockInCurrentPosition($7085) = $6994
+
+:OVALRNG_19168
+if
+   not Car.Wrecked($7000)
+jf @OVALRNG_19192
+Car.LockInCurrentPosition($7000) = $6994
+
+:OVALRNG_19192
+return

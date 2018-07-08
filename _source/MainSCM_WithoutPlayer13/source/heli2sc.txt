@@ -1,0 +1,546 @@
+:HELI2SC
+gosub @HELI2SC_36
+if
+wasted_or_busted
+jf @HELI2SC_27
+gosub @HELI2SC_1144
+
+:HELI2SC_27
+gosub @HELI2SC_1456
+end_thread
+
+:HELI2SC_36
+$ONMISSION = 1 // integer values
+$7877 = 0 // integer values
+thread 'HELI2SC'
+wait 0
+if
+  $1585 == 0 // integer values
+jf @HELI2SC_84
+increment_mission_attempts
+
+:HELI2SC_84
+$7507 = 77.8349 // floating-point values
+$7508 = -1224.688 // floating-point values
+$7509 = 17.9498 // floating-point values
+$7510 = 103.4742 // floating-point values
+$7511 = -1127.885 // floating-point values
+$7512 = 18.187 // floating-point values
+$7513 = 203.3635 // floating-point values
+$7514 = -1135.508 // floating-point values
+$7515 = 21.531 // floating-point values
+$7516 = 260.3221 // floating-point values
+$7517 = -1217.484 // floating-point values
+$7518 = 13.0769 // floating-point values
+$7519 = 164.5704 // floating-point values
+$7520 = -1245.728 // floating-point values
+$7521 = 21.9229 // floating-point values
+$7522 = 70.0126 // floating-point values
+$7523 = -1278.617 // floating-point values
+$7524 = 19.1218 // floating-point values
+$7525 = 37.6583 // floating-point values
+$7526 = -1373.451 // floating-point values
+$7527 = 19.4852 // floating-point values
+$7528 = -61.5636 // floating-point values
+$7529 = -1381.003 // floating-point values
+$7530 = 30.3879 // floating-point values
+$7531 = -155.5676 // floating-point values
+$7532 = -1349.141 // floating-point values
+$7533 = 17.5384 // floating-point values
+$7534 = -185.4706 // floating-point values
+$7535 = -1444.637 // floating-point values
+$7536 = 14.7326 // floating-point values
+$7537 = -113.9027 // floating-point values
+$7538 = -1513.1 // floating-point values
+$7539 = 29.4323 // floating-point values
+$7540 = -27.0724 // floating-point values
+$7541 = -1561.844 // floating-point values
+$7542 = 19.2416 // floating-point values
+$7543 = 52.9751 // floating-point values
+$7544 = -1502.762 // floating-point values
+$7545 = 32.7119 // floating-point values
+$7546 = 128.6115 // floating-point values
+$7547 = -1438.513 // floating-point values
+$7548 = 19.4189 // floating-point values
+$7549 = 178.8131 // floating-point values
+$7550 = -1351.66 // floating-point values
+$7551 = 23.4365 // floating-point values
+$7552 = 140.4057 // floating-point values
+$7553 = -1259.035 // floating-point values
+$7554 = 23.2808 // floating-point values
+$7555 = 49.463 // floating-point values
+$7556 = -1300.512 // floating-point values
+$7557 = 18.1885 // floating-point values
+gosub @HELI2SC_1487
+00BC: text_highpriority 'HELI_1A' 15000 ms 1  // Test your skills with the Sparrow, see how quickly you can complete the course.
+018A: $7875 = create_checkpoint_at $7879 $7880 $7881
+Marker.SetColor($7875, 5)
+018B: show_on_radar $7875 2
+0168: set_blip $7875 size 3
+018A: $7876 = create_checkpoint_at $7882 $7883 $7884
+Marker.SetColor($7876, 5)
+018B: show_on_radar $7876 2
+0168: set_blip $7876 size 2
+0166: set_marker $7876 brightness_to 1
+$7878 = 0 // integer values
+03C3: set_timer_with_text_to $7878 type 0 text 'RACES'  // TIME:
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HELI2SC_746
+00DA: $7874 = player $PLAYER_CHAR car
+jump @HELI2SC_753
+
+:HELI2SC_746
+jump @HELI2SC_1144
+
+:HELI2SC_753
+if
+   not $7877 == 17 // integer values
+jf @HELI2SC_1137
+wait 0
+if
+   Car.Wrecked($7874)
+jf @HELI2SC_798
+jump @HELI2SC_1144
+
+:HELI2SC_798
+if
+80DC:   not player $PLAYER_CHAR driving $7874
+jf @HELI2SC_824
+jump @HELI2SC_1144
+
+:HELI2SC_824
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $7879 $7880 $7881 radius 5.0 5.0 5.0
+jf @HELI2SC_1050
+018C: play_sound 1 at 0.0 0.0 0.0
+$7877 += 1 // integer values
+Marker.Disable($7875)
+Marker.Disable($7876)
+gosub @HELI2SC_1487
+018A: $7875 = create_checkpoint_at $7879 $7880 $7881
+Marker.SetColor($7875, 5)
+018B: show_on_radar $7875 2
+0168: set_blip $7875 size 3
+if
+  16 > $7877 // integer values
+jf @HELI2SC_1043
+018A: $7876 = create_checkpoint_at $7882 $7883 $7884
+018B: show_on_radar $7876 2
+0168: set_blip $7876 size 2
+0166: set_marker $7876 brightness_to 1
+if
+  15 > $7877 // integer values
+jf @HELI2SC_1029
+Marker.SetColor($7876, 5)
+jump @HELI2SC_1036
+
+:HELI2SC_1029
+Marker.SetColor($7876, 0)
+
+:HELI2SC_1036
+jump @HELI2SC_1050
+
+:HELI2SC_1043
+Marker.SetColor($7875, 0)
+
+:HELI2SC_1050
+if
+  $7877 == 16 // integer values
+jf @HELI2SC_1102
+04D5: create_corona_at $7879 $7880 $7881 radius 4.5 type 6 flare 0 RGB 200 0 0
+jump @HELI2SC_1130
+
+:HELI2SC_1102
+04D5: create_corona_at $7879 $7880 $7881 radius 4.5 type 6 flare 0 RGB 200 0 200
+
+:HELI2SC_1130
+jump @HELI2SC_753
+
+:HELI2SC_1137
+jump @HELI2SC_1161
+
+:HELI2SC_1144
+00BC: text_highpriority 'HELI_F1' 5000 ms 1  // ~r~Heli Checkpoint mission cancelled!
+return
+
+:HELI2SC_1161
+01E3: text_1number_styled 'HELI_1B' number 100 time 5000 style 1  // Course Complete! $ ~1~
+Player.Money($PLAYER_CHAR) += 100
+Player.ClearWantedLevel($PLAYER_CHAR)
+0394: play_music 1
+if
+  $1585 == 0 // integer values
+jf @HELI2SC_1225
+030C: progress_made += 1
+0595: mission_complete
+$1585 = 1 // integer values
+
+:HELI2SC_1225
+$7878 /= 1000 // integer values
+042E: downdate_integer_stat 13 to $7878
+0084: $7457 = $7878 // integer values and handles
+$7457 /= 60 // integer values
+0084: $7451 = $7457 // integer values and handles
+$7451 *= 60 // integer values
+0084: $7458 = $7878 // integer values and handles
+0060: $7458 -= $7451 // integer values
+if
+001C:   $414 > $7878 // integer values
+jf @HELI2SC_1387
+0084: $414 = $7878 // integer values and handles
+if
+  $7458 > 9 // integer values
+jf @HELI2SC_1359
+02FD: text_2numbers_lowpriority 'RACES17' $7457 $7458 10000 flag 1  // New best time: ~1~:~1~
+jump @HELI2SC_1380
+
+:HELI2SC_1359
+02FD: text_2numbers_lowpriority 'RACES20' $7457 $7458 10000 flag 1  // New best time: ~1~:0~1~
+
+:HELI2SC_1380
+jump @HELI2SC_1454
+
+:HELI2SC_1387
+if
+  $7458 > 9 // integer values
+jf @HELI2SC_1433
+02FD: text_2numbers_lowpriority 'RACES_9' $7457 $7458 10000 flag 1  // Time: ~1~:~1~
+jump @HELI2SC_1454
+
+:HELI2SC_1433
+02FD: text_2numbers_lowpriority 'RACES21' $7457 $7458 10000 flag 1  // Time: ~1~:0~1~
+
+:HELI2SC_1454
+return
+
+:HELI2SC_1456
+$ONMISSION = 0 // integer values
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+014F: stop_timer $7878
+Marker.Disable($7875)
+Marker.Disable($7876)
+mission_cleanup
+return
+
+:HELI2SC_1487
+if
+  $7877 == 0 // integer values
+jf @HELI2SC_1553
+0086: $7879 = $7507 // floating-point values only
+0086: $7880 = $7508 // floating-point values only
+0086: $7881 = $7509 // floating-point values only
+0086: $7882 = $7510 // floating-point values only
+0086: $7883 = $7511 // floating-point values only
+0086: $7884 = $7512 // floating-point values only
+
+:HELI2SC_1553
+if
+  $7877 == 1 // integer values
+jf @HELI2SC_1619
+0086: $7879 = $7510 // floating-point values only
+0086: $7880 = $7511 // floating-point values only
+0086: $7881 = $7512 // floating-point values only
+0086: $7882 = $7513 // floating-point values only
+0086: $7883 = $7514 // floating-point values only
+0086: $7884 = $7515 // floating-point values only
+
+:HELI2SC_1619
+if
+  $7877 == 2 // integer values
+jf @HELI2SC_1685
+0086: $7879 = $7513 // floating-point values only
+0086: $7880 = $7514 // floating-point values only
+0086: $7881 = $7515 // floating-point values only
+0086: $7882 = $7516 // floating-point values only
+0086: $7883 = $7517 // floating-point values only
+0086: $7884 = $7518 // floating-point values only
+
+:HELI2SC_1685
+if
+  $7877 == 3 // integer values
+jf @HELI2SC_1751
+0086: $7879 = $7516 // floating-point values only
+0086: $7880 = $7517 // floating-point values only
+0086: $7881 = $7518 // floating-point values only
+0086: $7882 = $7519 // floating-point values only
+0086: $7883 = $7520 // floating-point values only
+0086: $7884 = $7521 // floating-point values only
+
+:HELI2SC_1751
+if
+  $7877 == 4 // integer values
+jf @HELI2SC_1817
+0086: $7879 = $7519 // floating-point values only
+0086: $7880 = $7520 // floating-point values only
+0086: $7881 = $7521 // floating-point values only
+0086: $7882 = $7522 // floating-point values only
+0086: $7883 = $7523 // floating-point values only
+0086: $7884 = $7524 // floating-point values only
+
+:HELI2SC_1817
+if
+  $7877 == 5 // integer values
+jf @HELI2SC_1883
+0086: $7879 = $7522 // floating-point values only
+0086: $7880 = $7523 // floating-point values only
+0086: $7881 = $7524 // floating-point values only
+0086: $7882 = $7525 // floating-point values only
+0086: $7883 = $7526 // floating-point values only
+0086: $7884 = $7527 // floating-point values only
+
+:HELI2SC_1883
+if
+  $7877 == 6 // integer values
+jf @HELI2SC_1949
+0086: $7879 = $7525 // floating-point values only
+0086: $7880 = $7526 // floating-point values only
+0086: $7881 = $7527 // floating-point values only
+0086: $7882 = $7528 // floating-point values only
+0086: $7883 = $7529 // floating-point values only
+0086: $7884 = $7530 // floating-point values only
+
+:HELI2SC_1949
+if
+  $7877 == 7 // integer values
+jf @HELI2SC_2015
+0086: $7879 = $7528 // floating-point values only
+0086: $7880 = $7529 // floating-point values only
+0086: $7881 = $7530 // floating-point values only
+0086: $7882 = $7531 // floating-point values only
+0086: $7883 = $7532 // floating-point values only
+0086: $7884 = $7533 // floating-point values only
+
+:HELI2SC_2015
+if
+  $7877 == 8 // integer values
+jf @HELI2SC_2081
+0086: $7879 = $7531 // floating-point values only
+0086: $7880 = $7532 // floating-point values only
+0086: $7881 = $7533 // floating-point values only
+0086: $7882 = $7534 // floating-point values only
+0086: $7883 = $7535 // floating-point values only
+0086: $7884 = $7536 // floating-point values only
+
+:HELI2SC_2081
+if
+  $7877 == 9 // integer values
+jf @HELI2SC_2147
+0086: $7879 = $7534 // floating-point values only
+0086: $7880 = $7535 // floating-point values only
+0086: $7881 = $7536 // floating-point values only
+0086: $7882 = $7537 // floating-point values only
+0086: $7883 = $7538 // floating-point values only
+0086: $7884 = $7539 // floating-point values only
+
+:HELI2SC_2147
+if
+  $7877 == 10 // integer values
+jf @HELI2SC_2213
+0086: $7879 = $7537 // floating-point values only
+0086: $7880 = $7538 // floating-point values only
+0086: $7881 = $7539 // floating-point values only
+0086: $7882 = $7540 // floating-point values only
+0086: $7883 = $7541 // floating-point values only
+0086: $7884 = $7542 // floating-point values only
+
+:HELI2SC_2213
+if
+  $7877 == 11 // integer values
+jf @HELI2SC_2279
+0086: $7879 = $7540 // floating-point values only
+0086: $7880 = $7541 // floating-point values only
+0086: $7881 = $7542 // floating-point values only
+0086: $7882 = $7543 // floating-point values only
+0086: $7883 = $7544 // floating-point values only
+0086: $7884 = $7545 // floating-point values only
+
+:HELI2SC_2279
+if
+  $7877 == 12 // integer values
+jf @HELI2SC_2345
+0086: $7879 = $7543 // floating-point values only
+0086: $7880 = $7544 // floating-point values only
+0086: $7881 = $7545 // floating-point values only
+0086: $7882 = $7546 // floating-point values only
+0086: $7883 = $7547 // floating-point values only
+0086: $7884 = $7548 // floating-point values only
+
+:HELI2SC_2345
+if
+  $7877 == 13 // integer values
+jf @HELI2SC_2411
+0086: $7879 = $7546 // floating-point values only
+0086: $7880 = $7547 // floating-point values only
+0086: $7881 = $7548 // floating-point values only
+0086: $7882 = $7549 // floating-point values only
+0086: $7883 = $7550 // floating-point values only
+0086: $7884 = $7551 // floating-point values only
+
+:HELI2SC_2411
+if
+  $7877 == 14 // integer values
+jf @HELI2SC_2477
+0086: $7879 = $7549 // floating-point values only
+0086: $7880 = $7550 // floating-point values only
+0086: $7881 = $7551 // floating-point values only
+0086: $7882 = $7552 // floating-point values only
+0086: $7883 = $7553 // floating-point values only
+0086: $7884 = $7554 // floating-point values only
+
+:HELI2SC_2477
+if
+  $7877 == 15 // integer values
+jf @HELI2SC_2543
+0086: $7879 = $7552 // floating-point values only
+0086: $7880 = $7553 // floating-point values only
+0086: $7881 = $7554 // floating-point values only
+0086: $7882 = $7555 // floating-point values only
+0086: $7883 = $7556 // floating-point values only
+0086: $7884 = $7557 // floating-point values only
+
+:HELI2SC_2543
+if
+  $7877 == 16 // integer values
+jf @HELI2SC_2609
+0086: $7879 = $7555 // floating-point values only
+0086: $7880 = $7556 // floating-point values only
+0086: $7881 = $7557 // floating-point values only
+0086: $7882 = $7558 // floating-point values only
+0086: $7883 = $7559 // floating-point values only
+0086: $7884 = $7560 // floating-point values only
+
+:HELI2SC_2609
+if
+  $7877 == 17 // integer values
+jf @HELI2SC_2675
+0086: $7879 = $7558 // floating-point values only
+0086: $7880 = $7559 // floating-point values only
+0086: $7881 = $7560 // floating-point values only
+0086: $7882 = $7561 // floating-point values only
+0086: $7883 = $7562 // floating-point values only
+0086: $7884 = $7563 // floating-point values only
+
+:HELI2SC_2675
+if
+  $7877 == 18 // integer values
+jf @HELI2SC_2741
+0086: $7879 = $7561 // floating-point values only
+0086: $7880 = $7562 // floating-point values only
+0086: $7881 = $7563 // floating-point values only
+0086: $7882 = $7564 // floating-point values only
+0086: $7883 = $7565 // floating-point values only
+0086: $7884 = $7566 // floating-point values only
+
+:HELI2SC_2741
+if
+  $7877 == 19 // integer values
+jf @HELI2SC_2807
+0086: $7879 = $7564 // floating-point values only
+0086: $7880 = $7565 // floating-point values only
+0086: $7881 = $7566 // floating-point values only
+0086: $7882 = $7567 // floating-point values only
+0086: $7883 = $7568 // floating-point values only
+0086: $7884 = $7569 // floating-point values only
+
+:HELI2SC_2807
+if
+  $7877 == 20 // integer values
+jf @HELI2SC_2873
+0086: $7879 = $7567 // floating-point values only
+0086: $7880 = $7568 // floating-point values only
+0086: $7881 = $7569 // floating-point values only
+0086: $7882 = $7570 // floating-point values only
+0086: $7883 = $7571 // floating-point values only
+0086: $7884 = $7572 // floating-point values only
+
+:HELI2SC_2873
+if
+  $7877 == 21 // integer values
+jf @HELI2SC_2939
+0086: $7879 = $7570 // floating-point values only
+0086: $7880 = $7571 // floating-point values only
+0086: $7881 = $7572 // floating-point values only
+0086: $7882 = $7573 // floating-point values only
+0086: $7883 = $7574 // floating-point values only
+0086: $7884 = $7575 // floating-point values only
+
+:HELI2SC_2939
+if
+  $7877 == 22 // integer values
+jf @HELI2SC_3005
+0086: $7879 = $7573 // floating-point values only
+0086: $7880 = $7574 // floating-point values only
+0086: $7881 = $7575 // floating-point values only
+0086: $7882 = $7576 // floating-point values only
+0086: $7883 = $7577 // floating-point values only
+0086: $7884 = $7578 // floating-point values only
+
+:HELI2SC_3005
+if
+  $7877 == 23 // integer values
+jf @HELI2SC_3071
+0086: $7879 = $7576 // floating-point values only
+0086: $7880 = $7577 // floating-point values only
+0086: $7881 = $7578 // floating-point values only
+0086: $7882 = $7579 // floating-point values only
+0086: $7883 = $7580 // floating-point values only
+0086: $7884 = $7581 // floating-point values only
+
+:HELI2SC_3071
+if
+  $7877 == 24 // integer values
+jf @HELI2SC_3137
+0086: $7879 = $7579 // floating-point values only
+0086: $7880 = $7580 // floating-point values only
+0086: $7881 = $7581 // floating-point values only
+0086: $7882 = $7582 // floating-point values only
+0086: $7883 = $7583 // floating-point values only
+0086: $7884 = $7584 // floating-point values only
+
+:HELI2SC_3137
+if
+  $7877 == 25 // integer values
+jf @HELI2SC_3203
+0086: $7879 = $7582 // floating-point values only
+0086: $7880 = $7583 // floating-point values only
+0086: $7881 = $7584 // floating-point values only
+0086: $7882 = $7585 // floating-point values only
+0086: $7883 = $7586 // floating-point values only
+0086: $7884 = $7587 // floating-point values only
+
+:HELI2SC_3203
+if
+  $7877 == 26 // integer values
+jf @HELI2SC_3269
+0086: $7879 = $7585 // floating-point values only
+0086: $7880 = $7586 // floating-point values only
+0086: $7881 = $7587 // floating-point values only
+0086: $7882 = $7588 // floating-point values only
+0086: $7883 = $7589 // floating-point values only
+0086: $7884 = $7590 // floating-point values only
+
+:HELI2SC_3269
+if
+  $7877 == 27 // integer values
+jf @HELI2SC_3335
+0086: $7879 = $7588 // floating-point values only
+0086: $7880 = $7589 // floating-point values only
+0086: $7881 = $7590 // floating-point values only
+0086: $7882 = $7591 // floating-point values only
+0086: $7883 = $7592 // floating-point values only
+0086: $7884 = $7593 // floating-point values only
+
+:HELI2SC_3335
+if
+  $7877 == 28 // integer values
+jf @HELI2SC_3401
+0086: $7879 = $7591 // floating-point values only
+0086: $7880 = $7592 // floating-point values only
+0086: $7881 = $7593 // floating-point values only
+0086: $7882 = $7591 // floating-point values only
+0086: $7883 = $7592 // floating-point values only
+0086: $7884 = $7593 // floating-point values only
+
+:HELI2SC_3401
+return

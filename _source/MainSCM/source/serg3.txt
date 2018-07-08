@@ -1,0 +1,3112 @@
+:SERG3
+thread 'SERG3'
+gosub @SERG3_46
+if
+wasted_or_busted
+jf @SERG3_37
+gosub @SERG3_20979
+
+:SERG3_37
+gosub @SERG3_23506
+end_thread
+
+:SERG3_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$1084 = 1 // integer values
+wait 0
+054C: use_GXT_table 'SERG3'
+058E: set_restart_mission_taxi_destination 252.7968 -230.9387 9.8638 333.9001
+fade 1 1500
+$3302 = 226.9151 // floating-point values
+$3303 = -352.211 // floating-point values
+$3304 = 9.9086 // floating-point values
+$3305 = 79.9842 // floating-point values
+$3328 = 226.192 // floating-point values
+$3329 = -342.5692 // floating-point values
+$3330 = 10.3744 // floating-point values
+$3331 = 87.8676 // floating-point values
+$3343 = 229.8516 // floating-point values
+$3344 = -347.11 // floating-point values
+$3345 = 10.0998 // floating-point values
+$3346 = 229.8516 // floating-point values
+$3347 = -344.0284 // floating-point values
+$3348 = 10.1517 // floating-point values
+$3349 = 229.8516 // floating-point values
+$3350 = -341.11 // floating-point values
+$3351 = 10.56018 // floating-point values
+$3352 = 229.8516 // floating-point values
+$3353 = -338.11 // floating-point values
+$3354 = 10.46479 // floating-point values
+$3367 = 97.574 // floating-point values
+$3368 = -381.658 // floating-point values
+$3369 = 7.6407 // floating-point values
+$3370 = 156.5491 // floating-point values
+$3371 = -348.0284 // floating-point values
+$3372 = 16.8517 // floating-point values
+$3373 = 88.1474 // floating-point values
+$3374 = -361.8685 // floating-point values
+$3375 = 26.076 // floating-point values
+$3376 = 140.0079 // floating-point values
+$3377 = -383.1253 // floating-point values
+$3378 = 35.3172 // floating-point values
+$3405 = 0 // integer values
+$3406 = 0 // integer values
+$3407 = 0 // integer values
+$3408 = 0 // integer values
+$3409 = 0 // integer values
+$3410 = 0 // integer values
+$3411 = 0 // integer values
+$3412 = 0 // integer values
+$3413 = 0 // integer values
+$3391 = 0 // integer values
+$3400 = 0 // integer values
+$3392 = 0 // integer values
+$3393 = 0 // integer values
+$3394 = 0 // integer values
+$3395 = 0 // integer values
+$3396 = 0 // integer values
+$3397 = 0 // integer values
+$3398 = 0 // integer values
+$3399 = 0 // integer values
+$3401 = 0 // integer values
+$3403 = 0 // integer values
+$3404 = 0 // integer values
+$3426 = 0 // integer values
+$3427 = 0 // integer values
+$3428 = 0 // integer values
+$3429 = 0 // integer values
+$3430 = 0 // integer values
+$3431 = 0 // integer values
+$3432 = 0 // integer values
+$3434 = 0 // integer values
+$3435 = 0 // integer values
+$3436 = 0 // integer values
+$3437 = 0 // integer values
+$3433 = 0 // integer values
+$3459 = 0 // integer values
+$3439 = 0 // integer values
+$3414 = 0 // integer values
+$3440 = 0 // integer values
+$3307 = 4 // integer values
+$3457 = 0 // integer values
+$3441 = 0 // integer values
+$3442 = 0 // integer values
+$3443 = 0 // integer values
+$3444 = 0 // integer values
+$3445 = 0 // integer values
+$3446 = 0 // integer values
+$3447 = 0 // integer values
+$3448 = 0 // integer values
+$3458 = 0 // integer values
+set_weather 4
+0395: clear_area 1 at 299.0 -205.0 range 10.5 5.0
+0395: clear_area 1 at 305.0 -219.5 range 10.5 10.0
+0055: put_player $PLAYER_CHAR at 299.0 -205.0 10.5
+0171: set_player $PLAYER_CHAR z_angle_to 230.0
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetPosition(297.0, -204.7, 13.0, 0.0, 0.0, 0.0)
+Camera.PointAt(318.5, -219.23, 22.4, 2)
+Model.Load(#STRETCH)
+023C: load_special_actor 1 'BGB'
+023C: load_special_actor 2 'IGAVERY'
+Camera.SetAtPos(270.0, -218.0, 13.4)
+
+:SERG3_927
+if or
+   not Model.Available(#STRETCH)
+   823D:   not special_actor 1 loaded
+   823D:   not special_actor 2 loaded
+jf @SERG3_954
+wait 0
+jump @SERG3_927
+
+:SERG3_954
+0395: clear_area 1 at 306.9 -241.65 range 12.3 15.0
+$1602 = Car.Create(#STRETCH, 306.9, -241.65, 12.3)
+0229: set_car $1602 color_to 70 0
+Car.Angle($1602) = 0.0
+0129: 1@ = create_actor 21 #SPECIAL01 in_car $1602 driverseat
+01ED: clear_actor 1@ threat_search  
+Car.SetToNormalDriver($1602)
+01C8: 2@ = create_actor_pedtype 4 model #SPECIAL02 in_car $1602 passenger_seat 2
+01ED: clear_actor 2@ threat_search
+02A3: enable_widescreen 1
+fade 1 1500
+
+:SERG3_1027
+if
+fading
+jf @SERG3_1051
+wait 0
+jump @SERG3_1027
+
+:SERG3_1051
+if
+   not Car.Wrecked($1602)
+jf @SERG3_1087
+04BA: set_car $1602 speed_instantly 5.0
+0477: set_car $1602 action 8 time 3500
+
+:SERG3_1087
+16@ = 0 // integer values
+
+:SERG3_1094
+if
+  1000 > 16@ // integer values
+jf @SERG3_1124
+wait 0
+jump @SERG3_1094
+
+:SERG3_1124
+if
+   not Car.Wrecked($1602)
+jf @SERG3_1149
+Camera.OnVehicle($1602, 15, 1)
+
+:SERG3_1149
+16@ = 0 // integer values
+
+:SERG3_1156
+if
+  3000 > 16@ // integer values
+jf @SERG3_1186
+wait 0
+jump @SERG3_1156
+
+:SERG3_1186
+if
+   not Car.Wrecked($1602)
+jf @SERG3_1227
+Car.StorePos($1602, $1599, $1600, $1601)
+0211: actor $PLAYER_ACTOR walk_to $1599 $1600
+
+:SERG3_1227
+fade 0 1500
+
+:SERG3_1234
+if
+fading
+jf @SERG3_1258
+wait 0
+jump @SERG3_1234
+
+:SERG3_1258
+Actor.RemoveReferences(1@)
+Actor.RemoveReferences(2@)
+Car.Destroy($1602)
+Model.Destroy(#STRETCH)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Camera.Restore
+011C: actor $PLAYER_ACTOR clear_objective
+009F: set_actor $PLAYER_ACTOR idle
+16@ = 0 // integer values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSAVERY'
+02F3: load_object #CUTOBJ01 'CS_LIMO'
+038B: load_requested_models
+
+:SERG3_1326
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @SERG3_1356
+wait 0
+jump @SERG3_1326
+
+:SERG3_1356
+if
+   not Model.Available(#CUTOBJ01)
+jf @SERG3_1383
+wait 0
+jump @SERG3_1356
+
+:SERG3_1383
+02E4: load_cutscene_data 'TEX_3'
+0244: set_cutscene_pos 305.2 -211.9 11.3
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $149 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $149 'CSAVERY'
+02E5: $3460 = create_cutscene_object #CUTOBJ01
+0395: clear_area 1 at 265.129 -234.531 range 11.107 1.0
+0055: put_player $PLAYER_CHAR at 265.129 -234.531 11.1013
+0171: set_player $PLAYER_CHAR z_angle_to 78.21838
+04E4: unknown_refresh_game_renderer_at 265.129 -234.531
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:SERG3_1553
+if
+  1378 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1588
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1553
+
+:SERG3_1588
+00BC: text_highpriority 'TEX3_A' 10000 ms 1  // Now look here, son. I got a problem and I reckon you could help me with it.
+
+:SERG3_1603
+if
+  6014 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1638
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1603
+
+:SERG3_1638
+00BC: text_highpriority 'TEX3_B' 10000 ms 1  // I'm no builder.
+
+:SERG3_1653
+if
+  7125 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1688
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1653
+
+:SERG3_1688
+00BC: text_highpriority 'TEX3_C' 10000 ms 1  // No, I was thinking more of your demolition skills.
+
+:SERG3_1703
+if
+  11052 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1738
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1703
+
+:SERG3_1738
+00BC: text_highpriority 'TEX3_D' 10000 ms 1  // Now this here, this is the development as planned and this,
+
+:SERG3_1753
+if
+  15314 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1788
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1753
+
+:SERG3_1788
+00BC: text_highpriority 'TEX3_E' 10000 ms 1  // this is the property that we're looking at.
+
+:SERG3_1803
+if
+  17674 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1838
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1803
+
+:SERG3_1838
+00BC: text_highpriority 'TEX3_F' 10000 ms 1  // You're trying to say this new office block is kind of in the way.
+
+:SERG3_1853
+if
+  20508 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1888
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1853
+
+:SERG3_1888
+00BC: text_highpriority 'TEX3_G' 10000 ms 1  // You catch on quick.
+
+:SERG3_1903
+if
+  22010 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1938
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1903
+
+:SERG3_1938
+00BC: text_highpriority 'TEX3_H' 10000 ms 1  // Now I'm going to head out of town for a while
+
+:SERG3_1953
+if
+  24331 > $CUT_SCENE_TIME // integer values
+jf @SERG3_1988
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_1953
+
+:SERG3_1988
+00BC: text_highpriority 'TEX3_I' 10000 ms 1  // and if that office development were to face sudden and insurmountable structural problems, then I..
+
+:SERG3_2003
+if
+  30049 > $CUT_SCENE_TIME // integer values
+jf @SERG3_2038
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_2003
+
+:SERG3_2038
+00BC: text_highpriority 'TEX3_J' 10000 ms 1  // As a civil minded individual you'd feel obliged to step in and
+
+:SERG3_2053
+if
+  33978 > $CUT_SCENE_TIME // integer values
+jf @SERG3_2090
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_2053
+
+:SERG3_2090
+00BC: text_highpriority 'TEX3_K' 10000 ms 1  // save the rejuvenation of an important area of the city?
+
+:SERG3_2105
+if
+  37030 > $CUT_SCENE_TIME // integer values
+jf @SERG3_2142
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_2105
+
+:SERG3_2142
+00BC: text_highpriority 'TEX3_L' 10000 ms 1  // Where can I get more guys like you?
+
+:SERG3_2157
+if
+  39030 > $CUT_SCENE_TIME // integer values
+jf @SERG3_2194
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @SERG3_2157
+
+:SERG3_2194
+00BE: text_clear_all
+fade 0 1500
+00BE: text_clear_all
+
+:SERG3_2205
+if
+fading
+jf @SERG3_2229
+wait 0
+jump @SERG3_2205
+
+:SERG3_2229
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+01B7: release_weather
+select_interior 0
+fade 1 1500
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+Model.Load(#DYNAMITE)
+Model.Load(#TOPFUN)
+Model.Load(#WMYCW)
+Model.Load(#HMYAP)
+Model.Load(#HAMMER)
+Model.Load(#RCGOBLIN)
+Model.Load(#BARREL2)
+Model.Load(#GDA)
+Model.Load(#GDB)
+Model.Load(#COLT45)
+
+:SERG3_2299
+if or
+   not Model.Available(#DYNAMITE)
+   not Model.Available(#HAMMER)
+   not Model.Available(#WMYCW)
+   not Model.Available(#HMYAP)
+   not Model.Available(#TOPFUN)
+   not Model.Available(#BARREL2)
+   not Model.Available(#COLT45)
+jf @SERG3_2348
+wait 0
+jump @SERG3_2299
+
+:SERG3_2348
+if or
+   not Model.Available(#GDA)
+   not Model.Available(#GDB)
+jf @SERG3_2374
+wait 0
+jump @SERG3_2348
+
+:SERG3_2374
+048A: enable_rc_vehicle_detonation 0
+0395: clear_area 0 at $3302 $3303 range $3304 35.0
+$3308 = Car.Create(#TOPFUN, $3302, $3303, $3304)
+$3457 = 1 // integer values
+Car.Angle($3308) = $3305
+$3306 = Marker.CreateAboveCar($3308)
+00BC: text_highpriority 'TEX3_16' 7000 ms 2  // ~g~Get to the ~w~TOPFUN ~g~van near the building site to be demolished.
+022B: create_forbidden_for_peds_cube 208.6046 -355.3371 -5.5941 248.6443 -338.1352 12.9291
+Car.LockInCurrentPosition($3308) = True
+
+:SERG3_2490
+wait 0
+if
+   not Car.Wrecked($3308)
+jf @SERG3_2566
+if
+0442:   player $PLAYER_CHAR in_car $3308
+jf @SERG3_2566
+if
+  $3440 == 0 // integer values
+jf @SERG3_2566
+020A: set_car $3308 door_status_to 2
+wait 1000
+$3440 = 1 // integer values
+
+:SERG3_2566
+if
+   not Car.Wrecked($3308)
+jf @SERG3_2633
+if
+8442:   not player $PLAYER_CHAR in_car $3308
+jf @SERG3_2633
+if
+  $3440 == 1 // integer values
+jf @SERG3_2633
+020A: set_car $3308 door_status_to 1
+$3440 = 0 // integer values
+
+:SERG3_2633
+if
+   not Car.Wrecked($3308)
+jf @SERG3_5209
+if
+00DC:   player $PLAYER_CHAR driving $3308
+jf @SERG3_5209
+if and
+  $3391 == 0 // integer values
+  $3440 == 1 // integer values
+jf @SERG3_5209
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+$3422 = Object.Create(#BARREL2, 97.574, -381.658, 7.9721)
+$3423 = Object.Create(#BARREL2, 156.5491, -348.0284, 16.8517)
+$3424 = Object.Create(#BARREL2, 88.1474, -361.8685, 26.076)
+$3425 = Object.Create(#BARREL2, 140.0079, -383.1253, 35.3172)
+$3311 = Actor.Create(CivMale, #WMYCW, 121.4188, -371.5533, 7.6307)
+01B2: give_actor $3311 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3311) = 189.9082
+0319: set_actor $3311 running 1
+$3312 = Actor.Create(CivMale, #HMYAP, 160.0738, -375.754, 7.6307)
+01B2: give_actor $3312 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3312) = 268.8645
+0319: set_actor $3312 running 1
+$3313 = Actor.Create(CivMale, #WMYCW, 116.1989, -348.1792, 16.8494)
+01B2: give_actor $3313 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3313) = 288.6831
+0319: set_actor $3313 running 1
+$3314 = Actor.Create(CivMale, #HMYAP, 117.5286, -348.1254, 16.8494)
+01B2: give_actor $3314 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3314) = 110.9578
+0319: set_actor $3314 running 1
+03F9: make_actors $3314 $3313 converse_in 800000 ms
+$3315 = Actor.Create(CivMale, #WMYCW, 160.1008, -356.3203, 16.8517)
+01B2: give_actor $3315 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3315) = 277.8673
+0319: set_actor $3315 running 1
+0372: set_actor $3315 anim 25 wait_state_time 300000 ms
+$3316 = Actor.Create(CivMale, #HMYAP, 160.3129, -375.7929, 16.8517)
+01B2: give_actor $3316 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3316) = 261.674
+0319: set_actor $3316 running 1
+0372: set_actor $3316 anim 25 wait_state_time 300000 ms
+$3317 = Actor.Create(CivMale, #WMYCW, 81.4138, -356.4398, 26.076)
+01B2: give_actor $3317 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3317) = 87.3059
+0319: set_actor $3317 running 1
+0372: set_actor $3317 anim 25 wait_state_time 300000 ms
+$3318 = Actor.Create(CivMale, #HMYAP, 81.5607, -354.9395, 26.076)
+01B2: give_actor $3318 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3318) = 176.8125
+0319: set_actor $3318 running 1
+0372: set_actor $3318 anim 19 wait_state_time 800000 ms
+$3319 = Actor.Create(CivMale, #GDB, 121.0359, -379.109, 26.0805)
+01B2: give_actor $3319 weapon 17 ammo 300000 // Load the weapon model before using this
+Actor.Angle($3319) = 15.4943
+0319: set_actor $3319 running 1
+0489: set_actor $3319 muted 1
+$3320 = Actor.Create(CivMale, #HMYAP, 112.2413, -356.3021, 35.3172)
+01B2: give_actor $3320 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3320) = 278.5729
+0319: set_actor $3320 running 1
+$3321 = Actor.Create(CivMale, #WMYCW, 98.2973, -376.011, 35.3172)
+01B2: give_actor $3321 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3321) = 76.4463
+0319: set_actor $3321 running 1
+$3322 = Actor.Create(CivMale, #HMYAP, 160.5181, -356.3491, 35.3172)
+01B2: give_actor $3322 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3322) = 278.5729
+0319: set_actor $3322 running 1
+$3323 = Actor.Create(CivMale, #WMYCW, 129.3469, -366.2533, 35.3172)
+01B2: give_actor $3323 weapon 7 ammo 1 // Load the weapon model before using this
+Actor.Angle($3323) = 84.4686
+0319: set_actor $3323 running 1
+$3324 = Actor.Create(CivMale, #GDA, 120.1059, -346.0308, 35.3104)
+01B2: give_actor $3324 weapon 17 ammo 300000 // Load the weapon model before using this
+Actor.Angle($3324) = 185.866
+0319: set_actor $3324 running 1
+02E2: set_actor $3324 weapon_accuracy_to 80
+0489: set_actor $3324 muted 1
+$3325 = Actor.Create(CivMale, #GDB, 123.3658, -380.2271, 35.3172)
+01B2: give_actor $3325 weapon 17 ammo 300000 // Load the weapon model before using this
+Actor.Angle($3325) = 358.9169
+0319: set_actor $3325 running 1
+0489: set_actor $3325 muted 1
+$3326 = Actor.Create(CivMale, #GDA, 104.143, -346.1777, 26.268)
+01B2: give_actor $3326 weapon 17 ammo 300000 // Load the weapon model before using this
+Actor.Angle($3326) = 185.866
+0319: set_actor $3326 running 1
+0489: set_actor $3326 muted 1
+Marker.Disable($3306)
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+$3310 = Player.WantedLevel($PLAYER_CHAR)
+Player.ClearWantedLevel($PLAYER_CHAR)
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+046E: put_player $PLAYER_CHAR in_RC_mode_at $3328 $3329 $3330 angle $3331 RC_model #RCGOBLIN
+$3327 = Player.RC_car($PLAYER_CHAR)
+Car.Health($3327) = 1400
+$3335 = Object.Create(#DYNAMITE, $3343, $3344, $3345)
+Object.CollisionDetection($3335) = True
+Object.ToggleInMovingList($3335) = True
+$3339 = Marker.CreateAboveObject($3335)
+$3336 = Object.Create(#DYNAMITE, $3346, $3347, $3348)
+Object.CollisionDetection($3336) = True
+Object.ToggleInMovingList($3336) = True
+$3340 = Marker.CreateAboveObject($3336)
+$3337 = Object.Create(#DYNAMITE, $3349, $3350, $3351)
+Object.CollisionDetection($3337) = True
+Object.ToggleInMovingList($3337) = True
+$3341 = Marker.CreateAboveObject($3337)
+$3338 = Object.Create(#DYNAMITE, $3352, $3353, $3354)
+Object.CollisionDetection($3338) = True
+Object.ToggleInMovingList($3338) = True
+$3342 = Marker.CreateAboveObject($3338)
+Object.KeepInMemory($3422) = True
+Object.KeepInMemory($3423) = True
+Object.KeepInMemory($3424) = True
+Object.KeepInMemory($3425) = True
+Camera.SetPosition(275.6989, -255.7764, 35.36815, 0.0, 0.0, 0.0)
+Camera.PointAt(274.9049, -256.3752, 35.47337, 2)
+0395: clear_area 0 at $3328 $3329 range $3330 15.0
+16@ = 0 // integer values
+
+:SERG3_4024
+if
+  5000 > 16@ // integer values
+jf @SERG3_4101
+wait 0
+00BC: text_highpriority 'TEX3_1' 5000 ms 2  // ~g~Use the RC helicopter to transport bombs to four demolition points on the building site.
+if and
+00E1:   player 0 pressed_button 16
+  16@ > 1000 // integer values
+jf @SERG3_4094
+jump @SERG3_5137
+
+:SERG3_4094
+jump @SERG3_4024
+
+:SERG3_4101
+Camera.SetPosition(221.9318, -347.8253, 14.86874, 0.0, 0.0, 0.0)
+Camera.PointAt(222.5816, -347.2625, 14.35743, 2)
+16@ = 0 // integer values
+
+:SERG3_4159
+if
+  5000 > 16@ // integer values
+jf @SERG3_4228
+wait 0
+00BC: text_highpriority 'TEX3_2' 5000 ms 2  // ~g~You must place one bomb at each target. You can place bombs in any order.
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_4221
+jump @SERG3_5137
+
+:SERG3_4221
+jump @SERG3_4159
+
+:SERG3_4228
+Camera.SetPosition(229.9853, -348.7427, 11.14897, 0.0, 0.0, 0.0)
+Camera.PointAt(229.9513, -347.8613, 10.67796, 2)
+16@ = 0 // integer values
+
+:SERG3_4286
+if
+  5000 > 16@ // integer values
+jf @SERG3_4355
+wait 0
+00BC: text_highpriority 'TEX3_30' 5000 ms 2  // ~g~To pick up a bomb, simply maneuver the RC helicopter next to it. The RC Helicopter can carry one bomb at a time.
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_4348
+jump @SERG3_5137
+
+:SERG3_4348
+jump @SERG3_4286
+
+:SERG3_4355
+Camera.SetPosition(94.208, -381.946, 8.67, 0.0, 0.0, 0.0)
+Camera.PointAt(95.28442, -381.862, 8.660458, 2)
+0395: clear_area 0 at $3328 $3329 range $3330 10.0
+16@ = 0 // integer values
+
+:SERG3_4431
+if
+  5000 > 16@ // integer values
+jf @SERG3_4545
+wait 0
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @SERG3_4499
+00BC: text_highpriority 'TEX3_39' 5000 ms 2  // ~g~To drop a bomb press the ~h~~k~~VEHICLE_HANDBRAKE~ ~g~button.
+jump @SERG3_4514
+
+:SERG3_4499
+00BC: text_highpriority 'TEX3_4' 5000 ms 2  // ~g~To drop a bomb press the~h~ ~k~~PED_FIREWEAPON~ ~g~button.
+
+:SERG3_4514
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_4538
+jump @SERG3_5137
+
+:SERG3_4538
+jump @SERG3_4431
+
+:SERG3_4545
+Camera.SetPosition(153.3567, -365.0051, 17.8099, 0.0, 0.0, 0.0)
+Camera.PointAt(153.5378, -364.0217, 17.82351, 2)
+16@ = 0 // integer values
+
+:SERG3_4603
+if
+  5000 > 16@ // integer values
+jf @SERG3_4728
+wait 0
+00BC: text_highpriority 'TEX3_5' 5000 ms 2  // ~g~If you place a bomb unsuccessfully you can pick it up and try again.
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_4665
+jump @SERG3_5137
+
+:SERG3_4665
+if
+   not Actor.Dead($3315)
+jf @SERG3_4693
+0372: set_actor $3315 anim 25 wait_state_time 300000 ms
+
+:SERG3_4693
+if
+   not Actor.Dead($3316)
+jf @SERG3_4721
+0372: set_actor $3316 anim 25 wait_state_time 300000 ms
+
+:SERG3_4721
+jump @SERG3_4603
+
+:SERG3_4728
+Camera.SetPosition(93.85921, -360.9543, 27.00828, 0.0, 0.0, 0.0)
+Camera.PointAt(92.8611, -361.0136, 26.99214, 2)
+16@ = 0 // integer values
+
+:SERG3_4786
+if
+  5000 > 16@ // integer values
+jf @SERG3_4883
+wait 0
+00BC: text_highpriority 'TEX3_6' 5000 ms 2  // ~g~Once you have picked up a bomb for the first time, the detonation timer will start.
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_4848
+jump @SERG3_5137
+
+:SERG3_4848
+if
+   not Actor.Dead($3317)
+jf @SERG3_4876
+0372: set_actor $3317 anim 25 wait_state_time 300000 ms
+
+:SERG3_4876
+jump @SERG3_4786
+
+:SERG3_4883
+Camera.SetPosition(120.767, -377.2256, 35.94569, 0.0, 0.0, 0.0)
+Camera.PointAt(121.6996, -377.581, 36.00743, 2)
+16@ = 0 // integer values
+
+:SERG3_4941
+if
+  5000 > 16@ // integer values
+jf @SERG3_5010
+wait 0
+00BC: text_highpriority 'TEX3_7' 5000 ms 2  // ~g~You must then place the remaining bombs in 7 minutes!
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_5003
+jump @SERG3_5137
+
+:SERG3_5003
+jump @SERG3_4941
+
+:SERG3_5010
+Camera.SetPosition(117.7223, -388.8373, 10.20708, 0.0, 0.0, 0.0)
+Camera.PointAt(117.7434, -387.8386, 10.25837, 2)
+16@ = 0 // integer values
+
+:SERG3_5068
+if
+  5000 > 16@ // integer values
+jf @SERG3_5137
+wait 0
+00BC: text_highpriority 'TEX3_27' 5000 ms 2  // ~g~A central stairway allows access to all the floors in the building.
+if
+00E1:   player 0 pressed_button 16
+jf @SERG3_5130
+jump @SERG3_5137
+
+:SERG3_5130
+jump @SERG3_5068
+
+:SERG3_5137
+wait 0
+00BE: text_clear_all
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+if
+   not Car.Wrecked($3327)
+jf @SERG3_5187
+Camera.OnVehicle($3327, 18, 2)
+wait 0
+032A: set_behind_camera_mode_to 0
+
+:SERG3_5187
+03C4: set_status_text_to $3307 0 'TEX3_11'  // targets left:
+$3391 = 1 // integer values
+
+:SERG3_5209
+if
+  $3391 == 1 // integer values
+jf @SERG3_5269
+if
+  $3441 == 0 // integer values
+jf @SERG3_5269
+16@ = 0 // integer values
+03E5: text_box 'TEX3_22'  // Pressing the ~h~~k~~VEHICLE_ACCELERATE~ ~w~button increases the rotor speed, causing the helicopter to ~h~ascend.
+$3441 = 1 // integer values
+
+:SERG3_5269
+if
+  $3391 == 1 // integer values
+jf @SERG3_5348
+if
+  $3441 == 1 // integer values
+jf @SERG3_5348
+if
+  16@ > 9500 // integer values
+jf @SERG3_5348
+03E5: text_box 'TEX3_23'  // Press the ~h~~k~~VEHICLE_TURRETUP~~w~ and ~h~~k~~VEHICLE_TURRETDOWN~~w~ buttons to tilt the helicopter in the direction you wish to maneuver it.
+16@ = 0 // integer values
+$3441 = 2 // integer values
+
+:SERG3_5348
+if
+  $3391 == 1 // integer values
+jf @SERG3_5427
+if
+  $3441 == 2 // integer values
+jf @SERG3_5427
+if
+  16@ > 9500 // integer values
+jf @SERG3_5427
+03E5: text_box 'TEX3_25'  // Press the ~h~~k~~VEHICLE_LOOKRIGHT~ ~w~button to rotate the helicopter clockwise.
+16@ = 0 // integer values
+$3441 = 3 // integer values
+
+:SERG3_5427
+if
+  $3391 == 1 // integer values
+jf @SERG3_5506
+if
+  $3441 == 3 // integer values
+jf @SERG3_5506
+if
+  16@ > 9500 // integer values
+jf @SERG3_5506
+03E5: text_box 'TEX3_24'  // Press the ~h~~k~~VEHICLE_LOOKLEFT~ ~w~button to rotate the helicopter counter-clockwise.
+16@ = 0 // integer values
+$3441 = 4 // integer values
+
+:SERG3_5506
+if
+  $3391 == 1 // integer values
+jf @SERG3_5585
+if
+  $3441 == 4 // integer values
+jf @SERG3_5585
+if
+  16@ > 9500 // integer values
+jf @SERG3_5585
+03E5: text_box 'TEX3_26'  // Pressing the ~h~~k~~VEHICLE_BRAKE~ ~w~button ~w~decreases the rotor speed, causing the helicopter to~h~ descend.
+16@ = 0 // integer values
+$3441 = 5 // integer values
+
+:SERG3_5585
+if
+  $3391 == 1 // integer values
+jf @SERG3_5664
+if
+  $3441 == 5 // integer values
+jf @SERG3_5664
+if
+  16@ > 9500 // integer values
+jf @SERG3_5664
+03E5: text_box 'TEX3_32'  // You can ~h~look behind~w~ by simultaneously pressing the ~h~~k~~VEHICLE_LOOKLEFT~~w~ and the ~h~~k~~VEHICLE_LOOKRIGHT~~w~ buttons.
+16@ = 0 // integer values
+$3441 = 6 // integer values
+
+:SERG3_5664
+if
+  $3391 == 1 // integer values
+jf @SERG3_5743
+if
+  $3441 == 6 // integer values
+jf @SERG3_5743
+if
+  16@ > 9500 // integer values
+jf @SERG3_5743
+03E5: text_box 'TEX3_28'  // To ~h~pick up a bomb~w~, simply maneuver the RC helicopter next to it. The RC Helicopter can carry one bomb at a time.
+16@ = 0 // integer values
+$3441 = 7 // integer values
+
+:SERG3_5743
+if
+  $3391 == 1 // integer values
+jf @SERG3_5862
+if
+  $3441 == 7 // integer values
+jf @SERG3_5862
+if
+  16@ > 9500 // integer values
+jf @SERG3_5862
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @SERG3_5838
+03E5: text_box 'TEX3_40'  // To drop a bomb press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button.
+jump @SERG3_5848
+
+:SERG3_5838
+03E5: text_box 'TEX3_29'  // To drop a bomb press the~h~ ~k~~PED_FIREWEAPON~ ~w~button.
+
+:SERG3_5848
+16@ = 0 // integer values
+$3441 = 8 // integer values
+
+:SERG3_5862
+if
+  $3391 == 1 // integer values
+jf @SERG3_5941
+if
+  $3441 == 8 // integer values
+jf @SERG3_5941
+if
+  16@ > 9500 // integer values
+jf @SERG3_5941
+03E5: text_box 'TEX3_33'  // Once you pick up a bomb the radar will show you the position of the target relative to the RC helicopter.
+16@ = 0 // integer values
+$3441 = 9 // integer values
+
+:SERG3_5941
+if
+  $3391 == 1 // integer values
+jf @SERG3_6020
+if
+  $3441 == 9 // integer values
+jf @SERG3_6020
+if
+  16@ > 9500 // integer values
+jf @SERG3_6020
+03E5: text_box 'TEX3_34'  // An ~h~upwards pointing triangular blip ~w~indicates the target is ~h~above ~w~the RC helicopter.
+16@ = 0 // integer values
+$3441 = 10 // integer values
+
+:SERG3_6020
+if
+  $3391 == 1 // integer values
+jf @SERG3_6099
+if
+  $3441 == 10 // integer values
+jf @SERG3_6099
+if
+  16@ > 9500 // integer values
+jf @SERG3_6099
+03E5: text_box 'TEX3_35'  // A ~h~downward pointing triangular blip ~w~indicates the target is ~h~below ~w~the RC helicopter.
+16@ = 0 // integer values
+$3441 = 11 // integer values
+
+:SERG3_6099
+if
+  $3391 == 1 // integer values
+jf @SERG3_6178
+if
+  $3441 == 11 // integer values
+jf @SERG3_6178
+if
+  16@ > 9500 // integer values
+jf @SERG3_6178
+03E5: text_box 'TEX3_36'  // A ~h~square blip ~w~indicates the target is on the ~h~same level ~w~as the RC helicopter
+16@ = 0 // integer values
+$3441 = 12 // integer values
+
+:SERG3_6178
+if
+  $3391 == 1 // integer values
+jf @SERG3_6289
+if
+   not Car.Wrecked($3327)
+jf @SERG3_6289
+if
+81FC:   not player $PLAYER_CHAR near_car $3327 radius 200.0 200.0 0
+jf @SERG3_6289
+if
+01FC:   player $PLAYER_CHAR near_car $3327 radius 249.0 249.0 0
+jf @SERG3_6289
+00BC: text_highpriority 'TEX3_20' 1000 ms 1  // ~r~The RC Helicopter is nearly out of range!
+
+:SERG3_6289
+if
+   not Car.Wrecked($3327)
+jf @SERG3_6377
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @SERG3_6377
+Object.StorePos($3335, $3355, $3356, $3357)
+Object.StorePos($3336, $3358, $3359, $3360)
+Object.StorePos($3337, $3361, $3362, $3363)
+Object.StorePos($3338, $3364, $3365, $3366)
+
+:SERG3_6377
+if
+  $3392 == 2 // integer values
+jf @SERG3_6453
+if
+04DA:   has_object $3335 collided
+jf @SERG3_6453
+Object.ToggleInMovingList($3335) = False
+Object.CollisionDetection($3335) = False
+04D9: object $3335 set_scripted_collision_check 0
+$3392 = 0 // integer values
+gosub @SERG3_21358
+gosub @SERG3_21232
+
+:SERG3_6453
+if
+  $3393 == 2 // integer values
+jf @SERG3_6529
+if
+04DA:   has_object $3336 collided
+jf @SERG3_6529
+Object.ToggleInMovingList($3336) = False
+Object.CollisionDetection($3336) = False
+04D9: object $3336 set_scripted_collision_check 0
+$3393 = 0 // integer values
+gosub @SERG3_21895
+gosub @SERG3_21232
+
+:SERG3_6529
+if
+  $3394 == 2 // integer values
+jf @SERG3_6605
+if
+04DA:   has_object $3337 collided
+jf @SERG3_6605
+Object.ToggleInMovingList($3337) = False
+Object.CollisionDetection($3337) = False
+04D9: object $3337 set_scripted_collision_check 0
+$3394 = 0 // integer values
+gosub @SERG3_22432
+gosub @SERG3_21232
+
+:SERG3_6605
+if
+  $3395 == 2 // integer values
+jf @SERG3_6681
+if
+04DA:   has_object $3338 collided
+jf @SERG3_6681
+Object.ToggleInMovingList($3338) = False
+Object.CollisionDetection($3338) = False
+04D9: object $3338 set_scripted_collision_check 0
+$3395 = 0 // integer values
+gosub @SERG3_22969
+gosub @SERG3_21232
+
+:SERG3_6681
+if
+   not Car.Wrecked($3327)
+jf @SERG3_7111
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @SERG3_7111
+if or
+  $3393 == 0 // integer values
+  $3393 == 3 // integer values
+jf @SERG3_7111
+if or
+  $3394 == 0 // integer values
+  $3394 == 3 // integer values
+jf @SERG3_7111
+if or
+  $3395 == 0 // integer values
+  $3395 == 3 // integer values
+jf @SERG3_7111
+if
+  2 > $3392 // integer values
+jf @SERG3_7111
+if or
+01AF:   car $3327 0 $3355 $3356 $3357 radius 0.7 0.7 0.7
+  $3392 == 1 // integer values
+jf @SERG3_7111
+Car.StorePos($3327, $3332, $3333, $3334)
+035C: place_object $3335 relative_to_car $3327 offset 0.0 0.0 -0.4
+if
+  $3403 == 0 // integer values
+jf @SERG3_6927
+$3403 = 1 // integer values
+$3402 = 420000 // integer values
+
+:SERG3_6927
+Object.CollisionDetection($3335) = False
+Object.ToggleInMovingList($3335) = False
+02CE: $3387 = ground_z $3332 $3333 $3334
+0086: $3383 = $3334 // floating-point values only
+0061: $3383 -= $3387 // floating-point values
+if
+  $3392 == 0 // integer values
+jf @SERG3_6996
+gosub @SERG3_21067
+
+:SERG3_6996
+$3392 = 1 // integer values
+if
+  $3392 == 1 // integer values
+jf @SERG3_7111
+if
+  $3383 > 1.2 // floating-point values
+jf @SERG3_7111
+if
+0585:
+jf @SERG3_7111
+$3392 = 2 // integer values
+Object.ToggleInMovingList($3335) = True
+Object.CollisionDetection($3335) = True
+04D9: object $3335 set_scripted_collision_check 1
+050E:  $3335 $3327
+Object.Throw($3335, 0.0, 0.0, -1.0)
+
+:SERG3_7111
+if
+   not Car.Wrecked($3327)
+jf @SERG3_7541
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @SERG3_7541
+if or
+  $3392 == 0 // integer values
+  $3392 == 3 // integer values
+jf @SERG3_7541
+if or
+  $3394 == 0 // integer values
+  $3394 == 3 // integer values
+jf @SERG3_7541
+if or
+  $3395 == 0 // integer values
+  $3395 == 3 // integer values
+jf @SERG3_7541
+if
+  2 > $3393 // integer values
+jf @SERG3_7541
+if or
+01AF:   car $3327 0 $3358 $3359 $3360 radius 0.7 0.7 0.7
+  $3393 == 1 // integer values
+jf @SERG3_7541
+Car.StorePos($3327, $3332, $3333, $3334)
+035C: place_object $3336 relative_to_car $3327 offset 0.0 0.0 -0.4
+if
+  $3403 == 0 // integer values
+jf @SERG3_7357
+$3403 = 1 // integer values
+$3402 = 420000 // integer values
+
+:SERG3_7357
+Object.CollisionDetection($3336) = False
+Object.ToggleInMovingList($3336) = False
+02CE: $3388 = ground_z $3332 $3333 $3334
+0086: $3384 = $3334 // floating-point values only
+0061: $3384 -= $3388 // floating-point values
+if
+  $3393 == 0 // integer values
+jf @SERG3_7426
+gosub @SERG3_21067
+
+:SERG3_7426
+$3393 = 1 // integer values
+if
+  $3393 == 1 // integer values
+jf @SERG3_7541
+if
+  $3384 > 1.2 // floating-point values
+jf @SERG3_7541
+if
+0585:
+jf @SERG3_7541
+$3393 = 2 // integer values
+04D9: object $3336 set_scripted_collision_check 1
+Object.ToggleInMovingList($3336) = True
+Object.CollisionDetection($3336) = True
+050E:  $3336 $3327
+Object.Throw($3336, 0.0, 0.0, -1.0)
+
+:SERG3_7541
+if
+   not Car.Wrecked($3327)
+jf @SERG3_7971
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @SERG3_7971
+if or
+  $3392 == 0 // integer values
+  $3392 == 3 // integer values
+jf @SERG3_7971
+if or
+  $3393 == 0 // integer values
+  $3393 == 3 // integer values
+jf @SERG3_7971
+if or
+  $3395 == 0 // integer values
+  $3395 == 3 // integer values
+jf @SERG3_7971
+if
+  2 > $3394 // integer values
+jf @SERG3_7971
+if or
+01AF:   car $3327 0 $3361 $3362 $3363 radius 0.7 0.7 0.7
+  $3394 == 1 // integer values
+jf @SERG3_7971
+Car.StorePos($3327, $3332, $3333, $3334)
+035C: place_object $3337 relative_to_car $3327 offset 0.0 0.0 -0.4
+if
+  $3403 == 0 // integer values
+jf @SERG3_7787
+$3403 = 1 // integer values
+$3402 = 420000 // integer values
+
+:SERG3_7787
+Object.CollisionDetection($3337) = False
+Object.ToggleInMovingList($3337) = False
+02CE: $3389 = ground_z $3332 $3333 $3334
+0086: $3385 = $3334 // floating-point values only
+0061: $3385 -= $3389 // floating-point values
+if
+  $3394 == 0 // integer values
+jf @SERG3_7856
+gosub @SERG3_21067
+
+:SERG3_7856
+$3394 = 1 // integer values
+if
+  $3394 == 1 // integer values
+jf @SERG3_7971
+if
+  $3385 > 1.2 // floating-point values
+jf @SERG3_7971
+if
+0585:
+jf @SERG3_7971
+$3394 = 2 // integer values
+04D9: object $3337 set_scripted_collision_check 1
+Object.ToggleInMovingList($3337) = True
+Object.CollisionDetection($3337) = True
+050E:  $3337 $3327
+Object.Throw($3337, 0.0, 0.0, -1.0)
+
+:SERG3_7971
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8401
+if
+   Player.InRemoteMode($PLAYER_CHAR)
+jf @SERG3_8401
+if or
+  $3392 == 0 // integer values
+  $3392 == 3 // integer values
+jf @SERG3_8401
+if or
+  $3393 == 0 // integer values
+  $3393 == 3 // integer values
+jf @SERG3_8401
+if or
+  $3394 == 0 // integer values
+  $3394 == 3 // integer values
+jf @SERG3_8401
+if
+  2 > $3395 // integer values
+jf @SERG3_8401
+if or
+01AF:   car $3327 0 $3364 $3365 $3366 radius 0.7 0.7 0.7
+  $3395 == 1 // integer values
+jf @SERG3_8401
+Car.StorePos($3327, $3332, $3333, $3334)
+035C: place_object $3338 relative_to_car $3327 offset 0.0 0.0 -0.4
+if
+  $3403 == 0 // integer values
+jf @SERG3_8217
+$3403 = 1 // integer values
+$3402 = 420000 // integer values
+
+:SERG3_8217
+Object.CollisionDetection($3338) = False
+Object.ToggleInMovingList($3338) = False
+02CE: $3390 = ground_z $3332 $3333 $3334
+0086: $3386 = $3334 // floating-point values only
+0061: $3386 -= $3390 // floating-point values
+if
+  $3395 == 0 // integer values
+jf @SERG3_8286
+gosub @SERG3_21067
+
+:SERG3_8286
+$3395 = 1 // integer values
+if
+  $3395 == 1 // integer values
+jf @SERG3_8401
+if
+  $3386 > 1.2 // floating-point values
+jf @SERG3_8401
+if
+0585:
+jf @SERG3_8401
+$3395 = 2 // integer values
+04D9: object $3338 set_scripted_collision_check 1
+Object.ToggleInMovingList($3338) = True
+Object.CollisionDetection($3338) = True
+050E:  $3338 $3327
+Object.Throw($3338, 0.0, 0.0, -1.0)
+
+:SERG3_8401
+if
+  $3391 == 1 // integer values
+jf @SERG3_8615
+if
+   not $3396 == 1 // integer values
+jf @SERG3_8468
+04E6:   object $3335 near_point $3367 $3368 $3369 radius 3.5 3.5 3.5 flag 1
+
+:SERG3_8468
+if
+   not $3397 == 1 // integer values
+jf @SERG3_8517
+04E6:   object $3335 near_point $3370 $3371 $3372 radius 3.5 3.5 3.5 flag 1
+
+:SERG3_8517
+if
+   not $3398 == 1 // integer values
+jf @SERG3_8566
+04E6:   object $3335 near_point $3373 $3374 $3375 radius 3.5 3.5 3.5 flag 1
+
+:SERG3_8566
+if
+   not $3399 == 1 // integer values
+jf @SERG3_8615
+04E6:   object $3335 near_point $3376 $3377 $3378 radius 3.5 3.5 3.5 flag 1
+
+:SERG3_8615
+if
+   not Actor.Dead($3311)
+jf @SERG3_8677
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8677
+if
+  $3426 == 0 // integer values
+jf @SERG3_8677
+0372: set_actor $3311 anim 13 wait_state_time 300000 ms
+
+:SERG3_8677
+if
+   not Actor.Dead($3312)
+jf @SERG3_8739
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8739
+if
+  $3427 == 0 // integer values
+jf @SERG3_8739
+0372: set_actor $3312 anim 25 wait_state_time 300000 ms
+
+:SERG3_8739
+if
+   not Actor.Dead($3315)
+jf @SERG3_8801
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8801
+if
+  $3429 == 0 // integer values
+jf @SERG3_8801
+0372: set_actor $3315 anim 25 wait_state_time 300000 ms
+
+:SERG3_8801
+if
+   not Actor.Dead($3316)
+jf @SERG3_8863
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8863
+if
+  $3430 == 0 // integer values
+jf @SERG3_8863
+0372: set_actor $3316 anim 25 wait_state_time 300000 ms
+
+:SERG3_8863
+if
+   not Actor.Dead($3317)
+jf @SERG3_8925
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8925
+if
+  $3431 == 0 // integer values
+jf @SERG3_8925
+0372: set_actor $3317 anim 25 wait_state_time 300000 ms
+
+:SERG3_8925
+if
+   not Actor.Dead($3319)
+jf @SERG3_8987
+if
+   not Car.Wrecked($3327)
+jf @SERG3_8987
+if
+  $3433 == 0 // integer values
+jf @SERG3_8987
+0372: set_actor $3319 anim 13 wait_state_time 300000 ms
+
+:SERG3_8987
+if
+   not Actor.Dead($3320)
+jf @SERG3_9049
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9049
+if
+  $3434 == 0 // integer values
+jf @SERG3_9049
+0372: set_actor $3320 anim 25 wait_state_time 300000 ms
+
+:SERG3_9049
+if
+   not Actor.Dead($3321)
+jf @SERG3_9111
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9111
+if
+  $3435 == 0 // integer values
+jf @SERG3_9111
+0372: set_actor $3321 anim 25 wait_state_time 300000 ms
+
+:SERG3_9111
+if
+   not Actor.Dead($3322)
+jf @SERG3_9173
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9173
+if
+  $3436 == 0 // integer values
+jf @SERG3_9173
+0372: set_actor $3322 anim 25 wait_state_time 300000 ms
+
+:SERG3_9173
+if
+   not Actor.Dead($3323)
+jf @SERG3_9235
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9235
+if
+  $3437 == 0 // integer values
+jf @SERG3_9235
+0372: set_actor $3323 anim 25 wait_state_time 300000 ms
+
+:SERG3_9235
+if
+   not Actor.Dead($3311)
+jf @SERG3_9335
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9335
+if
+0205:   actor $3311 near_car $3327 radius 7.0 7.0 6.0 unknown 0
+jf @SERG3_9335
+0372: set_actor $3311 anim 0 wait_state_time 300 ms
+01D9: actor $3311 destroy_car $3327
+0319: set_actor $3311 running 1
+$3426 = 1 // integer values
+
+:SERG3_9335
+if
+   not Actor.Dead($3312)
+jf @SERG3_9435
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9435
+if
+0205:   actor $3312 near_car $3327 radius 12.0 12.0 6.0 unknown 0
+jf @SERG3_9435
+0372: set_actor $3312 anim 0 wait_state_time 300 ms
+01D9: actor $3312 destroy_car $3327
+0319: set_actor $3312 running 1
+$3427 = 1 // integer values
+
+:SERG3_9435
+if
+   not Actor.Dead($3313)
+jf @SERG3_9535
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9535
+if
+0205:   actor $3313 near_car $3327 radius 10.0 10.0 3.0 unknown 0
+jf @SERG3_9535
+0372: set_actor $3313 anim 0 wait_state_time 300 ms
+01D9: actor $3313 destroy_car $3327
+0319: set_actor $3313 running 1
+$3428 = 1 // integer values
+
+:SERG3_9535
+if
+   not Actor.Dead($3314)
+jf @SERG3_9628
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9628
+if
+0205:   actor $3314 near_car $3327 radius 10.0 10.0 3.0 unknown 0
+jf @SERG3_9628
+0372: set_actor $3314 anim 0 wait_state_time 300 ms
+01D9: actor $3314 destroy_car $3327
+0319: set_actor $3314 running 1
+
+:SERG3_9628
+if
+   not Actor.Dead($3315)
+jf @SERG3_9728
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9728
+if
+0205:   actor $3315 near_car $3327 radius 7.0 7.0 5.0 unknown 0
+jf @SERG3_9728
+0372: set_actor $3315 anim 0 wait_state_time 300 ms
+01D9: actor $3315 destroy_car $3327
+0319: set_actor $3315 running 1
+$3429 = 1 // integer values
+
+:SERG3_9728
+if
+   not Actor.Dead($3316)
+jf @SERG3_9828
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9828
+if
+0205:   actor $3316 near_car $3327 radius 15.0 15.0 4.0 unknown 0
+jf @SERG3_9828
+0372: set_actor $3316 anim 0 wait_state_time 300 ms
+01D9: actor $3316 destroy_car $3327
+0319: set_actor $3316 running 1
+$3430 = 1 // integer values
+
+:SERG3_9828
+if
+   not Actor.Dead($3317)
+jf @SERG3_9928
+if
+   not Car.Wrecked($3327)
+jf @SERG3_9928
+if
+0205:   actor $3317 near_car $3327 radius 15.0 15.0 3.0 unknown 0
+jf @SERG3_9928
+0372: set_actor $3317 anim 0 wait_state_time 300 ms
+01D9: actor $3317 destroy_car $3327
+0319: set_actor $3317 running 1
+$3431 = 1 // integer values
+
+:SERG3_9928
+if
+   not Actor.Dead($3318)
+jf @SERG3_10028
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10028
+if
+0205:   actor $3318 near_car $3327 radius 15.0 15.0 6.0 unknown 0
+jf @SERG3_10028
+0372: set_actor $3318 anim 0 wait_state_time 300 ms
+01D9: actor $3318 destroy_car $3327
+0319: set_actor $3318 running 1
+$3432 = 1 // integer values
+
+:SERG3_10028
+if
+   not Actor.Dead($3319)
+jf @SERG3_10128
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10128
+if
+0205:   actor $3319 near_car $3327 radius 18.0 18.0 3.0 unknown 0
+jf @SERG3_10128
+0372: set_actor $3319 anim 0 wait_state_time 300 ms
+01D9: actor $3319 destroy_car $3327
+0319: set_actor $3319 running 1
+$3433 = 1 // integer values
+
+:SERG3_10128
+if
+   not Actor.Dead($3320)
+jf @SERG3_10228
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10228
+if
+0205:   actor $3320 near_car $3327 radius 15.0 15.0 6.0 unknown 0
+jf @SERG3_10228
+0372: set_actor $3320 anim 0 wait_state_time 300 ms
+01D9: actor $3320 destroy_car $3327
+0319: set_actor $3320 running 1
+$3434 = 1 // integer values
+
+:SERG3_10228
+if
+   not Actor.Dead($3321)
+jf @SERG3_10328
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10328
+if
+0205:   actor $3321 near_car $3327 radius 15.0 15.0 4.0 unknown 0
+jf @SERG3_10328
+0372: set_actor $3321 anim 0 wait_state_time 300 ms
+01D9: actor $3321 destroy_car $3327
+0319: set_actor $3321 running 1
+$3435 = 1 // integer values
+
+:SERG3_10328
+if
+   not Actor.Dead($3322)
+jf @SERG3_10428
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10428
+if
+0205:   actor $3322 near_car $3327 radius 15.0 15.0 6.0 unknown 0
+jf @SERG3_10428
+0372: set_actor $3322 anim 0 wait_state_time 300 ms
+01D9: actor $3322 destroy_car $3327
+0319: set_actor $3322 running 1
+$3436 = 1 // integer values
+
+:SERG3_10428
+if
+   not Actor.Dead($3323)
+jf @SERG3_10528
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10528
+if
+0205:   actor $3323 near_car $3327 radius 10.0 10.0 4.0 unknown 0
+jf @SERG3_10528
+0372: set_actor $3323 anim 0 wait_state_time 300 ms
+01D9: actor $3323 destroy_car $3327
+0319: set_actor $3323 running 1
+$3437 = 1 // integer values
+
+:SERG3_10528
+if
+   not Actor.Dead($3324)
+jf @SERG3_10604
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10604
+if
+0205:   actor $3324 near_car $3327 radius 18.0 18.0 3.0 unknown 0
+jf @SERG3_10604
+01D9: actor $3324 destroy_car $3327
+
+:SERG3_10604
+if
+   not Actor.Dead($3325)
+jf @SERG3_10687
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10687
+if
+0205:   actor $3325 near_car $3327 radius 18.0 18.0 3.0 unknown 0
+jf @SERG3_10687
+01D9: actor $3325 destroy_car $3327
+$3459 = 1 // integer values
+
+:SERG3_10687
+if
+   not Actor.Dead($3326)
+jf @SERG3_10763
+if
+   not Car.Wrecked($3327)
+jf @SERG3_10763
+if
+0205:   actor $3326 near_car $3327 radius 18.0 18.0 3.0 unknown 0
+jf @SERG3_10763
+01D9: actor $3326 destroy_car $3327
+
+:SERG3_10763
+if
+   not Actor.Dead($3311)
+jf @SERG3_11043
+if
+  $3426 == 1 // integer values
+jf @SERG3_10847
+if
+  $3444 == 0 // integer values
+jf @SERG3_10847
+if
+  $3442 == 0 // integer values
+jf @SERG3_10847
+$3442 = 1 // integer values
+$3443 = 0 // integer values
+
+:SERG3_10847
+if
+  $3442 == 1 // integer values
+jf @SERG3_11036
+if
+  $3443 == 0 // integer values
+jf @SERG3_10909
+03CF: load_wav 'TEX3_2' as 1
+$3443 = 1 // integer values
+jump @SERG3_11036
+
+:SERG3_10909
+if
+  $3443 == 1 // integer values
+jf @SERG3_10949
+if
+03D0:   wav 1 loaded
+jf @SERG3_10949
+$3443 = 2 // integer values
+
+:SERG3_10949
+if
+  $3443 == 2 // integer values
+jf @SERG3_10978
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_10978
+if
+  $3443 == 3 // integer values
+jf @SERG3_11036
+if
+03D2:   wav 1 ended
+jf @SERG3_11036
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3444 = 1 // integer values
+
+:SERG3_11036
+jump @SERG3_11086
+
+:SERG3_11043
+if
+  $3442 == 1 // integer values
+jf @SERG3_11086
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3444 = 1 // integer values
+
+:SERG3_11086
+if
+   not Actor.Dead($3313)
+jf @SERG3_11366
+if
+  $3428 == 1 // integer values
+jf @SERG3_11170
+if
+  $3445 == 0 // integer values
+jf @SERG3_11170
+if
+  $3442 == 0 // integer values
+jf @SERG3_11170
+$3442 = 2 // integer values
+$3443 = 0 // integer values
+
+:SERG3_11170
+if
+  $3442 == 2 // integer values
+jf @SERG3_11359
+if
+  $3443 == 0 // integer values
+jf @SERG3_11232
+03CF: load_wav 'TEX3_1' as 1
+$3443 = 1 // integer values
+jump @SERG3_11359
+
+:SERG3_11232
+if
+  $3443 == 1 // integer values
+jf @SERG3_11272
+if
+03D0:   wav 1 loaded
+jf @SERG3_11272
+$3443 = 2 // integer values
+
+:SERG3_11272
+if
+  $3443 == 2 // integer values
+jf @SERG3_11301
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_11301
+if
+  $3443 == 3 // integer values
+jf @SERG3_11359
+if
+03D2:   wav 1 ended
+jf @SERG3_11359
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3445 = 1 // integer values
+
+:SERG3_11359
+jump @SERG3_11409
+
+:SERG3_11366
+if
+  $3442 == 2 // integer values
+jf @SERG3_11409
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3445 = 1 // integer values
+
+:SERG3_11409
+if
+   not Actor.Dead($3317)
+jf @SERG3_11689
+if
+  $3431 == 1 // integer values
+jf @SERG3_11493
+if
+  $3446 == 0 // integer values
+jf @SERG3_11493
+if
+  $3442 == 0 // integer values
+jf @SERG3_11493
+$3442 = 3 // integer values
+$3443 = 0 // integer values
+
+:SERG3_11493
+if
+  $3442 == 3 // integer values
+jf @SERG3_11682
+if
+  $3443 == 0 // integer values
+jf @SERG3_11555
+03CF: load_wav 'TEX3_3' as 1
+$3443 = 1 // integer values
+jump @SERG3_11682
+
+:SERG3_11555
+if
+  $3443 == 1 // integer values
+jf @SERG3_11595
+if
+03D0:   wav 1 loaded
+jf @SERG3_11595
+$3443 = 2 // integer values
+
+:SERG3_11595
+if
+  $3443 == 2 // integer values
+jf @SERG3_11624
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_11624
+if
+  $3443 == 3 // integer values
+jf @SERG3_11682
+if
+03D2:   wav 1 ended
+jf @SERG3_11682
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3446 = 1 // integer values
+
+:SERG3_11682
+jump @SERG3_11732
+
+:SERG3_11689
+if
+  $3442 == 3 // integer values
+jf @SERG3_11732
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3446 = 1 // integer values
+
+:SERG3_11732
+if
+   not Actor.Dead($3323)
+jf @SERG3_12012
+if
+  $3437 == 1 // integer values
+jf @SERG3_11816
+if
+  $3447 == 0 // integer values
+jf @SERG3_11816
+if
+  $3442 == 0 // integer values
+jf @SERG3_11816
+$3442 = 4 // integer values
+$3443 = 0 // integer values
+
+:SERG3_11816
+if
+  $3442 == 4 // integer values
+jf @SERG3_12005
+if
+  $3443 == 0 // integer values
+jf @SERG3_11878
+03CF: load_wav 'TEX3_4' as 1
+$3443 = 1 // integer values
+jump @SERG3_12005
+
+:SERG3_11878
+if
+  $3443 == 1 // integer values
+jf @SERG3_11918
+if
+03D0:   wav 1 loaded
+jf @SERG3_11918
+$3443 = 2 // integer values
+
+:SERG3_11918
+if
+  $3443 == 2 // integer values
+jf @SERG3_11947
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_11947
+if
+  $3443 == 3 // integer values
+jf @SERG3_12005
+if
+03D2:   wav 1 ended
+jf @SERG3_12005
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3447 = 1 // integer values
+
+:SERG3_12005
+jump @SERG3_12055
+
+:SERG3_12012
+if
+  $3442 == 4 // integer values
+jf @SERG3_12055
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3447 = 1 // integer values
+
+:SERG3_12055
+if
+   not Actor.Dead($3319)
+jf @SERG3_12335
+if
+  $3433 == 1 // integer values
+jf @SERG3_12139
+if
+  $3448 == 0 // integer values
+jf @SERG3_12139
+if
+  $3442 == 0 // integer values
+jf @SERG3_12139
+$3442 = 5 // integer values
+$3443 = 0 // integer values
+
+:SERG3_12139
+if
+  $3442 == 5 // integer values
+jf @SERG3_12328
+if
+  $3443 == 0 // integer values
+jf @SERG3_12201
+03CF: load_wav 'TEX3_8' as 1
+$3443 = 1 // integer values
+jump @SERG3_12328
+
+:SERG3_12201
+if
+  $3443 == 1 // integer values
+jf @SERG3_12241
+if
+03D0:   wav 1 loaded
+jf @SERG3_12241
+$3443 = 2 // integer values
+
+:SERG3_12241
+if
+  $3443 == 2 // integer values
+jf @SERG3_12270
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_12270
+if
+  $3443 == 3 // integer values
+jf @SERG3_12328
+if
+03D2:   wav 1 ended
+jf @SERG3_12328
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3448 = 1 // integer values
+
+:SERG3_12328
+jump @SERG3_12378
+
+:SERG3_12335
+if
+  $3442 == 5 // integer values
+jf @SERG3_12378
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3448 = 1 // integer values
+
+:SERG3_12378
+if
+   not Actor.Dead($3325)
+jf @SERG3_12658
+if
+  $3459 == 1 // integer values
+jf @SERG3_12462
+if
+  $3458 == 0 // integer values
+jf @SERG3_12462
+if
+  $3442 == 0 // integer values
+jf @SERG3_12462
+$3442 = 6 // integer values
+$3443 = 0 // integer values
+
+:SERG3_12462
+if
+  $3442 == 6 // integer values
+jf @SERG3_12651
+if
+  $3443 == 0 // integer values
+jf @SERG3_12524
+03CF: load_wav 'TEX3_6' as 1
+$3443 = 1 // integer values
+jump @SERG3_12651
+
+:SERG3_12524
+if
+  $3443 == 1 // integer values
+jf @SERG3_12564
+if
+03D0:   wav 1 loaded
+jf @SERG3_12564
+$3443 = 2 // integer values
+
+:SERG3_12564
+if
+  $3443 == 2 // integer values
+jf @SERG3_12593
+03D1: play_wav 1
+$3443 = 3 // integer values
+
+:SERG3_12593
+if
+  $3443 == 3 // integer values
+jf @SERG3_12651
+if
+03D2:   wav 1 ended
+jf @SERG3_12651
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3458 = 1 // integer values
+
+:SERG3_12651
+jump @SERG3_12701
+
+:SERG3_12658
+if
+  $3442 == 6 // integer values
+jf @SERG3_12701
+$3443 = 0 // integer values
+$3442 = 0 // integer values
+040D: unload_wav 1
+$3458 = 1 // integer values
+
+:SERG3_12701
+if
+  $3403 == 1 // integer values
+jf @SERG3_12774
+if
+   not $3402 == 0 // integer values
+jf @SERG3_12774
+03C3: set_timer_with_text_to $3402 type 1 text 'RACES'  // TIME:
+00BC: text_highpriority 'TEX3_15' 7000 ms 1  // ~r~Detonation timer initiated! ~g~You must plant the ~w~4 bombs ~g~in the remaining time!
+$3403 = 2 // integer values
+
+:SERG3_12774
+if
+  $3404 == 0 // integer values
+jf @SERG3_12887
+0084: $3408 = $3396 // integer values and handles
+0058: $3408 += $3397 // integer values
+0084: $3411 = $3398 // integer values and handles
+0058: $3411 += $3399 // integer values
+0084: $3405 = $3408 // integer values and handles
+0058: $3405 += $3411 // integer values
+if
+  $3405 == 1 // integer values
+jf @SERG3_12887
+$3307 = 3 // integer values
+$3404 = 1 // integer values
+00BC: text_highpriority 'TEX3_12' 5000 ms 2  // ~g~Bomb planted! Only 3 more targets to go! Go back and get another bomb.
+
+:SERG3_12887
+if
+  $3404 == 1 // integer values
+jf @SERG3_13000
+0084: $3409 = $3396 // integer values and handles
+0058: $3409 += $3397 // integer values
+0084: $3412 = $3398 // integer values and handles
+0058: $3412 += $3399 // integer values
+0084: $3406 = $3409 // integer values and handles
+0058: $3406 += $3412 // integer values
+if
+  $3406 == 2 // integer values
+jf @SERG3_13000
+$3307 = 2 // integer values
+$3404 = 2 // integer values
+00BC: text_highpriority 'TEX3_13' 5000 ms 2  // ~g~Bomb planted! Only 2 more targets to go! Go back and get another bomb.
+
+:SERG3_13000
+if
+  $3404 == 2 // integer values
+jf @SERG3_13113
+0084: $3410 = $3396 // integer values and handles
+0058: $3410 += $3397 // integer values
+0084: $3413 = $3398 // integer values and handles
+0058: $3413 += $3399 // integer values
+0084: $3407 = $3410 // integer values and handles
+0058: $3407 += $3413 // integer values
+if
+  $3407 == 3 // integer values
+jf @SERG3_13113
+$3307 = 1 // integer values
+$3404 = 3 // integer values
+00BC: text_highpriority 'TEX3_14' 5000 ms 2  // ~g~Bomb planted! Only 1 more target to go! Go back and get another bomb.
+
+:SERG3_13113
+if and
+  $3396 == 1 // integer values
+  $3397 == 1 // integer values
+  $3398 == 1 // integer values
+  $3399 == 1 // integer values
+jf @SERG3_13159
+jump @SERG3_13512
+
+:SERG3_13159
+if
+  1 > $3402 // integer values
+jf @SERG3_13217
+if
+  $3403 == 2 // integer values
+jf @SERG3_13217
+00BC: text_highpriority 'TEX3_17' 5000 ms 1  // ~r~You ran out of time!
+jump @SERG3_20979
+
+:SERG3_13217
+if
+   Car.Wrecked($3327)
+jf @SERG3_13273
+if
+  $3391 == 1 // integer values
+jf @SERG3_13273
+00BC: text_highpriority 'TEX3_18' 5000 ms 2  // ~r~Your RC Helicopter has been destroyed!
+jump @SERG3_20979
+
+:SERG3_13273
+if
+  $3391 == 1 // integer values
+jf @SERG3_13360
+if
+   not Car.Wrecked($3327)
+jf @SERG3_13360
+if
+81FC:   not player $PLAYER_CHAR near_car $3327 radius 250.0 250.0 0
+jf @SERG3_13360
+00BC: text_highpriority 'TEX3_21' 5000 ms 1  // ~r~The RC Helicopter went out of range!
+jump @SERG3_20979
+
+:SERG3_13360
+if
+  $3391 == 1 // integer values
+jf @SERG3_13431
+if or
+04E7:   object $3335 in_water
+04E7:   object $3336 in_water
+04E7:   object $3337 in_water
+04E7:   object $3338 in_water
+jf @SERG3_13431
+00BC: text_highpriority 'TEX3_19' 5000 ms 1  // ~r~You dropped your bomb in the water! That ain't no way to fish!
+jump @SERG3_20979
+
+:SERG3_13431
+if
+  $3391 == 0 // integer values
+jf @SERG3_13505
+if
+  $3457 == 1 // integer values
+jf @SERG3_13505
+if
+   Car.Wrecked($3308)
+jf @SERG3_13505
+00BC: text_highpriority 'TEX3_31' 5000 ms 1  // ~r~You destroyed the TOPFUN van that contained the bombs and RC helicopter!
+jump @SERG3_20979
+
+:SERG3_13505
+jump @SERG3_2490
+
+:SERG3_13512
+014F: stop_timer $3402
+0151: remove_status_text $3307
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+Model.Destroy(#DYNAMITE)
+Model.Destroy(#HAMMER)
+Model.Destroy(#BARREL4)
+Model.Destroy(#GDA)
+Model.Destroy(#GDB)
+Actor.DestroyInstantly($3311)
+Actor.DestroyInstantly($3312)
+Actor.DestroyInstantly($3313)
+Actor.DestroyInstantly($3314)
+Actor.DestroyInstantly($3315)
+Actor.DestroyInstantly($3316)
+Actor.DestroyInstantly($3317)
+Actor.DestroyInstantly($3318)
+Actor.DestroyInstantly($3319)
+Actor.DestroyInstantly($3320)
+Actor.DestroyInstantly($3324)
+Actor.DestroyInstantly($3325)
+Actor.DestroyInstantly($3326)
+if
+   not Car.Wrecked($3308)
+jf @SERG3_13642
+Car.LockInCurrentPosition($3308) = False
+
+:SERG3_13642
+Camera.SetPosition(27.198, -352.651, 12.977, 0.0, 0.0, 0.0)
+Camera.PointAt(28.1425, -352.8275, 13.2567, 2)
+Model.Load(#LODNGST2MESHDAM)
+
+:SERG3_13697
+if
+   not Model.Available(#LODNGST2MESHDAM)
+jf @SERG3_13723
+wait 0
+jump @SERG3_13697
+
+:SERG3_13723
+Camera.Shake(2500)
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 2
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 11
+020C: create_explosion_with_radius 1 at 69.42 -371.249 30.28
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 6
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 2
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 11
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 6
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 2
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 11
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 1
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 6
+020C: create_explosion_with_radius 2 at 71.554 -356.053 24.468
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 11
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 1
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 6
+wait 10
+03B6: replace_model_at 117.991 -362.461 10.179 radius 80.0 from #LODNGST2MESH to #LODNGST2MESHDAM
+wait 250
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 2
+020C: create_explosion_with_radius 11 at 72.875 -360.392 23.922
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 6
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 2
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 11
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 1
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 6
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 2
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 11
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 1
+020C: create_explosion_with_radius 6 at 71.554 -356.053 24.468
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 2
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 11
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 1
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 6
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 2
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 11
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 6
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 2
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 11
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 6
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 2
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 11
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 1
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 6
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 2
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 11
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 6
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 2
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 11
+020C: create_explosion_with_radius 6 at 72.875 -361.392 23.922
+wait 105
+wait 105
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 2
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 11
+0565: create_temporary_explosion_fire 73.18 -368.699 13.236 type 1
+020C: create_explosion_with_radius 6 at 73.18 -368.699 13.236
+Model.Destroy(#LODNGST2MESHDAM)
+wait 105
+wait 105
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 2
+020C: create_explosion_with_radius 11 at 71.554 -354.053 24.468
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 6
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 2
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 11
+0565: create_temporary_explosion_fire 69.42 -371.249 30.28 type 1
+020C: create_explosion_with_radius 6 at 69.42 -371.249 30.28
+wait 105
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 2
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 11
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 6
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 2
+020C: create_explosion_with_radius 11 at 73.18 -366.699 13.236
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 1
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 6
+039D: scatter_particles 4 5.0 0 0 0 11000 at 73.18 -366.699 13.236 16.0 0.0 0.1
+wait 105
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 2
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 11
+020C: create_explosion_with_radius 6 at 71.554 -356.053 24.468
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 2
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 11
+0565: create_temporary_explosion_fire 69.42 -370.249 30.28 type 6
+wait 300
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 2
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 11
+0565: create_temporary_explosion_fire 72.875 -361.392 23.922 type 1
+020C: create_explosion_with_radius 6 at 72.875 -361.392 23.922
+039D: scatter_particles 4 5.0 0 0 0 11000 at 69.42 -370.249 30.28 16.0 0.0 0.1
+wait 105
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 2
+020C: create_explosion_with_radius 11 at 71.554 -354.053 24.468
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 1
+0565: create_temporary_explosion_fire 71.554 -354.053 24.468 type 6
+wait 400
+020C: create_explosion_with_radius 2 at 67.421 -374.562 25.85
+0565: create_temporary_explosion_fire 67.421 -374.562 25.85 type 11
+0565: create_temporary_explosion_fire 67.421 -374.562 25.85 type 1
+0565: create_temporary_explosion_fire 67.421 -374.562 25.85 type 6
+0565: create_temporary_explosion_fire 71.875 -360.392 30.092 type 2
+0565: create_temporary_explosion_fire 71.875 -360.392 30.092 type 11
+0565: create_temporary_explosion_fire 71.875 -360.392 30.092 type 6
+wait 300
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 2
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 11
+020C: create_explosion_with_radius 6 at 73.18 -366.699 13.236
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 2
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 11
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 6
+wait 300
+0565: create_temporary_explosion_fire 69.224 -371.249 26.28 type 2
+020C: create_explosion_with_radius 11 at 69.224 -371.249 26.28
+0565: create_temporary_explosion_fire 69.224 -371.249 26.28 type 6
+039D: scatter_particles 4 5.0 0 0 0 5000 at 69.224 -371.249 26.28 16.0 0.0 0.1
+wait 200
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 2
+020C: create_explosion_with_radius 11 at 72.875 -360.392 23.922
+0565: create_temporary_explosion_fire 72.875 -360.392 23.922 type 6
+039D: scatter_particles 4 5.0 0 0 0 5000 at 72.875 -360.392 23.922 16.0 0.0 0.1
+wait 100
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 2
+020C: create_explosion_with_radius 11 at 73.18 -366.699 13.236
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 1
+0565: create_temporary_explosion_fire 73.18 -366.699 13.236 type 6
+wait 50
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 2
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 11
+0565: create_temporary_explosion_fire 71.554 -356.053 24.468 type 1
+020C: create_explosion_with_radius 6 at 71.554 -356.053 24.468
+039D: scatter_particles 4 5.0 0 0 0 5000 at 71.554 -356.053 24.468 16.0 0.0 0.1
+wait 250
+Model.Load(#LODNGST2MESH)
+
+:SERG3_16072
+if
+   not Model.Available(#LODNGST2MESH)
+jf @SERG3_16098
+wait 0
+jump @SERG3_16072
+
+:SERG3_16098
+03B6: replace_model_at 117.991 -362.461 10.179 radius 80.0 from #LODNGST2MESHDAM to #LODNGST2MESH
+Camera.SetPosition(95.42784, -431.413, 66.25831, 0.0, 0.0, 0.0)
+Camera.PointAt(96.13597, -430.9128, 65.75952, 2)
+031A: remove_all_fires
+Model.Destroy(#LODNGST2MESH)
+Model.Load(#LODNGST2MESHDAM)
+
+:SERG3_16185
+if
+   not Model.Available(#LODNGST2MESHDAM)
+jf @SERG3_16211
+wait 0
+jump @SERG3_16185
+
+:SERG3_16211
+Camera.Shake(2500)
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 2
+020C: create_explosion_with_radius 11 at 138.234 -398.796 49.419
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 6
+0565: create_temporary_explosion_fire 146.365 -401.27 45.175 type 2
+0565: create_temporary_explosion_fire 146.365 -401.27 45.175 type 11
+0565: create_temporary_explosion_fire 146.365 -401.27 45.175 type 6
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 2
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 11
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 6
+0565: create_temporary_explosion_fire 145.54 -400.172 32.071 type 2
+0565: create_temporary_explosion_fire 145.54 -400.172 32.071 type 11
+0565: create_temporary_explosion_fire 145.54 -400.172 32.071 type 1
+0565: create_temporary_explosion_fire 145.54 -400.172 32.071 type 6
+wait 105
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 2
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 11
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 1
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 6
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 2
+020C: create_explosion_with_radius 11 at 130.865 -399.556 45.108
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 6
+wait 50
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 11
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 11
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 1
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 2
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 11
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 1
+020C: create_explosion_with_radius 6 at 138.234 -398.796 49.419
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 2
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 11
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 6
+wait 105
+wait 105
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 2
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 11
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 1
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 6
+0565: create_temporary_explosion_fire 138.693 -399.751 45.107 type 2
+020C: create_explosion_with_radius 11 at 138.693 -399.751 45.107
+0565: create_temporary_explosion_fire 138.693 -399.751 45.107 type 6
+0565: create_temporary_explosion_fire 139.529 -400.04 34.706 type 2
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 11
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 1
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 6
+020C: create_explosion_with_radius 2 at 135.62 -399.96 41.42
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 11
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 11
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 2
+020C: create_explosion_with_radius 11 at 140.531 -399.2166 26.636
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 6
+0565: create_temporary_explosion_fire 139.529 -400.04 34.706 type 2
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 11
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 1
+020C: create_explosion_with_radius 6 at 139.529 -397.04 34.706
+03B6: replace_model_at 117.991 -362.461 10.179 radius 80.0 from #LODNGST2MESH to #LODNGST2MESHDAM
+039D: scatter_particles 4 5.0 0 0 0 11000 at 135.271 -390.0 31.704 16.0 0.0 0.1
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 2
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 11
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 1
+020C: create_explosion_with_radius 6 at 135.271 -390.0 31.704
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 2
+020C: create_explosion_with_radius 11 at 130.865 -399.556 45.108
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 1
+020C: create_explosion_with_radius 6 at 130.865 -399.556 45.108
+039D: scatter_particles 4 5.0 0 0 0 11000 at 135.271 -390.0 31.704 16.0 0.0 0.1
+Model.Destroy(#LODNGST2MESHDAM)
+wait 105
+wait 105
+0565: create_temporary_explosion_fire 138.693 -399.751 45.107 type 2
+020C: create_explosion_with_radius 11 at 138.693 -399.751 45.107
+0565: create_temporary_explosion_fire 138.693 -399.751 45.107 type 1
+0565: create_temporary_explosion_fire 138.693 -399.751 45.107 type 6
+wait 105
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 2
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 11
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 6
+wait 105
+wait 100
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+020C: create_explosion_with_radius 11 at 135.62 -399.96 41.42
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+wait 250
+020C: create_explosion_with_radius 2 at 140.531 -399.2166 26.636
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 11
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 6
+039D: scatter_particles 4 5.0 0 0 0 11000 at 139.529 -400.04 34.706 16.0 0.0 0.1
+wait 105
+wait 105
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 2
+020C: create_explosion_with_radius 11 at 138.234 -398.796 49.419
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 1
+0565: create_temporary_explosion_fire 138.234 -398.796 49.419 type 6
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 2
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 11
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 6
+wait 105
+wait 105
+wait 50
+0565: create_temporary_explosion_fire 139.529 -400.04 34.706 type 2
+020C: create_explosion_with_radius 11 at 139.529 -397.04 34.706
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 1
+0565: create_temporary_explosion_fire 139.529 -397.04 34.706 type 6
+wait 250
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 2
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 11
+0565: create_temporary_explosion_fire 135.271 -390.0 31.704 type 6
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 2
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 11
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 1
+0565: create_temporary_explosion_fire 130.865 -399.556 45.108 type 6
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+020C: create_explosion_with_radius 11 at 135.62 -399.96 41.42
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 2
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 11
+0565: create_temporary_explosion_fire 135.62 -399.96 41.42 type 6
+wait 50
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 2
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 11
+0565: create_temporary_explosion_fire 140.531 -399.2166 26.636 type 6
+039D: scatter_particles 4 5.0 0 0 0 5000 at 130.865 -399.556 45.108 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 5000 at 139.529 -400.04 34.706 16.0 0.0 0.1
+wait 100
+Model.Load(#LODNGST2MESH)
+
+:SERG3_18578
+if
+   not Model.Available(#LODNGST2MESH)
+jf @SERG3_18604
+wait 0
+jump @SERG3_18578
+
+:SERG3_18604
+03B6: replace_model_at 117.991 -362.461 10.179 radius 80.0 from #LODNGST2MESHDAM to #LODNGST2MESH
+Camera.SetPosition(202.0835, -305.277, 12.0866, 0.0, 0.0, 0.0)
+Camera.PointAt(201.496, -305.966, 12.247, 2)
+031A: remove_all_fires
+Model.Destroy(#LODNGST2MESH)
+wait 750
+0565: create_temporary_explosion_fire 168.166 -361.913 15.148 type 2
+0565: create_temporary_explosion_fire 168.166 -366.913 15.206 type 11
+020C: create_explosion_with_radius 6 at 164.8878 -340.8933 16.268
+Camera.Shake(2000)
+0565: create_temporary_explosion_fire 168.166 -361.913 15.148 type 2
+0565: create_temporary_explosion_fire 168.166 -366.913 15.206 type 11
+0565: create_temporary_explosion_fire 164.8878 -340.8933 16.268 type 6
+Model.Load(#LODNGST2MESHDAM)
+
+:SERG3_18815
+if
+   not Model.Available(#LODNGST2MESHDAM)
+jf @SERG3_18841
+wait 0
+jump @SERG3_18815
+
+:SERG3_18841
+0565: create_temporary_explosion_fire 168.166 -361.913 15.148 type 2
+020C: create_explosion_with_radius 11 at 168.166 -366.913 15.206
+0565: create_temporary_explosion_fire 164.8878 -340.8933 16.268 type 6
+wait 105
+0565: create_temporary_explosion_fire 168.166 -361.913 15.148 type 2
+020C: create_explosion_with_radius 11 at 168.166 -366.913 15.206
+0565: create_temporary_explosion_fire 167.0835 -350.057 16.283 type 1
+0565: create_temporary_explosion_fire 164.8878 -340.8933 16.268 type 6
+wait 50
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 2
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 11
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 6
+020C: create_explosion_with_radius 2 at 143.1712 -335.231 22.164
+0565: create_temporary_explosion_fire 143.1712 -335.231 22.164 type 11
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 1
+0565: create_temporary_explosion_fire 143.1712 -335.231 22.164 type 6
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 2
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 11
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 1
+020C: create_explosion_with_radius 6 at 168.692 -336.464 19.678
+03B6: replace_model_at 117.991 -362.461 10.179 radius 80.0 from #LODNGST2MESH to #LODNGST2MESHDAM
+020C: create_explosion_with_radius 2 at 168.166 -361.913 15.148
+0565: create_temporary_explosion_fire 168.166 -366.913 15.206 type 11
+0565: create_temporary_explosion_fire 164.8878 -340.8933 16.268 type 6
+0565: create_temporary_explosion_fire 168.166 -361.913 15.148 type 2
+020C: create_explosion_with_radius 11 at 168.166 -366.913 15.206
+0565: create_temporary_explosion_fire 167.0835 -350.057 16.283 type 1
+0565: create_temporary_explosion_fire 164.8878 -340.8933 16.268 type 6
+wait 50
+0565: create_temporary_explosion_fire 168.477 -335.314 22.231 type 2
+0565: create_temporary_explosion_fire 168.477 -335.314 22.231 type 11
+0565: create_temporary_explosion_fire 168.477 -335.314 22.231 type 1
+0565: create_temporary_explosion_fire 168.477 -335.314 22.231 type 6
+0565: create_temporary_explosion_fire 169.708 -337.357 19.075 type 2
+0565: create_temporary_explosion_fire 169.708 -337.357 19.075 type 11
+0565: create_temporary_explosion_fire 169.708 -337.357 19.075 type 6
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 2
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 11
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 1
+020C: create_explosion_with_radius 6 at 169.708 -351.357 18.075
+wait 105
+wait 300
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 2
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 11
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 6
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 2
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 11
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 1
+020C: create_explosion_with_radius 6 at 168.692 -336.464 19.678
+Model.Destroy(#LODNGST2MESHDAM)
+wait 105
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 2
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 11
+020C: create_explosion_with_radius 1 at 169.708 -351.357 18.075
+0565: create_temporary_explosion_fire 169.708 -351.357 18.075 type 6
+0565: create_temporary_explosion_fire 134.058 -335.45 22.873 type 2
+0565: create_temporary_explosion_fire 134.058 -335.45 22.873 type 11
+0565: create_temporary_explosion_fire 134.058 -335.45 22.873 type 6
+wait 105
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 2
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 11
+020C: create_explosion_with_radius 6 at 158.365 -335.0422 21.805
+wait 300
+0565: create_temporary_explosion_fire 154.231 -335.0846 20.826 type 2
+0565: create_temporary_explosion_fire 154.231 -335.0846 20.826 type 11
+020C: create_explosion_with_radius 6 at 154.231 -335.0846 20.826
+039D: scatter_particles 4 5.0 0 0 0 11000 at 154.231 -335.0846 20.826 16.0 0.0 0.1
+0565: create_temporary_explosion_fire 169.335 -337.878 19.478 type 2
+0565: create_temporary_explosion_fire 169.335 -337.878 19.478 type 11
+0565: create_temporary_explosion_fire 169.335 -337.878 19.478 type 6
+wait 500
+020C: create_explosion_with_radius 2 at 164.531 -334.908 19.209
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 11
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 1
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 6
+wait 105
+wait 105
+wait 105
+wait 105
+020C: create_explosion_with_radius 2 at 168.692 -336.464 19.678
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 11
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 6
+0565: create_temporary_explosion_fire 146.933 -331.328 23.657 type 2
+0565: create_temporary_explosion_fire 146.933 -331.328 23.657 type 11
+0565: create_temporary_explosion_fire 146.933 -331.328 23.657 type 6
+wait 300
+020C: create_explosion_with_radius 2 at 169.335 -337.878 19.478
+0565: create_temporary_explosion_fire 169.335 -337.878 19.478 type 11
+0565: create_temporary_explosion_fire 169.335 -337.878 19.478 type 6
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 2
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 11
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 1
+0565: create_temporary_explosion_fire 168.282 -335.453 18.769 type 6
+039D: scatter_particles 4 5.0 0 0 0 5000 at 168.282 -335.453 18.769 16.0 0.0 0.1
+wait 500
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 2
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 11
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 6
+0565: create_temporary_explosion_fire 143.1712 -335.231 22.164 type 2
+020C: create_explosion_with_radius 11 at 143.1712 -335.231 22.164
+0565: create_temporary_explosion_fire 143.1712 -335.231 22.164 type 6
+wait 500
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 2
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 11
+0565: create_temporary_explosion_fire 168.692 -336.464 19.678 type 6
+wait 250
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 2
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 11
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 1
+0565: create_temporary_explosion_fire 164.531 -334.908 19.209 type 6
+wait 50
+0565: create_temporary_explosion_fire 158.365 -335.0422 21.805 type 2
+020C: create_explosion_with_radius 11 at 158.365 -335.0422 21.805
+039D: scatter_particles 4 5.0 0 0 0 14000 at 149.7423 -398.409 8.639 16.0 0.0 0.1
+039D: scatter_particles 4 10.0 0 0 0 14000 at 168.692 -336.464 19.678 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 14000 at 149.7423 -398.409 8.639 16.0 0.0 0.1
+039D: scatter_particles 4 10.0 0 0 0 14000 at 169.335 -337.878 19.478 16.0 0.0 0.1
+wait 3500
+jump @SERG3_21004
+
+:SERG3_20979
+Player.WantedLevel($PLAYER_CHAR) = $3310
+00BA: text_styled 'M_FAIL' 2000 ms 1  // MISSION FAILED!
+return
+
+:SERG3_21004
+$245 = 1 // integer values
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 1000
+0318: set_latest_mission_passed 'TEX_3'  // Demolition Man
+030C: progress_made += 1
+Marker.Disable($243)
+return
+
+:SERG3_21067
+if
+   not $3396 == 1 // integer values
+jf @SERG3_21099
+018A: $3379 = create_checkpoint_at $3367 $3368 $3369
+
+:SERG3_21099
+if
+   not $3397 == 1 // integer values
+jf @SERG3_21131
+018A: $3380 = create_checkpoint_at $3370 $3371 $3372
+
+:SERG3_21131
+if
+   not $3398 == 1 // integer values
+jf @SERG3_21163
+018A: $3381 = create_checkpoint_at $3373 $3374 $3375
+
+:SERG3_21163
+if
+   not $3399 == 1 // integer values
+jf @SERG3_21195
+018A: $3382 = create_checkpoint_at $3376 $3377 $3378
+
+:SERG3_21195
+Marker.Disable($3339)
+Marker.Disable($3340)
+Marker.Disable($3341)
+Marker.Disable($3342)
+00BC: text_highpriority 'TEX3_10' 2000 ms 2  // ~g~Drop the bomb at a target.
+return
+
+:SERG3_21232
+if
+   not $3392 == 3 // integer values
+jf @SERG3_21258
+$3339 = Marker.CreateAboveObject($3335)
+
+:SERG3_21258
+if
+   not $3393 == 3 // integer values
+jf @SERG3_21284
+$3340 = Marker.CreateAboveObject($3336)
+
+:SERG3_21284
+if
+   not $3394 == 3 // integer values
+jf @SERG3_21310
+$3341 = Marker.CreateAboveObject($3337)
+
+:SERG3_21310
+if
+   not $3395 == 3 // integer values
+jf @SERG3_21336
+$3342 = Marker.CreateAboveObject($3338)
+
+:SERG3_21336
+Marker.Disable($3379)
+Marker.Disable($3380)
+Marker.Disable($3381)
+Marker.Disable($3382)
+return
+
+:SERG3_21358
+if
+  $3392 == 0 // integer values
+jf @SERG3_21893
+if
+  $3396 == 0 // integer values
+jf @SERG3_21497
+if
+04E6:   object $3335 near_point $3367 $3368 $3369 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_21497
+018C: play_sound 16 at $3367 $3368 $3369
+$3392 = 3 // integer values
+$3396 = 1 // integer values
+01BC: put_object $3335 at 97.574 -381.658 9.2721
+Object.CollisionDetection($3335) = False
+Object.ToggleInMovingList($3335) = False
+
+:SERG3_21497
+if
+  $3397 == 0 // integer values
+jf @SERG3_21618
+if
+04E6:   object $3335 near_point $3370 $3371 $3372 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_21618
+018C: play_sound 16 at $3370 $3371 $3372
+$3392 = 3 // integer values
+$3397 = 1 // integer values
+01BC: put_object $3335 at 156.5491 -348.0284 18.1517
+Object.CollisionDetection($3335) = False
+Object.ToggleInMovingList($3335) = False
+
+:SERG3_21618
+if
+  $3398 == 0 // integer values
+jf @SERG3_21739
+if
+04E6:   object $3335 near_point $3373 $3374 $3375 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_21739
+018C: play_sound 16 at $3373 $3374 $3375
+$3392 = 3 // integer values
+$3398 = 1 // integer values
+01BC: put_object $3335 at 88.1474 -361.8685 27.376
+Object.CollisionDetection($3335) = False
+Object.ToggleInMovingList($3335) = False
+
+:SERG3_21739
+if
+  $3399 == 0 // integer values
+jf @SERG3_21860
+if
+04E6:   object $3335 near_point $3376 $3377 $3378 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_21860
+018C: play_sound 16 at $3376 $3377 $3378
+$3392 = 3 // integer values
+$3399 = 1 // integer values
+01BC: put_object $3335 at 140.0079 -383.1253 36.6172
+Object.CollisionDetection($3335) = False
+Object.ToggleInMovingList($3335) = False
+
+:SERG3_21860
+if
+   not $3392 == 3 // integer values
+jf @SERG3_21893
+00BC: text_highpriority 'TEX3_8' 3000 ms 2  // ~g~You missed the target! Pick up a bomb and try again!
+
+:SERG3_21893
+return
+
+:SERG3_21895
+if
+  $3393 == 0 // integer values
+jf @SERG3_22430
+if
+  $3396 == 0 // integer values
+jf @SERG3_22034
+if
+04E6:   object $3336 near_point $3367 $3368 $3369 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22034
+018C: play_sound 16 at $3367 $3368 $3369
+$3393 = 3 // integer values
+$3396 = 1 // integer values
+01BC: put_object $3336 at 97.574 -381.658 9.2721
+Object.CollisionDetection($3336) = False
+Object.ToggleInMovingList($3336) = False
+
+:SERG3_22034
+if
+  $3397 == 0 // integer values
+jf @SERG3_22155
+if
+04E6:   object $3336 near_point $3370 $3371 $3372 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22155
+018C: play_sound 16 at $3370 $3371 $3372
+$3393 = 3 // integer values
+$3397 = 1 // integer values
+01BC: put_object $3336 at 156.5491 -348.0284 18.1517
+Object.CollisionDetection($3336) = False
+Object.ToggleInMovingList($3336) = False
+
+:SERG3_22155
+if
+  $3398 == 0 // integer values
+jf @SERG3_22276
+if
+04E6:   object $3336 near_point $3373 $3374 $3375 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22276
+018C: play_sound 16 at $3373 $3374 $3375
+$3393 = 3 // integer values
+$3398 = 1 // integer values
+01BC: put_object $3336 at 88.1474 -361.8685 27.376
+Object.CollisionDetection($3336) = False
+Object.ToggleInMovingList($3336) = False
+
+:SERG3_22276
+if
+  $3399 == 0 // integer values
+jf @SERG3_22397
+if
+04E6:   object $3336 near_point $3376 $3377 $3378 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22397
+018C: play_sound 16 at $3376 $3377 $3378
+$3393 = 3 // integer values
+$3399 = 1 // integer values
+01BC: put_object $3336 at 140.0079 -383.1253 36.6172
+Object.CollisionDetection($3336) = False
+Object.ToggleInMovingList($3336) = False
+
+:SERG3_22397
+if
+   not $3393 == 3 // integer values
+jf @SERG3_22430
+00BC: text_highpriority 'TEX3_8' 3000 ms 2  // ~g~You missed the target! Pick up a bomb and try again!
+
+:SERG3_22430
+return
+
+:SERG3_22432
+if
+  $3394 == 0 // integer values
+jf @SERG3_22967
+if
+  $3396 == 0 // integer values
+jf @SERG3_22571
+if
+04E6:   object $3337 near_point $3367 $3368 $3369 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22571
+018C: play_sound 16 at $3367 $3368 $3369
+$3394 = 3 // integer values
+$3396 = 1 // integer values
+01BC: put_object $3337 at 97.574 -381.658 9.2721
+Object.CollisionDetection($3337) = False
+Object.ToggleInMovingList($3337) = False
+
+:SERG3_22571
+if
+  $3397 == 0 // integer values
+jf @SERG3_22692
+if
+04E6:   object $3337 near_point $3370 $3371 $3372 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22692
+018C: play_sound 16 at $3370 $3371 $3372
+$3394 = 3 // integer values
+$3397 = 1 // integer values
+01BC: put_object $3337 at 156.5491 -348.0284 18.1517
+Object.CollisionDetection($3337) = False
+Object.ToggleInMovingList($3337) = False
+
+:SERG3_22692
+if
+  $3398 == 0 // integer values
+jf @SERG3_22813
+if
+04E6:   object $3337 near_point $3373 $3374 $3375 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22813
+018C: play_sound 16 at $3373 $3374 $3375
+$3394 = 3 // integer values
+$3398 = 1 // integer values
+01BC: put_object $3337 at 88.1474 -361.8685 27.376
+Object.CollisionDetection($3337) = False
+Object.ToggleInMovingList($3337) = False
+
+:SERG3_22813
+if
+  $3399 == 0 // integer values
+jf @SERG3_22934
+if
+04E6:   object $3337 near_point $3376 $3377 $3378 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_22934
+018C: play_sound 16 at $3376 $3377 $3378
+$3394 = 3 // integer values
+$3399 = 1 // integer values
+01BC: put_object $3337 at 140.0079 -383.1253 36.6172
+Object.CollisionDetection($3337) = False
+Object.ToggleInMovingList($3337) = False
+
+:SERG3_22934
+if
+   not $3394 == 3 // integer values
+jf @SERG3_22967
+00BC: text_highpriority 'TEX3_8' 3000 ms 2  // ~g~You missed the target! Pick up a bomb and try again!
+
+:SERG3_22967
+return
+
+:SERG3_22969
+if
+  $3395 == 0 // integer values
+jf @SERG3_23504
+if
+  $3396 == 0 // integer values
+jf @SERG3_23108
+if
+04E6:   object $3338 near_point $3367 $3368 $3369 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_23108
+018C: play_sound 16 at $3367 $3368 $3369
+$3395 = 3 // integer values
+$3396 = 1 // integer values
+01BC: put_object $3338 at 97.574 -381.658 9.2721
+Object.CollisionDetection($3338) = False
+Object.ToggleInMovingList($3338) = False
+
+:SERG3_23108
+if
+  $3397 == 0 // integer values
+jf @SERG3_23229
+if
+04E6:   object $3338 near_point $3370 $3371 $3372 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_23229
+018C: play_sound 16 at $3370 $3371 $3372
+$3395 = 3 // integer values
+$3397 = 1 // integer values
+01BC: put_object $3338 at 156.5491 -348.0284 18.1517
+Object.CollisionDetection($3338) = False
+Object.ToggleInMovingList($3338) = False
+
+:SERG3_23229
+if
+  $3398 == 0 // integer values
+jf @SERG3_23350
+if
+04E6:   object $3338 near_point $3373 $3374 $3375 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_23350
+018C: play_sound 16 at $3373 $3374 $3375
+$3395 = 3 // integer values
+$3398 = 1 // integer values
+01BC: put_object $3338 at 88.1474 -361.8685 27.376
+Object.CollisionDetection($3338) = False
+Object.ToggleInMovingList($3338) = False
+
+:SERG3_23350
+if
+  $3399 == 0 // integer values
+jf @SERG3_23471
+if
+04E6:   object $3338 near_point $3376 $3377 $3378 radius 3.5 3.5 2.0 flag 0
+jf @SERG3_23471
+018C: play_sound 16 at $3376 $3377 $3378
+$3395 = 3 // integer values
+$3399 = 1 // integer values
+01BC: put_object $3338 at 140.0079 -383.1253 36.6172
+Object.CollisionDetection($3338) = False
+Object.ToggleInMovingList($3338) = False
+
+:SERG3_23471
+if
+   not $3395 == 3 // integer values
+jf @SERG3_23504
+00BC: text_highpriority 'TEX3_8' 3000 ms 2  // ~g~You missed the target! Pick up a bomb and try again!
+
+:SERG3_23504
+return
+
+:SERG3_23506
+$ONMISSION = 0 // integer values
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+04DB: exit_rc_mode
+$1084 = 0 // integer values
+Marker.Disable($3306)
+Marker.Disable($3379)
+Marker.Disable($3380)
+Marker.Disable($3381)
+Marker.Disable($3382)
+Marker.Disable($3339)
+Marker.Disable($3340)
+Marker.Disable($3341)
+Marker.Disable($3342)
+Actor.DestroyInstantly($3311)
+Actor.DestroyInstantly($3312)
+Actor.DestroyInstantly($3313)
+Actor.DestroyInstantly($3314)
+Actor.DestroyInstantly($3315)
+Actor.DestroyInstantly($3316)
+Actor.DestroyInstantly($3317)
+Actor.DestroyInstantly($3318)
+Actor.DestroyInstantly($3319)
+Actor.DestroyInstantly($3320)
+014F: stop_timer $3402
+0151: remove_status_text $3307
+if
+   not Car.Wrecked($3308)
+jf @SERG3_23661
+020A: set_car $3308 door_status_to 1
+
+:SERG3_23661
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+if
+   not Car.Wrecked($3308)
+jf @SERG3_23691
+Car.LockInCurrentPosition($3308) = False
+
+:SERG3_23691
+Object.Destroy($3335)
+Object.Destroy($3336)
+Object.Destroy($3337)
+Object.Destroy($3338)
+Object.Destroy($3422)
+Object.Destroy($3423)
+Object.Destroy($3424)
+Object.Destroy($3425)
+Model.Destroy(#DYNAMITE)
+Model.Destroy(#TOPFUN)
+Model.Destroy(#WMYCW)
+Model.Destroy(#HMYAP)
+Model.Destroy(#HAMMER)
+Model.Destroy(#RCGOBLIN)
+Model.Destroy(#BARREL2)
+Model.Destroy(#GDA)
+Model.Destroy(#GDB)
+Model.Destroy(#COLT45)
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+031A: remove_all_fires
+mission_cleanup
+return

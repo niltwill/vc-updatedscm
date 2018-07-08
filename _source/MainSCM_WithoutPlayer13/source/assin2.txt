@@ -1,0 +1,744 @@
+:ASSIN2
+thread 'ASSIN2'
+gosub @ASSIN2_46
+if
+wasted_or_busted
+jf @ASSIN2_37
+gosub @ASSIN2_4071
+
+:ASSIN2_37
+gosub @ASSIN2_4155
+end_thread
+
+:ASSIN2_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+wait 0
+054C: use_GXT_table 'ASSIN2'
+$6316 = 0 // integer values
+$6317 = 394.9916 // floating-point values
+$6318 = 202.5176 // floating-point values
+$6319 = 9.763453 // floating-point values
+$6320 = 403.978 // floating-point values
+$6321 = 222.629 // floating-point values
+$6322 = 10.761 // floating-point values
+$6323 = 0 // integer values
+$6324 = 0 // integer values
+$6326 = 0 // integer values
+$6327 = 0 // integer values
+$6328 = 0 // integer values
+$6329 = 0 // integer values
+$6335 = 0 // integer values
+$6333 = 99999 // integer values
+$6334 = 0 // integer values
+$6316 = 0 // integer values
+Model.Load(#COMET)
+Model.Load(#WFYRI)
+Model.Load(#CELLPHONE)
+
+:ASSIN2_223
+if or
+   not Model.Available(#COMET)
+   not Model.Available(#WFYRI)
+   not Model.Available(#CELLPHONE)
+jf @ASSIN2_259
+wait 0
+jump @ASSIN2_223
+
+:ASSIN2_259
+fade 1 1500
+03DE: set_pedestrians_density_multiplier_to 0.0
+01EB: set_traffic_density_multiplier_to 0.0
+0395: clear_area 0 at 482.4669 244.3981 range 10.0611 1.0
+042B: clear_peds_from_cube 467.323 237.113 5.992 491.743 252.845 15.029
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+0055: put_player $PLAYER_CHAR at 482.4622 244.5908 10.10115
+0171: set_player $PLAYER_CHAR z_angle_to 359.0237
+Camera.SetPosition(482.462, 242.7434, 12.795, 0.0, 0.0, 0.0)
+0395: clear_area 0 at 482.462 242.7434 range 12.795 1.0
+0157: camera_on_player $PLAYER_CHAR mode 4 switchstyle 2
+Camera.SetBehindPlayer
+052B: actor $PLAYER_ACTOR hold_cellphone 1
+03CF: load_wav 'JOB2_1B' as 1
+03CF: load_wav 'JOB1_1C' as 2
+
+:ASSIN2_468
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @ASSIN2_498
+wait 0
+jump @ASSIN2_468
+
+:ASSIN2_498
+if
+fading
+jf @ASSIN2_522
+wait 0
+jump @ASSIN2_498
+
+:ASSIN2_522
+00BC: text_highpriority 'ASM2_A' 10000 ms 1  // My compliments on a job well done Mr. Teal. My client was very pleased.
+03D1: play_wav 1
+
+:ASSIN2_541
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN2_596
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN2_589
+jump @ASSIN2_824
+
+:ASSIN2_589
+jump @ASSIN2_541
+
+:ASSIN2_596
+03D5: remove_text 'ASM2_A'  // My compliments on a job well done Mr. Teal. My client was very pleased.
+040D: unload_wav 1
+00BC: text_highpriority 'ASM1_C' 10000 ms 1  // I have more work for you with a more 'hands-on' approach.
+03D1: play_wav 2
+
+:ASSIN2_629
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN2_684
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN2_677
+jump @ASSIN2_824
+
+:ASSIN2_677
+jump @ASSIN2_629
+
+:ASSIN2_684
+03D5: remove_text 'ASM1_C'  // I have more work for you with a more 'hands-on' approach.
+040D: unload_wav 2
+03CF: load_wav 'JOB1_1D' as 1
+
+:ASSIN2_710
+if
+83D0:   not wav 1 loaded
+jf @ASSIN2_736
+wait 0
+jump @ASSIN2_710
+
+:ASSIN2_736
+00BC: text_highpriority 'ASM1_B' 10000 ms 1  // Your next job is taped under the phone.
+03D1: play_wav 1
+
+:ASSIN2_755
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($PLAYER_ACTOR)
+jf @ASSIN2_810
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @ASSIN2_803
+jump @ASSIN2_824
+
+:ASSIN2_803
+jump @ASSIN2_755
+
+:ASSIN2_810
+03D5: remove_text 'ASM1_B'  // Your next job is taped under the phone.
+040D: unload_wav 1
+
+:ASSIN2_824
+040D: unload_wav 1
+040D: unload_wav 2
+03EB: clear_small_messages_only
+wait 500
+052B: actor $PLAYER_ACTOR hold_cellphone 0
+Model.Destroy(#CELLPHONE)
+fade 0 1500
+03DE: set_pedestrians_density_multiplier_to 1.0
+01EB: set_traffic_density_multiplier_to 1.0
+
+:ASSIN2_872
+if
+fading
+jf @ASSIN2_896
+wait 0
+jump @ASSIN2_872
+
+:ASSIN2_896
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+fade 1 1500
+
+:ASSIN2_911
+if
+fading
+jf @ASSIN2_935
+wait 0
+jump @ASSIN2_911
+
+:ASSIN2_935
+Player.CanMove($PLAYER_CHAR) = True
+
+:ASSIN2_942
+wait 0
+if
+  $6323 == 0 // integer values
+jf @ASSIN2_1071
+00BC: text_highpriority 'ASM2_1' 10000 ms 2  // ~g~Mrs. Dawson will be leaving the Jewelry shop in Vice Point soon. Kill her. It must look like a car accident.
+018A: $6325 = create_checkpoint_at $6320 $6321 $6322
+01E8: create_forbidden_for_cars_cube 397.0 220.0 -9.71 402.61 191.618 9.89
+022B: create_forbidden_for_peds_cube 306.885 179.0982 -10.0907 413.129 203.139 10.89
+16@ = 0 // integer values
+$6323 = 1 // integer values
+
+:ASSIN2_1071
+if
+  $6323 == 1 // integer values
+jf @ASSIN2_2168
+if
+  $6324 == 0 // integer values
+jf @ASSIN2_2168
+if
+00F8:   player $PLAYER_CHAR stopped 1 $6320 $6321 $6322 radius 2.0 2.0 3.0
+jf @ASSIN2_2168
+if
+0443:   player $PLAYER_CHAR in_a_car
+jf @ASSIN2_2153
+Marker.Disable($6325)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+0395: clear_area 1 at $6317 $6318 range $6319 30.0
+$6312 = Actor.Create(CivFemale, #WFYRI, 379.3426, 203.4908, 11.39251)
+0489: set_actor $6312 muted 1
+Actor.Angle($6312) = 268.9735
+Camera.SetPosition(390.952, 212.377, 16.131, 0.0, 0.0, 0.0)
+0157: camera_on_player $PLAYER_CHAR mode 15 switchstyle 2
+0395: clear_area 1 at $6317 $6318 range $6319 15.0
+$6313 = Car.Create(#COMET, $6317, $6318, $6319)
+0229: set_car $6313 color_to 6 6
+Car.Angle($6313) = 178.2268
+Car.SetMaxSpeed($6313, 0.0)
+00AE: set_vehicle $6313 traffic_behavior_to 0
+Car.Health($6313) = 893
+020A: set_car $6313 door_status_to 3
+
+:ASSIN2_1367
+if
+   not $6326 == 5 // integer values
+jf @ASSIN2_2100
+wait 0
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_1461
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_1461
+if
+  $6326 == 0 // integer values
+jf @ASSIN2_1461
+01D5: actor $6312 go_to_and_drive_car $6313
+16@ = 0 // integer values
+$6326 = 1 // integer values
+
+:ASSIN2_1461
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_1625
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_1625
+if
+  $6326 == 1 // integer values
+jf @ASSIN2_1625
+if
+  16@ > 1000 // integer values
+jf @ASSIN2_1625
+Camera.SetPosition(378.6064, 203.7468, 11.02881, 0.0, 0.0, 0.0)
+Camera.PointAt(379.5837, 203.6236, 11.19348, 2)
+00BC: text_highpriority 'ASM2_8' 6000 ms 2  // ~g~You must make Mrs. Dawson's death look like an accident. Do not use any weapons.
+00BB: text_lowpriority 'ASM2_10' 6000 ms 2  // ~g~When her car bursts into flames make your self scarce!
+16@ = 0 // integer values
+$6326 = 2 // integer values
+
+:ASSIN2_1625
+if
+  $6326 == 2 // integer values
+jf @ASSIN2_1890
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_1890
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_1890
+if
+00FF:   actor $6312 0 384.3994 203.4012 10.39251 radius 1.5 1.5 1.5
+jf @ASSIN2_1834
+0395: clear_area 1 at $6317 $6318 range $6319 50.0
+Camera.SetPosition(390.022, 205.2038, 10.93295, 0.0, 0.0, 0.0)
+Actor.PutAt($6312, 390.8115, 202.5918, 10.07062)
+Actor.Angle($6312) = 270.7903
+01D5: actor $6312 go_to_and_drive_car $6313
+Camera.OnVehicle($6313, 15, 2)
+$6326 = 3 // integer values
+jump @ASSIN2_1890
+
+:ASSIN2_1834
+if
+  16@ > 14000 // integer values
+jf @ASSIN2_1890
+Actor.PutAt($6312, 384.3994, 203.4012, 10.39251)
+Actor.Angle($6312) = 270.0
+16@ = 0 // integer values
+
+:ASSIN2_1890
+if
+  $6326 == 3 // integer values
+jf @ASSIN2_2024
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_2024
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_2024
+if
+0448:   actor $6312 in_car $6313
+jf @ASSIN2_2024
+$6314 = Marker.CreateAboveActor($6312)
+020A: set_car $6313 door_status_to 2
+Car.SetMaxSpeed($6313, 15.0)
+Car.SetToPsychoDriver($6313)
+00AE: set_vehicle $6313 traffic_behavior_to 1
+Car.ImmuneToNonPlayer($6313) = True
+054A: set_actor $6312 can_be_shot_in_a_car 0
+16@ = 0 // integer values
+$6326 = 4 // integer values
+
+:ASSIN2_2024
+if
+  $6326 == 4 // integer values
+jf @ASSIN2_2093
+if
+  16@ > 4000 // integer values
+jf @ASSIN2_2093
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+03D5: remove_text 'ASM2_10'  // ~g~When her car bursts into flames make your self scarce!
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+$6326 = 5 // integer values
+
+:ASSIN2_2093
+jump @ASSIN2_1367
+
+:ASSIN2_2100
+$6324 = 1 // integer values
+$6323 = 2 // integer values
+03CC: car $6313 add_to_stuck_car_check 0.5 = 1000
+0190: add_vehicle $6313 to_flipped_check
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 1
+16@ = 0 // integer values
+jump @ASSIN2_2168
+
+:ASSIN2_2153
+00BC: text_highpriority 'ASM2_9' 3000 ms 2  // ~g~You need some wheels for this job!
+
+:ASSIN2_2168
+if
+  $6324 == 1 // integer values
+jf @ASSIN2_2391
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_2391
+if
+82BF:   not car $6313 sunk
+jf @ASSIN2_2391
+if
+8495:   not vehicle $6313 burning
+jf @ASSIN2_2391
+if or
+03CE:   car $6313 stuck
+018F:   vehicle $6313 flipped
+jf @ASSIN2_2391
+if
+82CA:   not car $6313 bounding_sphere_visible
+jf @ASSIN2_2391
+Car.StorePos($6313, $6330, $6331, $6332)
+02C1: set $6330 $6331 $6332 to_car_path_coords_closest_to $6330 $6331 $6332
+if
+838A:   not car_in_cube $6330 $6331 $6332 4.0 4.0 3.0
+jf @ASSIN2_2391
+if
+80C2:   not sphere_onscreen $6330 $6331 $6332 3.0
+jf @ASSIN2_2391
+Car.SetMaxSpeed($6313, 30.0)
+00AE: set_vehicle $6313 traffic_behavior_to 2
+Car.SetToPsychoDriver($6313)
+
+:ASSIN2_2391
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_2467
+$6315 = Car.Health($6313)
+$6315 -= 243 // integer values
+$6315 *= 10 // integer values
+$6315 /= 65 // integer values
+if
+  0 >= $6315 // integer values
+jf @ASSIN2_2460
+0151: remove_status_text $6315
+
+:ASSIN2_2460
+jump @ASSIN2_2474
+
+:ASSIN2_2467
+$6315 = 0 // integer values
+
+:ASSIN2_2474
+if
+  $6323 == 2 // integer values
+jf @ASSIN2_2532
+if
+  $6329 == 0 // integer values
+jf @ASSIN2_2532
+03C4: set_status_text_to $6315 1 'ASM2_2'  // health:
+$6329 = 1 // integer values
+
+:ASSIN2_2532
+if
+  $6324 == 1 // integer values
+jf @ASSIN2_2661
+if
+  $6323 == 2 // integer values
+jf @ASSIN2_2661
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_2661
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_2661
+if
+  $6327 == 0 // integer values
+jf @ASSIN2_2661
+if
+8185:   not car $6313 health >= 892
+jf @ASSIN2_2661
+Car.SetMaxSpeed($6313, 29.0)
+00AE: set_vehicle $6313 traffic_behavior_to 2
+$6327 = 1 // integer values
+
+:ASSIN2_2661
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_3527
+if
+  $6335 == 0 // integer values
+jf @ASSIN2_3192
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_3185
+if
+0495:   vehicle $6313 burning
+jf @ASSIN2_2778
+if
+  $6333 > 1 // integer values
+jf @ASSIN2_2771
+$6334 = 1 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_9' as 1
+
+:ASSIN2_2771
+jump @ASSIN2_3185
+
+:ASSIN2_2778
+if
+  14 > $6315 // integer values
+jf @ASSIN2_2847
+if
+  $6333 > 2 // integer values
+jf @ASSIN2_2840
+$6334 = 2 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_8' as 1
+
+:ASSIN2_2840
+jump @ASSIN2_3185
+
+:ASSIN2_2847
+if
+  28 > $6315 // integer values
+jf @ASSIN2_2916
+if
+  $6333 > 3 // integer values
+jf @ASSIN2_2909
+$6334 = 3 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_7' as 1
+
+:ASSIN2_2909
+jump @ASSIN2_3185
+
+:ASSIN2_2916
+if
+  45 > $6315 // integer values
+jf @ASSIN2_2985
+if
+  $6333 > 4 // integer values
+jf @ASSIN2_2978
+$6334 = 4 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_6' as 1
+
+:ASSIN2_2978
+jump @ASSIN2_3185
+
+:ASSIN2_2985
+if
+  59 > $6315 // integer values
+jf @ASSIN2_3054
+if
+  $6333 > 5 // integer values
+jf @ASSIN2_3047
+$6334 = 5 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_5' as 1
+
+:ASSIN2_3047
+jump @ASSIN2_3185
+
+:ASSIN2_3054
+if
+  72 > $6315 // integer values
+jf @ASSIN2_3123
+if
+  $6333 > 6 // integer values
+jf @ASSIN2_3116
+$6334 = 6 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_4' as 1
+
+:ASSIN2_3116
+jump @ASSIN2_3185
+
+:ASSIN2_3123
+if
+  88 > $6315 // integer values
+jf @ASSIN2_3185
+if
+  $6333 > 7 // integer values
+jf @ASSIN2_3185
+$6334 = 7 // integer values
+$6335 = 1 // integer values
+03CF: load_wav 'JOB2_3' as 1
+
+:ASSIN2_3185
+jump @ASSIN2_3520
+
+:ASSIN2_3192
+if
+  $6335 == 1 // integer values
+jf @ASSIN2_3363
+if
+03D0:   wav 1 loaded
+jf @ASSIN2_3356
+03D1: play_wav 1
+if or
+  $6334 == 2 // integer values
+  $6334 == 4 // integer values
+  $6334 == 5 // integer values
+  $6334 == 7 // integer values
+jf @ASSIN2_3283
+00BC: text_highpriority 'ASM2_13' 3000 ms 1  // Oh my god!
+
+:ASSIN2_3283
+if
+  $6334 == 3 // integer values
+jf @ASSIN2_3316
+00BC: text_highpriority 'ASM2_12' 3000 ms 1  // Somebody help me!
+
+:ASSIN2_3316
+if
+  $6334 == 6 // integer values
+jf @ASSIN2_3349
+00BC: text_highpriority 'ASM2_11' 3000 ms 1  // Help me!
+
+:ASSIN2_3349
+$6335 = 2 // integer values
+
+:ASSIN2_3356
+jump @ASSIN2_3520
+
+:ASSIN2_3363
+if
+  $6335 == 2 // integer values
+jf @ASSIN2_3520
+if
+03D2:   wav 1 ended
+jf @ASSIN2_3520
+$6335 = 0 // integer values
+040D: unload_wav 1
+if or
+  $6334 == 2 // integer values
+  $6334 == 4 // integer values
+  $6334 == 5 // integer values
+  $6334 == 7 // integer values
+jf @ASSIN2_3456
+03D5: remove_text 'ASM2_13'  // Oh my god!
+
+:ASSIN2_3456
+if
+  $6334 == 3 // integer values
+jf @ASSIN2_3484
+03D5: remove_text 'ASM2_12'  // Somebody help me!
+
+:ASSIN2_3484
+if
+  $6334 == 6 // integer values
+jf @ASSIN2_3512
+03D5: remove_text 'ASM2_11'  // Help me!
+
+:ASSIN2_3512
+0084: $6333 = $6334 // integer values and handles
+
+:ASSIN2_3520
+jump @ASSIN2_3538
+
+:ASSIN2_3527
+$6335 = 0 // integer values
+040D: unload_wav 1
+
+:ASSIN2_3538
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_3718
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_3718
+if
+0495:   vehicle $6313 burning
+jf @ASSIN2_3718
+if
+01FC:   player $PLAYER_CHAR near_car $6313 radius 20.0 20.0 0
+jf @ASSIN2_3671
+$6316 = 1 // integer values
+if
+  $6328 == 0 // integer values
+jf @ASSIN2_3664
+00BC: text_highpriority 'ASM2_3' 3000 ms 2  // ~g~She's gonna blow! Get out of there!
+$6328 = 1 // integer values
+
+:ASSIN2_3664
+jump @ASSIN2_3718
+
+:ASSIN2_3671
+$6316 = 0 // integer values
+if
+  $6328 == 0 // integer values
+jf @ASSIN2_3718
+00BC: text_highpriority 'ASM2_3' 3000 ms 2  // ~g~She's gonna blow! Get out of there!
+$6328 = 1 // integer values
+
+:ASSIN2_3718
+if
+  $6324 > 0 // integer values
+jf @ASSIN2_3836
+if and
+   Car.Wrecked($6313)
+   Actor.Dead($6312)
+jf @ASSIN2_3836
+if
+831E:   not vehicle $6313 hit_by_weapon 47
+jf @ASSIN2_3836
+if and
+831D:   not actor $6312 hit_by_weapon 47
+  $6316 == 0 // integer values
+jf @ASSIN2_3814
+jump @ASSIN2_4088
+jump @ASSIN2_3836
+
+:ASSIN2_3814
+00BC: text_highpriority 'ASM2_6' 5000 ms 1  // ~r~You were too near the scene of the 'accident'!
+010D: set_player $PLAYER_CHAR wanted_level_to 2
+jump @ASSIN2_4071
+
+:ASSIN2_3836
+if
+  $6324 > 0 // integer values
+jf @ASSIN2_3955
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_3955
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_3955
+if
+80E9:   not player $PLAYER_CHAR 0 $6312 radius 250.0 250.0
+jf @ASSIN2_3955
+if
+82CB:   not actor $6312 bounding_sphere_visible
+jf @ASSIN2_3955
+00BC: text_highpriority 'ASM2_5' 5000 ms 1  // ~r~She got away!
+if
+    $6327 == 1 // integer values
+then
+    010D: set_player $PLAYER_CHAR wanted_level_to 2
+end
+jump @ASSIN2_4071
+
+:ASSIN2_3955
+if
+  $6324 > 0 // integer values
+jf @ASSIN2_4064
+if
+   not Car.Wrecked($6313)
+jf @ASSIN2_4064
+if
+   not Actor.Dead($6312)
+jf @ASSIN2_4064
+if
+   Actor.InCar($6312, $6313)
+jf @ASSIN2_4064
+if
+031E:   vehicle $6313 hit_by_weapon 47
+jf @ASSIN2_4064
+00BC: text_highpriority 'ASM2_7' 5000 ms 1  // ~r~It's supposed to look like an accident! Try ramming her off the road instead!
+010D: set_player $PLAYER_CHAR wanted_level_to 2
+jump @ASSIN2_4071
+
+:ASSIN2_4064
+jump @ASSIN2_942
+
+:ASSIN2_4071
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:ASSIN2_4088
+$299 = 1 // integer values
+0318: set_latest_mission_passed 'JOB_2'  // Waste the Wife
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+030C: progress_made += 1
+0533: increment_assassination_contracts_by 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 2000
+Marker.Disable($297)
+return
+
+:ASSIN2_4155
+$ONMISSION = 0 // integer values
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 0
+01E7: remove_forbidden_for_cars_cube 397.0 220.0 -9.71 402.61 191.618 9.89
+022A: remove_forbidden_for_peds_cube 306.885 179.0982 -10.0907 413.129 203.139 10.89
+Model.Destroy(#WFYRI)
+Model.Destroy(#COMET)
+Model.Destroy(#CELLPHONE)
+Marker.Disable($6314)
+Marker.Disable($6325)
+0151: remove_status_text $6315
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return

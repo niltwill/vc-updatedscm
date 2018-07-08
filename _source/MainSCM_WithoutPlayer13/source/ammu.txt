@@ -1,0 +1,4045 @@
+:AMMU
+$859 = 0 // integer values
+$860 = -30000 // integer values
+$861 = -60000 // integer values
+$851 = 0 // integer values
+$849 = 0 // integer values
+$850 = 0 // integer values
+$842 = 0 // integer values
+$843 = 0 // integer values
+$846 = 0 // integer values
+$844 = 0 // integer values
+$845 = 0 // integer values
+$866 = 0 // integer values
+$862 = 0 // integer values
+$863 = 0 // integer values
+$871 = 0 // integer values
+$872 = 0 // integer values
+$902 = 0 // integer values
+$903 = 0 // integer values
+$904 = 0 // integer values
+$905 = 0 // integer values
+$867 = 0 // integer values
+$868 = 0 // integer values
+$847 = 0 // integer values
+$855 = 0 // integer values
+$848 = 0 // integer values
+$856 = 0 // integer values
+$907 = 0 // integer values
+$906 = 0 // integer values
+$874 = 0 // integer values
+$886 = 0 // integer values
+$887 = 0 // integer values
+$888 = 0 // integer values
+018D: $865 = create_sound 0 at $896 $897 $898
+018E: stop_sound $865
+thread 'AMMU'
+set_wb_check_to 0
+create_thread @AMMU1
+create_thread @AMMU2
+create_thread @AMMU3
+create_thread @HARD1
+create_thread @HARD2
+create_thread @HARD3
+end_thread
+
+:AMMU1
+thread 'AMMU1'
+
+:AMMU1_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_3425
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @AMMU1_3418
+if
+00F5:   player $PLAYER_CHAR 0 $531 $532 $533 radius 35.0 35.0 20.0
+jf @AMMU1_3393
+if
+  $842 == 0 // integer values
+jf @AMMU1_423
+gosub @HARD3_5492
+0084: $857 = $859 // integer values and handles
+0060: $857 -= $860 // integer values
+$889 = Object.Create(#COLT45, -60.793, -1488.62, 12.24)
+Object.ToggleInMovingList($889) = False
+0453: object $889 set_rotation 0.0 8.0 0.0 
+$890 = Object.Create(#INGRAMSL, -62.293, -1488.49, 12.223)
+Object.ToggleInMovingList($890) = False
+0453: object $890 set_rotation 0.0 2.0 0.0  
+$891 = Object.Create(#CHROMEGUN, -63.993, -1488.331, 12.24)
+Object.ToggleInMovingList($891) = False
+0453: object $891 set_rotation 0.0 0.0 -1.0 
+$892 = Object.Create(#RUGER, -65.393, -1488.23, 12.18)
+Object.ToggleInMovingList($892) = False
+$893 = Object.Create(#BODYARMOUR, -66.629, -1487.92, 12.113)
+Object.ToggleInMovingList($893) = False
+if
+  $857 > 30000 // integer values
+jf @AMMU1_409
+$853 = Actor.Create(CivMale, #SPECIAL21, -62.5, -1485.1, 9.6)
+Actor.Health($853) = 350
+01ED: clear_actor $853 threat_search
+0350: set_actor $853 maintain_position_when_attacked 1
+gosub @HARD3_4804
+
+:AMMU1_409
+$842 = 1 // integer values
+jump @AMMU1_478
+
+:AMMU1_423
+if
+0057:   player $PLAYER_CHAR 0 -57.7 -1468.8 13.4 -69.1 -1487.2 9.0
+jf @AMMU1_478
+gosub @HARD3_2766
+
+:AMMU1_478
+if
+   not Actor.Dead($853)
+jf @AMMU1_3386
+if
+  $844 == 0 // integer values
+jf @AMMU1_3386
+if
+  $1180 == 0 // integer values
+jf @AMMU1_3386
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @AMMU1_3386
+if
+00F9:   player $PLAYER_CHAR stopped 1 $531 $532 $533 radius 1.0 1.0 2.0
+jf @AMMU1_3303
+gosub @HARD3_4750
+
+:AMMU1_602
+if
+  $849 == 0 // integer values
+jf @AMMU1_3296
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1161
+if
+  $851 == 0 // integer values
+jf @AMMU1_1161
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($853)
+jf @AMMU1_696
+0210: player $PLAYER_CHAR look_at_actor $853
+
+:AMMU1_696
+Camera.SetPosition(-60.508, -1486.245, 12.428, 0.0, 0.0, 0.0)
+Camera.PointAt(-60.593, -1487.241, 12.433, 1)
+if
+  $862 == 0 // integer values
+jf @AMMU1_789
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @AMMU1_799
+
+:AMMU1_789
+0460: set_camera_pointing_time 0.0 800
+
+:AMMU1_799
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_848
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:AMMU1_848
+if
+  $851 == 0 // integer values
+jf @AMMU1_1161
+wait 0
+00BA: text_styled 'PISTOL' 1000 ms 4  // Pistol
+01E5: text_1number_highpriority 'G_COST' 100 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1154
+gosub @HARD3_3761
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 4 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+0490:   player $PLAYER_CHAR has_weapon 18
+jf @AMMU1_983
+01E5: text_1number_highpriority 'HELP54' 100 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU1_983
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU1_1129
+0419: $852 = player $PLAYER_CHAR weapon 17 ammo
+if
+   Player.Money($PLAYER_CHAR) > 99
+jf @AMMU1_1122
+if
+  9999 > $852 // integer values
+jf @AMMU1_1115
+01B1: give_player $PLAYER_CHAR weapon 17 ammo 68 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU1_1085
+01B1: give_player $PLAYER_CHAR weapon 17 ammo 9999 // Load the weapon model before using this
+
+:AMMU1_1085
+01B8: set_player $PLAYER_CHAR armed_weapon_to 17
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -100
+0528: add 100 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU1_1115
+jump @AMMU1_1129
+
+:AMMU1_1122
+gosub @HARD3_3615
+
+:AMMU1_1129
+if
+  $849 == 1 // integer values
+jf @AMMU1_1154
+jump @AMMU1_10
+
+:AMMU1_1154
+jump @AMMU1_848
+
+:AMMU1_1161
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1644
+if
+  $851 == 1 // integer values
+jf @AMMU1_1644
+Camera.SetPosition(-62.008, -1486.245, 12.428, 0.0, 0.0, 0.0)
+Camera.PointAt(-62.093, -1487.241, 12.433, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1312
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+
+:AMMU1_1312
+if
+  $851 == 1 // integer values
+jf @AMMU1_1644
+wait 0
+00BA: text_styled 'INGRAM' 1000 ms 4  // Mac
+01E5: text_1number_highpriority 'G_COST' 300 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1637
+gosub @HARD3_3761
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 6 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if or
+0490:   player $PLAYER_CHAR has_weapon 25
+0490:   player $PLAYER_CHAR has_weapon 23
+0490:   player $PLAYER_CHAR has_weapon 22
+jf @AMMU1_1463
+01E5: text_1number_highpriority 'HELP54' 300 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU1_1463
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU1_1612
+0419: $852 = player $PLAYER_CHAR weapon 24 ammo
+if
+   Player.Money($PLAYER_CHAR) > 299
+jf @AMMU1_1605
+if
+  9999 > $852 // integer values
+jf @AMMU1_1598
+01B1: give_player $PLAYER_CHAR weapon 24 ammo 120 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU1_1566
+01B1: give_player $PLAYER_CHAR weapon 24 ammo 9999 // Load the weapon model before using this
+
+:AMMU1_1566
+01B8: set_player $PLAYER_CHAR armed_weapon_to 24
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -300
+0528: add 300 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU1_1598
+jump @AMMU1_1612
+
+:AMMU1_1605
+gosub @HARD3_3615
+
+:AMMU1_1612
+if
+  $849 == 1 // integer values
+jf @AMMU1_1637
+jump @AMMU1_10
+
+:AMMU1_1637
+jump @AMMU1_1312
+
+:AMMU1_1644
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2210
+if
+  $851 == 2 // integer values
+jf @AMMU1_2210
+Camera.SetPosition(-63.508, -1486.245, 12.428, 0.0, 0.0, 0.0)
+Camera.PointAt(-63.593, -1487.241, 12.433, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_1795
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+
+:AMMU1_1795
+if
+  $851 == 2 // integer values
+jf @AMMU1_2210
+wait 0
+00BA: text_styled 'SHOTGN1' 1000 ms 4  // Shotgun
+if
+  $902 == 0 // integer values
+jf @AMMU1_1872
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU1_1890
+
+:AMMU1_1872
+01E5: text_1number_highpriority 'G_COST' 500 flag 1000 time 1  // Cost: $~1~
+
+:AMMU1_1890
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2203
+gosub @HARD3_3761
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 5 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $902 == 1 // integer values
+jf @AMMU1_1997
+if or
+0490:   player $PLAYER_CHAR has_weapon 20
+0490:   player $PLAYER_CHAR has_weapon 21
+jf @AMMU1_1997
+01E5: text_1number_highpriority 'HELP54' 500 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU1_1997
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU1_2178
+if
+  $902 == 1 // integer values
+jf @AMMU1_2171
+0419: $852 = player $PLAYER_CHAR weapon 19 ammo
+if
+   Player.Money($PLAYER_CHAR) > 499
+jf @AMMU1_2157
+if
+  9999 > $852 // integer values
+jf @AMMU1_2150
+01B1: give_player $PLAYER_CHAR weapon 19 ammo 32 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU1_2118
+01B1: give_player $PLAYER_CHAR weapon 19 ammo 9999 // Load the weapon model before using this
+
+:AMMU1_2118
+01B8: set_player $PLAYER_CHAR armed_weapon_to 19
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -500
+0528: add 500 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU1_2150
+jump @AMMU1_2164
+
+:AMMU1_2157
+gosub @HARD3_3615
+
+:AMMU1_2164
+jump @AMMU1_2178
+
+:AMMU1_2171
+gosub @HARD3_3615
+
+:AMMU1_2178
+if
+  $849 == 1 // integer values
+jf @AMMU1_2203
+jump @AMMU1_10
+
+:AMMU1_2203
+jump @AMMU1_1795
+
+:AMMU1_2210
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2770
+if
+  $851 == 3 // integer values
+jf @AMMU1_2770
+Camera.SetPosition(-65.008, -1486.245, 12.428, 0.0, 0.0, 0.0)
+Camera.PointAt(-65.093, -1487.241, 12.433, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2361
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+
+:AMMU1_2361
+if
+  $851 == 3 // integer values
+jf @AMMU1_2770
+wait 0
+00BA: text_styled 'RUGER' 1000 ms 4  // Kruger
+if
+  $903 == 0 // integer values
+jf @AMMU1_2438
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU1_2456
+
+:AMMU1_2438
+01E5: text_1number_highpriority 'G_COST' 1000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU1_2456
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2763
+gosub @HARD3_3761
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 7 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $903 == 1 // integer values
+jf @AMMU1_2556
+if
+0490:   player $PLAYER_CHAR has_weapon 26
+jf @AMMU1_2556
+01E5: text_1number_highpriority 'HELP54' 1000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU1_2556
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU1_2738
+if
+  $903 == 1 // integer values
+jf @AMMU1_2731
+0419: $852 = player $PLAYER_CHAR weapon 27 ammo
+if
+   Player.Money($PLAYER_CHAR) > 999
+jf @AMMU1_2717
+if
+  9999 > $852 // integer values
+jf @AMMU1_2710
+01B1: give_player $PLAYER_CHAR weapon 27 ammo 150 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU1_2678
+01B1: give_player $PLAYER_CHAR weapon 27 ammo 9999 // Load the weapon model before using this
+
+:AMMU1_2678
+01B8: set_player $PLAYER_CHAR armed_weapon_to 27
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -1000
+0528: add 1000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU1_2710
+jump @AMMU1_2724
+
+:AMMU1_2717
+gosub @HARD3_3615
+
+:AMMU1_2724
+jump @AMMU1_2738
+
+:AMMU1_2731
+gosub @HARD3_3615
+
+:AMMU1_2738
+if
+  $849 == 1 // integer values
+jf @AMMU1_2763
+jump @AMMU1_10
+
+:AMMU1_2763
+jump @AMMU1_2361
+
+:AMMU1_2770
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_3289
+if
+  $851 == 4 // integer values
+jf @AMMU1_3289
+Camera.SetPosition(-66.508, -1486.245, 12.428, 0.0, 0.0, 0.0)
+Camera.PointAt(-66.593, -1487.241, 12.433, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_2921
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+
+:AMMU1_2921
+if
+  $851 == 4 // integer values
+jf @AMMU1_3289
+wait 0
+00BA: text_styled 'ARMOUR' 1000 ms 4  // Body Armor
+if
+  $867 == 0 // integer values
+jf @AMMU1_2998
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU1_3016
+
+:AMMU1_2998
+01E5: text_1number_highpriority 'G_COST' 200 flag 1000 time 1  // Cost: $~1~
+
+:AMMU1_3016
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_3282
+gosub @HARD3_3761
+04DD: $873 = actor $PLAYER_ACTOR armour
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU1_3257
+if
+  $867 == 1 // integer values
+jf @AMMU1_3250
+if
+   Player.Money($PLAYER_CHAR) > 199
+jf @AMMU1_3236
+if
+  100 > $873 // integer values
+jf @AMMU1_3159
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+jump @AMMU1_3229
+
+:AMMU1_3159
+if
+  $1582 == 1 // integer values
+jf @AMMU1_3229
+if
+  200 > $873 // integer values
+jf @AMMU1_3229
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU1_3229
+jump @AMMU1_3243
+
+:AMMU1_3236
+gosub @HARD3_3615
+
+:AMMU1_3243
+jump @AMMU1_3257
+
+:AMMU1_3250
+gosub @HARD3_3615
+
+:AMMU1_3257
+if
+  $849 == 1 // integer values
+jf @AMMU1_3282
+jump @AMMU1_10
+
+:AMMU1_3282
+jump @AMMU1_2921
+
+:AMMU1_3289
+jump @AMMU1_602
+
+:AMMU1_3296
+jump @AMMU1_3386
+
+:AMMU1_3303
+if
+80F6:   not player $PLAYER_CHAR 1 $531 $532 $533 radius 1.0 1.0 2.0
+jf @AMMU1_3386
+if
+  $849 == 1 // integer values
+jf @AMMU1_3386
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU1_3386
+gosub @HARD3_5024
+
+:AMMU1_3386
+jump @AMMU1_3418
+
+:AMMU1_3393
+if
+  $842 == 1 // integer values
+jf @AMMU1_3418
+gosub @HARD3_5056
+
+:AMMU1_3418
+jump @AMMU1_3432
+
+:AMMU1_3425
+gosub @HARD3_5056
+
+:AMMU1_3432
+jump @AMMU1_10
+
+:AMMU2
+thread 'AMMU2'
+
+:AMMU2_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3980
+if
+  $1003 == 1 // integer values
+jf @AMMU2_3973
+if
+0057:   player $PLAYER_CHAR 0 357.7 1016.6 30.1 410.4 1110.4 16.0
+jf @AMMU2_3948
+if
+  $842 == 0 // integer values
+jf @AMMU2_503
+gosub @HARD3_5492
+0084: $857 = $859 // integer values and handles
+0060: $857 -= $860 // integer values
+$889 = Object.Create(#COLT45, 367.0, 1049.22, 21.09)
+Object.ToggleInMovingList($889) = False
+0453: object $889 set_rotation 0.0 8.0 0.0 
+$890 = Object.Create(#UZI, 366.0, 1049.22, 21.05)
+Object.ToggleInMovingList($890) = False
+0453: object $890 set_rotation 0.0 0.0 3.5 
+$891 = Object.Create(#BUDDYSHOT, 364.9, 1049.23, 20.95)
+Object.ToggleInMovingList($891) = False
+0453: object $891 set_rotation 0.0 0.0 6.0 
+$892 = Object.Create(#SNIPER, 363.9, 1049.215, 20.95)
+Object.ToggleInMovingList($892) = False
+0453: object $892 set_rotation 0.0 0.0 8.0 
+$893 = Object.Create(#GRENADE, 363.1, 1049.22, 20.76)
+Object.ToggleInMovingList($893) = False
+Object.CollisionDetection($893) = False
+$894 = Object.Create(#GRENADE, 363.0, 1049.215, 20.72)
+Object.ToggleInMovingList($894) = False
+Object.CollisionDetection($894) = False
+$895 = Object.Create(#BODYARMOUR, 362.1, 1049.42, 20.9)
+Object.ToggleInMovingList($895) = False
+if
+  $857 > 30000 // integer values
+jf @AMMU2_489
+$853 = Actor.Create(CivMale, #SPECIAL21, 366.1, 1052.2, 18.2)
+Actor.Health($853) = 350
+01ED: clear_actor $853 threat_search
+0350: set_actor $853 maintain_position_when_attacked 1
+gosub @HARD3_4804
+
+:AMMU2_489
+$842 = 1 // integer values
+jump @AMMU2_558
+
+:AMMU2_503
+if
+0057:   player $PLAYER_CHAR 0 369.9 1068.7 22.3 359.8 1048.5 18.1
+jf @AMMU2_558
+gosub @HARD3_2766
+
+:AMMU2_558
+if
+   not Actor.Dead($853)
+jf @AMMU2_3941
+if
+  $844 == 0 // integer values
+jf @AMMU2_3941
+if
+  $1180 == 0 // integer values
+jf @AMMU2_3941
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @AMMU2_3941
+if
+00F9:   player $PLAYER_CHAR stopped 1 $534 $535 $536 radius 1.0 1.0 2.0
+jf @AMMU2_3858
+gosub @HARD3_4750
+
+:AMMU2_682
+if
+  $849 == 0 // integer values
+jf @AMMU2_3851
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1241
+if
+  $851 == 0 // integer values
+jf @AMMU2_1241
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($853)
+jf @AMMU2_776
+0210: player $PLAYER_CHAR look_at_actor $853
+
+:AMMU2_776
+Camera.SetPosition(367.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(367.152, 1050.163, 21.291, 1)
+if
+  $862 == 0 // integer values
+jf @AMMU2_869
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @AMMU2_879
+
+:AMMU2_869
+0460: set_camera_pointing_time 0.0 800
+
+:AMMU2_879
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_928
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:AMMU2_928
+if
+  $851 == 0 // integer values
+jf @AMMU2_1241
+wait 0
+00BA: text_styled 'PISTOL' 1000 ms 4  // Pistol
+01E5: text_1number_highpriority 'G_COST' 100 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1234
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 4 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+0490:   player $PLAYER_CHAR has_weapon 18
+jf @AMMU2_1063
+01E5: text_1number_highpriority 'HELP54' 100 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU2_1063
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_1209
+0419: $852 = player $PLAYER_CHAR weapon 17 ammo
+if
+   Player.Money($PLAYER_CHAR) > 99
+jf @AMMU2_1202
+if
+  9999 > $852 // integer values
+jf @AMMU2_1195
+01B1: give_player $PLAYER_CHAR weapon 17 ammo 68 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU2_1165
+01B1: give_player $PLAYER_CHAR weapon 17 ammo 9999 // Load the weapon model before using this
+
+:AMMU2_1165
+01B8: set_player $PLAYER_CHAR armed_weapon_to 17
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -100
+0528: add 100 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_1195
+jump @AMMU2_1209
+
+:AMMU2_1202
+gosub @HARD3_3615
+
+:AMMU2_1209
+if
+  $849 == 1 // integer values
+jf @AMMU2_1234
+jump @AMMU2_10
+
+:AMMU2_1234
+jump @AMMU2_928
+
+:AMMU2_1241
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1724
+if
+  $851 == 1 // integer values
+jf @AMMU2_1724
+Camera.SetPosition(366.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(366.152, 1050.163, 21.291, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1392
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:AMMU2_1392
+if
+  $851 == 1 // integer values
+jf @AMMU2_1724
+wait 0
+00BA: text_styled 'UZI' 1000 ms 4  // Uz-1
+01E5: text_1number_highpriority 'G_COST' 400 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1717
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 6 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if or
+0490:   player $PLAYER_CHAR has_weapon 25
+0490:   player $PLAYER_CHAR has_weapon 24
+0490:   player $PLAYER_CHAR has_weapon 22
+jf @AMMU2_1543
+01E5: text_1number_highpriority 'HELP54' 400 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU2_1543
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_1692
+0419: $852 = player $PLAYER_CHAR weapon 23 ammo
+if
+   Player.Money($PLAYER_CHAR) > 399
+jf @AMMU2_1685
+if
+  9999 > $852 // integer values
+jf @AMMU2_1678
+01B1: give_player $PLAYER_CHAR weapon 23 ammo 120 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU2_1646
+01B1: give_player $PLAYER_CHAR weapon 23 ammo 9999 // Load the weapon model before using this
+
+:AMMU2_1646
+01B8: set_player $PLAYER_CHAR armed_weapon_to 23
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -400
+0528: add 400 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_1678
+jump @AMMU2_1692
+
+:AMMU2_1685
+gosub @HARD3_3615
+
+:AMMU2_1692
+if
+  $849 == 1 // integer values
+jf @AMMU2_1717
+jump @AMMU2_10
+
+:AMMU2_1717
+jump @AMMU2_1392
+
+:AMMU2_1724
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_2290
+if
+  $851 == 2 // integer values
+jf @AMMU2_2290
+Camera.SetPosition(365.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(365.152, 1050.163, 21.291, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_1875
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:AMMU2_1875
+if
+  $851 == 2 // integer values
+jf @AMMU2_2290
+wait 0
+00BA: text_styled 'SHOTGN3' 1000 ms 4  // Stubby shotgun
+if
+  $868 == 0 // integer values
+jf @AMMU2_1952
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU2_1970
+
+:AMMU2_1952
+01E5: text_1number_highpriority 'G_COST' 600 flag 1000 time 1  // Cost: $~1~
+
+:AMMU2_1970
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_2283
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 5 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $868 == 1 // integer values
+jf @AMMU2_2077
+if or
+0490:   player $PLAYER_CHAR has_weapon 20
+0490:   player $PLAYER_CHAR has_weapon 19
+jf @AMMU2_2077
+01E5: text_1number_highpriority 'HELP54' 600 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU2_2077
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_2258
+if
+  $868 == 1 // integer values
+jf @AMMU2_2251
+0419: $852 = player $PLAYER_CHAR weapon 21 ammo
+if
+   Player.Money($PLAYER_CHAR) > 599
+jf @AMMU2_2237
+if
+  9999 > $852 // integer values
+jf @AMMU2_2230
+01B1: give_player $PLAYER_CHAR weapon 21 ammo 20 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU2_2198
+01B1: give_player $PLAYER_CHAR weapon 21 ammo 9999 // Load the weapon model before using this
+
+:AMMU2_2198
+01B8: set_player $PLAYER_CHAR armed_weapon_to 21
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -600
+0528: add 600 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_2230
+jump @AMMU2_2244
+
+:AMMU2_2237
+gosub @HARD3_3615
+
+:AMMU2_2244
+jump @AMMU2_2258
+
+:AMMU2_2251
+gosub @HARD3_3615
+
+:AMMU2_2258
+if
+  $849 == 1 // integer values
+jf @AMMU2_2283
+jump @AMMU2_10
+
+:AMMU2_2283
+jump @AMMU2_1875
+
+:AMMU2_2290
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_2849
+if
+  $851 == 3 // integer values
+jf @AMMU2_2849
+Camera.SetPosition(364.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(364.152, 1050.163, 21.291, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_2441
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:AMMU2_2441
+if
+  $851 == 3 // integer values
+jf @AMMU2_2849
+wait 0
+00BA: text_styled 'SNIPE' 1000 ms 4  // Sniper rifle
+if
+  $847 == 0 // integer values
+jf @AMMU2_2518
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU2_2536
+
+:AMMU2_2518
+01E5: text_1number_highpriority 'G_COST' 1500 flag 1000 time 1  // Cost: $~1~
+
+:AMMU2_2536
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_2842
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 9 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $847 == 1 // integer values
+jf @AMMU2_2636
+if
+0490:   player $PLAYER_CHAR has_weapon 29
+jf @AMMU2_2636
+01E5: text_1number_highpriority 'HELP54' 1500 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU2_2636
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_2817
+if
+  $847 == 1 // integer values
+jf @AMMU2_2810
+0419: $852 = player $PLAYER_CHAR weapon 28 ammo
+if
+   Player.Money($PLAYER_CHAR) > 1499
+jf @AMMU2_2796
+if
+  9999 > $852 // integer values
+jf @AMMU2_2789
+01B1: give_player $PLAYER_CHAR weapon 28 ammo 40 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU2_2757
+01B1: give_player $PLAYER_CHAR weapon 28 ammo 9999 // Load the weapon model before using this
+
+:AMMU2_2757
+01B8: set_player $PLAYER_CHAR armed_weapon_to 28
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -1500
+0528: add 1500 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_2789
+jump @AMMU2_2803
+
+:AMMU2_2796
+gosub @HARD3_3615
+
+:AMMU2_2803
+jump @AMMU2_2817
+
+:AMMU2_2810
+gosub @HARD3_3615
+
+:AMMU2_2817
+if
+  $849 == 1 // integer values
+jf @AMMU2_2842
+jump @AMMU2_10
+
+:AMMU2_2842
+jump @AMMU2_2441
+
+:AMMU2_2849
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3325
+if
+  $851 == 4 // integer values
+jf @AMMU2_3325
+Camera.SetPosition(363.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(363.152, 1050.163, 21.291, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3000
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:AMMU2_3000
+if
+  $851 == 4 // integer values
+jf @AMMU2_3325
+wait 0
+00BA: text_styled 'GRENADE' 1000 ms 4  // Grenades
+01E5: text_1number_highpriority 'G_COST' 300 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3318
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 3 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if or
+0490:   player $PLAYER_CHAR has_weapon 13
+0490:   player $PLAYER_CHAR has_weapon 15
+0490:   player $PLAYER_CHAR has_weapon 14
+jf @AMMU2_3151
+01E5: text_1number_highpriority 'HELP54' 300 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU2_3151
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_3293
+0419: $852 = player $PLAYER_CHAR weapon 12 ammo
+if
+   Player.Money($PLAYER_CHAR) > 299
+jf @AMMU2_3286
+if
+  9999 > $852 // integer values
+jf @AMMU2_3279
+01B1: give_player $PLAYER_CHAR weapon 12 ammo 8 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU2_3254
+01B1: give_player $PLAYER_CHAR weapon 12 ammo 9999 // Load the weapon model before using this
+
+:AMMU2_3254
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -300
+0528: add 300 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_3279
+jump @AMMU2_3293
+
+:AMMU2_3286
+gosub @HARD3_3615
+
+:AMMU2_3293
+if
+  $849 == 1 // integer values
+jf @AMMU2_3318
+jump @AMMU2_10
+
+:AMMU2_3318
+jump @AMMU2_3000
+
+:AMMU2_3325
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3844
+if
+  $851 == 5 // integer values
+jf @AMMU2_3844
+Camera.SetPosition(362.203, 1051.161, 21.269, 0.0, 0.0, 0.0)
+Camera.PointAt(362.152, 1050.163, 21.291, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3476
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:AMMU2_3476
+if
+  $851 == 5 // integer values
+jf @AMMU2_3844
+wait 0
+00BA: text_styled 'ARMOUR' 1000 ms 4  // Body Armor
+if
+  $867 == 0 // integer values
+jf @AMMU2_3553
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU2_3571
+
+:AMMU2_3553
+01E5: text_1number_highpriority 'G_COST' 200 flag 1000 time 1  // Cost: $~1~
+
+:AMMU2_3571
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3837
+gosub @HARD3_4026
+04DD: $873 = actor $PLAYER_ACTOR armour
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU2_3812
+if
+  $867 == 1 // integer values
+jf @AMMU2_3805
+if
+   Player.Money($PLAYER_CHAR) > 199
+jf @AMMU2_3791
+if
+  100 > $873 // integer values
+jf @AMMU2_3714
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+jump @AMMU2_3784
+
+:AMMU2_3714
+if
+  $1582 == 1 // integer values
+jf @AMMU2_3784
+if
+  200 > $873 // integer values
+jf @AMMU2_3784
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU2_3784
+jump @AMMU2_3798
+
+:AMMU2_3791
+gosub @HARD3_3615
+
+:AMMU2_3798
+jump @AMMU2_3812
+
+:AMMU2_3805
+gosub @HARD3_3615
+
+:AMMU2_3812
+if
+  $849 == 1 // integer values
+jf @AMMU2_3837
+jump @AMMU2_10
+
+:AMMU2_3837
+jump @AMMU2_3476
+
+:AMMU2_3844
+jump @AMMU2_682
+
+:AMMU2_3851
+jump @AMMU2_3941
+
+:AMMU2_3858
+if
+80F6:   not player $PLAYER_CHAR 1 $534 $535 $536 radius 1.0 1.0 2.0
+jf @AMMU2_3941
+if
+  $849 == 1 // integer values
+jf @AMMU2_3941
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU2_3941
+gosub @HARD3_5024
+
+:AMMU2_3941
+jump @AMMU2_3973
+
+:AMMU2_3948
+if
+  $842 == 1 // integer values
+jf @AMMU2_3973
+gosub @HARD3_5056
+
+:AMMU2_3973
+jump @AMMU2_3987
+
+:AMMU2_3980
+gosub @HARD3_5056
+
+:AMMU2_3987
+jump @AMMU2_10
+
+:AMMU3
+thread 'AMMU3'
+
+:AMMU3_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_4198
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @AMMU3_4191
+if
+00F5:   player $PLAYER_CHAR 0 $537 $538 $539 radius 35.0 35.0 20.0
+jf @AMMU3_4166
+if
+  $842 == 0 // integer values
+jf @AMMU3_513
+gosub @HARD3_5492
+0084: $857 = $859 // integer values and handles
+0060: $857 -= $860 // integer values
+$889 = Object.Create(#PYTHON, -683.77, 1200.549, 12.93)
+Object.ToggleInMovingList($889) = False
+0453: object $889 set_rotation 0.0 4.0 90.0
+$890 = Object.Create(#MP5LNG, -683.77, 1202.049, 12.86)
+Object.ToggleInMovingList($890) = False
+0453: object $890 set_rotation 0.0 8.0 95.0
+$891 = Object.Create(#SHOTGSPA, -683.77, 1203.449, 12.91)
+Object.ToggleInMovingList($891) = False
+0453: object $891 set_rotation 0.0 9.0 95.0
+$892 = Object.Create(#M4, -683.77, 1205.049, 12.88)
+Object.ToggleInMovingList($892) = False
+0453: object $892 set_rotation 0.0 3.0 95.0
+$893 = Object.Create(#LASER, -683.77, 1206.549, 12.81)
+Object.ToggleInMovingList($893) = False
+0453: object $893 set_rotation 0.0 2.0 95.0
+$894 = Object.Create(#BODYARMOUR, -683.7, 1208.189, 12.809)
+Object.ToggleInMovingList($894) = False
+Object.Angle($894) = 90.0
+if
+  $857 > 30000 // integer values
+jf @AMMU3_499
+$853 = Actor.Create(CivMale, #SPECIAL21, -679.97, 1203.5, 10.0)
+Actor.Angle($853) = 270.0
+Actor.Health($853) = 350
+01ED: clear_actor $853 threat_search
+0350: set_actor $853 maintain_position_when_attacked 1
+gosub @HARD3_4804
+
+:AMMU3_499
+$842 = 1 // integer values
+jump @AMMU3_568
+
+:AMMU3_513
+if
+0057:   player $PLAYER_CHAR 0 -684.5 1199.3 16.9 -663.8 1211.1 10.0
+jf @AMMU3_568
+gosub @HARD3_2766
+
+:AMMU3_568
+if
+  $995 == 0 // integer values
+jf @AMMU3_4159
+if
+   not Actor.Dead($853)
+jf @AMMU3_4159
+if
+  $844 == 0 // integer values
+jf @AMMU3_4159
+if
+  $1180 == 0 // integer values
+jf @AMMU3_4159
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @AMMU3_4159
+if
+00F9:   player $PLAYER_CHAR stopped 1 $537 $538 $539 radius 1.0 1.0 2.0
+jf @AMMU3_4076
+gosub @HARD3_4750
+
+:AMMU3_710
+if
+  $849 == 0 // integer values
+jf @AMMU3_4069
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_1364
+if
+  $851 == 0 // integer values
+jf @AMMU3_1364
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($853)
+jf @AMMU3_804
+0210: player $PLAYER_CHAR look_at_actor $853
+
+:AMMU3_804
+Camera.SetPosition(-682.161, 1200.594, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1200.697, 13.171, 1)
+if
+  $862 == 0 // integer values
+jf @AMMU3_897
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @AMMU3_907
+
+:AMMU3_897
+0460: set_camera_pointing_time 0.0 800
+
+:AMMU3_907
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_956
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:AMMU3_956
+if
+  $851 == 0 // integer values
+jf @AMMU3_1364
+wait 0
+00BA: text_styled 'PYTHON' 2000 ms 4  // .357
+if
+  $907 == 0 // integer values
+jf @AMMU3_1033
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU3_1051
+
+:AMMU3_1033
+01E5: text_1number_highpriority 'G_COST' 2000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU3_1051
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_1357
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 4 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $907 == 1 // integer values
+jf @AMMU3_1151
+if
+0490:   player $PLAYER_CHAR has_weapon 17
+jf @AMMU3_1151
+01E5: text_1number_highpriority 'HELP54' 2000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU3_1151
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_1332
+if
+  $907 == 1 // integer values
+jf @AMMU3_1325
+0419: $852 = player $PLAYER_CHAR weapon 18 ammo
+if
+   Player.Money($PLAYER_CHAR) > 1999
+jf @AMMU3_1311
+if
+  9999 > $852 // integer values
+jf @AMMU3_1304
+01B1: give_player $PLAYER_CHAR weapon 18 ammo 24 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU3_1272
+01B1: give_player $PLAYER_CHAR weapon 18 ammo 9999 // Load the weapon model before using this
+
+:AMMU3_1272
+01B8: set_player $PLAYER_CHAR armed_weapon_to 18
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -2000
+0528: add 2000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_1304
+jump @AMMU3_1318
+
+:AMMU3_1311
+gosub @HARD3_3615
+
+:AMMU3_1318
+jump @AMMU3_1332
+
+:AMMU3_1325
+gosub @HARD3_3615
+
+:AMMU3_1332
+if
+  $849 == 1 // integer values
+jf @AMMU3_1357
+jump @AMMU3_10
+
+:AMMU3_1357
+jump @AMMU3_956
+
+:AMMU3_1364
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_1937
+if
+  $851 == 1 // integer values
+jf @AMMU3_1937
+Camera.SetPosition(-682.161, 1202.094, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1202.197, 13.171, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_1515
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:AMMU3_1515
+if
+  $851 == 1 // integer values
+jf @AMMU3_1937
+wait 0
+00BA: text_styled 'MP5' 1000 ms 4  // MP
+if
+  $906 == 0 // integer values
+jf @AMMU3_1592
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU3_1610
+
+:AMMU3_1592
+01E5: text_1number_highpriority 'G_COST' 3000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU3_1610
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_1930
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 6 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $906 == 1 // integer values
+jf @AMMU3_1724
+if or
+0490:   player $PLAYER_CHAR has_weapon 23
+0490:   player $PLAYER_CHAR has_weapon 24
+0490:   player $PLAYER_CHAR has_weapon 22
+jf @AMMU3_1724
+01E5: text_1number_highpriority 'HELP54' 3000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU3_1724
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_1905
+if
+  $906 == 1 // integer values
+jf @AMMU3_1898
+0419: $852 = player $PLAYER_CHAR weapon 25 ammo
+if
+   Player.Money($PLAYER_CHAR) > 2999
+jf @AMMU3_1884
+if
+  9999 > $852 // integer values
+jf @AMMU3_1877
+01B1: give_player $PLAYER_CHAR weapon 25 ammo 120 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU3_1845
+01B1: give_player $PLAYER_CHAR weapon 25 ammo 9999 // Load the weapon model before using this
+
+:AMMU3_1845
+01B8: set_player $PLAYER_CHAR armed_weapon_to 25
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -3000
+0528: add 3000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_1877
+jump @AMMU3_1891
+
+:AMMU3_1884
+gosub @HARD3_3615
+
+:AMMU3_1891
+jump @AMMU3_1905
+
+:AMMU3_1898
+gosub @HARD3_3615
+
+:AMMU3_1905
+if
+  $849 == 1 // integer values
+jf @AMMU3_1930
+jump @AMMU3_10
+
+:AMMU3_1930
+jump @AMMU3_1515
+
+:AMMU3_1937
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_2503
+if
+  $851 == 2 // integer values
+jf @AMMU3_2503
+Camera.SetPosition(-682.161, 1203.594, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1203.697, 13.171, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_2088
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:AMMU3_2088
+if
+  $851 == 2 // integer values
+jf @AMMU3_2503
+wait 0
+00BA: text_styled 'SHOTGN2' 1000 ms 4  // S.P.A.S. 12
+if
+  $848 == 0 // integer values
+jf @AMMU3_2165
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU3_2183
+
+:AMMU3_2165
+01E5: text_1number_highpriority 'G_COST' 4000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU3_2183
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_2496
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 5 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $848 == 1 // integer values
+jf @AMMU3_2290
+if or
+0490:   player $PLAYER_CHAR has_weapon 21
+0490:   player $PLAYER_CHAR has_weapon 19
+jf @AMMU3_2290
+01E5: text_1number_highpriority 'HELP54' 4000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU3_2290
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_2471
+if
+  $848 == 1 // integer values
+jf @AMMU3_2464
+0419: $852 = player $PLAYER_CHAR weapon 20 ammo
+if
+   Player.Money($PLAYER_CHAR) > 3999
+jf @AMMU3_2450
+if
+  9999 > $852 // integer values
+jf @AMMU3_2443
+01B1: give_player $PLAYER_CHAR weapon 20 ammo 28 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU3_2411
+01B1: give_player $PLAYER_CHAR weapon 20 ammo 9999 // Load the weapon model before using this
+
+:AMMU3_2411
+01B8: set_player $PLAYER_CHAR armed_weapon_to 20
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -4000
+0528: add 4000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_2443
+jump @AMMU3_2457
+
+:AMMU3_2450
+gosub @HARD3_3615
+
+:AMMU3_2457
+jump @AMMU3_2471
+
+:AMMU3_2464
+gosub @HARD3_3615
+
+:AMMU3_2471
+if
+  $849 == 1 // integer values
+jf @AMMU3_2496
+jump @AMMU3_10
+
+:AMMU3_2496
+jump @AMMU3_2088
+
+:AMMU3_2503
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3063
+if
+  $851 == 3 // integer values
+jf @AMMU3_3063
+Camera.SetPosition(-682.161, 1205.094, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1205.197, 13.171, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_2654
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:AMMU3_2654
+if
+  $851 == 3 // integer values
+jf @AMMU3_3063
+wait 0
+00BA: text_styled 'M4' 1000 ms 4  // M4
+if
+  $855 == 0 // integer values
+jf @AMMU3_2731
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU3_2749
+
+:AMMU3_2731
+01E5: text_1number_highpriority 'G_COST' 5000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU3_2749
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3056
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 7 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $855 == 1 // integer values
+jf @AMMU3_2849
+if
+0490:   player $PLAYER_CHAR has_weapon 27
+jf @AMMU3_2849
+01E5: text_1number_highpriority 'HELP54' 5000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU3_2849
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_3031
+if
+  $855 == 1 // integer values
+jf @AMMU3_3024
+0419: $852 = player $PLAYER_CHAR weapon 26 ammo
+if
+   Player.Money($PLAYER_CHAR) > 4999
+jf @AMMU3_3010
+if
+  9999 > $852 // integer values
+jf @AMMU3_3003
+01B1: give_player $PLAYER_CHAR weapon 26 ammo 150 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU3_2971
+01B1: give_player $PLAYER_CHAR weapon 26 ammo 9999 // Load the weapon model before using this
+
+:AMMU3_2971
+01B8: set_player $PLAYER_CHAR armed_weapon_to 26
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -5000
+0528: add 5000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_3003
+jump @AMMU3_3017
+
+:AMMU3_3010
+gosub @HARD3_3615
+
+:AMMU3_3017
+jump @AMMU3_3031
+
+:AMMU3_3024
+gosub @HARD3_3615
+
+:AMMU3_3031
+if
+  $849 == 1 // integer values
+jf @AMMU3_3056
+jump @AMMU3_10
+
+:AMMU3_3056
+jump @AMMU3_2654
+
+:AMMU3_3063
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3615
+if
+  $851 == 4 // integer values
+jf @AMMU3_3615
+Camera.SetPosition(-682.161, 1206.594, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1206.697, 13.171, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3214
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:AMMU3_3214
+if
+  $851 == 4 // integer values
+jf @AMMU3_3615
+wait 0
+00BA: text_styled 'LASER' 1000 ms 4  // .308 Sniper
+if
+  $856 == 0 // integer values
+jf @AMMU3_3291
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @AMMU3_3309
+
+:AMMU3_3291
+01E5: text_1number_highpriority 'G_COST' 6000 flag 1000 time 1  // Cost: $~1~
+
+:AMMU3_3309
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3608
+gosub @HARD3_4026
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 9 weapon $869 ammo $852 model $870
+gosub @HARD3_5678
+if
+  $856 == 1 // integer values
+jf @AMMU3_3409
+if
+0490:   player $PLAYER_CHAR has_weapon 28
+jf @AMMU3_3409
+01E5: text_1number_highpriority 'HELP54' 6000 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:AMMU3_3409
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_3583
+if
+  $856 == 1 // integer values
+jf @AMMU3_3576
+0419: $852 = player $PLAYER_CHAR weapon 29 ammo
+if
+   Player.Money($PLAYER_CHAR) > 5999
+jf @AMMU3_3562
+if
+  9999 > $852 // integer values
+jf @AMMU3_3555
+01B1: give_player $PLAYER_CHAR weapon 29 ammo 28 // Load the weapon model before using this
+if
+  $852 > 9999 // integer values
+jf @AMMU3_3530
+01B1: give_player $PLAYER_CHAR weapon 29 ammo 9999 // Load the weapon model before using this
+
+:AMMU3_3530
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -6000
+0528: add 6000 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_3555
+jump @AMMU3_3569
+
+:AMMU3_3562
+gosub @HARD3_3615
+
+:AMMU3_3569
+jump @AMMU3_3583
+
+:AMMU3_3576
+gosub @HARD3_3615
+
+:AMMU3_3583
+if
+  $849 == 1 // integer values
+jf @AMMU3_3608
+jump @AMMU3_10
+
+:AMMU3_3608
+jump @AMMU3_3214
+
+:AMMU3_3615
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_4062
+if
+  $851 == 5 // integer values
+jf @AMMU3_4062
+Camera.SetPosition(-682.161, 1208.094, 13.133, 0.0, 0.0, 0.0)
+Camera.PointAt(-683.155, 1208.197, 13.171, 1)
+0460: set_camera_pointing_time 0.0 800
+$871 = 0 // integer values
+$872 = 0 // integer values
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_3766
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:AMMU3_3766
+if
+  $851 == 5 // integer values
+jf @AMMU3_4062
+wait 0
+00BA: text_styled 'ARMOUR' 1000 ms 4  // Body Armor
+01E5: text_1number_highpriority 'G_COST' 200 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_4055
+gosub @HARD3_4026
+04DD: $873 = actor $PLAYER_ACTOR armour
+if
+00E1:   player 0 pressed_button 16
+jf @AMMU3_4030
+if
+   Player.Money($PLAYER_CHAR) > 199
+jf @AMMU3_4023
+if
+  100 > $873 // integer values
+jf @AMMU3_3946
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+jump @AMMU3_4016
+
+:AMMU3_3946
+if
+  $1582 == 1 // integer values
+jf @AMMU3_4016
+if
+  200 > $873 // integer values
+jf @AMMU3_4016
+035E: set_player $PLAYER_CHAR armour_to 200
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -200
+0528: add 200 to_money_spent_on_weapons_stats
+wait 300
+
+:AMMU3_4016
+jump @AMMU3_4030
+
+:AMMU3_4023
+gosub @HARD3_3615
+
+:AMMU3_4030
+if
+  $849 == 1 // integer values
+jf @AMMU3_4055
+jump @AMMU3_10
+
+:AMMU3_4055
+jump @AMMU3_3766
+
+:AMMU3_4062
+jump @AMMU3_710
+
+:AMMU3_4069
+jump @AMMU3_4159
+
+:AMMU3_4076
+if
+80F6:   not player $PLAYER_CHAR 1 $537 $538 $539 radius 1.0 1.0 2.0
+jf @AMMU3_4159
+if
+  $849 == 1 // integer values
+jf @AMMU3_4159
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMMU3_4159
+gosub @HARD3_5024
+
+:AMMU3_4159
+jump @AMMU3_4191
+
+:AMMU3_4166
+if
+  $842 == 1 // integer values
+jf @AMMU3_4191
+gosub @HARD3_5056
+
+:AMMU3_4191
+jump @AMMU3_4205
+
+:AMMU3_4198
+gosub @HARD3_5056
+
+:AMMU3_4205
+jump @AMMU3_10
+
+:HARD1
+thread 'HARD1'
+
+:HARD1_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2927
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH2'  // Washington Beach
+jf @HARD1_2920
+if
+00F5:   player $PLAYER_CHAR 0 $540 $541 $542 radius 35.0 35.0 30.0
+jf @HARD1_2895
+if
+  $843 == 0 // integer values
+jf @HARD1_423
+gosub @HARD3_5554
+0084: $858 = $859 // integer values and handles
+0060: $858 -= $861 // integer values
+$875 = Object.Create(#SCREWDRIVER, 201.508, -469.199, 13.79)
+Object.ToggleInMovingList($875) = False
+$876 = Object.Create(#HAMMER, 202.508, -469.179, 13.73)
+Object.ToggleInMovingList($876) = False
+$877 = Object.Create(#CLEAVER, 203.508, -469.17, 13.77)
+Object.ToggleInMovingList($877) = False
+$878 = Object.Create(#BAT, 204.606, -469.217, 13.65)
+Object.ToggleInMovingList($878) = False
+0453: object $878 set_rotation -4.0 30.0 0.0
+$879 = Object.Create(#MACHETE, 205.908, -469.217, 13.65)
+Object.ToggleInMovingList($879) = False
+0453: object $879 set_rotation 0.0 40.0 0.0
+if
+  $858 > 60000 // integer values
+jf @HARD1_409
+$854 = Actor.Create(CivMale, #SPECIAL16, 202.4, -471.1, 10.1)
+Actor.Health($854) = 250
+Actor.Angle($854) = 180.1
+gosub @HARD3_5204
+
+:HARD1_409
+$843 = 1 // integer values
+jump @HARD1_478
+
+:HARD1_423
+if
+0057:   player $PLAYER_CHAR 0 190.0 -481.0 15.7 209.6 -468.5 10.0
+jf @HARD1_478
+gosub @HARD3_2856
+
+:HARD1_478
+if
+   not Actor.Dead($854)
+jf @HARD1_2888
+if
+  $845 == 0 // integer values
+jf @HARD1_2888
+if
+  $1180 == 0 // integer values
+jf @HARD1_2888
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @HARD1_2888
+if
+00F9:   player $PLAYER_CHAR stopped 1 $540 $541 $542 radius 1.0 1.0 2.0
+jf @HARD1_2805
+gosub @HARD3_4777
+
+:HARD1_602
+if
+  $850 == 0 // integer values
+jf @HARD1_2798
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1091
+if
+  $851 == 0 // integer values
+jf @HARD1_1091
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($854)
+jf @HARD1_696
+0210: player $PLAYER_CHAR look_at_actor $854
+
+:HARD1_696
+Camera.SetPosition(201.616, -470.795, 14.284, 0.0, 0.0, 0.0)
+Camera.PointAt(201.608, -469.797, 14.217, 1)
+if
+  $862 == 0 // integer values
+jf @HARD1_789
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @HARD1_799
+
+:HARD1_789
+0460: set_camera_pointing_time 0.0 800
+
+:HARD1_799
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_848
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:HARD1_848
+if
+  $851 == 0 // integer values
+jf @HARD1_1091
+wait 0
+00BA: text_styled 'SCREWD' 1000 ms 4  // Screwdriver
+01E5: text_1number_highpriority 'G_COST' 10 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1084
+gosub @HARD3_4369
+$885 = 10 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD1_1059
+if
+   Player.Money($PLAYER_CHAR) > 9
+jf @HARD1_1052
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 2
+jf @HARD1_1038
+01B1: give_player $PLAYER_CHAR weapon 2 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 2
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -10
+0528: add 10 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD1_1045
+
+:HARD1_1038
+gosub @HARD3_3615
+
+:HARD1_1045
+jump @HARD1_1059
+
+:HARD1_1052
+gosub @HARD3_3615
+
+:HARD1_1059
+if
+  $850 == 1 // integer values
+jf @HARD1_1084
+jump @HARD1_10
+
+:HARD1_1084
+jump @HARD1_848
+
+:HARD1_1091
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1471
+if
+  $851 == 1 // integer values
+jf @HARD1_1471
+Camera.SetPosition(202.616, -470.795, 14.284, 0.0, 0.0, 0.0)
+Camera.PointAt(202.608, -469.797, 14.217, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1228
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+
+:HARD1_1228
+if
+  $851 == 1 // integer values
+jf @HARD1_1471
+wait 0
+00BA: text_styled 'HAMMER' 1000 ms 4  // Hammer
+01E5: text_1number_highpriority 'G_COST' 20 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1464
+gosub @HARD3_4369
+$885 = 20 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD1_1439
+if
+   Player.Money($PLAYER_CHAR) > 19
+jf @HARD1_1432
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 7
+jf @HARD1_1418
+01B1: give_player $PLAYER_CHAR weapon 7 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 7
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -20
+0528: add 20 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD1_1425
+
+:HARD1_1418
+gosub @HARD3_3615
+
+:HARD1_1425
+jump @HARD1_1439
+
+:HARD1_1432
+gosub @HARD3_3615
+
+:HARD1_1439
+if
+  $850 == 1 // integer values
+jf @HARD1_1464
+jump @HARD1_10
+
+:HARD1_1464
+jump @HARD1_1228
+
+:HARD1_1471
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1851
+if
+  $851 == 2 // integer values
+jf @HARD1_1851
+Camera.SetPosition(203.616, -470.795, 14.284, 0.0, 0.0, 0.0)
+Camera.PointAt(203.608, -469.797, 14.217, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1608
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+
+:HARD1_1608
+if
+  $851 == 2 // integer values
+jf @HARD1_1851
+wait 0
+00BA: text_styled 'CLEVER' 1000 ms 4  // Meat Cleaver
+01E5: text_1number_highpriority 'G_COST' 50 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1844
+gosub @HARD3_4369
+$885 = 50 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD1_1819
+if
+   Player.Money($PLAYER_CHAR) > 49
+jf @HARD1_1812
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 8
+jf @HARD1_1798
+01B1: give_player $PLAYER_CHAR weapon 8 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 8
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -50
+0528: add 50 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD1_1805
+
+:HARD1_1798
+gosub @HARD3_3615
+
+:HARD1_1805
+jump @HARD1_1819
+
+:HARD1_1812
+gosub @HARD3_3615
+
+:HARD1_1819
+if
+  $850 == 1 // integer values
+jf @HARD1_1844
+jump @HARD1_10
+
+:HARD1_1844
+jump @HARD1_1608
+
+:HARD1_1851
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2321
+if
+  $851 == 3 // integer values
+jf @HARD1_2321
+Camera.SetPosition(204.816, -470.795, 14.284, 0.0, 0.0, 0.0)
+Camera.PointAt(204.808, -469.797, 14.217, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_1988
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+
+:HARD1_1988
+if
+  $851 == 3 // integer values
+jf @HARD1_2321
+wait 0
+00BA: text_styled 'BASEBAT' 1000 ms 4  // Baseball bat
+if
+  $904 == 0 // integer values
+jf @HARD1_2065
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @HARD1_2082
+
+:HARD1_2065
+01E5: text_1number_highpriority 'G_COST' 80 flag 1000 time 1  // Cost: $~1~
+
+:HARD1_2082
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2314
+gosub @HARD3_4369
+if
+  $904 == 1 // integer values
+jf @HARD1_2137
+$885 = 80 // integer values
+gosub @HARD3_5616
+
+:HARD1_2137
+if
+00E1:   player 0 pressed_button 16
+jf @HARD1_2289
+if
+  $904 == 1 // integer values
+jf @HARD1_2282
+if
+   Player.Money($PLAYER_CHAR) > 79
+jf @HARD1_2268
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 6
+jf @HARD1_2254
+01B1: give_player $PLAYER_CHAR weapon 6 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 6
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -80
+0528: add 80 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD1_2261
+
+:HARD1_2254
+gosub @HARD3_3615
+
+:HARD1_2261
+jump @HARD1_2275
+
+:HARD1_2268
+gosub @HARD3_3615
+
+:HARD1_2275
+jump @HARD1_2289
+
+:HARD1_2282
+gosub @HARD3_3615
+
+:HARD1_2289
+if
+  $850 == 1 // integer values
+jf @HARD1_2314
+jump @HARD1_10
+
+:HARD1_2314
+jump @HARD1_1988
+
+:HARD1_2321
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2791
+if
+  $851 == 4 // integer values
+jf @HARD1_2791
+Camera.SetPosition(206.116, -470.795, 14.284, 0.0, 0.0, 0.0)
+Camera.PointAt(206.108, -469.797, 14.217, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2458
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+
+:HARD1_2458
+if
+  $851 == 4 // integer values
+jf @HARD1_2791
+wait 0
+00BA: text_styled 'MACHETE' 1000 ms 4  // Machete
+if
+  $905 == 0 // integer values
+jf @HARD1_2535
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @HARD1_2552
+
+:HARD1_2535
+01E5: text_1number_highpriority 'G_COST' 100 flag 1000 time 1  // Cost: $~1~
+
+:HARD1_2552
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2784
+gosub @HARD3_4369
+if
+  $905 == 1 // integer values
+jf @HARD1_2607
+$885 = 100 // integer values
+gosub @HARD3_5616
+
+:HARD1_2607
+if
+00E1:   player 0 pressed_button 16
+jf @HARD1_2759
+if
+  $905 == 1 // integer values
+jf @HARD1_2752
+if
+   Player.Money($PLAYER_CHAR) > 99
+jf @HARD1_2738
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 9
+jf @HARD1_2724
+01B1: give_player $PLAYER_CHAR weapon 9 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 9
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -100
+0528: add 100 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD1_2731
+
+:HARD1_2724
+gosub @HARD3_3615
+
+:HARD1_2731
+jump @HARD1_2745
+
+:HARD1_2738
+gosub @HARD3_3615
+
+:HARD1_2745
+jump @HARD1_2759
+
+:HARD1_2752
+gosub @HARD3_3615
+
+:HARD1_2759
+if
+  $850 == 1 // integer values
+jf @HARD1_2784
+jump @HARD1_10
+
+:HARD1_2784
+jump @HARD1_2458
+
+:HARD1_2791
+jump @HARD1_602
+
+:HARD1_2798
+jump @HARD1_2888
+
+:HARD1_2805
+if
+80F6:   not player $PLAYER_CHAR 1 $540 $541 $542 radius 1.0 1.0 2.0
+jf @HARD1_2888
+if
+  $850 == 1 // integer values
+jf @HARD1_2888
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD1_2888
+gosub @HARD3_5265
+
+:HARD1_2888
+jump @HARD1_2920
+
+:HARD1_2895
+if
+  $843 == 1 // integer values
+jf @HARD1_2920
+gosub @HARD3_5297
+
+:HARD1_2920
+jump @HARD1_2934
+
+:HARD1_2927
+gosub @HARD3_5297
+
+:HARD1_2934
+jump @HARD1_10
+
+:HARD2
+thread 'HARD2'
+
+:HARD2_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2822
+if
+  $1003 == 1 // integer values
+jf @HARD2_2815
+if
+0057:   player $PLAYER_CHAR 0 357.7 1016.6 30.1 410.4 1110.4 16.0
+jf @HARD2_2790
+if
+  $843 == 0 // integer values
+jf @HARD2_403
+gosub @HARD3_5554
+0084: $858 = $859 // integer values and handles
+0060: $858 -= $861 // integer values
+$875 = Object.Create(#SCREWDRIVER, 365.96, 1072.52, 20.68)
+Object.ToggleInMovingList($875) = False
+0453: object $875 set_rotation -15.0 0.0 0.0
+$876 = Object.Create(#HAMMER, 364.96, 1072.528, 20.669)
+Object.ToggleInMovingList($876) = False
+0453: object $876 set_rotation 0.0 0.0 0.0
+$877 = Object.Create(#CLEAVER, 363.96, 1072.5, 20.729)
+Object.ToggleInMovingList($877) = False
+$878 = Object.Create(#KNIFECUR, 362.92, 1072.5, 20.639)
+Object.ToggleInMovingList($878) = False
+$879 = Object.Create(#KATANA, 362.0, 1072.528, 20.75)
+Object.ToggleInMovingList($879) = False
+0453: object $879 set_rotation -5.0 -20.0 0.0
+if
+  $858 > 60000 // integer values
+jf @HARD2_389
+$854 = Actor.Create(CivMale, #SPECIAL16, 364.5, 1074.3, 18.0)
+Actor.Health($854) = 250
+Actor.Angle($854) = 358.1
+gosub @HARD3_5204
+
+:HARD2_389
+$843 = 1 // integer values
+jump @HARD2_458
+
+:HARD2_403
+if
+0057:   player $PLAYER_CHAR 0 369.9 1089.8 22.3 359.8 1071.7 18.1
+jf @HARD2_458
+gosub @HARD3_2856
+
+:HARD2_458
+if
+   not Actor.Dead($854)
+jf @HARD2_2783
+if
+  $845 == 0 // integer values
+jf @HARD2_2783
+if
+  $1180 == 0 // integer values
+jf @HARD2_2783
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @HARD2_2783
+if
+00F9:   player $PLAYER_CHAR stopped 1 $543 $544 $545 radius 1.0 1.0 2.0
+jf @HARD2_2700
+gosub @HARD3_4777
+
+:HARD2_582
+if
+  $850 == 0 // integer values
+jf @HARD2_2693
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1071
+if
+  $851 == 0 // integer values
+jf @HARD2_1071
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($854)
+jf @HARD2_676
+0210: player $PLAYER_CHAR look_at_actor $854
+
+:HARD2_676
+Camera.SetPosition(366.1, 1074.719, 21.062, 0.0, 0.0, 0.0)
+Camera.PointAt(366.089, 1073.72, 21.084, 1)
+if
+  $862 == 0 // integer values
+jf @HARD2_769
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @HARD2_779
+
+:HARD2_769
+0460: set_camera_pointing_time 0.0 800
+
+:HARD2_779
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_828
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:HARD2_828
+if
+  $851 == 0 // integer values
+jf @HARD2_1071
+wait 0
+00BA: text_styled 'SCREWD' 1000 ms 4  // Screwdriver
+01E5: text_1number_highpriority 'G_COST' 10 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1064
+gosub @HARD3_4369
+$885 = 10 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD2_1039
+if
+   Player.Money($PLAYER_CHAR) > 9
+jf @HARD2_1032
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 2
+jf @HARD2_1018
+01B1: give_player $PLAYER_CHAR weapon 2 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 2
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -10
+0528: add 10 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD2_1025
+
+:HARD2_1018
+gosub @HARD3_3615
+
+:HARD2_1025
+jump @HARD2_1039
+
+:HARD2_1032
+gosub @HARD3_3615
+
+:HARD2_1039
+if
+  $850 == 1 // integer values
+jf @HARD2_1064
+jump @HARD2_10
+
+:HARD2_1064
+jump @HARD2_828
+
+:HARD2_1071
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1451
+if
+  $851 == 1 // integer values
+jf @HARD2_1451
+Camera.SetPosition(365.1, 1074.719, 21.062, 0.0, 0.0, 0.0)
+Camera.PointAt(365.089, 1073.72, 21.084, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1208
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+
+:HARD2_1208
+if
+  $851 == 1 // integer values
+jf @HARD2_1451
+wait 0
+00BA: text_styled 'HAMMER' 1000 ms 4  // Hammer
+01E5: text_1number_highpriority 'G_COST' 20 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1444
+gosub @HARD3_4369
+$885 = 20 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD2_1419
+if
+   Player.Money($PLAYER_CHAR) > 19
+jf @HARD2_1412
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 7
+jf @HARD2_1398
+01B1: give_player $PLAYER_CHAR weapon 7 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 7
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -20
+0528: add 20 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD2_1405
+
+:HARD2_1398
+gosub @HARD3_3615
+
+:HARD2_1405
+jump @HARD2_1419
+
+:HARD2_1412
+gosub @HARD3_3615
+
+:HARD2_1419
+if
+  $850 == 1 // integer values
+jf @HARD2_1444
+jump @HARD2_10
+
+:HARD2_1444
+jump @HARD2_1208
+
+:HARD2_1451
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1831
+if
+  $851 == 2 // integer values
+jf @HARD2_1831
+Camera.SetPosition(364.1, 1074.719, 21.062, 0.0, 0.0, 0.0)
+Camera.PointAt(364.089, 1073.72, 21.084, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1588
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+
+:HARD2_1588
+if
+  $851 == 2 // integer values
+jf @HARD2_1831
+wait 0
+00BA: text_styled 'CLEVER' 1000 ms 4  // Meat Cleaver
+01E5: text_1number_highpriority 'G_COST' 50 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1824
+gosub @HARD3_4369
+$885 = 50 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD2_1799
+if
+   Player.Money($PLAYER_CHAR) > 49
+jf @HARD2_1792
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 8
+jf @HARD2_1778
+01B1: give_player $PLAYER_CHAR weapon 8 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 8
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -50
+0528: add 50 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD2_1785
+
+:HARD2_1778
+gosub @HARD3_3615
+
+:HARD2_1785
+jump @HARD2_1799
+
+:HARD2_1792
+gosub @HARD3_3615
+
+:HARD2_1799
+if
+  $850 == 1 // integer values
+jf @HARD2_1824
+jump @HARD2_10
+
+:HARD2_1824
+jump @HARD2_1588
+
+:HARD2_1831
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2211
+if
+  $851 == 3 // integer values
+jf @HARD2_2211
+Camera.SetPosition(363.1, 1074.719, 21.062, 0.0, 0.0, 0.0)
+Camera.PointAt(363.089, 1073.72, 21.084, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_1968
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+
+:HARD2_1968
+if
+  $851 == 3 // integer values
+jf @HARD2_2211
+wait 0
+00BA: text_styled 'KNIFE' 1000 ms 4  // Knife
+01E5: text_1number_highpriority 'G_COST' 90 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2204
+gosub @HARD3_4369
+$885 = 90 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD2_2179
+if
+   Player.Money($PLAYER_CHAR) > 89
+jf @HARD2_2172
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 5
+jf @HARD2_2158
+01B1: give_player $PLAYER_CHAR weapon 5 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 5
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -90
+0528: add 90 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD2_2165
+
+:HARD2_2158
+gosub @HARD3_3615
+
+:HARD2_2165
+jump @HARD2_2179
+
+:HARD2_2172
+gosub @HARD3_3615
+
+:HARD2_2179
+if
+  $850 == 1 // integer values
+jf @HARD2_2204
+jump @HARD2_10
+
+:HARD2_2204
+jump @HARD2_1968
+
+:HARD2_2211
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2686
+if
+  $851 == 4 // integer values
+jf @HARD2_2686
+Camera.SetPosition(362.1, 1074.719, 21.062, 0.0, 0.0, 0.0)
+Camera.PointAt(362.089, 1073.72, 21.084, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2348
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+
+:HARD2_2348
+if
+  $851 == 4 // integer values
+jf @HARD2_2686
+wait 0
+00BA: text_styled 'KATANA' 1000 ms 4  // Katana
+if
+  $874 == 0 // integer values
+jf @HARD2_2425
+00BC: text_highpriority 'STOCK' 1000 ms 1  // ~r~out of stock
+jump @HARD2_2443
+
+:HARD2_2425
+01E5: text_1number_highpriority 'G_COST' 300 flag 1000 time 1  // Cost: $~1~
+
+:HARD2_2443
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2679
+gosub @HARD3_4369
+if
+  $874 == 1 // integer values
+jf @HARD2_2499
+$885 = 300 // integer values
+gosub @HARD3_5616
+
+:HARD2_2499
+if
+00E1:   player 0 pressed_button 16
+jf @HARD2_2654
+if
+  $874 == 1 // integer values
+jf @HARD2_2647
+if
+   Player.Money($PLAYER_CHAR) > 299
+jf @HARD2_2633
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 10
+jf @HARD2_2619
+01B1: give_player $PLAYER_CHAR weapon 10 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 10
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -300
+0528: add 300 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD2_2626
+
+:HARD2_2619
+gosub @HARD3_3615
+
+:HARD2_2626
+jump @HARD2_2640
+
+:HARD2_2633
+gosub @HARD3_3615
+
+:HARD2_2640
+jump @HARD2_2654
+
+:HARD2_2647
+gosub @HARD3_3615
+
+:HARD2_2654
+if
+  $850 == 1 // integer values
+jf @HARD2_2679
+jump @HARD2_10
+
+:HARD2_2679
+jump @HARD2_2348
+
+:HARD2_2686
+jump @HARD2_582
+
+:HARD2_2693
+jump @HARD2_2783
+
+:HARD2_2700
+if
+80F6:   not player $PLAYER_CHAR 0 $543 $544 $545 radius 1.0 1.0 2.0
+jf @HARD2_2783
+if
+  $850 == 1 // integer values
+jf @HARD2_2783
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD2_2783
+gosub @HARD3_5265
+
+:HARD2_2783
+jump @HARD2_2815
+
+:HARD2_2790
+if
+  $843 == 1 // integer values
+jf @HARD2_2815
+gosub @HARD3_5297
+
+:HARD2_2815
+jump @HARD2_2829
+
+:HARD2_2822
+gosub @HARD3_5297
+
+:HARD2_2829
+jump @HARD2_10
+
+:HARD3
+thread 'HARD3'
+
+:HARD3_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2752
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @HARD3_2745
+if
+00F5:   player $PLAYER_CHAR 0 $546 $547 $548 radius 35.0 35.0 20.0
+jf @HARD3_2720
+if
+  $843 == 0 // integer values
+jf @HARD3_423
+gosub @HARD3_5554
+0084: $858 = $859 // integer values and handles
+0060: $858 -= $861 // integer values
+$875 = Object.Create(#SCREWDRIVER, -961.0, -689.87, 14.08)
+Object.ToggleInMovingList($875) = False
+Object.Angle($875) = 270.0
+$876 = Object.Create(#HAMMER, -960.95, -690.88, 14.032)
+Object.ToggleInMovingList($876) = False
+0453: object $876 set_rotation 0.0 4.0 270.0
+$877 = Object.Create(#CLEAVER, -960.85, -691.9, 14.08)
+Object.ToggleInMovingList($877) = False
+Object.Angle($877) = 270.0
+$878 = Object.Create(#MACHETE, -960.62, -693.0, 14.08)
+Object.ToggleInMovingList($878) = False
+Object.Angle($878) = 270.0
+$879 = Object.Create(#CHNSAW, -960.6, -694.0, 14.162)
+Object.ToggleInMovingList($879) = False
+Object.Angle($879) = 270.0
+if
+  $858 > 60000 // integer values
+jf @HARD3_409
+$854 = Actor.Create(CivMale, #SPECIAL16, -963.8, -692.3, 10.3)
+Actor.Health($854) = 250
+Actor.Angle($854) = 90.0
+gosub @HARD3_5204
+
+:HARD3_409
+$843 = 1 // integer values
+jump @HARD3_478
+
+:HARD3_423
+if
+0057:   player $PLAYER_CHAR 0 -981.0 -688.0 15.1 -959.8 -696.0 10.1
+jf @HARD3_478
+gosub @HARD3_2856
+
+:HARD3_478
+if
+   not Actor.Dead($854)
+jf @HARD3_2713
+if
+  $845 == 0 // integer values
+jf @HARD3_2713
+if
+  $1180 == 0 // integer values
+jf @HARD3_2713
+01FA: $908 = rampage_status
+if
+   not $908 == 1 // integer values
+jf @HARD3_2713
+if
+00F9:   player $PLAYER_CHAR stopped 1 $546 $547 $548 radius 1.0 1.0 2.0
+jf @HARD3_2630
+gosub @HARD3_4777
+
+:HARD3_602
+if
+  $850 == 0 // integer values
+jf @HARD3_2623
+$1180 = 1 // integer values
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1091
+if
+  $851 == 0 // integer values
+jf @HARD3_1091
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Actor.Dead($854)
+jf @HARD3_696
+0210: player $PLAYER_CHAR look_at_actor $854
+
+:HARD3_696
+Camera.SetPosition(-962.483, -690.104, 14.47, 0.0, 0.0, 0.0)
+Camera.PointAt(-961.485, -690.029, 14.481, 1)
+if
+  $862 == 0 // integer values
+jf @HARD3_789
+0460: set_camera_pointing_time 0.0 1200
+$862 = 1 // integer values
+jump @HARD3_799
+
+:HARD3_789
+0460: set_camera_pointing_time 0.0 800
+
+:HARD3_799
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_848
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = True
+
+:HARD3_848
+if
+  $851 == 0 // integer values
+jf @HARD3_1091
+wait 0
+00BA: text_styled 'SCREWD' 1000 ms 4  // Screwdriver
+01E5: text_1number_highpriority 'G_COST' 10 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1084
+gosub @HARD3_4369
+$885 = 10 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_1059
+if
+   Player.Money($PLAYER_CHAR) > 9
+jf @HARD3_1052
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 2
+jf @HARD3_1038
+01B1: give_player $PLAYER_CHAR weapon 2 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 2
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -10
+0528: add 10 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD3_1045
+
+:HARD3_1038
+gosub @HARD3_3615
+
+:HARD3_1045
+jump @HARD3_1059
+
+:HARD3_1052
+gosub @HARD3_3615
+
+:HARD3_1059
+if
+  $850 == 1 // integer values
+jf @HARD3_1084
+jump @HARD3_10
+
+:HARD3_1084
+jump @HARD3_848
+
+:HARD3_1091
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1471
+if
+  $851 == 1 // integer values
+jf @HARD3_1471
+Camera.SetPosition(-962.483, -691.104, 14.47, 0.0, 0.0, 0.0)
+Camera.PointAt(-961.485, -691.029, 14.481, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1228
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+
+:HARD3_1228
+if
+  $851 == 1 // integer values
+jf @HARD3_1471
+wait 0
+00BA: text_styled 'HAMMER' 1000 ms 4  // Hammer
+01E5: text_1number_highpriority 'G_COST' 20 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1464
+gosub @HARD3_4369
+$885 = 20 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_1439
+if
+   Player.Money($PLAYER_CHAR) > 19
+jf @HARD3_1432
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 7
+jf @HARD3_1418
+01B1: give_player $PLAYER_CHAR weapon 7 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 7
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -20
+0528: add 20 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD3_1425
+
+:HARD3_1418
+gosub @HARD3_3615
+
+:HARD3_1425
+jump @HARD3_1439
+
+:HARD3_1432
+gosub @HARD3_3615
+
+:HARD3_1439
+if
+  $850 == 1 // integer values
+jf @HARD3_1464
+jump @HARD3_10
+
+:HARD3_1464
+jump @HARD3_1228
+
+:HARD3_1471
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1851
+if
+  $851 == 2 // integer values
+jf @HARD3_1851
+Camera.SetPosition(-962.483, -692.104, 14.47, 0.0, 0.0, 0.0)
+Camera.PointAt(-961.485, -692.029, 14.481, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1608
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+
+:HARD3_1608
+if
+  $851 == 2 // integer values
+jf @HARD3_1851
+wait 0
+00BA: text_styled 'CLEVER' 1000 ms 4  // Meat Cleaver
+01E5: text_1number_highpriority 'G_COST' 50 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1844
+gosub @HARD3_4369
+$885 = 50 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_1819
+if
+   Player.Money($PLAYER_CHAR) > 49
+jf @HARD3_1812
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 8
+jf @HARD3_1798
+01B1: give_player $PLAYER_CHAR weapon 8 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 8
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -50
+0528: add 50 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD3_1805
+
+:HARD3_1798
+gosub @HARD3_3615
+
+:HARD3_1805
+jump @HARD3_1819
+
+:HARD3_1812
+gosub @HARD3_3615
+
+:HARD3_1819
+if
+  $850 == 1 // integer values
+jf @HARD3_1844
+jump @HARD3_10
+
+:HARD3_1844
+jump @HARD3_1608
+
+:HARD3_1851
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2231
+if
+  $851 == 3 // integer values
+jf @HARD3_2231
+Camera.SetPosition(-962.483, -693.204, 14.47, 0.0, 0.0, 0.0)
+Camera.PointAt(-961.485, -693.129, 14.481, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_1988
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+
+:HARD3_1988
+if
+  $851 == 3 // integer values
+jf @HARD3_2231
+wait 0
+00BA: text_styled 'MACHETE' 1000 ms 4  // Machete
+01E5: text_1number_highpriority 'G_COST' 100 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2224
+gosub @HARD3_4369
+$885 = 100 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_2199
+if
+   Player.Money($PLAYER_CHAR) > 99
+jf @HARD3_2192
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 9
+jf @HARD3_2178
+01B1: give_player $PLAYER_CHAR weapon 9 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 9
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -100
+0528: add 100 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD3_2185
+
+:HARD3_2178
+gosub @HARD3_3615
+
+:HARD3_2185
+jump @HARD3_2199
+
+:HARD3_2192
+gosub @HARD3_3615
+
+:HARD3_2199
+if
+  $850 == 1 // integer values
+jf @HARD3_2224
+jump @HARD3_10
+
+:HARD3_2224
+jump @HARD3_1988
+
+:HARD3_2231
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2616
+if
+  $851 == 4 // integer values
+jf @HARD3_2616
+Camera.SetPosition(-962.483, -694.504, 14.47, 0.0, 0.0, 0.0)
+Camera.PointAt(-961.485, -694.429, 14.481, 1)
+0460: set_camera_pointing_time 0.0 800
+$863 = 0 // integer values
+wait 800
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2368
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+
+:HARD3_2368
+if
+  $851 == 4 // integer values
+jf @HARD3_2616
+wait 0
+00BA: text_styled 'CHAINSA' 1000 ms 4  // Chainsaw
+01E5: text_1number_highpriority 'G_COST' 500 flag 1000 time 1  // Cost: $~1~
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2609
+gosub @HARD3_4369
+$885 = 500 // integer values
+gosub @HARD3_5616
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_2584
+if
+   Player.Money($PLAYER_CHAR) > 499
+jf @HARD3_2577
+if
+82D7:   not player $PLAYER_CHAR currentweapon == 11
+jf @HARD3_2563
+01B1: give_player $PLAYER_CHAR weapon 11 ammo 0 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 11
+gosub @HARD3_3688
+Player.Money($PLAYER_CHAR) += -500
+0528: add 500 to_money_spent_on_weapons_stats
+wait 300
+jump @HARD3_2570
+
+:HARD3_2563
+gosub @HARD3_3615
+
+:HARD3_2570
+jump @HARD3_2584
+
+:HARD3_2577
+gosub @HARD3_3615
+
+:HARD3_2584
+if
+  $850 == 1 // integer values
+jf @HARD3_2609
+jump @HARD3_10
+
+:HARD3_2609
+jump @HARD3_2368
+
+:HARD3_2616
+jump @HARD3_602
+
+:HARD3_2623
+jump @HARD3_2713
+
+:HARD3_2630
+if
+80F6:   not player $PLAYER_CHAR 0 $546 $547 $548 radius 1.0 1.0 2.0
+jf @HARD3_2713
+if
+  $850 == 1 // integer values
+jf @HARD3_2713
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2713
+gosub @HARD3_5265
+
+:HARD3_2713
+jump @HARD3_2745
+
+:HARD3_2720
+if
+  $843 == 1 // integer values
+jf @HARD3_2745
+gosub @HARD3_5297
+
+:HARD3_2745
+jump @HARD3_2759
+
+:HARD3_2752
+gosub @HARD3_5297
+
+:HARD3_2759
+jump @HARD3_10
+
+:HARD3_2766
+if
+   not Actor.Dead($853)
+jf @HARD3_2854
+if or
+02DF:   player $PLAYER_CHAR aggressive
+031D:   actor $853 hit_by_weapon 47
+jf @HARD3_2854
+if
+  $844 == 0 // integer values
+jf @HARD3_2854
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_2847
+01CA: actor $853 kill_player $PLAYER_CHAR
+
+:HARD3_2847
+$844 = 1 // integer values
+
+:HARD3_2854
+return
+
+:HARD3_2856
+if
+   not Actor.Dead($854)
+jf @HARD3_3613
+if
+0457:   player $PLAYER_CHAR aiming_at_actor $854
+jf @HARD3_3454
+if
+  $845 == 0 // integer values
+jf @HARD3_3013
+022F: set_actor $854 stop_looking
+if
+   not Actor.Dead($854)
+jf @HARD3_2992
+04EB: actor $854 crouch 0 9999999 ms
+0372: set_actor $854 anim 0 wait_state_time 0 ms
+0372: set_actor $854 anim 17 wait_state_time 9999999 ms
+04C4: create_coordinate $896 $897 $898 from_actor $854 offset 0.0 1.2 0.0
+
+:HARD3_2992
+16@ = 0 // integer values
+$845 = 1 // integer values
+jump @HARD3_3417
+
+:HARD3_3013
+if and
+  16@ > 2000 // integer values
+  6000 > 16@ // integer values
+jf @HARD3_3101
+if
+  $1540 == 0 // integer values
+jf @HARD3_3101
+02E1: $1536 = create_cash_pickup 50 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+gosub @HARD3_5706
+$1540 = 1 // integer values
+
+:HARD3_3101
+if and
+  16@ > 6000 // integer values
+  10000 > 16@ // integer values
+jf @HARD3_3209
+if
+  $1541 == 0 // integer values
+jf @HARD3_3209
+$897 += 0.1 // floating-point values
+$896 += 0.1 // floating-point values
+02E1: $1537 = create_cash_pickup 100 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+$1541 = 1 // integer values
+
+:HARD3_3209
+if and
+  16@ > 10000 // integer values
+  14000 > 16@ // integer values
+jf @HARD3_3308
+if
+  $1542 == 0 // integer values
+jf @HARD3_3308
+$897 += 0.1 // floating-point values
+02E1: $1538 = create_cash_pickup 250 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$1542 = 1 // integer values
+
+:HARD3_3308
+if and
+  16@ > 14000 // integer values
+  20000 > 16@ // integer values
+jf @HARD3_3417
+if
+  $1543 == 0 // integer values
+jf @HARD3_3417
+$897 += 0.1 // floating-point values
+$896 += 0.1 // floating-point values
+02E1: $1539 = create_cash_pickup 600 at $896 $897 $898
+018C: play_sound 13 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+$1543 = 1 // integer values
+
+:HARD3_3417
+if or
+02DF:   player $PLAYER_CHAR aggressive
+031D:   actor $854 hit_by_weapon 47
+jf @HARD3_3447
+jump @HARD3_3454
+
+:HARD3_3447
+jump @HARD3_3613
+
+:HARD3_3454
+if
+  $845 == 0 // integer values
+jf @HARD3_3509
+if or
+02DF:   player $PLAYER_CHAR aggressive
+031D:   actor $854 hit_by_weapon 47
+jf @HARD3_3502
+$845 = 1 // integer values
+
+:HARD3_3502
+jump @HARD3_3613
+
+:HARD3_3509
+if
+   not Actor.Dead($854)
+jf @HARD3_3613
+0372: set_actor $854 anim 0 wait_state_time 0 ms
+04EB: actor $854 crouch 1 9999999 ms
+if
+  $864 == 0 // integer values
+jf @HARD3_3613
+022F: set_actor $854 stop_looking
+Actor.StorePos($854, $896, $897, $898)
+018D: $865 = create_sound 0 at $896 $897 $898
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$864 = 1 // integer values
+
+:HARD3_3613
+return
+
+:HARD3_3615
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_3658
+0054: store_player $PLAYER_CHAR position_to $899 $900 $901
+018C: play_sound 14 at $899 $900 $901
+
+:HARD3_3658
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_3686
+wait 0
+jump @HARD3_3658
+
+:HARD3_3686
+return
+
+:HARD3_3688
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_3731
+0054: store_player $PLAYER_CHAR position_to $899 $900 $901
+018C: play_sound 13 at $899 $900 $901
+
+:HARD3_3731
+if
+00E1:   player 0 pressed_button 16
+jf @HARD3_3759
+wait 0
+jump @HARD3_3731
+
+:HARD3_3759
+return
+
+:HARD3_3761
+0512: show_permanent_text_box 'GUN_H1'
+0494: get_joystick 0 data_to $880 $881 $882 $883
+if or
+00E1:   player 0 pressed_button 10
+  -100 > $880 // integer values
+jf @HARD3_3818
+$851 -= 1 // integer values
+
+:HARD3_3818
+if or
+00E1:   player 0 pressed_button 11
+  $880 > 100 // integer values
+jf @HARD3_3849
+$851 += 1 // integer values
+
+:HARD3_3849
+if
+  0 > $851 // integer values
+jf @HARD3_3874
+$851 = 4 // integer values
+
+:HARD3_3874
+if
+  $851 > 4 // integer values
+jf @HARD3_3899
+$851 = 0 // integer values
+
+:HARD3_3899
+if
+00E1:   player 0 pressed_button 15
+jf @HARD3_4024
+
+:HARD3_3916
+if
+00E1:   player 0 pressed_button 15
+jf @HARD3_3944
+wait 0
+jump @HARD3_3916
+
+:HARD3_3944
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4024
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+03E6: remove_text_box
+0055: put_player $PLAYER_CHAR at $531 $532 $533
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4010
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = False
+Player.CanMove($PLAYER_CHAR) = True
+
+:HARD3_4010
+$1180 = 0 // integer values
+$849 = 1 // integer values
+
+:HARD3_4024
+return
+
+:HARD3_4026
+0512: show_permanent_text_box 'GUN_H1'
+0494: get_joystick 0 data_to $880 $881 $882 $883
+if or
+00E1:   player 0 pressed_button 10
+  -100 > $880 // integer values
+jf @HARD3_4083
+$851 -= 1 // integer values
+
+:HARD3_4083
+if or
+00E1:   player 0 pressed_button 11
+  $880 > 100 // integer values
+jf @HARD3_4114
+$851 += 1 // integer values
+
+:HARD3_4114
+if
+  0 > $851 // integer values
+jf @HARD3_4139
+$851 = 5 // integer values
+
+:HARD3_4139
+if
+  $851 > 5 // integer values
+jf @HARD3_4164
+$851 = 0 // integer values
+
+:HARD3_4164
+if
+00E1:   player 0 pressed_button 15
+jf @HARD3_4367
+
+:HARD3_4181
+if
+80E1:   not player 0 pressed_button 15
+jf @HARD3_4209
+wait 0
+jump @HARD3_4181
+
+:HARD3_4209
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4367
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+03E6: remove_text_box
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4323
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @HARD3_4285
+0055: put_player $PLAYER_CHAR at $534 $535 $536
+
+:HARD3_4285
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @HARD3_4323
+0055: put_player $PLAYER_CHAR at $537 $538 $539
+
+:HARD3_4323
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4353
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = False
+Player.CanMove($PLAYER_CHAR) = True
+
+:HARD3_4353
+$1180 = 0 // integer values
+$849 = 1 // integer values
+
+:HARD3_4367
+return
+
+:HARD3_4369
+0512: show_permanent_text_box 'GUN_H1'
+0494: get_joystick 0 data_to $880 $881 $882 $883
+if or
+00E1:   player 0 pressed_button 10
+  -100 > $880 // integer values
+jf @HARD3_4426
+$851 -= 1 // integer values
+
+:HARD3_4426
+if or
+00E1:   player 0 pressed_button 11
+  $880 > 100 // integer values
+jf @HARD3_4457
+$851 += 1 // integer values
+
+:HARD3_4457
+if
+  0 > $851 // integer values
+jf @HARD3_4482
+$851 = 4 // integer values
+
+:HARD3_4482
+if
+  $851 > 4 // integer values
+jf @HARD3_4507
+$851 = 0 // integer values
+
+:HARD3_4507
+if
+00E1:   player 0 pressed_button 15
+jf @HARD3_4748
+
+:HARD3_4524
+if
+00E1:   player 0 pressed_button 15
+jf @HARD3_4552
+wait 0
+jump @HARD3_4524
+
+:HARD3_4552
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4748
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+03E6: remove_text_box
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4704
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH2'  // Washington Beach
+jf @HARD3_4628
+0055: put_player $PLAYER_CHAR at $540 $541 $542
+
+:HARD3_4628
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @HARD3_4666
+0055: put_player $PLAYER_CHAR at $543 $544 $545
+
+:HARD3_4666
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @HARD3_4704
+0055: put_player $PLAYER_CHAR at $546 $547 $548
+
+:HARD3_4704
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_4734
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = False
+Player.CanMove($PLAYER_CHAR) = True
+
+:HARD3_4734
+$1180 = 0 // integer values
+$850 = 1 // integer values
+
+:HARD3_4748
+return
+
+:HARD3_4750
+if
+  $846 == 0 // integer values
+jf @HARD3_4775
+$846 = 1 // integer values
+
+:HARD3_4775
+return
+
+:HARD3_4777
+if
+  $846 == 0 // integer values
+jf @HARD3_4802
+$846 = 1 // integer values
+
+:HARD3_4802
+return
+
+:HARD3_4804
+wait 1500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_5022
+if
+   not Actor.Dead($853)
+jf @HARD3_5022
+0243: set_actor $853 ped_stats_to 16
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @HARD3_4898
+if
+   Model.Available(#INGRAMSL)
+jf @HARD3_4898
+01B2: give_actor $853 weapon 24 ammo 9999 // Load the weapon model before using this
+
+:HARD3_4898
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @HARD3_4948
+if
+   Model.Available(#UZI)
+jf @HARD3_4948
+01B2: give_actor $853 weapon 23 ammo 9999 // Load the weapon model before using this
+
+:HARD3_4948
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @HARD3_4998
+if
+   Model.Available(#PYTHON)
+jf @HARD3_4998
+01B2: give_actor $853 weapon 18 ammo 9999 // Load the weapon model before using this
+
+:HARD3_4998
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_5022
+022D: set_actor $853 to_look_at_player $PLAYER_CHAR
+
+:HARD3_5022
+return
+
+:HARD3_5024
+$849 = 0 // integer values
+$851 = 0 // integer values
+$846 = 0 // integer values
+$862 = 0 // integer values
+03E6: remove_text_box
+return
+
+:HARD3_5056
+if and
+   Actor.Dead($853)
+  $857 > 30000 // integer values
+jf @HARD3_5085
+01BD: $860 = current_time_in_ms
+
+:HARD3_5085
+Actor.DestroyInstantly($853)
+0296: unload_special_actor 21
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_5117
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = False
+
+:HARD3_5117
+Object.Destroy($889)
+Object.Destroy($890)
+Object.Destroy($891)
+Object.Destroy($892)
+Object.Destroy($893)
+Object.Destroy($894)
+Object.Destroy($895)
+$844 = 0 // integer values
+$842 = 0 // integer values
+$866 = 0 // integer values
+018E: stop_sound $865
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HARD3_5202
+$860 = -30000 // integer values
+
+:HARD3_5202
+return
+
+:HARD3_5204
+if
+   not Actor.Dead($854)
+jf @HARD3_5263
+0243: set_actor $854 ped_stats_to 16
+01ED: clear_actor $854 threat_search
+0350: set_actor $854 maintain_position_when_attacked 1
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_5263
+022D: set_actor $854 to_look_at_player $PLAYER_CHAR
+
+:HARD3_5263
+return
+
+:HARD3_5265
+$850 = 0 // integer values
+$851 = 0 // integer values
+$846 = 0 // integer values
+$862 = 0 // integer values
+03E6: remove_text_box
+return
+
+:HARD3_5297
+if or
+   Actor.Dead($854)
+  $845 == 1 // integer values
+jf @HARD3_5346
+if
+  $858 > 60000 // integer values
+jf @HARD3_5346
+01BD: $861 = current_time_in_ms
+
+:HARD3_5346
+Actor.DestroyInstantly($854)
+Object.Destroy($875)
+Object.Destroy($876)
+Object.Destroy($877)
+Object.Destroy($878)
+Object.Destroy($879)
+0296: unload_special_actor 16
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HARD3_5403
+Actor.LockInCurrentPosition($PLAYER_ACTOR) = False
+
+:HARD3_5403
+$1540 = 0 // integer values
+$1541 = 0 // integer values
+$1542 = 0 // integer values
+$1543 = 0 // integer values
+$845 = 0 // integer values
+$843 = 0 // integer values
+$866 = 0 // integer values
+$864 = 0 // integer values
+018E: stop_sound $865
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HARD3_5490
+$861 = -60000 // integer values
+
+:HARD3_5490
+return
+
+:HARD3_5492
+023C: load_special_actor 21 'SAM'
+
+:HARD3_5504
+if
+823D:   not special_actor 21 loaded
+jf @HARD3_5542
+wait 0
+023C: load_special_actor 21 'SAM'
+jump @HARD3_5504
+
+:HARD3_5542
+01BD: $859 = current_time_in_ms
+Actor.DestroyInstantly($853)
+return
+
+:HARD3_5554
+023C: load_special_actor 16 'S_KEEP'
+
+:HARD3_5566
+if
+823D:   not special_actor 16 loaded
+jf @HARD3_5604
+wait 0
+023C: load_special_actor 16 'S_KEEP'
+jump @HARD3_5566
+
+:HARD3_5604
+01BD: $859 = current_time_in_ms
+Actor.DestroyInstantly($854)
+return
+
+:HARD3_5616
+04B8: get_weapon_data_from_player $PLAYER_ACTOR slot 2 weapon $869 ammo $852 model $870
+01B8: set_player $PLAYER_CHAR armed_weapon_to $869
+if
+84A3:   not  $869 == 0 // == constant
+jf @HARD3_5676
+01E5: text_1number_highpriority 'HELP54' $885 flag 1000 time 1  // ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+
+:HARD3_5676
+return
+
+:HARD3_5678
+if
+  $852 > 0 // integer values
+jf @HARD3_5704
+01B8: set_player $PLAYER_CHAR armed_weapon_to $869
+
+:HARD3_5704
+return
+
+:HARD3_5706
+if and
+00F5:   player $PLAYER_CHAR 0 $540 $541 $542 radius 35.0 35.0 30.0
+  $886 == 0 // integer values
+jf @HARD3_5773
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$886 = 1 // integer values
+
+:HARD3_5773
+if and
+0057:   player $PLAYER_CHAR 0 357.7 1016.6 30.1 410.4 1110.4 16.0
+  $887 == 0 // integer values
+jf @HARD3_5846
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$887 = 1 // integer values
+
+:HARD3_5846
+if and
+00F5:   player $PLAYER_CHAR 0 $546 $547 $548 radius 35.0 35.0 20.0
+  $888 == 0 // integer values
+jf @HARD3_5913
+0531: increment_stores_knocked_off_by 1
+$1531 += 1 // integer values
+$888 = 1 // integer values
+
+:HARD3_5913
+return

@@ -1,0 +1,7151 @@
+DEFINE MISSIONS 97
+DEFINE MISSION 0  AT @INITIAL          // Initial
+DEFINE MISSION 1  AT @INTRO            // Intro
+DEFINE MISSION 2  AT @HOTEL            // An Old Friend
+DEFINE MISSION 3  AT @LAWYER1          // The Party
+DEFINE MISSION 4  AT @LAWYER2          // Back Alley Brawl
+DEFINE MISSION 5  AT @LAWYER3          // Jury Fury
+DEFINE MISSION 6  AT @LAWYER4          // Riot
+DEFINE MISSION 7  AT @GENERL1          // Treacherous Swine
+DEFINE MISSION 8  AT @COL2             // Mall Shootout
+DEFINE MISSION 9  AT @GENERL3          // Guardian Angels
+DEFINE MISSION 10 AT @COL_4            // Sir, Yes Sir!
+DEFINE MISSION 11 AT @COL_5            // All Hands On Deck!
+DEFINE MISSION 12 AT @BARON1           // The Chase
+DEFINE MISSION 13 AT @BARON2           // Phnom Penh '86
+DEFINE MISSION 14 AT @BARON3           // The Fastest Boat
+DEFINE MISSION 15 AT @BARON4           // Supply & Demand
+DEFINE MISSION 16 AT @BARON5           // Rub Out
+DEFINE MISSION 17 AT @KENT1            // Death Row
+DEFINE MISSION 18 AT @SERG1            // Four Iron
+DEFINE MISSION 19 AT @SERG3            // Demolition Man
+DEFINE MISSION 20 AT @SERG2            // Two Bit Hit
+DEFINE MISSION 21 AT @BANKJO1          // No Escape?
+DEFINE MISSION 22 AT @BANKJO2          // The Shootist
+DEFINE MISSION 23 AT @BANKJO3          // The Driver
+DEFINE MISSION 24 AT @BANKJO4          // The Job
+DEFINE MISSION 25 AT @PHIL1            // Gun Runner
+DEFINE MISSION 26 AT @PHIL2            // Boomshine Saigon
+DEFINE MISSION 27 AT @PORNO1           // Recruitment Drive
+DEFINE MISSION 28 AT @PORNO2           // Dildo Dodo
+DEFINE MISSION 29 AT @PORNO3           // Martha's Mug Shot
+DEFINE MISSION 30 AT @PORNO4           // G-spotlight
+DEFINE MISSION 31 AT @PROTEC1          // Shakedown
+DEFINE MISSION 32 AT @PROTEC2          // Bar Brawl
+DEFINE MISSION 33 AT @PROTEC3          // Cop Land
+DEFINE MISSION 34 AT @COUNT1           // Spilling the Beans
+DEFINE MISSION 35 AT @COUNT2           // Hit the Courier
+DEFINE MISSION 36 AT @BUYPRO1          // Printworks Buy
+DEFINE MISSION 37 AT @CARBUY1          // Sunshine Autos
+DEFINE MISSION 38 AT @BUYPRO2          // Interglobal Films Buy
+DEFINE MISSION 39 AT @ICECUT           // Cherry Popper Icecreams Buy
+DEFINE MISSION 40 AT @TAXCUT           // Kaufman Cabs Buy
+DEFINE MISSION 41 AT @BUYPRO3          // Malibu Club Buy
+DEFINE MISSION 42 AT @BOATBY           // The Boatyard Buy
+DEFINE MISSION 43 AT @BUYPRO4          // Pole Position Club Buy
+DEFINE MISSION 44 AT @BUYPRO5          // El Swanko Casa Buy
+DEFINE MISSION 45 AT @LNKVBUY          // Links View Apartment Buy
+DEFINE MISSION 46 AT @HYCOBUY          // Hyman Condo Buy
+DEFINE MISSION 47 AT @OCHEBUY          // Ocean Heighs Aprt. Buy
+DEFINE MISSION 48 AT @WASHBUY          // 1102 Washington Street Buy
+DEFINE MISSION 49 AT @VCPTBUY          // Vice Point Buy
+DEFINE MISSION 50 AT @SKUMBUY          // Skumole Shack Buy
+DEFINE MISSION 51 AT @CAP_1            // Cap the Collector
+DEFINE MISSION 52 AT @FIN_1            // Keep your Friends Close...
+DEFINE MISSION 53 AT @BIKE1            // Alloy Wheels of Steel
+DEFINE MISSION 54 AT @BIKE2            // Messing with the Man
+DEFINE MISSION 55 AT @BIKE3            // Hog Tied
+DEFINE MISSION 56 AT @CUBAN1           // Stunt Boat Challenge
+DEFINE MISSION 57 AT @CUBAN2           // Cannon Fodder
+DEFINE MISSION 58 AT @CUBAN3           // Naval Engagement
+DEFINE MISSION 59 AT @CUBAN4           // Trojan Voodoo
+DEFINE MISSION 60 AT @HAIT1            // Juju Scramble
+DEFINE MISSION 61 AT @HAIT2            // Bombs Away!
+DEFINE MISSION 62 AT @HAIT3            // Dirty Lickin's
+DEFINE MISSION 63 AT @ROCKB1           // Love Juice
+DEFINE MISSION 64 AT @ROCKB2           // Psycho Killer
+DEFINE MISSION 65 AT @ROCKB3           // Publicity Tour
+DEFINE MISSION 66 AT @RANGE            // Weapon Range
+DEFINE MISSION 67 AT @ASSIN1           // Road Kill
+DEFINE MISSION 68 AT @ASSIN2           // Waste the Wife
+DEFINE MISSION 69 AT @ASSIN3           // Autocide
+DEFINE MISSION 70 AT @ASSIN4           // Check Out at the Check In
+DEFINE MISSION 71 AT @ASSIN5           // Loose Ends
+DEFINE MISSION 72 AT @TAXWAR1          // V.I.P.
+DEFINE MISSION 73 AT @TAXWAR2          // Friendly Rivalry
+DEFINE MISSION 74 AT @TAXWAR3          // Cabmaggedon
+DEFINE MISSION 75 AT @TAXI             // TAXI DRIVER
+DEFINE MISSION 76 AT @AMBULAN          // PARAMEDIC
+DEFINE MISSION 77 AT @FIRETRU          // FIREFIGHTER
+DEFINE MISSION 78 AT @COPCAR           // VIGILANTE
+DEFINE MISSION 79 AT @OVALRNG          // HOTRING
+DEFINE MISSION 80 AT @MM               // BLOODRING
+DEFINE MISSION 81 AT @KICKST           // DIRTRING
+DEFINE MISSION 82 AT @RACE             // Sunshine Autos Races
+DEFINE MISSION 83 AT @ICECRE1          // Distribution
+DEFINE MISSION 84 AT @HELI1SC          // Downtown Chopper Checkpoint
+DEFINE MISSION 85 AT @HELI2SC          // Ocean Beach Chopper Checkpoint
+DEFINE MISSION 86 AT @HELI3SC          // Vice Point Chopper Checkpoint
+DEFINE MISSION 87 AT @HELI4SC          // Little Haiti Chopper Checkpoint
+DEFINE MISSION 88 AT @BMX_1            // Trial by Dirt
+DEFINE MISSION 89 AT @BMX_2            // Test Track
+DEFINE MISSION 90 AT @T4X4_1           // PCJ Playground
+DEFINE MISSION 91 AT @CARPRK1          // Cone Crazy
+DEFINE MISSION 92 AT @PIZZA            // PIZZA BOY
+DEFINE MISSION 93 AT @RCHELI           // RC Raider Pickup
+DEFINE MISSION 94 AT @RCRACE1          // RC Bandit Race
+DEFINE MISSION 95 AT @RCPLNE1          // RC Baron Race
+DEFINE MISSION 96 AT @COKERUN          // Checkpoint Charlie
+
+//-------------MAIN---------------
+thread 'MAIN'
+fade 0 0
+042C: set_total_missions_to 89
+030D: set_total_mission_points_to 154
+01F0: set_max_wanted_level_to 4
+02ED: set_total_hidden_packages_to 100
+set_wb_check_to 0
+00C0: set_current_time 22 0
+04E4: unknown_refresh_game_renderer_at 83.0 -849.8
+Camera.SetAtPos(83.0, -849.8, 9.3)
+$PLAYER_CHAR = Player.Create(0, 83.0, -849.8, 9.3)
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+start_mission INITIAL  // Initial
+$ARENA_DOOR_1 = Object.Init(#DTN_STADDOORA, -1109.615, 1330.097, 20.372)
+Object.RemoveFromMissionCleanupList($ARENA_DOOR_1)
+$ARENA_DOOR_2 = Object.Init(#DTN_STADDOORB, -1109.615, 1331.932, 20.372)
+Object.RemoveFromMissionCleanupList($ARENA_DOOR_2)
+$6 = Object.Init(#DTHOTRING_A, -1037.08, 1340.258, 36.552)
+Object.RemoveFromMissionCleanupList($6)
+$67 = 0 // integer values
+$110 = Pickup.Create(#BRIBE, 15, 393.9, -60.2, 11.5)
+$111 = Pickup.Create(#BRIBE, 15, 116.0, -1313.1, 4.4)
+$112 = Pickup.Create(#BRIBE, 15, 393.7, -660.6, 10.7)
+$113 = Pickup.Create(#BRIBE, 15, 470.7, 70.1, 10.8)
+$114 = Pickup.Create(#BRIBE, 15, 382.7, 364.1, 10.8)
+$115 = Pickup.Create(#BRIBE, 15, 422.4, 971.2, 12.1)
+$116 = Pickup.Create(#BRIBE, 15, 89.1, 887.4, 10.5)
+$117 = Pickup.Create(#BRIBE, 15, -822.7, 1304.5, 11.7)
+$118 = Pickup.Create(#BRIBE, 15, -900.69, 251.4, 17.1)
+$119 = Pickup.Create(#BRIBE, 15, -973.7, 61.0, 10.4)
+$120 = Pickup.Create(#BRIBE, 15, -937.9, -114.1, 17.0)
+$121 = Pickup.Create(#BRIBE, 15, -1015.9, -627.9, 11.2)
+$122 = Pickup.Create(#BRIBE, 15, -906.3, -834.0, 15.7)
+014B: $87 = init_car_generator #DELUXO -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1022.6 -868.6 12.2 angle 175.0
+014C: set_parked_car_generator $87 cars_to_generate_to 0
+014B: $88 = init_car_generator #SABRETUR -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.1 -869.4 12.2 angle 188.0
+014C: set_parked_car_generator $88 cars_to_generate_to 0
+014B: $89 = init_car_generator #SANDKING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1014.3 -868.8 17.9 angle 195.0
+014C: set_parked_car_generator $89 cars_to_generate_to 0
+014B: $90 = init_car_generator #HOTRING -1 -1 force_spawn 1 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1023.2 -868.1 17.9 angle 172.0
+014C: set_parked_car_generator $90 cars_to_generate_to 0
+014B: $1977 = init_car_generator #SEASPAR -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -379.0 -632.1 10.2 angle 180.0
+014C: set_parked_car_generator $1977 cars_to_generate_to 0
+014B: $1978 = init_car_generator #RHINO -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1720.3 -239.6 14.8 angle 92.0
+014C: set_parked_car_generator $1978 cars_to_generate_to 0
+014B: $1979 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -1681.2 -103.7 14.7 angle 180.0
+014C: set_parked_car_generator $1979 cars_to_generate_to 0
+014B: $2098 = init_car_generator #HUNTER -1 -1 force_spawn 0 alarm 0 door_lock 0 min_delay 0 max_delay 10000 at -70.3 -1607.0 12.7 angle 0.0
+014C: set_parked_car_generator $2098 cars_to_generate_to 0
+$FILM_STUDIO_FRONT_GATE_CLOSED = Object.Init(#CI_GATESCLOSED, 11.697, 963.176, 12.258)
+Object.RemoveFromMissionCleanupList($FILM_STUDIO_FRONT_GATE_CLOSED)
+$FILM_STUDIO_BACK_GATE_CLOSED = Object.Init(#CI_BACKGATECLOSE, -11.853, 884.06, 13.542)
+Object.RemoveFromMissionCleanupList($FILM_STUDIO_BACK_GATE_CLOSED)
+024A: $292 = get_phone_at 36.90385 -1023.3
+024A: $293 = get_phone_at 482.453 244.221
+024A: $294 = get_phone_at 38.341 -1023.3
+024A: $295 = get_phone_at -1482.801 -825.2587
+024A: $296 = get_phone_at -976.7705 -530.5467
+0180: set_on_mission_flag_to $ONMISSION
+$585 = 304.5 // floating-point values
+$586 = 376.3 // floating-point values
+$587 = 12.7 // floating-point values
+$588 = -834.8 // floating-point values
+$589 = 1306.9 // floating-point values
+$590 = 11.0 // floating-point values
+$591 = 14.0 // floating-point values
+$592 = -1500.7 // floating-point values
+$593 = 12.7 // floating-point values
+$594 = 88.5 // floating-point values
+$595 = -804.7 // floating-point values
+$596 = 11.2 // floating-point values
+$597 = 531.4 // floating-point values
+$598 = 1273.7 // floating-point values
+$599 = 17.6 // floating-point values
+$600 = -560.1 // floating-point values
+$601 = 703.6 // floating-point values
+$602 = 20.5 // floating-point values
+$453 = 209.5 // floating-point values
+$454 = -1288.9 // floating-point values
+$455 = 12.4 // floating-point values
+$465 = 257.1 // floating-point values
+$466 = -231.7 // floating-point values
+$467 = 10.0 // floating-point values
+$549 = -1059.6 // floating-point values
+$550 = -274.5 // floating-point values
+$551 = 11.4 // floating-point values
+$552 = -1007.3 // floating-point values
+$553 = -869.9 // floating-point values
+$554 = 12.8 // floating-point values
+$555 = 15.2 // floating-point values
+$556 = 962.6 // floating-point values
+$557 = 10.9 // floating-point values
+$558 = -864.3 // floating-point values
+$559 = -576.6 // floating-point values
+$560 = 11.0 // floating-point values
+$561 = -1011.7 // floating-point values
+$562 = 203.9 // floating-point values
+$563 = 11.2 // floating-point values
+$564 = 487.2 // floating-point values
+$565 = -81.5 // floating-point values
+$566 = 11.4 // floating-point values
+$567 = -685.8 // floating-point values
+$568 = -1495.6 // floating-point values
+$569 = 12.5 // floating-point values
+$489 = -1003.1 // floating-point values
+$490 = 207.0 // floating-point values
+$491 = 10.0 // floating-point values
+$459 = -246.6 // floating-point values
+$460 = -1360.5 // floating-point values
+$461 = 7.3 // floating-point values
+$462 = -378.5 // floating-point values
+$463 = -551.3 // floating-point values
+$464 = 18.2 // floating-point values
+$468 = 463.9 // floating-point values
+$469 = -58.5 // floating-point values
+$470 = 10.5 // floating-point values
+$492 = -1101.1 // floating-point values
+$493 = 343.2 // floating-point values
+$494 = 10.2 // floating-point values
+$471 = -69.4 // floating-point values
+$472 = 932.7 // floating-point values
+$473 = 9.9 // floating-point values
+$474 = -1062.6 // floating-point values
+$475 = -278.8 // floating-point values
+$476 = 11.0 // floating-point values
+$456 = 119.2 // floating-point values
+$457 = -826.9 // floating-point values
+$458 = 9.7 // floating-point values
+$513 = 488.6 // floating-point values
+$514 = -75.4 // floating-point values
+$515 = 10.4 // floating-point values
+$477 = -597.3 // floating-point values
+$478 = 652.9 // floating-point values
+$479 = 10.0 // floating-point values
+$486 = -875.5 // floating-point values
+$487 = 1159.3 // floating-point values
+$488 = 10.2 // floating-point values
+$480 = -1170.0 // floating-point values
+$481 = -606.9 // floating-point values
+$482 = 10.6 // floating-point values
+$483 = -962.4 // floating-point values
+$484 = 143.0 // floating-point values
+$485 = 8.2 // floating-point values
+$570 = 99.5 // floating-point values
+$571 = -1468.5 // floating-point values
+$572 = 9.9 // floating-point values
+$573 = 428.4 // floating-point values
+$574 = 605.9 // floating-point values
+$575 = 12.2 // floating-point values
+$495 = -865.9 // floating-point values
+$496 = -571.9 // floating-point values
+$497 = 11.0 // floating-point values
+$576 = -1.9 // floating-point values
+$577 = 959.9 // floating-point values
+$578 = 10.9 // floating-point values
+$579 = -640.8 // floating-point values
+$580 = -1491.8 // floating-point values
+$581 = 13.7 // floating-point values
+$582 = -997.1 // floating-point values
+$583 = 189.8 // floating-point values
+$584 = 11.4 // floating-point values
+04AE: $421 = 4 // = constant
+04AE: $432 = 22 // = constant
+04AE: $417 = 9 // = constant
+04AE: $418 = 8 // = constant
+04AE: $419 = 6 // = constant
+04AE: $420 = 7 // = constant
+04AE: $422 = 13 // = constant
+04AE: $423 = 10 // = constant
+04AE: $424 = 15 // = constant
+04AE: $425 = 29 // = constant
+04AE: $426 = 24 // = constant
+04AE: $427 = 11 // = constant
+04AE: $428 = 23 // = constant
+04AE: $429 = 14 // = constant
+04AE: $430 = 17 // = constant
+04AE: $431 = 30 // = constant
+$604 = 10000 // integer values
+$605 = 2000 // integer values
+$607 = 0 // integer values
+$609 = 20000 // integer values
+$610 = 3000 // integer values
+$612 = 0 // integer values
+$614 = 30000 // integer values
+$617 = 4000 // integer values
+$618 = 0 // integer values
+$620 = 40000 // integer values
+$621 = 5000 // integer values
+$623 = 0 // integer values
+$625 = 50000 // integer values
+$626 = 1500 // integer values
+$628 = 0 // integer values
+$630 = 60000 // integer values
+$631 = 7000 // integer values
+$633 = 0 // integer values
+$635 = 70000 // integer values
+$636 = 8000 // integer values
+$639 = 120000 // integer values
+$640 = 10000 // integer values
+$642 = 0 // integer values
+$644 = 1000 // integer values
+$647 = 2500 // integer values
+$650 = 3000 // integer values
+$653 = 6000 // integer values
+$657 = 7000 // integer values
+$661 = 8000 // integer values
+$665 = 14000 // integer values
+$670 = Pickup.Create(#INFO, 3, 493.5, 703.1, 12.1)
+$671 = Pickup.Create(#INFO, 3, -108.3, -974.4, 10.4)
+$672 = Pickup.Create(#INFO, 3, 508.9, 506.8, 11.3)
+$673 = Pickup.Create(#INFO, 3, 398.8, -469.7, 11.7)
+0517: $PRINT_WORKS_ASSET = create_unavailable_asset_pickup 'PRNT_NO' at $549 $550 $551  // You cannot buy the Print Works at this time, come back later.
+0517: $CAR_SHOWROOM_ASSET = create_unavailable_asset_pickup 'CAR_NO' at $552 $553 $554  // You cannot buy the Car Showroom at this time, come back later.
+0517: $FILM_STUDIO_ASSET = create_unavailable_asset_pickup 'PORN_NO' at $555 $556 $557  // You cannot buy the Film Studio at this time, come back later.
+0517: $ICE_CREAM_FACTORY_ASSET = create_unavailable_asset_pickup 'ICE_NO' at $558 $559 $560  // You cannot buy the Ice Cream Factory at this time, come back later.
+0517: $678 = create_unavailable_asset_pickup 'TAXI_NO' at $561 $562 $563  // You cannot buy the Taxi Company at this time, come back later.
+0517: $679 = create_unavailable_asset_pickup 'BANK_NO' at $564 $565 $566  // You cannot buy The Malibu at this time, come back later.
+0517: $680 = create_unavailable_asset_pickup 'BOAT_NO' at $567 $568 $569  // You cannot buy the Boatyard at this time, come back later.
+0517: $615 = create_unavailable_asset_pickup 'STRP_NO' at $570 $571 $572  // You cannot buy the Stripclub at this time, come back later.
+0518: $662 = create_available_asset_pickup 'NBMN_L' at $573 $574 $575 price $661  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
+0518: $654 = create_available_asset_pickup 'LNKV_L' at $585 $586 $587 price $653  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+0518: $666 = create_available_asset_pickup 'HYCO_L' at $588 $589 $590 price $665  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
+0518: $658 = create_available_asset_pickup 'OCHE_L' at $591 $592 $593 price $657  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
+0518: $651 = create_available_asset_pickup 'WASH_L' at $594 $595 $596 price $650  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
+0518: $648 = create_available_asset_pickup 'VCPT_L' at $597 $598 $599 price $647  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
+0518: $645 = create_available_asset_pickup 'SKUM_L' at $600 $601 $602 price $644  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
+0219: $681 = create_garage_type 5 door -914.129 -1263.54 10.706 to -906.3 -1266.9 14.421 depth -907.137 -1246.626
+0219: $682 = create_garage_type 5 door -1014.341 -857.732 6.325 to -1014.341 -841.532 10.885 depth -1001.315 -857.732
+03BB: set_garage $682 door_type_to_swing_open
+0219: $683 = create_garage_type 5 door -886.157 -115.158 9.992 to -876.7 -119.83 15.58 depth -882.699 -108.312
+0219: $684 = create_garage_type 5 door 323.9 427.4 10.0 to 313.9 430.53 15.7 depth 326.3 434.5
+0219: $685 = create_garage_type 5 door -7.55 -1253.77 9.322 to 2.64 -1253.7 14.4 depth -7.55 -1261.2
+0219: $688 = create_garage_type 1 door -1056.05 -469.668 10.053 to -1038.966 -467.675 14.753 depth -1054.074 -486.611
+03BB: set_garage $688 door_type_to_swing_open
+0219: $689 = create_garage_type 23 door -823.448 -1488.083 10.852 to -842.0 -1481.0 16.165 depth -834.686 -1515.899
+03DA: set_garage $689 camera_follows_player
+03BB: set_garage $689 door_type_to_swing_open
+0219: $687 = create_garage_type 1 door -966.016 -861.529 5.761 to -966.016 -841.683 11.273 depth -978.454 -861.529
+03DA: set_garage $687 camera_follows_player
+03BB: set_garage $687 door_type_to_swing_open
+0219: $690 = create_garage_type 19 door 449.137 340.002 10.794 to 465.43 326.187 14.7 depth 465.42 340.002
+03BB: set_garage $690 door_type_to_swing_open
+0219: $691 = create_garage_type 4 door -1163.248 -1407.282 10.157 to -1159.338 -1397.813 16.989 depth -1178.292 -1400.939
+0219: $655 = create_garage_type 1 door 303.998 400.718 12.025 to 301.281 410.584 16.044 depth 298.697 402.389
+03DA: set_garage $655 camera_follows_player
+03BB: set_garage $655 door_type_to_swing_open
+057A: set_garage $655 max_cars_to 2
+0219: $667 = create_garage_type 1 door -848.225 1303.119 10.421 to -836.832 1307.033 15.816 depth -853.657 1318.901
+03DA: set_garage $667 camera_follows_player
+057A: set_garage $667 max_cars_to 4
+0219: $668 = create_garage_type 1 door -825.466 1311.499 10.537 to -817.159 1314.355 15.061 depth -828.66 1320.791
+03DA: set_garage $668 camera_follows_player
+057A: set_garage $668 max_cars_to 4
+0219: $669 = create_garage_type 1 door -816.37 1314.69 10.582 to -819.54 1324.01 15.061 depth -808.09 1317.46
+03DA: set_garage $669 camera_follows_player
+057A: set_garage $669 max_cars_to 4
+0219: $659 = create_garage_type 1 door 27.143 -1483.954 9.423 to 21.365 -1490.59 12.994 depth 22.611 -1483.384
+03BB: set_garage $659 door_type_to_swing_open
+03DA: set_garage $659 camera_follows_player
+057A: set_garage $659 max_cars_to 2
+0219: $663 = create_garage_type 1 door 450.136 641.029 10.112 to 457.977 641.029 13.092 depth 450.136 635.726
+03BB: set_garage $663 door_type_to_swing_open
+03DA: set_garage $663 camera_follows_player
+057A: set_garage $663 max_cars_to 2
+0219: $692 = create_garage_type 1 door -981.654 -802.265 6.325 to -981.654 -821.865 10.73 depth -991.127 -802.265
+03BB: set_garage $692 door_type_to_swing_open
+03DA: set_garage $692 camera_follows_player
+057A: set_garage $692 max_cars_to 4
+0219: $693 = create_garage_type 1 door -992.416 -802.265 6.325 to -992.416 -821.865 10.73 depth -1001.889 -802.265
+03BB: set_garage $693 door_type_to_swing_open
+03DA: set_garage $693 camera_follows_player
+057A: set_garage $693 max_cars_to 4
+0219: $694 = create_garage_type 1 door -1003.771 -802.265 6.325 to -1003.771 -821.865 10.73 depth -1013.244 -802.265
+03BB: set_garage $694 door_type_to_swing_open
+03DA: set_garage $694 camera_follows_player
+057A: set_garage $694 max_cars_to 4
+0219: $695 = create_garage_type 1 door -1015.436 -802.265 6.325 to -1015.436 -821.865 10.73 depth -1024.909 -802.265
+03BB: set_garage $695 door_type_to_swing_open
+03DA: set_garage $695 camera_follows_player
+057A: set_garage $695 max_cars_to 4
+0219: $686 = create_garage_type 1 door -362.12 -550.214 11.722 to -353.12 -550.214 15.16 depth -362.12 -539.484
+03BB: set_garage $686 door_type_to_swing_open
+03DA: set_garage $686 camera_follows_player
+057A: set_garage $686 max_cars_to 4
+049C: $722 = scripted_path_file 0 width 90.0
+$714 = Object.Init(#YT_MAIN_BODY, -375.499, -1322.31, 9.81124)
+$715 = Object.Init(#YT_MAIN_BODY2, -375.499, -1322.31, 9.81124)
+$717 = Object.Init(#YT_DOORS14, -375.499, -1322.31, 9.81124)
+$718 = Object.Init(#YT_TMP_BOAT, -375.499, -1322.31, 9.81124)
+$719 = Object.Init(#LODMAIN_BODY, -375.499, -1322.31, 9.81124)
+$720 = Object.Init(#YT_GANGPLNK_TMP, -375.525, -1322.71, 9.79468)
+Object.RemoveFromMissionCleanupList($714)
+Object.RemoveFromMissionCleanupList($715)
+Object.RemoveFromMissionCleanupList($717)
+Object.RemoveFromMissionCleanupList($718)
+Object.RemoveFromMissionCleanupList($719)
+Object.RemoveFromMissionCleanupList($720)
+049D: attach_scripted_file $722 with_object $714
+049D: attach_scripted_file $722 with_object $715
+049D: attach_scripted_file $722 with_object $717
+049D: attach_scripted_file $722 with_object $718
+049D: attach_scripted_file $722 with_object $719
+049D: attach_scripted_file $722 with_object $720
+049E: set_scripted_file $722 speed_to 0.0
+wait 0
+wait 0
+$721 = Object.Init(#YACHT_CHUNK_KB, $448, $449, $450)
+Object.RemoveFromMissionCleanupList($721)
+start_mission INTRO  // Intro
+create_thread @O4X4_1
+create_thread @TAXI_L
+create_thread @FIRE
+create_thread @AMBULA
+create_thread @COP
+create_thread @PIZZ
+create_thread @BMXLOOP
+create_thread @RCHELY1
+create_thread @RC_RACE
+create_thread @RC_PLNE
+create_thread @MULTI
+create_thread @PSAVE1
+create_thread @HELP
+create_thread @HELI1
+create_thread @HELI2
+create_thread @HELI3
+create_thread @HELI4
+create_thread @STADIUM
+create_thread @ARMYBAS
+create_thread @NBMNBUY
+create_thread @LNKVBY
+create_thread @HYCOBY
+create_thread @OCHEBY
+create_thread @WASHBY
+create_thread @SKUMBY
+create_thread @VCPTBY
+create_thread @PIZZABIKE
+create_thread @COLSPE
+create_thread_wb @HJ
+create_thread_wb @USJ
+create_thread_wb @AMMU
+create_thread_wb @SECURE
+create_thread_wb @INTERIO
+create_thread_wb @IMPORT
+create_thread_wb @CELLFON
+create_thread_wb @BUS
+create_thread_wb @CARGEN
+create_thread_wb @PICKUPS
+create_thread_wb @JUNKFUD
+create_thread_wb @RAMPAGE
+create_thread_wb @SHOPS
+create_thread_wb @AUDIO
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @MAIN_5272
+set_weather 0
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @MAIN_5221
+0352: set_actor $PLAYER_ACTOR skin_to 'PLAYER'
+038B: load_requested_models
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @MAIN_5221
+0353: refresh_actor $PLAYER_ACTOR
+
+:MAIN_5221
+fade 1 1000
+create_thread @HOT
+if
+   Player.Defined($PLAYER_CHAR)
+jf @MAIN_5263
+select_interior 0
+Player.CanMove($PLAYER_CHAR) = True
+
+:MAIN_5263
+01B7: release_weather
+jump @MAIN_5272
+
+:MAIN_5272
+wait 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @MAIN_5555
+if
+  $ONMISSION == 0 // integer values
+jf @MAIN_5391
+if
+  $62 == 0 // integer values
+jf @MAIN_5391
+if and
+  $245 == 1 // integer values
+  $PASSED_COK2_PHNOM_PENH_86 == 1 // integer values
+jf @MAIN_5391
+create_thread @SER3
+Marker.Disable($243)
+02A7: $243 = create_icon_marker_and_sphere $421 at $465 $466 $467
+$62 = 1 // integer values
+
+:MAIN_5391
+if
+  100.0 > $102 // floating-point values
+jf @MAIN_5424
+058C: $102 = percentage_completed
+jump @MAIN_5526
+
+:MAIN_5424
+if
+  $91 == 0 // integer values
+jf @MAIN_5526
+055B: $1352 = create_clothes_pickup 12 at -382.6 -585.9 25.3
+03E5: text_box 'CUNTY'  // New clothes delivered to the Vercetti Estate!
+055E: set_player $PLAYER_CHAR max_health += 50
+055F: set_player $PLAYER_CHAR max_armour += 50
+035E: set_player $PLAYER_CHAR armour_to 200
+0222: set_player $PLAYER_CHAR health_to 200
+wait 5000
+03E5: text_box 'HELP61'  // You now have limitless ammo and double health on all vehicles.
+$91 = 1 // integer values
+
+:MAIN_5526
+if
+  $1531 == 15 // integer values
+jf @MAIN_5555
+030C: progress_made += 1
+$1531 = -1 // integer values
+
+:MAIN_5555
+jump @MAIN_5272
+
+:HOT
+thread 'HOT'
+
+:HOT_10
+wait 0
+if
+  $222 == 1 // integer values
+jf @HOT_34
+end_thread
+
+:HOT_34
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HOT_355
+if
+00F6:   player $PLAYER_CHAR 0 $453 $454 $455 radius 1.4 1.8 1.5
+jf @HOT_355
+if
+  $ONMISSION == 0 // integer values
+jf @HOT_355
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HOT_355
+02A3: enable_widescreen 1
+Camera.SetPosition(219.726, -1282.485, 12.53, 0.0, 0.0, 0.0)
+Camera.PointAt(218.872, -1282.988, 12.392, 2)
+0171: set_player $PLAYER_CHAR z_angle_to 100.0
+0211: actor $PLAYER_ACTOR walk_to 204.3 -1288.7
+16@ = 0 // integer values
+
+:HOT_213
+if
+   not 16@ > 1000 // integer values
+jf @HOT_322
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HOT_315
+if
+00F6:   player $PLAYER_CHAR 0 204.2 -1287.8 14.4 radius 2.0 2.0 2.0
+jf @HOT_315
+0211: actor $PLAYER_ACTOR walk_to 203.0 -1294.5
+
+:HOT_315
+jump @HOT_213
+
+:HOT_322
+gosub @HELP_2883
+00BA: text_styled 'INT_B' 15000 ms 2  // An Old Friend
+gosub @HELP_2932
+start_mission HOTEL  // An Old Friend
+
+:HOT_355
+jump @HOT_10
+
+:LAW1
+thread 'LAW1'
+
+:LAW1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_LAW1_THE_PARTY == 1 // integer values
+jf @LAW1_35
+end_thread
+
+:LAW1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @LAW1_167
+if
+00F6:   player $PLAYER_CHAR 0 $456 $457 $458 radius 1.2 1.2 2.0
+jf @LAW1_167
+if
+  $ONMISSION == 0 // integer values
+jf @LAW1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @LAW1_167
+gosub @HELP_2979
+gosub @HELP_2883
+00BA: text_styled 'LAW_1' 15000 ms 2  // The Party
+gosub @HELP_2932
+start_mission LAWYER1  // The Party
+
+:LAW1_167
+jump @LAW1_10
+
+:LAW2
+thread 'LAW2'
+
+:LAW2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_LAW2_BACK_ALLEY_BRAWL == 1 // integer values
+jf @LAW2_35
+end_thread
+
+:LAW2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @LAW2_179
+if
+00F6:   player $PLAYER_CHAR 0 $456 $457 $458 radius 1.2 1.2 2.0
+jf @LAW2_179
+if
+  $ONMISSION == 0 // integer values
+jf @LAW2_179
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @LAW2_179
+$ONMISSION = 1 // integer values
+Player.MakeSafe($PLAYER_CHAR)
+gosub @HELP_2979
+gosub @HELP_2883
+00BA: text_styled 'LAW_2' 15000 ms 2  // Back Alley Brawl
+gosub @HELP_2932
+start_mission LAWYER2  // Back Alley Brawl
+
+:LAW2_179
+jump @LAW2_10
+
+:LAW3
+thread 'LAW3'
+
+:LAW3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_LAW3_JURY_FURY == 1 // integer values
+jf @LAW3_35
+end_thread
+
+:LAW3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @LAW3_179
+if
+00F6:   player $PLAYER_CHAR 0 $456 $457 $458 radius 1.2 1.2 2.0
+jf @LAW3_179
+if
+  $ONMISSION == 0 // integer values
+jf @LAW3_179
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @LAW3_179
+$ONMISSION = 1 // integer values
+Player.MakeSafe($PLAYER_CHAR)
+gosub @HELP_2979
+gosub @HELP_2883
+00BA: text_styled 'LAW_3' 15000 ms 2  // Jury Fury
+gosub @HELP_2932
+start_mission LAWYER3  // Jury Fury
+
+:LAW3_179
+jump @LAW3_10
+
+:LAW4
+thread 'LAW4'
+
+:LAW4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_LAW4_RIOT == 1 // integer values
+jf @LAW4_35
+end_thread
+
+:LAW4_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @LAW4_179
+if
+00F6:   player $PLAYER_CHAR 0 $456 $457 $458 radius 1.2 1.2 2.0
+jf @LAW4_179
+if
+  $ONMISSION == 0 // integer values
+jf @LAW4_179
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @LAW4_179
+$ONMISSION = 1 // integer values
+Player.MakeSafe($PLAYER_CHAR)
+gosub @HELP_2979
+gosub @HELP_2883
+00BA: text_styled 'LAW_4' 15000 ms 2  // Riot
+gosub @HELP_2932
+start_mission LAWYER4  // Riot
+
+:LAW4_179
+jump @LAW4_10
+
+:GEN1
+thread 'GEN1'
+
+:GEN1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COL1_TREACHEROUS_SWINE == 1 // integer values
+jf @GEN1_35
+end_thread
+
+:GEN1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GEN1_167
+if
+00F6:   player $PLAYER_CHAR 0 $459 $460 $461 radius 1.5 2.0 2.0
+jf @GEN1_167
+if
+  $ONMISSION == 0 // integer values
+jf @GEN1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @GEN1_167
+gosub @HELP_3202
+gosub @HELP_2883
+00BA: text_styled 'COL_1' 15000 ms 2  // Treacherous Swine
+gosub @HELP_2932
+start_mission GENERL1  // Treacherous Swine
+
+:GEN1_167
+jump @GEN1_10
+
+:GEN2
+thread 'GEN2'
+
+:GEN2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COL2_MALL_SHOOTOUT == 1 // integer values
+jf @GEN2_35
+end_thread
+
+:GEN2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GEN2_167
+if
+00F6:   player $PLAYER_CHAR 0 $459 $460 $461 radius 1.5 2.0 2.0
+jf @GEN2_167
+if
+  $ONMISSION == 0 // integer values
+jf @GEN2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @GEN2_167
+gosub @HELP_3202
+gosub @HELP_2883
+00BA: text_styled 'COL_2' 15000 ms 2  // Mall Shootout
+gosub @HELP_2932
+start_mission COL2  // Mall Shootout
+
+:GEN2_167
+jump @GEN2_10
+
+:GEN3
+thread 'GEN3'
+
+:GEN3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COL3_GUARDIAN_ANGELS == 1 // integer values
+jf @GEN3_35
+end_thread
+
+:GEN3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GEN3_167
+if
+00F6:   player $PLAYER_CHAR 0 $459 $460 $461 radius 1.5 2.0 2.0
+jf @GEN3_167
+if
+  $ONMISSION == 0 // integer values
+jf @GEN3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @GEN3_167
+gosub @HELP_3202
+gosub @HELP_2883
+00BA: text_styled 'COL_3' 15000 ms 2  // Guardian Angels
+gosub @HELP_2932
+start_mission GENERL3  // Guardian Angels
+
+:GEN3_167
+jump @GEN3_10
+
+:GEN4
+thread 'GEN4'
+
+:GEN4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COL4_SIR_YES_SIR == 1 // integer values
+jf @GEN4_35
+end_thread
+
+:GEN4_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GEN4_167
+if
+00F6:   player $PLAYER_CHAR 0 $459 $460 $461 radius 1.5 2.0 2.0
+jf @GEN4_167
+if
+  $ONMISSION == 0 // integer values
+jf @GEN4_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @GEN4_167
+gosub @HELP_3202
+gosub @HELP_2883
+00BA: text_styled 'COL_4' 15000 ms 2  // Sir, Yes Sir!
+gosub @HELP_2932
+start_mission COL_4  // Sir, Yes Sir!
+
+:GEN4_167
+jump @GEN4_10
+
+:GEN5
+thread 'GEN5'
+
+:GEN5_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COL5_ALL_HANDS_ON_DECK == 1 // integer values
+jf @GEN5_35
+end_thread
+
+:GEN5_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GEN5_167
+if
+00F6:   player $PLAYER_CHAR 0 $459 $460 $461 radius 1.5 2.0 2.0
+jf @GEN5_167
+if
+  $ONMISSION == 0 // integer values
+jf @GEN5_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @GEN5_167
+gosub @HELP_3202
+gosub @HELP_2883
+00BA: text_styled 'COL_5' 15000 ms 2  // All Hands On Deck!
+gosub @HELP_2932
+start_mission COL_5  // All Hands On Deck!
+
+:GEN5_167
+jump @GEN5_10
+
+:BAR1
+thread 'BAR1'
+
+:BAR1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COK1_THE_CHASE == 1 // integer values
+jf @BAR1_35
+end_thread
+
+:BAR1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BAR1_167
+if
+00F6:   player $PLAYER_CHAR 0 $462 $463 $464 radius 2.0 2.0 2.0
+jf @BAR1_167
+if
+  $ONMISSION == 0 // integer values
+jf @BAR1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BAR1_167
+gosub @HELP_3133
+gosub @HELP_2883
+00BA: text_styled 'COK_1' 15000 ms 2  // The Chase
+gosub @HELP_2932
+start_mission BARON1  // The Chase
+
+:BAR1_167
+jump @BAR1_10
+
+:BAR2
+thread 'BAR2'
+
+:BAR2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COK2_PHNOM_PENH_86 == 1 // integer values
+jf @BAR2_35
+end_thread
+
+:BAR2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BAR2_167
+if
+00F6:   player $PLAYER_CHAR 0 $462 $463 $464 radius 2.0 2.0 2.0
+jf @BAR2_167
+if
+  $ONMISSION == 0 // integer values
+jf @BAR2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BAR2_167
+gosub @HELP_3133
+gosub @HELP_2883
+00BA: text_styled 'COK_2' 15000 ms 2  // Phnom Penh '86
+gosub @HELP_2932
+start_mission BARON2  // Phnom Penh '86
+
+:BAR2_167
+jump @BAR2_10
+
+:BAR3
+thread 'BAR3'
+
+:BAR3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COK3_THE_FASTEST_BOAT == 1 // integer values
+jf @BAR3_35
+end_thread
+
+:BAR3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BAR3_167
+if
+00F6:   player $PLAYER_CHAR 0 $462 $463 $464 radius 2.0 2.0 2.0
+jf @BAR3_167
+if
+  $ONMISSION == 0 // integer values
+jf @BAR3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BAR3_167
+gosub @HELP_3133
+gosub @HELP_2883
+00BA: text_styled 'COK_3' 15000 ms 2  // The Fastest Boat
+gosub @HELP_2932
+start_mission BARON3  // The Fastest Boat
+
+:BAR3_167
+jump @BAR3_10
+
+:BAR4
+thread 'BAR4'
+
+:BAR4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_COK4_SUPPLY_AND_DEMAND == 1 // integer values
+jf @BAR4_35
+end_thread
+
+:BAR4_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BAR4_167
+if
+00F6:   player $PLAYER_CHAR 0 $462 $463 $464 radius 2.0 2.0 2.0
+jf @BAR4_167
+if
+  $ONMISSION == 0 // integer values
+jf @BAR4_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BAR4_167
+gosub @HELP_3133
+gosub @HELP_2883
+00BA: text_styled 'COK_4' 15000 ms 2  // Supply & Demand
+gosub @HELP_2932
+start_mission BARON4  // Supply & Demand
+
+:BAR4_167
+jump @BAR4_10
+
+:BAR5
+thread 'BAR5'
+
+:BAR5_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_ASS1_RUB_OUT == 1 // integer values
+jf @BAR5_35
+end_thread
+
+:BAR5_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BAR5_180
+if
+00F6:   player $PLAYER_CHAR 0 $510 $511 $512 radius 2.0 2.0 2.0
+jf @BAR5_180
+if
+  $ONMISSION == 0 // integer values
+jf @BAR5_180
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BAR5_180
+$ONMISSION = 1 // integer values
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'ASS_1' 15000 ms 2  // Rub Out
+gosub @HELP_2932
+start_mission BARON5  // Rub Out
+
+:BAR5_180
+jump @BAR5_10
+
+:KEN1
+thread 'KEN1'
+
+:KEN1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_KENT1_DEATH_ROW == 1 // integer values
+jf @KEN1_35
+end_thread
+
+:KEN1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @KEN1_173
+if
+00F6:   player $PLAYER_CHAR 0 491.0 -77.7 10.4 radius 2.5 2.5 2.5
+jf @KEN1_173
+if
+  $ONMISSION == 0 // integer values
+jf @KEN1_173
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @KEN1_173
+gosub @HELP_3370
+gosub @HELP_2883
+00BA: text_styled 'KENT_1' 15000 ms 2  // Death Row
+gosub @HELP_2932
+start_mission KENT1  // Death Row
+
+:KEN1_173
+jump @KEN1_10
+
+:SER1
+thread 'SER1'
+
+:SER1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_TEX1_FOUR_IRON == 1 // integer values
+jf @SER1_35
+end_thread
+
+:SER1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SER1_160
+if
+00F6:   player $PLAYER_CHAR 0 $465 $466 $467 radius 1.5 2.0 2.0
+jf @SER1_160
+if
+  $ONMISSION == 0 // integer values
+jf @SER1_160
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SER1_160
+gosub @HELP_2883
+00BA: text_styled 'TEX_1' 15000 ms 2  // Four Iron
+gosub @HELP_2932
+start_mission SERG1  // Four Iron
+
+:SER1_160
+jump @SER1_10
+
+:SER2
+thread 'SER2'
+
+:SER2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $245 == 1 // integer values
+jf @SER2_35
+end_thread
+
+:SER2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SER2_160
+if
+00F6:   player $PLAYER_CHAR 0 $465 $466 $467 radius 1.5 2.0 2.0
+jf @SER2_160
+if
+  $ONMISSION == 0 // integer values
+jf @SER2_160
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SER2_160
+gosub @HELP_2883
+00BA: text_styled 'TEX_3' 15000 ms 2  // Demolition Man
+gosub @HELP_2932
+start_mission SERG3  // Demolition Man
+
+:SER2_160
+jump @SER2_10
+
+:SER3
+thread 'SER3'
+
+:SER3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $246 == 1 // integer values
+jf @SER3_35
+end_thread
+
+:SER3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SER3_160
+if
+00F6:   player $PLAYER_CHAR 0 $465 $466 $467 radius 1.5 2.0 2.0
+jf @SER3_160
+if
+  $ONMISSION == 0 // integer values
+jf @SER3_160
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SER3_160
+gosub @HELP_2883
+00BA: text_styled 'TEX_2' 15000 ms 2  // Two Bit Hit
+gosub @HELP_2932
+start_mission SERG2  // Two Bit Hit
+
+:SER3_160
+jump @SER3_10
+
+:BANK1
+thread 'BANK1'
+
+:BANK1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $248 == 1 // integer values
+jf @BANK1_35
+end_thread
+
+:BANK1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANK1_167
+if
+00F6:   player $PLAYER_CHAR 0 $468 $469 $470 radius 1.5 2.0 2.0
+jf @BANK1_167
+if
+  $ONMISSION == 0 // integer values
+jf @BANK1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BANK1_167
+gosub @HELP_3459
+gosub @HELP_2883
+00BA: text_styled 'BANK_1' 15000 ms 2  // No Escape?
+gosub @HELP_2932
+start_mission BANKJO1  // No Escape?
+
+:BANK1_167
+jump @BANK1_10
+
+:BANK2
+thread 'BANK2'
+
+:BANK2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $249 == 1 // integer values
+jf @BANK2_35
+end_thread
+
+:BANK2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANK2_167
+if
+00F6:   player $PLAYER_CHAR 0 $468 $469 $470 radius 1.5 2.0 2.0
+jf @BANK2_167
+if
+  $ONMISSION == 0 // integer values
+jf @BANK2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BANK2_167
+gosub @HELP_3459
+gosub @HELP_2883
+00BA: text_styled 'BANK_2' 15000 ms 2  // The Shootist
+gosub @HELP_2932
+start_mission BANKJO2  // The Shootist
+
+:BANK2_167
+jump @BANK2_10
+
+:BANK3
+thread 'BANK3'
+
+:BANK3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $250 == 1 // integer values
+jf @BANK3_35
+end_thread
+
+:BANK3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANK3_167
+if
+00F6:   player $PLAYER_CHAR 0 $468 $469 $470 radius 1.5 2.0 2.0
+jf @BANK3_167
+if
+  $ONMISSION == 0 // integer values
+jf @BANK3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BANK3_167
+gosub @HELP_3459
+gosub @HELP_2883
+00BA: text_styled 'BANK_3' 15000 ms 2  // The Driver
+gosub @HELP_2932
+start_mission BANKJO3  // The Driver
+
+:BANK3_167
+jump @BANK3_10
+
+:BANK4
+thread 'BANK4'
+
+:BANK4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $251 == 1 // integer values
+jf @BANK4_35
+end_thread
+
+:BANK4_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANK4_167
+if
+00F6:   player $PLAYER_CHAR 0 $468 $469 $470 radius 1.5 2.0 2.0
+jf @BANK4_167
+if
+  $ONMISSION == 0 // integer values
+jf @BANK4_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BANK4_167
+gosub @HELP_3459
+gosub @HELP_2883
+00BA: text_styled 'BANK_4' 15000 ms 2  // The Job
+gosub @HELP_2932
+start_mission BANKJO4  // The Job
+
+:BANK4_167
+jump @BANK4_10
+
+:AMBBANK
+thread 'AMBBANK'
+0@ = 0 // integer values
+
+:AMBBANK_17
+wait $DEFAULT_WAIT_TIME
+if
+  $985 == 1 // integer values
+jf @AMBBANK_280
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMBBANK_273
+if
+  0@ == 0 // integer values
+jf @AMBBANK_273
+if
+00F5:   player $PLAYER_CHAR 0 -926.8099 -327.8378 13.3894 radius 4.0 4.0 4.0
+jf @AMBBANK_273
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+02E1: 1@ = create_cash_pickup 500 at -965.2795 -334.6384 15.0
+02E1: 2@ = create_cash_pickup 500 at -965.3696 -333.3853 15.0
+02E1: 3@ = create_cash_pickup 500 at -927.4954 -339.4821 17.2
+02E1: 4@ = create_cash_pickup 500 at -930.0884 -339.5698 17.2
+02E1: 5@ = create_cash_pickup 500 at -932.9709 -339.4713 17.2
+018D: 6@ = create_sound 0 at -923.4324 -333.2397 14.3816
+0@ = 1 // integer values
+
+:AMBBANK_273
+jump @AMBBANK_335
+
+:AMBBANK_280
+if
+  0@ == 1 // integer values
+jf @AMBBANK_335
+018E: stop_sound 6@
+Pickup.Destroy(1@)
+Pickup.Destroy(2@)
+Pickup.Destroy(3@)
+Pickup.Destroy(4@)
+Pickup.Destroy(5@)
+0@ = 0 // integer values
+
+:AMBBANK_335
+jump @AMBBANK_17
+
+:PHI1
+thread 'PHI1'
+
+:PHI1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $254 == 1 // integer values
+jf @PHI1_35
+end_thread
+
+:PHI1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PHI1_167
+if
+00F6:   player $PLAYER_CHAR 0 $492 $493 $494 radius 1.5 1.0 2.0
+jf @PHI1_167
+if
+  $ONMISSION == 0 // integer values
+jf @PHI1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PHI1_167
+gosub @HELP_3538
+gosub @HELP_2883
+00BA: text_styled 'PHIL_1' 15000 ms 2  // Gun Runner
+gosub @HELP_2932
+start_mission PHIL1  // Gun Runner
+
+:PHI1_167
+jump @PHI1_10
+
+:PHI2
+thread 'PHI2'
+
+:PHI2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $255 == 1 // integer values
+jf @PHI2_35
+end_thread
+
+:PHI2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PHI2_167
+if
+00F6:   player $PLAYER_CHAR 0 $492 $493 $494 radius 1.5 1.0 2.0
+jf @PHI2_167
+if
+  $ONMISSION == 0 // integer values
+jf @PHI2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PHI2_167
+gosub @HELP_3538
+gosub @HELP_2883
+00BA: text_styled 'PHIL_2' 15000 ms 2  // Boomshine Saigon
+gosub @HELP_2932
+start_mission PHIL2  // Boomshine Saigon
+
+:PHI2_167
+jump @PHI2_10
+
+:PORN1
+thread 'PORN1'
+
+:PORN1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $257 == 1 // integer values
+jf @PORN1_35
+end_thread
+
+:PORN1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PORN1_167
+if
+00F6:   player $PLAYER_CHAR 0 $471 $472 $473 radius 1.5 2.0 2.0
+jf @PORN1_167
+if
+  $ONMISSION == 0 // integer values
+jf @PORN1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PORN1_167
+gosub @HELP_3286
+gosub @HELP_2883
+00BA: text_styled 'PORN_1' 15000 ms 2  // Recruitment Drive
+gosub @HELP_2932
+start_mission PORNO1  // Recruitment Drive
+
+:PORN1_167
+jump @PORN1_10
+
+:PORN2
+thread 'PORN2'
+
+:PORN2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $258 == 1 // integer values
+jf @PORN2_35
+end_thread
+
+:PORN2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PORN2_167
+if
+00F6:   player $PLAYER_CHAR 0 $471 $472 $473 radius 1.5 2.0 2.0
+jf @PORN2_167
+if
+  $ONMISSION == 0 // integer values
+jf @PORN2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PORN2_167
+gosub @HELP_3286
+gosub @HELP_2883
+00BA: text_styled 'PORN_2' 15000 ms 2  // Dildo Dodo
+gosub @HELP_2932
+start_mission PORNO2  // Dildo Dodo
+
+:PORN2_167
+jump @PORN2_10
+
+:PORN3
+thread 'PORN3'
+
+:PORN3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $259 == 1 // integer values
+jf @PORN3_35
+end_thread
+
+:PORN3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PORN3_167
+if
+00F6:   player $PLAYER_CHAR 0 $471 $472 $473 radius 1.5 2.0 2.0
+jf @PORN3_167
+if
+  $ONMISSION == 0 // integer values
+jf @PORN3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PORN3_167
+gosub @HELP_3286
+gosub @HELP_2883
+00BA: text_styled 'PORN_3' 15000 ms 2  // Martha's Mug Shot
+gosub @HELP_2932
+start_mission PORNO3  // Martha's Mug Shot
+
+:PORN3_167
+jump @PORN3_10
+
+:PORN4
+thread 'PORN4'
+
+:PORN4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $260 == 1 // integer values
+jf @PORN4_35
+end_thread
+
+:PORN4_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PORN4_167
+if
+00F6:   player $PLAYER_CHAR 0 $471 $472 $473 radius 1.5 2.0 2.0
+jf @PORN4_167
+if
+  $ONMISSION == 0 // integer values
+jf @PORN4_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PORN4_167
+gosub @HELP_3286
+gosub @HELP_2883
+00BA: text_styled 'PORN_4' 15000 ms 2  // G-spotlight
+gosub @HELP_2932
+start_mission PORNO4  // G-spotlight
+
+:PORN4_167
+jump @PORN4_10
+
+:PRO1
+thread 'PRO1'
+
+:PRO1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $266 == 1 // integer values
+jf @PRO1_35
+end_thread
+
+:PRO1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PRO1_166
+if
+00F6:   player $PLAYER_CHAR 0 -378.3 -579.8 24.5 radius 1.5 2.0 2.0
+jf @PRO1_166
+if
+  $ONMISSION == 0 // integer values
+jf @PRO1_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PRO1_166
+gosub @HELP_2883
+00BA: text_styled 'BUD_1' 15000 ms 2  // Shakedown
+gosub @HELP_2932
+start_mission PROTEC1  // Shakedown
+
+:PRO1_166
+jump @PRO1_10
+
+:PRO2
+thread 'PRO2'
+
+:PRO2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $267 == 1 // integer values
+jf @PRO2_35
+end_thread
+
+:PRO2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PRO2_166
+if
+00F6:   player $PLAYER_CHAR 0 -397.4 -561.3 18.7 radius 1.5 2.0 2.0
+jf @PRO2_166
+if
+  $ONMISSION == 0 // integer values
+jf @PRO2_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PRO2_166
+gosub @HELP_2883
+00BA: text_styled 'BUD_2' 15000 ms 2  // Bar Brawl
+gosub @HELP_2932
+start_mission PROTEC2  // Bar Brawl
+
+:PRO2_166
+jump @PRO2_10
+
+:PRO3
+thread 'PRO3'
+
+:PRO3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $268 == 1 // integer values
+jf @PRO3_35
+end_thread
+
+:PRO3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PRO3_166
+if
+00F6:   player $PLAYER_CHAR 0 -348.5 -541.8 16.4 radius 1.5 2.0 2.0
+jf @PRO3_166
+if
+  $ONMISSION == 0 // integer values
+jf @PRO3_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PRO3_166
+gosub @HELP_2883
+00BA: text_styled 'BUD_3' 15000 ms 2  // Cop Land
+gosub @HELP_2932
+start_mission PROTEC3  // Cop Land
+
+:PRO3_166
+jump @PRO3_10
+
+:COU1
+thread 'COU1'
+
+:COU1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $272 == 1 // integer values
+jf @COU1_35
+end_thread
+
+:COU1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COU1_167
+if
+00F6:   player $PLAYER_CHAR 0 $474 $475 $476 radius 1.5 2.0 2.0
+jf @COU1_167
+if
+  $ONMISSION == 0 // integer values
+jf @COU1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @COU1_167
+gosub @HELP_3622
+gosub @HELP_2883
+00BA: text_styled 'CNT_1' 15000 ms 2  // Spilling the Beans
+gosub @HELP_2932
+start_mission COUNT1  // Spilling the Beans
+
+:COU1_167
+jump @COU1_10
+
+:COU2
+thread 'COU2'
+
+:COU2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $273 == 1 // integer values
+jf @COU2_35
+end_thread
+
+:COU2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COU2_167
+if
+00F6:   player $PLAYER_CHAR 0 $474 $475 $476 radius 1.5 2.0 2.0
+jf @COU2_167
+if
+  $ONMISSION == 0 // integer values
+jf @COU2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @COU2_167
+gosub @HELP_3622
+gosub @HELP_2883
+00BA: text_styled 'CNT_2' 15000 ms 2  // Hit the Courier
+gosub @HELP_2932
+start_mission COUNT2  // Hit the Courier
+
+:COU2_167
+jump @COU2_10
+
+:COUBUY
+thread 'COUBUY'
+
+:COUBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COUBUY_87
+if
+  $ONMISSION == 0 // integer values
+jf @COUBUY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @COUBUY_87
+if
+   Pickup.Picked_up($PRINT_WORKS_ASSET)
+jf @COUBUY_87
+start_mission BUYPRO1  // Printworks Buy
+end_thread
+
+:COUBUY_87
+jump @COUBUY_10
+
+:CARBUY
+thread 'CARBUY'
+
+:CARBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CARBUY_133
+if
+  $ONMISSION == 0 // integer values
+jf @CARBUY_133
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CARBUY_133
+if
+   Pickup.Picked_up($CAR_SHOWROOM_ASSET)
+jf @CARBUY_133
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+03AF: set_streaming 0
+00BA: text_styled 'SUNSHIN' 6000 ms 2  // Sunshine Autos
+gosub @HELP_2932
+start_mission CARBUY1  // Sunshine Autos
+end_thread
+
+:CARBUY_133
+jump @CARBUY_10
+
+:PORNBUY
+thread 'PORNBUY'
+
+:PORNBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PORNBUY_87
+if
+  $ONMISSION == 0 // integer values
+jf @PORNBUY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PORNBUY_87
+if
+   Pickup.Picked_up($FILM_STUDIO_ASSET)
+jf @PORNBUY_87
+start_mission BUYPRO2  // Interglobal Films Buy
+end_thread
+
+:PORNBUY_87
+jump @PORNBUY_10
+
+:ICEBUY
+thread 'ICEBUY'
+
+:ICEBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ICEBUY_141
+if
+  $ONMISSION == 0 // integer values
+jf @ICEBUY_141
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ICEBUY_141
+if
+   Pickup.Picked_up($ICE_CREAM_FACTORY_ASSET)
+jf @ICEBUY_141
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+03AF: set_streaming 0
+00BA: text_styled 'CHERRYP' 6000 ms 2  // Cherry Popper Icecreams
+gosub @HELP_2932
+create_thread @ICE1
+start_mission ICECUT  // Cherry Popper Icecreams Buy
+end_thread
+
+:ICEBUY_141
+jump @ICEBUY_10
+
+:TAXIBUY
+thread 'TAXIBUY'
+
+:TAXIBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @TAXIBUY_141
+if
+  $ONMISSION == 0 // integer values
+jf @TAXIBUY_141
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @TAXIBUY_141
+if
+   Pickup.Picked_up($678)
+jf @TAXIBUY_141
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+03AF: set_streaming 0
+00BA: text_styled 'KAUFCAB' 6000 ms 2  // Kaufman Cabs
+gosub @HELP_2932
+create_thread @TWAR1
+start_mission TAXCUT  // Kaufman Cabs Buy
+end_thread
+
+:TAXIBUY_141
+jump @TAXIBUY_10
+
+:BANKBUY
+thread 'BANKBUY'
+
+:BANKBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BANKBUY_87
+if
+  $ONMISSION == 0 // integer values
+jf @BANKBUY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BANKBUY_87
+if
+   Pickup.Picked_up($679)
+jf @BANKBUY_87
+start_mission BUYPRO3  // Malibu Club Buy
+end_thread
+
+:BANKBUY_87
+jump @BANKBUY_10
+
+:BOATBUY
+thread 'BOATBUY'
+
+:BOATBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BOATBUY_133
+if
+  $ONMISSION == 0 // integer values
+jf @BOATBUY_133
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BOATBUY_133
+if
+   Pickup.Picked_up($680)
+jf @BOATBUY_133
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+03AF: set_streaming 0
+00BA: text_styled 'BOATYAR' 6000 ms 2  // The Boatyard
+gosub @HELP_2932
+start_mission BOATBY  // The Boatyard Buy
+end_thread
+
+:BOATBUY_133
+jump @BOATBUY_10
+
+:STRPBUY
+thread 'STRPBUY'
+
+:STRPBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @STRPBUY_87
+if
+  $ONMISSION == 0 // integer values
+jf @STRPBUY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @STRPBUY_87
+if
+   Pickup.Picked_up($615)
+jf @STRPBUY_87
+start_mission BUYPRO4  // Pole Position Club Buy
+end_thread
+
+:STRPBUY_87
+jump @STRPBUY_10
+
+:NBMNBUY
+thread 'NBMNBUY'
+
+:NBMNBUY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @NBMNBUY_87
+if
+  $ONMISSION == 0 // integer values
+jf @NBMNBUY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @NBMNBUY_87
+if
+   Pickup.Picked_up($662)
+jf @NBMNBUY_87
+start_mission BUYPRO5  // El Swanko Casa Buy
+end_thread
+
+:NBMNBUY_87
+jump @NBMNBUY_10
+
+:LNKVBY
+thread 'LNKVBY'
+
+:LNKVBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @LNKVBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @LNKVBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @LNKVBY_87
+if
+   Pickup.Picked_up($654)
+jf @LNKVBY_87
+start_mission LNKVBUY  // Links View Apartment Buy
+end_thread
+
+:LNKVBY_87
+jump @LNKVBY_10
+
+:HYCOBY
+thread 'HYCOBY'
+
+:HYCOBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HYCOBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @HYCOBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HYCOBY_87
+if
+   Pickup.Picked_up($666)
+jf @HYCOBY_87
+start_mission HYCOBUY  // Hyman Condo Buy
+end_thread
+
+:HYCOBY_87
+jump @HYCOBY_10
+
+:OCHEBY
+thread 'OCHEBY'
+
+:OCHEBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @OCHEBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @OCHEBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @OCHEBY_87
+if
+   Pickup.Picked_up($658)
+jf @OCHEBY_87
+start_mission OCHEBUY  // Ocean Heighs Aprt. Buy
+end_thread
+
+:OCHEBY_87
+jump @OCHEBY_10
+
+:WASHBY
+thread 'WASHBY'
+
+:WASHBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @WASHBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @WASHBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @WASHBY_87
+if
+   Pickup.Picked_up($651)
+jf @WASHBY_87
+start_mission WASHBUY  // 1102 Washington Street Buy
+end_thread
+
+:WASHBY_87
+jump @WASHBY_10
+
+:VCPTBY
+thread 'VCPTBY'
+
+:VCPTBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @VCPTBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @VCPTBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @VCPTBY_87
+if
+   Pickup.Picked_up($648)
+jf @VCPTBY_87
+start_mission VCPTBUY  // Vice Point Buy
+end_thread
+
+:VCPTBY_87
+jump @VCPTBY_10
+
+:PIZZABIKE
+thread 'PIZBIKE'
+
+:PIZZABIKE_10
+wait $DEFAULT_WAIT_TIME
+if and
+	$389 == 1 // integer values
+	$PASSED_ASS1_RUB_OUT == 1 // integer values
+jf @PIZZABIKE_20
+014C: set_parked_car_generator $1834 cars_to_generate_to 101
+end_thread
+
+:PIZZABIKE_20
+jump @PIZZABIKE_10
+
+:COLSPE
+thread 'COLSPE'
+
+:COLSPE_10
+wait $DEFAULT_WAIT_TIME
+if and
+	$1141 == 1 // integer values
+	$PASSED_ASS1_RUB_OUT == 1 // integer values
+jf @COLSPE_20
+014C: set_parked_car_generator $COLONEL_SPEEDER cars_to_generate_to 101
+end_thread
+
+:COLSPE_20
+jump @COLSPE_10
+
+:SKUMBY
+thread 'SKUMBY'
+
+:SKUMBY_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SKUMBY_87
+if
+  $ONMISSION == 0 // integer values
+jf @SKUMBY_87
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SKUMBY_87
+if
+   Pickup.Picked_up($645)
+jf @SKUMBY_87
+start_mission SKUMBUY  // Skumole Shack Buy
+end_thread
+
+:SKUMBY_87
+jump @SKUMBY_10
+
+:FIN1
+thread 'FIN1'
+
+:FIN1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $269 == 1 // integer values
+jf @FIN1_35
+end_thread
+
+:FIN1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FIN1_167
+if
+00F6:   player $PLAYER_CHAR 0 $474 $475 $476 radius 1.5 2.0 2.0
+jf @FIN1_167
+if
+  $ONMISSION == 0 // integer values
+jf @FIN1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @FIN1_167
+gosub @HELP_3622
+gosub @HELP_2883
+00BA: text_styled 'CAP_1' 15000 ms 2  // Cap the Collector
+gosub @HELP_2932
+start_mission CAP_1  // Cap the Collector
+
+:FIN1_167
+jump @FIN1_10
+
+:FIN2
+thread 'FIN2'
+
+:FIN2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $270 == 1 // integer values
+jf @FIN2_35
+end_thread
+
+:FIN2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FIN2_241
+if
+00F6:   player $PLAYER_CHAR 0 -378.3 -579.8 24.5 radius 1.5 2.0 2.0
+jf @FIN2_234
+if
+  $ONMISSION == 0 // integer values
+jf @FIN2_227
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @FIN2_227
+if
+   Player.Money($PLAYER_CHAR) > 1000
+jf @FIN2_192
+gosub @HELP_2883
+00BA: text_styled 'FIN_1' 15000 ms 2  // Keep your Friends Close...
+gosub @HELP_2932
+start_mission FIN_1  // Keep your Friends Close...
+jump @FIN2_227
+
+:FIN2_192
+if
+  $452 == 0 // integer values
+jf @FIN2_227
+03E5: text_box 'FIN_B6'  // You do not have enough money to start this mission.
+$452 = 1 // integer values
+
+:FIN2_227
+jump @FIN2_241
+
+:FIN2_234
+$452 = 0 // integer values
+
+:FIN2_241
+jump @FIN2_10
+
+:GANGMEM
+thread 'GANGMEM'
+$724 = -1 // integer values
+0@ = -1 // integer values
+1@ = -1 // integer values
+7@ = 0 // integer values
+8@ = 0 // integer values
+9@ = 0 // integer values
+3@ = 0 // integer values
+4@ = 0 // integer values
+5@ = 0 // integer values
+$725 = 0.0 // floating-point values
+
+:GANGMEM_83
+wait $DEFAULT_WAIT_TIME
+058C: $725 = percentage_completed
+
+:GANGMEM_93
+if
+  $725 == 100.0 // floating-point values
+jf @GANGMEM_478
+wait 100
+0084: $723 = $724 // integer values and handles
+0085: 2@ = 3@ // integer values and handles
+0085: 6@ = 7@ // integer values and handles
+10@ = -403.7998 // floating-point values
+11@ = -558.5297 // floating-point values
+12@ = 17.9388 // floating-point values
+13@ = 170.5255 // floating-point values
+14@ = -403.7675 // floating-point values
+15@ = -559.4329 // floating-point values
+gosub @GANGMEM_485
+0084: $724 = $723 // integer values and handles
+0085: 3@ = 2@ // integer values and handles
+0085: 7@ = 6@ // integer values and handles
+wait 100
+008A: $723 = 0@ // integer values and handles
+0085: 2@ = 4@ // integer values and handles
+0085: 6@ = 8@ // integer values and handles
+10@ = -401.1314 // floating-point values
+11@ = -565.7331 // floating-point values
+12@ = 18.5404 // floating-point values
+13@ = 100.8949 // floating-point values
+14@ = -402.1638 // floating-point values
+15@ = -565.7678 // floating-point values
+gosub @GANGMEM_485
+008B: 0@ = $723 // integer values and handles
+0085: 4@ = 2@ // integer values and handles
+0085: 8@ = 6@ // integer values and handles
+wait 100
+008A: $723 = 1@ // integer values and handles
+0085: 2@ = 5@ // integer values and handles
+0085: 6@ = 9@ // integer values and handles
+10@ = -404.3082 // floating-point values
+11@ = -561.7204 // floating-point values
+12@ = 17.9388 // floating-point values
+13@ = 7.0257 // floating-point values
+14@ = -404.3812 // floating-point values
+15@ = -561.1186 // floating-point values
+gosub @GANGMEM_485
+008B: 1@ = $723 // integer values and handles
+0085: 5@ = 2@ // integer values and handles
+0085: 9@ = 6@ // integer values and handles
+jump @GANGMEM_93
+
+:GANGMEM_478
+jump @GANGMEM_83
+
+:GANGMEM_485
+if
+  $ONMISSION == 0 // integer values
+jf @GANGMEM_1107
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GANGMEM_1093
+if
+   Player.InZone($PLAYER_CHAR, 'GANG1')
+jf @GANGMEM_789
+if
+   Player.Money($PLAYER_CHAR) > 6000
+jf @GANGMEM_782
+if
+  2@ == 0 // integer values
+jf @GANGMEM_782
+Model.Load(#PGA)
+Model.Load(#UZI)
+if
+   Model.Available(#PGA)
+jf @GANGMEM_782
+if
+   Model.Available(#UZI)
+jf @GANGMEM_782
+if
+80C2:   not sphere_onscreen 10@ 11@ 12@ 1.0
+jf @GANGMEM_782
+$723 = Actor.Create(CivMale, #PGA, 10@, 11@, 12@)
+Actor.Angle($723) = 13@
+04F5: unknown_actor $723 kiss_player $PLAYER_CHAR on 1
+0243: set_actor $723 ped_stats_to 16
+01ED: clear_actor $723 threat_search
+0568: set_actor $723 untargetable 1
+01B2: give_actor $723 weapon 23 ammo 9999 // Load the weapon model before using this
+0372: set_actor $723 anim 24 wait_state_time 60000000 ms
+01C5: remove_actor_from_mission_cleanup_list $723
+0319: set_actor $723 running 1
+Actor.Health($723) = 250
+02E2: set_actor $723 weapon_accuracy_to 80
+054A: set_actor $723 can_be_shot_in_a_car 0
+0446: set_actor $723 dismemberment_possible 0
+03BC: 6@ = create_sphere 14@ 15@ 12@ 0.75
+2@ = 1 // integer values
+Model.Destroy(#PGA)
+Model.Destroy(#UZI)
+
+:GANGMEM_782
+jump @GANGMEM_824
+
+:GANGMEM_789
+if
+  2 > 2@ // integer values
+jf @GANGMEM_824
+Actor.RemoveReferences($723)
+2@ = 0 // integer values
+03BD: destroy_sphere 6@
+
+:GANGMEM_824
+if
+  2@ == 1 // integer values
+jf @GANGMEM_966
+if
+   not Actor.Dead($723)
+jf @GANGMEM_959
+if
+00F5:   player $PLAYER_CHAR 0 14@ 15@ 12@ radius 1.0 1.0 2.0
+jf @GANGMEM_952
+if
+   Player.Money($PLAYER_CHAR) > 2000
+jf @GANGMEM_927
+Player.Money($PLAYER_CHAR) += -2000
+
+:GANGMEM_927
+01DF: tie_actor $723 to_player $PLAYER_CHAR
+053D:  $723
+03BD: destroy_sphere 6@
+2@ = 2 // integer values
+
+:GANGMEM_952
+jump @GANGMEM_966
+
+:GANGMEM_959
+gosub @GANGMEM_1116
+
+:GANGMEM_966
+if
+  2@ == 2 // integer values
+jf @GANGMEM_1086
+if
+   not Actor.Dead($723)
+jf @GANGMEM_1079
+if
+00E9:   player $PLAYER_CHAR 0 $723 radius 100.0 100.0
+jf @GANGMEM_1065
+if
+8320:   not actor $723 in_range_of_player $PLAYER_CHAR
+jf @GANGMEM_1058
+01DF: tie_actor $723 to_player $PLAYER_CHAR
+
+:GANGMEM_1058
+jump @GANGMEM_1072
+
+:GANGMEM_1065
+gosub @GANGMEM_1116
+
+:GANGMEM_1072
+jump @GANGMEM_1086
+
+:GANGMEM_1079
+gosub @GANGMEM_1116
+
+:GANGMEM_1086
+jump @GANGMEM_1100
+
+:GANGMEM_1093
+gosub @GANGMEM_1116
+
+:GANGMEM_1100
+jump @GANGMEM_1114
+
+:GANGMEM_1107
+gosub @GANGMEM_1116
+
+:GANGMEM_1114
+return
+
+:GANGMEM_1116
+if
+   not 2@ == 0 // integer values
+jf @GANGMEM_1205
+Actor.RemoveReferences($723)
+if
+   Player.Defined($PLAYER_CHAR)
+jf @GANGMEM_1193
+if
+   not Player.InZone($PLAYER_CHAR, 'GANG1')
+jf @GANGMEM_1186
+2@ = 0 // integer values
+
+:GANGMEM_1186
+jump @GANGMEM_1200
+
+:GANGMEM_1193
+2@ = 0 // integer values
+
+:GANGMEM_1200
+03BD: destroy_sphere 6@
+
+:GANGMEM_1205
+return
+
+:ARMYBAS
+thread 'ARMYBAS'
+0@ = 0 // integer values
+
+:ARMYBAS_17
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ARMYBAS_322
+if or
+   Player.InZone($PLAYER_CHAR, 'AIRPORT')
+   Player.InZone($PLAYER_CHAR, 'ARMYBAS')
+jf @ARMYBAS_235
+if
+  0@ == 0 // integer values
+jf @ARMYBAS_132
+0235: set_gang 2 models_to #ARMY #ARMY
+03F1: pedtype 9 add_threat 1
+0237: set_gang 2 primary_weapon_to 26 secondary_weapon_to 25
+0592: unknown_gang 2 flag 1
+Model.Load(#ARMY)
+0@ = 1 // integer values
+
+:ARMYBAS_132
+if
+  0@ == 1 // integer values
+jf @ARMYBAS_228
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+0500:   player $PLAYER_CHAR skin == 'PLAYER6'
+0056:   player $PLAYER_CHAR 0 -1682.24 -179.9125 -1600.448 -150.8878
+jf @ARMYBAS_222
+03F2: pedtype 9 remove_threat 1
+jump @ARMYBAS_228
+
+:ARMYBAS_222
+03F1: pedtype 9 add_threat 1
+
+:ARMYBAS_228
+jump @ARMYBAS_322
+
+:ARMYBAS_235
+if
+  0@ == 1 // integer values
+jf @ARMYBAS_322
+0235: set_gang 2 models_to #SGA #SGB
+03F2: pedtype 9 remove_threat 1
+0237: set_gang 2 primary_weapon_to 17 secondary_weapon_to 0
+0592: unknown_gang 2 flag 0
+wait 0
+wait 0
+wait 0
+if
+  $1603 == 0 // integer values
+jf @ARMYBAS_315
+Model.Destroy(#ARMY)
+
+:ARMYBAS_315
+0@ = 0 // integer values
+
+:ARMYBAS_322
+jump @ARMYBAS_17
+
+:BIK1
+thread 'BIK1'
+
+:BIK1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $275 == 1 // integer values
+jf @BIK1_35
+end_thread
+
+:BIK1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BIK1_167
+if
+00F6:   player $PLAYER_CHAR 0 $477 $478 $479 radius 1.5 2.0 2.0
+jf @BIK1_167
+if
+    8500:   not player $PLAYER_CHAR skin == 'PLAYER6'
+jf @BIK1_182
+if
+  $ONMISSION == 0 // integer values
+jf @BIK1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BIK1_167
+gosub @HELP_3706
+gosub @HELP_2883
+00BA: text_styled 'BIKE_1' 15000 ms 2  // Alloy Wheels of Steel
+gosub @HELP_2932
+start_mission BIKE1  // Alloy Wheels of Steel
+
+:BIK1_167
+jump @BIK1_10
+
+:BIK1_182
+00BC: text_highpriority 'GOAWAY3' 5000 ms 1  // ~g~Come back when you are not wearing the police uniform.
+jump @BIK1_10
+
+:BIK2
+thread 'BIK2'
+
+:BIK2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $276 == 1 // integer values
+jf @BIK2_35
+end_thread
+
+:BIK2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BIK2_167
+if
+00F6:   player $PLAYER_CHAR 0 $477 $478 $479 radius 1.5 2.0 2.0
+jf @BIK2_167
+if
+  $ONMISSION == 0 // integer values
+jf @BIK2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BIK2_167
+gosub @HELP_3706
+gosub @HELP_2883
+00BA: text_styled 'BIKE_2' 15000 ms 2  // Messing with the Man
+gosub @HELP_2932
+start_mission BIKE2  // Messing with the Man
+
+:BIK2_167
+jump @BIK2_10
+
+:BIK3
+thread 'BIK3'
+
+:BIK3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $277 == 1 // integer values
+jf @BIK3_35
+end_thread
+
+:BIK3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BIK3_167
+if
+00F6:   player $PLAYER_CHAR 0 $477 $478 $479 radius 1.5 2.0 2.0
+jf @BIK3_167
+if
+  $ONMISSION == 0 // integer values
+jf @BIK3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @BIK3_167
+gosub @HELP_3706
+gosub @HELP_2883
+00BA: text_styled 'BIKE_3' 15000 ms 2  // Hog Tied
+gosub @HELP_2932
+start_mission BIKE3  // Hog Tied
+
+:BIK3_167
+jump @BIK3_10
+
+:CUB1
+thread 'CUB1'
+
+:CUB1_10
+wait 0
+if
+  $279 == 1 // integer values
+jf @CUB1_34
+end_thread
+
+:CUB1_34
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CUB1_166
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB1_166
+if
+  $ONMISSION == 0 // integer values
+jf @CUB1_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CUB1_166
+gosub @HELP_3874
+gosub @HELP_2883
+00BA: text_styled 'CUB_1' 15000 ms 2  // Stunt Boat Challenge
+gosub @HELP_2932
+start_mission CUBAN1  // Stunt Boat Challenge
+
+:CUB1_166
+jump @CUB1_10
+
+:CUB2
+thread 'CUB2'
+
+:CUB2_10
+wait 0
+if
+  $280 == 1 // integer values
+jf @CUB2_34
+end_thread
+
+:CUB2_34
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CUB2_166
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB2_166
+if
+  $ONMISSION == 0 // integer values
+jf @CUB2_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CUB2_166
+gosub @HELP_3874
+gosub @HELP_2883
+00BA: text_styled 'CUB_2' 15000 ms 2  // Cannon Fodder
+gosub @HELP_2932
+start_mission CUBAN2  // Cannon Fodder
+
+:CUB2_166
+jump @CUB2_10
+
+:CUB3
+thread 'CUB3'
+
+:CUB3_10
+wait 0
+if
+  $281 == 1 // integer values
+jf @CUB3_34
+end_thread
+
+:CUB3_34
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CUB3_166
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB3_166
+if
+  $ONMISSION == 0 // integer values
+jf @CUB3_166
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CUB3_166
+gosub @HELP_3874
+gosub @HELP_2883
+00BA: text_styled 'CUB_3' 15000 ms 2  // Naval Engagement
+gosub @HELP_2932
+start_mission CUBAN3  // Naval Engagement
+
+:CUB3_166
+jump @CUB3_10
+
+:CUB4
+thread 'CUB4'
+
+:CUB4_10
+wait 0
+if
+  $282 == 1 // integer values
+jf @CUB4_34
+end_thread
+
+:CUB4_34
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CUB4_492
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB4_492
+if
+040C:   german_game
+jf @CUB4_302
+if
+  $PASSED_HAT2_BOMBS_AWAY == 1 // integer values
+jf @CUB4_204
+if
+  $ONMISSION == 0 // integer values
+jf @CUB4_197
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CUB4_197
+gosub @HELP_3874
+gosub @HELP_2883
+00BA: text_styled 'CUB_4' 15000 ms 2  // Trojan Voodoo
+gosub @HELP_2932
+start_mission CUBAN4  // Trojan Voodoo
+
+:CUB4_197
+jump @CUB4_295
+
+:CUB4_204
+00BC: text_highpriority 'GOAWAY1' 5000 ms 1  // ~g~Come back when you have finished the Haitian gang missions.
+
+:CUB4_219
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB4_295
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @CUB4_288
+jump @CUB4_10
+
+:CUB4_288
+jump @CUB4_219
+
+:CUB4_295
+jump @CUB4_492
+
+:CUB4_302
+if
+  $PASSED_HAT3_DIRTY_LICKINS == 1 // integer values
+jf @CUB4_401
+if
+  $ONMISSION == 0 // integer values
+jf @CUB4_394
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @CUB4_394
+gosub @HELP_3874
+gosub @HELP_2883
+00BA: text_styled 'CUB_4' 15000 ms 2  // Trojan Voodoo
+gosub @HELP_2932
+start_mission CUBAN4  // Trojan Voodoo
+
+:CUB4_394
+jump @CUB4_492
+
+:CUB4_401
+00BC: text_highpriority 'GOAWAY1' 5000 ms 1  // ~g~Come back when you have finished the Haitian gang missions.
+
+:CUB4_416
+if
+00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
+jf @CUB4_492
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @CUB4_485
+jump @CUB4_10
+
+:CUB4_485
+jump @CUB4_416
+
+:CUB4_492
+jump @CUB4_10
+
+:HAT1
+thread 'HAT1'
+
+:HAT1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_HAT1_JUJU_SCRAMBLE == 1 // integer values
+jf @HAT1_35
+end_thread
+
+:HAT1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HAT1_167
+if
+00F6:   player $PLAYER_CHAR 0 $483 $484 $485 radius 1.5 2.0 2.0
+jf @HAT1_167
+if
+  $ONMISSION == 0 // integer values
+jf @HAT1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HAT1_167
+gosub @HELP_3963
+gosub @HELP_2883
+00BA: text_styled 'HAT_1' 15000 ms 2  // Juju Scramble
+gosub @HELP_2932
+start_mission HAIT1  // Juju Scramble
+
+:HAT1_167
+jump @HAT1_10
+
+:HAT2
+thread 'HAT2'
+
+:HAT2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_HAT2_BOMBS_AWAY == 1 // integer values
+jf @HAT2_35
+end_thread
+
+:HAT2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HAT2_167
+if
+00F6:   player $PLAYER_CHAR 0 $483 $484 $485 radius 1.5 2.0 2.0
+jf @HAT2_167
+if
+  $ONMISSION == 0 // integer values
+jf @HAT2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HAT2_167
+gosub @HELP_3963
+gosub @HELP_2883
+00BA: text_styled 'HAT_2' 15000 ms 2  // Bombs Away!
+gosub @HELP_2932
+start_mission HAIT2  // Bombs Away!
+
+:HAT2_167
+jump @HAT2_10
+
+:HAT3
+thread 'HAT3'
+
+:HAT3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_HAT3_DIRTY_LICKINS == 1 // integer values
+jf @HAT3_35
+end_thread
+
+:HAT3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HAT3_167
+if
+00F6:   player $PLAYER_CHAR 0 $483 $484 $485 radius 1.5 2.0 2.0
+jf @HAT3_167
+if
+  $ONMISSION == 0 // integer values
+jf @HAT3_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HAT3_167
+gosub @HELP_3963
+gosub @HELP_2883
+00BA: text_styled 'HAT_3' 15000 ms 2  // Dirty Lickin's
+gosub @HELP_2932
+start_mission HAIT3  // Dirty Lickin's
+
+:HAT3_167
+jump @HAT3_10
+
+:ROC1
+thread 'ROC1'
+
+:ROC1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_ROCK1_LOVE_JUICE == 1 // integer values
+jf @ROC1_35
+end_thread
+
+:ROC1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ROC1_167
+if
+00F6:   player $PLAYER_CHAR 0 $486 $487 $488 radius 1.5 2.0 2.0
+jf @ROC1_167
+if
+  $ONMISSION == 0 // integer values
+jf @ROC1_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ROC1_167
+gosub @HELP_3790
+gosub @HELP_2883
+00BA: text_styled 'ROCK_1' 15000 ms 2  // Love Juice
+gosub @HELP_2932
+start_mission ROCKB1  // Love Juice
+
+:ROC1_167
+jump @ROC1_10
+
+:ROC2
+thread 'ROC2'
+
+:ROC2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_ROCK2_PSYCHO_KILLER == 1 // integer values
+jf @ROC2_35
+end_thread
+
+:ROC2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ROC2_167
+if
+00F6:   player $PLAYER_CHAR 0 $486 $487 $488 radius 1.5 2.0 2.0
+jf @ROC2_167
+if
+  $ONMISSION == 0 // integer values
+jf @ROC2_167
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ROC2_167
+gosub @HELP_3790
+gosub @HELP_2883
+00BA: text_styled 'ROCK_2' 15000 ms 2  // Psycho Killer
+gosub @HELP_2932
+start_mission ROCKB2  // Psycho Killer
+
+:ROC2_167
+jump @ROC2_10
+
+:ROC3
+thread 'ROC3'
+
+:ROC3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $PASSED_ROCK3_PUBLICITY_TOUR == 1 // integer values
+jf @ROC3_35
+end_thread
+
+:ROC3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ROC3_283
+if
+00F6:   player $PLAYER_CHAR 0 $486 $487 $488 radius 1.5 2.0 2.0
+jf @ROC3_283
+if
+  $277 == 1 // integer values
+jf @ROC3_192
+if
+  $ONMISSION == 0 // integer values
+jf @ROC3_185
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ROC3_185
+gosub @HELP_3790
+gosub @HELP_2883
+00BA: text_styled 'ROCK_3' 15000 ms 2  // Publicity Tour
+gosub @HELP_2932
+start_mission ROCKB3  // Publicity Tour
+
+:ROC3_185
+jump @ROC3_283
+
+:ROC3_192
+00BC: text_highpriority 'GOAWAY2' 4000 ms 2  // ~g~Come back when you have finished the Biker gang missions.
+
+:ROC3_207
+if
+00F6:   player $PLAYER_CHAR 0 $486 $487 $488 radius 1.5 2.0 2.0
+jf @ROC3_283
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ROC3_276
+jump @ROC3_10
+
+:ROC3_276
+jump @ROC3_207
+
+:ROC3_283
+jump @ROC3_10
+
+:SHOOT
+thread 'SHOOT'
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOOT_101
+
+:SHOOT_26
+if
+00F6:   player $PLAYER_CHAR 0 -665.63 1231.863 10.1 radius 10.0 10.0 3.0
+jf @SHOOT_101
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOOT_94
+
+:SHOOT_94
+jump @SHOOT_26
+
+:SHOOT_101
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOOT_334
+if
+00F6:   player $PLAYER_CHAR 1 -665.63 1231.863 10.1 radius 1.0 1.0 2.0
+jf @SHOOT_334
+if
+  $ONMISSION == 0 // integer values
+jf @SHOOT_334
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SHOOT_334
+$ONMISSION = 1 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+gosub @HELP_2932
+start_mission RANGE  // Weapon Range
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOOT_334
+
+:SHOOT_259
+if
+00F6:   player $PLAYER_CHAR 0 -665.63 1231.863 10.1 radius 10.0 10.0 3.0
+jf @SHOOT_334
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SHOOT_327
+
+:SHOOT_327
+jump @SHOOT_259
+
+:SHOOT_334
+jump @SHOOT_101
+
+:ASSIN_1
+thread 'ASSIN_1'
+
+:ASSIN_1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $298 == 1 // integer values
+jf @ASSIN_1_40
+024E: disable_phone $292
+end_thread
+
+:ASSIN_1_40
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_1_70
+0405: enable_phone $292
+jump @ASSIN_1_75
+
+:ASSIN_1_70
+024E: disable_phone $292
+
+:ASSIN_1_75
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ASSIN_1_326
+if
+00F9:   player $PLAYER_CHAR stopped 0 $516 $517 $518 radius 1.0 1.0 2.0
+jf @ASSIN_1_326
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_1_326
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ASSIN_1_227
+$ONMISSION = 1 // integer values
+024E: disable_phone $292
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'JOB_1' 15000 ms 2  // Road Kill
+gosub @HELP_2932
+start_mission ASSIN1  // Road Kill
+
+:ASSIN_1_227
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_1_250
+jump @ASSIN_1_10
+
+:ASSIN_1_250
+if
+00F6:   player $PLAYER_CHAR 0 $516 $517 $518 radius 1.0 1.0 2.0
+jf @ASSIN_1_326
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_1_319
+jump @ASSIN_1_10
+
+:ASSIN_1_319
+jump @ASSIN_1_250
+
+:ASSIN_1_326
+jump @ASSIN_1_10
+
+:ASSIN_2
+thread 'ASSIN_2'
+
+:ASSIN_2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $299 == 1 // integer values
+jf @ASSIN_2_40
+024E: disable_phone $293
+end_thread
+
+:ASSIN_2_40
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_2_70
+0405: enable_phone $293
+jump @ASSIN_2_75
+
+:ASSIN_2_70
+024E: disable_phone $293
+
+:ASSIN_2_75
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ASSIN_2_326
+if
+00F9:   player $PLAYER_CHAR stopped 0 $519 $520 $521 radius 1.0 1.0 2.0
+jf @ASSIN_2_326
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_2_326
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ASSIN_2_227
+$ONMISSION = 1 // integer values
+024E: disable_phone $293
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'JOB_2' 15000 ms 2  // Waste the Wife
+gosub @HELP_2932
+start_mission ASSIN2  // Waste the Wife
+
+:ASSIN_2_227
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_2_250
+jump @ASSIN_2_10
+
+:ASSIN_2_250
+if
+00F6:   player $PLAYER_CHAR 0 $519 $520 $521 radius 1.0 1.0 2.0
+jf @ASSIN_2_326
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_2_319
+jump @ASSIN_2_10
+
+:ASSIN_2_319
+jump @ASSIN_2_250
+
+:ASSIN_2_326
+jump @ASSIN_2_10
+
+:ASSIN_3
+thread 'ASSIN_3'
+
+:ASSIN_3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $300 == 1 // integer values
+jf @ASSIN_3_40
+024E: disable_phone $294
+end_thread
+
+:ASSIN_3_40
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_3_70
+0405: enable_phone $294
+jump @ASSIN_3_75
+
+:ASSIN_3_70
+024E: disable_phone $294
+
+:ASSIN_3_75
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ASSIN_3_326
+if
+00F9:   player $PLAYER_CHAR stopped 0 $522 $523 $524 radius 1.0 1.0 2.0
+jf @ASSIN_3_326
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_3_326
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ASSIN_3_227
+$ONMISSION = 1 // integer values
+024E: disable_phone $294
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'JOB_3' 15000 ms 2  // Autocide
+gosub @HELP_2932
+start_mission ASSIN3  // Autocide
+
+:ASSIN_3_227
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_3_250
+jump @ASSIN_3_10
+
+:ASSIN_3_250
+if
+00F6:   player $PLAYER_CHAR 0 $522 $523 $524 radius 1.0 1.0 2.0
+jf @ASSIN_3_326
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_3_319
+jump @ASSIN_3_10
+
+:ASSIN_3_319
+jump @ASSIN_3_250
+
+:ASSIN_3_326
+jump @ASSIN_3_10
+
+:ASSIN_4
+thread 'ASSIN_4'
+
+:ASSIN_4_10
+wait $DEFAULT_WAIT_TIME
+if
+  $301 == 1 // integer values
+jf @ASSIN_4_40
+024E: disable_phone $295
+end_thread
+
+:ASSIN_4_40
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_4_70
+0405: enable_phone $295
+jump @ASSIN_4_75
+
+:ASSIN_4_70
+024E: disable_phone $295
+
+:ASSIN_4_75
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ASSIN_4_326
+if
+00F9:   player $PLAYER_CHAR stopped 0 $525 $526 $527 radius 1.0 1.0 2.0
+jf @ASSIN_4_326
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_4_326
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ASSIN_4_227
+$ONMISSION = 1 // integer values
+024E: disable_phone $295
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'JOB_4' 15000 ms 2  // Check Out at the Check In
+gosub @HELP_2932
+start_mission ASSIN4  // Check Out at the Check In
+
+:ASSIN_4_227
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_4_250
+jump @ASSIN_4_10
+
+:ASSIN_4_250
+if
+00F6:   player $PLAYER_CHAR 0 $525 $526 $527 radius 1.0 1.0 2.0
+jf @ASSIN_4_326
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_4_319
+jump @ASSIN_4_10
+
+:ASSIN_4_319
+jump @ASSIN_4_250
+
+:ASSIN_4_326
+jump @ASSIN_4_10
+
+:ASSIN_5
+thread 'ASSIN_5'
+
+:ASSIN_5_10
+wait $DEFAULT_WAIT_TIME
+if
+  $302 == 1 // integer values
+jf @ASSIN_5_40
+024E: disable_phone $296
+end_thread
+
+:ASSIN_5_40
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_5_70
+0405: enable_phone $296
+jump @ASSIN_5_75
+
+:ASSIN_5_70
+024E: disable_phone $296
+
+:ASSIN_5_75
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ASSIN_5_326
+if
+00F9:   player $PLAYER_CHAR stopped 0 $528 $529 $530 radius 1.0 1.0 2.0
+jf @ASSIN_5_326
+if
+  $ONMISSION == 0 // integer values
+jf @ASSIN_5_326
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ASSIN_5_227
+$ONMISSION = 1 // integer values
+024E: disable_phone $296
+Player.CanMove($PLAYER_CHAR) = False
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'JOB_5' 15000 ms 2  // Loose Ends
+gosub @HELP_2932
+start_mission ASSIN5  // Loose Ends
+
+:ASSIN_5_227
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_5_250
+jump @ASSIN_5_10
+
+:ASSIN_5_250
+if
+00F6:   player $PLAYER_CHAR 0 $528 $529 $530 radius 1.0 1.0 2.0
+jf @ASSIN_5_326
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ASSIN_5_319
+jump @ASSIN_5_10
+
+:ASSIN_5_319
+jump @ASSIN_5_250
+
+:ASSIN_5_326
+jump @ASSIN_5_10
+
+:TWAR1
+thread 'TWAR1'
+
+:TWAR1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $308 == 1 // integer values
+jf @TWAR1_35
+end_thread
+
+:TWAR1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @TWAR1_349
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR1_292
+if
+  $ONMISSION == 0 // integer values
+jf @TWAR1_292
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @TWAR1_193
+$370 = 1 // integer values
+gosub @HELP_4047
+00BA: text_styled 'TAXI_1' 15000 ms 2  // V.I.P.
+if
+  $371 == 0 // integer values
+jf @TWAR1_193
+start_mission TAXWAR1  // V.I.P.
+$371 = 1 // integer values
+
+:TWAR1_193
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR1_216
+jump @TWAR1_10
+
+:TWAR1_216
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR1_292
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR1_285
+jump @TWAR1_10
+
+:TWAR1_285
+jump @TWAR1_216
+
+:TWAR1_292
+if
+00F6:   player $PLAYER_CHAR 0 $489 $490 $491 radius 1.0 2.0 2.0
+jf @TWAR1_349
+00BC: text_highpriority 'NOTAXI' 1000 ms 2  // ~g~You need a Kaufman Cab to activate this mission.
+
+:TWAR1_349
+jump @TWAR1_10
+
+:TWAR2
+thread 'TWAR2'
+
+:TWAR2_10
+wait $DEFAULT_WAIT_TIME
+if
+  $309 == 1 // integer values
+jf @TWAR2_35
+end_thread
+
+:TWAR2_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @TWAR2_349
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR2_292
+if
+  $ONMISSION == 0 // integer values
+jf @TWAR2_292
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @TWAR2_193
+$370 = 1 // integer values
+gosub @HELP_4047
+00BA: text_styled 'TAXI_2' 15000 ms 2  // Friendly Rivalry
+if
+  $371 == 0 // integer values
+jf @TWAR2_193
+start_mission TAXWAR2  // Friendly Rivalry
+$371 = 1 // integer values
+
+:TWAR2_193
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR2_216
+jump @TWAR2_10
+
+:TWAR2_216
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR2_292
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR2_285
+jump @TWAR2_10
+
+:TWAR2_285
+jump @TWAR2_216
+
+:TWAR2_292
+if
+00F6:   player $PLAYER_CHAR 0 $489 $490 $491 radius 1.0 2.0 2.0
+jf @TWAR2_349
+00BC: text_highpriority 'NOTAXI' 1000 ms 2  // ~g~You need a Kaufman Cab to activate this mission.
+
+:TWAR2_349
+jump @TWAR2_10
+
+:TWAR3
+thread 'TWAR3'
+
+:TWAR3_10
+wait $DEFAULT_WAIT_TIME
+if
+  $310 == 1 // integer values
+jf @TWAR3_35
+end_thread
+
+:TWAR3_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @TWAR3_349
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #KAUFMAN
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR3_292
+if
+  $ONMISSION == 0 // integer values
+jf @TWAR3_292
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @TWAR3_193
+$370 = 1 // integer values
+gosub @HELP_4047
+00BA: text_styled 'TAXI_3' 15000 ms 2  // Cabmaggedon
+if
+  $371 == 0 // integer values
+jf @TWAR3_193
+start_mission TAXWAR3  // Cabmaggedon
+$371 = 1 // integer values
+
+:TWAR3_193
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR3_216
+jump @TWAR3_10
+
+:TWAR3_216
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $489 $490 $491 radius 2.0 2.0 2.0
+jf @TWAR3_292
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @TWAR3_285
+jump @TWAR3_10
+
+:TWAR3_285
+jump @TWAR3_216
+
+:TWAR3_292
+if
+00F6:   player $PLAYER_CHAR 0 $489 $490 $491 radius 1.0 2.0 2.0
+jf @TWAR3_349
+00BC: text_highpriority 'NOTAXI' 1000 ms 2  // ~g~You need a Kaufman Cab to activate this mission.
+
+:TWAR3_349
+jump @TWAR3_10
+
+:TAXI_L
+thread 'TAXI_L'
+
+:TAXI_L_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @TAXI_L_474
+if
+8596:   not player $PLAYER_CHAR riding_mission_restart_taxi
+jf @TAXI_L_474
+if
+02DE:   player $PLAYER_CHAR driving_taxi_vehicle
+jf @TAXI_L_447
+if
+  $ONMISSION == 0 // integer values
+jf @TAXI_L_440
+0293: $18 = get_controller_mode
+if
+  $25 == 1 // integer values
+jf @TAXI_L_173
+if
+  $370 == 0 // integer values
+jf @TAXI_L_173
+if
+   not $18 == 3 // integer values
+jf @TAXI_L_156
+03E5: text_box 'TTUTOR'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi missions on or off.
+jump @TAXI_L_166
+
+:TAXI_L_156
+03E5: text_box 'TTUTOR2'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi missions on or off.
+
+:TAXI_L_166
+$370 = 1 // integer values
+
+:TAXI_L_173
+if
+   not $18 == 3 // integer values
+jf @TAXI_L_319
+if
+00E1:   player 0 pressed_button 19
+jf @TAXI_L_312
+
+:TAXI_L_208
+if
+00E1:   player 0 pressed_button 19
+jf @TAXI_L_264
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+82DE:   not player $PLAYER_CHAR driving_taxi_vehicle
+jf @TAXI_L_257
+jump @TAXI_L
+
+:TAXI_L_257
+jump @TAXI_L_208
+
+:TAXI_L_264
+00BA: text_styled 'TAXI_M' 6000 ms 5  // 'TAXI DRIVER'
+wait 0
+if
+  $371 == 0 // integer values
+jf @TAXI_L_312
+start_mission TAXI  // TAXI DRIVER
+$371 = 1 // integer values
+
+:TAXI_L_312
+jump @TAXI_L_440
+
+:TAXI_L_319
+if
+00E1:   player 0 pressed_button 14
+jf @TAXI_L_440
+
+:TAXI_L_336
+if
+00E1:   player 0 pressed_button 14
+jf @TAXI_L_392
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+82DE:   not player $PLAYER_CHAR driving_taxi_vehicle
+jf @TAXI_L_385
+jump @TAXI_L
+
+:TAXI_L_385
+jump @TAXI_L_336
+
+:TAXI_L_392
+00BA: text_styled 'TAXI_M' 6000 ms 5  // 'TAXI DRIVER'
+wait 0
+if
+  $371 == 0 // integer values
+jf @TAXI_L_440
+start_mission TAXI  // TAXI DRIVER
+$371 = 1 // integer values
+
+:TAXI_L_440
+jump @TAXI_L_474
+
+:TAXI_L_447
+if
+  $370 == 1 // integer values
+jf @TAXI_L_474
+03E6: remove_text_box
+$370 = 0 // integer values
+
+:TAXI_L_474
+jump @TAXI_L_10
+
+:AMBULA
+thread 'AMBULA'
+
+:AMBULA_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @AMBULA_438
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #AMBULAN
+jf @AMBULA_411
+if and
+  $ONMISSION == 0 // integer values
+  $319 == 0 // integer values
+jf @AMBULA_404
+0293: $18 = get_controller_mode
+if
+  $25 == 1 // integer values
+jf @AMBULA_167
+if
+  $318 == 0 // integer values
+jf @AMBULA_167
+if
+   not $18 == 3 // integer values
+jf @AMBULA_150
+03E5: text_box 'ATUTOR'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~button to toggle Paramedic missions on or off.
+jump @AMBULA_160
+
+:AMBULA_150
+03E5: text_box 'ATUTOR3'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Paramedic missions on or off.
+
+:AMBULA_160
+$318 = 1 // integer values
+
+:AMBULA_167
+if
+   not $18 == 3 // integer values
+jf @AMBULA_298
+if
+00E1:   player 0 pressed_button 19
+jf @AMBULA_291
+
+:AMBULA_202
+if
+00E1:   player 0 pressed_button 19
+jf @AMBULA_261
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #AMBULAN
+jf @AMBULA_254
+jump @AMBULA
+
+:AMBULA_254
+jump @AMBULA_202
+
+:AMBULA_261
+00BA: text_styled 'AMBUL_M' 6000 ms 5  // 'PARAMEDIC'
+wait 0
+start_mission AMBULAN  // PARAMEDIC
+$318 = 1 // integer values
+
+:AMBULA_291
+jump @AMBULA_404
+
+:AMBULA_298
+if
+00E1:   player 0 pressed_button 14
+jf @AMBULA_404
+
+:AMBULA_315
+if
+00E1:   player 0 pressed_button 14
+jf @AMBULA_374
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #AMBULAN
+jf @AMBULA_367
+jump @AMBULA
+
+:AMBULA_367
+jump @AMBULA_315
+
+:AMBULA_374
+00BA: text_styled 'AMBUL_M' 6000 ms 5  // 'PARAMEDIC'
+wait 0
+start_mission AMBULAN  // PARAMEDIC
+$318 = 1 // integer values
+
+:AMBULA_404
+jump @AMBULA_438
+
+:AMBULA_411
+if
+  $318 == 1 // integer values
+jf @AMBULA_438
+03E6: remove_text_box
+$318 = 0 // integer values
+
+:AMBULA_438
+jump @AMBULA_10
+
+:FIRE
+thread 'FIRE'
+
+:FIRE_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @FIRE_438
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FIRETRUK
+jf @FIRE_411
+if and
+  $ONMISSION == 0 // integer values
+  $321 == 0 // integer values
+jf @FIRE_404
+0293: $18 = get_controller_mode
+if
+  $25 == 1 // integer values
+jf @FIRE_167
+if
+  $320 == 0 // integer values
+jf @FIRE_167
+if
+   not $18 == 3 // integer values
+jf @FIRE_150
+03E5: text_box 'FTUTOR'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire truck missions on or off.
+jump @FIRE_160
+
+:FIRE_150
+03E5: text_box 'FTUTOR2'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire truck missions on or off.
+
+:FIRE_160
+$320 = 1 // integer values
+
+:FIRE_167
+if
+   not $18 == 3 // integer values
+jf @FIRE_298
+if
+00E1:   player 0 pressed_button 19
+jf @FIRE_291
+
+:FIRE_202
+if
+00E1:   player 0 pressed_button 19
+jf @FIRE_261
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FIRETRUK
+jf @FIRE_254
+jump @FIRE
+
+:FIRE_254
+jump @FIRE_202
+
+:FIRE_261
+00BA: text_styled 'FIRE_M' 6000 ms 5  // 'FIREFIGHTER'
+wait 0
+start_mission FIRETRU  // FIREFIGHTER
+$320 = 1 // integer values
+
+:FIRE_291
+jump @FIRE_404
+
+:FIRE_298
+if
+00E1:   player 0 pressed_button 14
+jf @FIRE_404
+
+:FIRE_315
+if
+00E1:   player 0 pressed_button 14
+jf @FIRE_374
+wait 0
+if or
+   not Player.Defined($PLAYER_CHAR)
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FIRETRUK
+jf @FIRE_367
+jump @FIRE
+
+:FIRE_367
+jump @FIRE_315
+
+:FIRE_374
+00BA: text_styled 'FIRE_M' 6000 ms 5  // 'FIREFIGHTER'
+wait 0
+start_mission FIRETRU  // FIREFIGHTER
+$320 = 1 // integer values
+
+:FIRE_404
+jump @FIRE_438
+
+:FIRE_411
+if
+  $320 == 1 // integer values
+jf @FIRE_438
+03E6: remove_text_box
+$320 = 0 // integer values
+
+:FIRE_438
+jump @FIRE_10
+
+:COP
+thread 'COP'
+
+:COP_10
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COP_670
+if or
+056C:   actor $PLAYER_ACTOR driving_police_vehicle
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COP_643
+if
+  $ONMISSION == 0 // integer values
+jf @COP_636
+0293: $18 = get_controller_mode
+if
+  $25 == 1 // integer values
+jf @COP_173
+if
+  $322 == 0 // integer values
+jf @COP_173
+if
+   not $18 == 3 // integer values
+jf @COP_156
+03E5: text_box 'CTUTOR'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Vigilante missions on or off.
+jump @COP_166
+
+:COP_156
+03E5: text_box 'CTUTOR2'  // Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Vigilante missions on or off.
+
+:COP_166
+$322 = 1 // integer values
+
+:COP_173
+if
+   not $18 == 3 // integer values
+jf @COP_417
+if
+00E1:   player 0 pressed_button 19
+jf @COP_410
+
+:COP_208
+if
+00E1:   player 0 pressed_button 19
+jf @COP_298
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @COP_252
+jump @COP
+
+:COP_252
+if and
+856C:   not actor $PLAYER_ACTOR driving_police_vehicle
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #HUNTER
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COP_291
+jump @COP
+
+:COP_291
+jump @COP_208
+
+:COP_298
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+jf @COP_339
+00BA: text_styled 'COP_M3' 6000 ms 5  // 'BROWN THUNDER'
+jump @COP_395
+
+:COP_339
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #CHEETAH
+jf @COP_380
+00BA: text_styled 'COP_M2' 6000 ms 5  // 'VICE SQUAD'
+jump @COP_395
+
+:COP_380
+00BA: text_styled 'COP_M' 6000 ms 5  // 'VIGILANTE'
+
+:COP_395
+wait 0
+start_mission COPCAR  // VIGILANTE
+$322 = 1 // integer values
+
+:COP_410
+jump @COP_636
+
+:COP_417
+if
+00E1:   player 0 pressed_button 14
+jf @COP_636
+
+:COP_434
+if
+00E1:   player 0 pressed_button 14
+jf @COP_524
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @COP_478
+jump @COP
+
+:COP_478
+if and
+856C:   not actor $PLAYER_ACTOR driving_police_vehicle
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #HUNTER
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FBICAR
+jf @COP_517
+jump @COP
+
+:COP_517
+jump @COP_434
+
+:COP_524
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #HUNTER
+jf @COP_565
+00BA: text_styled 'COP_M3' 6000 ms 5  // 'BROWN THUNDER'
+jump @COP_621
+
+:COP_565
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #CHEETAH
+jf @COP_606
+00BA: text_styled 'COP_M2' 6000 ms 5  // 'VICE SQUAD'
+jump @COP_621
+
+:COP_606
+00BA: text_styled 'COP_M' 6000 ms 5  // 'VIGILANTE'
+
+:COP_621
+wait 0
+start_mission COPCAR  // VIGILANTE
+$322 = 1 // integer values
+
+:COP_636
+jump @COP_670
+
+:COP_643
+if
+  $322 == 1 // integer values
+jf @COP_670
+03E6: remove_text_box
+$322 = 0 // integer values
+
+:COP_670
+jump @COP_10
+
+:STADIUM
+thread 'STADIUM'
+
+:STADIUM_10
+wait $DEFAULT_WAIT_TIME
+00BF: $9 = current_time_hours, $10 = current_time_minutes
+if
+  $9 > 19 // integer values
+jf @STADIUM_507
+if
+  $ONMISSION == 0 // integer values
+jf @STADIUM_391
+if
+   Player.Defined($PLAYER_CHAR)
+jf @STADIUM_384
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @STADIUM_384
+if
+  $7 == 0 // integer values
+jf @STADIUM_116
+$7 = 1 // integer values
+
+:STADIUM_116
+if
+  $11 == 1 // integer values
+jf @STADIUM_161
+Object.Angle($ARENA_DOOR_1) = 90.0
+Object.Angle($ARENA_DOOR_2) = -90.0
+$11 = 0 // integer values
+
+:STADIUM_161
+if
+00F6:   player $PLAYER_CHAR 0 -1110.331 1331.096 20.1119 radius 2.0 2.0 2.0
+jf @STADIUM_384
+$ONMISSION = 1 // integer values
+0169: set_fade_color 0 0 0
+fade 0 1500
+if
+  $8 == 0 // integer values
+jf @STADIUM_282
+$ONMISSION = 1 // integer values
+00BA: text_styled 'HOTRNG' 15000 ms 2  // HOTRING
+gosub @HELP_2932
+start_mission OVALRNG  // HOTRING
+
+:STADIUM_282
+if
+  $8 == 1 // integer values
+jf @STADIUM_333
+$ONMISSION = 1 // integer values
+00BA: text_styled 'BLODRNG' 15000 ms 2  // BLOODRING
+gosub @HELP_2932
+start_mission MM  // BLOODRING
+
+:STADIUM_333
+if
+  $8 == 2 // integer values
+jf @STADIUM_384
+$ONMISSION = 1 // integer values
+00BA: text_styled 'DIRTRNG' 15000 ms 2  // DIRTRING
+gosub @HELP_2932
+start_mission KICKST  // DIRTRING
+
+:STADIUM_384
+jump @STADIUM_500
+
+:STADIUM_391
+if
+  $11 == 0 // integer values
+jf @STADIUM_500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @STADIUM_500
+if
+8057:   not player $PLAYER_CHAR 0 -1118.978 1326.515 19.076 -1108.978 1335.515 23.076
+jf @STADIUM_500
+Object.Angle($ARENA_DOOR_1) = 0.0
+Object.Angle($ARENA_DOOR_2) = 0.0
+$11 = 1 // integer values
+
+:STADIUM_500
+jump @STADIUM_835
+
+:STADIUM_507
+if
+  $11 == 0 // integer values
+jf @STADIUM_616
+if
+   Player.Defined($PLAYER_CHAR)
+jf @STADIUM_616
+if
+8057:   not player $PLAYER_CHAR 0 -1118.978 1326.515 19.076 -1108.978 1335.515 23.076
+jf @STADIUM_616
+Object.Angle($ARENA_DOOR_1) = 0.0
+Object.Angle($ARENA_DOOR_2) = 0.0
+$11 = 1 // integer values
+
+:STADIUM_616
+if
+  $7 == 1 // integer values
+jf @STADIUM_835
+$8 += 1 // integer values
+if
+  $8 == 3 // integer values
+jf @STADIUM_666
+$8 = 0 // integer values
+
+:STADIUM_666
+if
+  $8 == 0 // integer values
+jf @STADIUM_720
+Object.Destroy($6)
+$6 = Object.Init(#DTHOTRING_A, -1037.08, 1340.258, 36.552)
+Object.RemoveFromMissionCleanupList($6)
+054D: display_message_at_stadium 0
+
+:STADIUM_720
+if
+  $8 == 1 // integer values
+jf @STADIUM_774
+Object.Destroy($6)
+$6 = Object.Init(#DTBLOODRING_A, -1037.08, 1340.258, 36.552)
+Object.RemoveFromMissionCleanupList($6)
+054D: display_message_at_stadium 1
+
+:STADIUM_774
+if
+  $8 == 2 // integer values
+jf @STADIUM_828
+Object.Destroy($6)
+$6 = Object.Init(#DTDIRTRING_A, -1037.08, 1340.258, 36.552)
+Object.RemoveFromMissionCleanupList($6)
+054D: display_message_at_stadium 2
+
+:STADIUM_828
+$7 = 0 // integer values
+
+:STADIUM_835
+jump @STADIUM_10
+
+:RACES
+thread 'RACES'
+
+:RACES_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RACES_121
+if
+  $ONMISSION == 0 // integer values
+jf @RACES_121
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @RACES_121
+if
+00F6:   player $PLAYER_CHAR 0 -967.705 -827.3005 5.7702 radius 1.5 2.0 2.0
+jf @RACES_121
+wait 0
+start_mission RACE  // Sunshine Autos Races
+
+:RACES_121
+jump @RACES_10
+
+:ICE1
+thread 'ICE1'
+
+:ICE1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $337 == 1 // integer values
+jf @ICE1_35
+end_thread
+
+:ICE1_35
+if
+   Player.Defined($PLAYER_CHAR)
+jf @ICE1_264
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #MRWHOOP
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $495 $496 $497 radius 2.0 2.0 2.0
+jf @ICE1_264
+if
+  $ONMISSION == 0 // integer values
+jf @ICE1_264
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @ICE1_165
+00BA: text_styled 'CREAM' 15000 ms 2  // Distribution
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+start_mission ICECRE1  // Distribution
+
+:ICE1_165
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ICE1_188
+jump @ICE1_10
+
+:ICE1_188
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $495 $496 $497 radius 2.0 2.0 2.0
+jf @ICE1_264
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @ICE1_257
+jump @ICE1_10
+
+:ICE1_257
+jump @ICE1_188
+
+:ICE1_264
+jump @ICE1_10
+
+:HELI1
+thread 'HELI1'
+
+:HELI1_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELI1_233
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SPARROW
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $498 $499 $500 radius 2.0 2.0 2.0
+jf @HELI1_233
+if
+  $ONMISSION == 0 // integer values
+jf @HELI1_233
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HELI1_134
+00BA: text_styled 'HELI_1' 15000 ms 5  // Downtown Chopper Checkpoint
+start_mission HELI1SC  // Downtown Chopper Checkpoint
+
+:HELI1_134
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI1_157
+jump @HELI1_10
+
+:HELI1_157
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $498 $499 $500 radius 2.0 2.0 2.0
+jf @HELI1_233
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI1_226
+jump @HELI1_10
+
+:HELI1_226
+jump @HELI1_157
+
+:HELI1_233
+jump @HELI1_10
+
+:HELI2
+thread 'HELI2'
+
+:HELI2_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELI2_233
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SPARROW
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $501 $502 $503 radius 2.0 2.0 2.0
+jf @HELI2_233
+if
+  $ONMISSION == 0 // integer values
+jf @HELI2_233
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HELI2_134
+00BA: text_styled 'HELI_2' 15000 ms 5  // Ocean Beach Chopper Checkpoint
+start_mission HELI2SC  // Ocean Beach Chopper Checkpoint
+
+:HELI2_134
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI2_157
+jump @HELI2_10
+
+:HELI2_157
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $501 $502 $503 radius 2.0 2.0 2.0
+jf @HELI2_233
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI2_226
+jump @HELI2_10
+
+:HELI2_226
+jump @HELI2_157
+
+:HELI2_233
+jump @HELI2_10
+
+:HELI3
+thread 'HELI3'
+
+:HELI3_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELI3_233
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SPARROW
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $504 $505 $506 radius 2.0 2.0 2.0
+jf @HELI3_233
+if
+  $ONMISSION == 0 // integer values
+jf @HELI3_233
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HELI3_134
+00BA: text_styled 'HELI_3' 15000 ms 5  // Vice Point Chopper Checkpoint
+start_mission HELI3SC  // Vice Point Chopper Checkpoint
+
+:HELI3_134
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI3_157
+jump @HELI3_10
+
+:HELI3_157
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $504 $505 $506 radius 2.0 2.0 2.0
+jf @HELI3_233
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI3_226
+jump @HELI3_10
+
+:HELI3_226
+jump @HELI3_157
+
+:HELI3_233
+jump @HELI3_10
+
+:HELI4
+thread 'HELI4'
+
+:HELI4_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELI4_233
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SPARROW
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $507 $508 $509 radius 2.0 2.0 2.0
+jf @HELI4_233
+if
+  $ONMISSION == 0 // integer values
+jf @HELI4_233
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @HELI4_134
+00BA: text_styled 'HELI_4' 15000 ms 5  // Little Haiti Chopper Checkpoint
+start_mission HELI4SC  // Little Haiti Chopper Checkpoint
+
+:HELI4_134
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI4_157
+jump @HELI4_10
+
+:HELI4_157
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $507 $508 $509 radius 2.0 2.0 2.0
+jf @HELI4_233
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @HELI4_226
+jump @HELI4_10
+
+:HELI4_226
+jump @HELI4_157
+
+:HELI4_233
+jump @HELI4_10
+
+:BMXLOOP
+thread 'BMXLOOP'
+
+:BMXLOOP_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BMXLOOP_264
+if
+  $ONMISSION == 0 // integer values
+jf @BMXLOOP_264
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SANCHEZ
+00DE:   player $PLAYER_CHAR driving_vehicle_type #LANDSTAL
+jf @BMXLOOP_131
+if
+8057:   not player $PLAYER_CHAR 0 -430.0 1405.0 8.5 -420.0 1415.0 12.5
+jf @BMXLOOP_131
+$356 = 1 // integer values
+
+:BMXLOOP_131
+if
+  $356 == 0 // integer values
+jf @BMXLOOP_225
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SANCHEZ
+jf @BMXLOOP_187
+00BA: text_styled 'BMX_1' 15000 ms 2  // 'Trial by Dirt'
+start_mission BMX_1  // Trial by Dirt
+
+:BMXLOOP_187
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #LANDSTAL
+jf @BMXLOOP_225
+00BA: text_styled 'BMX_2' 15000 ms 2  // 'Test Track'
+start_mission BMX_2  // Test Track
+
+:BMXLOOP_225
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BMXLOOP_264
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @BMXLOOP_264
+$356 = 0 // integer values
+
+:BMXLOOP_264
+jump @BMXLOOP_10
+
+:O4X4_1
+thread 'O4X4_1'
+
+:O4X4_1_10
+wait $DEFAULT_WAIT_TIME
+if
+  $339 == 0 // integer values
+jf @O4X4_1_41
+$345 = 300 // integer values
+
+:O4X4_1_41
+if
+   Player.Defined($PLAYER_CHAR)
+jf @O4X4_1_248
+if and
+  $ONMISSION == 0 // integer values
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @O4X4_1_248
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #PCJ600
+8057:   not player $PLAYER_CHAR 0 504.4 -311.8 12.0 510.4 -305.8 14.0
+jf @O4X4_1_151
+$342 = 1 // integer values
+
+:O4X4_1_151
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @O4X4_1_174
+$342 = 0 // integer values
+
+:O4X4_1_174
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #PCJ600
+  $342 == 0 // integer values
+jf @O4X4_1_207
+$354 = 1 // integer values
+
+:O4X4_1_207
+if
+  $354 == 1 // integer values
+jf @O4X4_1_248
+00BA: text_styled 'T4X4_1' 15000 ms 2  // 'PCJ Playground'
+wait 0
+start_mission T4X4_1  // PCJ Playground
+
+:O4X4_1_248
+jump @O4X4_1_10
+
+:MULTI
+thread 'MULTI'
+
+:MULTI_10
+wait $DEFAULT_WAIT_TIME
+if
+  $351 == 0 // integer values
+jf @MULTI_40
+$352 = 120 // integer values
+
+:MULTI_40
+if
+   Player.Defined($PLAYER_CHAR)
+jf @MULTI_225
+if
+  $ONMISSION == 0 // integer values
+jf @MULTI_225
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #STALLION
+8057:   not player $PLAYER_CHAR 0 125.0 -1155.0 27.0 130.0 -1160.0 33.0
+jf @MULTI_137
+$353 = 1 // integer values
+
+:MULTI_137
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #STALLION
+  $353 == 0 // integer values
+jf @MULTI_186
+00BA: text_styled 'MM_1' 15000 ms 2  // 'CONE CRAZY'
+wait 0
+start_mission CARPRK1  // Cone Crazy
+
+:MULTI_186
+if
+   Player.Defined($PLAYER_CHAR)
+jf @MULTI_225
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @MULTI_225
+$353 = 0 // integer values
+
+:MULTI_225
+jump @MULTI_10
+
+:PIZZ
+thread 'PIZZ'
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PIZZ_292
+if
+  $ONMISSION == 0 // integer values
+jf @PIZZ_292
+if
+  $389 == 0 // integer values
+jf @PIZZ_292
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #PIZZABOY
+8057:   not player $PLAYER_CHAR 0 -894.1 798.7 1.0 -914.1 818.7 21.0
+8057:   not player $PLAYER_CHAR 0 -1018.7 78.6 1.2 -1038.7 98.6 21.2
+8057:   not player $PLAYER_CHAR 0 403.8 87.7 0.9 423.8 107.7 20.9
+jf @PIZZ_204
+$390 = 1 // integer values
+
+:PIZZ_204
+if and
+00DE:   player $PLAYER_CHAR driving_vehicle_type #PIZZABOY
+  $390 == 0 // integer values
+jf @PIZZ_253
+00BA: text_styled 'PIZ1_A' 15000 ms 2  // PIZZA BOY MISSION
+wait 0
+start_mission PIZZA  // PIZZA BOY
+
+:PIZZ_253
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PIZZ_292
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @PIZZ_292
+$390 = 0 // integer values
+
+:PIZZ_292
+jump @PIZZ
+
+:RCHELY1
+thread 'RCHELY1'
+
+:RCHELY1_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RCHELY1_192
+if
+  $ONMISSION == 0 // integer values
+jf @RCHELY1_192
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RCHELY1_192
+if
+  $397 == 0 // integer values
+jf @RCHELY1_192
+if
+00E3:   player $PLAYER_CHAR 0 -1235.1 -1235.7 radius 4.0 4.0
+jf @RCHELY1_192
+if
+0443:   player $PLAYER_CHAR in_a_car
+jf @RCHELY1_192
+Player.CanMove($PLAYER_CHAR) = False
+wait 100
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'RCH1_11' 15000 ms 2  // RC Raider Pickup
+gosub @HELP_2932
+start_mission RCHELI  // RC Raider Pickup
+
+:RCHELY1_192
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RCHELY1_234
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RCHELY1_234
+$397 = 0 // integer values
+
+:RCHELY1_234
+jump @RCHELY1_10
+
+:RC_RACE
+thread 'RC_RACE'
+
+:RC_RACE_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RC_RACE_192
+if
+  $ONMISSION == 0 // integer values
+jf @RC_RACE_192
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RC_RACE_192
+if
+  $399 == 0 // integer values
+jf @RC_RACE_192
+if
+00E3:   player $PLAYER_CHAR 0 718.465 701.3998 radius 3.0 3.0
+jf @RC_RACE_192
+if
+0443:   player $PLAYER_CHAR in_a_car
+jf @RC_RACE_192
+Player.CanMove($PLAYER_CHAR) = False
+wait 100
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'RCR1_5' 15000 ms 2  // RC Bandit Race
+gosub @HELP_2932
+start_mission RCRACE1  // RC Bandit Race
+
+:RC_RACE_192
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RC_RACE_234
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RC_RACE_234
+$399 = 0 // integer values
+
+:RC_RACE_234
+jump @RC_RACE_10
+
+:RC_PLNE
+thread 'RC_PLNE'
+
+:RC_PLNE_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RC_PLNE_202
+if
+  $ONMISSION == 0 // integer values
+jf @RC_PLNE_202
+if
+00DE:   player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RC_PLNE_202
+if
+  $400 == 0 // integer values
+jf @RC_PLNE_202
+if
+00F5:   player $PLAYER_CHAR 0 307.917 1254.622 27.595 radius 4.0 4.0 4.0
+jf @RC_PLNE_202
+if
+0443:   player $PLAYER_CHAR in_a_car
+jf @RC_PLNE_202
+Player.CanMove($PLAYER_CHAR) = False
+wait 100
+0169: set_fade_color 0 0 0
+fade 0 1500
+00BA: text_styled 'RCPL1_7' 15000 ms 2  // RC Baron Race
+gosub @HELP_2932
+start_mission RCPLNE1  // RC Baron Race
+
+:RC_PLNE_202
+if
+   Player.Defined($PLAYER_CHAR)
+jf @RC_PLNE_244
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #TOPFUN
+jf @RC_PLNE_244
+$400 = 0 // integer values
+
+:RC_PLNE_244
+jump @RC_PLNE_10
+
+:COKRUN
+thread 'COKRUN'
+
+:COKRUN_10
+wait $DEFAULT_WAIT_TIME
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COKRUN_345
+if
+  $ONMISSION == 0 // integer values
+jf @COKRUN_345
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SQUALO
+00DE:   player $PLAYER_CHAR driving_vehicle_type #JETMAX
+jf @COKRUN_131
+if
+80F5:   not player $PLAYER_CHAR 0 -585.8 -1506.8 5.0 radius 14.0 14.0 4.0
+jf @COKRUN_131
+$81 = 1 // integer values
+
+:COKRUN_131
+if
+  $81 == 0 // integer values
+jf @COKRUN_224
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #SQUALO
+00DE:   player $PLAYER_CHAR driving_vehicle_type #JETMAX
+jf @COKRUN_224
+0169: set_fade_color 0 0 0
+fade 0 1000
+00BA: text_styled 'BOAT_N' 15000 ms 2  // Checkpoint Charlie
+Player.CanMove($PLAYER_CHAR) = False
+gosub @HELP_2932
+start_mission COKERUN  // Checkpoint Charlie
+
+:COKRUN_224
+if
+   Player.Defined($PLAYER_CHAR)
+jf @COKRUN_263
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @COKRUN_263
+$81 = 0 // integer values
+
+:COKRUN_263
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car -585.8 -1506.8 5.0 radius 14.0 14.0 4.0
+jf @COKRUN_345
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @COKRUN_338
+jump @COKRUN_10
+
+:COKRUN_338
+jump @COKRUN_263
+
+:COKRUN_345
+jump @COKRUN_10
+
+:PSAVE1
+thread 'PSAVE1'
+
+:PSAVE1_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE1_563
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @PSAVE1_563
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE1_563
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE1_533
+if
+  $444 == 0 // integer values
+jf @PSAVE1_138
+$443 = Pickup.Create(#PICKUPSAVE, 3, 219.3, -1273.5, 11.5)
+$444 = 1 // integer values
+
+:PSAVE1_138
+if
+   Pickup.Picked_up($443)
+jf @PSAVE1_526
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE1_491
+Pickup.Destroy($443)
+$443 = Pickup.Create(#PICKUPSAVE, 3, 219.3, -1273.5, 11.5)
+fade 1 1000
+if
+  $222 == 0 // integer values
+jf @PSAVE1_433
+0395: clear_area 1 at 220.3 -1275.5 range 11.0 1.0
+0055: put_player $PLAYER_CHAR at 220.3 -1275.5 11.0
+0171: set_player $PLAYER_CHAR z_angle_to 121.0
+Camera.SetPosition(223.301, -1277.655, 13.822, 0.0, 0.0, 0.0)
+Camera.PointAt(222.563, -1278.279, 13.565, 2)
+03E5: text_box 'HELP19'  // Walk into the ~q~pink marker ~w~to continue.
+16@ = 0 // integer values
+
+:PSAVE1_353
+if
+   not 16@ > 2000 // integer values
+jf @PSAVE1_426
+wait 0
+if
+  16@ > 500 // integer values
+jf @PSAVE1_419
+if
+00E1:   player 0 pressed_button 16
+jf @PSAVE1_419
+jump @PSAVE1_426
+
+:PSAVE1_419
+jump @PSAVE1_353
+
+:PSAVE1_426
+jump @PSAVE1_487
+
+:PSAVE1_433
+0395: clear_area 1 at 223.1 -1276.7 range 11.0 1.0
+0055: put_player $PLAYER_CHAR at 223.1 -1276.7 11.0
+0171: set_player $PLAYER_CHAR z_angle_to 258.0
+
+:PSAVE1_487
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+
+:PSAVE1_491
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE1_526
+Player.CanMove($PLAYER_CHAR) = True
+$ONMISSION = 0 // integer values
+
+:PSAVE1_526
+jump @PSAVE1_563
+
+:PSAVE1_533
+if
+  $444 == 1 // integer values
+jf @PSAVE1_563
+Pickup.Destroy($443)
+$444 = 0 // integer values
+
+:PSAVE1_563
+jump @PSAVE1_10
+
+:PSAVE2
+thread 'PSAVE2'
+
+:PSAVE2_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE2_311
+if
+0121:   player $PLAYER_CHAR in_zone 'STARI'  // Starfish Island
+jf @PSAVE2_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE2_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE2_281
+if
+  $21 == 0 // integer values
+jf @PSAVE2_138
+$20 = Pickup.Create(#PICKUPSAVE, 3, -378.3, -597.2, 25.8)
+$21 = 1 // integer values
+
+:PSAVE2_138
+if
+   Pickup.Picked_up($20)
+jf @PSAVE2_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE2_267
+Pickup.Destroy($20)
+$20 = Pickup.Create(#PICKUPSAVE, 3, -378.3, -597.2, 25.8)
+fade 1 1000
+0395: clear_area 1 at -378.3 -592.3 range 25.3 1.0
+0055: put_player $PLAYER_CHAR at -378.5 -589.1 24.6
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+
+:PSAVE2_267
+gosub @HELP_4210
+
+:PSAVE2_274
+jump @PSAVE2_311
+
+:PSAVE2_281
+if
+  $21 == 1 // integer values
+jf @PSAVE2_311
+Pickup.Destroy($20)
+$21 = 0 // integer values
+
+:PSAVE2_311
+jump @PSAVE2_10
+
+:PSAVE3
+thread 'PSAVE3'
+
+:PSAVE3_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE3_311
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @PSAVE3_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE3_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE3_281
+if
+  $67 == 0 // integer values
+jf @PSAVE3_138
+$68 = Pickup.Create(#PICKUPSAVE, 3, -1033.8, -846.9, 13.0)
+$67 = 1 // integer values
+
+:PSAVE3_138
+if
+   Pickup.Picked_up($68)
+jf @PSAVE3_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE3_267
+Pickup.Destroy($68)
+$68 = Pickup.Create(#PICKUPSAVE, 3, -1033.8, -846.9, 13.0)
+fade 1 1000
+0395: clear_area 1 at -1028.3 -851.9 range 12.3 1.0
+0055: put_player $PLAYER_CHAR at -1028.3 -851.9 12.3
+0171: set_player $PLAYER_CHAR z_angle_to 226.0
+
+:PSAVE3_267
+gosub @HELP_4210
+
+:PSAVE3_274
+jump @PSAVE3_311
+
+:PSAVE3_281
+if
+  $67 == 1 // integer values
+jf @PSAVE3_311
+Pickup.Destroy($68)
+$67 = 0 // integer values
+
+:PSAVE3_311
+jump @PSAVE3_10
+
+:PSAVE4
+thread 'PSAVE4'
+
+:PSAVE4_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE4_311
+if
+0121:   player $PLAYER_CHAR in_zone 'HAITI'  // Little Haiti
+jf @PSAVE4_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE4_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE4_281
+if
+  $27 == 0 // integer values
+jf @PSAVE4_138
+$70 = Pickup.Create(#PICKUPSAVE, 3, -992.7, 193.4, 11.4)
+$27 = 1 // integer values
+
+:PSAVE4_138
+if
+   Pickup.Picked_up($70)
+jf @PSAVE4_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE4_267
+Pickup.Destroy($70)
+$70 = Pickup.Create(#PICKUPSAVE, 3, -992.7, 193.4, 11.4)
+fade 1 1000
+0395: clear_area 1 at -996.5 194.1 range 10.6 1.0
+0055: put_player $PLAYER_CHAR at -996.5 194.1 10.6
+0171: set_player $PLAYER_CHAR z_angle_to 80.0
+
+:PSAVE4_267
+gosub @HELP_4210
+
+:PSAVE4_274
+jump @PSAVE4_311
+
+:PSAVE4_281
+if
+  $27 == 1 // integer values
+jf @PSAVE4_311
+Pickup.Destroy($70)
+$27 = 0 // integer values
+
+:PSAVE4_311
+jump @PSAVE4_10
+
+:PSAVE5
+thread 'PSAVE5'
+
+:PSAVE5_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE5_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @PSAVE5_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE5_299
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE5_269
+if
+  $37 == 0 // integer values
+jf @PSAVE5_132
+$615 = Pickup.Create(#PICKUPSAVE, 3, $570, $571, $572)
+$37 = 1 // integer values
+
+:PSAVE5_132
+if
+   Pickup.Picked_up($615)
+jf @PSAVE5_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE5_255
+Pickup.Destroy($615)
+$615 = Pickup.Create(#PICKUPSAVE, 3, $570, $571, $572)
+fade 1 1000
+0395: clear_area 1 at 100.9297 -1470.622 range 9.3871 1.0
+0055: put_player $PLAYER_CHAR at 100.9297 -1470.622 9.3871
+0171: set_player $PLAYER_CHAR z_angle_to 218.0275
+
+:PSAVE5_255
+gosub @HELP_4210
+
+:PSAVE5_262
+jump @PSAVE5_299
+
+:PSAVE5_269
+if
+  $37 == 1 // integer values
+jf @PSAVE5_299
+Pickup.Destroy($615)
+$37 = 0 // integer values
+
+:PSAVE5_299
+jump @PSAVE5_10
+
+:PSAVE6
+thread 'PSAVE6'
+
+:PSAVE6_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE6_311
+if
+0121:   player $PLAYER_CHAR in_zone 'DOCKS'  // Viceport
+jf @PSAVE6_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE6_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE6_281
+if
+  $49 == 0 // integer values
+jf @PSAVE6_138
+$680 = Pickup.Create(#PICKUPSAVE, 3, -664.1, -1476.3, 13.8)
+$49 = 1 // integer values
+
+:PSAVE6_138
+if
+   Pickup.Picked_up($680)
+jf @PSAVE6_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE6_267
+Pickup.Destroy($680)
+$680 = Pickup.Create(#PICKUPSAVE, 3, -664.1, -1476.3, 13.8)
+fade 1 1000
+0395: clear_area 1 at -660.0 -1477.8 range 13.0 1.0
+0055: put_player $PLAYER_CHAR at -660.0 -1477.8 13.0
+0171: set_player $PLAYER_CHAR z_angle_to 248.0
+
+:PSAVE6_267
+gosub @HELP_4210
+
+:PSAVE6_274
+jump @PSAVE6_311
+
+:PSAVE6_281
+if
+  $49 == 1 // integer values
+jf @PSAVE6_311
+Pickup.Destroy($680)
+$49 = 0 // integer values
+
+:PSAVE6_311
+jump @PSAVE6_10
+
+:PSAVE7
+thread 'PSAVE7'
+
+:PSAVE7_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE7_311
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @PSAVE7_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE7_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE7_281
+if
+  $50 == 0 // integer values
+jf @PSAVE7_138
+$ICE_CREAM_FACTORY_ASSET = Pickup.Create(#PICKUPSAVE, 3, -878.5, -575.1, 11.2)
+$50 = 1 // integer values
+
+:PSAVE7_138
+if
+   Pickup.Picked_up($ICE_CREAM_FACTORY_ASSET)
+jf @PSAVE7_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE7_267
+Pickup.Destroy($ICE_CREAM_FACTORY_ASSET)
+$ICE_CREAM_FACTORY_ASSET = Pickup.Create(#PICKUPSAVE, 3, -878.5, -575.1, 11.2)
+fade 1 1000
+0395: clear_area 1 at -872.0 -573.4 range 10.4 1.0
+0055: put_player $PLAYER_CHAR at -872.0 -573.4 10.4
+0171: set_player $PLAYER_CHAR z_angle_to 277.0
+
+:PSAVE7_267
+gosub @HELP_4210
+
+:PSAVE7_274
+jump @PSAVE7_311
+
+:PSAVE7_281
+if
+  $50 == 1 // integer values
+jf @PSAVE7_311
+Pickup.Destroy($ICE_CREAM_FACTORY_ASSET)
+$50 = 0 // integer values
+
+:PSAVE7_311
+jump @PSAVE7_10
+
+:PSAVE8
+thread 'PSAVE8'
+
+:PSAVE8_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE8_311
+if
+0121:   player $PLAYER_CHAR in_zone 'HAVANA'  // Little Havana
+jf @PSAVE8_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE8_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE8_281
+if
+  $71 == 0 // integer values
+jf @PSAVE8_138
+$74 = Pickup.Create(#PICKUPSAVE, 3, -1059.6, -282.2, 11.2)
+$71 = 1 // integer values
+
+:PSAVE8_138
+if
+   Pickup.Picked_up($74)
+jf @PSAVE8_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE8_267
+Pickup.Destroy($74)
+$74 = Pickup.Create(#PICKUPSAVE, 3, -1059.6, -282.2, 11.2)
+fade 1 1000
+0395: clear_area 1 at -1056.7 -279.7 range 10.6 1.0
+0055: put_player $PLAYER_CHAR at -1056.7 -279.7 10.6
+0171: set_player $PLAYER_CHAR z_angle_to 273.0
+
+:PSAVE8_267
+gosub @HELP_4210
+
+:PSAVE8_274
+jump @PSAVE8_311
+
+:PSAVE8_281
+if
+  $71 == 1 // integer values
+jf @PSAVE8_311
+Pickup.Destroy($74)
+$71 = 0 // integer values
+
+:PSAVE8_311
+jump @PSAVE8_10
+
+:PSAVE9
+thread 'PSAVE9'
+
+:PSAVE9_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE9_311
+if
+0121:   player $PLAYER_CHAR in_zone 'PORNI'  // Prawn Island
+jf @PSAVE9_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE9_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE9_281
+if
+  $72 == 0 // integer values
+jf @PSAVE9_138
+$75 = Pickup.Create(#PICKUPSAVE, 3, 0.0, 957.9, 11.1)
+$72 = 1 // integer values
+
+:PSAVE9_138
+if
+   Pickup.Picked_up($75)
+jf @PSAVE9_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE9_267
+Pickup.Destroy($75)
+$75 = Pickup.Create(#PICKUPSAVE, 3, 0.0, 957.9, 11.1)
+fade 1 1000
+0395: clear_area 1 at 1.4 960.7 range 10.2 1.0
+0055: put_player $PLAYER_CHAR at 1.4 960.7 10.2
+0171: set_player $PLAYER_CHAR z_angle_to 274.3
+
+:PSAVE9_267
+gosub @HELP_4210
+
+:PSAVE9_274
+jump @PSAVE9_311
+
+:PSAVE9_281
+if
+  $72 == 1 // integer values
+jf @PSAVE9_311
+Pickup.Destroy($75)
+$72 = 0 // integer values
+
+:PSAVE9_311
+jump @PSAVE9_10
+
+:PSAVE10
+thread 'PSAVE10'
+
+:PSAVE10_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE10_311
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @PSAVE10_311
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @PSAVE10_311
+if
+  $ONMISSION == 0 // integer values
+jf @PSAVE10_281
+if
+  $73 == 0 // integer values
+jf @PSAVE10_138
+$76 = Pickup.Create(#PICKUPSAVE, 3, 499.5, -66.9, 11.4)
+$73 = 1 // integer values
+
+:PSAVE10_138
+if
+   Pickup.Picked_up($76)
+jf @PSAVE10_274
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @PSAVE10_267
+Pickup.Destroy($76)
+$76 = Pickup.Create(#PICKUPSAVE, 3, 499.5, -66.9, 11.4)
+fade 1 1000
+0395: clear_area 1 at 492.0 -80.6 range 10.7 0.5
+0055: put_player $PLAYER_CHAR at 492.0 -80.6 10.7
+0171: set_player $PLAYER_CHAR z_angle_to 224.5
+
+:PSAVE10_267
+gosub @HELP_4210
+
+:PSAVE10_274
+jump @PSAVE10_311
+
+:PSAVE10_281
+if
+  $73 == 1 // integer values
+jf @PSAVE10_311
+Pickup.Destroy($76)
+$73 = 0 // integer values
+
+:PSAVE10_311
+jump @PSAVE10_10
+
+:SAVE1
+thread 'SAVE1'
+
+:SAVE1_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE1_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @SAVE1_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE1_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE1_269
+if
+  $36 == 0 // integer values
+jf @SAVE1_132
+$662 = Pickup.Create(#PICKUPSAVE, 3, $573, $574, $575)
+$36 = 1 // integer values
+
+:SAVE1_132
+if
+   Pickup.Picked_up($662)
+jf @SAVE1_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE1_255
+Pickup.Destroy($662)
+$662 = Pickup.Create(#PICKUPSAVE, 3, $573, $574, $575)
+fade 1 1000
+0395: clear_area 1 at 428.373 608.9806 range 11.6898 1.0
+0055: put_player $PLAYER_CHAR at 428.373 608.9806 11.6898
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+
+:SAVE1_255
+gosub @HELP_4210
+
+:SAVE1_262
+jump @SAVE1_299
+
+:SAVE1_269
+if
+  $36 == 1 // integer values
+jf @SAVE1_299
+Pickup.Destroy($662)
+$36 = 0 // integer values
+
+:SAVE1_299
+jump @SAVE1_10
+
+:SAVE2
+thread 'SAVE2'
+
+:SAVE2_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE2_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @SAVE2_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE2_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE2_269
+if
+  $22 == 0 // integer values
+jf @SAVE2_132
+$654 = Pickup.Create(#PICKUPSAVE, 3, $585, $586, $587)
+$22 = 1 // integer values
+
+:SAVE2_132
+if
+   Pickup.Picked_up($654)
+jf @SAVE2_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE2_255
+Pickup.Destroy($654)
+$654 = Pickup.Create(#PICKUPSAVE, 3, $585, $586, $587)
+fade 1 1000
+0395: clear_area 1 at 306.5728 376.2928 range 12.1856 1.0
+0055: put_player $PLAYER_CHAR at 306.5728 376.2928 12.1856
+0171: set_player $PLAYER_CHAR z_angle_to 276.3156
+
+:SAVE2_255
+gosub @HELP_4210
+
+:SAVE2_262
+jump @SAVE2_299
+
+:SAVE2_269
+if
+  $22 == 1 // integer values
+jf @SAVE2_299
+Pickup.Destroy($654)
+$22 = 0 // integer values
+
+:SAVE2_299
+jump @SAVE2_10
+
+:SAVE3
+thread 'SAVE3'
+
+:SAVE3_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE3_299
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @SAVE3_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE3_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE3_269
+if
+  $15 == 0 // integer values
+jf @SAVE3_132
+$666 = Pickup.Create(#PICKUPSAVE, 3, $588, $589, $590)
+$15 = 1 // integer values
+
+:SAVE3_132
+if
+   Pickup.Picked_up($666)
+jf @SAVE3_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE3_255
+Pickup.Destroy($666)
+$666 = Pickup.Create(#PICKUPSAVE, 3, $588, $589, $590)
+fade 1 1000
+0395: clear_area 1 at -833.811 1304.07 range 10.5131 1.0
+0055: put_player $PLAYER_CHAR at -833.811 1304.07 10.5131
+0171: set_player $PLAYER_CHAR z_angle_to 200.4458
+
+:SAVE3_255
+gosub @HELP_4210
+
+:SAVE3_262
+jump @SAVE3_299
+
+:SAVE3_269
+if
+  $15 == 1 // integer values
+jf @SAVE3_299
+Pickup.Destroy($666)
+$15 = 0 // integer values
+
+:SAVE3_299
+jump @SAVE3_10
+
+:SAVE4
+thread 'SAVE4'
+
+:SAVE4_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE4_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH2'  // Washington Beach
+jf @SAVE4_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE4_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE4_269
+if
+  $32 == 0 // integer values
+jf @SAVE4_132
+$651 = Pickup.Create(#PICKUPSAVE, 3, $594, $595, $596)
+$32 = 1 // integer values
+
+:SAVE4_132
+if
+   Pickup.Picked_up($651)
+jf @SAVE4_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE4_255
+Pickup.Destroy($651)
+$651 = Pickup.Create(#PICKUPSAVE, 3, $594, $595, $596)
+fade 1 1000
+0395: clear_area 1 at 90.781 -806.1213 range 10.3349 1.0
+0055: put_player $PLAYER_CHAR at 90.781 -806.1213 10.3349
+0171: set_player $PLAYER_CHAR z_angle_to 238.8605
+
+:SAVE4_255
+gosub @HELP_4210
+
+:SAVE4_262
+jump @SAVE4_299
+
+:SAVE4_269
+if
+  $32 == 1 // integer values
+jf @SAVE4_299
+Pickup.Destroy($651)
+$32 = 0 // integer values
+
+:SAVE4_299
+jump @SAVE4_10
+
+:SAVE5
+thread 'SAVE5'
+
+:SAVE5_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE5_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @SAVE5_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE5_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE5_269
+if
+  $16 == 0 // integer values
+jf @SAVE5_132
+$658 = Pickup.Create(#PICKUPSAVE, 3, $591, $592, $593)
+$16 = 1 // integer values
+
+:SAVE5_132
+if
+   Pickup.Picked_up($658)
+jf @SAVE5_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE5_255
+Pickup.Destroy($658)
+$658 = Pickup.Create(#PICKUPSAVE, 3, $591, $592, $593)
+fade 1 1000
+0395: clear_area 1 at 14.4571 -1498.594 range 12.1974 1.0
+0055: put_player $PLAYER_CHAR at 14.4571 -1498.594 12.1974
+0171: set_player $PLAYER_CHAR z_angle_to 353.8286
+
+:SAVE5_255
+gosub @HELP_4210
+
+:SAVE5_262
+jump @SAVE5_299
+
+:SAVE5_269
+if
+  $16 == 1 // integer values
+jf @SAVE5_299
+Pickup.Destroy($658)
+$16 = 0 // integer values
+
+:SAVE5_299
+jump @SAVE5_10
+
+:SAVE6
+thread 'SAVE6'
+
+:SAVE6_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE6_299
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @SAVE6_299
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE6_299
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE6_269
+if
+  $69 == 0 // integer values
+jf @SAVE6_132
+$648 = Pickup.Create(#PICKUPSAVE, 3, $597, $598, $599)
+$69 = 1 // integer values
+
+:SAVE6_132
+if
+   Pickup.Picked_up($648)
+jf @SAVE6_262
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE6_255
+Pickup.Destroy($648)
+$648 = Pickup.Create(#PICKUPSAVE, 3, $597, $598, $599)
+fade 1 1000
+0395: clear_area 1 at 529.6626 1272.155 range 16.822 1.0
+0055: put_player $PLAYER_CHAR at 529.6626 1272.155 16.822
+0171: set_player $PLAYER_CHAR z_angle_to 131.5277
+
+:SAVE6_255
+gosub @HELP_4210
+
+:SAVE6_262
+jump @SAVE6_299
+
+:SAVE6_269
+if
+  $69 == 1 // integer values
+jf @SAVE6_299
+Pickup.Destroy($648)
+$69 = 0 // integer values
+
+:SAVE6_299
+jump @SAVE6_10
+
+:SAVE7
+thread 'SAVE7'
+
+:SAVE7_10
+wait 250
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE7_327
+if
+0121:   player $PLAYER_CHAR in_zone 'DTOWN'  // Downtown
+jf @SAVE7_327
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE7_327
+if
+   Player.Controllable($PLAYER_CHAR)
+jf @SAVE7_327
+if
+  $ONMISSION == 0 // integer values
+jf @SAVE7_297
+if
+  $60 == 0 // integer values
+jf @SAVE7_154
+$645 = Pickup.Create(#PICKUPSAVE, 3, -562.8, 699.7, 20.6)
+$60 = 1 // integer values
+
+:SAVE7_154
+if
+   Pickup.Picked_up($645)
+jf @SAVE7_290
+gosub @HELP_4118
+if
+   Player.Defined($PLAYER_CHAR)
+jf @SAVE7_283
+Pickup.Destroy($645)
+$645 = Pickup.Create(#PICKUPSAVE, 3, -562.8, 699.7, 20.6)
+fade 1 1000
+0395: clear_area 1 at -559.9 705.4 range 19.8 1.0
+0055: put_player $PLAYER_CHAR at -559.9 705.4 19.8
+0171: set_player $PLAYER_CHAR z_angle_to 243.0
+
+:SAVE7_283
+gosub @HELP_4210
+
+:SAVE7_290
+jump @SAVE7_327
+
+:SAVE7_297
+if
+  $60 == 1 // integer values
+jf @SAVE7_327
+Pickup.Destroy($645)
+$60 = 0 // integer values
+
+:SAVE7_327
+jump @SAVE7_10
+
+:HELP
+thread 'HELP'
+
+:HELP_10
+wait 0 
+if 
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2876 
+if 
+  $220 == 1 // integer values 
+jf @HELP_2876 
+if 
+  $45 == 0 // integer values 
+jf @HELP_195 
+wait 500 
+0293: $18 = get_controller_mode 
+if 
+  $18 == 2 // integer values 
+jf @HELP_111 
+03E5: text_box 'HELP26'  // Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to enter or exit a vehicle.
+jump @HELP_121
+
+:HELP_111
+03E5: text_box 'HELP21'  // Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to enter or exit a vehicle.
+
+:HELP_121
+wait 5000
+03E5: text_box 'HELP42'  // Follow the ~q~pink blip~w~ to find the hotel.
+0189: $66 = unknown_create_checkpoint_at 240.4 -1280.2 10.0
+03E7: flash_hud 8
+wait 3000
+03E7: flash_hud -1
+17@ = 0 // integer values
+wait 3000
+$45 = 1 // integer values
+jump @HELP_942
+
+:HELP_195
+if
+  $82 == 0 // integer values
+jf @HELP_283
+if and
+$ONMISSION == 0
+00F5:   player $PLAYER_CHAR 0 240.4 -1280.2 10.0 radius 25.0 25.0 5.0
+jf @HELP_283
+03E5: text_box 'HELP44'  // Stop in the ~q~pink marker.
+wait 3000
+$82 = 1 // integer values
+
+:HELP_283
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_942
+if
+  $25 == 0 // integer values
+jf @HELP_625
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HELP_618
+wait 1000
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @HELP_378
+03E5: text_box 'HELP4_D'  // Push the right analog stick up to ~h~accelerate.
+jump @HELP_388
+
+:HELP_378
+03E5: text_box 'HELP4_A'  // Press the ~h~~k~~VEHICLE_ACCELERATE~ ~w~button to accelerate.
+
+:HELP_388
+wait 4000
+0293: $18 = get_controller_mode
+if or
+  $18 == 1 // integer values
+  $18 == 3 // integer values
+jf @HELP_440
+03E5: text_box 'HELP36'  // Press the ~h~~k~~GO_LEFT~~w~, and the ~h~~k~~GO_RIGHT~~w~, to steer the vehicle.
+jump @HELP_450
+
+:HELP_440
+03E5: text_box 'HELP35'  // Press the ~h~~k~~GO_LEFT~~w~, and the ~h~~k~~GO_RIGHT~~w~, to steer the vehicle.
+
+:HELP_450
+wait 4000
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @HELP_495
+03E5: text_box 'HELP5_D'  // Pull the right analog stick back to brake, or to reverse if the vehicle has stopped.
+jump @HELP_505
+
+:HELP_495
+03E5: text_box 'HELP5_A'  // Press the ~h~~k~~VEHICLE_BRAKE~ ~w~button to brake, or to reverse if the vehicle has stopped.
+
+:HELP_505
+wait 4000
+0293: $18 = get_controller_mode
+if or
+  $18 == 0 // integer values
+  $18 == 1 // integer values
+jf @HELP_550
+03E5: text_box 'HELP6_A'  // Press the~h~ ~k~~VEHICLE_HANDBRAKE~ button ~w~to apply the vehicle's ~h~handbrake.
+
+:HELP_550
+if
+  $18 == 2 // integer values
+jf @HELP_578
+03E5: text_box 'HELP6_C'  // Press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button to apply the vehicle's handbrake.
+
+:HELP_578
+if
+  $18 == 3 // integer values
+jf @HELP_606
+03E5: text_box 'HELP6_D'  // Press the~h~ ~k~~VEHICLE_HANDBRAKE~ button ~w~to apply the vehicle's ~h~handbrake.
+
+:HELP_606
+wait 4000
+$25 = 1 // integer values
+
+:HELP_618
+jump @HELP_942
+
+:HELP_625
+if
+  $85 == 1 // integer values
+jf @HELP_942
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_942
+if
+047E:   player $PLAYER_CHAR driving_a_motorbike
+jf @HELP_766
+if
+  $48 == 0 // integer values
+jf @HELP_766
+wait 2000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_759
+if
+  $18 == 0 // integer values
+jf @HELP_749
+03E5: text_box 'HELP27'  // Press the ~h~~k~~VEHICLE_TURRETUP~~w~ button and the ~h~~k~~VEHICLE_TURRETDOWN~~w~ button, to shift your weight on a bike.
+jump @HELP_759
+
+:HELP_749
+03E5: text_box 'HELP28'  // Press the ~h~~k~~VEHICLE_TURRETUP~~w~ button and the ~h~~k~~VEHICLE_TURRETDOWN~~w~ button, to shift your weight on a bike.
+
+:HELP_759
+$48 = 1 // integer values
+
+:HELP_766
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_942
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HELP_942
+if
+  $47 == 0 // integer values
+jf @HELP_942
+if or
+02D7:   player $PLAYER_CHAR currentweapon == 22
+02D7:   player $PLAYER_CHAR currentweapon == 23
+02D7:   player $PLAYER_CHAR currentweapon == 24
+02D7:   player $PLAYER_CHAR currentweapon == 25
+jf @HELP_942
+03E5: text_box 'HELP31'  // To do a drive-by, first look left or right using the ~h~~k~~VEHICLE_LOOKLEFT~~w~ or the ~h~~k~~VEHICLE_LOOKRIGHT~.
+wait 5000
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @HELP_910
+03E5: text_box 'HELP33'  // Then fire using the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+jump @HELP_920
+
+:HELP_910
+03E5: text_box 'HELP32'  // Then fire using the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+
+:HELP_920
+wait 5000
+03E5: text_box 'HELP34'  // You must have a sub machine gun to perform a drive-by.
+$47 = 1 // integer values
+
+:HELP_942
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1228
+if
+  $44 == 0 // integer values
+jf @HELP_1228
+if
+  $ONMISSION == 0
+jf @HELP_1228
+if
+  $17 == 0 // integer values
+jf @HELP_1228
+if or
+00FA:   player $PLAYER_CHAR stopped 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
+00F6:   player $PLAYER_CHAR 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
+jf @HELP_1228
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetPosition(264.334, -1311.16, 10.297, 0.0, 0.0, 0.0)
+Camera.PointAt(263.577, -1310.574, 10.589, 2)
+wait 1000
+03E5: text_box 'HELP16'  // Walk through the front door of the ~h~Ocean View~w~ Hotel to enter the building.
+wait 3000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1180
+Player.CanMove($PLAYER_CHAR) = True
+
+:HELP_1180
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+Marker.Disable($66)
+if
+  $222 == 0 // integer values
+jf @HELP_1221
+0189: $66 = unknown_create_checkpoint_at $453 $454 $455
+
+:HELP_1221
+$17 = 1 // integer values
+
+:HELP_1228
+if
+  $44 == 0 // integer values
+jf @HELP_1822
+if
+  $ONMISSION == 0 // integer values
+jf @HELP_1822
+if
+  $1088 == 1 // integer values
+jf @HELP_1822
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1822
+if
+00F5:   player $PLAYER_CHAR 0 225.0 -1277.3 11.5 radius 2.5 2.5 3.0
+jf @HELP_1822
+Marker.Disable($66)
+if
+  $222 == 0 // integer values
+jf @HELP_1383
+0189: $66 = unknown_create_checkpoint_at $453 $454 $455
+
+:HELP_1383
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetPosition(223.301, -1277.655, 13.822, 0.0, 0.0, 0.0)
+Camera.PointAt(222.578, -1277.013, 13.565, 2)
+03E5: text_box 'S_PROMP'  // When not on a mission you can save your progress by collecting the ~h~cassette tape pickup.
+16@ = 0 // integer values
+
+:HELP_1458
+if
+   not 16@ > 1000 // integer values
+jf @HELP_1511
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1504
+Player.CanMove($PLAYER_CHAR) = False
+
+:HELP_1504
+jump @HELP_1458
+
+:HELP_1511
+16@ = 0 // integer values
+
+:HELP_1518
+if
+   not 16@ > 2000 // integer values
+jf @HELP_1595
+wait 0
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1564
+Player.CanMove($PLAYER_CHAR) = False
+
+:HELP_1564
+if
+00E1:   player 0 pressed_button 16
+jf @HELP_1588
+jump @HELP_1788
+
+:HELP_1588
+jump @HELP_1518
+
+:HELP_1595
+0460: set_camera_pointing_time 0.0 1500
+Camera.SetPosition(223.301, -1277.655, 13.822, 0.0, 0.0, 0.0)
+Camera.PointAt(222.563, -1278.279, 13.565, 1)
+16@ = 0 // integer values
+
+:HELP_1663
+if
+   not 16@ > 1500 // integer values
+jf @HELP_1717
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @HELP_1710
+jump @HELP_1788
+
+:HELP_1710
+jump @HELP_1663
+
+:HELP_1717
+03E5: text_box 'HELP19'  // Walk into the ~q~pink marker ~w~to continue.
+16@ = 0 // integer values
+
+:HELP_1734
+if
+   not 16@ > 4000 // integer values
+jf @HELP_1788
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @HELP_1781
+jump @HELP_1788
+
+:HELP_1781
+jump @HELP_1734
+
+:HELP_1788
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1811
+Player.CanMove($PLAYER_CHAR) = True
+
+:HELP_1811
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+$44 = 1 // integer values
+
+:HELP_1822
+if
+  $222 == 1 // integer values
+jf @HELP_1970
+if
+  $46 == 0 // integer values
+jf @HELP_1970
+02A7: $221 = create_icon_marker_and_sphere 19 at 219.8 -1273.5 11.0
+018B: show_on_radar $221 2
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1910
+Player.CanMove($PLAYER_CHAR) = False
+
+:HELP_1910
+gosub @HELP_2932
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_1940
+Player.CanMove($PLAYER_CHAR) = True
+
+:HELP_1940
+03E5: text_box 'HELP14'  // To find the Lawyer's office, follow the ~h~L blip~w~ on the radar
+03E7: flash_hud 8 
+wait 2000 
+03E7: flash_hud -1 
+$46 = 1 // integer values
+
+:HELP_1970
+if
+  $46 == 1 // integer values
+jf @HELP_2086
+if
+  $25 == 1 // integer values
+jf @HELP_2086
+if
+  $86 == 0 // integer values
+jf @HELP_2086
+wait 4000
+0293: $18 = get_controller_mode
+if
+  $18 == 1 // integer values
+jf @HELP_2069
+03E5: text_box 'HELP57'  // Press the ~h~~k~~CAMERA_CHANGE_VIEW_ALL_SITUATIONS~~w~ button to change camera modes.
+jump @HELP_2079
+
+:HELP_2069
+03E5: text_box 'HELP56'  // Press the ~h~~k~~CAMERA_CHANGE_VIEW_ALL_SITUATIONS~~w~ button to change camera modes.
+
+:HELP_2079
+$86 = 1 // integer values
+
+:HELP_2086
+if and
+  $47 == 1 // integer values 
+  $48 == 1 // integer values 
+  $46 == 1 // integer values 
+  $86 == 1 // integer values 
+  $105 == 1 // integer values 
+  $104 == 1 // integer values 
+jf @HELP_2179 
+if 
+  $103 == 1 // integer values 
+jf @HELP_2179 
+Pickup.Destroy($670)
+Pickup.Destroy($671)
+Pickup.Destroy($672)
+Pickup.Destroy($673)
+end_thread 
+
+:HELP_2179
+if
+  $PASSED_COK2_PHNOM_PENH_86 == 1 // integer values
+jf @HELP_2234
+Pickup.Destroy($670)
+Pickup.Destroy($671)
+Pickup.Destroy($672)
+Pickup.Destroy($673)
+wait 3000
+03E5: text_box 'BRID_OP'  // Storm warning over, all bridges to the mainland are now open.
+end_thread
+
+:HELP_2234
+if
+  $103 == 0 // integer values
+else_jump @HELP_2346
+if or
+   Pickup.Picked_up($670)
+   Pickup.Picked_up($671)
+else_jump @HELP_2346
+if
+   Player.Defined($PLAYER_CHAR)
+else_jump @HELP_2346
+Pickup.Destroy($670)
+Pickup.Destroy($671)
+03E5: text_box 'HEAL_B'  // When you are ~h~'wasted'~w~ you are returned to the nearest hospital.
+wait 5000
+03E5: text_box 'HEAL_C'  // You will lose your weapons and the doctors will take some cash for patching you up.
+wait 5000
+03E5: text_box 'HEAL_E'  // You will find ways of healing or protecting yourself the more you play the game.
+$103 = 1 // integer values
+
+:HELP_2346
+if
+  $104 == 0 // integer values
+else_jump @HELP_2503
+if or
+   Pickup.Picked_up($672)
+   Pickup.Picked_up($673)
+else_jump @HELP_2503
+if
+   Player.Defined($PLAYER_CHAR)
+else_jump @HELP_2503
+Pickup.Destroy($672)
+Pickup.Destroy($673)
+03E5: text_box 'WANT_G'  // When you are ~h~'busted'~w~ you are returned to the nearest police station.
+wait 5000
+03E5: text_box 'WANT_H'  // The cops will take all your weapons and some of your cash as a bribe.
+wait 5000
+03E5: text_box 'WANT_I'  // Any mission you were on will be failed.
+wait 5000
+03E5: text_box 'WANT_A'  // You will only be arrested if you have a ~h~wanted level.
+wait 5000
+03E5: text_box 'WANT_B'  // Your ~h~wanted level~w~ is represented by the row of stars in the top right of the screen.
+wait 5000
+03E5: text_box 'WANT_F'  // As your ~h~wanted level~w~ increases you will attract more powerful forms of law enforcement.
+$104 = 1 // integer values
+
+:HELP_2503
+if
+  $105 == 0 // integer values
+jf @HELP_2718
+if or
+   Pickup.Picked_up($110)
+   Pickup.Picked_up($111)
+   Pickup.Picked_up($112)
+   Pickup.Picked_up($113)
+   Pickup.Picked_up($114)
+   Pickup.Picked_up($115)
+jf @HELP_2595
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2595
+03E5: text_box 'BRIBE1'  // You have just picked up a police bribe, this will reduce your wanted level by one star.
+$105 = 1 // integer values
+
+:HELP_2595
+if
+   Pickup.Picked_up($116)
+jf @HELP_2644
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2644
+03E5: text_box 'BRIBE1'  // You have just picked up a police bribe, this will reduce your wanted level by one star.
+$105 = 1 // integer values
+
+:HELP_2644
+if or
+   Pickup.Picked_up($117)
+   Pickup.Picked_up($118)
+   Pickup.Picked_up($119)
+   Pickup.Picked_up($120)
+   Pickup.Picked_up($121)
+   Pickup.Picked_up($122)
+jf @HELP_2718
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2718
+03E5: text_box 'BRIBE1'  // You have just picked up a police bribe, this will reduce your wanted level by one star.
+$105 = 1 // integer values
+
+:HELP_2718
+if
+  $106 == 0 // integer values
+jf @HELP_2787
+if
+057B:   wanted_level_suspended
+jf @HELP_2787
+wait 5000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2787
+03E5: text_box 'WANT_L'  // Your wanted level has been suspended, if you commit a crime whilst the stars are flashing your full wanted level will be reinstated.
+$106 = 1 // integer values
+
+:HELP_2787
+if
+  $25 == 1 // integer values
+jf @HELP_2876
+if
+  $85 == 0 // integer values
+jf @HELP_2876
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2876
+if
+00E0:   player $PLAYER_CHAR driving
+jf @HELP_2876
+057D: play_bridge_status_mp3 0
+03E5: text_box 'BRID_CL'  // Storm warning: All bridges to the mainland are closed.
+$85 = 1 // integer values
+
+:HELP_2876
+jump @HELP_10
+
+:HELP_2883
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2930
+$ONMISSION = 1 // integer values
+Player.MakeSafe($PLAYER_CHAR)
+0169: set_fade_color 0 0 0
+fade 0 1500
+03AF: set_streaming 0
+
+:HELP_2930
+return
+
+:HELP_2932
+if
+fading
+jf @HELP_2956
+wait 0
+jump @HELP_2932
+
+:HELP_2956
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_2977
+011C: actor $PLAYER_ACTOR clear_objective
+
+:HELP_2977
+return
+
+:HELP_2979
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_3126
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(91.925, -818.489, 20.0, 0.0, 0.0, 0.0)
+Camera.PointAt(92.866, -818.736, 19.769, 2)
+0395: clear_area 1 at 119.2 -826.9 range 10.0 1.0
+0055: put_player $PLAYER_CHAR at 119.4 -827.2 9.7
+0171: set_player $PLAYER_CHAR z_angle_to 230.0
+0211: actor $PLAYER_ACTOR walk_to 123.3 -829.9
+
+:HELP_3126
+wait 1000
+return
+
+:HELP_3133
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-381.923, -473.339, 48.904, 0.0, 0.0, 0.0)
+Camera.PointAt(-381.898, -474.247, 48.486, 2)
+wait 1000
+return
+
+:HELP_3202
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-229.438, -1364.204, 12.607, 0.0, 0.0, 0.0)
+Camera.PointAt(-230.424, -1364.068, 12.511, 2)
+0211: actor $PLAYER_ACTOR walk_to -251.9 -1360.8
+wait 1000
+return
+
+:HELP_3286
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-52.624, 939.244, 10.011, 0.0, 0.0, 0.0)
+Camera.PointAt(-53.538, 938.966, 10.306, 2)
+0211: actor $PLAYER_ACTOR walk_to -76.3 931.3
+wait 1000
+return
+
+:HELP_3370
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(499.781, -106.921, 12.057, 0.0, 0.0, 0.0)
+Camera.PointAt(499.357, -106.019, 12.139, 2)
+Actor.PutAt($PLAYER_ACTOR, 482.2, -69.9, 9.9)
+wait 1000
+return
+
+:HELP_3459
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(487.475, -68.248, 11.147, 0.0, 0.0, 0.0)
+Camera.PointAt(486.5, -68.023, 11.15, 2)
+Actor.Angle($PLAYER_ACTOR) = 62.0
+wait 1000
+return
+
+:HELP_3538
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-1094.531, 332.318, 14.799, 0.0, 0.0, 0.0)
+Camera.PointAt(-1095.238, 332.993, 14.591, 2)
+0211: actor $PLAYER_ACTOR walk_to -1102.7 343.4
+wait 1000
+return
+
+:HELP_3622
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-1039.093, -293.828, 27.81, 0.0, 0.0, 0.0)
+Camera.PointAt(-1039.811, -293.283, 27.377, 2)
+0211: actor $PLAYER_ACTOR walk_to -1070.6 -278.9
+wait 1000
+return
+
+:HELP_3706
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-609.208, 660.793, 14.52, 0.0, 0.0, 0.0)
+Camera.PointAt(-608.458, 660.156, 14.339, 2)
+0211: actor $PLAYER_ACTOR walk_to -597.4 651.6
+wait 1000
+return
+
+:HELP_3790
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-870.59, 1155.257, 10.356, 0.0, 0.0, 0.0)
+Camera.PointAt(-871.349, 1155.864, 10.592, 2)
+0211: actor $PLAYER_ACTOR walk_to -883.1 1159.2
+wait 1000
+return
+
+:HELP_3874
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-1179.528, -605.912, 12.22, 0.0, 0.0, 0.0)
+Camera.PointAt(-1178.774, -606.569, 12.223, 2)
+Actor.PutAt($PLAYER_ACTOR, -1166.3, -634.4, 10.6)
+wait 1000
+return
+
+:HELP_3963
+$ONMISSION = 1 // integer values
+02A3: enable_widescreen 1
+Camera.SetPosition(-969.554, 139.73, 10.058, 0.0, 0.0, 0.0)
+Camera.PointAt(-968.921, 140.503, 10.031, 2)
+0211: actor $PLAYER_ACTOR walk_to -962.6 146.1
+wait 1000
+return
+
+:HELP_4047
+$ONMISSION = 1 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-994.919, 210.472, 15.758, 0.0, 0.0, 0.0)
+Camera.PointAt(-995.722, 210.02, 15.37, 2)
+return
+
+:HELP_4118
+$ONMISSION = 1 // integer values
+Player.CanMove($PLAYER_CHAR) = False
+03D8: show_save_screen
+wait 0
+
+:HELP_4138
+if
+83D9:   not save_done
+jf @HELP_4162
+wait 0
+jump @HELP_4138
+
+:HELP_4162
+0169: set_fade_color 0 0 0
+fade 0 1000
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_4208
+
+0@ = 99
+if $389 == 1
+then
+	0@ += 50
+end
+if $91 == 1
+then
+	0@ += 50
+end
+
+if 8183:   not player $PLAYER_CHAR health > 0@
+then
+    0222: set_player $PLAYER_CHAR health_to 200
+end
+Player.CanMove($PLAYER_CHAR) = False
+
+:HELP_4208
+return
+
+:HELP_4210
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_4230
+Camera.Restore_WithJumpCut
+Camera.SetBehindPlayer
+
+:HELP_4230
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @HELP_4265
+Player.CanMove($PLAYER_CHAR) = True
+$ONMISSION = 0 // integer values
+
+:HELP_4265
+return
+
+
+// Custom routines
+
+:PROCESS_R3_ABORT
+$MISSION_CANCEL_FLAG = 0
+if not $18 == 3
+then
+    if and
+        00E1:   player 0 pressed_button 19
+        $ONMISSION == 1
+    then
+        $MISSION_CANCEL_FLAG = 1
+    end    
+else
+    if and
+        00E1:   player 0 pressed_button 14
+        $ONMISSION == 1
+    then
+        $MISSION_CANCEL_FLAG = 1
+    end
+end
+
+if $MISSION_CANCEL_FLAG == 1
+then
+    if $MISSION_CANCEL_TIMER == -1
+    then
+        01BD: $MISSION_CANCEL_TIMER = current_time_in_ms
+        $MISSION_CANCEL_TIMER += 2500
+        03E5: text_box 'CAN_CON'
+        $MISSION_CANCEL_STAGE = 1
+    else
+        if $MISSION_CANCEL_STAGE == 2
+        then
+            $MISSION_CANCEL_TIMER = -1
+            $MISSION_CANCEL_STAGE = 0   
+            $MISSION_CANCEL_FLAG = 2
+            03E6: remove_text_box 
+        end
+    end
+else
+    if not $MISSION_CANCEL_STAGE == 0
+    then
+        01BD: $CURRENT_TIME_IN_MS = current_time_in_ms 
+        if 001C:   $CURRENT_TIME_IN_MS > $MISSION_CANCEL_TIMER
+        then
+            $MISSION_CANCEL_TIMER = -1
+            $MISSION_CANCEL_STAGE = 0   
+            03E6: remove_text_box
+        else
+            $MISSION_CANCEL_STAGE = 2
+        end
+    end
+end
+return
+
+// HJ
+{$INCLUDE source\hj.txt}
+
+
+// USJ
+{$INCLUDE source\usj.txt}
+
+
+// AMMU
+{$INCLUDE source\ammu.txt}
+
+
+// SECURE
+{$INCLUDE source\secure.txt}
+
+
+// INTERIO
+{$INCLUDE source\interio.txt}
+
+
+// IMPORT
+{$INCLUDE source\import.txt}
+
+
+// CELLFON
+{$INCLUDE source\cellfon.txt}
+
+
+// BUS
+{$INCLUDE source\bus.txt}
+
+
+// CARGEN
+{$INCLUDE source\cargen.txt}
+
+
+// PICKUPS
+{$INCLUDE source\pickups.txt}
+
+
+// JUNKFUD
+{$INCLUDE source\junkfud.txt}
+
+
+// RAMPAGE
+{$INCLUDE source\rampage.txt}
+
+
+// SHOPS
+{$INCLUDE source\shops.txt}
+
+
+// AUDIO
+{$INCLUDE source\audio.txt}
+
+
+//-------------Mission 0---------------
+// Initial
+
+{$I source\initial.txt}
+
+
+//-------------Mission 1---------------
+// Intro
+
+{$I source\intro.txt}
+
+
+//-------------Mission 2---------------
+// An Old Friend
+
+{$I source\hotel.txt}
+
+
+//-------------Mission 3---------------
+// The Party
+
+{$I source\lawyer1.txt}
+
+
+//-------------Mission 4---------------
+// Back Alley Brawl
+
+{$I source\lawyer2.txt}
+
+
+//-------------Mission 5---------------
+// Jury Fury
+
+{$I source\lawyer3.txt}
+
+
+//-------------Mission 6---------------
+// Riot
+
+{$I source\lawyer4.txt}
+
+
+//-------------Mission 7---------------
+// Treacherous Swine
+
+{$I source\generl1.txt}
+
+
+//-------------Mission 8---------------
+// Mall Shootout
+
+{$I source\col2.txt}
+
+
+//-------------Mission 9---------------
+// Guardian Angels
+
+{$I source\generl3.txt}
+
+
+//-------------Mission 10---------------
+// Sir, Yes Sir!
+
+{$I source\col4.txt}
+
+
+//-------------Mission 11---------------
+// All Hands On Deck!
+
+{$I source\col5.txt}
+
+
+//-------------Mission 12---------------
+// The Chase
+
+{$I source\baron1.txt}
+
+
+//-------------Mission 13---------------
+// Phnom Penh '86
+
+{$I source\baron2.txt}
+
+
+//-------------Mission 14---------------
+// The Fastest Boat
+
+{$I source\baron3.txt}
+
+
+//-------------Mission 15---------------
+// Supply & Demand
+
+{$I source\baron4.txt}
+
+
+//-------------Mission 16---------------
+// Rub Out
+
+{$I source\baron5.txt}
+
+
+//-------------Mission 17---------------
+// Death Row
+
+{$I source\kent1.txt}
+
+
+//-------------Mission 18---------------
+// Four Iron
+
+{$I source\serg1.txt}
+
+
+//-------------Mission 19---------------
+// Demolition Man
+
+{$I source\serg3.txt}
+
+
+//-------------Mission 20---------------
+// Two Bit Hit
+
+{$I source\serg2.txt}
+
+
+//-------------Mission 21---------------
+// No Escape?
+
+{$I source\bankjo1.txt}
+
+
+//-------------Mission 22---------------
+// The Shootist
+
+{$I source\bankjo2.txt}
+
+
+//-------------Mission 23---------------
+// The Driver
+
+{$I source\bankjo3.txt}
+
+
+//-------------Mission 24---------------
+// The Job
+
+{$I source\bankjo4.txt}
+
+
+//-------------Mission 25---------------
+// Gun Runner
+
+{$I source\phil1.txt}
+
+
+//-------------Mission 26---------------
+// Boomshine Saigon
+
+{$I source\phil2.txt}
+
+
+//-------------Mission 27---------------
+// Recruitment Drive
+
+{$I source\porno1.txt}
+
+
+//-------------Mission 28---------------
+// Dildo Dodo
+
+{$I source\porno2.txt}
+
+
+//-------------Mission 29---------------
+// Martha's Mug Shot
+
+{$I source\porno3.txt}
+
+
+//-------------Mission 30---------------
+// G-spotlight
+
+{$I source\porno4.txt}
+
+
+//-------------Mission 31---------------
+// Shakedown
+
+{$I source\protec1.txt}
+
+
+//-------------Mission 32---------------
+// Bar Brawl
+
+{$I source\protec2.txt}
+
+
+//-------------Mission 33---------------
+// Cop Land
+
+{$I source\protec3.txt}
+
+
+//-------------Mission 34---------------
+// Spilling the Beans
+
+{$I source\count1.txt}
+
+
+//-------------Mission 35---------------
+// Hit the Courier
+
+{$I source\count2.txt}
+
+
+//-------------Mission 36---------------
+// Printworks Buy
+
+{$I source\buypro1.txt}
+
+
+//-------------Mission 37---------------
+// Sunshine Autos
+
+{$I source\carbuy1.txt}
+
+
+//-------------Mission 38---------------
+// Interglobal Films Buy
+
+{$I source\buypro2.txt}
+
+
+//-------------Mission 39---------------
+// Cherry Popper Icecreams Buy
+
+{$I source\icecut.txt}
+
+
+//-------------Mission 40---------------
+// Kaufman Cabs Buy
+
+{$I source\taxcut.txt}
+
+
+//-------------Mission 41---------------
+// Malibu Club Buy
+
+{$I source\buypro3.txt}
+
+
+//-------------Mission 42---------------
+// The Boatyard Buy
+
+{$I source\boatby.txt}
+
+
+//-------------Mission 43---------------
+// Pole Position Club Buy
+
+{$I source\buypro4.txt}
+
+
+//-------------Mission 44---------------
+// El Swanko Casa Buy
+
+{$I source\buypro5.txt}
+
+
+//-------------Mission 45---------------
+// Links View Apartment Buy
+
+{$I source\lnkvbuy.txt}
+
+
+//-------------Mission 46---------------
+// Hyman Condo Buy
+
+{$I source\hycobuy.txt}
+
+
+//-------------Mission 47---------------
+// Ocean Heighs Aprt. Buy
+
+{$I source\ochebuy.txt}
+
+
+//-------------Mission 48---------------
+// 1102 Washington Street Buy
+
+{$I source\washbuy.txt}
+
+
+//-------------Mission 49---------------
+// Vice Point Buy
+
+{$I source\vcptbuy.txt}
+
+
+//-------------Mission 50---------------
+// Skumole Shack Buy
+
+{$I source\skumbuy.txt}
+
+
+//-------------Mission 51---------------
+// Cap the Collector
+
+{$I source\cap_1.txt}
+
+
+//-------------Mission 52---------------
+// Keep your Friends Close...
+
+{$I source\fin_1.txt}
+
+
+//-------------Mission 53---------------
+// Alloy Wheels of Steel
+
+{$I source\bike1.txt}
+
+
+//-------------Mission 54---------------
+// Messing with the Man
+
+{$I source\bike2.txt}
+
+
+//-------------Mission 55---------------
+// Hog Tied
+
+{$I source\bike3.txt}
+
+
+//-------------Mission 56---------------
+// Stunt Boat Challenge
+
+{$I source\cuban1.txt}
+
+
+//-------------Mission 57---------------
+// Cannon Fodder
+
+{$I source\cuban2.txt}
+
+
+//-------------Mission 58---------------
+// Naval Engagement
+
+{$I source\cuban3.txt}
+
+
+//-------------Mission 59---------------
+// Trojan Voodoo
+
+{$I source\cuban4.txt}
+
+
+//-------------Mission 60---------------
+// Juju Scramble
+
+{$I source\haiti1.txt}
+
+
+//-------------Mission 61---------------
+// Bombs Away!
+
+{$I source\haiti2.txt}
+
+
+//-------------Mission 62---------------
+// Dirty Lickin's
+
+{$I source\haiti3.txt}
+
+
+//-------------Mission 63---------------
+// Love Juice
+
+{$I source\rockb1.txt}
+
+
+//-------------Mission 64---------------
+// Psycho Killer
+
+{$I source\rockb2.txt}
+
+
+//-------------Mission 65---------------
+// Publicity Tour
+
+{$I source\rockb3.txt}
+
+
+//-------------Mission 66---------------
+// Weapon Range
+
+{$I source\range.txt}
+
+
+//-------------Mission 67---------------
+// Road Kill
+
+{$I source\assin1.txt}
+
+
+//-------------Mission 68---------------
+// Waste the Wife
+
+{$I source\assin2.txt}
+
+
+//-------------Mission 69---------------
+// Autocide
+
+{$I source\assin3.txt}
+
+
+//-------------Mission 70---------------
+// Check Out at the Check In
+
+{$I source\assin4.txt}
+
+
+//-------------Mission 71---------------
+// Loose Ends
+
+{$I source\assin5.txt}
+
+
+//-------------Mission 72---------------
+// V.I.P.
+
+{$I source\taxwar1.txt}
+
+
+//-------------Mission 73---------------
+// Friendly Rivalry
+
+{$I source\taxwar2.txt}
+
+
+//-------------Mission 74---------------
+// Cabmaggedon
+
+{$I source\taxwar3.txt}
+
+
+//-------------Mission 75---------------
+// TAXI DRIVER
+
+{$I source\taxi.txt}
+
+
+//-------------Mission 76---------------
+// PARAMEDIC
+
+{$I source\ambulan.txt}
+
+
+//-------------Mission 77---------------
+// FIREFIGHTER
+
+{$I source\firetru.txt}
+
+
+//-------------Mission 78---------------
+// VIGILANTE
+
+{$I source\copcar.txt}
+
+
+//-------------Mission 79---------------
+// HOTRING
+
+{$I source\ovalrng.txt}
+
+
+//-------------Mission 80---------------
+// BLOODRING
+
+{$I source\mm.txt}
+
+
+//-------------Mission 81---------------
+// DIRTRING
+
+{$I source\kickst.txt}
+
+
+//-------------Mission 82---------------
+// Sunshine Autos Races
+
+{$I source\race.txt}
+
+
+//-------------Mission 83---------------
+// Distribution
+
+{$I source\icecre1.txt}
+
+
+//-------------Mission 84---------------
+// Downtown Chopper Checkpoint
+
+{$I source\heli1sc.txt}
+
+
+//-------------Mission 85---------------
+// Ocean Beach Chopper Checkpoint
+
+{$I source\heli2sc.txt}
+
+
+//-------------Mission 86---------------
+// Vice Point Chopper Checkpoint
+
+{$I source\heli3sc.txt}
+
+
+//-------------Mission 87---------------
+// Little Haiti Chopper Checkpoint
+
+{$I source\heli4sc.txt}
+
+
+//-------------Mission 88---------------
+// Trial by Dirt
+
+{$I source\bmx_1.txt}
+
+
+//-------------Mission 89---------------
+// Test Track
+
+{$I source\bmx_2.txt}
+
+
+//-------------Mission 90---------------
+// PCJ Playground
+
+{$I source\t4x4_1.txt}
+
+
+//-------------Mission 91---------------
+// Cone Crazy
+
+{$I source\carprk1.txt}
+
+
+//-------------Mission 92---------------
+// PIZZA BOY
+
+{$I source\pizza.txt}
+
+
+//-------------Mission 93---------------
+// RC Raider Pickup
+
+{$I source\rcheli.txt}
+
+
+//-------------Mission 94---------------
+// RC Bandit Race
+
+{$I source\rcrace1.txt}
+
+
+//-------------Mission 95---------------
+// RC Baron Race
+
+{$I source\rcplne1.txt}
+
+
+//-------------Mission 96---------------
+// Checkpoint Charlie
+
+{$I source\cokerun.txt}

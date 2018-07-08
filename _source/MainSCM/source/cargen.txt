@@ -1,0 +1,433 @@
+:CARGEN
+thread 'CARGEN'
+set_wb_check_to 0
+
+:CARGEN_14
+wait 500
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CARGEN_1829
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH3'  // Vice Point
+jf @CARGEN_1829
+if
+0057:   player $PLAYER_CHAR 0 369.7 1207.3 24.5 372.2 1212.8 28.5
+jf @CARGEN_114
+$1264 = 4 // integer values
+
+:CARGEN_114
+if
+0057:   player $PLAYER_CHAR 0 301.9 1152.3 16.1 342.4 1259.4 22.0
+jf @CARGEN_404
+if
+  $1259 == 0 // integer values
+jf @CARGEN_194
+gosub @CARGEN_2607
+$1259 = 1 // integer values
+
+:CARGEN_194
+if
+  $1260 == 0 // integer values
+jf @CARGEN_226
+gosub @CARGEN_2719
+$1260 = 1 // integer values
+
+:CARGEN_226
+if
+  $1261 == 1 // integer values
+jf @CARGEN_283
+03BA: clear_cars_from_cube 342.4 1259.1 21.5 302.5 1153.3 26.0
+$1261 = 0 // integer values
+
+:CARGEN_283
+if
+  $1262 == 1 // integer values
+jf @CARGEN_340
+03BA: clear_cars_from_cube 342.4 1153.3 23.8 367.2 1259.1 28.9
+$1262 = 0 // integer values
+
+:CARGEN_340
+if
+  $1263 == 1 // integer values
+jf @CARGEN_397
+03BA: clear_cars_from_cube 302.1 1151.5 32.0 342.7 1259.4 26.5
+$1263 = 0 // integer values
+
+:CARGEN_397
+$1264 = 1 // integer values
+
+:CARGEN_404
+if
+  $1264 > 0 // integer values
+jf @CARGEN_687
+if
+0057:   player $PLAYER_CHAR 0 341.3 1258.9 19.1 367.2 1152.6 23.8
+jf @CARGEN_687
+if
+  $1259 == 0 // integer values
+jf @CARGEN_502
+gosub @CARGEN_2607
+$1259 = 1 // integer values
+
+:CARGEN_502
+if
+  $1260 == 0 // integer values
+jf @CARGEN_534
+gosub @CARGEN_2719
+$1260 = 1 // integer values
+
+:CARGEN_534
+if
+  $1261 == 0 // integer values
+jf @CARGEN_566
+gosub @CARGEN_2853
+$1261 = 1 // integer values
+
+:CARGEN_566
+if
+  $1262 == 1 // integer values
+jf @CARGEN_623
+03BA: clear_cars_from_cube 342.4 1153.3 23.8 367.2 1259.1 28.9
+$1262 = 0 // integer values
+
+:CARGEN_623
+if
+  $1263 == 1 // integer values
+jf @CARGEN_680
+03BA: clear_cars_from_cube 302.1 1151.5 32.0 342.7 1259.4 26.5
+$1263 = 0 // integer values
+
+:CARGEN_680
+$1264 = 2 // integer values
+
+:CARGEN_687
+if
+  $1264 > 1 // integer values
+jf @CARGEN_970
+if
+0057:   player $PLAYER_CHAR 0 342.4 1259.1 21.5 302.5 1153.3 26.0
+jf @CARGEN_970
+if
+  $1259 == 1 // integer values
+jf @CARGEN_810
+03BA: clear_cars_from_cube 301.9 1152.3 16.1 342.4 1259.4 22.0
+$1259 = 0 // integer values
+
+:CARGEN_810
+if
+  $1260 == 0 // integer values
+jf @CARGEN_842
+gosub @CARGEN_2719
+$1260 = 1 // integer values
+
+:CARGEN_842
+if
+  $1261 == 0 // integer values
+jf @CARGEN_874
+gosub @CARGEN_2853
+$1261 = 1 // integer values
+
+:CARGEN_874
+if
+  $1262 == 0 // integer values
+jf @CARGEN_906
+gosub @CARGEN_2987
+$1262 = 1 // integer values
+
+:CARGEN_906
+if
+  $1263 == 1 // integer values
+jf @CARGEN_963
+03BA: clear_cars_from_cube 302.1 1151.5 32.0 342.7 1259.4 26.5
+$1263 = 0 // integer values
+
+:CARGEN_963
+$1264 = 3 // integer values
+
+:CARGEN_970
+if
+  $1264 > 2 // integer values
+jf @CARGEN_1253
+if
+0057:   player $PLAYER_CHAR 0 342.4 1153.3 23.8 372.3 1259.1 28.9
+jf @CARGEN_1253
+if
+  $1259 == 1 // integer values
+jf @CARGEN_1093
+03BA: clear_cars_from_cube 301.9 1152.3 16.1 342.4 1259.4 22.0
+$1259 = 0 // integer values
+
+:CARGEN_1093
+if
+  $1260 == 1 // integer values
+jf @CARGEN_1150
+03BA: clear_cars_from_cube 341.3 1258.9 19.1 367.2 1152.6 23.8
+$1260 = 0 // integer values
+
+:CARGEN_1150
+if
+  $1261 == 0 // integer values
+jf @CARGEN_1182
+gosub @CARGEN_2853
+$1261 = 1 // integer values
+
+:CARGEN_1182
+if
+  $1262 == 0 // integer values
+jf @CARGEN_1214
+gosub @CARGEN_2987
+$1262 = 1 // integer values
+
+:CARGEN_1214
+if
+  $1263 == 0 // integer values
+jf @CARGEN_1246
+gosub @CARGEN_3099
+$1263 = 1 // integer values
+
+:CARGEN_1246
+$1264 = 4 // integer values
+
+:CARGEN_1253
+if
+  $1264 > 3 // integer values
+jf @CARGEN_1561
+if
+0057:   player $PLAYER_CHAR 0 302.1 1151.5 32.0 342.7 1259.4 26.5
+jf @CARGEN_1561
+if
+  $1259 == 1 // integer values
+jf @CARGEN_1376
+03BA: clear_cars_from_cube 301.9 1152.3 16.1 342.4 1259.4 22.0
+$1259 = 0 // integer values
+
+:CARGEN_1376
+if
+  $1260 == 1 // integer values
+jf @CARGEN_1433
+03BA: clear_cars_from_cube 341.3 1258.9 19.1 367.2 1152.6 23.8
+$1260 = 0 // integer values
+
+:CARGEN_1433
+if
+  $1261 == 1 // integer values
+jf @CARGEN_1490
+03BA: clear_cars_from_cube 342.4 1259.1 21.5 302.5 1153.3 26.0
+$1261 = 0 // integer values
+
+:CARGEN_1490
+if
+  $1262 == 0 // integer values
+jf @CARGEN_1522
+gosub @CARGEN_2987
+$1262 = 1 // integer values
+
+:CARGEN_1522
+if
+  $1263 == 0 // integer values
+jf @CARGEN_1554
+gosub @CARGEN_3099
+$1263 = 1 // integer values
+
+:CARGEN_1554
+$1264 = 5 // integer values
+
+:CARGEN_1561
+if
+  $1264 > 0 // integer values
+jf @CARGEN_1829
+if
+8057:   not player $PLAYER_CHAR 0 301.9 1152.3 16.1 372.3 1258.4 32.6
+jf @CARGEN_1829
+03BA: clear_cars_from_cube 301.9 1152.3 16.1 342.4 1259.4 22.0
+03BA: clear_cars_from_cube 341.3 1258.9 19.1 367.2 1152.6 23.8
+03BA: clear_cars_from_cube 342.4 1259.1 21.5 302.5 1153.3 26.0
+03BA: clear_cars_from_cube 342.4 1153.3 23.8 367.2 1259.1 28.9
+03BA: clear_cars_from_cube 302.1 1151.5 32.0 342.7 1259.4 26.5
+$1259 = 0 // integer values
+$1260 = 0 // integer values
+$1261 = 0 // integer values
+$1262 = 0 // integer values
+$1263 = 0 // integer values
+$1264 = 0 // integer values
+
+:CARGEN_1829
+if
+   Player.Defined($PLAYER_CHAR)
+jf @CARGEN_2598
+if
+0121:   player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @CARGEN_2598
+if
+0057:   player $PLAYER_CHAR 0 104.9 -1143.3 23.6 158.3 -1239.3 2.1
+jf @CARGEN_2045
+if
+  $1255 == 0 // integer values
+jf @CARGEN_1949
+gosub @CARGEN_3211
+$1255 = 1 // integer values
+
+:CARGEN_1949
+if
+  $1256 == 0 // integer values
+jf @CARGEN_1981
+gosub @CARGEN_3345
+$1256 = 1 // integer values
+
+:CARGEN_1981
+if
+  $1257 == 1 // integer values
+jf @CARGEN_2038
+03BA: clear_cars_from_cube 158.3 -1236.6 29.9 104.5 -1142.1 36.8
+$1257 = 0 // integer values
+
+:CARGEN_2038
+$1258 = 1 // integer values
+
+:CARGEN_2045
+if
+  $1258 > 0 // integer values
+jf @CARGEN_2214
+if
+0057:   player $PLAYER_CHAR 0 104.9 -1143.3 23.6 158.3 -1236.6 29.9
+jf @CARGEN_2214
+if
+  $1255 == 0 // integer values
+jf @CARGEN_2143
+gosub @CARGEN_3211
+$1255 = 1 // integer values
+
+:CARGEN_2143
+if
+  $1256 == 0 // integer values
+jf @CARGEN_2175
+gosub @CARGEN_3345
+$1256 = 1 // integer values
+
+:CARGEN_2175
+if
+  $1257 == 0 // integer values
+jf @CARGEN_2207
+gosub @CARGEN_3479
+$1257 = 1 // integer values
+
+:CARGEN_2207
+$1258 = 2 // integer values
+
+:CARGEN_2214
+if
+  $1258 > 1 // integer values
+jf @CARGEN_2408
+if
+0057:   player $PLAYER_CHAR 0 158.3 -1236.6 29.9 104.5 -1142.1 36.8
+jf @CARGEN_2408
+if
+  $1255 == 1 // integer values
+jf @CARGEN_2337
+03BA: clear_cars_from_cube 104.9 -1143.3 23.6 158.3 -1239.3 2.1
+$1255 = 0 // integer values
+
+:CARGEN_2337
+if
+  $1256 == 0 // integer values
+jf @CARGEN_2369
+gosub @CARGEN_3345
+$1256 = 1 // integer values
+
+:CARGEN_2369
+if
+  $1257 == 0 // integer values
+jf @CARGEN_2401
+gosub @CARGEN_3479
+$1257 = 1 // integer values
+
+:CARGEN_2401
+$1258 = 3 // integer values
+
+:CARGEN_2408
+if
+  $1258 > 0 // integer values
+jf @CARGEN_2598
+if
+8057:   not player $PLAYER_CHAR 0 158.3 -1239.3 2.1 104.5 -1142.1 36.8
+jf @CARGEN_2598
+03BA: clear_cars_from_cube 104.9 -1143.3 23.6 158.3 -1239.3 2.1
+03BA: clear_cars_from_cube 104.9 -1143.3 23.6 158.3 -1236.6 29.9
+03BA: clear_cars_from_cube 158.3 -1236.6 29.9 104.5 -1142.1 36.8
+$1255 = 0 // integer values
+$1256 = 0 // integer values
+$1257 = 0 // integer values
+$1258 = 0 // integer values
+
+:CARGEN_2598
+jump @CARGEN_14
+end_thread
+
+:CARGEN_2607
+03C5: create_random_car_for_carpark 310.2 1234.8 16.2 90.2
+03C5: create_random_car_for_carpark 336.4 1250.7 16.2 271.9
+03C5: create_random_car_for_carpark 307.6 1160.9 16.2 92.8
+03C5: create_random_car_for_carpark 336.4 1157.7 16.2 270.1
+03C5: create_random_car_for_carpark 307.4 1253.6 16.2 89.4
+return
+
+:CARGEN_2719
+03C5: create_random_car_for_carpark 347.5 1185.5 19.1 95.2
+03C5: create_random_car_for_carpark 361.4 1202.9 19.1 273.7
+03C5: create_random_car_for_carpark 361.3 1157.8 19.1 267.7
+03C5: create_random_car_for_carpark 347.6 1228.8 19.0 92.5
+03C5: create_random_car_for_carpark 361.4 1255.5 19.1 269.5
+03C5: create_random_car_for_carpark 362.4 1228.7 19.1 264.6
+return
+
+:CARGEN_2853
+03C5: create_random_car_for_carpark 308.4 1225.8 21.5 87.4
+03C5: create_random_car_for_carpark 335.8 1207.9 21.5 271.2
+03C5: create_random_car_for_carpark 335.8 1213.6 21.5 270.6
+03C5: create_random_car_for_carpark 308.4 1196.2 21.5 90.0
+03C5: create_random_car_for_carpark 307.2 1168.4 21.5 89.6
+03C5: create_random_car_for_carpark 336.2 1182.3 21.5 270.3
+return
+
+:CARGEN_2987
+03C5: create_random_car_for_carpark 348.3 1190.1 23.8 91.0
+03C5: create_random_car_for_carpark 348.0 1203.5 23.8 87.5
+03C5: create_random_car_for_carpark 348.2 1208.5 23.8 90.2
+03C5: create_random_car_for_carpark 347.1 1227.1 23.8 89.8
+03C5: create_random_car_for_carpark 348.2 1253.7 23.8 92.5
+return
+
+:CARGEN_3099
+03C5: create_random_car_for_carpark 336.8 1158.1 26.3 269.4
+03C5: create_random_car_for_carpark 335.0 1186.2 26.3 268.7
+03C5: create_random_car_for_carpark 336.3 1190.7 26.3 271.2
+03C5: create_random_car_for_carpark 337.0 1227.0 26.2 269.5
+03C5: create_random_car_for_carpark 337.1 1221.0 26.2 267.9
+return
+
+:CARGEN_3211
+03C5: create_random_car_for_carpark 109.8 -1151.2 16.5 1.6
+03C5: create_random_car_for_carpark 129.7 -1150.8 16.5 0.4
+03C5: create_random_car_for_carpark 143.6 -1153.0 16.5 358.9
+03C5: create_random_car_for_carpark 123.0 -1180.8 16.5 1.3
+03C5: create_random_car_for_carpark 128.0 -1180.8 16.5 1.3
+03C5: create_random_car_for_carpark 133.0 -1180.8 16.5 1.3
+return
+
+:CARGEN_3345
+03C5: create_random_car_for_carpark 150.5 -1192.9 23.2 265.1
+03C5: create_random_car_for_carpark 141.6 -1228.8 23.2 181.3
+03C5: create_random_car_for_carpark 127.1 -1228.7 23.2 178.6
+03C5: create_random_car_for_carpark 117.9 -1152.3 23.2 0.1
+03C5: create_random_car_for_carpark 141.8 -1151.1 23.2 0.0
+03C5: create_random_car_for_carpark 129.2 -1179.3 23.2 0.0
+return
+
+:CARGEN_3479
+03C5: create_random_car_for_carpark 133.0 -1199.6 30.0 182.6
+03C5: create_random_car_for_carpark 123.7 -1199.7 30.0 180.4
+03C5: create_random_car_for_carpark 133.0 -1167.9 30.0 182.6
+03C5: create_random_car_for_carpark 146.3 -1149.3 30.1 273.0
+03C5: create_random_car_for_carpark 143.0 -1230.0 30.1 181.5
+03C5: create_random_car_for_carpark 135.3 -1217.7 30.1 1.5
+return

@@ -1,0 +1,1851 @@
+:BIKE1
+thread 'BIKE1'
+gosub @BIKE1_74
+if
+wasted_or_busted
+jf @BIKE1_37
+gosub @BIKE1_6983
+
+:BIKE1_37
+gosub @BIKE1_7359
+end_thread
+$5271 = 0 // integer values
+$5272 = 0 // integer values
+$5273 = 0 // integer values
+$5274 = 0 // integer values
+
+:BIKE1_74
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$5134 = 0 // integer values
+$5145 = 0 // integer values
+$5137 = 7.0 // floating-point values
+$5136 = 100 // integer values
+$5157 = 0 // integer values
+$5149 = 7.0 // floating-point values
+$5148 = 100 // integer values
+$5170 = 0 // integer values
+$5162 = 7.0 // floating-point values
+$5161 = 100 // integer values
+$5251 = 0 // integer values
+$5255 = 0 // integer values
+$5263 = 100 // integer values
+$5260 = 0.0 // floating-point values
+$5261 = 0.0 // floating-point values
+$5257 = 0.0 // floating-point values
+$5258 = 0.0 // floating-point values
+$5259 = 0.0 // floating-point values
+$5262 = 0 // integer values
+$5264 = 0 // integer values
+$5265 = 0 // integer values
+$5266 = 0 // integer values
+$5267 = 0 // integer values
+$5268 = 0 // integer values
+$5253 = 0 // integer values
+$5270 = 0 // integer values
+wait 0
+054C: use_GXT_table 'BIKE1'
+058E: set_restart_mission_taxi_destination -609.723 658.861 9.908 279.44
+023C: load_special_actor 1 'CSBIGM'
+023C: load_special_actor 2 'CSPLAY'
+023C: load_special_actor 3 'MGOONA'
+Model.Load(#BKA)
+Model.Load(#BKB)
+02F3: load_object #CUTOBJ01 'POOLQ'
+02F3: load_object #CUTOBJ02 'POLBALS'
+select_interior 11
+Camera.SetAtPos(-597.02, 642.46, 11.0)
+04F9: set_extracolors 15 fade 0
+038B: load_requested_models
+
+:BIKE1_424
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+   not Model.Available(#BKA)
+   not Model.Available(#BKB)
+jf @BIKE1_466
+wait 0
+jump @BIKE1_424
+
+:BIKE1_466
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @BIKE1_498
+wait 0
+jump @BIKE1_466
+
+:BIKE1_498
+02E4: load_cutscene_data 'BIKE_1'
+0244: set_cutscene_pos -602.052 636.289 10.636
+041D: set_camera_near_clip 0.1
+02E5: $155 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $155 'CSBIGM'
+02E5: $125 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $144 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $144 'MGOONA'
+02E5: $168 = create_cutscene_object #BKA
+02E6: set_cutscene_anim $168 'BKA'
+02E5: $169 = create_cutscene_object #BKB
+02E6: set_cutscene_anim $169 'BKB'
+02E5: $158 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $158 'POOLQ01'
+02E5: $159 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $159 'POOLQ02'
+02E5: $160 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $160 'POLBALS'
+0395: clear_area 1 at -597.25 655.87 range 10.06 1.0
+0055: put_player $PLAYER_CHAR at -597.25 655.87 10.06
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BIKE1_771
+if
+  5467 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_806
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_771
+
+:BIKE1_806
+00BC: text_highpriority 'BM1_A' 10000 ms 1  // Where's Baker?
+
+:BIKE1_821
+if
+  11136 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_856
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_821
+
+:BIKE1_856
+00BC: text_highpriority 'BM1_B' 10000 ms 1  // I'm looking for Big Mitch Baker...
+
+:BIKE1_871
+if
+  13361 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_906
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_871
+
+:BIKE1_906
+00BC: text_highpriority 'BM1_C' 10000 ms 1  // Who's lookin'?
+
+:BIKE1_921
+if
+  14457 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_956
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_921
+
+:BIKE1_956
+00BC: text_highpriority 'BM1_D' 10000 ms 1  // Tommy Vercetti.
+
+:BIKE1_971
+if
+  16423 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1006
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_971
+
+:BIKE1_1006
+00BC: text_highpriority 'BM1_E' 10000 ms 1  // Vercetti
+
+:BIKE1_1021
+if
+  18634 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1056
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1021
+
+:BIKE1_1056
+00BC: text_highpriority 'BM1_F' 10000 ms 1  // You don't look like the law, so that's bought you a minute.
+
+:BIKE1_1071
+if
+  21688 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1106
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1071
+
+:BIKE1_1106
+00BC: text_highpriority 'BM1_G' 10000 ms 1  // You better talk fast.
+
+:BIKE1_1121
+if
+  22905 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1156
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1121
+
+:BIKE1_1156
+00BC: text_highpriority 'BM1_H' 10000 ms 1  // Kent Paul said you might be interested in pulling security for a gig he's got set up.
+
+:BIKE1_1171
+if
+  26588 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1206
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1171
+
+:BIKE1_1206
+00BC: text_highpriority 'BM1_I' 10000 ms 1  // Kent Paul? Sheesh! No wonder he sent ya.
+
+:BIKE1_1221
+if
+  30208 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1256
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1221
+
+:BIKE1_1256
+00BC: text_highpriority 'BM1_J' 10000 ms 1  // The last time he was here he left through the window in nothing but his limey birthday suit.
+
+:BIKE1_1271
+if
+  34442 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1308
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1271
+
+:BIKE1_1308
+00BC: text_highpriority 'BM1_K' 10000 ms 1  // Are you interested or not?
+
+:BIKE1_1323
+if
+  36593 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1360
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1323
+
+:BIKE1_1360
+00BC: text_highpriority 'BM1_L' 10000 ms 1  // We only do favors for our own.
+
+:BIKE1_1375
+if
+  39183 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1412
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1375
+
+:BIKE1_1412
+00BC: text_highpriority 'BM1_M' 10000 ms 1  // How do I join?
+
+:BIKE1_1427
+if
+  41838 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1464
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1427
+
+:BIKE1_1464
+00BC: text_highpriority 'BM1_N' 10000 ms 1  // This ain't no country club, boy. Can you handle a bike?
+
+:BIKE1_1479
+if
+  45261 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1516
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1479
+
+:BIKE1_1516
+00BC: text_highpriority 'BM1_O' 10000 ms 1  // Can you sit on a stool and drink?
+
+:BIKE1_1531
+if
+  47270 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1568
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1531
+
+:BIKE1_1568
+00BC: text_highpriority 'BM1_P' 10000 ms 1  // Cougar, Zeppelin, go see how this girl handles a bike...
+
+:BIKE1_1583
+if
+  51712 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1620
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1583
+
+:BIKE1_1620
+00BE: text_clear_all
+
+:BIKE1_1622
+if
+  55482 > $CUT_SCENE_TIME // integer values
+jf @BIKE1_1659
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BIKE1_1622
+
+:BIKE1_1659
+fade 0 2000
+
+:BIKE1_1666
+if
+fading
+jf @BIKE1_1690
+wait 0
+jump @BIKE1_1666
+
+:BIKE1_1690
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+Model.Destroy(#BKA)
+Model.Destroy(#BKB)
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+04FA: reset_sky_colors_with_fade 0
+select_interior 0
+Camera.SetAtPos(-597.25, 655.87, 10.06)
+04E3: unknown_player $PLAYER_CHAR 1 60000
+0481:  6.0
+041E: set_radio_station 4 -1
+$5254 = 18 // integer values
+$5131 = -592.65 // floating-point values
+$5132 = 667.08 // floating-point values
+$5133 = 9.91 // floating-point values
+$5187 = -537.77 // floating-point values
+$5188 = 674.27 // floating-point values
+$5189 = 9.9 // floating-point values
+$5190 = -478.51 // floating-point values
+$5191 = 803.08 // floating-point values
+$5192 = 9.91 // floating-point values
+$5193 = -387.36 // floating-point values
+$5194 = 1017.69 // floating-point values
+$5195 = 8.46 // floating-point values
+$5196 = -300.36 // floating-point values
+$5197 = 1285.44 // floating-point values
+$5198 = 10.59 // floating-point values
+$5199 = -487.11 // floating-point values
+$5200 = 1337.11 // floating-point values
+$5201 = 10.59 // floating-point values
+$5202 = -735.62 // floating-point values
+$5203 = 1314.6 // floating-point values
+$5204 = 10.59 // floating-point values
+$5205 = -817.54 // floating-point values
+$5206 = 1374.86 // floating-point values
+$5207 = 10.41 // floating-point values
+$5208 = -880.23 // floating-point values
+$5209 = 1441.79 // floating-point values
+$5210 = 10.74 // floating-point values
+$5211 = -683.27 // floating-point values
+$5212 = 1465.76 // floating-point values
+$5213 = 10.92 // floating-point values
+$5214 = -776.75 // floating-point values
+$5215 = 1383.71 // floating-point values
+$5216 = 10.86 // floating-point values
+$5217 = -873.98 // floating-point values
+$5218 = 1328.55 // floating-point values
+$5219 = 10.29 // floating-point values
+$5220 = -869.53 // floating-point values
+$5221 = 1107.01 // floating-point values
+$5222 = 9.9 // floating-point values
+$5223 = -873.4 // floating-point values
+$5224 = 953.7 // floating-point values
+$5225 = 9.9 // floating-point values
+$5226 = -871.27 // floating-point values
+$5227 = 775.91 // floating-point values
+$5228 = 9.9 // floating-point values
+$5229 = -726.25 // floating-point values
+$5230 = 749.28 // floating-point values
+$5231 = 9.92 // floating-point values
+$5232 = -623.68 // floating-point values
+$5233 = 743.44 // floating-point values
+$5234 = 9.42 // floating-point values
+$5235 = -516.6 // floating-point values
+$5236 = 733.58 // floating-point values
+$5237 = 9.65 // floating-point values
+$5238 = -596.92 // floating-point values
+$5239 = 666.82 // floating-point values
+$5240 = 9.91 // floating-point values
+$5138 = -592.65 // floating-point values
+$5139 = 665.35 // floating-point values
+$5140 = 9.91 // floating-point values
+$5150 = -592.65 // floating-point values
+$5151 = 663.15 // floating-point values
+$5152 = 9.91 // floating-point values
+$5163 = -592.65 // floating-point values
+$5164 = 661.26 // floating-point values
+$5165 = 9.91 // floating-point values
+$5176 = 270.0 // floating-point values
+$5181 = -648.52 // floating-point values
+$5182 = 629.85 // floating-point values
+$5183 = 8.0 // floating-point values
+$5184 = -499.21 // floating-point values
+$5185 = 702.38 // floating-point values
+$5186 = 15.0 // floating-point values
+$5269 = 0 // integer values
+Model.Load(#BKA)
+Model.Load(#BKB)
+Model.Load(#ANGEL)
+Model.Load(#UZI)
+03CF: load_wav 'BIKEREV' as 1
+03CF: load_wav 'BIKE1_1' as 2
+
+:BIKE1_2564
+if or
+   not Model.Available(#BKA)
+   not Model.Available(#BKB)
+   not Model.Available(#ANGEL)
+   not Model.Available(#UZI)
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @BIKE1_2612
+wait 0
+jump @BIKE1_2564
+
+:BIKE1_2612
+01EB: set_traffic_density_multiplier_to 0.5
+03BA: clear_cars_from_cube $5181 $5182 $5183 $5184 $5185 $5186
+01E8: create_forbidden_for_cars_cube $5181 $5182 $5183 $5184 $5185 $5186
+$5144 = Car.Create(#ANGEL, $5138, $5139, $5140)
+0423: car $5144 improve_handling 2.0
+Car.Angle($5144) = $5176
+00AE: set_vehicle $5144 traffic_behavior_to 2
+Car.SetMaxSpeed($5144, 63.0)
+Car.ImmuneToNonPlayer($5144) = True
+0129: $5135 = create_actor 4 #BKA in_car $5144 driverseat
+0489: set_actor $5135 muted 1
+04D8: set_actor $5135 drown 0
+01ED: clear_actor $5135 threat_search
+011C: actor $5135 clear_objective
+02A9: set_actor $5135 immune_to_nonplayer 1
+Car.SetToNormalDriver($5144)
+$5156 = Car.Create(#ANGEL, $5150, $5151, $5152)
+0423: car $5156 improve_handling 2.0
+Car.Angle($5156) = $5176
+00AE: set_vehicle $5156 traffic_behavior_to 2
+Car.SetMaxSpeed($5156, 63.0)
+Car.ImmuneToNonPlayer($5156) = True
+0129: $5147 = create_actor 4 #BKB in_car $5156 driverseat
+0489: set_actor $5147 muted 1
+04D8: set_actor $5147 drown 0
+01ED: clear_actor $5147 threat_search
+011C: actor $5147 clear_objective
+02A9: set_actor $5147 immune_to_nonplayer 1
+Car.SetToNormalDriver($5156)
+$5169 = Car.Create(#ANGEL, $5163, $5164, $5165)
+0423: car $5169 improve_handling 2.0
+Car.Angle($5169) = $5176
+00AE: set_vehicle $5169 traffic_behavior_to 2
+Car.SetMaxSpeed($5169, 63.0)
+Car.ImmuneToNonPlayer($5169) = True
+0129: $5160 = create_actor 4 #BKA in_car $5169 driverseat
+0489: set_actor $5160 muted 1
+04D8: set_actor $5160 drown 0
+01ED: clear_actor $5160 threat_search
+011C: actor $5160 clear_objective
+02A9: set_actor $5160 immune_to_nonplayer 1
+Car.SetToNormalDriver($5169)
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+0336: set_player $PLAYER_CHAR visible 1
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 1500
+018A: $5247 = create_checkpoint_at $5131 $5132 $5133
+00BC: text_highpriority 'BM1_1' 5000 ms 1  // ~g~Get a Freeway or an Angel and get to the starting grid.
+
+:BIKE1_3060
+if or
+80F8:   not player $PLAYER_CHAR stopped 1 $5131 $5132 $5133 radius 2.0 2.0 2.0
+  $5269 == 0 // integer values
+jf @BIKE1_4023
+wait 0
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FREEWAY
+00DE:   player $PLAYER_CHAR driving_vehicle_type #ANGEL
+jf @BIKE1_3154
+$5269 = 1 // integer values
+jump @BIKE1_3161
+
+:BIKE1_3154
+$5269 = 0 // integer values
+
+:BIKE1_3161
+if
+00F8:   player $PLAYER_CHAR stopped 1 $5131 $5132 $5133 radius 2.0 2.0 2.0
+jf @BIKE1_3277
+if and
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #FREEWAY
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #ANGEL
+jf @BIKE1_3270
+if
+  $5265 == 0 // integer values
+jf @BIKE1_3270
+00BC: text_highpriority 'BM1_2' 5000 ms 1  // ~g~You need a Freeway or an Angel to compete!
+$5265 = 1 // integer values
+
+:BIKE1_3270
+jump @BIKE1_3284
+
+:BIKE1_3277
+$5265 = 0 // integer values
+
+:BIKE1_3284
+if
+   Car.Wrecked($5144)
+jf @BIKE1_3329
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_3362
+
+:BIKE1_3329
+if
+0546:   unknown_player $PLAYER_CHAR angel_bike $5144
+jf @BIKE1_3362
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3362
+if
+   Car.Wrecked($5156)
+jf @BIKE1_3407
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_3440
+
+:BIKE1_3407
+if
+0546:   unknown_player $PLAYER_CHAR angel_bike $5156
+jf @BIKE1_3440
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3440
+if
+   Car.Wrecked($5169)
+jf @BIKE1_3485
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_3518
+
+:BIKE1_3485
+if
+0546:   unknown_player $PLAYER_CHAR angel_bike $5169
+jf @BIKE1_3518
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3518
+$5249 = Car.Health($5144)
+if or
+  999 >= $5249 // integer values
+0496:   vehicle $5144 tire 4 deflated
+jf @BIKE1_3566
+$5249 = 9 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3566
+if
+   not Actor.Dead($5135)
+jf @BIKE1_3662
+$5136 = Actor.Health($5135)
+if
+  99 >= $5136 // integer values
+jf @BIKE1_3622
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3622
+if
+   not Actor.InCar($5135, $5144)
+jf @BIKE1_3655
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3655
+jump @BIKE1_3684
+
+:BIKE1_3662
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_3684
+$5159 = Car.Health($5156)
+if or
+  999 >= $5159 // integer values
+0496:   vehicle $5156 tire 4 deflated
+jf @BIKE1_3732
+$5159 = 9 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3732
+if
+   not Actor.Dead($5147)
+jf @BIKE1_3828
+$5148 = Actor.Health($5147)
+if
+  99 >= $5148 // integer values
+jf @BIKE1_3788
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3788
+if
+   not Actor.InCar($5147, $5156)
+jf @BIKE1_3821
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3821
+jump @BIKE1_3850
+
+:BIKE1_3828
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_3850
+$5172 = Car.Health($5169)
+if or
+  999 >= $5172 // integer values
+0496:   vehicle $5169 tire 4 deflated
+jf @BIKE1_3898
+$5172 = 9 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3898
+if
+   not Actor.Dead($5160)
+jf @BIKE1_3994
+$5161 = Actor.Health($5160)
+if
+  99 >= $5161 // integer values
+jf @BIKE1_3954
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3954
+if
+   not Actor.InCar($5160, $5169)
+jf @BIKE1_3987
+$5262 = 1 // integer values
+jump @BIKE1_4023
+
+:BIKE1_3987
+jump @BIKE1_4016
+
+:BIKE1_3994
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_4016
+jump @BIKE1_3060
+
+:BIKE1_4023
+03D1: play_wav 1
+03D1: play_wav 2
+00BC: text_highpriority 'BIKE1_1' 5000 ms 1  // All right, fancy clothes. Let's see what you can do.
+if or
+  $5249 == 9 // integer values
+  $5262 == 1 // integer values
+  $5159 == 9 // integer values
+  $5172 == 9 // integer values
+jf @BIKE1_4107
+00BA: text_styled 'RACE1' 1200 ms 4  // ~g~3..2..1.. GO GO GO!
+jump @BIKE1_4369
+
+:BIKE1_4107
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+00BA: text_styled 'RACE2' 1100 ms 4  // ~g~3
+018C: play_sound 7 at 0.0 0.0 0.0
+wait 1000
+00BA: text_styled 'RACE3' 1100 ms 4  // ~g~2
+018C: play_sound 8 at 0.0 0.0 0.0
+if
+03D2:   wav 2 ended
+jf @BIKE1_4223
+03D5: remove_text 'BIKE1_1'  // All right, fancy clothes. Let's see what you can do.
+
+:BIKE1_4223
+wait 1000
+00BA: text_styled 'RACE4' 1100 ms 4  // ~g~1
+018C: play_sound 9 at 0.0 0.0 0.0
+if
+03D2:   wav 2 ended
+jf @BIKE1_4287
+03D5: remove_text 'BIKE1_1'  // All right, fancy clothes. Let's see what you can do.
+
+:BIKE1_4287
+wait 1000
+00BA: text_styled 'RACE5' 800 ms 4  // ~g~GO!
+018C: play_sound 10 at 0.0 0.0 0.0
+if
+03D2:   wav 2 ended
+jf @BIKE1_4351
+03D5: remove_text 'BIKE1_1'  // All right, fancy clothes. Let's see what you can do.
+
+:BIKE1_4351
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+
+:BIKE1_4369
+if
+03D2:   wav 2 ended
+jf @BIKE1_4394
+03D5: remove_text 'BIKE1_1'  // All right, fancy clothes. Let's see what you can do.
+
+:BIKE1_4394
+if
+   Car.Wrecked($5144)
+jf @BIKE1_4439
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_4452
+
+:BIKE1_4439
+03CC: car $5144 add_to_stuck_car_check 1.0 = 2000
+
+:BIKE1_4452
+if
+   not Actor.Dead($5135)
+jf @BIKE1_4482
+0489: set_actor $5135 muted 0
+jump @BIKE1_4504
+
+:BIKE1_4482
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_4504
+if
+   Car.Wrecked($5156)
+jf @BIKE1_4549
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_4562
+
+:BIKE1_4549
+03CC: car $5156 add_to_stuck_car_check 1.0 = 2000
+
+:BIKE1_4562
+if
+   not Actor.Dead($5147)
+jf @BIKE1_4592
+0489: set_actor $5147 muted 0
+jump @BIKE1_4614
+
+:BIKE1_4592
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_4614
+if
+   Car.Wrecked($5169)
+jf @BIKE1_4659
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+jump @BIKE1_4672
+
+:BIKE1_4659
+03CC: car $5169 add_to_stuck_car_check 1.0 = 2000
+
+:BIKE1_4672
+if
+   not Actor.Dead($5160)
+jf @BIKE1_4702
+0489: set_actor $5160 muted 0
+jump @BIKE1_4724
+
+:BIKE1_4702
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_4724
+Marker.Disable($5247)
+0162: tie_marker $5146 to_actor $5135 1 1
+0162: tie_marker $5158 to_actor $5147 1 1
+0162: tie_marker $5171 to_actor $5160 1 1
+gosub @BIKE1_7450
+0086: $5125 = $5241 // floating-point values only
+0086: $5126 = $5242 // floating-point values only
+0086: $5127 = $5243 // floating-point values only
+0086: $5128 = $5244 // floating-point values only
+0086: $5129 = $5245 // floating-point values only
+0086: $5130 = $5246 // floating-point values only
+0086: $5141 = $5241 // floating-point values only
+0086: $5142 = $5242 // floating-point values only
+0086: $5143 = $5243 // floating-point values only
+0086: $5153 = $5241 // floating-point values only
+0086: $5154 = $5242 // floating-point values only
+0086: $5155 = $5243 // floating-point values only
+0086: $5166 = $5241 // floating-point values only
+0086: $5167 = $5242 // floating-point values only
+0086: $5168 = $5243 // floating-point values only
+018A: $5247 = create_checkpoint_at $5125 $5126 $5127
+0167: $5248 = create_marker_at $5128 $5129 $5130 color 5 flag 2
+0168: set_blip $5248 size 2
+0166: set_marker $5248 brightness_to 1
+if
+   not Actor.Dead($5135)
+jf @BIKE1_5010
+if
+   not Car.Wrecked($5144)
+jf @BIKE1_5003
+if
+   Actor.InCar($5135, $5144)
+jf @BIKE1_5003
+Car.DriveTo($5144, $5141, $5142, $5143)
+
+:BIKE1_5003
+jump @BIKE1_5032
+
+:BIKE1_5010
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_5032
+wait 70
+if
+   not Actor.Dead($5147)
+jf @BIKE1_5108
+if
+   not Car.Wrecked($5156)
+jf @BIKE1_5101
+if
+   Actor.InCar($5147, $5156)
+jf @BIKE1_5101
+Car.DriveTo($5156, $5153, $5154, $5155)
+
+:BIKE1_5101
+jump @BIKE1_5130
+
+:BIKE1_5108
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_5130
+wait 90
+if
+   not Actor.Dead($5160)
+jf @BIKE1_5206
+if
+   not Car.Wrecked($5169)
+jf @BIKE1_5199
+if
+   Actor.InCar($5160, $5169)
+jf @BIKE1_5199
+Car.DriveTo($5169, $5166, $5167, $5168)
+
+:BIKE1_5199
+jump @BIKE1_5228
+
+:BIKE1_5206
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_5228
+03C3: set_timer_with_text_to $5253 type 0 text 'R_TIME'  // RACE TIME:
+
+:BIKE1_5243
+if
+001C:   $5254 > $5134 // integer values
+jf @BIKE1_6956
+wait 0
+$5252 = 0 // integer values
+if
+00F5:   player $PLAYER_CHAR 0 $5125 $5126 $5127 radius 6.0 6.0 6.0
+jf @BIKE1_5531
+if or
+00DE:   player $PLAYER_CHAR driving_vehicle_type #FREEWAY
+00DE:   player $PLAYER_CHAR driving_vehicle_type #ANGEL
+jf @BIKE1_5531
+018C: play_sound 1 at 0.0 0.0 0.0
+$5134 += 1 // integer values
+Marker.Disable($5247)
+Marker.Disable($5248)
+0084: $5251 = $5134 // integer values and handles
+gosub @BIKE1_7450
+0086: $5125 = $5241 // floating-point values only
+0086: $5126 = $5242 // floating-point values only
+0086: $5127 = $5243 // floating-point values only
+0086: $5128 = $5244 // floating-point values only
+0086: $5129 = $5245 // floating-point values only
+0086: $5130 = $5246 // floating-point values only
+if
+003A:   $5134 == $5254 // integer values and handles
+jf @BIKE1_5467
+jump @BIKE1_7000
+
+:BIKE1_5467
+018A: $5247 = create_checkpoint_at $5125 $5126 $5127
+if
+  17 > $5134 // integer values
+jf @BIKE1_5531
+0167: $5248 = create_marker_at $5128 $5129 $5130 color 5 flag 2
+0166: set_marker $5248 brightness_to 1
+0168: set_blip $5248 size 2
+
+:BIKE1_5531
+if
+   not Actor.Dead($5135)
+jf @BIKE1_5912
+if
+   not Car.Wrecked($5144)
+jf @BIKE1_5905
+0084: $5250 = $5144 // integer values and handles
+0084: $5251 = $5145 // integer values and handles
+0084: $5256 = $5135 // integer values and handles
+0086: $5241 = $5141 // floating-point values only
+0086: $5242 = $5142 // floating-point values only
+0086: $5243 = $5143 // floating-point values only
+0084: $5271 = $5272 // integer values and handles
+gosub @BIKE1_10522
+gosub @BIKE1_8640
+gosub @BIKE1_10774
+gosub @BIKE1_9482
+0084: $5135 = $5256 // integer values and handles
+0084: $5144 = $5250 // integer values and handles
+0084: $5272 = $5271 // integer values and handles
+if and
+00FE:   actor $5135 0 $5141 $5142 $5143 radius $5137 $5137 $5137
+   Actor.DrivingVehicleType($5135, #ANGEL)
+jf @BIKE1_5905
+$5145 += 1 // integer values
+0084: $5251 = $5145 // integer values and handles
+gosub @BIKE1_7450
+0086: $5141 = $5241 // floating-point values only
+0086: $5142 = $5242 // floating-point values only
+0086: $5143 = $5243 // floating-point values only
+if
+  $5145 == 17 // integer values
+jf @BIKE1_5789
+$5137 = 6.0 // floating-point values
+
+:BIKE1_5789
+if
+003A:   $5145 == $5254 // integer values and handles
+jf @BIKE1_5830
+00BC: text_highpriority 'RACEFA' 5000 ms 1  // ~r~You failed to win the race!
+jump @BIKE1_6983
+
+:BIKE1_5830
+if
+   Actor.InCar($5135, $5144)
+jf @BIKE1_5905
+if
+  $5137 == 7.0 // floating-point values
+jf @BIKE1_5891
+Car.DriveTo($5144, $5141, $5142, $5143)
+jump @BIKE1_5905
+
+:BIKE1_5891
+02C2: car $5144 drive_to_point $5141 $5142 $5143
+
+:BIKE1_5905
+jump @BIKE1_5934
+
+:BIKE1_5912
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_5934
+if
+   not Actor.Dead($5147)
+jf @BIKE1_6315
+if
+   not Car.Wrecked($5156)
+jf @BIKE1_6308
+0084: $5250 = $5156 // integer values and handles
+0084: $5251 = $5157 // integer values and handles
+0084: $5256 = $5147 // integer values and handles
+0086: $5241 = $5153 // floating-point values only
+0086: $5242 = $5154 // floating-point values only
+0086: $5243 = $5155 // floating-point values only
+0084: $5271 = $5273 // integer values and handles
+gosub @BIKE1_10522
+gosub @BIKE1_8640
+gosub @BIKE1_10774
+gosub @BIKE1_9482
+0084: $5147 = $5256 // integer values and handles
+0084: $5156 = $5250 // integer values and handles
+0084: $5273 = $5271 // integer values and handles
+if and
+00FE:   actor $5147 0 $5153 $5154 $5155 radius $5149 $5149 $5149
+   Actor.DrivingVehicleType($5147, #ANGEL)
+jf @BIKE1_6308
+$5157 += 1 // integer values
+0084: $5251 = $5157 // integer values and handles
+gosub @BIKE1_7450
+0086: $5153 = $5241 // floating-point values only
+0086: $5154 = $5242 // floating-point values only
+0086: $5155 = $5243 // floating-point values only
+if
+  $5157 == 17 // integer values
+jf @BIKE1_6192
+$5149 = 6.0 // floating-point values
+
+:BIKE1_6192
+if
+003A:   $5157 == $5254 // integer values and handles
+jf @BIKE1_6233
+00BC: text_highpriority 'RACEFA' 5000 ms 1  // ~r~You failed to win the race!
+jump @BIKE1_6983
+
+:BIKE1_6233
+if
+   Actor.InCar($5147, $5156)
+jf @BIKE1_6308
+if
+  $5149 == 7.0 // floating-point values
+jf @BIKE1_6294
+Car.DriveTo($5156, $5153, $5154, $5155)
+jump @BIKE1_6308
+
+:BIKE1_6294
+02C2: car $5156 drive_to_point $5153 $5154 $5155
+
+:BIKE1_6308
+jump @BIKE1_6337
+
+:BIKE1_6315
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_6337
+if
+   not Actor.Dead($5160)
+jf @BIKE1_6718
+if
+   not Car.Wrecked($5169)
+jf @BIKE1_6711
+0084: $5250 = $5169 // integer values and handles
+0084: $5251 = $5170 // integer values and handles
+0084: $5256 = $5160 // integer values and handles
+0086: $5241 = $5166 // floating-point values only
+0086: $5242 = $5167 // floating-point values only
+0086: $5243 = $5168 // floating-point values only
+0084: $5271 = $5274 // integer values and handles
+gosub @BIKE1_10522
+gosub @BIKE1_8640
+gosub @BIKE1_10774
+gosub @BIKE1_9482
+0084: $5160 = $5256 // integer values and handles
+0084: $5169 = $5250 // integer values and handles
+0084: $5274 = $5271 // integer values and handles
+if and
+00FE:   actor $5160 0 $5166 $5167 $5168 radius $5162 $5162 $5162
+   Actor.DrivingVehicleType($5160, #ANGEL)
+jf @BIKE1_6711
+$5170 += 1 // integer values
+0084: $5251 = $5170 // integer values and handles
+gosub @BIKE1_7450
+0086: $5166 = $5241 // floating-point values only
+0086: $5167 = $5242 // floating-point values only
+0086: $5168 = $5243 // floating-point values only
+if
+  $5170 == 17 // integer values
+jf @BIKE1_6595
+$5162 = 6.0 // floating-point values
+
+:BIKE1_6595
+if
+003A:   $5170 == $5254 // integer values and handles
+jf @BIKE1_6636
+00BC: text_highpriority 'RACEFA' 5000 ms 1  // ~r~You failed to win the race!
+jump @BIKE1_6983
+
+:BIKE1_6636
+if
+   Actor.InCar($5160, $5169)
+jf @BIKE1_6711
+if
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_6697
+Car.DriveTo($5169, $5166, $5167, $5168)
+jump @BIKE1_6711
+
+:BIKE1_6697
+02C2: car $5169 drive_to_point $5166 $5167 $5168
+
+:BIKE1_6711
+jump @BIKE1_6740
+
+:BIKE1_6718
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_6740
+if
+  $5252 == 0 // integer values
+jf @BIKE1_6772
+00BC: text_highpriority 'FIRST' 100 ms 1  // ~b~1st
+
+:BIKE1_6772
+if
+  $5252 == 1 // integer values
+jf @BIKE1_6804
+00BC: text_highpriority 'SECOND' 100 ms 1  // ~b~2nd
+
+:BIKE1_6804
+if
+  $5252 == 2 // integer values
+jf @BIKE1_6836
+00BC: text_highpriority 'THIRD' 100 ms 1  // ~b~3rd
+
+:BIKE1_6836
+if
+  $5252 == 3 // integer values
+jf @BIKE1_6868
+00BC: text_highpriority 'FOURTH' 100 ms 1  // ~b~4th
+
+:BIKE1_6868
+if
+  $5134 == 17 // integer values
+jf @BIKE1_6920
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $5125 $5126 $5127
+jump @BIKE1_6949
+
+:BIKE1_6920
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 137 205 at $5125 $5126 $5127
+
+:BIKE1_6949
+jump @BIKE1_5243
+
+:BIKE1_6956
+014F: stop_timer $5253
+03CD: car $5144 remove_from_stuck_car_check
+03CD: car $5156 remove_from_stuck_car_check
+03CD: car $5169 remove_from_stuck_car_check
+jump @BIKE1_7000
+
+:BIKE1_6983
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:BIKE1_7000
+$275 = 1 // integer values
+0318: set_latest_mission_passed 'BIKE_1'  // Alloy Wheels of Steel
+030C: progress_made += 1
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+if
+  $1559 == 1 // integer values
+jf @BIKE1_7060
+018E: stop_sound $1556
+$1559 = 0 // integer values
+
+:BIKE1_7060
+if
+  $1560 == 1 // integer values
+jf @BIKE1_7090
+018E: stop_sound $1557
+$1560 = 0 // integer values
+
+:BIKE1_7090
+if
+  $1561 == 1 // integer values
+jf @BIKE1_7120
+018E: stop_sound $1558
+$1561 = 0 // integer values
+
+:BIKE1_7120
+if
+  $1560 == 0 // integer values
+jf @BIKE1_7167
+018D: $1557 = create_sound 37 at -596.018 640.916 12.0
+$1560 = 1 // integer values
+
+:BIKE1_7167
+0084: $5267 = $5253 // integer values and handles
+$5267 /= 1000 // integer values
+042E: downdate_integer_stat 0 to $5267
+0084: $5266 = $5267 // integer values and handles
+$5266 /= 60 // integer values
+0084: $5268 = $5266 // integer values and handles
+$5268 *= 60 // integer values
+0060: $5267 -= $5268 // integer values
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 1000
+if
+  $5267 >= 10 // integer values
+jf @BIKE1_7300
+02FD: text_2numbers_lowpriority 'RACETM' $5266 $5267 5000 flag 1  // ~b~RACE TIME: ~1~:~1~
+jump @BIKE1_7321
+
+:BIKE1_7300
+02FD: text_2numbers_lowpriority 'RACETM2' $5266 $5267 5000 flag 1  // ~b~RACE TIME: ~1~:0~1~
+
+:BIKE1_7321
+if
+040C:   german_game
+jf @BIKE1_7349
+create_thread @BIK3
+jump @BIKE1_7357
+
+:BIKE1_7349
+create_thread @BIK2
+
+:BIKE1_7357
+return
+
+:BIKE1_7359
+$ONMISSION = 0 // integer values
+01EB: set_traffic_density_multiplier_to 1.0
+01E7: remove_forbidden_for_cars_cube $5181 $5182 $5183 $5184 $5185 $5186
+Marker.Disable($5247)
+Marker.Disable($5248)
+Marker.Disable($5146)
+Marker.Disable($5158)
+Marker.Disable($5171)
+Model.Destroy(#BKA)
+Model.Destroy(#BKB)
+Model.Destroy(#ANGEL)
+Model.Destroy(#UZI)
+014F: stop_timer $5253
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:BIKE1_7450
+if
+  $5251 == 0 // integer values
+jf @BIKE1_7516
+0086: $5241 = $5187 // floating-point values only
+0086: $5242 = $5188 // floating-point values only
+0086: $5243 = $5189 // floating-point values only
+0086: $5244 = $5190 // floating-point values only
+0086: $5245 = $5191 // floating-point values only
+0086: $5246 = $5192 // floating-point values only
+
+:BIKE1_7516
+if
+  $5251 == 1 // integer values
+jf @BIKE1_7582
+0086: $5241 = $5190 // floating-point values only
+0086: $5242 = $5191 // floating-point values only
+0086: $5243 = $5192 // floating-point values only
+0086: $5244 = $5193 // floating-point values only
+0086: $5245 = $5194 // floating-point values only
+0086: $5246 = $5195 // floating-point values only
+
+:BIKE1_7582
+if
+  $5251 == 2 // integer values
+jf @BIKE1_7648
+0086: $5241 = $5193 // floating-point values only
+0086: $5242 = $5194 // floating-point values only
+0086: $5243 = $5195 // floating-point values only
+0086: $5244 = $5196 // floating-point values only
+0086: $5245 = $5197 // floating-point values only
+0086: $5246 = $5198 // floating-point values only
+
+:BIKE1_7648
+if
+  $5251 == 3 // integer values
+jf @BIKE1_7714
+0086: $5241 = $5196 // floating-point values only
+0086: $5242 = $5197 // floating-point values only
+0086: $5243 = $5198 // floating-point values only
+0086: $5244 = $5199 // floating-point values only
+0086: $5245 = $5200 // floating-point values only
+0086: $5246 = $5201 // floating-point values only
+
+:BIKE1_7714
+if
+  $5251 == 4 // integer values
+jf @BIKE1_7780
+0086: $5241 = $5199 // floating-point values only
+0086: $5242 = $5200 // floating-point values only
+0086: $5243 = $5201 // floating-point values only
+0086: $5244 = $5202 // floating-point values only
+0086: $5245 = $5203 // floating-point values only
+0086: $5246 = $5204 // floating-point values only
+
+:BIKE1_7780
+if
+  $5251 == 5 // integer values
+jf @BIKE1_7846
+0086: $5241 = $5202 // floating-point values only
+0086: $5242 = $5203 // floating-point values only
+0086: $5243 = $5204 // floating-point values only
+0086: $5244 = $5205 // floating-point values only
+0086: $5245 = $5206 // floating-point values only
+0086: $5246 = $5207 // floating-point values only
+
+:BIKE1_7846
+if
+  $5251 == 6 // integer values
+jf @BIKE1_7912
+0086: $5241 = $5205 // floating-point values only
+0086: $5242 = $5206 // floating-point values only
+0086: $5243 = $5207 // floating-point values only
+0086: $5244 = $5208 // floating-point values only
+0086: $5245 = $5209 // floating-point values only
+0086: $5246 = $5210 // floating-point values only
+
+:BIKE1_7912
+if
+  $5251 == 7 // integer values
+jf @BIKE1_7978
+0086: $5241 = $5208 // floating-point values only
+0086: $5242 = $5209 // floating-point values only
+0086: $5243 = $5210 // floating-point values only
+0086: $5244 = $5211 // floating-point values only
+0086: $5245 = $5212 // floating-point values only
+0086: $5246 = $5213 // floating-point values only
+
+:BIKE1_7978
+if
+  $5251 == 8 // integer values
+jf @BIKE1_8044
+0086: $5241 = $5211 // floating-point values only
+0086: $5242 = $5212 // floating-point values only
+0086: $5243 = $5213 // floating-point values only
+0086: $5244 = $5214 // floating-point values only
+0086: $5245 = $5215 // floating-point values only
+0086: $5246 = $5216 // floating-point values only
+
+:BIKE1_8044
+if
+  $5251 == 9 // integer values
+jf @BIKE1_8110
+0086: $5241 = $5214 // floating-point values only
+0086: $5242 = $5215 // floating-point values only
+0086: $5243 = $5216 // floating-point values only
+0086: $5244 = $5217 // floating-point values only
+0086: $5245 = $5218 // floating-point values only
+0086: $5246 = $5219 // floating-point values only
+
+:BIKE1_8110
+if
+  $5251 == 10 // integer values
+jf @BIKE1_8176
+0086: $5241 = $5217 // floating-point values only
+0086: $5242 = $5218 // floating-point values only
+0086: $5243 = $5219 // floating-point values only
+0086: $5244 = $5220 // floating-point values only
+0086: $5245 = $5221 // floating-point values only
+0086: $5246 = $5222 // floating-point values only
+
+:BIKE1_8176
+if
+  $5251 == 11 // integer values
+jf @BIKE1_8242
+0086: $5241 = $5220 // floating-point values only
+0086: $5242 = $5221 // floating-point values only
+0086: $5243 = $5222 // floating-point values only
+0086: $5244 = $5223 // floating-point values only
+0086: $5245 = $5224 // floating-point values only
+0086: $5246 = $5225 // floating-point values only
+
+:BIKE1_8242
+if
+  $5251 == 12 // integer values
+jf @BIKE1_8308
+0086: $5241 = $5223 // floating-point values only
+0086: $5242 = $5224 // floating-point values only
+0086: $5243 = $5225 // floating-point values only
+0086: $5244 = $5226 // floating-point values only
+0086: $5245 = $5227 // floating-point values only
+0086: $5246 = $5228 // floating-point values only
+
+:BIKE1_8308
+if
+  $5251 == 13 // integer values
+jf @BIKE1_8374
+0086: $5241 = $5226 // floating-point values only
+0086: $5242 = $5227 // floating-point values only
+0086: $5243 = $5228 // floating-point values only
+0086: $5244 = $5229 // floating-point values only
+0086: $5245 = $5230 // floating-point values only
+0086: $5246 = $5231 // floating-point values only
+
+:BIKE1_8374
+if
+  $5251 == 14 // integer values
+jf @BIKE1_8440
+0086: $5241 = $5229 // floating-point values only
+0086: $5242 = $5230 // floating-point values only
+0086: $5243 = $5231 // floating-point values only
+0086: $5244 = $5232 // floating-point values only
+0086: $5245 = $5233 // floating-point values only
+0086: $5246 = $5234 // floating-point values only
+
+:BIKE1_8440
+if
+  $5251 == 15 // integer values
+jf @BIKE1_8506
+0086: $5241 = $5232 // floating-point values only
+0086: $5242 = $5233 // floating-point values only
+0086: $5243 = $5234 // floating-point values only
+0086: $5244 = $5235 // floating-point values only
+0086: $5245 = $5236 // floating-point values only
+0086: $5246 = $5237 // floating-point values only
+
+:BIKE1_8506
+if
+  $5251 == 16 // integer values
+jf @BIKE1_8572
+0086: $5241 = $5235 // floating-point values only
+0086: $5242 = $5236 // floating-point values only
+0086: $5243 = $5237 // floating-point values only
+0086: $5244 = $5238 // floating-point values only
+0086: $5245 = $5239 // floating-point values only
+0086: $5246 = $5240 // floating-point values only
+
+:BIKE1_8572
+if
+  $5251 == 17 // integer values
+jf @BIKE1_8638
+0086: $5241 = $5238 // floating-point values only
+0086: $5242 = $5239 // floating-point values only
+0086: $5243 = $5240 // floating-point values only
+0086: $5244 = $5238 // floating-point values only
+0086: $5245 = $5239 // floating-point values only
+0086: $5246 = $5240 // floating-point values only
+
+:BIKE1_8638
+return
+
+:BIKE1_8640
+$5249 = Car.Health($5250)
+if
+  500 > $5249 // integer values
+jf @BIKE1_8675
+Car.Health($5250) = 1000
+
+:BIKE1_8675
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_9280
+if
+   not Actor.Dead($5256)
+jf @BIKE1_9280
+if
+03CE:   car $5250 stuck
+jf @BIKE1_9280
+if and
+82CA:   not car $5250 bounding_sphere_visible
+80FB:   not player $PLAYER_CHAR 0 $5256 radius 30.0 30.0 30.0
+jf @BIKE1_9280
+Car.StorePos($5250, $5173, $5174, $5175)
+02C1: set $5173 $5174 $5175 to_car_path_coords_closest_to $5173 $5174 $5175
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_9033
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_9026
+Car.PutAt($5250, $5173, $5174, $5175)
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_9019
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_8988
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_9019
+
+:BIKE1_8988
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_9019
+$5255 = 0 // integer values
+
+:BIKE1_9026
+jump @BIKE1_9280
+
+:BIKE1_9033
+04D3: get_nearest_car_path_coords_from $5173 $5174 $5175 type 2 store_to $5173 $5174 $5175
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_9280
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_9280
+Car.PutAt($5250, $5173, $5174, $5175)
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_9273
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_9242
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_9273
+
+:BIKE1_9242
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_9273
+$5255 = 0 // integer values
+
+:BIKE1_9280
+0084: $5270 = $5134 // integer values and handles
+$5270 -= 2 // integer values
+if
+001C:   $5270 > $5251 // integer values
+jf @BIKE1_9480
+if
+   not Car.Wrecked($5250)
+jf @BIKE1_9480
+if
+   not Actor.Dead($5256)
+jf @BIKE1_9480
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_9480
+if
+82CA:   not car $5250 bounding_sphere_visible
+jf @BIKE1_9480
+if
+838A:   not car_in_cube $5241 $5242 $5243 4.0 4.0 3.0
+jf @BIKE1_9480
+if
+80C2:   not sphere_onscreen $5241 $5242 $5243 4.0
+jf @BIKE1_9480
+Car.PutAt($5250, $5241, $5242, $5243)
+039F: car $5250 race_to $5125 $5126
+04BA: set_car $5250 speed_instantly 30.0
+
+:BIKE1_9480
+return
+
+:BIKE1_9482
+if
+   not Actor.Dead($5256)
+jf @BIKE1_10520
+$5263 = Actor.Health($5256)
+if
+   not Actor.Driving($5256)
+jf @BIKE1_10359
+$5271 = 1 // integer values
+if
+82CB:   not actor $5256 bounding_sphere_visible
+jf @BIKE1_10165
+if
+80FB:   not player $PLAYER_CHAR 0 $5256 radius 20.0 20.0 10.0
+jf @BIKE1_10158
+Actor.StorePos($5256, $5257, $5258, $5259)
+02C1: set $5173 $5174 $5175 to_car_path_coords_closest_to $5257 $5258 $5259
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_10158
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_9879
+03CD: car $5250 remove_from_stuck_car_check
+Car.RemoveReferences($5250)
+$5250 = Car.Create(#ANGEL, $5173, $5174, $5175)
+03CC: car $5250 add_to_stuck_car_check 1.0 = 2000
+011C: actor $5256 clear_objective
+036A: put_actor $5256 in_car $5250
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_9872
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_9841
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_9872
+
+:BIKE1_9841
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_9872
+jump @BIKE1_10158
+
+:BIKE1_9879
+04D3: get_nearest_car_path_coords_from $5173 $5174 $5175 type 2 store_to $5173 $5174 $5175
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_10158
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_10158
+03CD: car $5250 remove_from_stuck_car_check
+Car.RemoveReferences($5250)
+$5250 = Car.Create(#ANGEL, $5173, $5174, $5175)
+03CC: car $5250 add_to_stuck_car_check 1.0 = 2000
+011C: actor $5256 clear_objective
+036A: put_actor $5256 in_car $5250
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_10158
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_10127
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_10158
+
+:BIKE1_10127
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_10158
+jump @BIKE1_10352
+
+:BIKE1_10165
+if
+   not Car.Wrecked($5250)
+jf @BIKE1_10332
+0319: set_actor $5256 running 1
+01D5: actor $5256 go_to_and_drive_car $5250
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_10325
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_10294
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_10325
+
+:BIKE1_10294
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_10325
+jump @BIKE1_10352
+
+:BIKE1_10332
+01CA: actor $5256 kill_player $PLAYER_CHAR
+01B2: give_actor $5256 weapon 23 ammo 300000 // Load the weapon model before using this
+
+:BIKE1_10352
+jump @BIKE1_10520
+
+:BIKE1_10359
+if
+  $5271 == 1 // integer values
+jf @BIKE1_10520
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_10520
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_10482
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+$5271 = 0 // integer values
+jump @BIKE1_10520
+
+:BIKE1_10482
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+$5271 = 0 // integer values
+
+:BIKE1_10520
+return
+
+:BIKE1_10522
+if
+003A:   $5134 == $5251 // integer values and handles
+jf @BIKE1_10746
+Actor.StorePos($5256, $5173, $5174, $5175)
+0086: $5177 = $5173 // floating-point values only
+0061: $5177 -= $5125 // floating-point values
+0086: $5178 = $5174 // floating-point values only
+0061: $5178 -= $5126 // floating-point values
+0069: $5177 *= $5177 // floating-point values
+0069: $5178 *= $5178 // floating-point values
+0086: $5179 = $5177 // floating-point values only
+0059: $5179 += $5178 // floating-point values
+01FB: $5180 = square_root $5179
+0054: store_player $PLAYER_CHAR position_to $5173 $5174 $5175
+0086: $5177 = $5173 // floating-point values only
+0061: $5177 -= $5125 // floating-point values
+0086: $5178 = $5174 // floating-point values only
+0061: $5178 -= $5126 // floating-point values
+0069: $5177 *= $5177 // floating-point values
+0069: $5178 *= $5178 // floating-point values
+0086: $5179 = $5177 // floating-point values only
+0059: $5179 += $5178 // floating-point values
+01FB: $5124 = square_root $5179
+if
+0024:   $5124 > $5180 // floating-point values only
+jf @BIKE1_10739
+$5252 += 1 // integer values
+
+:BIKE1_10739
+jump @BIKE1_10772
+
+:BIKE1_10746
+if
+001C:   $5251 > $5134 // integer values
+jf @BIKE1_10772
+$5252 += 1 // integer values
+
+:BIKE1_10772
+return
+
+:BIKE1_10774
+if
+   not Actor.Dead($5256)
+jf @BIKE1_11532
+if
+04AD:   actor $5256 in_water
+jf @BIKE1_11525
+if
+82CB:   not actor $5256 bounding_sphere_visible
+jf @BIKE1_11525
+if
+80FB:   not player $PLAYER_CHAR 0 $5256 radius 10.0 10.0 10.0
+jf @BIKE1_11525
+Actor.StorePos($5256, $5257, $5258, $5259)
+02C1: set $5173 $5174 $5175 to_car_path_coords_closest_to $5257 $5258 $5259
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_11201
+if
+   not Actor.Dead($5256)
+jf @BIKE1_11172
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_11165
+03CD: car $5250 remove_from_stuck_car_check
+Car.RemoveReferences($5250)
+$5250 = Car.Create(#ANGEL, $5173, $5174, $5175)
+03CC: car $5250 add_to_stuck_car_check 1.0 = 2000
+011C: actor $5256 clear_objective
+036A: put_actor $5256 in_car $5250
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_11165
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_11134
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_11165
+
+:BIKE1_11134
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_11165
+jump @BIKE1_11194
+
+:BIKE1_11172
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_11194
+jump @BIKE1_11525
+
+:BIKE1_11201
+04D3: get_nearest_car_path_coords_from $5173 $5174 $5175 type 2 store_to $5173 $5174 $5175
+if
+838A:   not car_in_cube $5173 $5174 $5175 4.0 4.0 3.0
+jf @BIKE1_11525
+if
+   not Actor.Dead($5256)
+jf @BIKE1_11503
+if
+80C2:   not sphere_onscreen $5173 $5174 $5175 4.0
+jf @BIKE1_11496
+03CD: car $5250 remove_from_stuck_car_check
+Car.RemoveReferences($5250)
+$5250 = Car.Create(#ANGEL, $5173, $5174, $5175)
+03CC: car $5250 add_to_stuck_car_check 1.0 = 2000
+011C: actor $5256 clear_objective
+036A: put_actor $5256 in_car $5250
+039F: car $5250 race_to $5241 $5242
+if
+   Actor.InCar($5256, $5250)
+jf @BIKE1_11496
+if or
+  $5137 == 7.0 // floating-point values
+  $5149 == 7.0 // floating-point values
+  $5162 == 7.0 // floating-point values
+jf @BIKE1_11465
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+Car.DriveTo($5250, $5241, $5242, $5243)
+jump @BIKE1_11496
+
+:BIKE1_11465
+00AE: set_vehicle $5250 traffic_behavior_to 2
+Car.SetMaxSpeed($5250, 63.0)
+02C2: car $5250 drive_to_point $5241 $5242 $5243
+
+:BIKE1_11496
+jump @BIKE1_11525
+
+:BIKE1_11503
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_11525
+jump @BIKE1_11554
+
+:BIKE1_11532
+00BC: text_highpriority 'BM1_3' 5000 ms 1  // ~r~The racers have been attacked!
+jump @BIKE1_6983
+
+:BIKE1_11554
+return

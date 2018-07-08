@@ -1,0 +1,5652 @@
+:COL_4
+gosub @COL_4_36
+if
+wasted_or_busted
+jf @COL_4_27
+gosub @COL_4_28407
+
+:COL_4_27
+gosub @COL_4_28487
+end_thread
+
+:COL_4_36
+$ONMISSION = 1 // integer values
+$1603 = 1 // integer values
+thread 'COL_4'
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'GENERA4'
+058E: set_restart_mission_taxi_destination -163.0 -1439.4 9.0 201.5
+9@ = 7.5 // floating-point values
+14@ = 7.5 // floating-point values
+$2656 = 7.5 // floating-point values
+$2471 = -1 // integer values
+$2506 = -1 // integer values
+$2507 = -1 // integer values
+$2495 = -1 // integer values
+$2496 = -1 // integer values
+$2497 = -1 // integer values
+$2498 = -1 // integer values
+$2494 = -1 // integer values
+$2499 = -1 // integer values
+$2500 = -1 // integer values
+$2501 = -1 // integer values
+$2502 = -1 // integer values
+$2505 = -1 // integer values
+$2521 = 0 // integer values
+$2522 = 0 // integer values
+$2525 = 0 // integer values
+$2526 = 0 // integer values
+$2527 = 0 // integer values
+$2530 = 0 // integer values
+$2517 = 0 // integer values
+$2518 = 0 // integer values
+$2531 = 0 // integer values
+$2543 = 0 // integer values
+$2544 = 0 // integer values
+$2519 = 0 // integer values
+$2520 = 0 // integer values
+$2647 = 0.0 // floating-point values
+$2533 = 0 // integer values
+$2534 = 0 // integer values
+$2536 = 0 // integer values
+$2537 = 0 // integer values
+$2548 = 0 // integer values
+$2549 = 0 // integer values
+$2550 = 0 // integer values
+$2551 = 0 // integer values
+$2552 = 0 // integer values
+$2553 = 0 // integer values
+$2554 = 0 // integer values
+$2555 = 0 // integer values
+$2539 = 0 // integer values
+$2540 = 0 // integer values
+$2541 = 0 // integer values
+$2542 = 0 // integer values
+$2558 = 0 // integer values
+$2559 = 0 // integer values
+$2612 = 0 // integer values
+$2523 = 0 // integer values
+$2524 = 0 // integer values
+$2613 = 0 // integer values
+$2556 = 0 // integer values
+$2557 = 0 // integer values
+$2652 = 0.0 // floating-point values
+$2653 = 0.0 // floating-point values
+$2648 = 0.0 // floating-point values
+$2649 = 0.0 // floating-point values
+$2650 = 0.0 // floating-point values
+$2651 = 0.0 // floating-point values
+$2645 = 0.0 // floating-point values
+$2646 = 0.0 // floating-point values
+10@ = -100.0 // floating-point values
+$2659 = 0.0 // floating-point values
+$2660 = 0.0 // floating-point values
+$2663 = 0.0 // floating-point values
+$2665 = 0.0 // floating-point values
+$2664 = 0.0 // floating-point values
+$2666 = 0.0 // floating-point values
+$2616 = 0 // integer values
+$2617 = 0 // integer values
+$2618 = 0 // integer values
+$2619 = 0 // integer values
+$2620 = 0 // integer values
+$2607 = 0 // integer values
+$2560 = 0 // integer values
+$2561 = 0 // integer values
+$2562 = 0 // integer values
+$2563 = 0 // integer values
+$2564 = 0 // integer values
+$2567 = 0 // integer values
+$2568 = 0 // integer values
+$2569 = 0 // integer values
+$2570 = 0 // integer values
+$2571 = 0 // integer values
+$2573 = 0 // integer values
+$2574 = 0 // integer values
+$2575 = 0 // integer values
+$2576 = 0 // integer values
+$2577 = 0 // integer values
+$2579 = 0 // integer values
+$2580 = 0 // integer values
+$2581 = 0 // integer values
+$2582 = 0 // integer values
+$2583 = 0 // integer values
+$2584 = 0 // integer values
+$2589 = 0 // integer values
+$2603 = 0 // integer values
+$2605 = 0 // integer values
+$2608 = 0 // integer values
+$2609 = 0 // integer values
+$2614 = 0 // integer values
+$2610 = 0 // integer values
+$2615 = 0 // integer values
+$2545 = 0 // integer values
+$2546 = 0 // integer values
+$2532 = 0 // integer values
+$2528 = 0 // integer values
+$2565 = 0 // integer values
+$2535 = 0 // integer values
+$2621 = 0 // integer values
+$2622 = 0 // integer values
+$2623 = 0 // integer values
+$2624 = 0 // integer values
+$2625 = 0 // integer values
+$2626 = 0 // integer values
+$2627 = 0 // integer values
+$2628 = 0 // integer values
+$2538 = 0 // integer values
+$2629 = 0 // integer values
+$2630 = 0 // integer values
+$2611 = 0 // integer values
+$2547 = 0 // integer values
+$2529 = 0 // integer values
+$2631 = 0 // integer values
+$2632 = 0 // integer values
+$2633 = 0 // integer values
+$2634 = 0 // integer values
+$2635 = 0 // integer values
+$2572 = 0 // integer values
+$2578 = 0 // integer values
+$2636 = 0 // integer values
+$2637 = 0 // integer values
+$2638 = 0 // integer values
+$2642 = 0 // integer values
+$2643 = 0 // integer values
+$2644 = 0 // integer values
+$2595 = 0 // integer values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSCOLO'
+Model.Load(#YT_MAIN_BODY)
+Model.Load(#YT_MAIN_BODY2)
+Model.Load(#YT_DOORS14)
+Model.Load(#YT_TMP_BOAT)
+Model.Load(#LODMAIN_BODY)
+Model.Load(#BIG_POLY_TINGS)
+Model.Load(#YT_GANGPLNK_TMP)
+038B: load_requested_models
+
+:COL_4_1175
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @COL_4_1205
+wait 0
+jump @COL_4_1175
+
+:COL_4_1205
+if or
+   not Model.Available(#YT_MAIN_BODY)
+   not Model.Available(#YT_MAIN_BODY2)
+   not Model.Available(#YT_DOORS14)
+   not Model.Available(#YT_TMP_BOAT)
+   not Model.Available(#LODMAIN_BODY)
+   not Model.Available(#BIG_POLY_TINGS)
+jf @COL_4_1251
+wait 0
+jump @COL_4_1205
+
+:COL_4_1251
+if
+   not Model.Available(#YT_GANGPLNK_TMP)
+jf @COL_4_1277
+wait 0
+jump @COL_4_1251
+
+:COL_4_1277
+041D: set_camera_near_clip 0.1
+02E4: load_cutscene_data 'COL_4A'
+Object.StorePos($714, $448, $449, $450)
+$448 += 0.003 // floating-point values
+$449 -= 1.381 // floating-point values
+$450 += 3.149 // floating-point values
+0244: set_cutscene_pos $448 $449 $450
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSCOLO'
+04E4: unknown_refresh_game_renderer_at -244.2799 -1360.67
+0395: clear_area 1 at -244.2799 -1360.67 range 7.0786 1.0
+0055: put_player $PLAYER_CHAR at -244.2799 -1360.67 7.0786
+0171: set_player $PLAYER_CHAR z_angle_to 279.1362
+Camera.SetBehindPlayer
+0169: set_fade_color 0 0 1
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+$2781 = 210 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_01' 10000 ms 1  // Diaz was pleased, and would like to meet you again.
+$2781 = 2773 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_02' 10000 ms 1  // Is that a good thing?
+$2781 = 3669 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_03' 10000 ms 1  // Of course! Although I'm starting to think that Diaz was responsible for our unfortunate loss...
+$2781 = 8935 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_04' 10000 ms 1  // What makes you say that?
+$2781 = 10386 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_05' 10000 ms 1  // One does not wave accusations at a man like Diaz - I'm merely thinking out loud...
+$2781 = 14243 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_06' 10000 ms 1  // No matter. I have a proposal that you could profit from...
+$2781 = 16762 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_07' 10000 ms 1  // I don't have time to run more errands, Cortez.
+$2781 = 19154 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_08' 10000 ms 1  // I would have thought a man with such dangerous debts would be hungry for opportunities. Please, Tommy, at least hear me out.
+$2781 = 25653 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL4_09' 10000 ms 1  // Go on...
+$2781 = 26526 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL410' 10000 ms 1  // I have a buyer for a piece of military hardware that is being taken through town. Pick it up for me...
+$2781 = 32640 // integer values
+gosub @COL_4_31318
+00BC: text_highpriority 'COL411' 10000 ms 1  // and once you get it, I want you to call me immediately, then...
+$2781 = 34964 // integer values
+gosub @COL_4_31318
+0169: set_fade_color 0 0 1
+fade 0 1500
+00BE: text_clear_all
+
+:COL_4_1851
+if
+fading
+jf @COL_4_1875
+wait 0
+jump @COL_4_1851
+
+:COL_4_1875
+if
+82E9:   not cutscene_reached_end
+jf @COL_4_1899
+wait 0
+jump @COL_4_1875
+
+:COL_4_1899
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#YT_MAIN_BODY)
+Model.Destroy(#YT_MAIN_BODY2)
+Model.Destroy(#YT_DOORS14)
+Model.Destroy(#YT_TMP_BOAT)
+Model.Destroy(#LODMAIN_BODY)
+Model.Destroy(#BIG_POLY_TINGS)
+Model.Destroy(#YT_GANGPLNK_TMP)
+04E3: unknown_player $PLAYER_CHAR 1 60000
+Model.Load(#RHINO)
+Model.Load(#BARRACKS)
+Model.Load(#ARMY)
+Model.Load(#PATRIOT)
+Model.Load(#M4)
+038B: load_requested_models
+
+:COL_4_1981
+if or
+   not Model.Available(#RHINO)
+   not Model.Available(#BARRACKS)
+   not Model.Available(#ARMY)
+   not Model.Available(#PATRIOT)
+   not Model.Available(#M4)
+jf @COL_4_2027
+wait 0
+jump @COL_4_1981
+
+:COL_4_2027
+0169: set_fade_color 0 0 1
+fade 1 1500
+035E: set_player $PLAYER_CHAR armour_to 200
+0225: $7451 = player $PLAYER_CHAR health
+if
+  100 > $7451 // integer values
+jf @COL_4_2083
+0222: set_player $PLAYER_CHAR health_to 100
+
+:COL_4_2083
+if
+fading
+jf @COL_4_2107
+wait 0
+jump @COL_4_2083
+
+:COL_4_2107
+00BC: text_highpriority 'COL4_B1' 20000 ms 1  // ~g~Go and acquire the piece of military hardware that is being taken through town.
+01E8: create_forbidden_for_cars_cube -721.211 243.998 5.0 -651.211 693.998 25.0
+01E8: create_forbidden_for_cars_cube -760.362 101.883 5.0 -700.362 251.883 25.0
+01E8: create_forbidden_for_cars_cube -783.906 -46.826 5.0 -723.906 103.174 25.0
+01E8: create_forbidden_for_cars_cube -853.397 -149.692 5.0 -773.397 0.308 25.0
+01E8: create_forbidden_for_cars_cube -870.656 -594.54 5.0 -810.656 -144.54 25.0
+01E8: create_forbidden_for_cars_cube -837.282 -1041.814 5.0 -770.282 -591.814 25.0
+01E8: create_forbidden_for_cars_cube -827.532 -1539.617 5.0 -747.532 -1039.617 25.0
+0481:  6.0
+$2467 = Car.Create(#PATRIOT, -751.1733, 113.8836, 9.8756)
+Car.Angle($2467) = 167.7853
+Car.SetMaxSpeed($2467, 9@)
+00AE: set_vehicle $2467 traffic_behavior_to 4
+0466: unknown_car $2467 flag 0
+0229: set_car $2467 color_to 43 72
+Car.ImmuneToNonPlayer($2467) = True
+0129: $2473 = create_actor 4 #ARMY in_car $2467 driverseat
+0084: $2472 = $2473 // integer values and handles
+gosub @COL_4_30995
+01C8: $2474 = create_actor_pedtype 4 model #ARMY in_car $2467 passenger_seat 0
+0084: $2472 = $2474 // integer values and handles
+gosub @COL_4_30995
+02C2: car $2467 drive_to_point -843.4301 -1503.7 11.9556
+0506: vehicle_model 163 set_next_variation -1 1
+$2468 = Car.Create(#BARRACKS, -749.1604, 123.1814, 9.8749)
+Car.Angle($2468) = 167.7853
+Car.SetMaxSpeed($2468, 1.0)
+00AE: set_vehicle $2468 traffic_behavior_to 4
+0466: unknown_car $2468 flag 0
+Car.ImmuneToNonPlayer($2468) = True
+0129: $2477 = create_actor 4 #ARMY in_car $2468 driverseat
+0084: $2472 = $2477 // integer values and handles
+gosub @COL_4_30995
+01C8: $2478 = create_actor_pedtype 4 model #ARMY in_car $2468 passenger_seat 0
+0084: $2472 = $2478 // integer values and handles
+gosub @COL_4_30995
+$2485 = Actor.Create(CivMale, #ARMY, -686.0, 665.0, 10.1)
+0084: $2472 = $2485 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2485 into_turret_on_car $2468 at_car_offset 0.4242 -0.0679 1.1322 position 3 angle 270.0 with_weapon 26
+$2486 = Actor.Create(CivMale, #ARMY, -686.0, 664.0, 10.1)
+0084: $2472 = $2486 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2486 into_turret_on_car $2468 at_car_offset -0.7608 -1.4 1.1138 position 1 angle 270.0 with_weapon 26
+$2487 = Actor.Create(CivMale, #ARMY, -686.0, 663.0, 10.1)
+0084: $2472 = $2487 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2487 into_turret_on_car $2468 at_car_offset -0.7595 -3.5704 1.1108 position 2 angle 270.0 with_weapon 26
+$2488 = Actor.Create(CivMale, #ARMY, -686.0, 662.0, 10.1)
+0084: $2472 = $2488 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2488 into_turret_on_car $2468 at_car_offset 0.7158 -3.6996 1.1162 position 2 angle 270.0 with_weapon 26
+02C2: car $2468 drive_to_point -848.7084 -1482.733 10.992
+$2470 = Car.Create(#RHINO, -747.1234, 132.5895, 9.8742)
+Car.Angle($2470) = 167.7853
+Car.SetMaxSpeed($2470, 1.0)
+00AE: set_vehicle $2470 traffic_behavior_to 4
+0466: unknown_car $2470 flag 0
+$2516 = Marker.CreateAboveCar($2470)
+0493: set_tank $2470 contact_explosion 0
+0129: $2503 = create_actor 4 #ARMY in_car $2470 driverseat
+0084: $2472 = $2503 // integer values and handles
+gosub @COL_4_30995
+01C8: $2504 = create_actor_pedtype 4 model #ARMY in_car $2470 passenger_seat 0
+0084: $2472 = $2504 // integer values and handles
+gosub @COL_4_30995
+$2493 = Actor.Create(CivMale, #ARMY, -686.0, 662.0, 10.1)
+0084: $2472 = $2493 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2493 into_turret_on_car $2470 at_car_offset 0.0455 -1.0043 1.9962 position 0 angle 360.0 with_weapon 26
+02C2: car $2470 drive_to_point -838.3314 -1492.5 11.0623
+0506: vehicle_model 163 set_next_variation -1 1
+$2469 = Car.Create(#BARRACKS, -744.8403, 143.1341, 9.8734)
+Car.Angle($2469) = 167.7853
+00AE: set_vehicle $2469 traffic_behavior_to 4
+Car.SetMaxSpeed($2469, 1.0)
+0466: unknown_car $2469 flag 0
+Car.ImmuneToNonPlayer($2469) = True
+0129: $2481 = create_actor 4 #ARMY in_car $2469 driverseat
+0084: $2472 = $2481 // integer values and handles
+gosub @COL_4_30995
+01C8: $2482 = create_actor_pedtype 4 model #ARMY in_car $2469 passenger_seat 0
+0084: $2472 = $2482 // integer values and handles
+gosub @COL_4_30995
+$2489 = Actor.Create(CivMale, #ARMY, -686.0, 665.0, 10.1)
+0084: $2472 = $2489 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2489 into_turret_on_car $2469 at_car_offset 0.4242 -0.0679 1.1322 position 3 angle 270.0 with_weapon 26
+$2490 = Actor.Create(CivMale, #ARMY, -686.0, 664.0, 10.1)
+0084: $2472 = $2490 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2490 into_turret_on_car $2469 at_car_offset -0.7608 -1.4 1.1138 position 1 angle 270.0 with_weapon 26
+$2491 = Actor.Create(CivMale, #ARMY, -686.0, 663.0, 10.1)
+0084: $2472 = $2491 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2491 into_turret_on_car $2469 at_car_offset -0.7595 -3.5704 1.1108 position 2 angle 270.0 with_weapon 26
+$2492 = Actor.Create(CivMale, #ARMY, -686.0, 662.0, 10.1)
+0084: $2472 = $2492 // integer values and handles
+gosub @COL_4_30995
+0464: put_actor $2492 into_turret_on_car $2469 at_car_offset 0.7158 -3.6996 1.1162 position 2 angle 270.0 with_weapon 26
+02C2: car $2469 drive_to_point -856.1463 -1480.377 10.9387
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 2.0 0.0
+$2483 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2483 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2483 immune_to_nonplayer 1
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 -1.0 0.0
+$2484 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2484 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2484 immune_to_nonplayer 1
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 -4.0 0.0
+$2475 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2475 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2475 immune_to_nonplayer 1
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 2.0 0.0
+$2476 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2476 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2476 immune_to_nonplayer 1
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 -1.0 0.0
+$2479 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2479 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2479 immune_to_nonplayer 1
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 -4.0 0.0
+$2480 = Actor.Create(CivMale, #ARMY, $445, $446, 10.0)
+0084: $2472 = $2480 // integer values and handles
+gosub @COL_4_30995
+02A9: set_actor $2480 immune_to_nonplayer 1
+
+:COL_4_4011
+wait 0
+$2565 += 1 // integer values
+if
+  $2565 > 3 // integer values
+jf @COL_4_4047
+$2565 = 0 // integer values
+
+:COL_4_4047
+01BD: $4811 = current_time_in_ms
+if
+  $2565 == 0 // integer values
+jf @COL_4_5462
+if
+   not Car.Wrecked($2467)
+jf @COL_4_5430
+if
+80DC:   not player $PLAYER_CHAR driving $2467
+jf @COL_4_5336
+if
+   not Actor.Dead($2473)
+jf @COL_4_5279
+if
+   Actor.InCar($2473, $2467)
+jf @COL_4_5222
+Car.StorePos($2467, 0@, 1@, 2@)
+0088: $4862 = 0@ // floating-point values only
+$4862 -= -837.0244 // floating-point values
+0088: $4863 = 1@ // floating-point values only
+$4863 -= -1509.279 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2663 = square_root $4864
+if
+  $2525 == 0 // integer values
+jf @COL_4_4840
+if
+   not Actor.Dead($2474)
+jf @COL_4_4419
+if
+  $2630 == 0 // integer values
+jf @COL_4_4412
+if
+  $2533 == 5 // integer values
+jf @COL_4_4412
+if
+   Actor.InCar($2474, $2467)
+jf @COL_4_4365
+$2533 = 0 // integer values
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_4358
+$2527 = 0 // integer values
+
+:COL_4_4358
+jump @COL_4_4412
+
+:COL_4_4365
+if
+   Actor.Driving($2474)
+jf @COL_4_4404
+$2499 = Actor.CurrentCar($2474)
+01D3: actor $2474 leave_car $2499
+jump @COL_4_4412
+
+:COL_4_4404
+01D4: actor $2474 go_to_car $2467 and_enter_it_as_a_passenger
+
+:COL_4_4412
+jump @COL_4_4462
+
+:COL_4_4419
+if
+   not $2630 == 3 // integer values
+jf @COL_4_4462
+if
+  $2525 == 0 // integer values
+jf @COL_4_4462
+$2525 = 1 // integer values
+
+:COL_4_4462
+if
+   Actor.Dead($2473)
+jf @COL_4_4521
+if
+   not $2629 == 3 // integer values
+jf @COL_4_4521
+if
+  $2525 == 0 // integer values
+jf @COL_4_4521
+$2525 = 1 // integer values
+
+:COL_4_4521
+if
+031E:   vehicle $2467 hit_by_weapon 39
+jf @COL_4_4577
+if
+01FC:   player $PLAYER_CHAR near_car $2467 radius 20.0 20.0 0
+jf @COL_4_4577
+$2636 = 1 // integer values
+
+:COL_4_4577
+if
+031E:   vehicle $2467 hit_by_weapon 47
+jf @COL_4_4629
+$2639 = Car.Health($2467)
+if
+  800 > $2639 // integer values
+jf @COL_4_4629
+$2525 = 1 // integer values
+
+:COL_4_4629
+0468: set_vehicle $2467 clear_last_weapon_damage
+if
+81AD:   not car $2467 sphere 0 near_point -838.3314 -1490.493 radius 50.0 50.0
+jf @COL_4_4746
+0086: $2667 = $2665 // floating-point values only
+0061: $2667 -= $2663 // floating-point values
+if
+  $2667 > 20.0 // floating-point values
+jf @COL_4_4736
+Car.SetMaxSpeed($2467, 0.0)
+0477: set_car $2467 action 1 time 200
+jump @COL_4_4746
+
+:COL_4_4736
+Car.SetMaxSpeed($2467, 7.5)
+
+:COL_4_4746
+if
+   not $2630 == 3 // integer values
+jf @COL_4_4795
+0084: $2506 = $2467 // integer values and handles
+0084: $2507 = $2474 // integer values and handles
+0087: 10@ = 2@ // floating-point values only
+gosub @COL_4_28778
+
+:COL_4_4795
+if
+  $2527 == 1 // integer values
+jf @COL_4_4833
+Car.SetMaxSpeed($2467, 0.0)
+0477: set_car $2467 action 1 time 500
+
+:COL_4_4833
+jump @COL_4_5215
+
+:COL_4_4840
+if
+  $2595 == 1 // integer values
+jf @COL_4_5058
+if or
+  $2612 == 2 // integer values
+  $2612 == 3 // integer values
+jf @COL_4_4890
+$2612 = 0 // integer values
+
+:COL_4_4890
+if
+  $2612 == 0 // integer values
+jf @COL_4_4939
+Car.SetMaxSpeed($2467, 100.0)
+00AE: set_vehicle $2467 traffic_behavior_to 2
+Car.SetDriverBehaviour($2467, KillThePlayer)
+$2612 = 1 // integer values
+
+:COL_4_4939
+if
+  $2612 == 1 // integer values
+jf @COL_4_5051
+if
+  $2613 == 10 // integer values
+jf @COL_4_5044
+if
+01FC:   player $PLAYER_CHAR near_car $2467 radius 20.0 20.0 0
+jf @COL_4_5030
+if
+   not Actor.Dead($2474)
+jf @COL_4_5030
+01CA: actor $2474 kill_player $PLAYER_CHAR
+
+:COL_4_5030
+$2613 = 0 // integer values
+jump @COL_4_5051
+
+:COL_4_5044
+$2613 += 1 // integer values
+
+:COL_4_5051
+jump @COL_4_5215
+
+:COL_4_5058
+if or
+  $2612 == 0 // integer values
+  $2612 == 1 // integer values
+jf @COL_4_5090
+$2612 = 2 // integer values
+
+:COL_4_5090
+if
+  $2612 == 2 // integer values
+jf @COL_4_5146
+Car.SetMaxSpeed($2467, 100.0)
+00AE: set_vehicle $2467 traffic_behavior_to 2
+Car.DriveTo($2467, 3@, 4@, 5@)
+$2612 = 3 // integer values
+
+:COL_4_5146
+if
+  $2612 == 3 // integer values
+jf @COL_4_5215
+if
+01AD:   car $2467 sphere 0 near_point 3@ 4@ radius 20.0 20.0
+jf @COL_4_5215
+Car.SetDriverBehaviour($2467, 11)
+0477: set_car $2467 action 1 time 500
+
+:COL_4_5215
+jump @COL_4_5272
+
+:COL_4_5222
+if
+   not $2629 == 3 // integer values
+jf @COL_4_5272
+$2521 = 1 // integer values
+if
+  $2525 == 0 // integer values
+jf @COL_4_5272
+$2525 = 1 // integer values
+
+:COL_4_5272
+jump @COL_4_5329
+
+:COL_4_5279
+if
+   not $2629 == 3 // integer values
+jf @COL_4_5329
+$2521 = 1 // integer values
+if
+  $2525 == 0 // integer values
+jf @COL_4_5329
+$2525 = 1 // integer values
+
+:COL_4_5329
+jump @COL_4_5423
+
+:COL_4_5336
+Car.ImmuneToNonPlayer($2467) = False
+if
+   not Actor.Dead($2473)
+jf @COL_4_5367
+01CA: actor $2473 kill_player $PLAYER_CHAR
+
+:COL_4_5367
+if
+   not Actor.Dead($2474)
+jf @COL_4_5391
+01CA: actor $2474 kill_player $PLAYER_CHAR
+
+:COL_4_5391
+if
+  $2525 == 0 // integer values
+jf @COL_4_5416
+$2525 = 1 // integer values
+
+:COL_4_5416
+$2521 = 1 // integer values
+
+:COL_4_5423
+jump @COL_4_5462
+
+:COL_4_5430
+if
+  $2525 == 0 // integer values
+jf @COL_4_5455
+$2525 = 1 // integer values
+
+:COL_4_5455
+$2521 = 1 // integer values
+
+:COL_4_5462
+if
+  $2565 == 1 // integer values
+jf @COL_4_7208
+if
+   not Car.Wrecked($2468)
+jf @COL_4_6988
+if
+80DC:   not player $PLAYER_CHAR driving $2468
+jf @COL_4_6894
+if
+   not Actor.Dead($2477)
+jf @COL_4_6855
+if
+   Actor.InCar($2477, $2468)
+jf @COL_4_6816
+Car.StorePos($2468, 6@, 7@, 8@)
+0088: $4862 = 6@ // floating-point values only
+$4862 -= -837.0244 // floating-point values
+0088: $4863 = 7@ // floating-point values only
+$4863 -= -1509.279 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2665 = square_root $4864
+if
+  $2525 == 0 // integer values
+jf @COL_4_6434
+if
+   not Actor.Dead($2478)
+jf @COL_4_5811
+if
+  $2534 == 5 // integer values
+jf @COL_4_5804
+if
+   Actor.InCar($2478, $2468)
+jf @COL_4_5757
+$2534 = 0 // integer values
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_5750
+$2527 = 0 // integer values
+
+:COL_4_5750
+jump @COL_4_5804
+
+:COL_4_5757
+if
+   Actor.Driving($2478)
+jf @COL_4_5796
+$2500 = Actor.CurrentCar($2478)
+01D3: actor $2478 leave_car $2500
+jump @COL_4_5804
+
+:COL_4_5796
+01D4: actor $2478 go_to_car $2468 and_enter_it_as_a_passenger
+
+:COL_4_5804
+jump @COL_4_5836
+
+:COL_4_5811
+if
+  $2525 == 0 // integer values
+jf @COL_4_5836
+$2525 = 1 // integer values
+
+:COL_4_5836
+if
+   Actor.Dead($2477)
+jf @COL_4_5877
+if
+  $2525 == 0 // integer values
+jf @COL_4_5877
+$2525 = 1 // integer values
+
+:COL_4_5877
+if
+031E:   vehicle $2468 hit_by_weapon 39
+jf @COL_4_5933
+if
+01FC:   player $PLAYER_CHAR near_car $2468 radius 20.0 20.0 0
+jf @COL_4_5933
+$2637 = 1 // integer values
+
+:COL_4_5933
+if
+031E:   vehicle $2468 hit_by_weapon 47
+jf @COL_4_5985
+$2640 = Car.Health($2468)
+if
+  800 > $2640 // integer values
+jf @COL_4_5985
+$2525 = 1 // integer values
+
+:COL_4_5985
+0468: set_vehicle $2468 clear_last_weapon_damage
+if
+   not $2521 == 1 // integer values
+jf @COL_4_6295
+0088: $4862 = 6@ // floating-point values only
+0067: $4862 -= 0@ // floating-point values
+0088: $4863 = 7@ // floating-point values only
+0067: $4863 -= 1@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+0089: 9@ = $4864 // floating-point values only
+9@ -= 3.0 // floating-point values
+if
+  9@ > 100.0 // floating-point values
+jf @COL_4_6129
+9@ = 100.0 // floating-point values
+
+:COL_4_6129
+if
+  0.0 > 9@ // floating-point values
+jf @COL_4_6160
+9@ = 0.0 // floating-point values
+
+:COL_4_6160
+if
+81AD:   not car $2468 sphere 0 near_point -838.3314 -1490.493 radius 50.0 50.0
+jf @COL_4_6281
+if
+0024:   $2663 > $2665 // floating-point values only
+jf @COL_4_6227
+9@ = 0.0 // floating-point values
+
+:COL_4_6227
+0086: $2668 = $2664 // floating-point values only
+0061: $2668 -= $2665 // floating-point values
+if
+  $2668 > 20.0 // floating-point values
+jf @COL_4_6274
+9@ = 0.0 // floating-point values
+
+:COL_4_6274
+jump @COL_4_6288
+
+:COL_4_6281
+04E0: car $2468 abandon_path_radius 40
+
+:COL_4_6288
+jump @COL_4_6305
+
+:COL_4_6295
+9@ = 12.0 // floating-point values
+
+:COL_4_6305
+0084: $2506 = $2468 // integer values and handles
+0084: $2507 = $2478 // integer values and handles
+0087: 10@ = 8@ // floating-point values only
+gosub @COL_4_28778
+if
+  $2527 == 0 // integer values
+jf @COL_4_6407
+if
+  9@ == 0.0 // floating-point values
+jf @COL_4_6392
+0477: set_car $2468 action 1 time 200
+jump @COL_4_6400
+
+:COL_4_6392
+Car.SetMaxSpeed($2468, 9@)
+
+:COL_4_6400
+jump @COL_4_6427
+
+:COL_4_6407
+9@ = 0.0 // floating-point values
+0477: set_car $2468 action 1 time 500
+
+:COL_4_6427
+jump @COL_4_6809
+
+:COL_4_6434
+if
+  $2595 == 1 // integer values
+jf @COL_4_6652
+if or
+  $2523 == 2 // integer values
+  $2523 == 3 // integer values
+jf @COL_4_6484
+$2523 = 0 // integer values
+
+:COL_4_6484
+if
+  $2523 == 0 // integer values
+jf @COL_4_6533
+Car.SetMaxSpeed($2468, 100.0)
+00AE: set_vehicle $2468 traffic_behavior_to 2
+Car.SetDriverBehaviour($2468, KillThePlayer)
+$2523 = 1 // integer values
+
+:COL_4_6533
+if
+  $2523 == 1 // integer values
+jf @COL_4_6645
+if
+  $2556 == 10 // integer values
+jf @COL_4_6638
+if
+01FC:   player $PLAYER_CHAR near_car $2468 radius 20.0 20.0 0
+jf @COL_4_6624
+if
+   not Actor.Dead($2478)
+jf @COL_4_6624
+01CA: actor $2478 kill_player $PLAYER_CHAR
+
+:COL_4_6624
+$2556 = 0 // integer values
+jump @COL_4_6645
+
+:COL_4_6638
+$2556 += 1 // integer values
+
+:COL_4_6645
+jump @COL_4_6809
+
+:COL_4_6652
+if or
+  $2523 == 0 // integer values
+  $2523 == 1 // integer values
+jf @COL_4_6684
+$2523 = 2 // integer values
+
+:COL_4_6684
+if
+  $2523 == 2 // integer values
+jf @COL_4_6740
+Car.SetMaxSpeed($2468, 100.0)
+00AE: set_vehicle $2468 traffic_behavior_to 2
+Car.DriveTo($2468, 3@, 4@, 5@)
+$2523 = 3 // integer values
+
+:COL_4_6740
+if
+  $2523 == 3 // integer values
+jf @COL_4_6809
+if
+01AD:   car $2468 sphere 0 near_point 3@ 4@ radius 20.0 20.0
+jf @COL_4_6809
+Car.SetDriverBehaviour($2468, 11)
+0477: set_car $2468 action 1 time 500
+
+:COL_4_6809
+jump @COL_4_6848
+
+:COL_4_6816
+if
+  $2525 == 0 // integer values
+jf @COL_4_6841
+$2525 = 1 // integer values
+
+:COL_4_6841
+$2522 = 1 // integer values
+
+:COL_4_6848
+jump @COL_4_6887
+
+:COL_4_6855
+if
+  $2525 == 0 // integer values
+jf @COL_4_6880
+$2525 = 1 // integer values
+
+:COL_4_6880
+$2522 = 1 // integer values
+
+:COL_4_6887
+jump @COL_4_6981
+
+:COL_4_6894
+Car.ImmuneToNonPlayer($2468) = False
+if
+   not Actor.Dead($2477)
+jf @COL_4_6925
+01CA: actor $2477 kill_player $PLAYER_CHAR
+
+:COL_4_6925
+if
+   not Actor.Dead($2478)
+jf @COL_4_6949
+01CA: actor $2478 kill_player $PLAYER_CHAR
+
+:COL_4_6949
+if
+  $2525 == 0 // integer values
+jf @COL_4_6974
+$2525 = 1 // integer values
+
+:COL_4_6974
+$2522 = 1 // integer values
+
+:COL_4_6981
+jump @COL_4_7020
+
+:COL_4_6988
+if
+  $2525 == 0 // integer values
+jf @COL_4_7013
+$2525 = 1 // integer values
+
+:COL_4_7013
+$2522 = 1 // integer values
+
+:COL_4_7020
+0084: $2513 = $2485 // integer values and handles
+0084: $2514 = $2468 // integer values and handles
+0084: $2515 = $2477 // integer values and handles
+0084: $2566 = $2548 // integer values and handles
+gosub @COL_4_31355
+0084: $2548 = $2566 // integer values and handles
+0084: $2513 = $2486 // integer values and handles
+0084: $2514 = $2468 // integer values and handles
+0084: $2515 = $2477 // integer values and handles
+0084: $2566 = $2549 // integer values and handles
+gosub @COL_4_31355
+0084: $2549 = $2566 // integer values and handles
+0084: $2513 = $2487 // integer values and handles
+0084: $2514 = $2468 // integer values and handles
+0084: $2515 = $2477 // integer values and handles
+0084: $2566 = $2550 // integer values and handles
+gosub @COL_4_31355
+0084: $2550 = $2566 // integer values and handles
+0084: $2513 = $2488 // integer values and handles
+0084: $2514 = $2468 // integer values and handles
+0084: $2515 = $2477 // integer values and handles
+0084: $2566 = $2551 // integer values and handles
+gosub @COL_4_31355
+0084: $2551 = $2566 // integer values and handles
+
+:COL_4_7208
+if
+  $2565 == 2 // integer values
+jf @COL_4_16056
+if
+   not Car.Wrecked($2470)
+jf @COL_4_16016
+if
+80DC:   not player $PLAYER_CHAR driving $2470
+jf @COL_4_15097
+if and
+03B1:   garage $689 door_closed
+  $2608 > 0 // integer values
+jf @COL_4_7306
+00BC: text_highpriority 'COL4_B2' 5000 ms 1  // ~r~The tank arrived at its destination safely!
+jump @COL_4_28407
+
+:COL_4_7306
+if
+  $2608 == 1 // integer values
+jf @COL_4_7580
+if
+01AD:   car $2470 sphere 0 near_point -836.007 -1500.523 radius 13.5 13.5
+jf @COL_4_7580
+if
+02B3:   player $PLAYER_CHAR in_cube -823.448 -1488.083 10.852 -841.991 -1480.591 16.165 radius 30.0 sphere 0
+jf @COL_4_7580
+if
+00F5:   player $PLAYER_CHAR 0 -833.708 -1509.877 12.489 radius 4.0 6.0 1.5
+jf @COL_4_7495
+if
+  $2611 == 0 // integer values
+jf @COL_4_7488
+$2611 = 1 // integer values
+
+:COL_4_7488
+jump @COL_4_7580
+
+:COL_4_7495
+if or
+  3 > $2621 // integer values
+  3 > $2629 // integer values
+  3 > $2623 // integer values
+  3 > $2624 // integer values
+  3 > $2630 // integer values
+  3 > $2626 // integer values
+jf @COL_4_7573
+if
+  $2525 == 0 // integer values
+jf @COL_4_7573
+$2525 = 1 // integer values
+
+:COL_4_7573
+$2608 = 2 // integer values
+
+:COL_4_7580
+if
+01FC:   player $PLAYER_CHAR near_car $2470 radius 60.0 60.0 0
+jf @COL_4_7688
+$2610 = 1 // integer values
+if
+  $2615 == 0 // integer values
+jf @COL_4_7674
+00BC: text_highpriority 'COL4_B6' 5000 ms 1  // ~g~Find a way to steal the tank!
+0084: $2547 = $4811 // integer values and handles
+$2547 += 5000 // integer values
+$2615 = 1 // integer values
+
+:COL_4_7674
+Player.WantedLevel($PLAYER_CHAR) = 0
+jump @COL_4_7695
+
+:COL_4_7688
+$2610 = 0 // integer values
+
+:COL_4_7695
+if
+01FC:   player $PLAYER_CHAR near_car $2470 radius 250.0 250.0 0
+jf @COL_4_7740
+$2595 = 1 // integer values
+jump @COL_4_7747
+
+:COL_4_7740
+$2595 = 0 // integer values
+
+:COL_4_7747
+Car.StorePos($2470, 3@, 4@, 5@)
+0088: $4862 = 3@ // floating-point values only
+$4862 -= -837.0244 // floating-point values
+0088: $4863 = 4@ // floating-point values only
+$4863 -= -1509.279 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2664 = square_root $4864
+if
+   Actor.Dead($2503)
+jf @COL_4_7944
+if
+   not $2627 == 3 // integer values
+jf @COL_4_7944
+if
+  $2525 == 0 // integer values
+jf @COL_4_7944
+if
+056D:   actor $2503 defined
+jf @COL_4_7937
+Actor.StoreDeadActorPos($2503, $445, $446, $447)
+$2510 = Pickup.Create(#BODYARMOUR, 3, $445, $446, $447)
+
+:COL_4_7937
+$2525 = 1 // integer values
+
+:COL_4_7944
+if
+   Actor.Dead($2504)
+jf @COL_4_8051
+if
+   not $2628 == 3 // integer values
+jf @COL_4_8051
+if
+  $2525 == 0 // integer values
+jf @COL_4_8051
+if
+056D:   actor $2504 defined
+jf @COL_4_8044
+Actor.StoreDeadActorPos($2504, $445, $446, $447)
+$2511 = Pickup.Create(#BODYARMOUR, 3, $445, $446, $447)
+
+:COL_4_8044
+$2525 = 1 // integer values
+
+:COL_4_8051
+if
+  $2529 == 0 // integer values
+jf @COL_4_8204
+if
+   not $2544 == 2 // integer values
+jf @COL_4_8204
+if
+844A:   not player $PLAYER_CHAR on_foot
+jf @COL_4_8204
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -2.5017 0.3918 -0.1973
+if
+00E4:   player $PLAYER_CHAR 0 $445 $446 radius 1.0 1.0
+jf @COL_4_8204
+00BC: text_highpriority 'COL4_B4' 5000 ms 1  // ~g~The tank is locked. Find a way to lure out the occupants.
+0084: $2547 = $4811 // integer values and handles
+$2547 += 5000 // integer values
+$2529 = 1 // integer values
+
+:COL_4_8204
+if
+  $2572 == 0 // integer values
+jf @COL_4_8411
+if
+0495:   vehicle $2470 burning
+jf @COL_4_8411
+if
+   not Actor.Dead($2503)
+jf @COL_4_8281
+if
+   Actor.InCar($2503, $2470)
+jf @COL_4_8281
+01CE: actor $2503 avoid_player $PLAYER_CHAR
+
+:COL_4_8281
+if
+   not Actor.Dead($2504)
+jf @COL_4_8324
+if
+   Actor.InCar($2504, $2470)
+jf @COL_4_8324
+01CE: actor $2504 avoid_player $PLAYER_CHAR
+
+:COL_4_8324
+if
+  $2568 == 0 // integer values
+jf @COL_4_8365
+$2568 = 1 // integer values
+0084: $2591 = $4811 // integer values and handles
+$2591 += 6000 // integer values
+
+:COL_4_8365
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+if
+  $2525 == 0 // integer values
+jf @COL_4_8404
+$2525 = 1 // integer values
+
+:COL_4_8404
+$2572 = 1 // integer values
+
+:COL_4_8411
+if
+   not $2538 == 3 // integer values
+jf @COL_4_9004
+if
+   not Actor.Dead($2493)
+jf @COL_4_8519
+if
+  $2525 == 0 // integer values
+jf @COL_4_8504
+if
+  $2538 == 0 // integer values
+jf @COL_4_8497
+$4886 = Car.Angle($2470)
+Actor.Angle($2493) = $4886
+
+:COL_4_8497
+jump @COL_4_8512
+
+:COL_4_8504
+01CA: actor $2493 kill_player $PLAYER_CHAR
+
+:COL_4_8512
+jump @COL_4_9004
+
+:COL_4_8519
+if
+  $2525 == 0 // integer values
+jf @COL_4_8999
+if
+  $2558 == 0 // integer values
+jf @COL_4_8585
+$2527 = 1 // integer values
+$2558 = 1 // integer values
+0084: $2559 = $4811 // integer values and handles
+$2559 += 2000 // integer values
+
+:COL_4_8585
+if
+  $2558 == 1 // integer values
+jf @COL_4_8711
+if
+001C:   $4811 > $2559 // integer values
+jf @COL_4_8711
+if
+  $2574 == 0 // integer values
+jf @COL_4_8663
+$2574 = 1 // integer values
+0084: $2597 = $4811 // integer values and handles
+$2597 += 6000 // integer values
+
+:COL_4_8663
+if
+  $2584 == 0 // integer values
+jf @COL_4_8704
+$2584 = 1 // integer values
+0084: $2606 = $4811 // integer values and handles
+$2606 += 8000 // integer values
+
+:COL_4_8704
+$2558 = 2 // integer values
+
+:COL_4_8711
+if
+  $2558 == 2 // integer values
+jf @COL_4_8930
+if
+   not Actor.Dead($2503)
+jf @COL_4_8930
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 0.0 0.0
+0239: actor $2503 run_to $445 $446
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+if
+00ED:   actor $2503 0 $445 $446 radius 1.0 1.0
+jf @COL_4_8930
+011C: actor $2503 clear_objective
+Car.StorePos($2470, $445, $446, $447)
+if
+  $2569 == 0 // integer values
+jf @COL_4_8893
+$2569 = 1 // integer values
+0084: $2592 = $4811 // integer values and handles
+$2592 += 6000 // integer values
+
+:COL_4_8893
+01BE: set_actor $2503 to_look_at_spot $445 $446 $447
+$2558 = 3 // integer values
+0084: $2559 = $4811 // integer values and handles
+$2559 += 2000 // integer values
+
+:COL_4_8930
+if
+  $2558 == 3 // integer values
+jf @COL_4_8992
+if
+001C:   $4811 > $2559 // integer values
+jf @COL_4_8992
+if
+  $2525 == 0 // integer values
+jf @COL_4_8992
+$2525 = 1 // integer values
+
+:COL_4_8992
+jump @COL_4_9004
+
+:COL_4_8999
+0465: remove_actor $2493 from_turret_mode
+
+:COL_4_9004
+if
+  $2525 == 0 // integer values
+jf @COL_4_10841
+if
+  $2621 == 0 // integer values
+jf @COL_4_9178
+if
+   not Actor.Dead($2483)
+jf @COL_4_9135
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 2.0 0.0
+if
+  $2527 == 0 // integer values
+jf @COL_4_9128
+0411: set_actor $2483 use_pednode_seek 0
+0239: actor $2483 run_to $445 $446
+0411: set_actor $2483 use_pednode_seek 0
+
+:COL_4_9128
+jump @COL_4_9178
+
+:COL_4_9135
+if
+   not $2621 == 3 // integer values
+jf @COL_4_9178
+if
+  $2525 == 0 // integer values
+jf @COL_4_9178
+$2525 = 1 // integer values
+
+:COL_4_9178
+if
+  $2622 == 0 // integer values
+jf @COL_4_9316
+if
+   not Actor.Dead($2484)
+jf @COL_4_9273
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 -1.0 0.0
+0411: set_actor $2484 use_pednode_seek 0
+0239: actor $2484 run_to $445 $446
+0411: set_actor $2484 use_pednode_seek 0
+jump @COL_4_9316
+
+:COL_4_9273
+if
+   not $2622 == 3 // integer values
+jf @COL_4_9316
+if
+  $2525 == 0 // integer values
+jf @COL_4_9316
+$2525 = 1 // integer values
+
+:COL_4_9316
+if
+  $2623 == 0 // integer values
+jf @COL_4_9683
+if
+   not Actor.Dead($2475)
+jf @COL_4_9640
+if or
+  $2636 == 1 // integer values
+  $2637 == 1 // integer values
+  $2638 == 1 // integer values
+jf @COL_4_9556
+if
+  $2578 == 0 // integer values
+jf @COL_4_9448
+if
+  $2582 == 0 // integer values
+jf @COL_4_9441
+$2582 = 1 // integer values
+0084: $2604 = $4811 // integer values and handles
+$2604 += 6000 // integer values
+
+:COL_4_9441
+$2578 = 1 // integer values
+
+:COL_4_9448
+0350: set_actor $2475 maintain_position_when_attacked 1
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COL_4_9494
+03C1: $4790 = player $PLAYER_CHAR car_no_save
+01D9: actor $2475 destroy_car $4790
+jump @COL_4_9502
+
+:COL_4_9494
+01CA: actor $2475 kill_player $PLAYER_CHAR
+
+:COL_4_9502
+if
+001C:   $4811 > $2642 // integer values
+jf @COL_4_9549
+$2636 = 0 // integer values
+$2637 = 0 // integer values
+$2638 = 0 // integer values
+$2578 = 0 // integer values
+
+:COL_4_9549
+jump @COL_4_9633
+
+:COL_4_9556
+0350: set_actor $2475 maintain_position_when_attacked 0
+0084: $2642 = $4811 // integer values and handles
+$2642 += 6000 // integer values
+0407: create_coordinate $445 $446 $447 from_car $2470 offset 5.0 -4.0 0.0
+0411: set_actor $2475 use_pednode_seek 0
+0239: actor $2475 run_to $445 $446
+0411: set_actor $2475 use_pednode_seek 0
+
+:COL_4_9633
+jump @COL_4_9683
+
+:COL_4_9640
+if
+   not $2623 == 3 // integer values
+jf @COL_4_9683
+if
+  $2525 == 0 // integer values
+jf @COL_4_9683
+$2525 = 1 // integer values
+
+:COL_4_9683
+if
+01AD:   car $2470 sphere 0 near_point -860.463 -204.449 radius 8.0 75.0
+jf @COL_4_9735
+$2528 = 1 // integer values
+jump @COL_4_9742
+
+:COL_4_9735
+$2528 = 0 // integer values
+
+:COL_4_9742
+if
+  $2624 == 0 // integer values
+jf @COL_4_9952
+if
+   not Actor.Dead($2476)
+jf @COL_4_9909
+if
+  $2528 == 1 // integer values
+jf @COL_4_9830
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -3.5 -4.0 0.0
+jump @COL_4_9859
+
+:COL_4_9830
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 2.0 0.0
+
+:COL_4_9859
+if
+  $2527 == 0 // integer values
+jf @COL_4_9902
+0411: set_actor $2476 use_pednode_seek 0
+0239: actor $2476 run_to $445 $446
+0411: set_actor $2476 use_pednode_seek 0
+
+:COL_4_9902
+jump @COL_4_9952
+
+:COL_4_9909
+if
+   not $2624 == 3 // integer values
+jf @COL_4_9952
+if
+  $2525 == 0 // integer values
+jf @COL_4_9952
+$2525 = 1 // integer values
+
+:COL_4_9952
+if
+  $2625 == 0 // integer values
+jf @COL_4_10428
+if
+   not Actor.Dead($2479)
+jf @COL_4_10385
+if or
+  $2636 == 1 // integer values
+  $2637 == 1 // integer values
+  $2638 == 1 // integer values
+jf @COL_4_10224
+if
+   Actor.Dead($2475)
+jf @COL_4_10100
+if
+  $2578 == 0 // integer values
+jf @COL_4_10100
+if
+  $2582 == 0 // integer values
+jf @COL_4_10093
+$2582 = 1 // integer values
+0084: $2604 = $4811 // integer values and handles
+$2604 += 6000 // integer values
+
+:COL_4_10093
+$2578 = 1 // integer values
+
+:COL_4_10100
+0350: set_actor $2479 maintain_position_when_attacked 1
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COL_4_10146
+03C1: $4790 = player $PLAYER_CHAR car_no_save
+01D9: actor $2479 destroy_car $4790
+jump @COL_4_10154
+
+:COL_4_10146
+01CA: actor $2479 kill_player $PLAYER_CHAR
+
+:COL_4_10154
+if
+   Actor.Dead($2475)
+jf @COL_4_10217
+if
+001C:   $4811 > $2642 // integer values
+jf @COL_4_10217
+$2636 = 0 // integer values
+$2637 = 0 // integer values
+$2638 = 0 // integer values
+$2578 = 0 // integer values
+
+:COL_4_10217
+jump @COL_4_10378
+
+:COL_4_10224
+if
+   Actor.Dead($2475)
+jf @COL_4_10263
+0084: $2642 = $4811 // integer values and handles
+$2642 += 6000 // integer values
+jump @COL_4_10270
+
+:COL_4_10263
+0350: set_actor $2475 maintain_position_when_attacked 0
+
+:COL_4_10270
+if
+  $2528 == 1 // integer values
+jf @COL_4_10324
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -3.5 -1.0 0.0
+jump @COL_4_10353
+
+:COL_4_10324
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 -1.0 0.0
+
+:COL_4_10353
+0411: set_actor $2479 use_pednode_seek 0
+0239: actor $2479 run_to $445 $446
+0411: set_actor $2479 use_pednode_seek 0
+
+:COL_4_10378
+jump @COL_4_10428
+
+:COL_4_10385
+if
+   not $2625 == 3 // integer values
+jf @COL_4_10428
+if
+  $2525 == 0 // integer values
+jf @COL_4_10428
+$2525 = 1 // integer values
+
+:COL_4_10428
+if
+  $2626 == 0 // integer values
+jf @COL_4_10620
+if
+   not Actor.Dead($2480)
+jf @COL_4_10577
+if
+  $2528 == 1 // integer values
+jf @COL_4_10516
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -3.5 2.0 0.0
+jump @COL_4_10545
+
+:COL_4_10516
+0407: create_coordinate $445 $446 $447 from_car $2470 offset -5.0 -4.0 0.0
+
+:COL_4_10545
+0411: set_actor $2480 use_pednode_seek 0
+0239: actor $2480 run_to $445 $446
+0411: set_actor $2480 use_pednode_seek 0
+jump @COL_4_10620
+
+:COL_4_10577
+if
+   not $2626 == 3 // integer values
+jf @COL_4_10620
+if
+  $2525 == 0 // integer values
+jf @COL_4_10620
+$2525 = 1 // integer values
+
+:COL_4_10620
+if
+   not Actor.Dead($2504)
+jf @COL_4_10791
+if
+  $2628 == 0 // integer values
+jf @COL_4_10784
+if
+  $2536 == 5 // integer values
+jf @COL_4_10784
+if
+   Actor.InCar($2504, $2470)
+jf @COL_4_10737
+$2536 = 0 // integer values
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_10730
+$2527 = 0 // integer values
+
+:COL_4_10730
+jump @COL_4_10784
+
+:COL_4_10737
+if
+   Actor.Driving($2504)
+jf @COL_4_10776
+$2501 = Actor.CurrentCar($2504)
+01D3: actor $2504 leave_car $2501
+jump @COL_4_10784
+
+:COL_4_10776
+01D4: actor $2504 go_to_car $2470 and_enter_it_as_a_passenger
+
+:COL_4_10784
+jump @COL_4_10834
+
+:COL_4_10791
+if
+   not $2628 == 3 // integer values
+jf @COL_4_10834
+if
+  $2525 == 0 // integer values
+jf @COL_4_10834
+$2525 = 1 // integer values
+
+:COL_4_10834
+jump @COL_4_11328
+
+:COL_4_10841
+if
+  $2544 == 0 // integer values
+jf @COL_4_10884
+0084: $2543 = $4811 // integer values and handles
+$2543 += 100000 // integer values
+$2544 = 1 // integer values
+
+:COL_4_10884
+if
+  $2544 == 1 // integer values
+jf @COL_4_11184
+if
+   Car.Wrecked($2467)
+jf @COL_4_11062
+if
+   Car.Wrecked($2468)
+jf @COL_4_11062
+if
+   Car.Wrecked($2469)
+jf @COL_4_11062
+if
+   Actor.Dead($2483)
+jf @COL_4_11062
+if
+   Actor.Dead($2484)
+jf @COL_4_11062
+if
+   Actor.Dead($2475)
+jf @COL_4_11062
+if
+   Actor.Dead($2476)
+jf @COL_4_11062
+if
+   Actor.Dead($2479)
+jf @COL_4_11062
+if
+   Actor.Dead($2480)
+jf @COL_4_11062
+0084: $2543 = $4811 // integer values and handles
+$2543 -= 500 // integer values
+
+:COL_4_11062
+if
+001C:   $4811 > $2543 // integer values
+jf @COL_4_11184
+if
+   not Actor.Dead($2503)
+jf @COL_4_11105
+01CE: actor $2503 avoid_player $PLAYER_CHAR
+
+:COL_4_11105
+if
+   not Actor.Dead($2504)
+jf @COL_4_11129
+01CE: actor $2504 avoid_player $PLAYER_CHAR
+
+:COL_4_11129
+if
+  $2568 == 0 // integer values
+jf @COL_4_11170
+$2568 = 1 // integer values
+0084: $2591 = $4811 // integer values and handles
+$2591 += 6000 // integer values
+
+:COL_4_11170
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+
+:COL_4_11184
+if
+   not Actor.Dead($2483)
+jf @COL_4_11208
+01CA: actor $2483 kill_player $PLAYER_CHAR
+
+:COL_4_11208
+if
+   not Actor.Dead($2484)
+jf @COL_4_11232
+01CA: actor $2484 kill_player $PLAYER_CHAR
+
+:COL_4_11232
+if
+   not Actor.Dead($2475)
+jf @COL_4_11256
+01CA: actor $2475 kill_player $PLAYER_CHAR
+
+:COL_4_11256
+if
+   not Actor.Dead($2476)
+jf @COL_4_11280
+01CA: actor $2476 kill_player $PLAYER_CHAR
+
+:COL_4_11280
+if
+   not Actor.Dead($2479)
+jf @COL_4_11304
+01CA: actor $2479 kill_player $PLAYER_CHAR
+
+:COL_4_11304
+if
+   not Actor.Dead($2480)
+jf @COL_4_11328
+01CA: actor $2480 kill_player $PLAYER_CHAR
+
+:COL_4_11328
+if
+  $2525 == 0 // integer values
+jf @COL_4_14357
+if
+   not Actor.Dead($2503)
+jf @COL_4_11482
+if
+050D:   unknown_actor $2503 dead
+jf @COL_4_11482
+if
+   not Actor.Dead($2504)
+jf @COL_4_11482
+01CE: actor $2504 avoid_player $PLAYER_CHAR
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+if
+  $2567 == 0 // integer values
+jf @COL_4_11457
+$2567 = 1 // integer values
+0084: $2590 = $4811 // integer values and handles
+$2590 += 6000 // integer values
+
+:COL_4_11457
+if
+  $2525 == 0 // integer values
+jf @COL_4_11482
+$2525 = 1 // integer values
+
+:COL_4_11482
+if
+   not Actor.Dead($2504)
+jf @COL_4_12470
+if
+050D:   unknown_actor $2504 dead
+jf @COL_4_11618
+if
+   not Actor.Dead($2503)
+jf @COL_4_11618
+01CE: actor $2503 avoid_player $PLAYER_CHAR
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+if
+  $2567 == 0 // integer values
+jf @COL_4_11593
+$2567 = 1 // integer values
+0084: $2590 = $4811 // integer values and handles
+$2590 += 6000 // integer values
+
+:COL_4_11593
+if
+  $2525 == 0 // integer values
+jf @COL_4_11618
+$2525 = 1 // integer values
+
+:COL_4_11618
+if
+  $2616 == 0 // integer values
+jf @COL_4_11776
+if
+01AD:   car $2470 sphere 0 near_point -834.422 -634.884 radius 5.0 5.0
+jf @COL_4_11776
+$2527 = 1 // integer values
+if
+  $2536 == 0 // integer values
+jf @COL_4_11776
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+if
+  $2570 == 0 // integer values
+jf @COL_4_11754
+$2570 = 1 // integer values
+0084: $2593 = $4811 // integer values and handles
+$2593 += 6000 // integer values
+
+:COL_4_11754
+0239: actor $2504 run_to -844.5248 -639.313
+$2616 = 1 // integer values
+
+:COL_4_11776
+if
+  $2616 == 1 // integer values
+jf @COL_4_11854
+if
+00ED:   actor $2504 0 -844.5248 -639.313 radius 1.0 1.0
+jf @COL_4_11854
+0239: actor $2504 run_to -850.9821 -633.8697
+$2616 = 2 // integer values
+
+:COL_4_11854
+if
+  $2616 == 2 // integer values
+jf @COL_4_11933
+if
+00ED:   actor $2504 0 -850.9821 -633.8697 radius 1.0 1.0
+jf @COL_4_11933
+0084: $2617 = $4811 // integer values and handles
+$2617 += 2000 // integer values
+$2616 = 3 // integer values
+
+:COL_4_11933
+if
+  $2616 == 3 // integer values
+jf @COL_4_11992
+if
+001C:   $4811 > $2617 // integer values
+jf @COL_4_11992
+0239: actor $2504 run_to -850.9821 -633.8697
+$2616 = 4 // integer values
+
+:COL_4_11992
+if
+  $2616 == 4 // integer values
+jf @COL_4_12070
+if
+00ED:   actor $2504 0 -850.9821 -633.8697 radius 1.0 1.0
+jf @COL_4_12070
+0239: actor $2504 run_to -844.5248 -639.313
+$2616 = 5 // integer values
+
+:COL_4_12070
+if
+  $2616 == 5 // integer values
+jf @COL_4_12141
+if
+00ED:   actor $2504 0 -844.5248 -639.313 radius 1.0 1.0
+jf @COL_4_12141
+01D4: actor $2504 go_to_car $2470 and_enter_it_as_a_passenger
+$2616 = 6 // integer values
+
+:COL_4_12141
+if
+  $2616 == 6 // integer values
+jf @COL_4_12463
+if
+   Actor.InCar($2504, $2470)
+jf @COL_4_12463
+if
+  $2608 == 0 // integer values
+jf @COL_4_12411
+if
+  $2571 == 0 // integer values
+jf @COL_4_12237
+$2571 = 1 // integer values
+0084: $2594 = $4811 // integer values and handles
+$2594 += 6000 // integer values
+
+:COL_4_12237
+021B: set_garage $689 to_accept_car $2470
+0360: open_garage $689
+$2508 = Actor.Create(CivMale, #ARMY, -830.7947, -1500.054, 11.067)
+Actor.Angle($2508) = 2.1778
+01B2: give_actor $2508 weapon 26 ammo 9999 // Load the weapon model before using this
+01ED: clear_actor $2508 threat_search
+0243: set_actor $2508 ped_stats_to 16
+02A9: set_actor $2508 immune_to_nonplayer 1
+0350: set_actor $2508 maintain_position_when_attacked 1
+0411: set_actor $2508 use_pednode_seek 0
+$2509 = Actor.Create(CivMale, #ARMY, -824.3466, -1488.274, 10.9186)
+Actor.Angle($2509) = 117.421
+01B2: give_actor $2509 weapon 26 ammo 9999 // Load the weapon model before using this
+01ED: clear_actor $2509 threat_search
+0243: set_actor $2509 ped_stats_to 16
+02A9: set_actor $2509 immune_to_nonplayer 1
+0350: set_actor $2509 maintain_position_when_attacked 1
+0411: set_actor $2509 use_pednode_seek 0
+$2608 = 1 // integer values
+
+:COL_4_12411
+if
+  $2526 == 0 // integer values
+jf @COL_4_12443
+$2527 = 0 // integer values
+$2616 = 7 // integer values
+
+:COL_4_12443
+02C2: car $2470 drive_to_point -838.3314 -1492.5 11.0623
+
+:COL_4_12463
+jump @COL_4_12513
+
+:COL_4_12470
+if
+   not $2628 == 3 // integer values
+jf @COL_4_12513
+if
+  $2525 == 0 // integer values
+jf @COL_4_12513
+$2525 = 1 // integer values
+
+:COL_4_12513
+if
+01AD:   car $2470 sphere 0 near_point -838.3314 -1492.5 radius 3.0 3.0
+jf @COL_4_12664
+if
+  $2609 == 0 // integer values
+jf @COL_4_12650
+if
+02B3:   player $PLAYER_CHAR in_cube -823.448 -1488.083 10.852 -841.991 -1480.591 16.165 radius 30.0 sphere 0
+jf @COL_4_12636
+$2532 = 1 // integer values
+jump @COL_4_12643
+
+:COL_4_12636
+$2532 = 0 // integer values
+
+:COL_4_12643
+jump @COL_4_12657
+
+:COL_4_12650
+$2532 = 0 // integer values
+
+:COL_4_12657
+jump @COL_4_12671
+
+:COL_4_12664
+$2532 = 0 // integer values
+
+:COL_4_12671
+if
+  $2621 == 0 // integer values
+jf @COL_4_14350
+if
+  $2624 == 0 // integer values
+jf @COL_4_14350
+if
+  $2526 == 0 // integer values
+jf @COL_4_13119
+if or
+01FF:   player $PLAYER_CHAR near_car $2470 radius 8.0 10.0 3.0 unknown 0
+  $2532 == 1 // integer values
+jf @COL_4_13103
+if
+001C:   $4811 > $2643 // integer values
+jf @COL_4_13096
+Actor.StorePos($2483, $445, $446, $447)
+0054: store_player $PLAYER_CHAR position_to $95 $96 $447
+0086: $4862 = $445 // floating-point values only
+0061: $4862 -= $95 // floating-point values
+0086: $4863 = $446 // floating-point values only
+0061: $4863 -= $96 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2654 = square_root $4864
+Actor.StorePos($2476, $445, $446, $447)
+0086: $4862 = $445 // floating-point values only
+0061: $4862 -= $95 // floating-point values
+0086: $4863 = $446 // floating-point values only
+0061: $4863 -= $96 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2655 = square_root $4864
+if
+0024:   $2655 > $2654 // floating-point values only
+jf @COL_4_13017
+022D: set_actor $2483 to_look_at_player $PLAYER_CHAR
+$2654 = -100.0 // floating-point values
+jump @COL_4_13035
+
+:COL_4_13017
+022D: set_actor $2476 to_look_at_player $PLAYER_CHAR
+$2655 = -100.0 // floating-point values
+
+:COL_4_13035
+if
+  $2575 == 0 // integer values
+jf @COL_4_13076
+$2575 = 1 // integer values
+0084: $2598 = $4811 // integer values and handles
+$2598 += 6000 // integer values
+
+:COL_4_13076
+01BD: $6896 = current_time_in_ms
+$6896 += 5000 // integer values
+$2526 = 1 // integer values
+
+:COL_4_13096
+jump @COL_4_13119
+
+:COL_4_13103
+0084: $2643 = $4811 // integer values and handles
+$2643 += 2000 // integer values
+
+:COL_4_13119
+if
+  $2526 == 1 // integer values
+jf @COL_4_13360
+if or
+01FF:   player $PLAYER_CHAR near_car $2470 radius 8.0 10.0 3.0 unknown 0
+  $2532 == 1 // integer values
+jf @COL_4_13282
+if
+001C:   $4811 > $6896 // integer values
+jf @COL_4_13275
+if
+  $2527 == 0 // integer values
+jf @COL_4_13224
+$2527 = 1 // integer values
+
+:COL_4_13224
+$2526 = 2 // integer values
+if
+  $2654 == -100.0 // floating-point values
+jf @COL_4_13267
+01D2: actor $2483 follow_player $PLAYER_CHAR
+jump @COL_4_13275
+
+:COL_4_13267
+01D2: actor $2476 follow_player $PLAYER_CHAR
+
+:COL_4_13275
+jump @COL_4_13360
+
+:COL_4_13282
+if and
+  $2533 == 0 // integer values
+  $2534 == 0 // integer values
+  $2536 == 0 // integer values
+  $2537 == 0 // integer values
+jf @COL_4_13353
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_13353
+$2527 = 0 // integer values
+
+:COL_4_13353
+$2526 = 0 // integer values
+
+:COL_4_13360
+if
+  $2526 == 2 // integer values
+jf @COL_4_13718
+if or
+01FF:   player $PLAYER_CHAR near_car $2470 radius 8.0 10.0 3.0 unknown 0
+  $2532 == 1 // integer values
+jf @COL_4_13640
+if
+  $2654 == -100.0 // floating-point values
+jf @COL_4_13541
+if
+00E9:   player $PLAYER_CHAR 0 $2483 radius 4.0 4.0
+jf @COL_4_13534
+if
+  $2580 == 0 // integer values
+jf @COL_4_13514
+$2580 = 1 // integer values
+0084: $2602 = $4811 // integer values and handles
+$2602 += 6000 // integer values
+
+:COL_4_13514
+01BD: $6896 = current_time_in_ms
+$6896 += 6000 // integer values
+$2526 = 3 // integer values
+
+:COL_4_13534
+jump @COL_4_13633
+
+:COL_4_13541
+if
+00E9:   player $PLAYER_CHAR 0 $2476 radius 4.0 4.0
+jf @COL_4_13633
+if
+  $2580 == 0 // integer values
+jf @COL_4_13613
+$2580 = 1 // integer values
+0084: $2602 = $4811 // integer values and handles
+$2602 += 6000 // integer values
+
+:COL_4_13613
+01BD: $6896 = current_time_in_ms
+$6896 += 6000 // integer values
+$2526 = 3 // integer values
+
+:COL_4_13633
+jump @COL_4_13718
+
+:COL_4_13640
+if and
+  $2533 == 0 // integer values
+  $2534 == 0 // integer values
+  $2536 == 0 // integer values
+  $2537 == 0 // integer values
+jf @COL_4_13711
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_13711
+$2527 = 0 // integer values
+
+:COL_4_13711
+$2526 = 0 // integer values
+
+:COL_4_13718
+if
+  $2526 == 3 // integer values
+jf @COL_4_14168
+if or
+01FF:   player $PLAYER_CHAR near_car $2470 radius 8.0 10.0 3.0 unknown 0
+  $2532 == 1 // integer values
+jf @COL_4_14090
+if
+001C:   $4811 > $6896 // integer values
+jf @COL_4_14083
+if
+  $2579 == 0 // integer values
+jf @COL_4_13839
+$2579 = 1 // integer values
+0084: $2601 = $4811 // integer values and handles
+$2601 += 6000 // integer values
+
+:COL_4_13839
+if
+  $2654 == -100.0 // floating-point values
+jf @COL_4_13914
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COL_4_13899
+03C1: $4790 = player $PLAYER_CHAR car_no_save
+01D9: actor $2483 destroy_car $4790
+jump @COL_4_13907
+
+:COL_4_13899
+01CA: actor $2483 kill_player $PLAYER_CHAR
+
+:COL_4_13907
+jump @COL_4_13961
+
+:COL_4_13914
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COL_4_13953
+03C1: $4790 = player $PLAYER_CHAR car_no_save
+01D9: actor $2476 destroy_car $4790
+jump @COL_4_13961
+
+:COL_4_13953
+01CA: actor $2476 kill_player $PLAYER_CHAR
+
+:COL_4_13961
+if
+01FF:   player $PLAYER_CHAR near_car $2470 radius 2.0 2.0 1.0 unknown 0
+jf @COL_4_14076
+if
+  $2573 == 0 // integer values
+jf @COL_4_14038
+$2573 = 1 // integer values
+0084: $2596 = $4811 // integer values and handles
+$2596 += 6000 // integer values
+
+:COL_4_14038
+if
+   not Actor.Dead($2504)
+jf @COL_4_14062
+01CA: actor $2504 kill_player $PLAYER_CHAR
+
+:COL_4_14062
+020A: set_car $2470 door_status_to 1
+$2544 = 2 // integer values
+
+:COL_4_14076
+$2526 = 4 // integer values
+
+:COL_4_14083
+jump @COL_4_14168
+
+:COL_4_14090
+if and
+  $2533 == 0 // integer values
+  $2534 == 0 // integer values
+  $2536 == 0 // integer values
+  $2537 == 0 // integer values
+jf @COL_4_14161
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_14161
+$2527 = 0 // integer values
+
+:COL_4_14161
+$2526 = 0 // integer values
+
+:COL_4_14168
+if
+  $2526 == 4 // integer values
+jf @COL_4_14350
+if and
+81FF:   not player $PLAYER_CHAR near_car $2470 radius 8.0 10.0 3.0 unknown 0
+  $2532 == 0 // integer values
+jf @COL_4_14350
+if
+   not Actor.Dead($2504)
+jf @COL_4_14272
+if
+   not Actor.InCar($2504, $2470)
+jf @COL_4_14272
+01D4: actor $2504 go_to_car $2470 and_enter_it_as_a_passenger
+
+:COL_4_14272
+if and
+  $2533 == 0 // integer values
+  $2534 == 0 // integer values
+  $2536 == 0 // integer values
+  $2537 == 0 // integer values
+jf @COL_4_14343
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_14343
+$2527 = 0 // integer values
+
+:COL_4_14343
+$2526 = 0 // integer values
+
+:COL_4_14350
+jump @COL_4_14389
+
+:COL_4_14357
+if
+   not $2526 == -1 // integer values
+jf @COL_4_14389
+00AE: set_vehicle $2470 traffic_behavior_to 3
+$2526 = -1 // integer values
+
+:COL_4_14389
+if
+81AD:   not car $2470 sphere 0 near_point -838.3314 -1490.493 radius 50.0 50.0
+jf @COL_4_14441
+$2535 = 1 // integer values
+jump @COL_4_14448
+
+:COL_4_14441
+$2535 = 0 // integer values
+
+:COL_4_14448
+if
+   not $2522 == 1 // integer values
+jf @COL_4_14609
+0088: $4862 = 3@ // floating-point values only
+0067: $4862 -= 6@ // floating-point values
+0088: $4863 = 4@ // floating-point values only
+0067: $4863 -= 7@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+if
+0024:   $2665 > $2664 // floating-point values only
+jf @COL_4_14602
+if
+  $2535 == 1 // integer values
+jf @COL_4_14592
+$4864 = 5.0 // floating-point values
+jump @COL_4_14602
+
+:COL_4_14592
+$4864 = 10.0 // floating-point values
+
+:COL_4_14602
+jump @COL_4_14780
+
+:COL_4_14609
+if
+   not $2521 == 1 // integer values
+jf @COL_4_14770
+0088: $4862 = 3@ // floating-point values only
+0067: $4862 -= 0@ // floating-point values
+0088: $4863 = 4@ // floating-point values only
+0067: $4863 -= 1@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+if
+0024:   $2663 > $2664 // floating-point values only
+jf @COL_4_14763
+if
+  $2535 == 1 // integer values
+jf @COL_4_14753
+$4864 = 5.0 // floating-point values
+jump @COL_4_14763
+
+:COL_4_14753
+$4864 = 10.0 // floating-point values
+
+:COL_4_14763
+jump @COL_4_14780
+
+:COL_4_14770
+$4864 = 12.0 // floating-point values
+
+:COL_4_14780
+0086: $2656 = $4864 // floating-point values only
+$2656 -= 5.0 // floating-point values
+if
+  $2656 > 100.0 // floating-point values
+jf @COL_4_14829
+$2656 = 100.0 // floating-point values
+
+:COL_4_14829
+if
+  0.0 > $2656 // floating-point values
+jf @COL_4_14860
+$2656 = 0.0 // floating-point values
+
+:COL_4_14860
+if
+  $2535 == 1 // integer values
+jf @COL_4_14925
+0086: $2669 = $2666 // floating-point values only
+0061: $2669 -= $2664 // floating-point values
+if
+  $2669 > 20.0 // floating-point values
+jf @COL_4_14925
+$2656 = 0.0 // floating-point values
+
+:COL_4_14925
+if
+  $2527 == 0 // integer values
+jf @COL_4_14996
+if
+  $2656 == 0.0 // floating-point values
+jf @COL_4_14981
+0477: set_car $2470 action 1 time 500
+jump @COL_4_14989
+
+:COL_4_14981
+Car.SetMaxSpeed($2470, $2656)
+
+:COL_4_14989
+jump @COL_4_15016
+
+:COL_4_14996
+$2656 = 0.0 // floating-point values
+0477: set_car $2470 action 1 time 500
+
+:COL_4_15016
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_15090
+if
+   not $2628 == 3 // integer values
+jf @COL_4_15090
+0084: $2506 = $2470 // integer values and handles
+0084: $2507 = $2504 // integer values and handles
+0087: 10@ = 5@ // floating-point values only
+gosub @COL_4_28778
+
+:COL_4_15090
+jump @COL_4_16009
+
+:COL_4_15097
+if
+   not Actor.Dead($2493)
+jf @COL_4_15156
+Actor.StorePos($2493, $445, $446, $447)
+0465: remove_actor $2493 from_turret_mode
+$447 += 0.5 // floating-point values
+Actor.PutAt($2493, $445, $446, $447)
+
+:COL_4_15156
+if
+  $2519 == 0 // integer values
+jf @COL_4_16009
+if
+  $2563 == 0 // integer values
+jf @COL_4_15215
+$2563 = 1 // integer values
+0084: $2588 = $4811 // integer values and handles
+$2588 += 6000 // integer values
+
+:COL_4_15215
+0084: $2619 = $4811 // integer values and handles
+$2619 += 6000 // integer values
+00BC: text_highpriority 'COL4_B3' 5000 ms 1  // ~g~Drop the tank off in the Colonels lockup before it self destructs.
+0084: $2547 = $4811 // integer values and handles
+$2547 += 5000 // integer values
+Marker.Disable($2516)
+018A: $2516 = create_checkpoint_at -1053.572 -478.045 11.2887
+01E7: remove_forbidden_for_cars_cube -721.211 243.998 5.0 -651.211 693.998 25.0
+01E7: remove_forbidden_for_cars_cube -760.362 101.883 5.0 -700.362 251.883 25.0
+01E7: remove_forbidden_for_cars_cube -783.906 -46.826 5.0 -723.906 103.174 25.0
+01E7: remove_forbidden_for_cars_cube -853.397 -149.692 5.0 -773.397 0.308 25.0
+01E7: remove_forbidden_for_cars_cube -870.656 -594.54 5.0 -810.656 -144.54 25.0
+01E7: remove_forbidden_for_cars_cube -837.282 -1041.814 5.0 -777.282 -591.814 25.0
+01E7: remove_forbidden_for_cars_cube -827.532 -1539.617 5.0 -747.532 -1039.617 25.0
+0084: $2505 = $2470 // integer values and handles
+021B: set_garage $688 to_accept_car $2505
+0493: set_tank $2470 contact_explosion 1
+$2470 = -1 // integer values
+$2517 = 1 // integer values
+$2525 = 1 // integer values
+$2519 = 1 // integer values
+if
+   not Actor.Dead($2483)
+jf @COL_4_15598
+011A: set_actor $2483 search_threat 1
+01CA: actor $2483 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2483)
+
+:COL_4_15598
+if
+   not Actor.Dead($2484)
+jf @COL_4_15634
+011A: set_actor $2484 search_threat 1
+01CA: actor $2484 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2484)
+
+:COL_4_15634
+if
+   not Actor.Dead($2475)
+jf @COL_4_15670
+011A: set_actor $2475 search_threat 1
+01CA: actor $2475 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2475)
+
+:COL_4_15670
+if
+   not Actor.Dead($2476)
+jf @COL_4_15706
+011A: set_actor $2476 search_threat 1
+01CA: actor $2476 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2476)
+
+:COL_4_15706
+if
+   not Actor.Dead($2479)
+jf @COL_4_15742
+011A: set_actor $2479 search_threat 1
+01CA: actor $2479 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2479)
+
+:COL_4_15742
+if
+   not Actor.Dead($2480)
+jf @COL_4_15778
+011A: set_actor $2480 search_threat 1
+01CA: actor $2480 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2480)
+
+:COL_4_15778
+if
+   not Actor.Dead($2503)
+jf @COL_4_15814
+011A: set_actor $2503 search_threat 1
+01CA: actor $2503 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2503)
+
+:COL_4_15814
+if
+   not Actor.Dead($2504)
+jf @COL_4_15850
+011A: set_actor $2504 search_threat 1
+01CA: actor $2504 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2504)
+
+:COL_4_15850
+if
+   not Actor.Dead($2473)
+jf @COL_4_15886
+011A: set_actor $2473 search_threat 1
+01CA: actor $2473 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2473)
+
+:COL_4_15886
+if
+   not Actor.Dead($2474)
+jf @COL_4_15922
+011A: set_actor $2474 search_threat 1
+01CA: actor $2474 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2474)
+
+:COL_4_15922
+if
+   not Actor.Dead($2478)
+jf @COL_4_15958
+011A: set_actor $2478 search_threat 1
+01CA: actor $2478 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2478)
+
+:COL_4_15958
+if
+   not Actor.Dead($2482)
+jf @COL_4_15994
+011A: set_actor $2482 search_threat 1
+01CA: actor $2482 kill_player $PLAYER_CHAR
+Actor.RemoveReferences($2482)
+
+:COL_4_15994
+Car.RemoveReferences($2467)
+Car.RemoveReferences($2468)
+Car.RemoveReferences($2469)
+
+:COL_4_16009
+jump @COL_4_16056
+
+:COL_4_16016
+if
+  $2519 == 0 // integer values
+jf @COL_4_16056
+00BC: text_highpriority 'COL4_B5' 5000 ms 1  // ~r~The tank has been destroyed!
+jump @COL_4_28407
+
+:COL_4_16056
+if
+  $2519 == 1 // integer values
+jf @COL_4_16794
+if
+021C:   car_inside_garage $688
+jf @COL_4_16097
+jump @COL_4_28424
+
+:COL_4_16097
+if
+   Car.Wrecked($2505)
+jf @COL_4_16135
+00BC: text_highpriority 'COL4_B5' 5000 ms 1  // ~r~The tank has been destroyed!
+jump @COL_4_28407
+
+:COL_4_16135
+if
+81AD:   not car $2505 sphere 0 near_point -1058.095 -478.054 radius 30.0 30.0
+jf @COL_4_16187
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+jump @COL_4_16194
+
+:COL_4_16187
+Player.WantedLevel($PLAYER_CHAR) = 0
+
+:COL_4_16194
+if
+00DC:   player $PLAYER_CHAR driving $2505
+jf @COL_4_16478
+if
+  $2614 == 0 // integer values
+jf @COL_4_16317
+if
+00F7:   player $PLAYER_CHAR sphere 1 near_point_in_car -1058.095 -478.054 10.0896 radius 4.0 4.0 3.0
+jf @COL_4_16317
+00BC: text_highpriority 'COL4_B7' 5000 ms 1  // ~g~Drive the tank into the garage.
+0084: $2547 = $4811 // integer values and handles
+$2547 += 5000 // integer values
+$2614 = 1 // integer values
+
+:COL_4_16317
+if
+  $2614 == 1 // integer values
+jf @COL_4_16421
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car -1043.661 -476.886 12.038 radius 7.0 8.0 2.0
+jf @COL_4_16421
+00BC: text_highpriority 'COL4_B8' 5000 ms 1  // ~g~Get out of the tank and walk out of the garage.
+0084: $2547 = $4811 // integer values and handles
+$2547 += 5000 // integer values
+$2614 = 2 // integer values
+
+:COL_4_16421
+if
+  $2517 == 0 // integer values
+jf @COL_4_16471
+Marker.Disable($2516)
+018A: $2516 = create_checkpoint_at -1053.572 -478.045 11.2887
+$2517 = 1 // integer values
+
+:COL_4_16471
+jump @COL_4_16534
+
+:COL_4_16478
+if
+  $2517 == 1 // integer values
+jf @COL_4_16534
+if
+   not $2614 == 2 // integer values
+jf @COL_4_16534
+Marker.Disable($2516)
+$2516 = Marker.CreateAboveCar($2505)
+$2517 = 0 // integer values
+
+:COL_4_16534
+if
+001C:   $4811 > $2619 // integer values
+jf @COL_4_16634
+if
+  $2620 == 0 // integer values
+jf @COL_4_16634
+if
+  $2560 == 0 // integer values
+jf @COL_4_16612
+$2560 = 1 // integer values
+0084: $2585 = $4811 // integer values and handles
+$2585 += 6000 // integer values
+
+:COL_4_16612
+03C4: set_status_text_to $2520 1 'DETON'  // DETONATION:
+$2620 = 1 // integer values
+
+:COL_4_16634
+if
+  $2620 > 0 // integer values
+jf @COL_4_16794
+if
+  $2647 > 100.0 // floating-point values
+jf @COL_4_16692
+$2520 = 100 // integer values
+020B: explode_car $2505
+jump @COL_4_16710
+
+:COL_4_16692
+0078: $2647 += frame_delta_time * 0.017 // floating-point values
+008C: $2520 = float_to_integer $2647
+
+:COL_4_16710
+if
+  $2520 > 95 // integer values
+jf @COL_4_16794
+if
+  $2620 == 1 // integer values
+jf @COL_4_16794
+if
+  $2561 == 0 // integer values
+jf @COL_4_16787
+$2561 = 1 // integer values
+0084: $2586 = $4811 // integer values and handles
+$2586 += 6000 // integer values
+
+:COL_4_16787
+$2620 = 2 // integer values
+
+:COL_4_16794
+if
+  $2608 > 0 // integer values
+jf @COL_4_18145
+if
+02B3:   player $PLAYER_CHAR in_cube -823.448 -1488.083 10.852 -841.991 -1480.591 16.165 radius 30.0 sphere 0
+jf @COL_4_17489
+if
+00F5:   player $PLAYER_CHAR 0 -833.708 -1509.877 12.489 radius 4.0 6.0 1.5
+jf @COL_4_17403
+if
+   not Actor.Dead($2508)
+jf @COL_4_17146
+if
+  $2545 == 0 // integer values
+jf @COL_4_16983
+0411: set_actor $2508 use_pednode_seek 0
+0239: actor $2508 run_to -838.6741 -1498.07
+0411: set_actor $2508 use_pednode_seek 0
+$2545 = 1 // integer values
+
+:COL_4_16983
+if
+  $2545 == 1 // integer values
+jf @COL_4_17068
+if
+00ED:   actor $2508 0 -838.6741 -1498.07 radius 1.0 1.0
+jf @COL_4_17068
+0239: actor $2508 run_to -845.7342 -1501.918
+0411: set_actor $2508 use_pednode_seek 0
+$2545 = 2 // integer values
+
+:COL_4_17068
+if
+  $2545 == 2 // integer values
+jf @COL_4_17139
+if
+00ED:   actor $2508 0 -845.7342 -1501.918 radius 1.0 1.0
+jf @COL_4_17139
+01CA: actor $2508 kill_player $PLAYER_CHAR
+$2545 = 3 // integer values
+
+:COL_4_17139
+jump @COL_4_17396
+
+:COL_4_17146
+Actor.RemoveReferences($2508)
+if
+   not Actor.Dead($2509)
+jf @COL_4_17384
+if
+  $2546 == 0 // integer values
+jf @COL_4_17221
+0411: set_actor $2509 use_pednode_seek 0
+0239: actor $2509 run_to -838.6741 -1498.07
+0411: set_actor $2509 use_pednode_seek 0
+$2546 = 1 // integer values
+
+:COL_4_17221
+if
+  $2546 == 1 // integer values
+jf @COL_4_17306
+if
+00ED:   actor $2509 0 -838.6741 -1498.07 radius 1.0 1.0
+jf @COL_4_17306
+0239: actor $2509 run_to -845.7342 -1501.918
+0411: set_actor $2509 use_pednode_seek 0
+$2546 = 2 // integer values
+
+:COL_4_17306
+if
+  $2546 == 2 // integer values
+jf @COL_4_17377
+if
+00ED:   actor $2509 0 -845.7342 -1501.918 radius 1.0 1.0
+jf @COL_4_17377
+01CA: actor $2509 kill_player $PLAYER_CHAR
+$2546 = 3 // integer values
+
+:COL_4_17377
+jump @COL_4_17396
+
+:COL_4_17384
+Actor.RemoveReferences($2509)
+$2609 = 1 // integer values
+
+:COL_4_17396
+jump @COL_4_17482
+
+:COL_4_17403
+if
+   not Actor.Dead($2508)
+jf @COL_4_17434
+01CA: actor $2508 kill_player $PLAYER_CHAR
+jump @COL_4_17439
+
+:COL_4_17434
+Actor.RemoveReferences($2508)
+
+:COL_4_17439
+if
+   not Actor.Dead($2509)
+jf @COL_4_17470
+01CA: actor $2509 kill_player $PLAYER_CHAR
+jump @COL_4_17475
+
+:COL_4_17470
+Actor.RemoveReferences($2509)
+
+:COL_4_17475
+$2609 = 0 // integer values
+
+:COL_4_17482
+jump @COL_4_18145
+
+:COL_4_17489
+if
+   not Actor.Dead($2508)
+jf @COL_4_17812
+if
+  $2545 == 0 // integer values
+jf @COL_4_17576
+if
+00ED:   actor $2508 0 -830.7947 -1500.054 radius 1.0 1.0
+jf @COL_4_17576
+011C: actor $2508 clear_objective
+Actor.Angle($2508) = 2.1778
+
+:COL_4_17576
+if
+  $2545 == 1 // integer values
+jf @COL_4_17630
+0411: set_actor $2508 use_pednode_seek 0
+0239: actor $2508 run_to -830.7947 -1500.054
+0411: set_actor $2508 use_pednode_seek 0
+$2545 = 0 // integer values
+
+:COL_4_17630
+if
+  $2545 == 3 // integer values
+jf @COL_4_17684
+0411: set_actor $2508 use_pednode_seek 0
+0239: actor $2508 run_to -839.5587 -1496.724
+0411: set_actor $2508 use_pednode_seek 0
+$2545 = 2 // integer values
+
+:COL_4_17684
+if
+  $2545 == 2 // integer values
+jf @COL_4_17805
+0411: set_actor $2508 use_pednode_seek 0
+0239: actor $2508 run_to -839.5587 -1496.724
+0411: set_actor $2508 use_pednode_seek 0
+if
+00ED:   actor $2508 0 -839.5587 -1496.724 radius 1.0 1.0
+jf @COL_4_17805
+0411: set_actor $2508 use_pednode_seek 0
+0239: actor $2508 run_to -830.7947 -1500.054
+0411: set_actor $2508 use_pednode_seek 0
+$2545 = 0 // integer values
+
+:COL_4_17805
+jump @COL_4_17817
+
+:COL_4_17812
+Actor.RemoveReferences($2508)
+
+:COL_4_17817
+if
+   not Actor.Dead($2509)
+jf @COL_4_18140
+if
+  $2546 == 0 // integer values
+jf @COL_4_17904
+if
+00ED:   actor $2509 0 -824.3466 -1488.274 radius 1.0 1.0
+jf @COL_4_17904
+011C: actor $2509 clear_objective
+Actor.Angle($2509) = 117.421
+
+:COL_4_17904
+if
+  $2546 == 1 // integer values
+jf @COL_4_17958
+0411: set_actor $2509 use_pednode_seek 0
+0239: actor $2509 run_to -824.3466 -1488.274
+0411: set_actor $2509 use_pednode_seek 0
+$2546 = 0 // integer values
+
+:COL_4_17958
+if
+  $2546 == 3 // integer values
+jf @COL_4_18012
+0411: set_actor $2509 use_pednode_seek 0
+0239: actor $2509 run_to -839.5587 -1496.724
+0411: set_actor $2509 use_pednode_seek 0
+$2546 = 2 // integer values
+
+:COL_4_18012
+if
+  $2546 == 2 // integer values
+jf @COL_4_18133
+0411: set_actor $2509 use_pednode_seek 0
+0239: actor $2509 run_to -839.5587 -1496.724
+0411: set_actor $2509 use_pednode_seek 0
+if
+00ED:   actor $2509 0 -839.5587 -1496.724 radius 1.0 1.0
+jf @COL_4_18133
+0411: set_actor $2509 use_pednode_seek 0
+0239: actor $2509 run_to -824.3466 -1488.274
+0411: set_actor $2509 use_pednode_seek 0
+$2546 = 0 // integer values
+
+:COL_4_18133
+jump @COL_4_18145
+
+:COL_4_18140
+Actor.RemoveReferences($2509)
+
+:COL_4_18145
+if
+  $2611 == 1 // integer values
+jf @COL_4_19375
+if
+  $2562 == 0 // integer values
+jf @COL_4_18204
+$2562 = 1 // integer values
+0084: $2587 = $4811 // integer values and handles
+$2587 += 6000 // integer values
+
+:COL_4_18204
+if
+   not Actor.Dead($2483)
+jf @COL_4_18258
+0084: $2512 = $2483 // integer values and handles
+0084: $2644 = $2621 // integer values and handles
+gosub @COL_4_31026
+0084: $2621 = $2644 // integer values and handles
+jump @COL_4_18283
+
+:COL_4_18258
+if
+   not $2621 == 3 // integer values
+jf @COL_4_18283
+$2525 = 1 // integer values
+
+:COL_4_18283
+if
+   not Actor.Dead($2484)
+jf @COL_4_18337
+0084: $2512 = $2484 // integer values and handles
+0084: $2644 = $2622 // integer values and handles
+gosub @COL_4_31026
+0084: $2622 = $2644 // integer values and handles
+jump @COL_4_18362
+
+:COL_4_18337
+if
+   not $2622 == 3 // integer values
+jf @COL_4_18362
+$2525 = 1 // integer values
+
+:COL_4_18362
+if
+   not Actor.Dead($2475)
+jf @COL_4_18416
+0084: $2512 = $2475 // integer values and handles
+0084: $2644 = $2623 // integer values and handles
+gosub @COL_4_31026
+0084: $2623 = $2644 // integer values and handles
+jump @COL_4_18441
+
+:COL_4_18416
+if
+   not $2623 == 3 // integer values
+jf @COL_4_18441
+$2525 = 1 // integer values
+
+:COL_4_18441
+if
+   not Actor.Dead($2476)
+jf @COL_4_18495
+0084: $2512 = $2476 // integer values and handles
+0084: $2644 = $2624 // integer values and handles
+gosub @COL_4_31026
+0084: $2624 = $2644 // integer values and handles
+jump @COL_4_18520
+
+:COL_4_18495
+if
+   not $2624 == 3 // integer values
+jf @COL_4_18520
+$2525 = 1 // integer values
+
+:COL_4_18520
+if
+   not Actor.Dead($2479)
+jf @COL_4_18574
+0084: $2512 = $2479 // integer values and handles
+0084: $2644 = $2625 // integer values and handles
+gosub @COL_4_31026
+0084: $2625 = $2644 // integer values and handles
+jump @COL_4_18599
+
+:COL_4_18574
+if
+   not $2625 == 3 // integer values
+jf @COL_4_18599
+$2525 = 1 // integer values
+
+:COL_4_18599
+if
+   not Actor.Dead($2480)
+jf @COL_4_18653
+0084: $2512 = $2480 // integer values and handles
+0084: $2644 = $2626 // integer values and handles
+gosub @COL_4_31026
+0084: $2626 = $2644 // integer values and handles
+jump @COL_4_18678
+
+:COL_4_18653
+if
+   not $2626 == 3 // integer values
+jf @COL_4_18678
+$2525 = 1 // integer values
+
+:COL_4_18678
+if
+   not Actor.Dead($2473)
+jf @COL_4_18732
+0084: $2512 = $2473 // integer values and handles
+0084: $2644 = $2629 // integer values and handles
+gosub @COL_4_31026
+0084: $2629 = $2644 // integer values and handles
+jump @COL_4_18757
+
+:COL_4_18732
+if
+   not $2629 == 3 // integer values
+jf @COL_4_18757
+$2525 = 1 // integer values
+
+:COL_4_18757
+if
+   not Actor.Dead($2474)
+jf @COL_4_18811
+0084: $2512 = $2474 // integer values and handles
+0084: $2644 = $2630 // integer values and handles
+gosub @COL_4_31026
+0084: $2630 = $2644 // integer values and handles
+jump @COL_4_18836
+
+:COL_4_18811
+if
+   not $2630 == 3 // integer values
+jf @COL_4_18836
+$2525 = 1 // integer values
+
+:COL_4_18836
+if
+   not Actor.Dead($2503)
+jf @COL_4_18890
+0084: $2512 = $2503 // integer values and handles
+0084: $2644 = $2627 // integer values and handles
+gosub @COL_4_31026
+0084: $2627 = $2644 // integer values and handles
+jump @COL_4_18915
+
+:COL_4_18890
+if
+   not $2627 == 3 // integer values
+jf @COL_4_18915
+$2525 = 1 // integer values
+
+:COL_4_18915
+if
+   not Actor.Dead($2504)
+jf @COL_4_18969
+0084: $2512 = $2504 // integer values and handles
+0084: $2644 = $2628 // integer values and handles
+gosub @COL_4_31026
+0084: $2628 = $2644 // integer values and handles
+jump @COL_4_18994
+
+:COL_4_18969
+if
+   not $2628 == 3 // integer values
+jf @COL_4_18994
+$2525 = 1 // integer values
+
+:COL_4_18994
+if
+   not Actor.Dead($2493)
+jf @COL_4_19350
+if
+  $2538 == 0 // integer values
+jf @COL_4_19114
+0465: remove_actor $2493 from_turret_mode
+Actor.StorePos($2493, $445, $446, $447)
+$447 += 1.0 // floating-point values
+Actor.PutAt($2493, $445, $446, $447)
+0291: set_actor $2493 attack_when_provoked 1
+011A: set_actor $2493 search_threat 1
+0239: actor $2493 run_to -829.7494 -1491.996
+0411: set_actor $2493 use_pednode_seek 0
+$2538 = 1 // integer values
+
+:COL_4_19114
+if
+  $2538 == 1 // integer values
+jf @COL_4_19237
+if
+04FF:  $2493
+jf @COL_4_19170
+0239: actor $2493 run_to -829.7494 -1491.996
+0411: set_actor $2493 use_pednode_seek 0
+
+:COL_4_19170
+if
+00ED:   actor $2493 0 -829.7494 -1491.996 radius 1.0 1.0
+jf @COL_4_19237
+0239: actor $2493 run_to -826.0425 -1493.517
+0411: set_actor $2493 use_pednode_seek 0
+$2538 = 2 // integer values
+
+:COL_4_19237
+if
+  $2538 == 2 // integer values
+jf @COL_4_19343
+if
+04FF:  $2493
+jf @COL_4_19293
+0239: actor $2493 run_to -826.0425 -1493.517
+0411: set_actor $2493 use_pednode_seek 0
+
+:COL_4_19293
+if
+00ED:   actor $2493 0 -826.0425 -1493.517 radius 1.0 1.0
+jf @COL_4_19343
+Actor.DestroyInstantly($2493)
+$2538 = 3 // integer values
+
+:COL_4_19343
+jump @COL_4_19375
+
+:COL_4_19350
+if
+   not $2538 == 3 // integer values
+jf @COL_4_19375
+$2525 = 1 // integer values
+
+:COL_4_19375
+if
+  $2565 == 3 // integer values
+jf @COL_4_21011
+if
+   not Car.Wrecked($2469)
+jf @COL_4_20798
+if
+80DC:   not player $PLAYER_CHAR driving $2469
+jf @COL_4_20711
+if
+   not Actor.Dead($2481)
+jf @COL_4_20679
+if
+   Actor.InCar($2481, $2469)
+jf @COL_4_20647
+Car.StorePos($2469, 11@, 12@, 13@)
+0088: $4862 = 11@ // floating-point values only
+$4862 -= -837.0244 // floating-point values
+0088: $4863 = 12@ // floating-point values only
+$4863 -= -1509.279 // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $2666 = square_root $4864
+if
+  $2525 == 0 // integer values
+jf @COL_4_20265
+if
+   not Actor.Dead($2482)
+jf @COL_4_19724
+if
+  $2537 == 5 // integer values
+jf @COL_4_19717
+if
+   Actor.InCar($2482, $2469)
+jf @COL_4_19670
+$2537 = 0 // integer values
+if or
+  $2616 == 0 // integer values
+  $2616 == 7 // integer values
+jf @COL_4_19663
+$2527 = 0 // integer values
+
+:COL_4_19663
+jump @COL_4_19717
+
+:COL_4_19670
+if
+   Actor.Driving($2482)
+jf @COL_4_19709
+$2502 = Actor.CurrentCar($2482)
+01D3: actor $2482 leave_car $2502
+jump @COL_4_19717
+
+:COL_4_19709
+01D4: actor $2482 go_to_car $2469 and_enter_it_as_a_passenger
+
+:COL_4_19717
+jump @COL_4_19749
+
+:COL_4_19724
+if
+  $2525 == 0 // integer values
+jf @COL_4_19749
+$2525 = 1 // integer values
+
+:COL_4_19749
+if
+   Actor.Dead($2481)
+jf @COL_4_19790
+if
+  $2525 == 0 // integer values
+jf @COL_4_19790
+$2525 = 1 // integer values
+
+:COL_4_19790
+if
+031E:   vehicle $2469 hit_by_weapon 39
+jf @COL_4_19846
+if
+01FC:   player $PLAYER_CHAR near_car $2469 radius 20.0 20.0 0
+jf @COL_4_19846
+$2638 = 1 // integer values
+
+:COL_4_19846
+if
+031E:   vehicle $2469 hit_by_weapon 47
+jf @COL_4_19898
+$2641 = Car.Health($2469)
+if
+  800 > $2641 // integer values
+jf @COL_4_19898
+$2525 = 1 // integer values
+
+:COL_4_19898
+0468: set_vehicle $2469 clear_last_weapon_damage
+0088: $4862 = 11@ // floating-point values only
+0067: $4862 -= 3@ // floating-point values
+0088: $4863 = 12@ // floating-point values only
+0067: $4863 -= 4@ // floating-point values
+0069: $4862 *= $4862 // floating-point values
+0069: $4863 *= $4863 // floating-point values
+0086: $4864 = $4862 // floating-point values only
+0059: $4864 += $4863 // floating-point values
+01FB: $4864 = square_root $4864
+0089: 14@ = $4864 // floating-point values only
+14@ -= 4.0 // floating-point values
+if
+  14@ > 100.0 // floating-point values
+jf @COL_4_20024
+14@ = 100.0 // floating-point values
+
+:COL_4_20024
+if
+  0.0 > 14@ // floating-point values
+jf @COL_4_20055
+14@ = 0.0 // floating-point values
+
+:COL_4_20055
+if
+81AD:   not car $2469 sphere 0 near_point -838.3314 -1490.493 radius 50.0 50.0
+jf @COL_4_20129
+if
+0024:   $2664 > $2666 // floating-point values only
+jf @COL_4_20122
+14@ = 0.0 // floating-point values
+
+:COL_4_20122
+jump @COL_4_20136
+
+:COL_4_20129
+04E0: car $2469 abandon_path_radius 40
+
+:COL_4_20136
+0084: $2506 = $2469 // integer values and handles
+0084: $2507 = $2482 // integer values and handles
+0087: 10@ = 13@ // floating-point values only
+gosub @COL_4_28778
+if
+  $2527 == 0 // integer values
+jf @COL_4_20238
+if
+  14@ == 0.0 // floating-point values
+jf @COL_4_20223
+0477: set_car $2469 action 1 time 500
+jump @COL_4_20231
+
+:COL_4_20223
+Car.SetMaxSpeed($2469, 14@)
+
+:COL_4_20231
+jump @COL_4_20258
+
+:COL_4_20238
+14@ = 0.0 // floating-point values
+0477: set_car $2469 action 1 time 500
+
+:COL_4_20258
+jump @COL_4_20640
+
+:COL_4_20265
+if
+  $2595 == 1 // integer values
+jf @COL_4_20483
+if or
+  $2524 == 2 // integer values
+  $2524 == 3 // integer values
+jf @COL_4_20315
+$2524 = 0 // integer values
+
+:COL_4_20315
+if
+  $2524 == 0 // integer values
+jf @COL_4_20364
+Car.SetMaxSpeed($2469, 100.0)
+00AE: set_vehicle $2469 traffic_behavior_to 2
+Car.SetDriverBehaviour($2469, KillThePlayer)
+$2524 = 1 // integer values
+
+:COL_4_20364
+if
+  $2524 == 1 // integer values
+jf @COL_4_20476
+if
+  $2557 == 10 // integer values
+jf @COL_4_20469
+if
+01FC:   player $PLAYER_CHAR near_car $2469 radius 20.0 20.0 0
+jf @COL_4_20455
+if
+   not Actor.Dead($2482)
+jf @COL_4_20455
+01CA: actor $2482 kill_player $PLAYER_CHAR
+
+:COL_4_20455
+$2557 = 0 // integer values
+jump @COL_4_20476
+
+:COL_4_20469
+$2557 += 1 // integer values
+
+:COL_4_20476
+jump @COL_4_20640
+
+:COL_4_20483
+if or
+  $2524 == 0 // integer values
+  $2524 == 1 // integer values
+jf @COL_4_20515
+$2524 = 2 // integer values
+
+:COL_4_20515
+if
+  $2524 == 2 // integer values
+jf @COL_4_20571
+Car.SetMaxSpeed($2469, 100.0)
+00AE: set_vehicle $2469 traffic_behavior_to 2
+Car.DriveTo($2469, 3@, 4@, 5@)
+$2524 = 3 // integer values
+
+:COL_4_20571
+if
+  $2524 == 3 // integer values
+jf @COL_4_20640
+if
+01AD:   car $2469 sphere 0 near_point 3@ 4@ radius 20.0 20.0
+jf @COL_4_20640
+Car.SetDriverBehaviour($2469, 11)
+0477: set_car $2469 action 1 time 500
+
+:COL_4_20640
+jump @COL_4_20672
+
+:COL_4_20647
+if
+  $2525 == 0 // integer values
+jf @COL_4_20672
+$2525 = 1 // integer values
+
+:COL_4_20672
+jump @COL_4_20704
+
+:COL_4_20679
+if
+  $2525 == 0 // integer values
+jf @COL_4_20704
+$2525 = 1 // integer values
+
+:COL_4_20704
+jump @COL_4_20791
+
+:COL_4_20711
+Car.ImmuneToNonPlayer($2469) = False
+if
+   not Actor.Dead($2481)
+jf @COL_4_20742
+01CA: actor $2481 kill_player $PLAYER_CHAR
+
+:COL_4_20742
+if
+   not Actor.Dead($2482)
+jf @COL_4_20766
+01CA: actor $2482 kill_player $PLAYER_CHAR
+
+:COL_4_20766
+if
+  $2525 == 0 // integer values
+jf @COL_4_20791
+$2525 = 1 // integer values
+
+:COL_4_20791
+jump @COL_4_20823
+
+:COL_4_20798
+if
+  $2525 == 0 // integer values
+jf @COL_4_20823
+$2525 = 1 // integer values
+
+:COL_4_20823
+0084: $2513 = $2489 // integer values and handles
+0084: $2514 = $2469 // integer values and handles
+0084: $2515 = $2481 // integer values and handles
+0084: $2566 = $2552 // integer values and handles
+gosub @COL_4_31355
+0084: $2552 = $2566 // integer values and handles
+0084: $2513 = $2490 // integer values and handles
+0084: $2514 = $2469 // integer values and handles
+0084: $2515 = $2481 // integer values and handles
+0084: $2566 = $2553 // integer values and handles
+gosub @COL_4_31355
+0084: $2553 = $2566 // integer values and handles
+0084: $2513 = $2491 // integer values and handles
+0084: $2514 = $2469 // integer values and handles
+0084: $2515 = $2481 // integer values and handles
+0084: $2566 = $2554 // integer values and handles
+gosub @COL_4_31355
+0084: $2554 = $2566 // integer values and handles
+0084: $2513 = $2492 // integer values and handles
+0084: $2514 = $2469 // integer values and handles
+0084: $2515 = $2481 // integer values and handles
+0084: $2566 = $2555 // integer values and handles
+gosub @COL_4_31355
+0084: $2555 = $2566 // integer values and handles
+
+:COL_4_21011
+if
+803A:   not  $2527 == $2618 // integer values and handles
+jf @COL_4_21145
+0084: $2618 = $2527 // integer values and handles
+if
+  $2527 == 1 // integer values
+jf @COL_4_21104
+if
+  $2576 == 0 // integer values
+jf @COL_4_21097
+$2576 = 1 // integer values
+0084: $2599 = $4811 // integer values and handles
+$2599 += 6000 // integer values
+
+:COL_4_21097
+jump @COL_4_21145
+
+:COL_4_21104
+if
+  $2577 == 0 // integer values
+jf @COL_4_21145
+$2577 = 1 // integer values
+0084: $2600 = $4811 // integer values and handles
+$2600 += 6000 // integer values
+
+:COL_4_21145
+if
+  $2560 > 0 // integer values
+jf @COL_4_21407
+if
+  $2560 == 3 // integer values
+jf @COL_4_21227
+if
+03D2:   wav 1 ended
+jf @COL_4_21227
+03D5: remove_text 'COL4_24'  // Security protocol Delta India Echo triggered! Vehicle self destruct initiated!
+$2560 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_21227
+if
+  $2560 == 2 // integer values
+jf @COL_4_21305
+if
+03D0:   wav 1 loaded
+jf @COL_4_21305
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_21298
+00BC: text_highpriority 'COL4_24' 10000 ms 1  // Security protocol Delta India Echo triggered! Vehicle self destruct initiated!
+
+:COL_4_21298
+$2560 = 3 // integer values
+
+:COL_4_21305
+if
+  $2560 == 1 // integer values
+jf @COL_4_21400
+if
+  $2607 == 0 // integer values
+jf @COL_4_21374
+03CF: load_wav 'COL4_24' as 1
+$2560 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_21400
+
+:COL_4_21374
+if
+001C:   $4811 > $2585 // integer values
+jf @COL_4_21400
+$2560 = 0 // integer values
+
+:COL_4_21400
+jump @COL_4_21478
+
+:COL_4_21407
+if
+  $2560 > 0 // integer values
+jf @COL_4_21478
+if
+  $2560 > 1 // integer values
+jf @COL_4_21471
+$2560 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_21478
+
+:COL_4_21471
+$2560 = 0 // integer values
+
+:COL_4_21478
+if
+  $2561 > 0 // integer values
+jf @COL_4_21740
+if
+  $2561 == 3 // integer values
+jf @COL_4_21560
+if
+03D2:   wav 1 ended
+jf @COL_4_21560
+03D5: remove_text 'COL4_26'  // Prepare to die Communist scum!
+$2561 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_21560
+if
+  $2561 == 2 // integer values
+jf @COL_4_21638
+if
+03D0:   wav 1 loaded
+jf @COL_4_21638
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_21631
+00BC: text_highpriority 'COL4_26' 10000 ms 1  // Prepare to die Communist scum!
+
+:COL_4_21631
+$2561 = 3 // integer values
+
+:COL_4_21638
+if
+  $2561 == 1 // integer values
+jf @COL_4_21733
+if
+  $2607 == 0 // integer values
+jf @COL_4_21707
+03CF: load_wav 'COL4_26' as 1
+$2561 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_21733
+
+:COL_4_21707
+if
+001C:   $4811 > $2586 // integer values
+jf @COL_4_21733
+$2561 = 0 // integer values
+
+:COL_4_21733
+jump @COL_4_21811
+
+:COL_4_21740
+if
+  $2561 > 0 // integer values
+jf @COL_4_21811
+if
+  $2561 > 1 // integer values
+jf @COL_4_21804
+$2561 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_21811
+
+:COL_4_21804
+$2561 = 0 // integer values
+
+:COL_4_21811
+if and
+  $2562 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_22080
+if
+  $2562 == 3 // integer values
+jf @COL_4_21900
+if
+03D2:   wav 1 ended
+jf @COL_4_21900
+03D5: remove_text 'COL4_23'  // Objective completed! Platoon dismissed! - Lets go eat some doughnuts.
+$2562 = 4 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_21900
+if
+  $2562 == 2 // integer values
+jf @COL_4_21978
+if
+03D0:   wav 1 loaded
+jf @COL_4_21978
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_21971
+00BC: text_highpriority 'COL4_23' 10000 ms 1  // Objective completed! Platoon dismissed! - Lets go eat some doughnuts.
+
+:COL_4_21971
+$2562 = 3 // integer values
+
+:COL_4_21978
+if
+  $2562 == 1 // integer values
+jf @COL_4_22073
+if
+  $2607 == 0 // integer values
+jf @COL_4_22047
+03CF: load_wav 'COL4_23' as 1
+$2562 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_22073
+
+:COL_4_22047
+if
+001C:   $4811 > $2587 // integer values
+jf @COL_4_22073
+$2562 = 0 // integer values
+
+:COL_4_22073
+jump @COL_4_22151
+
+:COL_4_22080
+if
+  $2562 > 0 // integer values
+jf @COL_4_22151
+if
+  $2562 > 1 // integer values
+jf @COL_4_22144
+$2562 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_22151
+
+:COL_4_22144
+$2562 = 0 // integer values
+
+:COL_4_22151
+if and
+  $2563 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_22420
+if
+  $2563 == 3 // integer values
+jf @COL_4_22240
+if
+03D2:   wav 1 ended
+jf @COL_4_22240
+03D5: remove_text 'COL4_12'  // Civilian in the TANK! STOP HIM!
+$2563 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_22240
+if
+  $2563 == 2 // integer values
+jf @COL_4_22318
+if
+03D0:   wav 1 loaded
+jf @COL_4_22318
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_22311
+00BC: text_highpriority 'COL4_12' 10000 ms 1  // Civilian in the TANK! STOP HIM!
+
+:COL_4_22311
+$2563 = 3 // integer values
+
+:COL_4_22318
+if
+  $2563 == 1 // integer values
+jf @COL_4_22413
+if
+  $2607 == 0 // integer values
+jf @COL_4_22387
+if or
+    not Actor.Dead($2473)
+    not Actor.Dead($2474)
+    not Actor.Dead($2477)
+    not Actor.Dead($2478)
+    not Actor.Dead($2485)
+    not Actor.Dead($2486)
+then
+03CF: load_wav 'COL4_12' as 1
+$2563 = 2 // integer values
+$2607 = 1 // integer values
+else
+    if or
+        not Actor.Dead($2487)
+        not Actor.Dead($2488)
+        not Actor.Dead($2503)
+        not Actor.Dead($2504)
+        not Actor.Dead($2493)
+        not Actor.Dead($2481)
+    then
+    03CF: load_wav 'COL4_12' as 1
+    $2563 = 2 // integer values
+    $2607 = 1 // integer values
+    else
+        if or
+            not Actor.Dead($2482)
+            not Actor.Dead($2489)
+            not Actor.Dead($2490)
+            not Actor.Dead($2491)
+            not Actor.Dead($2492)
+            not Actor.Dead($2483)
+        then
+        03CF: load_wav 'COL4_12' as 1
+        $2563 = 2 // integer values
+        $2607 = 1 // integer values
+        else
+            if or
+                not Actor.Dead($2484)
+                not Actor.Dead($2475)
+                not Actor.Dead($2476)
+                not Actor.Dead($2479)
+                not Actor.Dead($2480)
+            then
+                03CF: load_wav 'COL4_12' as 1
+                $2563 = 2 // integer values
+                $2607 = 1 // integer values
+            else
+                $2563 = 0 // integer values
+                $2607 = 0 // integer values
+            end
+        end
+    end
+end
+jump @COL_4_22413
+
+:COL_4_22387
+if
+001C:   $4811 > $2588 // integer values
+jf @COL_4_22413
+$2563 = 0 // integer values
+
+:COL_4_22413
+jump @COL_4_22491
+
+:COL_4_22420
+if
+  $2563 > 0 // integer values
+jf @COL_4_22491
+if
+  $2563 > 1 // integer values
+jf @COL_4_22484
+$2563 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_22491
+
+:COL_4_22484
+$2563 = 0 // integer values
+
+:COL_4_22491
+if and
+  $2567 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_22760
+if
+  $2567 == 3 // integer values
+jf @COL_4_22580
+if
+03D2:   wav 1 ended
+jf @COL_4_22580
+03D5: remove_text 'COL4_21'  // SNIPER!
+$2567 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_22580
+if
+  $2567 == 2 // integer values
+jf @COL_4_22658
+if
+03D0:   wav 1 loaded
+jf @COL_4_22658
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_22651
+00BC: text_highpriority 'COL4_21' 10000 ms 1  // SNIPER!
+
+:COL_4_22651
+$2567 = 3 // integer values
+
+:COL_4_22658
+if
+  $2567 == 1 // integer values
+jf @COL_4_22753
+if
+  $2607 == 0 // integer values
+jf @COL_4_22727
+03CF: load_wav 'COL4_21' as 1
+$2567 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_22753
+
+:COL_4_22727
+if
+001C:   $4811 > $2590 // integer values
+jf @COL_4_22753
+$2567 = 0 // integer values
+
+:COL_4_22753
+jump @COL_4_22831
+
+:COL_4_22760
+if
+  $2567 > 0 // integer values
+jf @COL_4_22831
+if
+  $2567 > 1 // integer values
+jf @COL_4_22824
+$2567 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_22831
+
+:COL_4_22824
+$2567 = 0 // integer values
+
+:COL_4_22831
+if and
+  $2568 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_23100
+if
+  $2568 == 3 // integer values
+jf @COL_4_22920
+if
+03D2:   wav 1 ended
+jf @COL_4_22920
+03D5: remove_text 'COL4_22'  // I'm getting out of here.
+$2568 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_22920
+if
+  $2568 == 2 // integer values
+jf @COL_4_22998
+if
+03D0:   wav 1 loaded
+jf @COL_4_22998
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_22991
+00BC: text_highpriority 'COL4_22' 10000 ms 1  // I'm getting out of here.
+
+:COL_4_22991
+$2568 = 3 // integer values
+
+:COL_4_22998
+if
+  $2568 == 1 // integer values
+jf @COL_4_23093
+if
+  $2607 == 0 // integer values
+jf @COL_4_23067
+if or
+    not Actor.Dead($2503)
+    not Actor.Dead($2504)
+then
+03CF: load_wav 'COL4_22' as 1
+$2568 = 2 // integer values
+$2607 = 1 // integer values
+else
+$2568 = 0
+$2607 = 0
+end
+jump @COL_4_23093
+
+:COL_4_23067
+if
+001C:   $4811 > $2591 // integer values
+jf @COL_4_23093
+$2568 = 0 // integer values
+
+:COL_4_23093
+jump @COL_4_23171
+
+:COL_4_23100
+if
+  $2568 > 0 // integer values
+jf @COL_4_23171
+if
+  $2568 > 1 // integer values
+jf @COL_4_23164
+$2568 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_23171
+
+:COL_4_23164
+$2568 = 0 // integer values
+
+:COL_4_23171
+if and
+  $2525 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_23481
+if
+  $2564 == 3 // integer values
+jf @COL_4_23260
+if
+03D2:   wav 1 ended
+jf @COL_4_23260
+03D5: remove_text 'COL4_9'  // DEFENSIVE POSITIONS!
+$2564 = 4 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_23260
+if
+  $2564 == 2 // integer values
+jf @COL_4_23338
+if
+03D0:   wav 1 loaded
+jf @COL_4_23338
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_23331
+00BC: text_highpriority 'COL4_9' 10000 ms 1  // DEFENSIVE POSITIONS!
+
+:COL_4_23331
+$2564 = 3 // integer values
+
+:COL_4_23338
+if
+  $2564 == 1 // integer values
+jf @COL_4_23433
+if
+  $2607 == 0 // integer values
+jf @COL_4_23407
+03CF: load_wav 'COL4_9' as 1
+$2564 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_23433
+
+:COL_4_23407
+if
+001C:   $4811 > $2589 // integer values
+jf @COL_4_23433
+$2564 = 0 // integer values
+
+:COL_4_23433
+if
+  $2564 == 0 // integer values
+jf @COL_4_23474
+0084: $2589 = $4811 // integer values and handles
+$2589 += 6000 // integer values
+$2564 = 1 // integer values
+
+:COL_4_23474
+jump @COL_4_23570
+
+:COL_4_23481
+if
+  $2564 > 0 // integer values
+jf @COL_4_23570
+if
+  $2564 > 1 // integer values
+jf @COL_4_23563
+if
+   not $2564 == 4 // integer values
+jf @COL_4_23542
+$2564 = 0 // integer values
+
+:COL_4_23542
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_23570
+
+:COL_4_23563
+$2564 = 0 // integer values
+
+:COL_4_23570
+if and
+  $2569 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_23839
+if
+  $2569 == 3 // integer values
+jf @COL_4_23659
+if
+03D2:   wav 1 ended
+jf @COL_4_23659
+03D5: remove_text 'COL4_6'  // WE'RE TAKING ENEMY FIRE!
+$2569 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_23659
+if
+  $2569 == 2 // integer values
+jf @COL_4_23737
+if
+03D0:   wav 1 loaded
+jf @COL_4_23737
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_23730
+00BC: text_highpriority 'COL4_6' 10000 ms 1  // WE'RE TAKING ENEMY FIRE!
+
+:COL_4_23730
+$2569 = 3 // integer values
+
+:COL_4_23737
+if
+  $2569 == 1 // integer values
+jf @COL_4_23832
+if
+  $2607 == 0 // integer values
+jf @COL_4_23806
+03CF: load_wav 'COL4_6' as 1
+$2569 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_23832
+
+:COL_4_23806
+if
+001C:   $4811 > $2592 // integer values
+jf @COL_4_23832
+$2569 = 0 // integer values
+
+:COL_4_23832
+jump @COL_4_23910
+
+:COL_4_23839
+if
+  $2569 > 0 // integer values
+jf @COL_4_23910
+if
+  $2569 > 1 // integer values
+jf @COL_4_23903
+$2569 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_23910
+
+:COL_4_23903
+$2569 = 0 // integer values
+
+:COL_4_23910
+if and
+  $2570 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_24179
+if
+  $2570 == 3 // integer values
+jf @COL_4_23999
+if
+03D2:   wav 1 ended
+jf @COL_4_23999
+03D5: remove_text 'COL4_19'  // Go get some doughnuts, soldier! - Sir, Yes Sir!
+$2570 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_23999
+if
+  $2570 == 2 // integer values
+jf @COL_4_24077
+if
+03D0:   wav 1 loaded
+jf @COL_4_24077
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_24070
+00BC: text_highpriority 'COL4_19' 10000 ms 1  // Go get some doughnuts, soldier! - Sir, Yes Sir!
+
+:COL_4_24070
+$2570 = 3 // integer values
+
+:COL_4_24077
+if
+  $2570 == 1 // integer values
+jf @COL_4_24172
+if
+  $2607 == 0 // integer values
+jf @COL_4_24146
+03CF: load_wav 'COL4_19' as 1
+$2570 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_24172
+
+:COL_4_24146
+if
+001C:   $4811 > $2593 // integer values
+jf @COL_4_24172
+$2570 = 0 // integer values
+
+:COL_4_24172
+jump @COL_4_24250
+
+:COL_4_24179
+if
+  $2570 > 0 // integer values
+jf @COL_4_24250
+if
+  $2570 > 1 // integer values
+jf @COL_4_24243
+$2570 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_24250
+
+:COL_4_24243
+$2570 = 0 // integer values
+
+:COL_4_24250
+if and
+  $2571 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_24519
+if
+  $2571 == 3 // integer values
+jf @COL_4_24339
+if
+03D2:   wav 1 ended
+jf @COL_4_24339
+03D5: remove_text 'COL4_20'  // Target acquired, Sir
+$2571 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_24339
+if
+  $2571 == 2 // integer values
+jf @COL_4_24417
+if
+03D0:   wav 1 loaded
+jf @COL_4_24417
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_24410
+00BC: text_highpriority 'COL4_20' 10000 ms 1  // Target acquired, Sir
+
+:COL_4_24410
+$2571 = 3 // integer values
+
+:COL_4_24417
+if
+  $2571 == 1 // integer values
+jf @COL_4_24512
+if
+  $2607 == 0 // integer values
+jf @COL_4_24486
+03CF: load_wav 'COL4_20' as 1
+$2571 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_24512
+
+:COL_4_24486
+if
+001C:   $4811 > $2594 // integer values
+jf @COL_4_24512
+$2571 = 0 // integer values
+
+:COL_4_24512
+jump @COL_4_24590
+
+:COL_4_24519
+if
+  $2571 > 0 // integer values
+jf @COL_4_24590
+if
+  $2571 > 1 // integer values
+jf @COL_4_24583
+$2571 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_24590
+
+:COL_4_24583
+$2571 = 0 // integer values
+
+:COL_4_24590
+if and
+  $2573 > 0 // integer values
+  $2610 == 1 // integer values
+jf @COL_4_24859
+if
+  $2573 == 3 // integer values
+jf @COL_4_24679
+if
+03D2:   wav 1 ended
+jf @COL_4_24679
+03D5: remove_text 'COL4_18'  // Someone's on the tank Sir!
+$2573 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_24679
+if
+  $2573 == 2 // integer values
+jf @COL_4_24757
+if
+03D0:   wav 1 loaded
+jf @COL_4_24757
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_24750
+00BC: text_highpriority 'COL4_18' 10000 ms 1  // Someone's on the tank Sir!
+
+:COL_4_24750
+$2573 = 3 // integer values
+
+:COL_4_24757
+if
+  $2573 == 1 // integer values
+jf @COL_4_24852
+if
+  $2607 == 0 // integer values
+jf @COL_4_24826
+03CF: load_wav 'COL4_18' as 1
+$2573 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_24852
+
+:COL_4_24826
+if
+001C:   $4811 > $2596 // integer values
+jf @COL_4_24852
+$2573 = 0 // integer values
+
+:COL_4_24852
+jump @COL_4_24930
+
+:COL_4_24859
+if
+  $2573 > 0 // integer values
+jf @COL_4_24930
+if
+  $2573 > 1 // integer values
+jf @COL_4_24923
+$2573 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_24930
+
+:COL_4_24923
+$2573 = 0 // integer values
+
+:COL_4_24930
+if and
+  $2574 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_25206
+if
+  $2574 == 3 // integer values
+jf @COL_4_25026
+if
+03D2:   wav 1 ended
+jf @COL_4_25026
+03D5: remove_text 'COL4_1'  // What's up with the Gunner? - Don't know Sir!
+$2574 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_25026
+if
+  $2574 == 2 // integer values
+jf @COL_4_25104
+if
+03D0:   wav 1 loaded
+jf @COL_4_25104
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_25097
+00BC: text_highpriority 'COL4_1' 10000 ms 1  // What's up with the Gunner? - Don't know Sir!
+
+:COL_4_25097
+$2574 = 3 // integer values
+
+:COL_4_25104
+if
+  $2574 == 1 // integer values
+jf @COL_4_25199
+if
+  $2607 == 0 // integer values
+jf @COL_4_25173
+03CF: load_wav 'COL4_1' as 1
+$2574 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_25199
+
+:COL_4_25173
+if
+001C:   $4811 > $2597 // integer values
+jf @COL_4_25199
+$2574 = 0 // integer values
+
+:COL_4_25199
+jump @COL_4_25277
+
+:COL_4_25206
+if
+  $2574 > 0 // integer values
+jf @COL_4_25277
+if
+  $2574 > 1 // integer values
+jf @COL_4_25270
+$2574 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_25277
+
+:COL_4_25270
+$2574 = 0 // integer values
+
+:COL_4_25277
+if and
+  $2584 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_25553
+if
+  $2584 == 3 // integer values
+jf @COL_4_25373
+if
+03D2:   wav 1 ended
+jf @COL_4_25373
+03D5: remove_text 'COL4_4'  // Get topside soldier. - Sir, Yes Sir!
+$2584 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_25373
+if
+  $2584 == 2 // integer values
+jf @COL_4_25451
+if
+03D0:   wav 1 loaded
+jf @COL_4_25451
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_25444
+00BC: text_highpriority 'COL4_4' 10000 ms 1  // Get topside soldier. - Sir, Yes Sir!
+
+:COL_4_25444
+$2584 = 3 // integer values
+
+:COL_4_25451
+if
+  $2584 == 1 // integer values
+jf @COL_4_25546
+if
+  $2607 == 0 // integer values
+jf @COL_4_25520
+03CF: load_wav 'COL4_4' as 1
+$2584 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_25546
+
+:COL_4_25520
+if
+001C:   $4811 > $2606 // integer values
+jf @COL_4_25546
+$2584 = 0 // integer values
+
+:COL_4_25546
+jump @COL_4_25624
+
+:COL_4_25553
+if
+  $2584 > 0 // integer values
+jf @COL_4_25624
+if
+  $2584 > 1 // integer values
+jf @COL_4_25617
+$2584 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_25624
+
+:COL_4_25617
+$2584 = 0 // integer values
+
+:COL_4_25624
+if and
+  $2576 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_25900
+if
+  $2576 == 3 // integer values
+jf @COL_4_25720
+if
+03D2:   wav 1 ended
+jf @COL_4_25720
+03D5: remove_text 'COL4_3'  // CONVOY HALT!
+$2576 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_25720
+if
+  $2576 == 2 // integer values
+jf @COL_4_25798
+if
+03D0:   wav 1 loaded
+jf @COL_4_25798
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_25791
+00BC: text_highpriority 'COL4_3' 10000 ms 1  // CONVOY HALT!
+
+:COL_4_25791
+$2576 = 3 // integer values
+
+:COL_4_25798
+if
+  $2576 == 1 // integer values
+jf @COL_4_25893
+if
+  $2607 == 0 // integer values
+jf @COL_4_25867
+03CF: load_wav 'COL4_3' as 1
+$2576 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_25893
+
+:COL_4_25867
+if
+001C:   $4811 > $2599 // integer values
+jf @COL_4_25893
+$2576 = 0 // integer values
+
+:COL_4_25893
+jump @COL_4_25971
+
+:COL_4_25900
+if
+  $2576 > 0 // integer values
+jf @COL_4_25971
+if
+  $2576 > 1 // integer values
+jf @COL_4_25964
+$2576 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_25971
+
+:COL_4_25964
+$2576 = 0 // integer values
+
+:COL_4_25971
+if and
+  $2577 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_26247
+if
+  $2577 == 3 // integer values
+jf @COL_4_26067
+if
+03D2:   wav 1 ended
+jf @COL_4_26067
+03D5: remove_text 'COL4_17'  // Ok, PLATOON MOVE IT OUT!
+$2577 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_26067
+if
+  $2577 == 2 // integer values
+jf @COL_4_26145
+if
+03D0:   wav 1 loaded
+jf @COL_4_26145
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_26138
+00BC: text_highpriority 'COL4_17' 10000 ms 1  // Ok, PLATOON MOVE IT OUT!
+
+:COL_4_26138
+$2577 = 3 // integer values
+
+:COL_4_26145
+if
+  $2577 == 1 // integer values
+jf @COL_4_26240
+if
+  $2607 == 0 // integer values
+jf @COL_4_26214
+03CF: load_wav 'COL4_17' as 1
+$2577 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_26240
+
+:COL_4_26214
+if
+001C:   $4811 > $2600 // integer values
+jf @COL_4_26240
+$2577 = 0 // integer values
+
+:COL_4_26240
+jump @COL_4_26318
+
+:COL_4_26247
+if
+  $2577 > 0 // integer values
+jf @COL_4_26318
+if
+  $2577 > 1 // integer values
+jf @COL_4_26311
+$2577 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_26318
+
+:COL_4_26311
+$2577 = 0 // integer values
+
+:COL_4_26318
+if and
+  $2575 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_26594
+if
+  $2575 == 3 // integer values
+jf @COL_4_26414
+if
+03D2:   wav 1 ended
+jf @COL_4_26414
+03D5: remove_text 'COL4_7'  // Civilian, move away from the tank!
+$2575 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_26414
+if
+  $2575 == 2 // integer values
+jf @COL_4_26492
+if
+03D0:   wav 1 loaded
+jf @COL_4_26492
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_26485
+00BC: text_highpriority 'COL4_7' 10000 ms 1  // Civilian, move away from the tank!
+
+:COL_4_26485
+$2575 = 3 // integer values
+
+:COL_4_26492
+if
+  $2575 == 1 // integer values
+jf @COL_4_26587
+if
+  $2607 == 0 // integer values
+jf @COL_4_26561
+03CF: load_wav 'COL4_7' as 1
+$2575 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_26587
+
+:COL_4_26561
+if
+001C:   $4811 > $2598 // integer values
+jf @COL_4_26587
+$2575 = 0 // integer values
+
+:COL_4_26587
+jump @COL_4_26665
+
+:COL_4_26594
+if
+  $2575 > 0 // integer values
+jf @COL_4_26665
+if
+  $2575 > 1 // integer values
+jf @COL_4_26658
+$2575 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_26665
+
+:COL_4_26658
+$2575 = 0 // integer values
+
+:COL_4_26665
+if and
+  $2579 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_26941
+if
+  $2579 == 3 // integer values
+jf @COL_4_26761
+if
+03D2:   wav 1 ended
+jf @COL_4_26761
+03D5: remove_text 'COL4_14'  // Drop him soldier.
+$2579 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_26761
+if
+  $2579 == 2 // integer values
+jf @COL_4_26839
+if
+03D0:   wav 1 loaded
+jf @COL_4_26839
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_26832
+00BC: text_highpriority 'COL4_14' 10000 ms 1  // Drop him soldier.
+
+:COL_4_26832
+$2579 = 3 // integer values
+
+:COL_4_26839
+if
+  $2579 == 1 // integer values
+jf @COL_4_26934
+if
+  $2607 == 0 // integer values
+jf @COL_4_26908
+03CF: load_wav 'COL4_14' as 1
+$2579 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_26934
+
+:COL_4_26908
+if
+001C:   $4811 > $2601 // integer values
+jf @COL_4_26934
+$2579 = 0 // integer values
+
+:COL_4_26934
+jump @COL_4_27012
+
+:COL_4_26941
+if
+  $2579 > 0 // integer values
+jf @COL_4_27012
+if
+  $2579 > 1 // integer values
+jf @COL_4_27005
+$2579 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_27012
+
+:COL_4_27005
+$2579 = 0 // integer values
+
+:COL_4_27012
+if and
+  $2580 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_27288
+if
+  $2580 == 3 // integer values
+jf @COL_4_27108
+if
+03D2:   wav 1 ended
+jf @COL_4_27108
+03D5: remove_text 'COL4_8'  // I SAID, move away, IMMEDIATELY!
+$2580 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_27108
+if
+  $2580 == 2 // integer values
+jf @COL_4_27186
+if
+03D0:   wav 1 loaded
+jf @COL_4_27186
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_27179
+00BC: text_highpriority 'COL4_8' 10000 ms 1  // I SAID, move away, IMMEDIATELY!
+
+:COL_4_27179
+$2580 = 3 // integer values
+
+:COL_4_27186
+if
+  $2580 == 1 // integer values
+jf @COL_4_27281
+if
+  $2607 == 0 // integer values
+jf @COL_4_27255
+03CF: load_wav 'COL4_8' as 1
+$2580 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_27281
+
+:COL_4_27255
+if
+001C:   $4811 > $2602 // integer values
+jf @COL_4_27281
+$2580 = 0 // integer values
+
+:COL_4_27281
+jump @COL_4_27359
+
+:COL_4_27288
+if
+  $2580 > 0 // integer values
+jf @COL_4_27359
+if
+  $2580 > 1 // integer values
+jf @COL_4_27352
+$2580 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_27359
+
+:COL_4_27352
+$2580 = 0 // integer values
+
+:COL_4_27359
+if and
+  $2581 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_27635
+if
+  $2581 == 3 // integer values
+jf @COL_4_27455
+if
+03D2:   wav 1 ended
+jf @COL_4_27455
+03D5: remove_text 'COL4_11'  // Get that civilian out of our way soldier! - Sir, Yes Sir!
+$2581 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_27455
+if
+  $2581 == 2 // integer values
+jf @COL_4_27533
+if
+03D0:   wav 1 loaded
+jf @COL_4_27533
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_27526
+00BC: text_highpriority 'COL4_11' 10000 ms 1  // Get that civilian out of our way soldier! - Sir, Yes Sir!
+
+:COL_4_27526
+$2581 = 3 // integer values
+
+:COL_4_27533
+if
+  $2581 == 1 // integer values
+jf @COL_4_27628
+if
+  $2607 == 0 // integer values
+jf @COL_4_27602
+03CF: load_wav 'COL4_11' as 1
+$2581 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_27628
+
+:COL_4_27602
+if
+001C:   $4811 > $2603 // integer values
+jf @COL_4_27628
+$2581 = 0 // integer values
+
+:COL_4_27628
+jump @COL_4_27706
+
+:COL_4_27635
+if
+  $2581 > 0 // integer values
+jf @COL_4_27706
+if
+  $2581 > 1 // integer values
+jf @COL_4_27699
+$2581 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_27706
+
+:COL_4_27699
+$2581 = 0 // integer values
+
+:COL_4_27706
+if and
+  $2582 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_27982
+if
+  $2582 == 3 // integer values
+jf @COL_4_27802
+if
+03D2:   wav 1 ended
+jf @COL_4_27802
+03D5: remove_text 'COL4_13'  // This is a military convoy, do not obstruct our route.
+$2582 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_27802
+if
+  $2582 == 2 // integer values
+jf @COL_4_27880
+if
+03D0:   wav 1 loaded
+jf @COL_4_27880
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_27873
+00BC: text_highpriority 'COL4_13' 10000 ms 1  // This is a military convoy, do not obstruct our route.
+
+:COL_4_27873
+$2582 = 3 // integer values
+
+:COL_4_27880
+if
+  $2582 == 1 // integer values
+jf @COL_4_27975
+if
+  $2607 == 0 // integer values
+jf @COL_4_27949
+03CF: load_wav 'COL4_13' as 1
+$2582 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_27975
+
+:COL_4_27949
+if
+001C:   $4811 > $2604 // integer values
+jf @COL_4_27975
+$2582 = 0 // integer values
+
+:COL_4_27975
+jump @COL_4_28053
+
+:COL_4_27982
+if
+  $2582 > 0 // integer values
+jf @COL_4_28053
+if
+  $2582 > 1 // integer values
+jf @COL_4_28046
+$2582 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_28053
+
+:COL_4_28046
+$2582 = 0 // integer values
+
+:COL_4_28053
+if and
+  $2583 > 0 // integer values
+  $2610 == 1 // integer values
+  $2525 == 0 // integer values
+jf @COL_4_28329
+if
+  $2583 == 3 // integer values
+jf @COL_4_28149
+if
+03D2:   wav 1 ended
+jf @COL_4_28149
+03D5: remove_text 'COL4_15'  // Get that civilian vehicle out of our way! - Sir! Moving vehicle Sir!
+$2583 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+
+:COL_4_28149
+if
+  $2583 == 2 // integer values
+jf @COL_4_28227
+if
+03D0:   wav 1 loaded
+jf @COL_4_28227
+03D1: play_wav 1
+if
+001C:   $4811 > $2547 // integer values
+jf @COL_4_28220
+00BC: text_highpriority 'COL4_15' 10000 ms 1  // Get that civilian vehicle out of our way! - Sir! Moving vehicle Sir!
+
+:COL_4_28220
+$2583 = 3 // integer values
+
+:COL_4_28227
+if
+  $2583 == 1 // integer values
+jf @COL_4_28322
+if
+  $2607 == 0 // integer values
+jf @COL_4_28296
+03CF: load_wav 'COL4_15' as 1
+$2583 = 2 // integer values
+$2607 = 1 // integer values
+jump @COL_4_28322
+
+:COL_4_28296
+if
+001C:   $4811 > $2605 // integer values
+jf @COL_4_28322
+$2583 = 0 // integer values
+
+:COL_4_28322
+jump @COL_4_28400
+
+:COL_4_28329
+if
+  $2583 > 0 // integer values
+jf @COL_4_28400
+if
+  $2583 > 1 // integer values
+jf @COL_4_28393
+$2583 = 0 // integer values
+$2607 = 0 // integer values
+jump @COL_4_4011
+jump @COL_4_28400
+
+:COL_4_28393
+$2583 = 0 // integer values
+
+:COL_4_28400
+jump @COL_4_4011
+
+:COL_4_28407
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:COL_4_28424
+$PASSED_COL4_SIR_YES_SIR = 1 // integer values
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 2000
+0318: set_latest_mission_passed 'COL_4'  // Sir, Yes Sir!
+030C: progress_made += 1
+0394: play_music 1
+Marker.Disable($228)
+return
+
+:COL_4_28487
+$ONMISSION = 0 // integer values
+Marker.Disable($2516)
+01E7: remove_forbidden_for_cars_cube -721.211 243.998 5.0 -651.211 693.998 25.0
+01E7: remove_forbidden_for_cars_cube -760.362 101.883 5.0 -700.362 251.883 25.0
+01E7: remove_forbidden_for_cars_cube -783.906 -46.826 5.0 -723.906 103.174 25.0
+01E7: remove_forbidden_for_cars_cube -853.397 -149.692 5.0 -773.397 0.308 25.0
+01E7: remove_forbidden_for_cars_cube -870.656 -594.54 5.0 -810.656 -144.54 25.0
+01E7: remove_forbidden_for_cars_cube -837.282 -1041.814 5.0 -777.282 -591.814 25.0
+01E7: remove_forbidden_for_cars_cube -827.532 -1539.617 5.0 -747.532 -1039.617 25.0
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+Model.Destroy(#RHINO)
+Model.Destroy(#BARRACKS)
+Model.Destroy(#ARMY)
+Model.Destroy(#PATRIOT)
+Model.Destroy(#M4)
+0151: remove_status_text $2520
+Pickup.Destroy($2510)
+Pickup.Destroy($2511)
+$1603 = 0 // integer values
+mission_cleanup
+return
+
+:COL_4_28778
+if
+003A:   $2507 == $2474 // integer values and handles
+jf @COL_4_28845
+0084: $2530 = $2533 // integer values and handles
+0084: $2531 = $2539 // integer values and handles
+0086: $2661 = $2652 // floating-point values only
+0086: $2662 = $2653 // floating-point values only
+0084: $2471 = $2495 // integer values and handles
+0084: $2631 = $2632 // integer values and handles
+
+:COL_4_28845
+if
+003A:   $2507 == $2478 // integer values and handles
+jf @COL_4_28912
+0084: $2530 = $2534 // integer values and handles
+0084: $2531 = $2540 // integer values and handles
+0086: $2661 = $2648 // floating-point values only
+0086: $2662 = $2649 // floating-point values only
+0084: $2471 = $2496 // integer values and handles
+0084: $2631 = $2633 // integer values and handles
+
+:COL_4_28912
+if
+003A:   $2507 == $2504 // integer values and handles
+jf @COL_4_28979
+0084: $2530 = $2536 // integer values and handles
+0084: $2531 = $2541 // integer values and handles
+0086: $2661 = $2650 // floating-point values only
+0086: $2662 = $2651 // floating-point values only
+0084: $2471 = $2497 // integer values and handles
+0084: $2631 = $2634 // integer values and handles
+
+:COL_4_28979
+if
+003A:   $2507 == $2482 // integer values and handles
+jf @COL_4_29046
+0084: $2530 = $2537 // integer values and handles
+0084: $2531 = $2542 // integer values and handles
+0086: $2661 = $2645 // floating-point values only
+0086: $2662 = $2646 // floating-point values only
+0084: $2471 = $2498 // integer values and handles
+0084: $2631 = $2635 // integer values and handles
+
+:COL_4_29046
+if
+01C1:   car $2506 stopped
+jf @COL_4_30693
+0407: create_coordinate $2659 $2660 $447 from_car $2506 offset 0.0 7.0 0.0
+if
+   not Actor.Dead($2507)
+jf @COL_4_30686
+if
+00F6:   player $PLAYER_CHAR 0 $2659 $2660 10@ radius 4.0 4.0 2.0
+jf @COL_4_29607
+if
+  $2530 == 5 // integer values
+jf @COL_4_29174
+$2530 = 0 // integer values
+
+:COL_4_29174
+if
+  $2530 == 0 // integer values
+jf @COL_4_29385
+if
+044B:   actor $2507 on_foot
+jf @COL_4_29276
+011C: actor $2507 clear_objective
+01D2: actor $2507 follow_player $PLAYER_CHAR
+if
+  $2581 == 0 // integer values
+jf @COL_4_29262
+$2581 = 1 // integer values
+0084: $2603 = $4811 // integer values and handles
+$2603 += 6000 // integer values
+
+:COL_4_29262
+$2530 = 1 // integer values
+jump @COL_4_29360
+
+:COL_4_29276
+if
+803A:   not  $2507 == $2504 // integer values and handles
+jf @COL_4_29360
+if
+   Actor.Driving($2507)
+jf @COL_4_29360
+$2494 = Actor.CurrentCar($2507)
+020A: set_car $2494 door_status_to 1
+if
+003A:   $2494 == $2470 // integer values and handles
+jf @COL_4_29352
+$2544 = 2 // integer values
+
+:COL_4_29352
+01D3: actor $2507 leave_car $2494
+
+:COL_4_29360
+if
+  $2527 == 0 // integer values
+jf @COL_4_29385
+$2527 = 1 // integer values
+
+:COL_4_29385
+if
+  $2530 == 1 // integer values
+jf @COL_4_29514
+if
+   not Actor.Driving($2507)
+jf @COL_4_29514
+if
+00E9:   player $PLAYER_CHAR 0 $2507 radius 2.5 2.5
+jf @COL_4_29514
+if
+  $2582 == 0 // integer values
+jf @COL_4_29491
+$2582 = 1 // integer values
+0084: $2604 = $4811 // integer values and handles
+$2604 += 6000 // integer values
+
+:COL_4_29491
+0084: $2531 = $4811 // integer values and handles
+$2531 += 7000 // integer values
+$2530 = 2 // integer values
+
+:COL_4_29514
+if
+  $2530 == 2 // integer values
+jf @COL_4_29607
+if
+001C:   $4811 > $2531 // integer values
+jf @COL_4_29607
+if
+  $2579 == 0 // integer values
+jf @COL_4_29592
+$2579 = 1 // integer values
+0084: $2601 = $4811 // integer values and handles
+$2601 += 6000 // integer values
+
+:COL_4_29592
+01CA: actor $2507 kill_player $PLAYER_CHAR
+$2530 = 3 // integer values
+
+:COL_4_29607
+if
+  $2530 == 0 // integer values
+jf @COL_4_29648
+if
+   not Actor.Driving($2507)
+jf @COL_4_29648
+$2530 = 5 // integer values
+
+:COL_4_29648
+if
+80F6:   not player $PLAYER_CHAR 0 $2659 $2660 10@ radius 4.0 4.0 2.0
+jf @COL_4_30321
+if or
+  $2530 == 1 // integer values
+  $2530 == 2 // integer values
+  $2530 == 3 // integer values
+jf @COL_4_29866
+0086: $2657 = $2659 // floating-point values only
+$2657 += 4.0 // floating-point values
+0086: $2658 = $2660 // floating-point values only
+$2658 += 4.0 // floating-point values
+0086: $445 = $2657 // floating-point values only
+$445 -= 8.0 // floating-point values
+0086: $446 = $2658 // floating-point values only
+$446 -= 8.0 // floating-point values
+053E: $2471 = get_random_car_with_actors -1 in_area $2657 $2658 $445 $446
+if
+  $2471 == -1 // integer values
+jf @COL_4_29852
+$2530 = 5 // integer values
+$2518 = 0 // integer values
+jump @COL_4_29866
+
+:COL_4_29852
+$2530 = 0 // integer values
+$2518 = 1 // integer values
+
+:COL_4_29866
+if
+  $2530 == 8 // integer values
+jf @COL_4_29996
+if
+   not Actor.Driving($2507)
+jf @COL_4_29996
+if
+   not Car.Wrecked($2471)
+jf @COL_4_29931
+01D5: actor $2507 go_to_and_drive_car $2471
+jump @COL_4_29943
+
+:COL_4_29931
+011C: actor $2507 clear_objective
+$2530 = 5 // integer values
+
+:COL_4_29943
+Car.RemoveReferences($2471)
+if
+  $2583 == 0 // integer values
+jf @COL_4_29989
+$2583 = 1 // integer values
+0084: $2605 = $4811 // integer values and handles
+$2605 += 4000 // integer values
+
+:COL_4_29989
+$2530 = 4 // integer values
+
+:COL_4_29996
+if
+  $2530 == 0 // integer values
+jf @COL_4_30314
+if
+   not $2518 == 1 // integer values
+jf @COL_4_30123
+0086: $2657 = $2659 // floating-point values only
+$2657 += 4.0 // floating-point values
+0086: $2658 = $2660 // floating-point values only
+$2658 += 4.0 // floating-point values
+0086: $445 = $2657 // floating-point values only
+$445 -= 8.0 // floating-point values
+0086: $446 = $2658 // floating-point values only
+$446 -= 8.0 // floating-point values
+053E: $2471 = get_random_car_with_actors -1 in_area $2657 $2658 $445 $446
+
+:COL_4_30123
+if
+   not $2471 == -1 // integer values
+jf @COL_4_30314
+if
+   Car.Wrecked($2471)
+jf @COL_4_30190
+00AE: set_vehicle $2506 traffic_behavior_to 3
+Car.RemoveReferences($2471)
+$2530 = 5 // integer values
+$2471 = -1 // integer values
+jump @COL_4_30314
+
+:COL_4_30190
+if
+   not Actor.Driving($2507)
+jf @COL_4_30233
+01D5: actor $2507 go_to_and_drive_car $2471
+Car.RemoveReferences($2471)
+$2530 = 4 // integer values
+jump @COL_4_30289
+
+:COL_4_30233
+$2494 = Actor.CurrentCar($2507)
+020A: set_car $2494 door_status_to 1
+if
+003A:   $2494 == $2470 // integer values and handles
+jf @COL_4_30274
+$2544 = 2 // integer values
+
+:COL_4_30274
+01D3: actor $2507 leave_car $2494
+$2530 = 8 // integer values
+
+:COL_4_30289
+if
+  $2527 == 0 // integer values
+jf @COL_4_30314
+$2527 = 1 // integer values
+
+:COL_4_30314
+$2518 = 0 // integer values
+
+:COL_4_30321
+if
+  $2530 == 4 // integer values
+jf @COL_4_30571
+if
+   Actor.Driving($2507)
+jf @COL_4_30490
+Car.RemoveReferences($2471)
+$2471 = -1 // integer values
+$2471 = Actor.CurrentCar($2507)
+Car.StorePos($2471, $445, $446, $447)
+$445 -= 10.0 // floating-point values
+$446 -= 25.0 // floating-point values
+02C0: set $2661 $2662 $447 to_ped_path_coords_closest_to $445 $446 $447
+Car.SetMaxSpeed($2471, 20.0)
+00AE: set_vehicle $2471 traffic_behavior_to 2
+02C2: car $2471 drive_to_point $2661 $2662 $447
+0084: $2531 = $4811 // integer values and handles
+$2531 += 10000 // integer values
+$2530 = 6 // integer values
+jump @COL_4_30571
+
+:COL_4_30490
+if
+   Car.Wrecked($2471)
+jf @COL_4_30525
+011C: actor $2507 clear_objective
+$2530 = 5 // integer values
+jump @COL_4_30571
+
+:COL_4_30525
+if
+81AD:   not car $2471 sphere 0 near_point $2659 $2660 radius 4.0 4.0
+jf @COL_4_30571
+011C: actor $2507 clear_objective
+$2530 = 5 // integer values
+
+:COL_4_30571
+if
+  $2530 == 6 // integer values
+jf @COL_4_30686
+if
+00EE:   actor $2507 0 $2661 $2662 radius 3.0 3.0
+jf @COL_4_30637
+$2530 = 5 // integer values
+jump @COL_4_30686
+
+:COL_4_30637
+if
+001C:   $4811 > $2531 // integer values
+jf @COL_4_30663
+$2530 = 5 // integer values
+
+:COL_4_30663
+if
+   not Actor.Driving($2507)
+jf @COL_4_30686
+$2530 = 5 // integer values
+
+:COL_4_30686
+jump @COL_4_30725
+
+:COL_4_30693
+if and
+   not $2530 == 0 // integer values
+   not $2530 == 5 // integer values
+jf @COL_4_30725
+$2530 = 5 // integer values
+
+:COL_4_30725
+if
+003A:   $2507 == $2474 // integer values and handles
+jf @COL_4_30792
+0084: $2533 = $2530 // integer values and handles
+0084: $2539 = $2531 // integer values and handles
+0086: $2652 = $2661 // floating-point values only
+0086: $2653 = $2662 // floating-point values only
+0084: $2495 = $2471 // integer values and handles
+0084: $2632 = $2631 // integer values and handles
+
+:COL_4_30792
+if
+003A:   $2507 == $2478 // integer values and handles
+jf @COL_4_30859
+0084: $2534 = $2530 // integer values and handles
+0084: $2540 = $2531 // integer values and handles
+0086: $2648 = $2661 // floating-point values only
+0086: $2649 = $2662 // floating-point values only
+0084: $2496 = $2471 // integer values and handles
+0084: $2633 = $2631 // integer values and handles
+
+:COL_4_30859
+if
+003A:   $2507 == $2504 // integer values and handles
+jf @COL_4_30926
+0084: $2536 = $2530 // integer values and handles
+0084: $2541 = $2531 // integer values and handles
+0086: $2650 = $2661 // floating-point values only
+0086: $2651 = $2662 // floating-point values only
+0084: $2497 = $2471 // integer values and handles
+0084: $2634 = $2631 // integer values and handles
+
+:COL_4_30926
+if
+003A:   $2507 == $2482 // integer values and handles
+jf @COL_4_30993
+0084: $2537 = $2530 // integer values and handles
+0084: $2542 = $2531 // integer values and handles
+0086: $2645 = $2661 // floating-point values only
+0086: $2646 = $2662 // floating-point values only
+0084: $2498 = $2471 // integer values and handles
+0084: $2635 = $2631 // integer values and handles
+
+:COL_4_30993
+return
+
+:COL_4_30995
+01B2: give_actor $2472 weapon 26 ammo 9999 // Load the weapon model before using this
+01ED: clear_actor $2472 threat_search
+0243: set_actor $2472 ped_stats_to 16
+0319: set_actor $2472 running 1
+return
+
+:COL_4_31026
+if
+  $2644 == 0 // integer values
+jf @COL_4_31087
+0291: set_actor $2512 attack_when_provoked 1
+011A: set_actor $2512 search_threat 1
+0239: actor $2512 run_to -829.7494 -1491.996
+0411: set_actor $2512 use_pednode_seek 0
+$2644 = 1 // integer values
+
+:COL_4_31087
+if
+  $2644 == 1 // integer values
+jf @COL_4_31210
+if
+04FF:  $2512
+jf @COL_4_31143
+0239: actor $2512 run_to -829.7494 -1491.996
+0411: set_actor $2512 use_pednode_seek 0
+
+:COL_4_31143
+if
+00ED:   actor $2512 0 -829.7494 -1491.996 radius 1.0 1.0
+jf @COL_4_31210
+0239: actor $2512 run_to -826.0425 -1493.517
+0411: set_actor $2512 use_pednode_seek 0
+$2644 = 2 // integer values
+
+:COL_4_31210
+if
+  $2644 == 2 // integer values
+jf @COL_4_31316
+if
+04FF:  $2512
+jf @COL_4_31266
+0239: actor $2512 run_to -826.0425 -1493.517
+0411: set_actor $2512 use_pednode_seek 0
+
+:COL_4_31266
+if
+00ED:   actor $2512 0 -826.0425 -1493.517 radius 1.0 1.0
+jf @COL_4_31316
+Actor.DestroyInstantly($2512)
+$2644 = 3 // integer values
+
+:COL_4_31316
+return
+
+:COL_4_31318
+if
+001C:   $2781 > $CUT_SCENE_TIME // integer values
+jf @COL_4_31353
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COL_4_31318
+
+:COL_4_31353
+return
+
+:COL_4_31355
+if
+   not Car.Wrecked($2514)
+jf @COL_4_31895
+if
+80DC:   not player $PLAYER_CHAR driving $2514
+jf @COL_4_31852
+if
+   not Actor.Dead($2515)
+jf @COL_4_31692
+if
+   Actor.InCar($2515, $2514)
+jf @COL_4_31557
+if
+   not $2525 == 0 // integer values
+jf @COL_4_31486
+if
+   not Actor.Dead($2513)
+jf @COL_4_31474
+01CA: actor $2513 kill_player $PLAYER_CHAR
+jump @COL_4_31479
+
+:COL_4_31474
+0465: remove_actor $2513 from_turret_mode
+
+:COL_4_31479
+jump @COL_4_31550
+
+:COL_4_31486
+if
+   Actor.Dead($2513)
+jf @COL_4_31534
+if
+  $2525 == 0 // integer values
+jf @COL_4_31527
+$2525 = 1 // integer values
+
+:COL_4_31527
+jump @COL_4_31550
+
+:COL_4_31534
+020F: actor $2513 look_at_player $PLAYER_CHAR
+04C6: actor $2513 do_kung_fu_stance_towards_actor $PLAYER_ACTOR
+
+:COL_4_31550
+jump @COL_4_31685
+
+:COL_4_31557
+if
+  $2566 == 0 // integer values
+jf @COL_4_31685
+if
+   not Actor.Dead($2513)
+jf @COL_4_31685
+0465: remove_actor $2513 from_turret_mode
+0407: create_coordinate $445 $446 $447 from_car $2514 offset 0.0 -11.0 0.0
+0239: actor $2513 run_to $445 $446
+if
+00ED:   actor $2513 0 $445 $446 radius 2.0 2.0
+jf @COL_4_31685
+01CA: actor $2513 kill_player $PLAYER_CHAR
+$2566 = 1 // integer values
+
+:COL_4_31685
+jump @COL_4_31845
+
+:COL_4_31692
+if
+  $2525 == 0 // integer values
+jf @COL_4_31717
+$2525 = 1 // integer values
+
+:COL_4_31717
+if
+  $2566 == 0 // integer values
+jf @COL_4_31845
+if
+   not Actor.Dead($2513)
+jf @COL_4_31845
+0465: remove_actor $2513 from_turret_mode
+0407: create_coordinate $445 $446 $447 from_car $2514 offset 0.0 -11.0 0.0
+0239: actor $2513 run_to $445 $446
+if
+00ED:   actor $2513 0 $445 $446 radius 2.0 2.0
+jf @COL_4_31845
+01CA: actor $2513 kill_player $PLAYER_CHAR
+$2566 = 1 // integer values
+
+:COL_4_31845
+jump @COL_4_31888
+
+:COL_4_31852
+Car.ImmuneToNonPlayer($2514) = False
+0465: remove_actor $2513 from_turret_mode
+if
+   not Actor.Dead($2513)
+jf @COL_4_31888
+01CA: actor $2513 kill_player $PLAYER_CHAR
+
+:COL_4_31888
+jump @COL_4_31924
+
+:COL_4_31895
+0465: remove_actor $2513 from_turret_mode
+if
+   not Actor.Dead($2513)
+jf @COL_4_31924
+01CA: actor $2513 kill_player $PLAYER_CHAR
+
+:COL_4_31924
+return

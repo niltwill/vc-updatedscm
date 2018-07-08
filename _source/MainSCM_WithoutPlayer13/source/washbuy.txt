@@ -1,0 +1,96 @@
+:WASHBUY
+thread 'WASHBUY'
+$ONMISSION = 1 // integer values
+wait 0
+Marker.Disable($649)
+030C: progress_made += 1
+0169: set_fade_color 0 0 1
+fade 0 500
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+
+:WASHBUY_63
+if
+fading
+jf @WASHBUY_136
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @WASHBUY_129
+0570: $649 = create_asset_radar_marker_with_icon 19 at $594 $595 $596
+018B: show_on_radar $649 2
+create_thread @SAVE4
+end_thread
+
+:WASHBUY_129
+jump @WASHBUY_63
+
+:WASHBUY_136
+0570: $649 = create_asset_radar_marker_with_icon 19 at $594 $595 $596
+018B: show_on_radar $649 2
+create_thread @SAVE4
+0395: clear_area 1 at 90.781 -806.1213 range 10.3349 1.0
+0055: put_player $PLAYER_CHAR at 90.781 -806.1213 10.3349
+0171: set_player $PLAYER_CHAR z_angle_to 238.8605
+02A3: enable_widescreen 1
+0169: set_fade_color 0 0 1
+fade 1 500
+Camera.SetPosition(57.5999, -681.8762, 10.4095, 0.0, 0.0, 0.0)
+Camera.PointAt(57.8653, -682.802, 10.6787, 2)
+
+:WASHBUY_291
+if
+fading
+jf @WASHBUY_333
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @WASHBUY_326
+end_thread
+
+:WASHBUY_326
+jump @WASHBUY_291
+
+:WASHBUY_333
+$1796 = 1 // integer values
+$1301 = 1 // integer values
+01E3: text_1number_styled 'WASHBUY' number $650 time 5000 style 6  // 1102 Washington Street purchased: $~1~
+0529: add $650 to_money_spent_on_property_stats
+0542: add_property 11 to_property_own_stats
+0394: play_music 1
+043C: set_game_sounds_disable_on_fade 0
+wait 2000
+00BC: text_highpriority 'BUYSAVE' 3000 ms 1  // ~g~You can now save your game here when not on a mission.
+wait 3000
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:WASHBUY_422
+if
+fading
+jf @WASHBUY_468
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @WASHBUY_461
+043C: set_game_sounds_disable_on_fade 1
+end_thread
+
+:WASHBUY_461
+jump @WASHBUY_422
+
+:WASHBUY_468
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+02A3: enable_widescreen 0
+0169: set_fade_color 0 0 1
+fade 1 500
+gosub @HELP_2932
+043C: set_game_sounds_disable_on_fade 1
+$ONMISSION = 0 // integer values
+mission_cleanup
+end_thread

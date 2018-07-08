@@ -1,0 +1,1275 @@
+:PORNO2
+thread 'PORNO2'
+gosub @PORNO2_46
+if
+wasted_or_busted
+jf @PORNO2_37
+gosub @PORNO2_7434
+
+:PORNO2_37
+gosub @PORNO2_7530
+end_thread
+
+:PORNO2_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'PORN2'
+058E: set_restart_mission_taxi_destination 21.489 966.28 9.5 172.7
+$4414 = 6 // integer values
+$4415 = 0 // integer values
+$4416 = 0 // integer values
+$4417 = 0 // integer values
+$4418 = 0 // integer values
+$4419 = 0 // integer values
+$4420 = 0 // integer values
+$4421 = 0 // integer values
+$4422 = 100 // integer values
+$4423 = 0 // integer values
+$4424 = 0 // integer values
+$4425 = 0 // integer values
+$4436 = -703.0 // floating-point values
+$4437 = -1496.0 // floating-point values
+$4438 = 45.0 // floating-point values
+$4439 = -601.0 // floating-point values
+$4440 = 660.0 // floating-point values
+$4441 = 44.0 // floating-point values
+$4442 = -464.2 // floating-point values
+$4443 = 1459.3 // floating-point values
+$4444 = 40.0 // floating-point values
+$4445 = -872.8 // floating-point values
+$4446 = 805.8 // floating-point values
+$4447 = 35.0 // floating-point values
+$4448 = -1130.2 // floating-point values
+$4449 = -182.7 // floating-point values
+$4450 = 36.0 // floating-point values
+$4451 = -867.4 // floating-point values
+$4452 = -343.2 // floating-point values
+$4453 = 40.0 // floating-point values
+$95 = 0.0 // floating-point values
+$96 = 0.0 // floating-point values
+$97 = 0.0 // floating-point values
+$4427 = 0 // integer values
+$4428 = 0 // integer values
+$4429 = 0 // integer values
+$4430 = 0 // integer values
+$4431 = 0 // integer values
+$4432 = 0 // integer values
+$4433 = 0 // integer values
+$4434 = 0 // integer values
+$4435 = 0 // integer values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDIREC'
+023C: load_special_actor 3 'CSMERC'
+023C: load_special_actor 4 'CREWA'
+023C: load_special_actor 5 'CREWB'
+02F3: load_object #CUTOBJ01 'SCENERY'
+02F3: load_object #CUTOBJ02 'DRCHAIR'
+Camera.SetAtPos(-86.0, 929.0, 9.764)
+038B: load_requested_models
+
+:PORNO2_563
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @PORNO2_605
+wait 0
+jump @PORNO2_563
+
+:PORNO2_605
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @PORNO2_637
+wait 0
+jump @PORNO2_605
+
+:PORNO2_637
+02E4: load_cutscene_data 'PORN_2'
+0244: set_cutscene_pos -69.128 920.965 9.764
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $163 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $163 'CSDIREC'
+02E5: $162 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $162 'CSMERC'
+02E5: $195 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $195 'CREWA'
+02E5: $196 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $196 'CREWB'
+02E5: $4454 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $4454 'SCENERY'
+02E5: $215 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $215 'DRCHAIR'
+0395: clear_area 1 at -66.0 933.04 range 10.2 1.0
+0055: put_player $PLAYER_CHAR at -66.0 933.04 10.2
+0171: set_player $PLAYER_CHAR z_angle_to 275.6
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:PORNO2_889
+if
+  6922 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_924
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_889
+
+:PORNO2_924
+00BC: text_highpriority 'POR2_A' 10000 ms 1  // How's filming going, Steve?
+
+:PORNO2_939
+if
+  8243 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_974
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_939
+
+:PORNO2_974
+00BC: text_highpriority 'POR2_B' 10000 ms 1  // Well, Candy is a natural and that new girl - she's insatiable!
+
+:PORNO2_989
+if
+  13374 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1024
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_989
+
+:PORNO2_1024
+00BC: text_highpriority 'POR2_C' 10000 ms 1  // She went through half the cast and crew before I even took a light reading.
+
+:PORNO2_1039
+if
+  17692 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1074
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1039
+
+:PORNO2_1074
+00BC: text_highpriority 'POR2_D' 10000 ms 1  // Anyway, hey, tomorrow we're going on location to shoot the boat scenes -
+
+:PORNO2_1089
+if
+  21037 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1124
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1089
+
+:PORNO2_1124
+00BC: text_highpriority 'POR2_E' 10000 ms 1  // Boat scenes?! What boat scenes?
+
+:PORNO2_1139
+if
+  23916 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1174
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1139
+
+:PORNO2_1174
+00BC: text_highpriority 'POR2_F' 10000 ms 1  // The fishermen are in the throes of passion when this giant shark comes in -
+
+:PORNO2_1189
+if
+  26964 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1224
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1189
+
+:PORNO2_1224
+00BC: text_highpriority 'POR2_G' 10000 ms 1  // What'd I say about the giant shark?
+
+:PORNO2_1239
+if
+  28660 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1274
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1239
+
+:PORNO2_1274
+00BC: text_highpriority 'POR2_Q' 10000 ms 1  // Oh, boy.
+
+:PORNO2_1289
+if
+  30017 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1324
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1289
+
+:PORNO2_1324
+00BC: text_highpriority 'POR2_H' 10000 ms 1  // I said, 'NO GIANT SHARK', alright?
+
+:PORNO2_1339
+if
+  33395 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1376
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1339
+
+:PORNO2_1376
+00BC: text_highpriority 'POR2_I' 10000 ms 1  // Just keep the cameras pointed at the poontang!
+
+:PORNO2_1391
+if
+  35819 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1428
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1391
+
+:PORNO2_1428
+00BC: text_highpriority 'POR2_J' 10000 ms 1  // Ok ok, hey Tommy, a guy's gotta try, right?
+
+:PORNO2_1443
+if
+  38651 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1480
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1443
+
+:PORNO2_1480
+00BC: text_highpriority 'POR2_K' 10000 ms 1  // Get those flyers printed up?
+
+:PORNO2_1495
+if
+  40472 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1532
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1495
+
+:PORNO2_1532
+00BC: text_highpriority 'POR2_L' 10000 ms 1  // Yeah, but nobody's gonna let us distribute those things, I mean
+
+:PORNO2_1547
+if
+  43374 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1584
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1547
+
+:PORNO2_1584
+00BC: text_highpriority 'POR2_M' 10000 ms 1  // They're just too, uh, they're unimaginative.
+
+:PORNO2_1599
+if
+  46300 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1636
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1599
+
+:PORNO2_1636
+00BC: text_highpriority 'POR2_N' 10000 ms 1  // You don't worry about that.
+
+:PORNO2_1651
+if
+  47862 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1688
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1651
+
+:PORNO2_1688
+00BC: text_highpriority 'POR2_O' 10000 ms 1  // I've got my own ideas for distribution.
+
+:PORNO2_1703
+if
+  49597 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1740
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1703
+
+:PORNO2_1740
+if
+059A:   false
+jf @PORNO2_1797
+
+:PORNO2_1753
+if
+  49697 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1790
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1753
+
+:PORNO2_1790
+jump @PORNO2_1910
+
+:PORNO2_1797
+00BC: text_highpriority 'POR2_P' 10000 ms 1  // O.K. Hey, Candy, uh - in my trailer.
+
+:PORNO2_1812
+if
+  50597 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1849
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1812
+
+:PORNO2_1849
+if
+  53376 > $CUT_SCENE_TIME // integer values
+jf @PORNO2_1886
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO2_1849
+
+:PORNO2_1886
+if
+82E9:   not cutscene_reached_end
+jf @PORNO2_1910
+wait 0
+jump @PORNO2_1886
+
+:PORNO2_1910
+fade 0 1500
+00BE: text_clear_all
+
+:PORNO2_1919
+if
+fading
+jf @PORNO2_1943
+wait 0
+jump @PORNO2_1919
+
+:PORNO2_1943
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetAtPos(-67.0, 939.297, 10.94)
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 0 60000
+Model.Load(#SKIMMER)
+
+:PORNO2_2042
+if
+   not Model.Available(#SKIMMER)
+jf @PORNO2_2069
+wait 0
+jump @PORNO2_2042
+
+:PORNO2_2069
+set_weather 4
+$4406 = Car.Create(#SKIMMER, -141.1, 1030.4, 7.5)
+Car.Angle($4406) = 180.0
+$4407 = Marker.CreateAboveCar($4406)
+fade 1 1500
+00BC: text_highpriority 'POR2_01' 7000 ms 1  // ~g~There is a seaplane that was used as a prop in some old indie film round the back of the studios.
+00BB: text_lowpriority 'POR2_05' 5000 ms 1  // ~g~Use it to distribute the flyers around town.
+
+:PORNO2_2151
+wait 0
+if
+   not Car.Wrecked($4406)
+jf @PORNO2_2204
+if
+00DC:   player $PLAYER_CHAR driving $4406
+jf @PORNO2_2197
+jump @PORNO2_2218
+
+:PORNO2_2197
+jump @PORNO2_2211
+
+:PORNO2_2204
+jump @PORNO2_7434
+
+:PORNO2_2211
+jump @PORNO2_2151
+
+:PORNO2_2218
+Marker.Disable($4407)
+00BC: text_highpriority 'POR2_02' 5000 ms 1  // ~g~Pick one of the checkpoints to start dropping the flyers from.
+00BB: text_lowpriority 'POR2_03' 5000 ms 1  // ~g~Drop the flyers all the way to the end checkpoint.
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+16@ = 0 // integer values
+03C4: set_status_text_to $4422 1 'DILDO'  // Skimmer Fuel:
+17@ = 0 // integer values
+
+:PORNO2_2408
+wait 0
+if
+   not Car.Wrecked($4406)
+jf @PORNO2_6984
+if
+00DC:   player $PLAYER_CHAR driving $4406
+jf @PORNO2_2522
+if
+  $4426 == 0 // integer values
+jf @PORNO2_2522
+0293: $18 = get_controller_mode
+if
+  $18 == 3 // integer values
+jf @PORNO2_2505
+03E5: text_box 'PLANE_4'  // Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+jump @PORNO2_2515
+
+:PORNO2_2505
+03E5: text_box 'PLANE_H'  // Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+
+:PORNO2_2515
+$4426 = 1 // integer values
+
+:PORNO2_2522
+if
+  $4421 == 0 // integer values
+jf @PORNO2_3795
+if
+  $4415 == 0 // integer values
+jf @PORNO2_2748
+if
+80F5:   not player $PLAYER_CHAR 0 $4436 $4437 $4438 radius 10.0 10.0 10.0
+jf @PORNO2_2634
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4436 $4437 $4438
+jump @PORNO2_2748
+
+:PORNO2_2634
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+$4436 = -872.0 // floating-point values
+$4437 = -574.0 // floating-point values
+$4438 = 55.0 // floating-point values
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 0)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4421 = 1 // integer values
+$4415 = 1 // integer values
+
+:PORNO2_2748
+if
+  $4416 == 0 // integer values
+jf @PORNO2_2956
+if
+80F5:   not player $PLAYER_CHAR 0 $4439 $4440 $4441 radius 10.0 10.0 10.0
+jf @PORNO2_2842
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4439 $4440 $4441
+jump @PORNO2_2956
+
+:PORNO2_2842
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+Marker.Disable($4409)
+$4439 = -354.2 // floating-point values
+$4440 = 1088.0 // floating-point values
+$4441 = 47.0 // floating-point values
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 0)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4421 = 1 // integer values
+$4416 = 1 // integer values
+
+:PORNO2_2956
+if
+  $4417 == 0 // integer values
+jf @PORNO2_3164
+if
+80F5:   not player $PLAYER_CHAR 0 $4442 $4443 $4444 radius 10.0 10.0 10.0
+jf @PORNO2_3050
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4442 $4443 $4444
+jump @PORNO2_3164
+
+:PORNO2_3050
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+$4442 = -861.4 // floating-point values
+$4443 = 1084.8 // floating-point values
+$4444 = 54.5 // floating-point values
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 0)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4421 = 1 // integer values
+$4417 = 1 // integer values
+
+:PORNO2_3164
+if
+  $4418 == 0 // integer values
+jf @PORNO2_3372
+if
+80F5:   not player $PLAYER_CHAR 0 $4445 $4446 $4447 radius 10.0 10.0 10.0
+jf @PORNO2_3258
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4445 $4446 $4447
+jump @PORNO2_3372
+
+:PORNO2_3258
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+$4445 = -1070.8 // floating-point values
+$4446 = 88.0 // floating-point values
+$4447 = 35.0 // floating-point values
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 0)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4421 = 1 // integer values
+$4418 = 1 // integer values
+
+:PORNO2_3372
+if
+  $4419 == 0 // integer values
+jf @PORNO2_3580
+if
+80F5:   not player $PLAYER_CHAR 0 $4448 $4449 $4450 radius 10.0 10.0 10.0
+jf @PORNO2_3466
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4448 $4449 $4450
+jump @PORNO2_3580
+
+:PORNO2_3466
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+$4448 = -1433.8 // floating-point values
+$4449 = -807.1 // floating-point values
+$4450 = 45.5 // floating-point values
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 0)
+Marker.Disable($4413)
+$4421 = 1 // integer values
+$4419 = 1 // integer values
+
+:PORNO2_3580
+if
+  $4420 == 0 // integer values
+jf @PORNO2_3788
+if
+80F5:   not player $PLAYER_CHAR 0 $4451 $4452 $4453 radius 10.0 10.0 10.0
+jf @PORNO2_3674
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 0 0 255 at $4451 $4452 $4453
+jump @PORNO2_3788
+
+:PORNO2_3674
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4451 = -771.9 // floating-point values
+$4452 = 304.6 // floating-point values
+$4453 = 50.1 // floating-point values
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 0)
+$4421 = 1 // integer values
+$4420 = 1 // integer values
+
+:PORNO2_3788
+jump @PORNO2_5904
+
+:PORNO2_3795
+0209: $4425 = random_int_in_ranges 1 7
+if
+  $4425 == 1 // integer values
+jf @PORNO2_3829
+gosub @PORNO2_7605
+
+:PORNO2_3829
+if
+  $4425 == 2 // integer values
+jf @PORNO2_3861
+gosub @PORNO2_7605
+gosub @PORNO2_7605
+
+:PORNO2_3861
+if
+  $4425 == 3 // integer values
+jf @PORNO2_3900
+gosub @PORNO2_7605
+gosub @PORNO2_7605
+gosub @PORNO2_7605
+
+:PORNO2_3900
+if
+  $4415 == 1 // integer values
+jf @PORNO2_4234
+if
+80F5:   not player $PLAYER_CHAR 0 $4436 $4437 $4438 radius 10.0 10.0 10.0
+jf @PORNO2_3994
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4436 $4437 $4438
+jump @PORNO2_4234
+
+:PORNO2_3994
+$4414 -= 1 // integer values
+if
+  $4416 == 0 // integer values
+jf @PORNO2_4040
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_4040
+if
+  $4417 == 0 // integer values
+jf @PORNO2_4079
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_4079
+if
+  $4418 == 0 // integer values
+jf @PORNO2_4118
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_4118
+if
+  $4419 == 0 // integer values
+jf @PORNO2_4157
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_4157
+if
+  $4420 == 0 // integer values
+jf @PORNO2_4196
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_4196
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4408)
+$4421 = 0 // integer values
+$4415 = 2 // integer values
+
+:PORNO2_4234
+if
+  $4416 == 1 // integer values
+jf @PORNO2_4568
+if
+80F5:   not player $PLAYER_CHAR 0 $4439 $4440 $4441 radius 10.0 10.0 10.0
+jf @PORNO2_4328
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4439 $4440 $4441
+jump @PORNO2_4568
+
+:PORNO2_4328
+$4414 -= 1 // integer values
+if
+  $4415 == 0 // integer values
+jf @PORNO2_4374
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_4374
+if
+  $4417 == 0 // integer values
+jf @PORNO2_4413
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_4413
+if
+  $4418 == 0 // integer values
+jf @PORNO2_4452
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_4452
+if
+  $4419 == 0 // integer values
+jf @PORNO2_4491
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_4491
+if
+  $4420 == 0 // integer values
+jf @PORNO2_4530
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_4530
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4409)
+$4421 = 0 // integer values
+$4416 = 2 // integer values
+
+:PORNO2_4568
+if
+  $4417 == 1 // integer values
+jf @PORNO2_4902
+if
+80F5:   not player $PLAYER_CHAR 0 $4442 $4443 $4444 radius 10.0 10.0 10.0
+jf @PORNO2_4662
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4442 $4443 $4444
+jump @PORNO2_4902
+
+:PORNO2_4662
+$4414 -= 1 // integer values
+if
+  $4415 == 0 // integer values
+jf @PORNO2_4708
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_4708
+if
+  $4416 == 0 // integer values
+jf @PORNO2_4747
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_4747
+if
+  $4418 == 0 // integer values
+jf @PORNO2_4786
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_4786
+if
+  $4419 == 0 // integer values
+jf @PORNO2_4825
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_4825
+if
+  $4420 == 0 // integer values
+jf @PORNO2_4864
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_4864
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4410)
+$4421 = 0 // integer values
+$4417 = 2 // integer values
+
+:PORNO2_4902
+if
+  $4418 == 1 // integer values
+jf @PORNO2_5236
+if
+80F5:   not player $PLAYER_CHAR 0 $4445 $4446 $4447 radius 10.0 10.0 10.0
+jf @PORNO2_4996
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4445 $4446 $4447
+jump @PORNO2_5236
+
+:PORNO2_4996
+$4414 -= 1 // integer values
+if
+  $4415 == 0 // integer values
+jf @PORNO2_5042
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_5042
+if
+  $4416 == 0 // integer values
+jf @PORNO2_5081
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_5081
+if
+  $4417 == 0 // integer values
+jf @PORNO2_5120
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_5120
+if
+  $4419 == 0 // integer values
+jf @PORNO2_5159
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_5159
+if
+  $4420 == 0 // integer values
+jf @PORNO2_5198
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_5198
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4411)
+$4421 = 0 // integer values
+$4418 = 2 // integer values
+
+:PORNO2_5236
+if
+  $4419 == 1 // integer values
+jf @PORNO2_5570
+if
+80F5:   not player $PLAYER_CHAR 0 $4448 $4449 $4450 radius 10.0 10.0 10.0
+jf @PORNO2_5330
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4448 $4449 $4450
+jump @PORNO2_5570
+
+:PORNO2_5330
+$4414 -= 1 // integer values
+if
+  $4415 == 0 // integer values
+jf @PORNO2_5376
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_5376
+if
+  $4416 == 0 // integer values
+jf @PORNO2_5415
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_5415
+if
+  $4417 == 0 // integer values
+jf @PORNO2_5454
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_5454
+if
+  $4418 == 0 // integer values
+jf @PORNO2_5493
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_5493
+if
+  $4420 == 0 // integer values
+jf @PORNO2_5532
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_5532
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4412)
+$4421 = 0 // integer values
+$4419 = 2 // integer values
+
+:PORNO2_5570
+if
+  $4420 == 1 // integer values
+jf @PORNO2_5904
+if
+80F5:   not player $PLAYER_CHAR 0 $4451 $4452 $4453 radius 10.0 10.0 10.0
+jf @PORNO2_5664
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4451 $4452 $4453
+jump @PORNO2_5904
+
+:PORNO2_5664
+$4414 -= 1 // integer values
+if
+  $4415 == 0 // integer values
+jf @PORNO2_5710
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_5710
+if
+  $4416 == 0 // integer values
+jf @PORNO2_5749
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_5749
+if
+  $4417 == 0 // integer values
+jf @PORNO2_5788
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_5788
+if
+  $4418 == 0 // integer values
+jf @PORNO2_5827
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_5827
+if
+  $4419 == 0 // integer values
+jf @PORNO2_5866
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_5866
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4413)
+$4421 = 0 // integer values
+$4420 = 2 // integer values
+
+:PORNO2_5904
+if
+80DC:   not player $PLAYER_CHAR driving $4406
+jf @PORNO2_6176
+01BD: $4435 = current_time_in_ms
+0084: $4429 = $4422 // integer values and handles
+$4429 *= 5000 // integer values
+if
+  $4427 == 0 // integer values
+jf @PORNO2_6016
+01BD: $4428 = current_time_in_ms
+if
+  $4429 > 30000 // integer values
+jf @PORNO2_6001
+$4430 = 30000 // integer values
+jump @PORNO2_6009
+
+:PORNO2_6001
+0084: $4430 = $4429 // integer values and handles
+
+:PORNO2_6009
+$4427 = 1 // integer values
+
+:PORNO2_6016
+01BD: $4431 = current_time_in_ms
+0084: $4432 = $4431 // integer values and handles
+0060: $4432 -= $4428 // integer values
+0060: $4430 -= $4432 // integer values
+0084: $4428 = $4431 // integer values and handles
+0084: $4433 = $4430 // integer values and handles
+$4433 /= 1000 // integer values
+01E5: text_1number_highpriority 'PORN2_9' $4433 flag 200 time 1  // ~g~You have ~1~ seconds to return to a Skimmer before the mission ends.
+if
+  1 > $4433 // integer values
+jf @PORNO2_6153
+if
+001C:   $4435 > $4434 // integer values
+jf @PORNO2_6146
+00BC: text_highpriority 'TAXI2' 3000 ms 1  // ~r~You're out of time!
+jump @PORNO2_7434
+
+:PORNO2_6146
+jump @PORNO2_6169
+
+:PORNO2_6153
+0084: $4434 = $4435 // integer values and handles
+$4434 += 1000 // integer values
+
+:PORNO2_6169
+jump @PORNO2_6183
+
+:PORNO2_6176
+$4427 = 0 // integer values
+
+:PORNO2_6183
+if and
+01F4:   car $4406 flipped
+01C1:   car $4406 stopped
+jf @PORNO2_6211
+$4424 = 1 // integer values
+
+:PORNO2_6211
+if and
+80DC:   not player $PLAYER_CHAR driving $4406
+  $4423 == 0 // integer values
+  $4424 == 0 // integer values
+jf @PORNO2_6289
+$4407 = Marker.CreateAboveCar($4406)
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+$4423 = 1 // integer values
+
+:PORNO2_6289
+if and
+00DC:   player $PLAYER_CHAR driving $4406
+  $4423 == 1 // integer values
+jf @PORNO2_6977
+Marker.Disable($4407)
+if
+  $4415 == 0 // integer values
+jf @PORNO2_6359
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 2)
+
+:PORNO2_6359
+if
+  $4416 == 0 // integer values
+jf @PORNO2_6398
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 2)
+
+:PORNO2_6398
+if
+  $4417 == 0 // integer values
+jf @PORNO2_6437
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 2)
+
+:PORNO2_6437
+if
+  $4418 == 0 // integer values
+jf @PORNO2_6476
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 2)
+
+:PORNO2_6476
+if
+  $4419 == 0 // integer values
+jf @PORNO2_6515
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 2)
+
+:PORNO2_6515
+if
+  $4420 == 0 // integer values
+jf @PORNO2_6554
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 2)
+
+:PORNO2_6554
+if
+  $4415 == 1 // integer values
+jf @PORNO2_6623
+Marker.Disable($4408)
+018A: $4408 = create_checkpoint_at $4436 $4437 $4438
+Marker.SetColor($4408, 0)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+
+:PORNO2_6623
+if
+  $4416 == 1 // integer values
+jf @PORNO2_6692
+Marker.Disable($4408)
+Marker.Disable($4409)
+018A: $4409 = create_checkpoint_at $4439 $4440 $4441
+Marker.SetColor($4409, 0)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+
+:PORNO2_6692
+if
+  $4417 == 1 // integer values
+jf @PORNO2_6761
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+018A: $4410 = create_checkpoint_at $4442 $4443 $4444
+Marker.SetColor($4410, 0)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+
+:PORNO2_6761
+if
+  $4418 == 1 // integer values
+jf @PORNO2_6830
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+018A: $4411 = create_checkpoint_at $4445 $4446 $4447
+Marker.SetColor($4411, 0)
+Marker.Disable($4412)
+Marker.Disable($4413)
+
+:PORNO2_6830
+if
+  $4419 == 1 // integer values
+jf @PORNO2_6899
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+018A: $4412 = create_checkpoint_at $4448 $4449 $4450
+Marker.SetColor($4412, 0)
+Marker.Disable($4413)
+
+:PORNO2_6899
+if
+  $4420 == 1 // integer values
+jf @PORNO2_6968
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+018A: $4413 = create_checkpoint_at $4451 $4452 $4453
+Marker.SetColor($4413, 0)
+
+:PORNO2_6968
+00BE: text_clear_all
+$4423 = 0 // integer values
+
+:PORNO2_6977
+jump @PORNO2_6991
+
+:PORNO2_6984
+jump @PORNO2_7434
+
+:PORNO2_6991
+if
+  $4422 == 0 // integer values
+jf @PORNO2_7181
+if
+00DC:   player $PLAYER_CHAR driving $4406
+jf @PORNO2_7035
+Player.CanMove($PLAYER_CHAR) = False
+
+:PORNO2_7035
+if
+  17@ > 3000 // integer values
+jf @PORNO2_7181
+03F5: set_vehicle $4406 apply_damage_rules 1
+020B: explode_car $4406
+Car.StorePos($4406, $95, $96, $97)
+020C: create_explosion_with_radius 2 at $95 $96 $97
+020C: create_explosion_with_radius 11 at $95 $96 $97
+020C: create_explosion_with_radius 1 at $95 $96 $97
+020C: create_explosion_with_radius 6 at $95 $96 $97
+039D: scatter_particles 17 0.8 0 0 0 11000 at $95 $96 $97 0.1 0.0 0.2
+jump @PORNO2_7434
+
+:PORNO2_7181
+if
+  $4422 > 0 // integer values
+jf @PORNO2_7239
+if
+  17@ > 5000 // integer values
+jf @PORNO2_7232
+$4422 -= 1 // integer values
+17@ = 0 // integer values
+
+:PORNO2_7232
+jump @PORNO2_7246
+
+:PORNO2_7239
+$4422 = 0 // integer values
+
+:PORNO2_7246
+if
+  $4422 > 0 // integer values
+jf @PORNO2_7402
+if
+  10 > $4422 // integer values
+jf @PORNO2_7402
+if
+   not Car.Wrecked($4406)
+jf @PORNO2_7349
+if
+00DC:   player $PLAYER_CHAR driving $4406
+jf @PORNO2_7339
+00BC: text_highpriority 'POR2_04' 5000 ms 1  // ~r~LOW FUEL!!!
+jump @PORNO2_7349
+
+:PORNO2_7339
+03D5: remove_text 'POR2_04'  // ~r~LOW FUEL!!!
+
+:PORNO2_7349
+if
+  16@ > 1000 // integer values
+jf @PORNO2_7402
+Car.StorePos($4406, $95, $96, $97)
+018C: play_sound 35 at $95 $96 $97
+16@ = 0 // integer values
+
+:PORNO2_7402
+if
+  $4414 == 0 // integer values
+jf @PORNO2_7427
+jump @PORNO2_7451
+
+:PORNO2_7427
+jump @PORNO2_2408
+
+:PORNO2_7434
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:PORNO2_7451
+00BE: text_clear_all
+055A:  1
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 2000
+014C: set_parked_car_generator $1929 cars_to_generate_to 101
+014C: set_parked_car_generator $PARKED_SKIMMER cars_to_generate_to 101
+030C: progress_made += 1
+0318: set_latest_mission_passed 'PORN_2'  // Dildo Dodo
+create_thread @PORN3
+$258 = 1 // integer values
+return
+
+:PORNO2_7530
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Model.Destroy(#SKIMMER)
+0151: remove_status_text $4414
+0151: remove_status_text $4422
+Marker.Disable($4407)
+Marker.Disable($4408)
+Marker.Disable($4409)
+Marker.Disable($4410)
+Marker.Disable($4411)
+Marker.Disable($4412)
+Marker.Disable($4413)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+01B7: release_weather
+mission_cleanup
+return
+
+:PORNO2_7605
+0407: create_coordinate $95 $96 $97 from_car $4406 offset 0.0 -2.0 -2.0
+0437: scatter_particle 11 0.8 at $95 $96 $97 0.0 0.0 0.0
+return

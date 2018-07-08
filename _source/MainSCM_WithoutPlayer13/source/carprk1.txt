@@ -1,0 +1,782 @@
+:CARPRK1
+gosub @CARPRK1_16
+gosub @CARPRK1_3290
+end_thread
+
+:CARPRK1_16
+if
+  $351 == 0 // integer values
+jf @CARPRK1_36
+increment_mission_attempts
+
+:CARPRK1_36
+thread 'CARPRK1'
+$ONMISSION = 1 // integer values
+054C: use_GXT_table 'CARPAR1'
+00BA: text_styled 'MM_1' 5000 ms 2  // 'CONE CRAZY'
+wait 0
+$1607 = 0 // integer values
+$1614 = 0 // integer values
+$357 = 0 // integer values
+$1613 = 0 // integer values
+$1610 = 0 // integer values
+$359 = 0 // integer values
+$7891 = 0 // integer values
+if
+  $351 == 0 // integer values
+jf @CARPRK1_172
+$1615 = 12000 // integer values
+$7925 = 12 // integer values
+$7926 = 200 // integer values
+
+:CARPRK1_172
+$1616 = 0 // integer values
+$1617 = 0 // integer values
+$1646 = 0 // integer values
+$1647 = 0 // integer values
+$1648 = 0 // integer values
+$1649 = 0 // integer values
+$1650 = 0 // integer values
+$1651 = 0 // integer values
+$1652 = 0 // integer values
+$1653 = 0 // integer values
+$1654 = 0 // integer values
+$1655 = 0 // integer values
+$1656 = 0 // integer values
+$1657 = 0 // integer values
+$1658 = 0 // integer values
+$1659 = 0 // integer values
+$1660 = 0 // integer values
+$1661 = 0 // integer values
+$1662 = 0 // integer values
+$1663 = 0 // integer values
+$1664 = 0 // integer values
+$1665 = 0 // integer values
+$1666 = 0 // integer values
+$1667 = 0 // integer values
+$1668 = 0 // integer values
+$1669 = 0 // integer values
+$346 = 0 // integer values
+$1742 = 106.0 // floating-point values
+$1743 = -1242.0 // floating-point values
+$1744 = 35.5 // floating-point values
+$7962 = 0.0 // floating-point values
+$7963 = 128.0 // floating-point values
+$7964 = -1180.75 // floating-point values
+$7959 = 8.0 // floating-point values
+$7930 = -100.0 // floating-point values
+$7928 = 108.8 // floating-point values
+$7929 = -1232.9 // floating-point values
+$7931 = 120.25 // floating-point values
+$7932 = -1230.6 // floating-point values
+$7933 = 111.2 // floating-point values
+$7934 = -1219.7 // floating-point values
+$7935 = 138.6 // floating-point values
+$7936 = -1211.8 // floating-point values
+$7937 = 138.6 // floating-point values
+$7938 = -1207.2 // floating-point values
+$7939 = 141.6 // floating-point values
+$7940 = -1207.2 // floating-point values
+$7941 = 141.6 // floating-point values
+$7942 = -1211.8 // floating-point values
+$7943 = 144.6 // floating-point values
+$7944 = -1207.2 // floating-point values
+$7945 = 147.6 // floating-point values
+$7946 = -1207.2 // floating-point values
+$7947 = 113.25 // floating-point values
+$7948 = -1146.5 // floating-point values
+$7949 = 113.25 // floating-point values
+$7950 = -1149.5 // floating-point values
+$7951 = 113.25 // floating-point values
+$7952 = -1155.5 // floating-point values
+$7953 = 109.25 // floating-point values
+$7954 = -1155.5 // floating-point values
+$7955 = 121.25 // floating-point values
+$7956 = -1155.5 // floating-point values
+$7957 = 117.25 // floating-point values
+$7958 = -1155.5 // floating-point values
+$1670 = 108.8 // floating-point values
+$1671 = -1228.8 // floating-point values
+$1672 = 33.7 // floating-point values
+$1673 = 112.6 // floating-point values
+$1674 = -1232.9 // floating-point values
+$1675 = 33.7 // floating-point values
+$1676 = 140.3 // floating-point values
+$1677 = -1209.5 // floating-point values
+$1678 = 31.5 // floating-point values
+$1679 = 108.8 // floating-point values
+$1680 = -1147.5 // floating-point values
+$1681 = 31.5 // floating-point values
+$1682 = 131.5 // floating-point values
+$1683 = -1182.9 // floating-point values
+$1684 = 31.5 // floating-point values
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+$1606 = Player.WantedLevel($PLAYER_CHAR)
+Player.ClearWantedLevel($PLAYER_CHAR)
+00DA: $1605 = player $PLAYER_CHAR car
+if
+   not Car.Wrecked($1605)
+jf @CARPRK1_946
+020A: set_car $1605 door_status_to 1
+
+:CARPRK1_946
+03D5: remove_text 'M_PASS'  // MISSION PASSED! $~1~
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+Model.Load(#TRAFFICCONE)
+
+:CARPRK1_971
+if
+   not Model.Available(#TRAFFICCONE)
+jf @CARPRK1_998
+wait 0
+jump @CARPRK1_971
+
+:CARPRK1_998
+018A: $1622 = create_checkpoint_at $1670 $1671 $1672
+018A: $1623 = create_checkpoint_at $1673 $1674 $1675
+018A: $1624 = create_checkpoint_at $1676 $1677 $1678
+018A: $1625 = create_checkpoint_at $1679 $1680 $1681
+018A: $1626 = create_checkpoint_at $1682 $1683 $1684
+
+:CARPRK1_1068
+if
+  5 > $1607 // integer values
+jf @CARPRK1_3047
+wait 0
+if
+  $1613 == 1 // integer values
+jf @CARPRK1_1148
+if
+  1 > $1614 // integer values
+jf @CARPRK1_1148
+00BC: text_highpriority 'TAXI2' 3000 ms 1  // ~r~You're out of time!
+jump @CARPRK1_3072
+
+:CARPRK1_1148
+if and
+  $1607 == 1 // integer values
+  $1613 == 0 // integer values
+jf @CARPRK1_1194
+014E: start_timer_at $1614 count_in_direction 1
+16@ = 0 // integer values
+$1613 = 1 // integer values
+
+:CARPRK1_1194
+if
+  $1646 == 0 // integer values
+jf @CARPRK1_1322
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1670 $1671 $1672
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1670 $1671 $1672 radius 2.5 2.5 3.5
+jf @CARPRK1_1322
+Marker.Disable($1622)
+$1607 += 1 // integer values
+018C: play_sound 1 at $1670 $1671 $1672
+0058: $1614 += $1615 // integer values
+$1646 = 1 // integer values
+
+:CARPRK1_1322
+if
+  $1647 == 0 // integer values
+jf @CARPRK1_1450
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1673 $1674 $1675
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1673 $1674 $1675 radius 2.5 2.5 3.5
+jf @CARPRK1_1450
+Marker.Disable($1623)
+$1607 += 1 // integer values
+018C: play_sound 1 at $1673 $1674 $1675
+0058: $1614 += $1615 // integer values
+$1647 = 1 // integer values
+
+:CARPRK1_1450
+if
+  $1648 == 0 // integer values
+jf @CARPRK1_1578
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1676 $1677 $1678
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1676 $1677 $1678 radius 2.5 2.5 3.5
+jf @CARPRK1_1578
+Marker.Disable($1624)
+$1607 += 1 // integer values
+018C: play_sound 1 at $1676 $1677 $1678
+0058: $1614 += $1615 // integer values
+$1648 = 1 // integer values
+
+:CARPRK1_1578
+if
+  $1649 == 0 // integer values
+jf @CARPRK1_1706
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1679 $1680 $1681
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1679 $1680 $1681 radius 2.5 2.5 3.5
+jf @CARPRK1_1706
+Marker.Disable($1625)
+$1607 += 1 // integer values
+018C: play_sound 1 at $1679 $1680 $1681
+0058: $1614 += $1615 // integer values
+$1649 = 1 // integer values
+
+:CARPRK1_1706
+if
+  $1650 == 0 // integer values
+jf @CARPRK1_1834
+024F: create_corona_with_radius 1.0 type 5 lensflares 0 with_color 0 200 200 at $1682 $1683 $1684
+if
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $1682 $1683 $1684 radius 2.5 2.5 3.5
+jf @CARPRK1_1834
+Marker.Disable($1626)
+$1607 += 1 // integer values
+018C: play_sound 1 at $1682 $1683 $1684
+0058: $1614 += $1615 // integer values
+$1650 = 1 // integer values
+
+:CARPRK1_1834
+if
+  $350 == 1 // integer values
+jf @CARPRK1_1923
+if and
+  $1610 == 0 // integer values
+  $357 > 0 // integer values
+  4 > $357 // integer values
+jf @CARPRK1_1923
+if
+00E1:   player 0 pressed_button 16
+jf @CARPRK1_1923
+$359 = 9501 // integer values
+$357 = 3 // integer values
+$1610 = 1 // integer values
+
+:CARPRK1_1923
+if
+  $357 == 0 // integer values
+jf @CARPRK1_2587
+01BD: $358 = current_time_in_ms
+Camera.SetPosition($1742, $1743, $1744, 0.0, 0.0, 0.0)
+043C: set_game_sounds_disable_on_fade 0
+fade 0 1000
+
+:CARPRK1_1983
+if
+fading
+jf @CARPRK1_2007
+wait 0
+jump @CARPRK1_1983
+
+:CARPRK1_2007
+$7893 = Object.Create(#TRAFFICCONE, $7928, $7929, $7930)
+Object.CollisionDetection($7893) = True
+Object.ToggleInMovingList($7893) = True
+$7894 = Object.Create(#TRAFFICCONE, $7931, $7932, $7930)
+Object.CollisionDetection($7894) = True
+Object.ToggleInMovingList($7894) = True
+$7895 = Object.Create(#TRAFFICCONE, $7933, $7934, $7930)
+Object.CollisionDetection($7895) = True
+Object.ToggleInMovingList($7895) = True
+$7896 = Object.Create(#TRAFFICCONE, $7935, $7936, $7930)
+Object.CollisionDetection($7896) = True
+Object.ToggleInMovingList($7896) = True
+$7897 = Object.Create(#TRAFFICCONE, $7937, $7938, $7930)
+Object.CollisionDetection($7897) = True
+Object.ToggleInMovingList($7897) = True
+$7898 = Object.Create(#TRAFFICCONE, $7939, $7940, $7930)
+Object.CollisionDetection($7898) = True
+Object.ToggleInMovingList($7898) = True
+$7899 = Object.Create(#TRAFFICCONE, $7941, $7942, $7930)
+Object.CollisionDetection($7899) = True
+Object.ToggleInMovingList($7899) = True
+$7900 = Object.Create(#TRAFFICCONE, $7943, $7944, $7930)
+Object.CollisionDetection($7900) = True
+Object.ToggleInMovingList($7900) = True
+$7901 = Object.Create(#TRAFFICCONE, $7945, $7946, $7930)
+Object.CollisionDetection($7901) = True
+Object.ToggleInMovingList($7901) = True
+$7902 = Object.Create(#TRAFFICCONE, $7947, $7948, $7930)
+Object.CollisionDetection($7902) = True
+Object.ToggleInMovingList($7902) = True
+$7903 = Object.Create(#TRAFFICCONE, $7949, $7950, $7930)
+Object.CollisionDetection($7903) = True
+Object.ToggleInMovingList($7903) = True
+$7904 = Object.Create(#TRAFFICCONE, $7951, $7952, $7930)
+Object.CollisionDetection($7904) = True
+Object.ToggleInMovingList($7904) = True
+$7905 = Object.Create(#TRAFFICCONE, $7953, $7954, $7930)
+Object.CollisionDetection($7905) = True
+Object.ToggleInMovingList($7905) = True
+$7906 = Object.Create(#TRAFFICCONE, $7955, $7956, $7930)
+Object.CollisionDetection($7906) = True
+Object.ToggleInMovingList($7906) = True
+$7907 = Object.Create(#TRAFFICCONE, $7957, $7958, $7930)
+Object.CollisionDetection($7907) = True
+Object.ToggleInMovingList($7907) = True
+gosub @CARPRK1_3356
+$7924 = Object.Create(#TRAFFICCONE, $7963, $7964, $7930)
+Object.CollisionDetection($7924) = True
+Object.ToggleInMovingList($7924) = True
+Camera.SetAtPos($1742, $1743, $1744)
+Camera.PointAt($1673, $1674, $1675, 2)
+fade 1 1000
+
+:CARPRK1_2541
+if
+fading
+jf @CARPRK1_2565
+wait 0
+jump @CARPRK1_2541
+
+:CARPRK1_2565
+00BC: text_highpriority 'MM_1_A' 5000 ms 1  // ~g~Collect ~y~5 checkpoints~r~ WITHOUT ~g~smashing any ~r~CONES! ~g~You may collect checkpoints in ~y~ANY ORDER.
+$357 = 1 // integer values
+
+:CARPRK1_2587
+if
+  $1610 == 0 // integer values
+jf @CARPRK1_2626
+01BD: $360 = current_time_in_ms
+0084: $359 = $360 // integer values and handles
+0060: $359 -= $358 // integer values
+
+:CARPRK1_2626
+if and
+  $359 > 4000 // integer values
+  $357 == 1 // integer values
+jf @CARPRK1_2704
+Camera.SetPosition(156.3, -1220.1, 34.0, 0.0, 0.0, 0.0)
+Camera.PointAt($1676, $1677, $1678, 2)
+$357 = 2 // integer values
+
+:CARPRK1_2704
+if and
+  $359 > 7000 // integer values
+  $357 == 2 // integer values
+jf @CARPRK1_2800
+Camera.SetPosition(106.5, -1139.0, 38.13, 0.0, 0.0, 0.0)
+Camera.PointAt($1679, $1680, $1681, 2)
+01E5: text_1number_highpriority 'MM_1_C' $7925 flag 5000 time 1  // ~y~PASS THROUGH~g~ a checkpoint to start the timer. ~g~Each checkpoint will credit you with ~y~~1~ SECONDS~g~.
+$357 = 3 // integer values
+
+:CARPRK1_2800
+if and
+  $359 > 9500 // integer values
+  $357 == 3 // integer values
+jf @CARPRK1_2952
+fade 0 1000
+
+:CARPRK1_2833
+if
+fading
+jf @CARPRK1_2857
+wait 0
+jump @CARPRK1_2833
+
+:CARPRK1_2857
+00BE: text_clear_all
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+if
+   not Car.Wrecked($1605)
+jf @CARPRK1_2895
+020A: set_car $1605 door_status_to 1
+
+:CARPRK1_2895
+Player.WantedLevel($PLAYER_CHAR) = $1606
+fade 1 1000
+
+:CARPRK1_2910
+if
+fading
+jf @CARPRK1_2934
+wait 0
+jump @CARPRK1_2910
+
+:CARPRK1_2934
+043C: set_game_sounds_disable_on_fade 1
+$357 = 4 // integer values
+$350 = 1 // integer values
+
+:CARPRK1_2952
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #STALLION
+jf @CARPRK1_2993
+00BC: text_highpriority 'T4X4_F' 3000 ms 1  // ~r~You bailed! Too tough for you?!
+jump @CARPRK1_3072
+
+:CARPRK1_2993
+gosub @CARPRK1_4276
+if
+  $7891 == 1 // integer values
+jf @CARPRK1_3040
+00BC: text_highpriority 'CONE_1' 5000 ms 1  // ~r~You smashed a cone!!
+jump @CARPRK1_3072
+
+:CARPRK1_3040
+jump @CARPRK1_1068
+
+:CARPRK1_3047
+if
+  $1607 == 5 // integer values
+jf @CARPRK1_3072
+jump @CARPRK1_3089
+
+:CARPRK1_3072
+00BA: text_styled 'M_FAIL' 2000 ms 1  // MISSION FAILED!
+return
+
+:CARPRK1_3089
+if
+  $351 == 0 // integer values
+jf @CARPRK1_3137
+008A: $352 = 16@ // integer values and handles
+$352 /= 1000 // integer values
+042E: downdate_integer_stat 19 to $352
+gosub @CARPRK1_4798
+
+:CARPRK1_3137
+if
+  $351 == 1 // integer values
+jf @CARPRK1_3252
+008A: $346 = 16@ // integer values and handles
+$346 /= 1000 // integer values
+if
+001C:   $352 > $346 // integer values
+jf @CARPRK1_3226
+0084: $352 = $346 // integer values and handles
+042E: downdate_integer_stat 19 to $352
+$7926 *= 2 // integer values
+gosub @CARPRK1_4798
+jump @CARPRK1_3252
+
+:CARPRK1_3226
+01E3: text_1number_styled 'M_PASS' number 200 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 200
+
+:CARPRK1_3252
+Player.ClearWantedLevel($PLAYER_CHAR)
+if
+  $351 == 0 // integer values
+jf @CARPRK1_3288
+0595: mission_complete
+$351 = 1 // integer values
+030C: progress_made += 1
+
+:CARPRK1_3288
+return
+
+:CARPRK1_3290
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+Marker.Disable($1622)
+Marker.Disable($1623)
+Marker.Disable($1624)
+Marker.Disable($1625)
+Marker.Disable($1626)
+gosub @CARPRK1_4636
+Model.Destroy(#TRAFFICCONE)
+014F: stop_timer $1614
+$ONMISSION = 0 // integer values
+mission_cleanup
+return
+
+:CARPRK1_3356
+02F6: $7960 = sine $7962 // float
+0069: $7960 *= $7959 // floating-point values
+0059: $7960 += $7963 // floating-point values
+02F7: $7961 = cosine $7962
+0069: $7961 *= $7959 // floating-point values
+0059: $7961 += $7964 // floating-point values
+if
+  $7962 == 0.0 // floating-point values
+jf @CARPRK1_3456
+$7908 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7908) = True
+Object.ToggleInMovingList($7908) = True
+
+:CARPRK1_3456
+if
+  $7962 == 18.0 // floating-point values
+jf @CARPRK1_3508
+$7909 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7909) = True
+Object.ToggleInMovingList($7909) = True
+
+:CARPRK1_3508
+if
+  $7962 == 36.0 // floating-point values
+jf @CARPRK1_3560
+$7910 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7910) = True
+Object.ToggleInMovingList($7910) = True
+
+:CARPRK1_3560
+if
+  $7962 == 54.0 // floating-point values
+jf @CARPRK1_3612
+$7911 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7911) = True
+Object.ToggleInMovingList($7911) = True
+
+:CARPRK1_3612
+if
+  $7962 == 72.0 // floating-point values
+jf @CARPRK1_3664
+$7912 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7912) = True
+Object.ToggleInMovingList($7912) = True
+
+:CARPRK1_3664
+if
+  $7962 == 90.0 // floating-point values
+jf @CARPRK1_3716
+$7913 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7913) = True
+Object.ToggleInMovingList($7913) = True
+
+:CARPRK1_3716
+if
+  $7962 == 108.0 // floating-point values
+jf @CARPRK1_3768
+$7914 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7914) = True
+Object.ToggleInMovingList($7914) = True
+
+:CARPRK1_3768
+if
+  $7962 == 126.0 // floating-point values
+jf @CARPRK1_3820
+$7915 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7915) = True
+Object.ToggleInMovingList($7915) = True
+
+:CARPRK1_3820
+if
+  $7962 == 144.0 // floating-point values
+jf @CARPRK1_3872
+$7916 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7916) = True
+Object.ToggleInMovingList($7916) = True
+
+:CARPRK1_3872
+if
+  $7962 == 162.0 // floating-point values
+jf @CARPRK1_3924
+$7917 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7917) = True
+Object.ToggleInMovingList($7917) = True
+
+:CARPRK1_3924
+if
+  $7962 == 180.0 // floating-point values
+jf @CARPRK1_3976
+$7918 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7918) = True
+Object.ToggleInMovingList($7918) = True
+
+:CARPRK1_3976
+if
+  $7962 == 198.0 // floating-point values
+jf @CARPRK1_4028
+$7919 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7919) = True
+Object.ToggleInMovingList($7919) = True
+
+:CARPRK1_4028
+if
+  $7962 == 216.0 // floating-point values
+jf @CARPRK1_4080
+$7920 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7920) = True
+Object.ToggleInMovingList($7920) = True
+
+:CARPRK1_4080
+if
+  $7962 == 234.0 // floating-point values
+jf @CARPRK1_4132
+$7921 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7921) = True
+Object.ToggleInMovingList($7921) = True
+
+:CARPRK1_4132
+if
+  $7962 == 252.0 // floating-point values
+jf @CARPRK1_4184
+$7922 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7922) = True
+Object.ToggleInMovingList($7922) = True
+
+:CARPRK1_4184
+if
+  $7962 == 270.0 // floating-point values
+jf @CARPRK1_4236
+$7923 = Object.Create(#TRAFFICCONE, $7960, $7961, $7930)
+Object.CollisionDetection($7923) = True
+Object.ToggleInMovingList($7923) = True
+
+:CARPRK1_4236
+$7962 += 18.0 // floating-point values
+if
+  288.0 > $7962 // floating-point values
+jf @CARPRK1_4274
+jump @CARPRK1_3356
+
+:CARPRK1_4274
+return
+
+:CARPRK1_4276
+if or
+0366:   object $7893 damaged
+0366:   object $7894 damaged
+0366:   object $7895 damaged
+jf @CARPRK1_4309
+$7891 = 1 // integer values
+
+:CARPRK1_4309
+if or
+0366:   object $7896 damaged
+0366:   object $7897 damaged
+0366:   object $7898 damaged
+jf @CARPRK1_4342
+$7891 = 1 // integer values
+
+:CARPRK1_4342
+if or
+0366:   object $7899 damaged
+0366:   object $7900 damaged
+0366:   object $7901 damaged
+jf @CARPRK1_4375
+$7891 = 1 // integer values
+
+:CARPRK1_4375
+if or
+0366:   object $7902 damaged
+0366:   object $7903 damaged
+0366:   object $7904 damaged
+jf @CARPRK1_4408
+$7891 = 1 // integer values
+
+:CARPRK1_4408
+if or
+0366:   object $7905 damaged
+0366:   object $7906 damaged
+0366:   object $7907 damaged
+jf @CARPRK1_4441
+$7891 = 1 // integer values
+
+:CARPRK1_4441
+if or
+0366:   object $7908 damaged
+0366:   object $7909 damaged
+0366:   object $7910 damaged
+jf @CARPRK1_4474
+$7891 = 1 // integer values
+
+:CARPRK1_4474
+if or
+0366:   object $7911 damaged
+0366:   object $7912 damaged
+0366:   object $7913 damaged
+jf @CARPRK1_4507
+$7891 = 1 // integer values
+
+:CARPRK1_4507
+if or
+0366:   object $7914 damaged
+0366:   object $7915 damaged
+0366:   object $7916 damaged
+jf @CARPRK1_4540
+$7891 = 1 // integer values
+
+:CARPRK1_4540
+if or
+0366:   object $7917 damaged
+0366:   object $7918 damaged
+0366:   object $7919 damaged
+jf @CARPRK1_4573
+$7891 = 1 // integer values
+
+:CARPRK1_4573
+if or
+0366:   object $7920 damaged
+0366:   object $7921 damaged
+0366:   object $7922 damaged
+jf @CARPRK1_4606
+$7891 = 1 // integer values
+
+:CARPRK1_4606
+if or
+0366:   object $7923 damaged
+0366:   object $7924 damaged
+jf @CARPRK1_4634
+$7891 = 1 // integer values
+
+:CARPRK1_4634
+return
+
+:CARPRK1_4636
+Object.Destroy($7893)
+Object.Destroy($7894)
+Object.Destroy($7895)
+Object.Destroy($7896)
+Object.Destroy($7897)
+Object.Destroy($7898)
+Object.Destroy($7899)
+Object.Destroy($7900)
+Object.Destroy($7901)
+Object.Destroy($7902)
+Object.Destroy($7903)
+Object.Destroy($7904)
+Object.Destroy($7905)
+Object.Destroy($7906)
+Object.Destroy($7907)
+Object.Destroy($7908)
+Object.Destroy($7909)
+Object.Destroy($7910)
+Object.Destroy($7911)
+Object.Destroy($7912)
+Object.Destroy($7913)
+Object.Destroy($7914)
+Object.Destroy($7915)
+Object.Destroy($7916)
+Object.Destroy($7917)
+Object.Destroy($7918)
+Object.Destroy($7919)
+Object.Destroy($7920)
+Object.Destroy($7921)
+Object.Destroy($7922)
+Object.Destroy($7923)
+Object.Destroy($7924)
+return
+
+:CARPRK1_4798
+$7927 = 0 // integer values
+0084: $7892 = $352 // integer values and handles
+
+:CARPRK1_4813
+if
+  $7892 > 59 // integer values
+jf @CARPRK1_4852
+$7892 -= 60 // integer values
+$7927 += 1 // integer values
+jump @CARPRK1_4813
+
+:CARPRK1_4852
+02FD: text_2numbers_lowpriority 'NEW_REC' $7927 $7892 5000 flag 1  // ~g~New Record Set!! ~w~~1~ minutes ~g~and ~w~~1~ seconds.
+$1615 -= 1000 // integer values
+if
+  6000 > $1615 // integer values
+jf @CARPRK1_4908
+$1615 = 6000 // integer values
+
+:CARPRK1_4908
+$7925 -= 1 // integer values
+if
+  6 > $7925 // integer values
+jf @CARPRK1_4940
+$7925 = 6 // integer values
+
+:CARPRK1_4940
+01E3: text_1number_styled 'M_PASS' number $7926 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += $7926
+return

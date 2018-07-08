@@ -1,0 +1,1409 @@
+:AMBULAN
+gosub @AMBULAN_16
+gosub @AMBULAN_7425
+end_thread
+
+:AMBULAN_16
+$ONMISSION = 1 // integer values
+$319 = 1 // integer values
+thread 'AMBULAN'
+if
+  $1581 == 0 // integer values
+jf @AMBULAN_60
+increment_mission_attempts
+
+:AMBULAN_60
+wait 0
+054C: use_GXT_table 'AMBULAE'
+$6740 = 0 // integer values
+$6741 = 0 // integer values
+$6746 = 0 // integer values
+$6747 = 0 // integer values
+$6748 = 0 // integer values
+$6749 = 0 // integer values
+$6750 = 0 // integer values
+$6744 = 1 // integer values
+$6743 = 0 // integer values
+2@ = 0 // integer values
+5@ = 0 // integer values
+8@ = 0 // integer values
+11@ = 0 // integer values
+14@ = 0 // integer values
+$6766 = 0 // integer values
+$6769 = 0 // integer values
+$6772 = 0 // integer values
+$6775 = 0 // integer values
+$6778 = 0 // integer values
+$6781 = 0 // integer values
+$6784 = 0 // integer values
+$6753 = 0 // integer values
+$6812 = 10.0 // floating-point values
+$6756 = 1 // integer values
+$6755 = 0 // integer values
+$6757 = 0 // integer values
+$6751 = 0 // integer values
+$6752 = 0 // integer values
+$6759 = 0 // integer values
+$6760 = 0 // integer values
+$6761 = 0 // integer values
+$6758 = 0 // integer values
+$6763 = 0 // integer values
+$6788 = 0 // integer values
+$6799 = 0.0 // floating-point values
+$6800 = 0.0 // floating-point values
+$6801 = 0.0 // floating-point values
+00BC: text_highpriority 'ATUTOR2' 3000 ms 1  // ~g~Drive the patients to Hospital CAREFULLY. Each bump reduces their chances of survival.
+03C7: set_sensitivity_to_crime_to 0.5
+
+:AMBULAN_367
+01E4: text_1number_lowpriority 'ALEVEL' $6756 5000 ms 4  // Paramedic Mission Level ~1~
+014F: stop_timer $6740
+$6740 = 0 // integer values
+if
+00E3:   player $PLAYER_CHAR 0 361.298 -958.797 radius 750.0 850.0
+jf @AMBULAN_492
+$6791 = -133.0288 // floating-point values
+$6792 = -981.1411 // floating-point values
+$6793 = 9.4084 // floating-point values
+$6797 = -134.3 // floating-point values
+$6798 = -982.6 // floating-point values
+jump @AMBULAN_770
+
+:AMBULAN_492
+if
+00E3:   player $PLAYER_CHAR 0 574.234 641.203 radius 750.0 750.0
+jf @AMBULAN_587
+$6791 = 479.1241 // floating-point values
+$6792 = 710.748 // floating-point values
+$6793 = 10.3577 // floating-point values
+$6797 = 496.5145 // floating-point values
+$6798 = 708.1912 // floating-point values
+jump @AMBULAN_770
+
+:AMBULAN_587
+if
+00E3:   player $PLAYER_CHAR 0 -1138.702 -902.039 radius 750.0 900.0
+jf @AMBULAN_682
+$6791 = -871.6317 // floating-point values
+$6792 = -477.0081 // floating-point values
+$6793 = 10.0683 // floating-point values
+$6797 = -887.111 // floating-point values
+$6798 = -470.534 // floating-point values
+jump @AMBULAN_770
+
+:AMBULAN_682
+if
+00E3:   player $PLAYER_CHAR 0 -1025.766 847.961 radius 850.0 850.0
+jf @AMBULAN_770
+$6791 = -823.111 // floating-point values
+$6792 = 1167.676 // floating-point values
+$6793 = 9.8744 // floating-point values
+$6797 = -823.264 // floating-point values
+$6798 = 1140.061 // floating-point values
+
+:AMBULAN_770
+if
+001C:   $6744 > $6743 // integer values
+jf @AMBULAN_849
+gosub @AMBULAN_2333
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_821
+jump @AMBULAN_7425
+
+:AMBULAN_821
+gosub @AMBULAN_1011
+gosub @AMBULAN_5692
+$6743 += 1 // integer values
+jump @AMBULAN_770
+
+:AMBULAN_849
+if
+  $6744 > 3 // integer values
+jf @AMBULAN_881
+$6752 = 1 // integer values
+jump @AMBULAN_888
+
+:AMBULAN_881
+$6752 = 0 // integer values
+
+:AMBULAN_888
+0084: $6755 = $6740 // integer values and handles
+0070: $6755 /= $6744 // integer values
+$6755 /= 2 // integer values
+0084: $6745 = $6744 // integer values and handles
+$6745 += 1 // integer values
+0068: $6755 *= $6745 // integer values
+0058: $6740 += $6755 // integer values
+0070: $6740 /= $6744 // integer values
+0084: $6755 = $6740 // integer values and handles
+$6755 /= 2 // integer values
+014E: start_timer_at $6740 count_in_direction 1
+if
+  $ONMISSION == 0 // integer values
+jf @AMBULAN_1004
+018A: $6754 = create_checkpoint_at $6791 $6792 $6793
+
+:AMBULAN_1004
+jump @AMBULAN_5736
+
+:AMBULAN_1011
+if and
+  $6744 > 0 // integer values
+  2@ == 0 // integer values
+jf @AMBULAN_1121
+0376: 0@ = create_random_actor $6799 $6800 $6801
+2@ = 1 // integer values
+0332: set_actor 0@ bleeding_to 1
+02A9: set_actor 0@ immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle(0@) = $6811
+0319: set_actor 0@ running 1
+01ED: clear_actor 0@ threat_search
+1@ = Marker.CreateAboveActor(0@)
+0192: set_actor 0@ objective_to_stand_still
+return
+
+:AMBULAN_1121
+if and
+  $6744 > 1 // integer values
+  5@ == 0 // integer values
+jf @AMBULAN_1231
+0376: 3@ = create_random_actor $6799 $6800 $6801
+5@ = 1 // integer values
+0332: set_actor 3@ bleeding_to 1
+02A9: set_actor 3@ immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle(3@) = $6811
+0319: set_actor 3@ running 1
+01ED: clear_actor 3@ threat_search
+4@ = Marker.CreateAboveActor(3@)
+0192: set_actor 3@ objective_to_stand_still
+return
+
+:AMBULAN_1231
+if and
+  $6744 > 2 // integer values
+  8@ == 0 // integer values
+jf @AMBULAN_1341
+0376: 6@ = create_random_actor $6799 $6800 $6801
+8@ = 1 // integer values
+0332: set_actor 6@ bleeding_to 1
+02A9: set_actor 6@ immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle(6@) = $6811
+0319: set_actor 6@ running 1
+01ED: clear_actor 6@ threat_search
+7@ = Marker.CreateAboveActor(6@)
+0192: set_actor 6@ objective_to_stand_still
+return
+
+:AMBULAN_1341
+if and
+  $6744 > 3 // integer values
+  11@ == 0 // integer values
+jf @AMBULAN_1451
+0376: 9@ = create_random_actor $6799 $6800 $6801
+11@ = 1 // integer values
+0332: set_actor 9@ bleeding_to 1
+02A9: set_actor 9@ immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle(9@) = $6811
+0319: set_actor 9@ running 1
+01ED: clear_actor 9@ threat_search
+10@ = Marker.CreateAboveActor(9@)
+0192: set_actor 9@ objective_to_stand_still
+return
+
+:AMBULAN_1451
+if and
+  $6744 > 4 // integer values
+  14@ == 0 // integer values
+jf @AMBULAN_1561
+0376: 12@ = create_random_actor $6799 $6800 $6801
+14@ = 1 // integer values
+0332: set_actor 12@ bleeding_to 1
+02A9: set_actor 12@ immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle(12@) = $6811
+0319: set_actor 12@ running 1
+01ED: clear_actor 12@ threat_search
+13@ = Marker.CreateAboveActor(12@)
+0192: set_actor 12@ objective_to_stand_still
+return
+
+:AMBULAN_1561
+if and
+  $6744 > 5 // integer values
+  $6766 == 0 // integer values
+jf @AMBULAN_1671
+0376: $6764 = create_random_actor $6799 $6800 $6801
+$6766 = 1 // integer values
+0332: set_actor $6764 bleeding_to 1
+02A9: set_actor $6764 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6764) = $6811
+0319: set_actor $6764 running 1
+01ED: clear_actor $6764 threat_search
+$6765 = Marker.CreateAboveActor($6764)
+0192: set_actor $6764 objective_to_stand_still
+return
+
+:AMBULAN_1671
+if and
+  $6744 > 6 // integer values
+  $6769 == 0 // integer values
+jf @AMBULAN_1781
+0376: $6767 = create_random_actor $6799 $6800 $6801
+$6769 = 1 // integer values
+0332: set_actor $6767 bleeding_to 1
+02A9: set_actor $6767 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6767) = $6811
+0319: set_actor $6767 running 1
+01ED: clear_actor $6767 threat_search
+$6768 = Marker.CreateAboveActor($6767)
+0192: set_actor $6767 objective_to_stand_still
+return
+
+:AMBULAN_1781
+if and
+  $6744 > 7 // integer values
+  $6772 == 0 // integer values
+jf @AMBULAN_1891
+0376: $6770 = create_random_actor $6799 $6800 $6801
+$6772 = 1 // integer values
+0332: set_actor $6770 bleeding_to 1
+02A9: set_actor $6770 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6770) = $6811
+0319: set_actor $6770 running 1
+01ED: clear_actor $6770 threat_search
+$6771 = Marker.CreateAboveActor($6770)
+0192: set_actor $6770 objective_to_stand_still
+return
+
+:AMBULAN_1891
+if and
+  $6744 > 8 // integer values
+  $6775 == 0 // integer values
+jf @AMBULAN_2001
+0376: $6773 = create_random_actor $6799 $6800 $6801
+$6775 = 1 // integer values
+0332: set_actor $6773 bleeding_to 1
+02A9: set_actor $6773 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6773) = $6811
+0319: set_actor $6773 running 1
+01ED: clear_actor $6773 threat_search
+$6774 = Marker.CreateAboveActor($6773)
+0192: set_actor $6773 objective_to_stand_still
+return
+
+:AMBULAN_2001
+if and
+  $6744 > 9 // integer values
+  $6778 == 0 // integer values
+jf @AMBULAN_2111
+0376: $6776 = create_random_actor $6799 $6800 $6801
+$6778 = 1 // integer values
+0332: set_actor $6776 bleeding_to 1
+02A9: set_actor $6776 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6776) = $6811
+0319: set_actor $6776 running 1
+01ED: clear_actor $6776 threat_search
+$6777 = Marker.CreateAboveActor($6776)
+0192: set_actor $6776 objective_to_stand_still
+return
+
+:AMBULAN_2111
+if and
+  $6744 > 10 // integer values
+  $6781 == 0 // integer values
+jf @AMBULAN_2221
+0376: $6779 = create_random_actor $6799 $6800 $6801
+$6781 = 1 // integer values
+0332: set_actor $6779 bleeding_to 1
+02A9: set_actor $6779 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6779) = $6811
+0319: set_actor $6779 running 1
+01ED: clear_actor $6779 threat_search
+$6780 = Marker.CreateAboveActor($6779)
+0192: set_actor $6779 objective_to_stand_still
+return
+
+:AMBULAN_2221
+if and
+  $6744 > 11 // integer values
+  $6784 == 0 // integer values
+jf @AMBULAN_2331
+0376: $6782 = create_random_actor $6799 $6800 $6801
+$6784 = 1 // integer values
+0332: set_actor $6782 bleeding_to 1
+02A9: set_actor $6782 immune_to_nonplayer 1
+0208: $6811 = random_float 0.0 359.9
+Actor.Angle($6782) = $6811
+0319: set_actor $6782 running 1
+01ED: clear_actor $6782 threat_search
+$6783 = Marker.CreateAboveActor($6782)
+0192: set_actor $6782 objective_to_stand_still
+return
+
+:AMBULAN_2331
+return
+
+:AMBULAN_2333
+wait 0
+0054: store_player $PLAYER_CHAR position_to $6794 $6795 $6796
+if
+  $6791 == -133.0288 // floating-point values
+jf @AMBULAN_2402
+0208: $6789 = random_float -388.702 1111.298
+0208: $6790 = random_float -1808.797 -108.797
+
+:AMBULAN_2402
+if
+  $6791 == 479.1241 // floating-point values
+jf @AMBULAN_2453
+0208: $6789 = random_float -175.766 1324.234
+0208: $6790 = random_float -108.797 1391.203
+
+:AMBULAN_2453
+if
+  $6791 == -871.6317 // floating-point values
+jf @AMBULAN_2504
+0208: $6789 = random_float -1888.702 -388.702
+0208: $6790 = random_float -1802.039 -2.039
+
+:AMBULAN_2504
+if
+  $6791 == -823.111 // floating-point values
+jf @AMBULAN_2555
+0208: $6789 = random_float -1875.766 -175.766
+0208: $6790 = random_float -2.039 1697.961
+
+:AMBULAN_2555
+0293: $18 = get_controller_mode
+if $6761 == 0
+then
+	gosub @PROCESS_R3_ABORT
+	if $MISSION_CANCEL_FLAG == 2
+	then
+		$6761 = 1
+	end
+else
+	if
+	   not $18 == 3 // integer values
+	jf @AMBULAN_2717
+	if
+	80E1:   not player 0 pressed_button 19
+	jf @AMBULAN_2710
+	00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+	$6788 = 1 // integer values
+	return
+
+	:AMBULAN_2710
+	jump @AMBULAN_2758
+
+	:AMBULAN_2717
+	if
+	80E1:   not player 0 pressed_button 14
+	jf @AMBULAN_2758
+	00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+	$6788 = 1 // integer values
+	return
+end
+
+:AMBULAN_2758
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #AMBULAN
+jf @AMBULAN_2801
+00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+$6788 = 1 // integer values
+return
+
+:AMBULAN_2801
+02C0: set $6799 $6800 $6801 to_ped_path_coords_closest_to $6789 $6790 $6796
+if
+  $PASSED_COK2_PHNOM_PENH_86 == 0 // integer values
+jf @AMBULAN_3071
+if and
+  $6799 > -2327.212 // floating-point values
+  -261.402 > $6799 // floating-point values
+  $6800 > -2027.821 // floating-point values
+  1894.426 > $6800 // floating-point values
+jf @AMBULAN_2897
+jump @AMBULAN_2333
+
+:AMBULAN_2897
+if and
+  $6799 > -265.018 // floating-point values
+  170.188 > $6799 // floating-point values
+  $6800 > -275.942 // floating-point values
+  1689.059 > $6800 // floating-point values
+jf @AMBULAN_2955
+jump @AMBULAN_2333
+
+:AMBULAN_2955
+if and
+  $6799 > -265.657 // floating-point values
+  36.828 > $6799 // floating-point values
+  $6800 > -729.217 // floating-point values
+  -275.488 > $6800 // floating-point values
+jf @AMBULAN_3013
+jump @AMBULAN_2333
+
+:AMBULAN_3013
+if and
+  $6799 > 164.191 // floating-point values
+  259.713 > $6799 // floating-point values
+  $6800 > -187.926 // floating-point values
+  631.97 > $6800 // floating-point values
+jf @AMBULAN_3071
+jump @AMBULAN_2333
+
+:AMBULAN_3071
+if and
+  $6799 > 333.358 // floating-point values
+  435.544 > $6799 // floating-point values
+  $6800 > -557.261 // floating-point values
+  -433.179 > $6800 // floating-point values
+jf @AMBULAN_3129
+jump @AMBULAN_2333
+
+:AMBULAN_3129
+if and
+  $6799 > -64.434 // floating-point values
+  81.544 > $6799 // floating-point values
+  $6800 > -995.198 // floating-point values
+  -896.662 > $6800 // floating-point values
+jf @AMBULAN_3187
+jump @AMBULAN_2333
+
+:AMBULAN_3187
+if and
+  $6799 > 446.491 // floating-point values
+  599.769 > $6799 // floating-point values
+  $6800 > -92.564 // floating-point values
+  53.415 > $6800 // floating-point values
+jf @AMBULAN_3245
+jump @AMBULAN_2333
+
+:AMBULAN_3245
+if and
+  $6799 > -192.361 // floating-point values
+  234.821 > $6799 // floating-point values
+  $6800 > -272.607 // floating-point values
+  406.194 > $6800 // floating-point values
+jf @AMBULAN_3303
+jump @AMBULAN_2333
+
+:AMBULAN_3303
+if and
+  $6799 > -290.702 // floating-point values
+  282.265 > $6799 // floating-point values
+  $6800 > 398.714 // floating-point values
+  661.476 > $6800 // floating-point values
+jf @AMBULAN_3361
+jump @AMBULAN_2333
+
+:AMBULAN_3361
+if and
+  $6799 > -728.193 // floating-point values
+  -67.639 > $6799 // floating-point values
+  $6800 > -20.866 // floating-point values
+  99.566 > $6800 // floating-point values
+jf @AMBULAN_3419
+jump @AMBULAN_2333
+
+:AMBULAN_3419
+if and
+  $6799 > -516.97 // floating-point values
+  -188.518 > $6799 // floating-point values
+  $6800 > -667.97 // floating-point values
+  -507.393 > $6800 // floating-point values
+jf @AMBULAN_3477
+jump @AMBULAN_2333
+
+:AMBULAN_3477
+if and
+  $6799 > -710.393 // floating-point values
+  -579.012 > $6799 // floating-point values
+  $6800 > -1416.112 // floating-point values
+  -1211.742 > $6800 // floating-point values
+jf @AMBULAN_3535
+jump @AMBULAN_2333
+
+:AMBULAN_3535
+if and
+  $6799 > 333.358 // floating-point values
+  493.934 > $6799 // floating-point values
+  $6800 > 991.328 // floating-point values
+  1261.389 > $6800 // floating-point values
+jf @AMBULAN_3593
+jump @AMBULAN_2333
+
+:AMBULAN_3593
+if and
+  $6799 > -790.682 // floating-point values
+  -626.456 > $6799 // floating-point values
+  $6800 > 1196.908 // floating-point values
+  1306.392 > $6800 // floating-point values
+jf @AMBULAN_3651
+jump @AMBULAN_2333
+
+:AMBULAN_3651
+if and
+  $6799 > -1173.877 // floating-point values
+  -1027.898 > $6799 // floating-point values
+  $6800 > 237.098 // floating-point values
+  415.922 > $6800 // floating-point values
+jf @AMBULAN_3709
+jump @AMBULAN_2333
+
+:AMBULAN_3709
+if and
+  $6799 > -1389.195 // floating-point values
+  -1199.422 > $6799 // floating-point values
+  $6800 > -47.561 // floating-point values
+  229.799 > $6800 // floating-point values
+jf @AMBULAN_3767
+jump @AMBULAN_2333
+
+:AMBULAN_3767
+if and
+  $6799 > -1571.667 // floating-point values
+  -1290.658 > $6799 // floating-point values
+  $6800 > -1007.371 // floating-point values
+  -784.753 > $6800 // floating-point values
+jf @AMBULAN_3825
+jump @AMBULAN_2333
+
+:AMBULAN_3825
+if and
+  $6799 > -757.335 // floating-point values
+  -219.313 > $6799 // floating-point values
+  $6800 > -979.568 // floating-point values
+  -878.689 > $6800 // floating-point values
+jf @AMBULAN_3883
+jump @AMBULAN_2333
+
+:AMBULAN_3883
+if and
+  $6799 > -180.88 // floating-point values
+  64.112 > $6799 // floating-point values
+  $6800 > -499.183 // floating-point values
+  -417.519 > $6800 // floating-point values
+jf @AMBULAN_3941
+jump @AMBULAN_2333
+
+:AMBULAN_3941
+if and
+  $6799 > 511.112 // floating-point values
+  638.214 > $6799 // floating-point values
+  $6800 > -1815.644 // floating-point values
+  -1679.04 > $6800 // floating-point values
+jf @AMBULAN_3999
+jump @AMBULAN_2333
+
+:AMBULAN_3999
+if and
+  $6799 > -691.673 // floating-point values
+  -581.673 > $6799 // floating-point values
+  $6800 > -1519.748 // floating-point values
+  -1449.748 > $6800 // floating-point values
+jf @AMBULAN_4057
+jump @AMBULAN_2333
+
+:AMBULAN_4057
+if and
+  $6799 > -1176.038 // floating-point values
+  -1012.796 > $6799 // floating-point values
+  $6800 > -266.898 // floating-point values
+  -158.26 > $6800 // floating-point values
+jf @AMBULAN_4115
+jump @AMBULAN_2333
+
+:AMBULAN_4115
+if and
+  $6799 > -1031.494 // floating-point values
+  -949.479 > $6799 // floating-point values
+  $6800 > -902.312 // floating-point values
+  -821.592 > $6800 // floating-point values
+jf @AMBULAN_4173
+jump @AMBULAN_2333
+
+:AMBULAN_4173
+if and
+  $6799 > -896.098 // floating-point values
+  -855.09 > $6799 // floating-point values
+  $6800 > -593.101 // floating-point values
+  -548.64 > $6800 // floating-point values
+jf @AMBULAN_4231
+jump @AMBULAN_2333
+
+:AMBULAN_4231
+if and
+  $6799 > -1012.06 // floating-point values
+  -982.06 > $6799 // floating-point values
+  $6800 > 181.561 // floating-point values
+  216.561 > $6800 // floating-point values
+jf @AMBULAN_4289
+jump @AMBULAN_2333
+
+:AMBULAN_4289
+if and
+  $6799 > -112.495 // floating-point values
+  9.705 > $6799 // floating-point values
+  $6800 > 920.349 // floating-point values
+  1025.694 > $6800 // floating-point values
+jf @AMBULAN_4347
+jump @AMBULAN_2333
+
+:AMBULAN_4347
+if and
+  $6799 > 533.891 // floating-point values
+  673.891 > $6799 // floating-point values
+  $6800 > -343.116 // floating-point values
+  -183.116 > $6800 // floating-point values
+jf @AMBULAN_4405
+jump @AMBULAN_2333
+
+:AMBULAN_4405
+if and
+  $6799 > -1783.222 // floating-point values
+  -1586.599 > $6799 // floating-point values
+  $6800 > -307.5092 // floating-point values
+  -84.3105 > $6800 // floating-point values
+jf @AMBULAN_4463
+jump @AMBULAN_2333
+
+:AMBULAN_4463
+if and
+  $6799 > -903.6972 // floating-point values
+  -882.7946 > $6799 // floating-point values
+  $6800 > 791.7817 // floating-point values
+  808.3229 > $6800 // floating-point values
+jf @AMBULAN_4521
+jump @AMBULAN_2333
+
+:AMBULAN_4521
+if and
+  $6799 > -1059.234 // floating-point values
+  -1040.148 > $6799 // floating-point values
+  $6800 > 73.3646 // floating-point values
+  89.7497 > $6800 // floating-point values
+jf @AMBULAN_4579
+jump @AMBULAN_2333
+
+:AMBULAN_4579
+if and
+  $6799 > -1235.792 // floating-point values
+  -1110.932 > $6799 // floating-point values
+  $6800 > 32.1217 // floating-point values
+  126.1341 > $6800 // floating-point values
+jf @AMBULAN_4637
+jump @AMBULAN_2333
+
+:AMBULAN_4637
+if
+  6.0 > $6801 // floating-point values
+jf @AMBULAN_4665
+jump @AMBULAN_2333
+
+:AMBULAN_4665
+0086: $6805 = $6794 // floating-point values only
+0061: $6805 -= $6799 // floating-point values
+0086: $6806 = $6795 // floating-point values only
+0061: $6806 -= $6800 // floating-point values
+0069: $6805 *= $6805 // floating-point values
+0069: $6806 *= $6806 // floating-point values
+0086: $6807 = $6805 // floating-point values only
+0059: $6807 += $6806 // floating-point values
+01FB: $6808 = square_root $6807
+if
+  120.0 > $6808 // floating-point values
+jf @AMBULAN_4765
+jump @AMBULAN_2333
+
+:AMBULAN_4765
+0086: $6805 = $6791 // floating-point values only
+0061: $6805 -= $6799 // floating-point values
+0086: $6806 = $6792 // floating-point values only
+0061: $6806 -= $6800 // floating-point values
+0069: $6805 *= $6805 // floating-point values
+0069: $6806 *= $6806 // floating-point values
+0086: $6807 = $6805 // floating-point values only
+0059: $6807 += $6806 // floating-point values
+01FB: $6809 = square_root $6807
+if
+  100.0 > $6809 // floating-point values
+jf @AMBULAN_4865
+jump @AMBULAN_2333
+
+:AMBULAN_4865
+if
+  2@ > 0 // integer values
+jf @AMBULAN_4940
+if
+   not Actor.Dead(0@)
+jf @AMBULAN_4940
+if
+00EC:   actor 0@ 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_4940
+jump @AMBULAN_2333
+
+:AMBULAN_4940
+if
+  5@ > 0 // integer values
+jf @AMBULAN_5015
+if
+   not Actor.Dead(3@)
+jf @AMBULAN_5015
+if
+00EC:   actor 3@ 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5015
+jump @AMBULAN_2333
+
+:AMBULAN_5015
+if
+  8@ > 0 // integer values
+jf @AMBULAN_5090
+if
+   not Actor.Dead(6@)
+jf @AMBULAN_5090
+if
+00EC:   actor 6@ 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5090
+jump @AMBULAN_2333
+
+:AMBULAN_5090
+if
+  11@ > 0 // integer values
+jf @AMBULAN_5165
+if
+   not Actor.Dead(9@)
+jf @AMBULAN_5165
+if
+00EC:   actor 9@ 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5165
+jump @AMBULAN_2333
+
+:AMBULAN_5165
+if
+  14@ > 0 // integer values
+jf @AMBULAN_5240
+if
+   not Actor.Dead(12@)
+jf @AMBULAN_5240
+if
+00EC:   actor 12@ 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5240
+jump @AMBULAN_2333
+
+:AMBULAN_5240
+if
+  $6766 > 0 // integer values
+jf @AMBULAN_5315
+if
+   not Actor.Dead($6764)
+jf @AMBULAN_5315
+if
+00EC:   actor $6764 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5315
+jump @AMBULAN_2333
+
+:AMBULAN_5315
+if
+  $6769 > 0 // integer values
+jf @AMBULAN_5390
+if
+   not Actor.Dead($6767)
+jf @AMBULAN_5390
+if
+00EC:   actor $6767 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5390
+jump @AMBULAN_2333
+
+:AMBULAN_5390
+if
+  $6772 > 0 // integer values
+jf @AMBULAN_5465
+if
+   not Actor.Dead($6770)
+jf @AMBULAN_5465
+if
+00EC:   actor $6770 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5465
+jump @AMBULAN_2333
+
+:AMBULAN_5465
+if
+  $6775 > 0 // integer values
+jf @AMBULAN_5540
+if
+   not Actor.Dead($6773)
+jf @AMBULAN_5540
+if
+00EC:   actor $6773 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5540
+jump @AMBULAN_2333
+
+:AMBULAN_5540
+if
+  $6778 > 0 // integer values
+jf @AMBULAN_5615
+if
+   not Actor.Dead($6776)
+jf @AMBULAN_5615
+if
+00EC:   actor $6776 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5615
+jump @AMBULAN_2333
+
+:AMBULAN_5615
+if
+  $6781 > 0 // integer values
+jf @AMBULAN_5690
+if
+   not Actor.Dead($6779)
+jf @AMBULAN_5690
+if
+00EC:   actor $6779 0 $6799 $6800 radius 25.0 25.0
+jf @AMBULAN_5690
+jump @AMBULAN_2333
+
+:AMBULAN_5690
+return
+
+:AMBULAN_5692
+0086: $6810 = $6809 // floating-point values only
+0071: $6810 /= $6812 // floating-point values
+$6810 *= 1000.0 // floating-point values
+008C: $6742 = float_to_integer $6810
+0058: $6740 += $6742 // integer values
+return
+
+:AMBULAN_5736
+wait 0
+0293: $18 = get_controller_mode
+if $6761 == 0
+then
+	gosub @PROCESS_R3_ABORT
+	if $MISSION_CANCEL_FLAG == 2
+	then
+		$6761 = 1
+	end
+else
+	if
+	   not $18 == 3 // integer values
+	jf @AMBULAN_5900
+	if
+	80E1:   not player 0 pressed_button 19
+	jf @AMBULAN_5893
+	00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+	jump @AMBULAN_7425
+
+	:AMBULAN_5893
+	jump @AMBULAN_5939
+
+	:AMBULAN_5900
+	if
+	80E1:   not player 0 pressed_button 14
+	jf @AMBULAN_5939
+	00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+	jump @AMBULAN_7425
+end
+
+:AMBULAN_5939
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #AMBULAN
+jf @AMBULAN_5987
+00BC: text_highpriority 'A_CANC' 3000 ms 1  // ~r~Paramedic mission cancelled!
+jump @AMBULAN_7425
+
+:AMBULAN_5987
+00DA: $6741 = player $PLAYER_CHAR car
+
+:AMBULAN_5995
+if and
+  $6744 > 6 // integer values
+  $6752 == 2 // integer values
+  $6759 == 0 // integer values
+jf @AMBULAN_6041
+$6752 = 1 // integer values
+$6759 += 1 // integer values
+
+:AMBULAN_6041
+if and
+  $6744 > 9 // integer values
+  $6752 == 2 // integer values
+  $6759 == 1 // integer values
+jf @AMBULAN_6087
+$6752 = 1 // integer values
+$6759 += 1 // integer values
+
+:AMBULAN_6087
+if and
+  $6744 > 12 // integer values
+  $6752 == 2 // integer values
+  $6759 == 2 // integer values
+jf @AMBULAN_6133
+$6752 = 1 // integer values
+$6759 += 1 // integer values
+
+:AMBULAN_6133
+if
+  2@ > 0 // integer values
+jf @AMBULAN_6215
+008A: $6785 = 0@ // integer values and handles
+008A: $6786 = 2@ // integer values and handles
+008A: $6787 = 1@ // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6207
+jump @AMBULAN_7425
+
+:AMBULAN_6207
+008B: 2@ = $6786 // integer values and handles
+
+:AMBULAN_6215
+if
+  5@ > 0 // integer values
+jf @AMBULAN_6297
+008A: $6785 = 3@ // integer values and handles
+008A: $6786 = 5@ // integer values and handles
+008A: $6787 = 4@ // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6289
+jump @AMBULAN_7425
+
+:AMBULAN_6289
+008B: 5@ = $6786 // integer values and handles
+
+:AMBULAN_6297
+if
+  8@ > 0 // integer values
+jf @AMBULAN_6379
+008A: $6785 = 6@ // integer values and handles
+008A: $6786 = 8@ // integer values and handles
+008A: $6787 = 7@ // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6371
+jump @AMBULAN_7425
+
+:AMBULAN_6371
+008B: 8@ = $6786 // integer values and handles
+
+:AMBULAN_6379
+if
+  11@ > 0 // integer values
+jf @AMBULAN_6461
+008A: $6785 = 9@ // integer values and handles
+008A: $6786 = 11@ // integer values and handles
+008A: $6787 = 10@ // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6453
+jump @AMBULAN_7425
+
+:AMBULAN_6453
+008B: 11@ = $6786 // integer values and handles
+
+:AMBULAN_6461
+if
+  14@ > 0 // integer values
+jf @AMBULAN_6543
+008A: $6785 = 12@ // integer values and handles
+008A: $6786 = 14@ // integer values and handles
+008A: $6787 = 13@ // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6535
+jump @AMBULAN_7425
+
+:AMBULAN_6535
+008B: 14@ = $6786 // integer values and handles
+
+:AMBULAN_6543
+if
+  $6766 > 0 // integer values
+jf @AMBULAN_6625
+0084: $6785 = $6764 // integer values and handles
+0084: $6786 = $6766 // integer values and handles
+0084: $6787 = $6765 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6617
+jump @AMBULAN_7425
+
+:AMBULAN_6617
+0084: $6766 = $6786 // integer values and handles
+
+:AMBULAN_6625
+if
+  $6769 > 0 // integer values
+jf @AMBULAN_6707
+0084: $6785 = $6767 // integer values and handles
+0084: $6786 = $6769 // integer values and handles
+0084: $6787 = $6768 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6699
+jump @AMBULAN_7425
+
+:AMBULAN_6699
+0084: $6769 = $6786 // integer values and handles
+
+:AMBULAN_6707
+if
+  $6772 > 0 // integer values
+jf @AMBULAN_6789
+0084: $6785 = $6770 // integer values and handles
+0084: $6786 = $6772 // integer values and handles
+0084: $6787 = $6771 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6781
+jump @AMBULAN_7425
+
+:AMBULAN_6781
+0084: $6772 = $6786 // integer values and handles
+
+:AMBULAN_6789
+if
+  $6775 > 0 // integer values
+jf @AMBULAN_6871
+0084: $6785 = $6773 // integer values and handles
+0084: $6786 = $6775 // integer values and handles
+0084: $6787 = $6774 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6863
+jump @AMBULAN_7425
+
+:AMBULAN_6863
+0084: $6775 = $6786 // integer values and handles
+
+:AMBULAN_6871
+if
+  $6778 > 0 // integer values
+jf @AMBULAN_6953
+0084: $6785 = $6776 // integer values and handles
+0084: $6786 = $6778 // integer values and handles
+0084: $6787 = $6777 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_6945
+jump @AMBULAN_7425
+
+:AMBULAN_6945
+0084: $6778 = $6786 // integer values and handles
+
+:AMBULAN_6953
+if
+  $6781 > 0 // integer values
+jf @AMBULAN_7035
+0084: $6785 = $6779 // integer values and handles
+0084: $6786 = $6781 // integer values and handles
+0084: $6787 = $6780 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_7027
+jump @AMBULAN_7425
+
+:AMBULAN_7027
+0084: $6781 = $6786 // integer values and handles
+
+:AMBULAN_7035
+if
+  $6784 > 0 // integer values
+jf @AMBULAN_7117
+0084: $6785 = $6782 // integer values and handles
+0084: $6786 = $6784 // integer values and handles
+0084: $6787 = $6783 // integer values and handles
+gosub @AMBULAN_7618
+if
+  $6788 == 1 // integer values
+jf @AMBULAN_7109
+jump @AMBULAN_7425
+
+:AMBULAN_7109
+0084: $6784 = $6786 // integer values and handles
+
+:AMBULAN_7117
+if
+003A:   $6753 == $6744 // integer values and handles
+jf @AMBULAN_7418
+0084: $6751 = $6756 // integer values and handles
+0068: $6751 *= $6756 // integer values
+$6751 *= 50 // integer values
+01E3: text_1number_styled 'REWARD' number $6751 time 6000 style 6  // REWARD $~1~
+0058: $316 += $6753 // integer values
+0058: $6763 += $6753 // integer values
+$6744 += 1 // integer values
+$6753 = 0 // integer values
+$6743 = 0 // integer values
+Player.Money($PLAYER_CHAR) += $6751
+$6760 = 0 // integer values
+Marker.Disable($6754)
+Marker.Disable(1@)
+Marker.Disable(4@)
+Marker.Disable(7@)
+Marker.Disable(10@)
+Marker.Disable(13@)
+Marker.Disable($6765)
+Marker.Disable($6768)
+Marker.Disable($6771)
+Marker.Disable($6774)
+Marker.Disable($6777)
+Marker.Disable($6780)
+Marker.Disable($6783)
+0403: save_highest_ambulance_level $6756
+$6756 += 1 // integer values
+if
+  $6756 == 13 // integer values
+jf @AMBULAN_7411
+01E3: text_1number_styled 'A_COMP1' number 15000 time 5000 style 5  // Paramedic missions complete: $~1~
+Player.Money($PLAYER_CHAR) += 25000
+0394: play_music 1
+Player.InfiniteRun($PLAYER_CHAR) = True
+if
+  $1581 == 0 // integer values
+jf @AMBULAN_7409
+030C: progress_made += 1
+03E5: text_box 'A_COMP2'  // You will never get tired!
+Player.InfiniteRun($PLAYER_CHAR) = True
+0595: mission_complete
+$1581 = 1 // integer values
+
+:AMBULAN_7409
+return
+
+:AMBULAN_7411
+jump @AMBULAN_367
+
+:AMBULAN_7418
+jump @AMBULAN_5736
+
+:AMBULAN_7425
+014F: stop_timer $6740
+if
+   not $6756 == 13 // integer values
+jf @AMBULAN_7481
+if
+    8112:   not wasted_or_busted
+then
+    00BA: text_styled 'A_FAIL1' 5000 ms 5  // Paramedic mission ended.
+end
+if
+    $6763 > 0
+then
+    01E3: text_1number_styled 'A_SAVES' number $6763 time 6000 style 6  // PEOPLE SAVED: ~1~
+end
+
+:AMBULAN_7481
+$6760 = 0 // integer values
+Marker.Disable($6754)
+Marker.Disable(1@)
+Marker.Disable(4@)
+Marker.Disable(7@)
+Marker.Disable(10@)
+Marker.Disable(13@)
+Marker.Disable($6765)
+Marker.Disable($6768)
+Marker.Disable($6771)
+Marker.Disable($6774)
+Marker.Disable($6777)
+Marker.Disable($6780)
+Marker.Disable($6783)
+03C7: set_sensitivity_to_crime_to 1.0
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+$ONMISSION = 0 // integer values
+$319 = 0 // integer values
+mission_cleanup
+if
+  $1581 == 1 // integer values
+jf @AMBULAN_7616
+03E5: text_box 'A_COMP2'  // You will never get tired!
+$1581 = 2 // integer values
+
+:AMBULAN_7616
+return
+
+:AMBULAN_7618
+if
+   Actor.Dead($6785)
+jf @AMBULAN_7658
+00BC: text_highpriority 'A_FAIL3' 3000 ms 1  // ~r~The patient is dead!!
+$6788 = 1 // integer values
+return
+
+:AMBULAN_7658
+if
+  $6740 == 0 // integer values
+jf @AMBULAN_7710
+0321: kill_actor $6785
+Actor.DestroyWithFade($6785)
+00BC: text_highpriority 'A_FAIL2' 3000 ms 1  // ~r~Your lack of urgency has been fatal to the patient!
+$6788 = 1 // integer values
+return
+
+:AMBULAN_7710
+if
+  $6786 == 3 // integer values
+jf @AMBULAN_7882
+Actor.StorePos($6785, $6802, $6803, $6804)
+$6747 = Car.Health($6741)
+if
+001C:   $6746 > $6747 // integer values
+jf @AMBULAN_7882
+0084: $6748 = $6746 // integer values and handles
+0060: $6748 -= $6747 // integer values
+$6748 *= 50 // integer values
+0060: $6740 -= $6748 // integer values
+if
+03A3:   actor $6785 male
+jf @AMBULAN_7836
+018C: play_sound 19 at $6802 $6803 $6804
+jump @AMBULAN_7849
+
+:AMBULAN_7836
+018C: play_sound 20 at $6802 $6803 $6804
+
+:AMBULAN_7849
+if
+  0 > $6740 // integer values
+jf @AMBULAN_7874
+$6740 = 0 // integer values
+
+:AMBULAN_7874
+0084: $6746 = $6747 // integer values and handles
+
+:AMBULAN_7882
+if
+  $6786 == 1 // integer values
+jf @AMBULAN_8048
+if
+00FD:   player $PLAYER_CHAR 0 $6785 in_car radius 10.0 10.0 2.0
+jf @AMBULAN_8048
+01E9: $6750 = car $6741 num_passengers
+01EA: $6749 = car $6741 max_passengers
+if
+003A:   $6750 == $6749 // integer values and handles
+jf @AMBULAN_8000
+00BC: text_highpriority 'A_FULL' 5000 ms 1  // ~r~Ambulance full!!
+$6758 = 1 // integer values
+jump @AMBULAN_8007
+
+:AMBULAN_8000
+$6758 = 0 // integer values
+
+:AMBULAN_8007
+$6746 = Car.Health($6741)
+if
+  $6758 == 0 // integer values
+jf @AMBULAN_8048
+if
+    01C1:   car $6741 stopped
+then
+    01D4: actor $6785 go_to_car $6741 and_enter_it_as_a_passenger
+    $6786 = 2 // integer values
+end
+
+:AMBULAN_8048
+if
+  $6786 == 2 // integer values
+jf @AMBULAN_8143
+if
+80EB:   not player $PLAYER_CHAR 0 $6785 radius 20.0 20.0
+jf @AMBULAN_8104
+$6786 = 1 // integer values
+
+:AMBULAN_8104
+if
+04FF:  $6785
+jf @AMBULAN_8143
+if
+   not Actor.Driving($6785)
+jf @AMBULAN_8143
+$6786 = 1 // integer values
+
+:AMBULAN_8143
+if
+  $6786 == 2 // integer values
+jf @AMBULAN_8270
+if
+   Actor.Driving($6785)
+jf @AMBULAN_8270
+Marker.Disable($6787)
+if
+  $6760 == 0 // integer values
+jf @AMBULAN_8221
+018A: $6754 = create_checkpoint_at $6791 $6792 $6793
+$6760 = 1 // integer values
+
+:AMBULAN_8221
+0084: $6757 = $6755 // integer values and handles
+$6757 /= 1000 // integer values
+01E3: text_1number_styled 'A_TIME' number $6757 time 6000 style 6  // +~1~ seconds
+0058: $6740 += $6755 // integer values
+$6786 = 3 // integer values
+
+:AMBULAN_8270
+if
+  $6786 == 3 // integer values
+jf @AMBULAN_8348
+if
+00FA:   player $PLAYER_CHAR stopped 1 $6791 $6792 $6793 radius 6.0 6.0 2.0
+jf @AMBULAN_8348
+0239: actor $6785 run_to $6797 $6798
+$6786 = 4 // integer values
+
+:AMBULAN_8348
+if
+  $6786 == 4 // integer values
+jf @AMBULAN_8557
+0239: actor $6785 run_to $6797 $6798
+if
+   not Actor.Driving($6785)
+jf @AMBULAN_8557
+0239: actor $6785 run_to $6797 $6798
+Actor.RemoveReferences($6785)
+00BA: text_styled 'A_PASS' 3000 ms 5  // Rescued!
+if
+  $6752 == 1 // integer values
+jf @AMBULAN_8522
+0084: $6757 = $6755 // integer values and handles
+$6757 /= 1000 // integer values
+01E3: text_1number_styled 'A_TIME' number $6757 time 6000 style 6  // +~1~ seconds
+00DA: $6741 = player $PLAYER_CHAR car
+$6762 = Car.Health($6741)
+$6762 += 110 // integer values
+Car.Health($6741) = $6762
+0058: $6740 += $6755 // integer values
+$6752 += 1 // integer values
+
+:AMBULAN_8522
+018C: play_sound 1 at 0.0 0.0 0.0
+$6753 += 1 // integer values
+0401: increment_people_saved_in_ambulance
+$6786 = 0 // integer values
+
+:AMBULAN_8557
+return

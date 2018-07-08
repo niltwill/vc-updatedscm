@@ -1,0 +1,1879 @@
+:PORNO3
+thread 'PORNO3'
+gosub @PORNO3_120
+if
+wasted_or_busted
+jf @PORNO3_111
+if
+  $4487 == 1 // integer values
+jf @PORNO3_104
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #OD_WTSIGN to #OD_CHARIOT
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #LODD_BUILDNEW to #LODCHARIOT
+
+:PORNO3_104
+gosub @PORNO3_9207
+
+:PORNO3_111
+gosub @PORNO3_9317
+end_thread
+
+:PORNO3_120
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'PORN3'
+058E: set_restart_mission_taxi_destination 21.489 966.28 9.5 172.7
+$4479 = 0 // integer values
+$4480 = 0 // integer values
+$4481 = 0 // integer values
+$4482 = 0 // integer values
+$4483 = 0 // integer values
+$4484 = 0 // integer values
+$4485 = 0 // integer values
+$4486 = 0 // integer values
+$4487 = 0 // integer values
+$4490 = 0 // integer values
+$4492 = 0 // integer values
+$4493 = 0 // integer values
+$4494 = 0 // integer values
+$4495 = 0 // integer values
+$4496 = 0 // integer values
+$4497 = 0 // integer values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDIREC'
+023C: load_special_actor 3 'CSCANDY'
+023C: load_special_actor 4 'MPORNA'
+023C: load_special_actor 5 'CMRAMAN'
+02F3: load_object #CUTOBJ01 'CS_CAM'
+02F3: load_object #CUTOBJ02 'DRCHAIR'
+Camera.SetAtPos(-86.0, 929.0, 9.764)
+038B: load_requested_models
+
+:PORNO3_392
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @PORNO3_434
+wait 0
+jump @PORNO3_392
+
+:PORNO3_434
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @PORNO3_466
+wait 0
+jump @PORNO3_434
+
+:PORNO3_466
+02E4: load_cutscene_data 'PORN_3'
+0244: set_cutscene_pos -69.128 920.965 9.764
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $163 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $163 'CSDIREC'
+02E5: $165 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $165 'CSCANDY'
+02E5: $164 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $164 'MPORNA'
+02E5: $197 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $197 'CMRAMAN'
+02E5: $209 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $209 'CS_CAM'
+02E5: $215 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $215 'DRCHAIR'
+0395: clear_area 1 at -66.0 933.04 range 10.2 1.0
+0055: put_player $PLAYER_CHAR at -66.0 933.04 10.2
+0171: set_player $PLAYER_CHAR z_angle_to 275.6
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:PORNO3_718
+if
+  5363 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_753
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_718
+
+:PORNO3_753
+00BC: text_highpriority 'POR3_A' 10000 ms 1  // Ok, what's the problem now?
+
+:PORNO3_768
+if
+  7267 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_803
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_768
+
+:PORNO3_803
+00BC: text_highpriority 'POR3_B' 10000 ms 1  // SSShhhh!
+
+:PORNO3_818
+if
+  8405 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_853
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_818
+
+:PORNO3_853
+00BC: text_highpriority 'POR3_C' 10000 ms 1  // Well, after his close encounter with the nympho-invaders,
+
+:PORNO3_868
+if
+  11940 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_903
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_868
+
+:PORNO3_903
+00BC: text_highpriority 'POR3_D' 10000 ms 1  // our hero finds himself unable to think of anything but this huge phallic mountain -
+
+:PORNO3_918
+if
+  17623 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_953
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_918
+
+:PORNO3_953
+00BC: text_highpriority 'POR3_E' 10000 ms 1  // and that's when I want to do the scene with the vat of mashed potatoes, but then we, uh -
+
+:PORNO3_968
+if
+  20572 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1003
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_968
+
+:PORNO3_1003
+00BC: text_highpriority 'POR3_F' 10000 ms 1  // I don't give a crap about that!
+
+:PORNO3_1018
+if
+  23405 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1053
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1018
+
+:PORNO3_1053
+00BC: text_highpriority 'POR3_G' 10000 ms 1  // J - Just keep going, keep going!
+
+:PORNO3_1068
+if
+  24264 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1103
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1068
+
+:PORNO3_1103
+if
+  25472 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1138
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1103
+
+:PORNO3_1138
+00BC: text_highpriority 'POR3_I' 10000 ms 1  // You mentioned something about some legal problem on the phone?
+
+:PORNO3_1153
+if
+  29817 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1188
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1153
+
+:PORNO3_1188
+00BC: text_highpriority 'POR3_J' 10000 ms 1  // Congressman Alex Shrub has jumped on the pre-election bandwagon, he's going after the puritan vote.
+
+:PORNO3_1203
+if
+  35410 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1240
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1203
+
+:PORNO3_1240
+00BC: text_highpriority 'POR3_K' 10000 ms 1  // Rumors are he's gonna support measures to restrict, shall we say,
+
+:PORNO3_1255
+if
+  38788 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1292
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1255
+
+:PORNO3_1292
+00BC: text_highpriority 'POR3_L' 10000 ms 1  // the more fleshy aspects of this nation's great entertainment industry.
+
+:PORNO3_1307
+if
+  44773 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1344
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1307
+
+:PORNO3_1344
+00BC: text_highpriority 'POR3_M' 10000 ms 1  // Great.
+
+:PORNO3_1359
+if
+  47875 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1396
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1359
+
+:PORNO3_1396
+00BC: text_highpriority 'POR3_N' 10000 ms 1  // Candy! You know Shrub,
+
+:PORNO3_1411
+if
+  50039 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1448
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1411
+
+:PORNO3_1448
+00BC: text_highpriority 'POR3_O' 10000 ms 1  // you guys get up to anything kinky?
+
+:PORNO3_1463
+if
+  53487 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1500
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1463
+
+:PORNO3_1500
+00BC: text_highpriority 'POR3_P' 10000 ms 1  // Oh yeah, oh yeah, oh yeah! Yes yes yes YES OOOoooh!
+
+:PORNO3_1515
+if
+  62879 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1552
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1515
+
+:PORNO3_1552
+00BC: text_highpriority 'POR3_Q' 10000 ms 1  // Please - tell me you got that.
+
+:PORNO3_1567
+if
+  64505 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1604
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1567
+
+:PORNO3_1604
+00BC: text_highpriority 'POR3_R' 10000 ms 1  // Was that part of the, uh... or was she talking to..?
+
+:PORNO3_1619
+if
+  66734 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1656
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1619
+
+:PORNO3_1656
+00BC: text_highpriority 'POR3_S' 10000 ms 1  // Hey, I can never tell. Anyway...
+
+:PORNO3_1671
+if
+  69061 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1708
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1671
+
+:PORNO3_1708
+00BC: text_highpriority 'POR3_T' 10000 ms 1  // You're probably best following her after the shoot,
+
+:PORNO3_1723
+if
+  72018 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1760
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1723
+
+:PORNO3_1760
+00BC: text_highpriority 'POR3_U' 10000 ms 1  // see if she'll lead you to their new love nest.
+
+:PORNO3_1775
+if
+  74686 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1812
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1775
+
+:PORNO3_1812
+00BC: text_highpriority 'POR3_V' 10000 ms 1  // You got a camera?
+
+:PORNO3_1827
+if
+  76802 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1864
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1827
+
+:PORNO3_1864
+00BC: text_highpriority 'POR3_X' 10000 ms 1  // Yeah. Get him a camera.
+
+:PORNO3_1879
+if
+  77802 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1916
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1879
+
+:PORNO3_1916
+00BE: text_clear_all
+
+:PORNO3_1918
+if
+  78976 > $CUT_SCENE_TIME // integer values
+jf @PORNO3_1955
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PORNO3_1918
+
+:PORNO3_1955
+fade 0 1500
+00BE: text_clear_all
+
+:PORNO3_1964
+if
+fading
+jf @PORNO3_1988
+wait 0
+jump @PORNO3_1964
+
+:PORNO3_1988
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+01EB: set_traffic_density_multiplier_to 0.75
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetAtPos(-67.0, 939.297, 10.94)
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 0 60000
+023C: load_special_actor 1 'IGCANDY'
+023C: load_special_actor 2 'IGALSCB'
+
+:PORNO3_2106
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @PORNO3_2136
+wait 0
+jump @PORNO3_2106
+
+:PORNO3_2136
+038B: load_requested_models
+Model.Load(#HMYRI)
+Model.Load(#CAMERA)
+Model.Load(#FBI)
+Model.Load(#GDA)
+Model.Load(#GDB)
+Model.Load(#UZI)
+Model.Load(#SPARROW)
+Model.Load(#STRETCH)
+Model.Load(#RANCHER)
+Model.Load(#M4)
+
+:PORNO3_2180
+if or
+   not Model.Available(#HMYRI)
+   not Model.Available(#CAMERA)
+   not Model.Available(#FBI)
+   not Model.Available(#GDA)
+   not Model.Available(#GDB)
+   not Model.Available(#UZI)
+jf @PORNO3_2224
+wait 0
+jump @PORNO3_2180
+
+:PORNO3_2224
+if or
+   not Model.Available(#SPARROW)
+   not Model.Available(#STRETCH)
+   not Model.Available(#RANCHER)
+   not Model.Available(#M4)
+jf @PORNO3_2266
+wait 0
+jump @PORNO3_2224
+
+:PORNO3_2266
+Object.Destroy($1815)
+$4466 = Object.Init(#SPAD_DR_OPEN2, 461.961, 31.436, 31.24)
+Object.RemoveFromMissionCleanupList($4466)
+Object.Destroy($1817)
+$4498 = Object.Init(#PH_BUILD_DR_OPEN, 569.33, 52.737, 14.616)
+Object.RemoveFromMissionCleanupList($4498)
+034D: rotate_object $4498 from_angle 350.0 to_angle 350.0 flag 0
+022B: create_forbidden_for_peds_cube 479.9 -1.4 11.0 450.3 59.5 40.0
+01B1: give_player $PLAYER_CHAR weapon 36 ammo 12 // Load the weapon model before using this
+$4491 = 12 // integer values
+$4456 = Actor.Create(CivFemale, #SPECIAL01, -5.2, 962.9, 9.9)
+054A: set_actor $4456 can_be_shot_in_a_car 0
+04F5: unknown_actor $4456 kiss_player $PLAYER_CHAR on 1
+0245: set_actor $4456 walk_style_to 46
+01ED: clear_actor $4456 threat_search
+Actor.Angle($4456) = 296.8
+02A9: set_actor $4456 immune_to_nonplayer 1
+0211: actor $4456 walk_to 9.2 964.4
+$4475 = Marker.CreateAboveActor($4456)
+0568: set_actor $4456 untargetable 1
+$4457 = Car.Create(#STRETCH, 18.8, 961.6, 10.6)
+Car.Angle($4457) = 360.1
+0229: set_car $4457 color_to 34 34
+00AE: set_vehicle $4457 traffic_behavior_to 2
+0129: $4458 = create_actor 4 #HMYRI in_car $4457 driverseat
+054A: set_actor $4458 can_be_shot_in_a_car 0
+020A: set_car $4457 door_status_to 3
+Car.SetToNormalDriver($4457)
+Car.ImmuneToNonPlayer($4457) = True
+01ED: clear_actor $4458 threat_search
+Car.SetImmunities($4457, 0, 1, 0, 0, 0)
+$4465 = Car.Create(#SPARROW, -61.7, 1019.0, 9.9)
+Car.Angle($4465) = 356.2
+$4478 = Marker.CreateAboveCar($4465)
+fade 1 1500
+$4455 = Actor.Create(CivMale, #SPECIAL02, 471.3, 27.0, 29.6)
+01ED: clear_actor $4455 threat_search
+0350: set_actor $4455 maintain_position_when_attacked 1
+Actor.Angle($4455) = 90.5
+$4461 = Actor.Create(CivMale, #FBI, 477.6, 30.1, 29.9)
+Actor.Angle($4461) = 286.6
+01B2: give_actor $4461 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4461 threat_search
+0243: set_actor $4461 ped_stats_to 16
+0291: set_actor $4461 attack_when_provoked 1
+0350: set_actor $4461 maintain_position_when_attacked 1
+02A9: set_actor $4461 immune_to_nonplayer 1
+$4462 = Actor.Create(CivMale, #FBI, 458.8, 18.1, 32.0)
+01B2: give_actor $4462 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4462 threat_search
+0243: set_actor $4462 ped_stats_to 16
+0291: set_actor $4462 attack_when_provoked 1
+01E2: add_route_point 1 at 458.8 18.1 32.0
+01E2: add_route_point 1 at 472.0 18.1 32.0
+01E2: add_route_point 1 at 458.8 18.1 32.0
+01E1: set_actor $4462 follow_route 1 3
+02A9: set_actor $4462 immune_to_nonplayer 1
+$4463 = Actor.Create(CivMale, #FBI, 458.4, 42.9, 32.0)
+01B2: give_actor $4463 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4463 threat_search
+0243: set_actor $4463 ped_stats_to 16
+0291: set_actor $4463 attack_when_provoked 1
+01E2: add_route_point 2 at 458.4 42.9 32.0
+01E2: add_route_point 2 at 472.0 42.9 32.0
+01E2: add_route_point 2 at 458.4 42.9 32.0
+01E1: set_actor $4463 follow_route 2 3
+02A9: set_actor $4463 immune_to_nonplayer 1
+$4464 = Actor.Create(CivMale, #FBI, 455.0, 37.6, 33.8)
+01B2: give_actor $4464 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4464 threat_search
+0243: set_actor $4464 ped_stats_to 16
+0291: set_actor $4464 attack_when_provoked 1
+01E2: add_route_point 3 at 455.0 37.6 33.8
+01E2: add_route_point 3 at 455.0 23.8 33.8
+01E2: add_route_point 3 at 455.0 37.6 33.8
+01E1: set_actor $4464 follow_route 3 3
+02A9: set_actor $4464 immune_to_nonplayer 1
+$4459 = Actor.Create(CivMale, #GDA, 474.9, 31.9, 11.0)
+Actor.Angle($4459) = 269.6
+01B2: give_actor $4459 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4459 threat_search
+0243: set_actor $4459 ped_stats_to 16
+0291: set_actor $4459 attack_when_provoked 1
+0350: set_actor $4459 maintain_position_when_attacked 1
+02A9: set_actor $4459 immune_to_nonplayer 1
+$4460 = Actor.Create(CivMale, #GDB, 474.9, 28.9, 11.0)
+Actor.Angle($4460) = 269.6
+01B2: give_actor $4460 weapon 23 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4460 threat_search
+0243: set_actor $4460 ped_stats_to 16
+0291: set_actor $4460 attack_when_provoked 1
+0350: set_actor $4460 maintain_position_when_attacked 1
+02A9: set_actor $4460 immune_to_nonplayer 1
+16@ = 0 // integer values
+0293: $18 = get_controller_mode
+
+:PORNO3_3284
+wait 0
+if
+  $4488 == 0 // integer values
+jf @PORNO3_3516
+if
+  7000 > 16@ // integer values
+jf @PORNO3_3490
+if
+  $4489 == 0 // integer values
+jf @PORNO3_3483
+if
+  $18 == 0 // integer values
+jf @PORNO3_3378
+03E5: text_box 'POR3_08'  // Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the camera.
+$4489 = 1 // integer values
+
+:PORNO3_3378
+if
+  $18 == 1 // integer values
+jf @PORNO3_3413
+03E5: text_box 'POR3_08'  // Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the camera.
+$4489 = 1 // integer values
+
+:PORNO3_3413
+if
+  $18 == 2 // integer values
+jf @PORNO3_3448
+03E5: text_box 'POR3_08'  // Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the camera.
+$4489 = 1 // integer values
+
+:PORNO3_3448
+if
+  $18 == 3 // integer values
+jf @PORNO3_3483
+03E5: text_box 'POR3_09'  // Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target ~w~with the camera.
+$4489 = 1 // integer values
+
+:PORNO3_3483
+jump @PORNO3_3516
+
+:PORNO3_3490
+0293: $18 = get_controller_mode
+$4488 = 1 // integer values
+16@ = 0 // integer values
+$4489 = 0 // integer values
+
+:PORNO3_3516
+if
+  $4488 == 1 // integer values
+jf @PORNO3_3744
+if
+  7000 > 16@ // integer values
+jf @PORNO3_3718
+if
+  $4489 == 0 // integer values
+jf @PORNO3_3711
+if
+  $18 == 0 // integer values
+jf @PORNO3_3606
+03E5: text_box 'POR3_10'  // Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+$4489 = 1 // integer values
+
+:PORNO3_3606
+if
+  $18 == 1 // integer values
+jf @PORNO3_3641
+03E5: text_box 'POR3_10'  // Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+$4489 = 1 // integer values
+
+:PORNO3_3641
+if
+  $18 == 2 // integer values
+jf @PORNO3_3676
+03E5: text_box 'POR3_11'  // Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+$4489 = 1 // integer values
+
+:PORNO3_3676
+if
+  $18 == 3 // integer values
+jf @PORNO3_3711
+03E5: text_box 'POR3_10'  // Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+$4489 = 1 // integer values
+
+:PORNO3_3711
+jump @PORNO3_3744
+
+:PORNO3_3718
+0293: $18 = get_controller_mode
+$4488 = 2 // integer values
+16@ = 0 // integer values
+$4489 = 0 // integer values
+
+:PORNO3_3744
+if
+  $4488 == 2 // integer values
+jf @PORNO3_3967
+if
+  7000 > 16@ // integer values
+jf @PORNO3_3946
+if
+  $4489 == 0 // integer values
+jf @PORNO3_3939
+if
+  $18 == 0 // integer values
+jf @PORNO3_3834
+03E5: text_box 'POR3_12'  // Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+$4489 = 1 // integer values
+
+:PORNO3_3834
+if
+  $18 == 1 // integer values
+jf @PORNO3_3869
+03E5: text_box 'POR3_12'  // Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+$4489 = 1 // integer values
+
+:PORNO3_3869
+if
+  $18 == 2 // integer values
+jf @PORNO3_3904
+03E5: text_box 'POR3_13'  // Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+$4489 = 1 // integer values
+
+:PORNO3_3904
+if
+  $18 == 3 // integer values
+jf @PORNO3_3939
+03E5: text_box 'POR3_14'  // Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+$4489 = 1 // integer values
+
+:PORNO3_3939
+jump @PORNO3_3967
+
+:PORNO3_3946
+$4488 = 3 // integer values
+16@ = 0 // integer values
+$4489 = 0 // integer values
+
+:PORNO3_3967
+if
+  $4488 == 3 // integer values
+jf @PORNO3_4041
+if
+  16@ > 1000 // integer values
+jf @PORNO3_4041
+00BC: text_highpriority 'POR3_01' 7000 ms 1  // ~g~Follow Candy's ~h~Stretch~g~.
+00BB: text_lowpriority 'POR3_20' 5000 ms 1  // ~g~If you need transport, use the ~h~Sparrow~g~ round the back.
+$4488 = 4 // integer values
+
+:PORNO3_4041
+if
+   not Car.Wrecked($4465)
+jf @PORNO3_4095
+if
+00E0:   player $PLAYER_CHAR driving
+jf @PORNO3_4088
+Marker.Disable($4478)
+03D5: remove_text 'POR3_20'  // ~g~If you need transport, use the ~h~Sparrow~g~ round the back.
+
+:PORNO3_4088
+jump @PORNO3_4110
+
+:PORNO3_4095
+Marker.Disable($4478)
+03D5: remove_text 'POR3_20'  // ~g~If you need transport, use the ~h~Sparrow~g~ round the back.
+
+:PORNO3_4110
+if
+   not Actor.Dead($4456)
+jf @PORNO3_4555
+if
+   not Car.Wrecked($4457)
+jf @PORNO3_4526
+if
+   not Actor.Dead($4458)
+jf @PORNO3_4497
+if
+  $4480 == 0 // integer values
+jf @PORNO3_4387
+if
+   Actor.InCar($4456, $4457)
+jf @PORNO3_4327
+0362: put_actor $4456 at -862.0 -607.4 11.1 and_remove_from_car
+Actor.DestroyInstantly($4456)
+01C8: $4456 = create_actor_pedtype 5 model #SPECIAL01 in_car $4457 passenger_seat 2
+04F5: unknown_actor $4456 kiss_player $PLAYER_CHAR on 1
+0245: set_actor $4456 walk_style_to 46
+01ED: clear_actor $4456 threat_search
+02A9: set_actor $4456 immune_to_nonplayer 1
+Car.DriveTo($4457, 485.9, 31.3, 10.7)
+Car.SetMaxSpeed($4457, 20.0)
+Marker.Disable($4475)
+$4475 = Marker.CreateAboveActor($4456)
+16@ = 0 // integer values
+$4480 = 1 // integer values
+jump @PORNO3_4380
+
+:PORNO3_4327
+if
+00ED:   actor $4456 0 9.2 964.4 radius 1.0 1.0
+jf @PORNO3_4380
+01D4: actor $4456 go_to_car $4457 and_enter_it_as_a_passenger
+0319: set_actor $4456 running 1
+
+:PORNO3_4380
+jump @PORNO3_4490
+
+:PORNO3_4387
+if and
+82CA:   not car $4457 bounding_sphere_visible
+81FC:   not player $PLAYER_CHAR near_car $4457 radius 170.0 170.0 0
+jf @PORNO3_4445
+00BC: text_highpriority 'POR3_21' 5000 ms 1  // ~g~You lost Candy's Stretch!
+jump @PORNO3_9207
+
+:PORNO3_4445
+if
+01AD:   car $4457 sphere 0 near_point 485.9 31.3 radius 15.0 15.0
+jf @PORNO3_4490
+jump @PORNO3_4765
+
+:PORNO3_4490
+jump @PORNO3_4519
+
+:PORNO3_4497
+00BC: text_highpriority 'POR3_15' 5000 ms 1  // ~r~You trashed Candy's Stretch!
+jump @PORNO3_9207
+
+:PORNO3_4519
+jump @PORNO3_4548
+
+:PORNO3_4526
+00BC: text_highpriority 'POR3_15' 5000 ms 1  // ~r~You trashed Candy's Stretch!
+jump @PORNO3_9207
+
+:PORNO3_4548
+jump @PORNO3_4577
+
+:PORNO3_4555
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO3_9207
+
+:PORNO3_4577
+gosub @PORNO3_9974
+if
+  $4481 == 1 // integer values
+jf @PORNO3_4624
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO3_9207
+
+:PORNO3_4624
+if
+  $4481 == 2 // integer values
+jf @PORNO3_4664
+00BC: text_highpriority 'POR3_02' 5000 ms 1  // ~r~You've killed the Congressman! There's no way you can blackmail him now.
+jump @PORNO3_9207
+
+:PORNO3_4664
+if
+  $4481 == 3 // integer values
+jf @PORNO3_4704
+00BC: text_highpriority 'POR3_03' 5000 ms 1  // ~r~You've alerted the Congressman's protection, they will get him out of there immediately.
+jump @PORNO3_9207
+
+:PORNO3_4704
+gosub @PORNO3_10359
+gosub @PORNO3_10651
+if
+  $4481 == 4 // integer values
+jf @PORNO3_4758
+00BC: text_highpriority 'POR3_19' 5000 ms 1  // ~r~You ran out of film!
+jump @PORNO3_9207
+
+:PORNO3_4758
+jump @PORNO3_3284
+
+:PORNO3_4765
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PORNO3_4780
+if
+fading
+jf @PORNO3_4804
+wait 0
+jump @PORNO3_4780
+
+:PORNO3_4804
+if
+   not Car.Wrecked($4457)
+jf @PORNO3_4850
+Car.PutAt($4457, 485.9, 31.3, 9.8)
+Car.Angle($4457) = 196.8
+
+:PORNO3_4850
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+$4494 = 0 // integer values
+$4495 = 0 // integer values
+if
+   not Car.Wrecked($4465)
+jf @PORNO3_4917
+if
+00DC:   player $PLAYER_CHAR driving $4465
+jf @PORNO3_4917
+Car.LockInCurrentPosition($4465) = True
+
+:PORNO3_4917
+Camera.SetAtPos(478.4, 30.4, 11.0)
+03BA: clear_cars_from_cube 487.5 24.2 0.0 479.3 36.11 15.0
+fade 1 500
+Camera.SetPosition(473.99, 27.96, 13.03, 0.0, 0.0, 0.0)
+Camera.PointAt(484.0, 31.4, 10.1, 2)
+wait 500
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5069
+if
+   not Car.Wrecked($4457)
+jf @PORNO3_5069
+01D3: actor $4456 leave_car $4457
+
+:PORNO3_5069
+wait 0
+if
+   not Car.Wrecked($4457)
+jf @PORNO3_5227
+01E9: $4486 = car $4457 num_passengers
+if
+  $4486 == 0 // integer values
+jf @PORNO3_5220
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5213
+if
+   not Car.Wrecked($4457)
+jf @PORNO3_5177
+Car.DriveTo($4457, 479.0, -174.4, 9.0)
+Car.SetMaxSpeed($4457, 20.0)
+
+:PORNO3_5177
+0319: set_actor $4456 running 0
+0211: actor $4456 walk_to 475.9 30.2
+16@ = 0 // integer values
+jump @PORNO3_5234
+
+:PORNO3_5213
+jump @PORNO3_5227
+
+:PORNO3_5220
+jump @PORNO3_5069
+
+:PORNO3_5227
+jump @PORNO3_5069
+
+:PORNO3_5234
+wait 0
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5312
+if or
+00EC:   actor $4456 0 475.9 30.2 radius 1.0 1.0
+  16@ > 7000 // integer values
+jf @PORNO3_5312
+0192: set_actor $4456 objective_to_stand_still
+jump @PORNO3_5319
+
+:PORNO3_5312
+jump @PORNO3_5234
+
+:PORNO3_5319
+Actor.PutAt($4456, 457.6, 30.6, 30.1)
+Actor.Angle($4456) = 270.0
+Camera.SetPosition(471.75, 25.95, 30.53, 0.0, 0.0, 0.0)
+Camera.PointAt(429.69, 57.3, 24.51, 2)
+16@ = 0 // integer values
+
+:PORNO3_5407
+wait 0
+if
+  16@ > 12000 // integer values
+jf @PORNO3_5437
+jump @PORNO3_5779
+
+:PORNO3_5437
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5772
+if
+   not Actor.Dead($4455)
+jf @PORNO3_5772
+if
+  $4492 == 0 // integer values
+jf @PORNO3_5664
+if
+00EC:   actor $4456 0 463.8 31.4 radius 1.0 1.0
+jf @PORNO3_5649
+04C2:  $4456 $4455
+03CF: load_wav 'PRN1_12' as 1
+
+:PORNO3_5545
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_5571
+wait 0
+jump @PORNO3_5545
+
+:PORNO3_5571
+00BC: text_highpriority 'POR1_19' 4000 ms 1  // Hey!
+03D1: play_wav 1
+
+:PORNO3_5590
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4456)
+jf @PORNO3_5621
+wait 0
+jump @PORNO3_5590
+
+:PORNO3_5621
+040D: unload_wav 1
+03D5: remove_text 'POR1_19'  // Hey!
+$4492 = 1 // integer values
+jump @PORNO3_5664
+
+:PORNO3_5649
+0211: actor $4456 walk_to 463.8 31.4
+
+:PORNO3_5664
+if
+  $4492 == 1 // integer values
+jf @PORNO3_5772
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5772
+if
+   not Actor.Dead($4455)
+jf @PORNO3_5772
+if
+00F2:   actor $4456 near_actor $4455 radius 2.0 2.0 0
+jf @PORNO3_5764
+0192: set_actor $4456 objective_to_stand_still
+jump @PORNO3_5779
+jump @PORNO3_5772
+
+:PORNO3_5764
+04C2:  $4456 $4455
+
+:PORNO3_5772
+jump @PORNO3_5407
+
+:PORNO3_5779
+03CF: load_wav 'PORN3_1' as 1
+03CF: load_wav 'PORN3_2' as 2
+
+:PORNO3_5803
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @PORNO3_5833
+wait 0
+jump @PORNO3_5803
+
+:PORNO3_5833
+if
+   not Actor.Dead($4455)
+jf @PORNO3_5859
+0372: set_actor $4455 anim 19 wait_state_time 10000 ms
+
+:PORNO3_5859
+00BC: text_highpriority 'POR3_04' 4000 ms 1  // Uh, Candy, could you call me Martha?
+03D1: play_wav 1
+
+:PORNO3_5878
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4455)
+jf @PORNO3_5909
+wait 0
+jump @PORNO3_5878
+
+:PORNO3_5909
+040D: unload_wav 1
+03D5: remove_text 'POR3_04'  // Uh, Candy, could you call me Martha?
+if
+   not Actor.Dead($4455)
+jf @PORNO3_5948
+0372: set_actor $4455 anim 0 wait_state_time 10 ms
+
+:PORNO3_5948
+if
+   not Actor.Dead($4456)
+jf @PORNO3_5974
+0372: set_actor $4456 anim 19 wait_state_time 10000 ms
+
+:PORNO3_5974
+00BC: text_highpriority 'POR3_05' 4000 ms 1  // Oh Alex - I mean Martha. Whatever you say...
+03D1: play_wav 2
+
+:PORNO3_5993
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4456)
+jf @PORNO3_6024
+wait 0
+jump @PORNO3_5993
+
+:PORNO3_6024
+040D: unload_wav 2
+03D5: remove_text 'POR3_05'  // Oh Alex - I mean Martha. Whatever you say...
+if
+   not Actor.Dead($4456)
+jf @PORNO3_6063
+0372: set_actor $4456 anim 0 wait_state_time 10 ms
+
+:PORNO3_6063
+wait 1000
+if
+  $4494 == 0 // integer values
+jf @PORNO3_6131
+03CF: load_wav 'CAML' as 1
+
+:PORNO3_6098
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_6124
+wait 0
+jump @PORNO3_6098
+
+:PORNO3_6124
+$4494 = 1 // integer values
+
+:PORNO3_6131
+if
+  $4495 == 0 // integer values
+jf @PORNO3_6194
+03CF: load_wav 'CAMR' as 2
+
+:PORNO3_6161
+if
+83D0:   not wav 2 loaded
+jf @PORNO3_6187
+wait 0
+jump @PORNO3_6161
+
+:PORNO3_6187
+$4495 = 1 // integer values
+
+:PORNO3_6194
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+Camera.SetAtPos($95, $96, $97)
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:PORNO3_6234
+if
+fading
+jf @PORNO3_6258
+wait 0
+jump @PORNO3_6234
+
+:PORNO3_6258
+if
+   not Car.Wrecked($4465)
+jf @PORNO3_6300
+if
+00DC:   player $PLAYER_CHAR driving $4465
+jf @PORNO3_6300
+Car.LockInCurrentPosition($4465) = False
+
+:PORNO3_6300
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+fade 1 500
+if
+   not Actor.Dead($4455)
+jf @PORNO3_6412
+Actor.PutAt($4455, 463.3, 31.7, 29.9)
+Actor.Angle($4455) = 245.8
+if
+   not Actor.Dead($4456)
+jf @PORNO3_6412
+Actor.PutAt($4456, 463.9, 30.3, 29.9)
+Actor.Angle($4456) = 44.8
+
+:PORNO3_6412
+011C: actor $4455 clear_objective
+011C: actor $4456 clear_objective
+03F9: make_actors $4455 $4456 converse_in 86400000 ms
+018A: $4477 = create_checkpoint_at 559.0 17.6 51.7
+00BC: text_highpriority 'POR3_16' 7000 ms 1  // ~g~You need three good blackmail photographs of Alex Shrub with Candy.
+00BB: text_lowpriority 'POR3_22' 7000 ms 1  // ~g~The WK Chariot Hotel across from his balcony should provide an ideal photo-grabbing location.
+00BB: text_lowpriority 'POR3_23' 7000 ms 1  // ~g~There is a side door that will allow you access to the hotel.
+03C4: set_status_text_to $4497 0 'POR3_24'  // PHOTOS TAKEN:
+01EB: set_traffic_density_multiplier_to 1.0
+
+:PORNO3_6522
+wait 0
+if
+   not Actor.Dead($4455)
+jf @PORNO3_7022
+if
+04C5:   actor $4455 photographed
+jf @PORNO3_6584
+018C: play_sound 1 at 0.0 0.0 0.0
+$4497 += 1 // integer values
+
+:PORNO3_6584
+if
+  $4497 > 2 // integer values
+jf @PORNO3_7022
+0151: remove_status_text $4497
+if
+   not Actor.Dead($4459)
+jf @PORNO3_6683
+Actor.PutAt($4459, 571.4, 49.3, 13.3)
+Actor.Angle($4459) = 185.6
+011A: set_actor $4459 search_threat 1
+01CA: actor $4459 kill_player $PLAYER_CHAR
+02E2: set_actor $4459 weapon_accuracy_to 90
+Actor.Health($4459) = 150
+
+:PORNO3_6683
+if
+   not Actor.Dead($4460)
+jf @PORNO3_6759
+Actor.PutAt($4460, 569.9, 49.0, 13.3)
+Actor.Angle($4460) = 185.6
+011A: set_actor $4460 search_threat 1
+01CA: actor $4460 kill_player $PLAYER_CHAR
+02E2: set_actor $4460 weapon_accuracy_to 90
+Actor.Health($4460) = 150
+
+:PORNO3_6759
+if
+  $4490 == 0 // integer values
+jf @PORNO3_6961
+$4494 = 0 // integer values
+03CF: load_wav 'PORN3_3' as 1
+
+:PORNO3_6796
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_6822
+wait 0
+jump @PORNO3_6796
+
+:PORNO3_6822
+00BC: text_highpriority 'POR3_06' 4000 ms 1  // Martha, someone's watching.. how kinky.
+03D1: play_wav 1
+
+:PORNO3_6841
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4456)
+jf @PORNO3_6872
+wait 0
+jump @PORNO3_6841
+
+:PORNO3_6872
+040D: unload_wav 1
+03D5: remove_text 'POR3_06'  // Martha, someone's watching.. how kinky.
+if
+  $4494 == 0 // integer values
+jf @PORNO3_6949
+03CF: load_wav 'CAML' as 1
+
+:PORNO3_6916
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_6942
+wait 0
+jump @PORNO3_6916
+
+:PORNO3_6942
+$4494 = 1 // integer values
+
+:PORNO3_6949
+Marker.Disable($4477)
+$4490 = 1 // integer values
+
+:PORNO3_6961
+Marker.Disable($4475)
+018A: $4476 = create_checkpoint_at -52.5 941.9 9.9
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+00BC: text_highpriority 'POR3_17' 7000 ms 1  // ~g~Get back to the Porn Studios with the film.
+$4492 = 0 // integer values
+jump @PORNO3_7210
+
+:PORNO3_7022
+gosub @PORNO3_9974
+if
+  $4481 == 1 // integer values
+jf @PORNO3_7069
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO3_9207
+
+:PORNO3_7069
+if
+  $4481 == 2 // integer values
+jf @PORNO3_7109
+00BC: text_highpriority 'POR3_02' 5000 ms 1  // ~r~You've killed the Congressman! There's no way you can blackmail him now.
+jump @PORNO3_9207
+
+:PORNO3_7109
+if
+  $4481 == 3 // integer values
+jf @PORNO3_7149
+00BC: text_highpriority 'POR3_03' 5000 ms 1  // ~r~You've alerted the Congressman's protection, they will get him out of there immediately.
+jump @PORNO3_9207
+
+:PORNO3_7149
+gosub @PORNO3_10651
+if
+  $4481 == 4 // integer values
+jf @PORNO3_7196
+00BC: text_highpriority 'POR3_19' 5000 ms 1  // ~r~You ran out of film!
+jump @PORNO3_9207
+
+:PORNO3_7196
+gosub @PORNO3_10359
+jump @PORNO3_6522
+
+:PORNO3_7210
+wait 0
+if
+00F5:   player $PLAYER_CHAR 1 -52.5 941.9 9.9 radius 5.0 5.0 5.0
+jf @PORNO3_7269
+jump @PORNO3_9249
+
+:PORNO3_7269
+if
+  $4496 == 0 // integer values
+jf @PORNO3_7947
+if
+0121:   player $PLAYER_CHAR in_zone 'PORNI'  // Prawn Island
+jf @PORNO3_7947
+Actor.RemoveReferences($4461)
+Actor.RemoveReferences($4462)
+Actor.RemoveReferences($4463)
+Actor.RemoveReferences($4464)
+Actor.RemoveReferences($4459)
+Actor.RemoveReferences($4460)
+$4467 = Actor.Create(CivMale, #FBI, 14.3, 966.0, 9.9)
+Actor.Angle($4467) = 327.1
+01B2: give_actor $4467 weapon 26 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4467 threat_search
+0243: set_actor $4467 ped_stats_to 16
+0291: set_actor $4467 attack_when_provoked 1
+0350: set_actor $4467 maintain_position_when_attacked 1
+011A: set_actor $4467 search_threat 1
+01CA: actor $4467 kill_player $PLAYER_CHAR
+02E2: set_actor $4467 weapon_accuracy_to 90
+Actor.Health($4467) = 150
+$4468 = Actor.Create(CivMale, #FBI, 13.2, 960.4, 9.9)
+Actor.Angle($4468) = 191.9
+01B2: give_actor $4468 weapon 26 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4468 threat_search
+0243: set_actor $4468 ped_stats_to 16
+0291: set_actor $4468 attack_when_provoked 1
+0350: set_actor $4468 maintain_position_when_attacked 1
+011A: set_actor $4468 search_threat 1
+01CA: actor $4468 kill_player $PLAYER_CHAR
+02E2: set_actor $4468 weapon_accuracy_to 90
+Actor.Health($4468) = 150
+$4471 = Actor.Create(CivMale, #FBI, 10.1, 965.7, 9.9)
+Actor.Angle($4471) = 121.8
+01B2: give_actor $4471 weapon 26 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4471 threat_search
+0243: set_actor $4471 ped_stats_to 16
+0291: set_actor $4471 attack_when_provoked 1
+0350: set_actor $4471 maintain_position_when_attacked 1
+011A: set_actor $4471 search_threat 1
+01CA: actor $4471 kill_player $PLAYER_CHAR
+02E2: set_actor $4471 weapon_accuracy_to 90
+Actor.Health($4471) = 150
+$4472 = Car.Create(#RANCHER, 15.5, 962.7, 10.0)
+Car.Angle($4472) = 352.8
+$4469 = Actor.Create(CivMale, #FBI, -6.9, 883.8, 9.7)
+Actor.Angle($4469) = 254.8
+01B2: give_actor $4469 weapon 26 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4469 threat_search
+0243: set_actor $4469 ped_stats_to 16
+0291: set_actor $4469 attack_when_provoked 1
+0350: set_actor $4469 maintain_position_when_attacked 1
+011A: set_actor $4469 search_threat 1
+01CA: actor $4469 kill_player $PLAYER_CHAR
+02E2: set_actor $4469 weapon_accuracy_to 90
+Actor.Health($4469) = 150
+$4470 = Actor.Create(CivMale, #FBI, -12.6, 877.7, 9.8)
+Actor.Angle($4470) = 222.4
+01B2: give_actor $4470 weapon 26 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $4470 threat_search
+0243: set_actor $4470 ped_stats_to 16
+0291: set_actor $4470 attack_when_provoked 1
+0350: set_actor $4470 maintain_position_when_attacked 1
+011A: set_actor $4470 search_threat 1
+01CA: actor $4470 kill_player $PLAYER_CHAR
+02E2: set_actor $4470 weapon_accuracy_to 90
+Actor.Health($4470) = 150
+$4473 = Car.Create(#RANCHER, -5.8, 887.2, 9.8)
+Car.Angle($4473) = 187.0
+$4474 = Car.Create(#RANCHER, -8.5, 880.2, 9.8)
+Car.Angle($4474) = 311.2
+$4496 = 1 // integer values
+
+:PORNO3_7947
+if
+   not Actor.Dead($4461)
+jf @PORNO3_8295
+if
+  $4482 == 0 // integer values
+jf @PORNO3_8064
+if
+82CB:   not actor $4461 bounding_sphere_visible
+jf @PORNO3_8064
+Actor.PutAt($4461, 562.4, 29.6, 16.7)
+Actor.Angle($4461) = 271.4
+011A: set_actor $4461 search_threat 1
+01CA: actor $4461 kill_player $PLAYER_CHAR
+02E2: set_actor $4461 weapon_accuracy_to 90
+Actor.Health($4461) = 150
+$4482 = 1 // integer values
+
+:PORNO3_8064
+if
+  $4482 == 1 // integer values
+jf @PORNO3_8295
+if
+02CB:   actor $4461 bounding_sphere_visible
+jf @PORNO3_8295
+if
+  $4490 == 1 // integer values
+jf @PORNO3_8295
+$4494 = 0 // integer values
+03CF: load_wav 'PORN3_4' as 1
+
+:PORNO3_8135
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_8161
+wait 0
+jump @PORNO3_8135
+
+:PORNO3_8161
+00BC: text_highpriority 'POR3_07' 4000 ms 1  // You! Give me that camera!
+03D1: play_wav 1
+
+:PORNO3_8180
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4461)
+jf @PORNO3_8211
+wait 0
+jump @PORNO3_8180
+
+:PORNO3_8211
+040D: unload_wav 1
+03D5: remove_text 'POR3_07'  // You! Give me that camera!
+if
+  $4494 == 0 // integer values
+jf @PORNO3_8288
+03CF: load_wav 'CAML' as 1
+
+:PORNO3_8255
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_8281
+wait 0
+jump @PORNO3_8255
+
+:PORNO3_8281
+$4494 = 1 // integer values
+
+:PORNO3_8288
+$4490 = 2 // integer values
+
+:PORNO3_8295
+if
+   not Actor.Dead($4462)
+jf @PORNO3_8419
+if
+  $4483 == 0 // integer values
+jf @PORNO3_8419
+if
+82CB:   not actor $4462 bounding_sphere_visible
+jf @PORNO3_8419
+0350: set_actor $4462 maintain_position_when_attacked 1
+Actor.PutAt($4462, 561.7, 27.4, 16.7)
+Actor.Angle($4462) = 302.4
+011A: set_actor $4462 search_threat 1
+01CA: actor $4462 kill_player $PLAYER_CHAR
+02E2: set_actor $4462 weapon_accuracy_to 90
+Actor.Health($4462) = 150
+$4483 = 1 // integer values
+
+:PORNO3_8419
+if
+   not Actor.Dead($4463)
+jf @PORNO3_8543
+if
+  $4484 == 0 // integer values
+jf @PORNO3_8543
+if
+82CB:   not actor $4463 bounding_sphere_visible
+jf @PORNO3_8543
+0350: set_actor $4463 maintain_position_when_attacked 1
+Actor.PutAt($4463, 574.2, 24.2, 11.7)
+Actor.Angle($4463) = 89.0
+011A: set_actor $4463 search_threat 1
+01CA: actor $4463 kill_player $PLAYER_CHAR
+02E2: set_actor $4463 weapon_accuracy_to 90
+Actor.Health($4463) = 150
+$4484 = 1 // integer values
+
+:PORNO3_8543
+if
+   not Actor.Dead($4464)
+jf @PORNO3_8667
+if
+  $4485 == 0 // integer values
+jf @PORNO3_8667
+if
+82CB:   not actor $4464 bounding_sphere_visible
+jf @PORNO3_8667
+0350: set_actor $4464 maintain_position_when_attacked 1
+Actor.PutAt($4464, 574.8, 26.3, 11.7)
+Actor.Angle($4464) = 107.0
+011A: set_actor $4464 search_threat 1
+01CA: actor $4464 kill_player $PLAYER_CHAR
+02E2: set_actor $4464 weapon_accuracy_to 90
+Actor.Health($4464) = 150
+$4485 = 1 // integer values
+
+:PORNO3_8667
+if
+   not Actor.Dead($4456)
+jf @PORNO3_8867
+if
+  $4492 == 0 // integer values
+jf @PORNO3_8783
+if
+00EC:   actor $4456 0 463.8 31.4 radius 1.0 1.0
+jf @PORNO3_8768
+0211: actor $4456 walk_to 457.6 30.6
+$4492 = 1 // integer values
+jump @PORNO3_8783
+
+:PORNO3_8768
+0211: actor $4456 walk_to 463.8 31.4
+
+:PORNO3_8783
+if
+  $4492 == 1 // integer values
+jf @PORNO3_8867
+if
+   not Actor.Dead($4456)
+jf @PORNO3_8867
+if
+00EC:   actor $4456 0 457.6 30.6 radius 1.0 1.0
+jf @PORNO3_8867
+Actor.DestroyInstantly($4456)
+$4492 = 2 // integer values
+
+:PORNO3_8867
+if
+   not Actor.Dead($4455)
+jf @PORNO3_9067
+if
+  $4493 == 0 // integer values
+jf @PORNO3_8983
+if
+00EC:   actor $4455 0 463.8 31.4 radius 1.0 1.0
+jf @PORNO3_8968
+0211: actor $4455 walk_to 457.6 30.6
+$4493 = 1 // integer values
+jump @PORNO3_8983
+
+:PORNO3_8968
+0211: actor $4455 walk_to 463.8 31.4
+
+:PORNO3_8983
+if
+  $4493 == 1 // integer values
+jf @PORNO3_9067
+if
+   not Actor.Dead($4455)
+jf @PORNO3_9067
+if
+00EC:   actor $4455 0 457.6 30.6 radius 1.0 1.0
+jf @PORNO3_9067
+Actor.DestroyInstantly($4455)
+$4493 = 2 // integer values
+
+:PORNO3_9067
+gosub @PORNO3_10359
+gosub @PORNO3_10651
+if
+   not $4492 == 2 // integer values
+jf @PORNO3_9137
+if
+   Actor.Dead($4456)
+jf @PORNO3_9137
+00BC: text_highpriority 'POR1_03' 5000 ms 1  // ~r~Candy is dead!
+jump @PORNO3_9207
+
+:PORNO3_9137
+if
+   not $4493 == 2 // integer values
+jf @PORNO3_9200
+if
+   Actor.Dead($4455)
+jf @PORNO3_9200
+00BC: text_highpriority 'POR3_02' 5000 ms 1  // ~r~You've killed the Congressman! There's no way you can blackmail him now.
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+jump @PORNO3_9207
+
+:PORNO3_9200
+jump @PORNO3_7210
+
+:PORNO3_9207
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+if
+  $4481 == 2 // integer values
+jf @PORNO3_9247
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+
+:PORNO3_9247
+return
+
+:PORNO3_9249
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 4000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 4000
+030C: progress_made += 1
+0318: set_latest_mission_passed 'PORN_3'  // Martha's Mug Shot
+create_thread @PORN4
+$259 = 1 // integer values
+return
+
+:PORNO3_9317
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+$4488 = 3 // integer values
+Actor.DestroyWithFade($4456)
+Actor.DestroyWithFade($4455)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#HMYRI)
+Model.Destroy(#STRETCH)
+Model.Destroy(#CAMERA)
+Model.Destroy(#FBI)
+Model.Destroy(#GDA)
+Model.Destroy(#GDB)
+Model.Destroy(#UZI)
+Model.Destroy(#SPARROW)
+Model.Destroy(#RANCHER)
+Model.Destroy(#M4)
+0151: remove_status_text $4497
+03AC: clear_route 1
+03AC: clear_route 2
+03AC: clear_route 3
+022A: remove_forbidden_for_peds_cube 479.9 -1.4 11.0 450.3 59.5 40.0
+017A: set_player $PLAYER_CHAR weapon 36 ammo_to 0
+if
+0056:   player $PLAYER_CHAR 0 585.7 52.8 555.9 8.1
+jf @PORNO3_9658
+fade 0 400
+0055: put_player $PLAYER_CHAR at 568.7 55.2 13.3
+if
+  $4487 == 1 // integer values
+jf @PORNO3_9595
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #OD_WTSIGN to #OD_CHARIOT
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #LODD_BUILDNEW to #LODCHARIOT
+
+:PORNO3_9595
+Object.Destroy($4498)
+$1817 = Object.Init(#PH_BUILD_DR_CLOSED, 569.925, 52.0, 14.616)
+Object.RemoveFromMissionCleanupList($1817)
+034D: rotate_object $1817 from_angle 270.0 to_angle 270.0 flag 0
+fade 1 400
+jump @PORNO3_9782
+
+:PORNO3_9658
+if
+   not $259 == 1 // integer values
+jf @PORNO3_9732
+Object.Destroy($4498)
+$1817 = Object.Init(#PH_BUILD_DR_CLOSED, 569.925, 52.0, 14.616)
+Object.RemoveFromMissionCleanupList($1817)
+034D: rotate_object $1817 from_angle 270.0 to_angle 270.0 flag 0
+jump @PORNO3_9782
+
+:PORNO3_9732
+Object.Destroy($1817)
+$4498 = Object.Init(#PH_BUILD_DR_OPEN, 569.33, 52.737, 14.616)
+Object.RemoveFromMissionCleanupList($4498)
+034D: rotate_object $4498 from_angle 350.0 to_angle 350.0 flag 0
+
+:PORNO3_9782
+if
+0057:   player $PLAYER_CHAR 0 465.1 32.8 29.9 454.5 27.2 32.6
+jf @PORNO3_9908
+fade 0 400
+0055: put_player $PLAYER_CHAR at 463.4 29.5 30.1
+Object.Destroy($4466)
+Object.Destroy($1815)
+$1815 = Object.Init(#SPAD_DR_CLOSED2, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1815)
+fade 1 400
+jump @PORNO3_9945
+
+:PORNO3_9908
+Object.Destroy($4466)
+Object.Destroy($1815)
+$1815 = Object.Init(#SPAD_DR_CLOSED2, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1815)
+
+:PORNO3_9945
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+Marker.Disable($4475)
+Marker.Disable($4476)
+Marker.Disable($4477)
+Marker.Disable($4478)
+mission_cleanup
+return
+
+:PORNO3_9974
+if
+   Actor.Dead($4456)
+jf @PORNO3_9997
+$4481 = 1 // integer values
+
+:PORNO3_9997
+if
+   Actor.Dead($4455)
+jf @PORNO3_10020
+$4481 = 2 // integer values
+
+:PORNO3_10020
+if
+   Actor.Dead($4459)
+jf @PORNO3_10043
+$4481 = 3 // integer values
+
+:PORNO3_10043
+if
+   Actor.Dead($4460)
+jf @PORNO3_10066
+$4481 = 3 // integer values
+
+:PORNO3_10066
+if
+   Actor.Dead($4461)
+jf @PORNO3_10089
+$4481 = 3 // integer values
+
+:PORNO3_10089
+if
+   Actor.Dead($4462)
+jf @PORNO3_10112
+$4481 = 3 // integer values
+
+:PORNO3_10112
+if
+   Actor.Dead($4463)
+jf @PORNO3_10135
+$4481 = 3 // integer values
+
+:PORNO3_10135
+if
+   Actor.Dead($4464)
+jf @PORNO3_10158
+$4481 = 3 // integer values
+
+:PORNO3_10158
+if
+0057:   player $PLAYER_CHAR 0 477.3 14.8 29.4 448.6 45.5 38.2
+jf @PORNO3_10357
+if
+   not Actor.Dead($4459)
+jf @PORNO3_10230
+01CC: actor $4459 kill_player $PLAYER_CHAR
+
+:PORNO3_10230
+if
+   not Actor.Dead($4460)
+jf @PORNO3_10254
+01CC: actor $4460 kill_player $PLAYER_CHAR
+
+:PORNO3_10254
+if
+   not Actor.Dead($4461)
+jf @PORNO3_10278
+01CC: actor $4461 kill_player $PLAYER_CHAR
+
+:PORNO3_10278
+if
+   not Actor.Dead($4462)
+jf @PORNO3_10302
+01CC: actor $4462 kill_player $PLAYER_CHAR
+
+:PORNO3_10302
+if
+   not Actor.Dead($4463)
+jf @PORNO3_10326
+01CC: actor $4463 kill_player $PLAYER_CHAR
+
+:PORNO3_10326
+if
+   not Actor.Dead($4464)
+jf @PORNO3_10350
+01CC: actor $4464 kill_player $PLAYER_CHAR
+
+:PORNO3_10350
+$4481 = 3 // integer values
+
+:PORNO3_10357
+return
+
+:PORNO3_10359
+if
+  $4487 == 0 // integer values
+jf @PORNO3_10504
+if
+00F5:   player $PLAYER_CHAR 0 563.4 26.8 47.6 radius 7.0 7.0 7.0
+jf @PORNO3_10504
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @PORNO3_10497
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #OD_CHARIOT to #OD_WTSIGN
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #LODCHARIOT to #LODD_BUILDNEW
+
+:PORNO3_10497
+$4487 = 1 // integer values
+
+:PORNO3_10504
+if
+  $4487 == 1 // integer values
+jf @PORNO3_10649
+if
+00F5:   player $PLAYER_CHAR 0 561.9 26.4 18.1 radius 7.0 7.0 7.0
+jf @PORNO3_10649
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @PORNO3_10642
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #OD_WTSIGN to #OD_CHARIOT
+03B6: replace_model_at 568.54 -4.801 13.264 radius 80.0 from #LODD_BUILDNEW to #LODCHARIOT
+
+:PORNO3_10642
+$4487 = 0 // integer values
+
+:PORNO3_10649
+return
+
+:PORNO3_10651
+0419: $4491 = player $PLAYER_CHAR weapon 36 ammo
+if
+  $4491 == 0 // integer values
+jf @PORNO3_10686
+$4481 = 4 // integer values
+
+:PORNO3_10686
+if
+  17@ > 280 // integer values
+jf @PORNO3_10892
+if
+  $4494 == 1 // integer values
+jf @PORNO3_10892
+if
+  $4495 == 1 // integer values
+jf @PORNO3_10892
+if
+02D7:   player $PLAYER_CHAR currentweapon == 36
+jf @PORNO3_10892
+if
+00E1:   player 0 pressed_button 6
+jf @PORNO3_10892
+if
+00E1:   player 0 pressed_button 17
+jf @PORNO3_10892
+03D1: play_wav 1
+$4494 = 0 // integer values
+03D1: play_wav 2
+$4495 = 0 // integer values
+17@ = 0 // integer values
+if
+  $4481 == 4 // integer values
+jf @PORNO3_10892
+
+:PORNO3_10840
+if
+83D2:   not wav 1 ended
+jf @PORNO3_10866
+wait 0
+jump @PORNO3_10840
+
+:PORNO3_10866
+if
+83D2:   not wav 2 ended
+jf @PORNO3_10892
+wait 0
+jump @PORNO3_10866
+
+:PORNO3_10892
+if
+  $4494 == 0 // integer values
+jf @PORNO3_10955
+03CF: load_wav 'CAML' as 1
+
+:PORNO3_10922
+if
+83D0:   not wav 1 loaded
+jf @PORNO3_10948
+wait 0
+jump @PORNO3_10922
+
+:PORNO3_10948
+$4494 = 1 // integer values
+
+:PORNO3_10955
+if
+  $4495 == 0 // integer values
+jf @PORNO3_11018
+03CF: load_wav 'CAMR' as 2
+
+:PORNO3_10985
+if
+83D0:   not wav 2 loaded
+jf @PORNO3_11011
+wait 0
+jump @PORNO3_10985
+
+:PORNO3_11011
+$4495 = 1 // integer values
+
+:PORNO3_11018
+return

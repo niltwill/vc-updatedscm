@@ -1,0 +1,2737 @@
+:COUNT1
+thread 'COUNT1'
+gosub @COUNT1_46
+if
+wasted_or_busted
+jf @COUNT1_37
+gosub @COUNT1_6503
+
+:COUNT1_37
+gosub @COUNT1_6586
+end_thread
+
+:COUNT1_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$994 = 1 // integer values
+$4694 = 0 // integer values
+$4697 = 0 // integer values
+$4695 = 0 // integer values
+$4699 = 0 // integer values
+$4700 = 0 // integer values
+$4701 = 0 // integer values
+$4698 = 0 // integer values
+$4704 = 0 // integer values
+$4703 = 0 // integer values
+$4705 = 0 // integer values
+$4708 = 0 // integer values
+$4707 = 0 // integer values
+$4709 = 0 // integer values
+$4712 = 0 // integer values
+$4711 = 0 // integer values
+$4713 = 0 // integer values
+$4716 = 0 // integer values
+$4715 = 0 // integer values
+$4717 = 0 // integer values
+$4720 = 0 // integer values
+$4719 = 0 // integer values
+$4721 = 0 // integer values
+$4724 = 0 // integer values
+$4723 = 0 // integer values
+$4725 = 0 // integer values
+$4728 = 0 // integer values
+$4727 = 0 // integer values
+$4729 = 0 // integer values
+$4732 = 0 // integer values
+$4731 = 0 // integer values
+$4733 = 0 // integer values
+$4736 = 0 // integer values
+$4735 = 0 // integer values
+$4737 = 0 // integer values
+$4739 = 0 // integer values
+$4740 = 0 // integer values
+$4741 = 0 // integer values
+$4747 = 0 // integer values
+$4743 = 0 // integer values
+$4744 = 0.0 // floating-point values
+$4745 = 0.0 // floating-point values
+$4746 = 0.0 // floating-point values
+$4750 = 0 // integer values
+$4751 = 0 // integer values
+$4752 = 0 // integer values
+$4755 = 0 // integer values
+$4757 = 0 // integer values
+$4759 = 0 // integer values
+$4761 = 0 // integer values
+$4763 = 0 // integer values
+$4765 = 0 // integer values
+$4767 = 0 // integer values
+$4769 = 0 // integer values
+$4770 = 0 // integer values
+$4771 = 0 // integer values
+$4772 = 0 // integer values
+$4775 = 0 // integer values
+$4776 = 0 // integer values
+$4777 = 0 // integer values
+$4778 = 0 // integer values
+$4779 = 0 // integer values
+$4780 = 0 // integer values
+$4781 = 0 // integer values
+$4782 = 0 // integer values
+$4785 = 0 // integer values
+$4786 = 0 // integer values
+$4748 = 0 // integer values
+wait 0
+03CF: load_wav 'MONO_2' as 1
+054C: use_GXT_table 'COUNT1'
+058E: set_restart_mission_taxi_destination -1045.726 -292.454 9.758 97.607
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKELLY'
+select_interior 18
+Camera.SetAtPos(-1070.05, -280.06, 11.09)
+038B: load_requested_models
+
+:COUNT1_623
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @COUNT1_653
+wait 0
+jump @COUNT1_623
+
+:COUNT1_653
+02E4: load_cutscene_data 'CNT_1A'
+0244: set_cutscene_pos -1064.103 -276.39 11.066
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $167 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $167 'CSKELLY'
+0395: clear_area 1 at -1059.841 -278.7214 range 10.4044 1.0
+0055: put_player $PLAYER_CHAR at -1059.841 -278.7214 10.4044
+0171: set_player $PLAYER_CHAR z_angle_to 272.2088
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:COUNT1_803
+if
+  11104 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_838
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_803
+
+:COUNT1_838
+00BC: text_highpriority 'CM1_A' 10000 ms 1  // Mr. Vercetti? Hey. You bought the old print works?
+
+:COUNT1_853
+if
+  15668 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_888
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_853
+
+:COUNT1_888
+00BC: text_highpriority 'CM1_B' 10000 ms 1  // Yeah, my old man used to work on these.
+
+:COUNT1_903
+if
+  18152 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_938
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_903
+
+:COUNT1_938
+00BC: text_highpriority 'CM1_N' 10000 ms 1  // I used to spend the evenings with him, cleaning the rollers...
+
+:COUNT1_953
+if
+  21286 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_988
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_953
+
+:COUNT1_988
+00BC: text_highpriority 'CM1_C' 10000 ms 1  // I was going to follow him in his trade, but...I lived a different life.
+
+:COUNT1_1003
+if
+  25141 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1038
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1003
+
+:COUNT1_1038
+00BC: text_highpriority 'CM1_D' 10000 ms 1  // You planning on selling the old machinery, breaking it down?
+
+:COUNT1_1053
+if
+  28808 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1088
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1053
+
+:COUNT1_1088
+00BC: text_highpriority 'CM1_E' 10000 ms 1  // I'm thinking we might print something - a newspaper, a magazine...
+
+:COUNT1_1103
+if
+  31680 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1138
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1103
+
+:COUNT1_1138
+00BC: text_highpriority 'CM1_F' 10000 ms 1  // Oh, crap, sonny, low grade crap. I've always fancied printing money. It ain't too hard.
+
+:COUNT1_1153
+if
+  37694 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1190
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1153
+
+:COUNT1_1190
+00BC: text_highpriority 'CM1_G' 10000 ms 1  // You know, I've been doing it on a small scale for years.
+
+:COUNT1_1205
+if
+  40520 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1242
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1205
+
+:COUNT1_1242
+00BC: text_highpriority 'CM1_H' 10000 ms 1  // Really?
+
+:COUNT1_1257
+if
+  41862 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1294
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1257
+
+:COUNT1_1294
+00BC: text_highpriority 'CM1_I' 10000 ms 1  // Sure. But we'd need some good quality plates.
+
+:COUNT1_1309
+if
+  46771 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1346
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1309
+
+:COUNT1_1346
+00BC: text_highpriority 'CM1_J' 10000 ms 1  // Of course! There's a counterfeiting syndicate already operating in Florida.
+
+:COUNT1_1361
+if
+  51081 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1398
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1361
+
+:COUNT1_1398
+00BC: text_highpriority 'CM1_K' 10000 ms 1  // A syndicate?
+
+:COUNT1_1413
+if
+  51973 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1450
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1413
+
+:COUNT1_1450
+00BC: text_highpriority 'CM1_L' 10000 ms 1  // Yeah. Just rumors is all I've heard.
+
+:COUNT1_1465
+if
+  54422 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1502
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1465
+
+:COUNT1_1502
+00BC: text_highpriority 'CM1_M' 10000 ms 1  // I know a man who's good with rumors...
+
+:COUNT1_1517
+if
+  56704 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1554
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1517
+
+:COUNT1_1554
+00BE: text_clear_all
+
+:COUNT1_1556
+if
+  57968 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_1593
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_1556
+
+:COUNT1_1593
+fade 0 2000
+00BE: text_clear_all
+
+wait 1500
+if 856A:   not has_cutscene_been_interrupted
+then
+    if 03D0:   wav 1 loaded
+    then
+        03D1: play_wav 1
+        
+        while 83D2:   not wav 1 ended
+            wait 0
+        end
+    end
+end
+
+while fading
+    wait 0
+end
+
+040D: unload_wav 1 
+select_interior 0
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Camera.SetAtPos(-1059.841, -278.7214, 10.4044)
+04E3: unknown_player $PLAYER_CHAR 0 60000
+0556: create_cab -1047.664 -298.188 11.0 266.28 512.591 -74.9 9.573 189.24
+if
+  $1580 == 0 // integer values
+jf @COUNT1_1756
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+
+:COUNT1_1756
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 1500
+Model.Load(#GDA)
+Model.Load(#GDB)
+Model.Load(#MP5LNG)
+Model.Load(#M4)
+03CF: load_wav 'CNT1_1' as 2
+
+:COUNT1_1806
+if or
+   not Model.Available(#GDA)
+   not Model.Available(#GDB)
+   not Model.Available(#MP5LNG)
+   not Model.Available(#M4)
+83D0:   not wav 2 loaded
+jf @COUNT1_1850
+wait 0
+jump @COUNT1_1806
+
+:COUNT1_1850
+if
+fading
+jf @COUNT1_1874
+wait 0
+jump @COUNT1_1850
+
+:COUNT1_1874
+if
+  $1580 == 0 // integer values
+jf @COUNT1_2069
+wait 100
+0395: clear_area 0 at -1042.921 -304.553 range 12.463 1.0
+Camera.SetPosition(-1042.921, -304.553, 12.463, 0.0, 0.0, 0.0)
+Camera.PointAt(-1043.434, -303.718, 12.266, 2)
+00BC: text_highpriority 'TAXSHRT' 10000 ms 1  // ~g~You can use this Kaufman Cab to take you to destinations instead of driving. It will cost you $9.
+16@ = 0 // integer values
+
+:COUNT1_1993
+if
+  6000 > 16@ // integer values
+jf @COUNT1_2023
+wait 0
+jump @COUNT1_1993
+
+:COUNT1_2023
+03D5: remove_text 'TAXSHRT'  // ~g~You can use this Kaufman Cab to take you to destinations instead of driving. It will cost you $9.
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+$1580 = 1 // integer values
+
+:COUNT1_2069
+00BC: text_highpriority 'CM1_5' 5000 ms 1  // ~g~Go and meet Kent Paul at the Malibu Club!
+018A: $4749 = create_checkpoint_at 491.0 -77.7 10.4
+Object.Destroy($1013)
+$1013 = Object.Init(#OD_CLBDR_OPEN, 490.34, -77.017, 11.598)
+$1012 = 1 // integer values
+$1011 = 0 // integer values
+
+:COUNT1_2145
+if
+80F5:   not player $PLAYER_CHAR 1 491.0 -77.7 10.4 radius 3.0 3.0 3.0
+jf @COUNT1_2204
+wait 0
+jump @COUNT1_2145
+
+:COUNT1_2204
+Player.CanMove($PLAYER_CHAR) = False
+Marker.Disable($4749)
+0169: set_fade_color 0 0 0
+fade 0 1500
+
+:COUNT1_2231
+if
+fading
+jf @COUNT1_2255
+wait 0
+jump @COUNT1_2231
+
+:COUNT1_2255
+01BD: $29 = current_time_in_ms
+$30 = 0 // integer values
+
+:COUNT1_2267
+if and
+   not Player.Controllable($PLAYER_CHAR)
+  5000 > $30 // integer values
+jf @COUNT1_2323
+wait 0
+01BD: $28 = current_time_in_ms
+0084: $30 = $28 // integer values and handles
+0060: $30 -= $29 // integer values
+jump @COUNT1_2267
+
+:COUNT1_2323
+Player.MakeSafe($PLAYER_CHAR)
+03AD: set_rubbish 0
+03AF: set_streaming 0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKENT'
+023C: load_special_actor 3 'FLOOZYA'
+select_interior 17
+Camera.SetAtPos(470.495, -57.014, 10.04)
+038B: load_requested_models
+
+:COUNT1_2395
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+jf @COUNT1_2429
+wait 0
+jump @COUNT1_2395
+
+:COUNT1_2429
+04F9: set_extracolors 1 fade 0
+02E4: load_cutscene_data 'CNT_1B'
+0244: set_cutscene_pos 476.972 -65.499 8.943
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $142 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $142 'CSKENT'
+02E5: $174 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $174 'FLOOZYA'
+0395: clear_area 1 at 493.1 -82.4 range 9.8 1.0
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COUNT1_2660
+00D9: $4784 = actor $PLAYER_ACTOR car // add to mission cleanup
+if
+   not Car.Wrecked($4784)
+jf @COUNT1_2623
+Car.PutAt($4784, 496.3, -82.8, 9.0)
+Car.Angle($4784) = 116.6
+
+:COUNT1_2623
+0362: put_actor $PLAYER_ACTOR at 493.1 -82.4 9.8 and_remove_from_car
+0171: set_player $PLAYER_CHAR z_angle_to 220.0
+jump @COUNT1_2690
+
+:COUNT1_2660
+0055: put_player $PLAYER_CHAR at 493.1 -82.4 9.8
+0171: set_player $PLAYER_CHAR z_angle_to 220.0
+
+:COUNT1_2690
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:COUNT1_2712
+if
+  7872 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2747
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2712
+
+:COUNT1_2747
+00BC: text_highpriority 'CM1_2A' 10000 ms 1  // Look at the arse on that!
+
+:COUNT1_2762
+if
+  12284 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2797
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2762
+
+:COUNT1_2797
+00BC: text_highpriority 'CM1_2B' 10000 ms 1  // Awright girl, it's your loss mate init!
+
+:COUNT1_2812
+if
+  14399 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2847
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2812
+
+:COUNT1_2847
+00BC: text_highpriority 'CM1_2C' 10000 ms 1  // Awright me ol'china, how's it hangin'?
+
+:COUNT1_2862
+if
+  17102 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2897
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2862
+
+:COUNT1_2897
+00BC: text_highpriority 'CM1_2D' 10000 ms 1  // What do you know about counterfeiting?
+
+:COUNT1_2912
+if
+  18528 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2947
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2912
+
+:COUNT1_2947
+00BC: text_highpriority 'CM1_2E' 10000 ms 1  // Oh I'm fine Paul, how 'bout you?
+
+:COUNT1_2962
+if
+  20285 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_2997
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_2962
+
+:COUNT1_2997
+00BC: text_highpriority 'CM1_2F' 10000 ms 1  // Come 'ere!
+
+:COUNT1_3012
+if
+  21336 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3047
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3012
+
+:COUNT1_3047
+00BC: text_highpriority 'CM1_2G' 10000 ms 1  // Awright! Awright! Awright!! You're obviously a busy man.
+
+:COUNT1_3062
+if
+  24945 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3097
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3062
+
+:COUNT1_3097
+00BC: text_highpriority 'CM1_2H' 10000 ms 1  // All I know about dodgy readys is the Triads supply the plates.
+
+:COUNT1_3112
+if
+  31191 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3147
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3112
+
+:COUNT1_3147
+00BC: text_highpriority 'CM1_2I' 10000 ms 1  // They've got a shipping company down the docks,
+
+:COUNT1_3162
+if
+  33488 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3199
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3162
+
+:COUNT1_3199
+00BC: text_highpriority 'CM1_2J' 10000 ms 1  // the boss man would know when the plates are coming in next!
+
+:COUNT1_3214
+if
+  37791 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3251
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3214
+
+:COUNT1_3251
+00BC: text_highpriority 'CM1_2K' 10000 ms 1  // Thanks Paul.
+
+:COUNT1_3266
+if
+  40783 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3303
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3266
+
+:COUNT1_3303
+00BC: text_highpriority 'CM1_2L' 10000 ms 1  // What's the matter with you, you maniac!
+
+:COUNT1_3318
+if
+  43496 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3355
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3318
+
+:COUNT1_3355
+00BC: text_highpriority 'CM1_2M' 10000 ms 1  // Give me another drink, lively!
+
+:COUNT1_3370
+if
+  45120 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3407
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3370
+
+:COUNT1_3407
+00BE: text_clear_all
+
+:COUNT1_3409
+if
+  47160 > $CUT_SCENE_TIME // integer values
+jf @COUNT1_3446
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @COUNT1_3409
+
+:COUNT1_3446
+Object.Destroy($1013)
+$1013 = Object.Init(#OD_CLBDR_CLOSE, 490.34, -77.017, 11.598)
+Object.RemoveFromMissionCleanupList($1013)
+$1011 = 1 // integer values
+$1012 = 0 // integer values
+$994 = 0 // integer values
+$986 = 0 // integer values
+fade 0 2000
+00BE: text_clear_all
+
+:COUNT1_3515
+if
+fading
+jf @COUNT1_3539
+wait 0
+jump @COUNT1_3515
+
+:COUNT1_3539
+00BA: text_styled 'BEACH3' 3000 ms 2  // Vice Point
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+Camera.SetAtPos(493.1, -82.4, 9.8)
+04E3: unknown_player $PLAYER_CHAR 2 60000
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 1500
+00BC: text_highpriority 'CM1_1' 5000 ms 1  // ~g~Go to the Chartered Libertine Lines boat at the docks.
+00BB: text_lowpriority 'CM1_2' 5000 ms 1  // ~g~The Shipping Officer will have the information that is required.
+018A: $4693 = create_checkpoint_at -686.85 -1245.43 30.14
+03BC: $4773 = create_sphere -686.85 -1245.43 30.14 1.5
+$98 = 0.0 // floating-point values
+
+:COUNT1_3716
+if
+  10.0 > $98 // floating-point values
+jf @COUNT1_3768
+wait 0
+02CE: $98 = ground_z -686.85 -1245.43 30.14
+jump @COUNT1_3716
+
+:COUNT1_3768
+$4696 = Actor.Create(Gang5, #GDA, -662.12, -1326.81, 15.26)
+$4751 += 1 // integer values
+01ED: clear_actor $4696 threat_search
+01B2: give_actor $4696 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4696 search_threat 1
+01E2: add_route_point 0 at -666.06 -1318.48 15.26
+01E2: add_route_point 0 at -673.8 -1302.02 15.26
+01E2: add_route_point 0 at -683.28 -1282.11 15.26
+01E2: add_route_point 0 at -693.41 -1258.63 15.24
+01E2: add_route_point 0 at -699.76 -1245.01 15.26
+01E2: add_route_point 0 at -693.41 -1258.63 15.24
+01E2: add_route_point 0 at -683.28 -1282.11 15.26
+01E2: add_route_point 0 at -673.8 -1302.02 15.26
+01E2: add_route_point 0 at -666.06 -1318.48 15.26
+01E2: add_route_point 0 at -662.12 -1326.81 15.26
+01E1: set_actor $4696 follow_route 0 3
+$4702 = Actor.Create(Gang5, #GDB, -659.26, -1330.93, 15.26)
+$4751 += 1 // integer values
+01ED: clear_actor $4702 threat_search
+01B2: give_actor $4702 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4702 search_threat 1
+01E2: add_route_point 1 at -653.93 -1342.18 15.26
+01E2: add_route_point 1 at -647.19 -1355.4 15.27
+01E2: add_route_point 1 at -632.47 -1382.57 15.29
+01E2: add_route_point 1 at -647.19 -1355.4 15.27
+01E2: add_route_point 1 at -653.93 -1342.18 15.26
+01E2: add_route_point 1 at -659.26 -1330.93 15.26
+01E1: set_actor $4702 follow_route 1 3
+$4706 = Actor.Create(Gang5, #GDA, -609.85, -1381.29, 15.25)
+$4751 += 1 // integer values
+01ED: clear_actor $4706 threat_search
+01B2: give_actor $4706 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4706 search_threat 1
+01E2: add_route_point 2 at -615.43 -1367.41 15.28
+01E2: add_route_point 2 at -620.06 -1355.03 15.28
+01E2: add_route_point 2 at -635.64 -1363.45 15.28
+01E2: add_route_point 2 at -620.06 -1355.03 15.28
+01E2: add_route_point 2 at -615.43 -1367.41 15.28
+01E2: add_route_point 2 at -609.85 -1381.29 15.25
+01E1: set_actor $4706 follow_route 2 3
+$4710 = Actor.Create(Gang5, #GDB, -627.04, -1339.79, 15.27)
+$4751 += 1 // integer values
+01ED: clear_actor $4710 threat_search
+01B2: give_actor $4710 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4710 search_threat 1
+01E2: add_route_point 3 at -630.43 -1333.91 15.27
+01E2: add_route_point 3 at -634.26 -1322.39 15.27
+01E2: add_route_point 3 at -639.33 -1307.99 15.26
+01E2: add_route_point 3 at -642.71 -1303.6 15.26
+01E2: add_route_point 3 at -639.33 -1307.99 15.26
+01E2: add_route_point 3 at -634.26 -1322.39 15.27
+01E2: add_route_point 3 at -630.43 -1333.91 15.27
+01E2: add_route_point 3 at -627.04 -1339.79 15.27
+01E1: set_actor $4710 follow_route 3 3
+$4714 = Actor.Create(Gang5, #GDA, -653.46, -1279.55, 15.26)
+$4751 += 1 // integer values
+01ED: clear_actor $4714 threat_search
+01B2: give_actor $4714 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4714 search_threat 1
+01E2: add_route_point 4 at -656.61 -1271.76 15.26
+01E2: add_route_point 4 at -660.34 -1262.76 15.26
+01E2: add_route_point 4 at -664.83 -1254.11 15.26
+01E2: add_route_point 4 at -660.34 -1262.76 15.26
+01E2: add_route_point 4 at -656.61 -1271.76 15.26
+01E2: add_route_point 4 at -653.46 -1279.55 15.26
+01E1: set_actor $4714 follow_route 4 3
+$4718 = Actor.Create(Gang5, #GDB, -691.13, -1260.5, 31.93)
+$4751 += 1 // integer values
+Actor.Angle($4718) = 180.0
+01ED: clear_actor $4718 threat_search
+01B2: give_actor $4718 weapon 26 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4718 search_threat 1
+0350: set_actor $4718 maintain_position_when_attacked 1
+$4722 = Actor.Create(Gang5, #GDA, -667.68, -1249.14, 31.93)
+$4751 += 1 // integer values
+Actor.Angle($4722) = 180.0
+01ED: clear_actor $4722 threat_search
+01B2: give_actor $4722 weapon 26 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4722 search_threat 1
+0350: set_actor $4722 maintain_position_when_attacked 1
+$4726 = Actor.Create(Gang5, #GDB, -690.94, -1218.18, 15.28)
+$4751 += 1 // integer values
+01ED: clear_actor $4726 threat_search
+01B2: give_actor $4726 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4726 search_threat 1
+01E2: add_route_point 5 at -698.0 -1221.23 15.28
+01E2: add_route_point 5 at -690.94 -1218.18 15.28
+01E1: set_actor $4726 follow_route 5 3
+$4730 = Actor.Create(Gang5, #GDB, -690.69, -1229.06, 22.46)
+$4751 += 1 // integer values
+Actor.Angle($4730) = 33.0
+01ED: clear_actor $4730 threat_search
+01B2: give_actor $4730 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4730 search_threat 1
+0350: set_actor $4730 maintain_position_when_attacked 1
+$4734 = Actor.Create(Gang5, #GDB, -689.14, -1242.03, 30.14)
+$4751 += 1 // integer values
+Actor.Angle($4734) = 100.0
+01ED: clear_actor $4734 threat_search
+01B2: give_actor $4734 weapon 25 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4734 search_threat 1
+0350: set_actor $4734 maintain_position_when_attacked 1
+$4738 = Actor.Create(Gang5, #GDA, -670.709, -1296.564, 18.94)
+$4751 += 1 // integer values
+Actor.Angle($4738) = 146.102
+01ED: clear_actor $4738 threat_search
+01B2: give_actor $4738 weapon 26 ammo 30000 // Load the weapon model before using this
+011A: set_actor $4738 search_threat 1
+0350: set_actor $4738 maintain_position_when_attacked 1
+
+:COUNT1_5212
+if
+  2 > $4772 // integer values
+jf @COUNT1_6111
+wait 0
+$4782 += 1 // integer values
+if
+  $4782 > 17 // integer values
+jf @COUNT1_5266
+$4782 = 0 // integer values
+
+:COUNT1_5266
+if
+  $4772 >= 1 // integer values
+jf @COUNT1_5404
+if and
+82B3:   not player $PLAYER_CHAR in_cube -716.95 -1218.89 2.0 -697.73 -1266.5 50.0 radius 60.0 sphere 0
+82B3:   not player $PLAYER_CHAR in_cube -697.73 -1266.5 2.0 -616.29 -1430.59 50.0 radius 60.0 sphere 0
+jf @COUNT1_5404
+if
+  $4786 == 0 // integer values
+jf @COUNT1_5404
+gosub @COUNT1_16457
+
+:COUNT1_5404
+01BD: $4775 = current_time_in_ms
+if
+  $4772 == 1 // integer values
+jf @COUNT1_5543
+if or
+02B3:   player $PLAYER_CHAR in_cube -716.95 -1218.89 2.0 -697.73 -1266.5 50.0 radius 60.0 sphere 0
+02B3:   player $PLAYER_CHAR in_cube -697.73 -1266.5 2.0 -616.29 -1430.59 50.0 radius 60.0 sphere 0
+jf @COUNT1_5536
+$4772 = 1 // integer values
+jump @COUNT1_5543
+
+:COUNT1_5536
+$4772 = 2 // integer values
+
+:COUNT1_5543
+0054: store_player $PLAYER_CHAR position_to $4744 $4745 $4746
+if or
+02B3:   player $PLAYER_CHAR in_cube -716.95 -1218.89 2.0 -697.73 -1266.5 50.0 radius 60.0 sphere 0
+02B3:   player $PLAYER_CHAR in_cube -697.73 -1266.5 2.0 -616.29 -1430.59 50.0 radius 60.0 sphere 0
+jf @COUNT1_5659
+$4743 = 1 // integer values
+
+:COUNT1_5659
+if
+  $4694 == 0 // integer values
+jf @COUNT1_5732
+if
+00E4:   player $PLAYER_CHAR 0 -686.85 -1245.43 radius 0.5 0.5
+jf @COUNT1_5732
+03BD: destroy_sphere $4773
+Marker.Disable($4693)
+$4694 = 1 // integer values
+
+:COUNT1_5732
+if
+  $4694 == 1 // integer values
+jf @COUNT1_5903
+if
+  $4771 == 0 // integer values
+jf @COUNT1_5782
+gosub @COUNT1_14330
+jump @COUNT1_5903
+
+:COUNT1_5782
+if
+  $4772 == 0 // integer values
+jf @COUNT1_5903
+00BC: text_highpriority 'CM1_6' 5000 ms 1  // ~g~Get the information back to the Print Works!
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+018A: $4774 = create_checkpoint_at -1052.579 -282.013 10.279
+if
+  $4741 == 0 // integer values
+jf @COUNT1_5896
+018D: $4742 = create_sound 0 at -692.33 -1258.94 15.25
+$4747 = 1 // integer values
+$4741 = 1 // integer values
+
+:COUNT1_5896
+$4772 = 1 // integer values
+
+:COUNT1_5903
+gosub @COUNT1_6731
+if
+  $4748 == 1 // integer values
+jf @COUNT1_5942
+16@ = 0 // integer values
+$4748 = 2 // integer values
+
+:COUNT1_5942
+if
+  $4748 == 2 // integer values
+jf @COUNT1_6033
+if
+  16@ >= 30000 // integer values
+jf @COUNT1_6033
+if
+  $4741 == 0 // integer values
+jf @COUNT1_6033
+018D: $4742 = create_sound 0 at -692.33 -1258.94 15.25
+$4747 = 1 // integer values
+$4741 = 1 // integer values
+
+:COUNT1_6033
+if
+  $4741 == 1 // integer values
+jf @COUNT1_6104
+if
+  $4770 == 0 // integer values
+jf @COUNT1_6083
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_6083
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_6104
+jump @COUNT1_5212
+
+:COUNT1_6111
+$123 = 1 // integer values
+
+:COUNT1_6118
+if
+80F8:   not player $PLAYER_CHAR stopped $123 -1052.579 -282.013 10.279 radius 3.0 3.0 3.0
+jf @COUNT1_6178
+wait 0
+jump @COUNT1_6118
+
+:COUNT1_6178
+Marker.Disable($4774)
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+0395: clear_area 0 at -1063.095 -286.61 range 14.163 1.0
+Camera.SetPosition(-1063.095, -286.61, 14.163, 0.0, 0.0, 0.0)
+Camera.PointAt(-1062.265, -286.498, 13.616, 2)
+if
+00E0:   player $PLAYER_CHAR driving
+jf @COUNT1_6368
+00DA: $4783 = player $PLAYER_CHAR car
+01D3: actor $PLAYER_ACTOR leave_car $4783
+
+:COUNT1_6315
+if
+00DC:   player $PLAYER_CHAR driving $4783
+jf @COUNT1_6368
+wait 0
+if
+   Car.Wrecked($4783)
+jf @COUNT1_6361
+jump @COUNT1_6503
+
+:COUNT1_6361
+jump @COUNT1_6315
+
+:COUNT1_6368
+0211: actor $PLAYER_ACTOR walk_to -1061.465 -287.322
+16@ = 0 // integer values
+17@ = 0 // integer values
+
+:COUNT1_6397
+if
+  4000 > 16@ // integer values
+jf @COUNT1_6427
+wait 0
+jump @COUNT1_6397
+
+:COUNT1_6427
+Camera.Restore_WithJumpCut
+009F: set_actor $PLAYER_ACTOR idle
+0055: put_player $PLAYER_CHAR at -1059.214 -285.815 10.22
+0171: set_player $PLAYER_CHAR z_angle_to 289.0
+03C8: set_camera_directly_before_player
+02A3: enable_widescreen 0
+wait 300
+Player.CanMove($PLAYER_CHAR) = True
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+jump @COUNT1_6520
+
+:COUNT1_6503
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:COUNT1_6520
+$272 = 1 // integer values
+0318: set_latest_mission_passed 'CNT_1'  // Spilling the Beans
+030C: progress_made += 1
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.Money($PLAYER_CHAR) += 2000
+create_thread @COU2
+return
+
+:COUNT1_6586
+$ONMISSION = 0 // integer values
+03AC: clear_route 0
+03AC: clear_route 1
+03AC: clear_route 2
+03AC: clear_route 3
+03AC: clear_route 4
+03AC: clear_route 5
+Object.Destroy($1013)
+$1013 = Object.Init(#OD_CLBDR_CLOSE, 490.34, -77.017, 11.598)
+Object.RemoveFromMissionCleanupList($1013)
+$1011 = 1 // integer values
+$1012 = 0 // integer values
+$994 = 0 // integer values
+$986 = 0 // integer values
+0557:
+Model.Destroy(#GDA)
+Model.Destroy(#GDB)
+Model.Destroy(#MP5LNG)
+Model.Destroy(#M4)
+Marker.Disable($4774)
+03BD: destroy_sphere $4773
+018E: stop_sound $4742
+Marker.Disable($4693)
+Marker.Disable($4749)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:COUNT1_6731
+if
+  $4782 == 0 // integer values
+jf @COUNT1_7482
+if
+  $4697 == 0 // integer values
+jf @COUNT1_7482
+if
+   Actor.Dead($4696)
+jf @COUNT1_7032
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_7013
+if or
+031D:   actor $4696 hit_by_weapon 12
+031D:   actor $4696 hit_by_weapon 13
+031D:   actor $4696 hit_by_weapon 15
+031D:   actor $4696 hit_by_weapon 16
+031D:   actor $4696 hit_by_weapon 17
+031D:   actor $4696 hit_by_weapon 18
+jf @COUNT1_6868
+$4748 = 1 // integer values
+
+:COUNT1_6868
+if or
+031D:   actor $4696 hit_by_weapon 19
+031D:   actor $4696 hit_by_weapon 20
+031D:   actor $4696 hit_by_weapon 21
+031D:   actor $4696 hit_by_weapon 27
+031D:   actor $4696 hit_by_weapon 22
+031D:   actor $4696 hit_by_weapon 26
+jf @COUNT1_6928
+$4748 = 1 // integer values
+
+:COUNT1_6928
+if or
+031D:   actor $4696 hit_by_weapon 25
+031D:   actor $4696 hit_by_weapon 23
+031D:   actor $4696 hit_by_weapon 42
+031D:   actor $4696 hit_by_weapon 31
+031D:   actor $4696 hit_by_weapon 32
+031D:   actor $4696 hit_by_weapon 33
+jf @COUNT1_6988
+$4748 = 1 // integer values
+
+:COUNT1_6988
+if
+031D:   actor $4696 hit_by_weapon 11
+jf @COUNT1_7013
+$4748 = 1 // integer values
+
+:COUNT1_7013
+Actor.RemoveReferences($4696)
+$4697 = 1 // integer values
+jump @COUNT1_7482
+
+:COUNT1_7032
+if
+  $4743 == 1 // integer values
+jf @COUNT1_7482
+if or
+0123:   actor $4696 spotted_player $PLAYER_CHAR
+0480:   actor $4696 looking_at_death_of_actor_with_pedtype 11
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_7482
+if
+  $4741 == 0 // integer values
+jf @COUNT1_7399
+if
+  $4695 == 0 // integer values
+jf @COUNT1_7155
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4747 = 1 // integer values
+$4695 = 1 // integer values
+
+:COUNT1_7155
+if or
+  $4699 == 0 // integer values
+  $4698 == 1 // integer values
+jf @COUNT1_7392
+if
+  $4700 == 0 // integer values
+jf @COUNT1_7232
+009E: set_actor $4696 path -697.39 -1250.62 15.24 unknown 0.5 1
+$4700 = 1 // integer values
+
+:COUNT1_7232
+if
+  $4700 == 1 // integer values
+jf @COUNT1_7392
+if
+00ED:   actor $4696 0 -697.39 -1250.62 radius 1.0 1.0
+jf @COUNT1_7392
+if
+  $4741 == 0 // integer values
+jf @COUNT1_7335
+018D: $4742 = create_sound 0 at -692.33 -1258.94 15.25
+$4741 = 1 // integer values
+
+:COUNT1_7335
+009E: set_actor $4696 path $4744 $4745 $4746 unknown 0.5 1
+011A: set_actor $4696 search_threat 1
+01CA: actor $4696 kill_player $PLAYER_CHAR
+$4747 = 1 // integer values
+$4699 = 1 // integer values
+$4700 = 2 // integer values
+
+:COUNT1_7392
+jump @COUNT1_7482
+
+:COUNT1_7399
+if
+  $4701 == 0 // integer values
+jf @COUNT1_7453
+009E: set_actor $4696 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4696 kill_player $PLAYER_CHAR
+$4701 = 1 // integer values
+
+:COUNT1_7453
+009E: set_actor $4696 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4696 kill_player $PLAYER_CHAR
+
+:COUNT1_7482
+if
+  $4782 == 1 // integer values
+jf @COUNT1_7996
+if
+  $4704 == 0 // integer values
+jf @COUNT1_7996
+if
+   Actor.Dead($4702)
+jf @COUNT1_7783
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_7764
+if or
+031D:   actor $4702 hit_by_weapon 12
+031D:   actor $4702 hit_by_weapon 13
+031D:   actor $4702 hit_by_weapon 15
+031D:   actor $4702 hit_by_weapon 16
+031D:   actor $4702 hit_by_weapon 17
+031D:   actor $4702 hit_by_weapon 18
+jf @COUNT1_7619
+$4748 = 1 // integer values
+
+:COUNT1_7619
+if or
+031D:   actor $4702 hit_by_weapon 19
+031D:   actor $4702 hit_by_weapon 20
+031D:   actor $4702 hit_by_weapon 21
+031D:   actor $4702 hit_by_weapon 27
+031D:   actor $4702 hit_by_weapon 22
+031D:   actor $4702 hit_by_weapon 26
+jf @COUNT1_7679
+$4748 = 1 // integer values
+
+:COUNT1_7679
+if or
+031D:   actor $4702 hit_by_weapon 25
+031D:   actor $4702 hit_by_weapon 23
+031D:   actor $4702 hit_by_weapon 42
+031D:   actor $4702 hit_by_weapon 31
+031D:   actor $4702 hit_by_weapon 32
+031D:   actor $4702 hit_by_weapon 33
+jf @COUNT1_7739
+$4748 = 1 // integer values
+
+:COUNT1_7739
+if
+031D:   actor $4702 hit_by_weapon 11
+jf @COUNT1_7764
+$4748 = 1 // integer values
+
+:COUNT1_7764
+Actor.RemoveReferences($4702)
+$4704 = 1 // integer values
+jump @COUNT1_7996
+
+:COUNT1_7783
+if
+  $4743 == 1 // integer values
+jf @COUNT1_7996
+if or
+0480:   actor $4702 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4702 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_7996
+if
+  $4741 == 0 // integer values
+jf @COUNT1_7913
+if
+  $4705 == 0 // integer values
+jf @COUNT1_7913
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4705 = 1 // integer values
+
+:COUNT1_7913
+if
+  $4703 == 0 // integer values
+jf @COUNT1_7967
+009E: set_actor $4702 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4702 kill_player $PLAYER_CHAR
+$4703 = 1 // integer values
+
+:COUNT1_7967
+009E: set_actor $4702 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4702 kill_player $PLAYER_CHAR
+
+:COUNT1_7996
+if
+  $4782 == 2 // integer values
+jf @COUNT1_8510
+if
+  $4708 == 0 // integer values
+jf @COUNT1_8510
+if
+   Actor.Dead($4706)
+jf @COUNT1_8297
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_8278
+if or
+031D:   actor $4706 hit_by_weapon 12
+031D:   actor $4706 hit_by_weapon 13
+031D:   actor $4706 hit_by_weapon 15
+031D:   actor $4706 hit_by_weapon 16
+031D:   actor $4706 hit_by_weapon 17
+031D:   actor $4706 hit_by_weapon 18
+jf @COUNT1_8133
+$4748 = 1 // integer values
+
+:COUNT1_8133
+if or
+031D:   actor $4706 hit_by_weapon 19
+031D:   actor $4706 hit_by_weapon 20
+031D:   actor $4706 hit_by_weapon 21
+031D:   actor $4706 hit_by_weapon 27
+031D:   actor $4706 hit_by_weapon 22
+031D:   actor $4706 hit_by_weapon 26
+jf @COUNT1_8193
+$4748 = 1 // integer values
+
+:COUNT1_8193
+if or
+031D:   actor $4706 hit_by_weapon 25
+031D:   actor $4706 hit_by_weapon 23
+031D:   actor $4706 hit_by_weapon 42
+031D:   actor $4706 hit_by_weapon 31
+031D:   actor $4706 hit_by_weapon 32
+031D:   actor $4706 hit_by_weapon 33
+jf @COUNT1_8253
+$4748 = 1 // integer values
+
+:COUNT1_8253
+if
+031D:   actor $4706 hit_by_weapon 11
+jf @COUNT1_8278
+$4748 = 1 // integer values
+
+:COUNT1_8278
+Actor.RemoveReferences($4706)
+$4708 = 1 // integer values
+jump @COUNT1_8510
+
+:COUNT1_8297
+if
+  $4743 == 1 // integer values
+jf @COUNT1_8510
+if or
+0480:   actor $4706 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4706 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_8510
+if
+  $4741 == 0 // integer values
+jf @COUNT1_8427
+if
+  $4709 == 0 // integer values
+jf @COUNT1_8427
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4709 = 1 // integer values
+
+:COUNT1_8427
+if
+  $4707 == 0 // integer values
+jf @COUNT1_8481
+009E: set_actor $4706 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4706 kill_player $PLAYER_CHAR
+$4707 = 1 // integer values
+
+:COUNT1_8481
+009E: set_actor $4706 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4706 kill_player $PLAYER_CHAR
+
+:COUNT1_8510
+if
+  $4782 == 3 // integer values
+jf @COUNT1_9024
+if
+  $4712 == 0 // integer values
+jf @COUNT1_9024
+if
+   Actor.Dead($4710)
+jf @COUNT1_8811
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_8792
+if or
+031D:   actor $4710 hit_by_weapon 12
+031D:   actor $4710 hit_by_weapon 13
+031D:   actor $4710 hit_by_weapon 15
+031D:   actor $4710 hit_by_weapon 16
+031D:   actor $4710 hit_by_weapon 17
+031D:   actor $4710 hit_by_weapon 18
+jf @COUNT1_8647
+$4748 = 1 // integer values
+
+:COUNT1_8647
+if or
+031D:   actor $4710 hit_by_weapon 19
+031D:   actor $4710 hit_by_weapon 20
+031D:   actor $4710 hit_by_weapon 21
+031D:   actor $4710 hit_by_weapon 27
+031D:   actor $4710 hit_by_weapon 22
+031D:   actor $4710 hit_by_weapon 26
+jf @COUNT1_8707
+$4748 = 1 // integer values
+
+:COUNT1_8707
+if or
+031D:   actor $4710 hit_by_weapon 25
+031D:   actor $4710 hit_by_weapon 23
+031D:   actor $4710 hit_by_weapon 42
+031D:   actor $4710 hit_by_weapon 31
+031D:   actor $4710 hit_by_weapon 32
+031D:   actor $4710 hit_by_weapon 33
+jf @COUNT1_8767
+$4748 = 1 // integer values
+
+:COUNT1_8767
+if
+031D:   actor $4710 hit_by_weapon 11
+jf @COUNT1_8792
+$4748 = 1 // integer values
+
+:COUNT1_8792
+Actor.RemoveReferences($4710)
+$4712 = 1 // integer values
+jump @COUNT1_9024
+
+:COUNT1_8811
+if
+  $4743 == 1 // integer values
+jf @COUNT1_9024
+if or
+0480:   actor $4710 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4710 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_9024
+if
+  $4741 == 0 // integer values
+jf @COUNT1_8941
+if
+  $4713 == 0 // integer values
+jf @COUNT1_8941
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4713 = 1 // integer values
+
+:COUNT1_8941
+if
+  $4711 == 0 // integer values
+jf @COUNT1_8995
+009E: set_actor $4710 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4710 kill_player $PLAYER_CHAR
+$4711 = 1 // integer values
+
+:COUNT1_8995
+009E: set_actor $4710 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4710 kill_player $PLAYER_CHAR
+
+:COUNT1_9024
+if
+  $4782 == 4 // integer values
+jf @COUNT1_9538
+if
+  $4716 == 0 // integer values
+jf @COUNT1_9538
+if
+   Actor.Dead($4714)
+jf @COUNT1_9325
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_9306
+if or
+031D:   actor $4714 hit_by_weapon 12
+031D:   actor $4714 hit_by_weapon 13
+031D:   actor $4714 hit_by_weapon 15
+031D:   actor $4714 hit_by_weapon 16
+031D:   actor $4714 hit_by_weapon 17
+031D:   actor $4714 hit_by_weapon 18
+jf @COUNT1_9161
+$4748 = 1 // integer values
+
+:COUNT1_9161
+if or
+031D:   actor $4714 hit_by_weapon 19
+031D:   actor $4714 hit_by_weapon 20
+031D:   actor $4714 hit_by_weapon 21
+031D:   actor $4714 hit_by_weapon 27
+031D:   actor $4714 hit_by_weapon 22
+031D:   actor $4714 hit_by_weapon 26
+jf @COUNT1_9221
+$4748 = 1 // integer values
+
+:COUNT1_9221
+if or
+031D:   actor $4714 hit_by_weapon 25
+031D:   actor $4714 hit_by_weapon 23
+031D:   actor $4714 hit_by_weapon 42
+031D:   actor $4714 hit_by_weapon 31
+031D:   actor $4714 hit_by_weapon 32
+031D:   actor $4714 hit_by_weapon 33
+jf @COUNT1_9281
+$4748 = 1 // integer values
+
+:COUNT1_9281
+if
+031D:   actor $4714 hit_by_weapon 11
+jf @COUNT1_9306
+$4748 = 1 // integer values
+
+:COUNT1_9306
+Actor.RemoveReferences($4714)
+$4716 = 1 // integer values
+jump @COUNT1_9538
+
+:COUNT1_9325
+if
+  $4743 == 1 // integer values
+jf @COUNT1_9538
+if or
+0480:   actor $4714 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4714 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_9538
+if
+  $4741 == 0 // integer values
+jf @COUNT1_9455
+if
+  $4717 == 0 // integer values
+jf @COUNT1_9455
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4717 = 1 // integer values
+
+:COUNT1_9455
+if
+  $4715 == 0 // integer values
+jf @COUNT1_9509
+009E: set_actor $4714 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4714 kill_player $PLAYER_CHAR
+$4715 = 1 // integer values
+
+:COUNT1_9509
+009E: set_actor $4714 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4714 kill_player $PLAYER_CHAR
+
+:COUNT1_9538
+if
+  $4782 == 5 // integer values
+jf @COUNT1_10002
+if
+  $4720 == 0 // integer values
+jf @COUNT1_10002
+if
+   Actor.Dead($4718)
+jf @COUNT1_9839
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_9820
+if or
+031D:   actor $4718 hit_by_weapon 12
+031D:   actor $4718 hit_by_weapon 13
+031D:   actor $4718 hit_by_weapon 15
+031D:   actor $4718 hit_by_weapon 16
+031D:   actor $4718 hit_by_weapon 17
+031D:   actor $4718 hit_by_weapon 18
+jf @COUNT1_9675
+$4748 = 1 // integer values
+
+:COUNT1_9675
+if or
+031D:   actor $4718 hit_by_weapon 19
+031D:   actor $4718 hit_by_weapon 20
+031D:   actor $4718 hit_by_weapon 21
+031D:   actor $4718 hit_by_weapon 27
+031D:   actor $4718 hit_by_weapon 22
+031D:   actor $4718 hit_by_weapon 26
+jf @COUNT1_9735
+$4748 = 1 // integer values
+
+:COUNT1_9735
+if or
+031D:   actor $4718 hit_by_weapon 25
+031D:   actor $4718 hit_by_weapon 23
+031D:   actor $4718 hit_by_weapon 42
+031D:   actor $4718 hit_by_weapon 31
+031D:   actor $4718 hit_by_weapon 32
+031D:   actor $4718 hit_by_weapon 33
+jf @COUNT1_9795
+$4748 = 1 // integer values
+
+:COUNT1_9795
+if
+031D:   actor $4718 hit_by_weapon 11
+jf @COUNT1_9820
+$4748 = 1 // integer values
+
+:COUNT1_9820
+Actor.RemoveReferences($4718)
+$4720 = 1 // integer values
+jump @COUNT1_10002
+
+:COUNT1_9839
+if
+  $4743 == 1 // integer values
+jf @COUNT1_10002
+if or
+0480:   actor $4718 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4718 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_10002
+if
+  $4741 == 0 // integer values
+jf @COUNT1_9969
+if
+  $4721 == 0 // integer values
+jf @COUNT1_9969
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4721 = 1 // integer values
+
+:COUNT1_9969
+if
+  $4719 == 0 // integer values
+jf @COUNT1_10002
+01CA: actor $4718 kill_player $PLAYER_CHAR
+$4719 = 1 // integer values
+
+:COUNT1_10002
+if
+  $4782 == 6 // integer values
+jf @COUNT1_10466
+if
+  $4724 == 0 // integer values
+jf @COUNT1_10466
+if
+   Actor.Dead($4722)
+jf @COUNT1_10303
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_10284
+if or
+031D:   actor $4722 hit_by_weapon 12
+031D:   actor $4722 hit_by_weapon 13
+031D:   actor $4722 hit_by_weapon 15
+031D:   actor $4722 hit_by_weapon 16
+031D:   actor $4722 hit_by_weapon 17
+031D:   actor $4722 hit_by_weapon 18
+jf @COUNT1_10139
+$4748 = 1 // integer values
+
+:COUNT1_10139
+if or
+031D:   actor $4722 hit_by_weapon 19
+031D:   actor $4722 hit_by_weapon 20
+031D:   actor $4722 hit_by_weapon 21
+031D:   actor $4722 hit_by_weapon 27
+031D:   actor $4722 hit_by_weapon 22
+031D:   actor $4722 hit_by_weapon 26
+jf @COUNT1_10199
+$4748 = 1 // integer values
+
+:COUNT1_10199
+if or
+031D:   actor $4722 hit_by_weapon 25
+031D:   actor $4722 hit_by_weapon 23
+031D:   actor $4722 hit_by_weapon 42
+031D:   actor $4722 hit_by_weapon 31
+031D:   actor $4722 hit_by_weapon 32
+031D:   actor $4722 hit_by_weapon 33
+jf @COUNT1_10259
+$4748 = 1 // integer values
+
+:COUNT1_10259
+if
+031D:   actor $4722 hit_by_weapon 11
+jf @COUNT1_10284
+$4748 = 1 // integer values
+
+:COUNT1_10284
+Actor.RemoveReferences($4722)
+$4724 = 1 // integer values
+jump @COUNT1_10466
+
+:COUNT1_10303
+if
+  $4743 == 1 // integer values
+jf @COUNT1_10466
+if or
+0480:   actor $4722 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4722 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_10466
+if
+  $4741 == 0 // integer values
+jf @COUNT1_10433
+if
+  $4725 == 0 // integer values
+jf @COUNT1_10433
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4725 = 1 // integer values
+
+:COUNT1_10433
+if
+  $4723 == 0 // integer values
+jf @COUNT1_10466
+01CA: actor $4722 kill_player $PLAYER_CHAR
+$4723 = 1 // integer values
+
+:COUNT1_10466
+if
+  $4782 == 7 // integer values
+jf @COUNT1_10980
+if
+  $4728 == 0 // integer values
+jf @COUNT1_10980
+if
+   Actor.Dead($4726)
+jf @COUNT1_10767
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_10748
+if or
+031D:   actor $4726 hit_by_weapon 12
+031D:   actor $4726 hit_by_weapon 13
+031D:   actor $4726 hit_by_weapon 15
+031D:   actor $4726 hit_by_weapon 16
+031D:   actor $4726 hit_by_weapon 17
+031D:   actor $4726 hit_by_weapon 18
+jf @COUNT1_10603
+$4748 = 1 // integer values
+
+:COUNT1_10603
+if or
+031D:   actor $4726 hit_by_weapon 19
+031D:   actor $4726 hit_by_weapon 20
+031D:   actor $4726 hit_by_weapon 21
+031D:   actor $4726 hit_by_weapon 27
+031D:   actor $4726 hit_by_weapon 22
+031D:   actor $4726 hit_by_weapon 26
+jf @COUNT1_10663
+$4748 = 1 // integer values
+
+:COUNT1_10663
+if or
+031D:   actor $4726 hit_by_weapon 25
+031D:   actor $4726 hit_by_weapon 23
+031D:   actor $4726 hit_by_weapon 42
+031D:   actor $4726 hit_by_weapon 31
+031D:   actor $4726 hit_by_weapon 32
+031D:   actor $4726 hit_by_weapon 33
+jf @COUNT1_10723
+$4748 = 1 // integer values
+
+:COUNT1_10723
+if
+031D:   actor $4726 hit_by_weapon 11
+jf @COUNT1_10748
+$4748 = 1 // integer values
+
+:COUNT1_10748
+Actor.RemoveReferences($4726)
+$4728 = 1 // integer values
+jump @COUNT1_10980
+
+:COUNT1_10767
+if
+  $4743 == 1 // integer values
+jf @COUNT1_10980
+if or
+0480:   actor $4726 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4726 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_10980
+if
+  $4741 == 0 // integer values
+jf @COUNT1_10897
+if
+  $4729 == 0 // integer values
+jf @COUNT1_10897
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4729 = 1 // integer values
+
+:COUNT1_10897
+if
+  $4727 == 0 // integer values
+jf @COUNT1_10951
+009E: set_actor $4726 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4726 kill_player $PLAYER_CHAR
+$4727 = 1 // integer values
+
+:COUNT1_10951
+009E: set_actor $4726 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4726 kill_player $PLAYER_CHAR
+
+:COUNT1_10980
+if
+  $4782 == 8 // integer values
+jf @COUNT1_11444
+if
+  $4732 == 0 // integer values
+jf @COUNT1_11444
+if
+   Actor.Dead($4730)
+jf @COUNT1_11281
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_11262
+if or
+031D:   actor $4730 hit_by_weapon 12
+031D:   actor $4730 hit_by_weapon 13
+031D:   actor $4730 hit_by_weapon 15
+031D:   actor $4730 hit_by_weapon 16
+031D:   actor $4730 hit_by_weapon 17
+031D:   actor $4730 hit_by_weapon 18
+jf @COUNT1_11117
+$4748 = 1 // integer values
+
+:COUNT1_11117
+if or
+031D:   actor $4730 hit_by_weapon 19
+031D:   actor $4730 hit_by_weapon 20
+031D:   actor $4730 hit_by_weapon 21
+031D:   actor $4730 hit_by_weapon 27
+031D:   actor $4730 hit_by_weapon 22
+031D:   actor $4730 hit_by_weapon 26
+jf @COUNT1_11177
+$4748 = 1 // integer values
+
+:COUNT1_11177
+if or
+031D:   actor $4730 hit_by_weapon 25
+031D:   actor $4730 hit_by_weapon 23
+031D:   actor $4730 hit_by_weapon 42
+031D:   actor $4730 hit_by_weapon 31
+031D:   actor $4730 hit_by_weapon 32
+031D:   actor $4730 hit_by_weapon 33
+jf @COUNT1_11237
+$4748 = 1 // integer values
+
+:COUNT1_11237
+if
+031D:   actor $4730 hit_by_weapon 11
+jf @COUNT1_11262
+$4748 = 1 // integer values
+
+:COUNT1_11262
+Actor.RemoveReferences($4730)
+$4732 = 1 // integer values
+jump @COUNT1_11444
+
+:COUNT1_11281
+if
+  $4743 == 1 // integer values
+jf @COUNT1_11444
+if or
+0480:   actor $4730 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4730 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_11444
+if
+  $4741 == 0 // integer values
+jf @COUNT1_11411
+if
+  $4733 == 0 // integer values
+jf @COUNT1_11411
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4733 = 1 // integer values
+
+:COUNT1_11411
+if
+  $4731 == 0 // integer values
+jf @COUNT1_11444
+01CA: actor $4730 kill_player $PLAYER_CHAR
+$4731 = 1 // integer values
+
+:COUNT1_11444
+if
+  $4782 == 9 // integer values
+jf @COUNT1_11908
+if
+  $4736 == 0 // integer values
+jf @COUNT1_11908
+if
+   Actor.Dead($4734)
+jf @COUNT1_11745
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_11726
+if or
+031D:   actor $4734 hit_by_weapon 12
+031D:   actor $4734 hit_by_weapon 13
+031D:   actor $4734 hit_by_weapon 15
+031D:   actor $4734 hit_by_weapon 16
+031D:   actor $4734 hit_by_weapon 17
+031D:   actor $4734 hit_by_weapon 18
+jf @COUNT1_11581
+$4748 = 1 // integer values
+
+:COUNT1_11581
+if or
+031D:   actor $4734 hit_by_weapon 19
+031D:   actor $4734 hit_by_weapon 20
+031D:   actor $4734 hit_by_weapon 21
+031D:   actor $4734 hit_by_weapon 27
+031D:   actor $4734 hit_by_weapon 22
+031D:   actor $4734 hit_by_weapon 26
+jf @COUNT1_11641
+$4748 = 1 // integer values
+
+:COUNT1_11641
+if or
+031D:   actor $4734 hit_by_weapon 25
+031D:   actor $4734 hit_by_weapon 23
+031D:   actor $4734 hit_by_weapon 42
+031D:   actor $4734 hit_by_weapon 31
+031D:   actor $4734 hit_by_weapon 32
+031D:   actor $4734 hit_by_weapon 33
+jf @COUNT1_11701
+$4748 = 1 // integer values
+
+:COUNT1_11701
+if
+031D:   actor $4734 hit_by_weapon 11
+jf @COUNT1_11726
+$4748 = 1 // integer values
+
+:COUNT1_11726
+Actor.RemoveReferences($4734)
+$4736 = 1 // integer values
+jump @COUNT1_11908
+
+:COUNT1_11745
+if
+  $4743 == 1 // integer values
+jf @COUNT1_11908
+if or
+0480:   actor $4734 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4734 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_11908
+if
+  $4741 == 0 // integer values
+jf @COUNT1_11875
+if
+  $4737 == 0 // integer values
+jf @COUNT1_11875
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4737 = 1 // integer values
+
+:COUNT1_11875
+if
+  $4735 == 0 // integer values
+jf @COUNT1_11908
+01CA: actor $4734 kill_player $PLAYER_CHAR
+$4735 = 1 // integer values
+
+:COUNT1_11908
+if
+  $4739 == 0 // integer values
+jf @COUNT1_12321
+if
+   Actor.Dead($4738)
+jf @COUNT1_12191
+$4751 -= 1 // integer values
+if
+  $4748 == 0 // integer values
+jf @COUNT1_12172
+if or
+031D:   actor $4738 hit_by_weapon 12
+031D:   actor $4738 hit_by_weapon 13
+031D:   actor $4738 hit_by_weapon 15
+031D:   actor $4738 hit_by_weapon 16
+031D:   actor $4738 hit_by_weapon 17
+031D:   actor $4738 hit_by_weapon 18
+jf @COUNT1_12027
+$4748 = 1 // integer values
+
+:COUNT1_12027
+if or
+031D:   actor $4738 hit_by_weapon 19
+031D:   actor $4738 hit_by_weapon 20
+031D:   actor $4738 hit_by_weapon 21
+031D:   actor $4738 hit_by_weapon 27
+031D:   actor $4738 hit_by_weapon 22
+031D:   actor $4738 hit_by_weapon 26
+jf @COUNT1_12087
+$4748 = 1 // integer values
+
+:COUNT1_12087
+if or
+031D:   actor $4738 hit_by_weapon 25
+031D:   actor $4738 hit_by_weapon 23
+031D:   actor $4738 hit_by_weapon 42
+031D:   actor $4738 hit_by_weapon 31
+031D:   actor $4738 hit_by_weapon 32
+031D:   actor $4738 hit_by_weapon 33
+jf @COUNT1_12147
+$4748 = 1 // integer values
+
+:COUNT1_12147
+if
+031D:   actor $4738 hit_by_weapon 11
+jf @COUNT1_12172
+$4748 = 1 // integer values
+
+:COUNT1_12172
+Actor.RemoveReferences($4738)
+$4739 = 1 // integer values
+jump @COUNT1_12321
+
+:COUNT1_12191
+if
+  $4743 == 1 // integer values
+jf @COUNT1_12321
+if or
+0480:   actor $4738 looking_at_death_of_actor_with_pedtype 11
+0123:   actor $4738 spotted_player $PLAYER_CHAR
+  $4741 == 1 // integer values
+  $4747 == 1 // integer values
+jf @COUNT1_12321
+if
+  $4741 == 0 // integer values
+jf @COUNT1_12321
+if
+  $4740 == 0 // integer values
+jf @COUNT1_12321
+00BC: text_highpriority 'CM1_3' 5000 ms 1  // ~g~You've been spotted!
+$4698 = 1 // integer values
+$4747 = 1 // integer values
+$4740 = 1 // integer values
+
+:COUNT1_12321
+return
+
+:COUNT1_12323
+if
+  40 >= $4750 // integer values
+jf @COUNT1_13336
+if
+  6 > $4751 // integer values
+jf @COUNT1_13336
+if
+  $4752 == 2 // integer values
+jf @COUNT1_12391
+17@ = 0 // integer values
+$4752 = 0 // integer values
+
+:COUNT1_12391
+if
+8339:   not anything_in_cube_cornerA -693.25 -1257.23 14.0 cornerB -685.06 -1261.67 17.0 solid 0 car 1 actor 1 object 0 particle 0
+jf @COUNT1_13336
+$4785 = 3000 // integer values
+if
+002F:   17@ >= $4785 // integer values
+jf @COUNT1_13336
+if
+  $4752 == 0 // integer values
+jf @COUNT1_13336
+$4753 = -1 // integer values
+if or
+  $4755 == 0 // integer values
+  $4755 == 2 // integer values
+jf @COUNT1_12591
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4754 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4754 // integer values and handles
+$4755 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_12591
+if or
+  $4757 == 0 // integer values
+  $4757 == 2 // integer values
+jf @COUNT1_12686
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4756 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4756 // integer values and handles
+$4757 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_12686
+if or
+  $4759 == 0 // integer values
+  $4759 == 2 // integer values
+jf @COUNT1_12781
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4758 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4758 // integer values and handles
+$4759 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_12781
+if or
+  $4761 == 0 // integer values
+  $4761 == 2 // integer values
+jf @COUNT1_12876
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4760 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4760 // integer values and handles
+$4761 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_12876
+if or
+  $4763 == 0 // integer values
+  $4763 == 2 // integer values
+jf @COUNT1_12971
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4762 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4762 // integer values and handles
+$4763 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_12971
+if or
+  $4765 == 0 // integer values
+  $4765 == 2 // integer values
+jf @COUNT1_13066
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4764 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4764 // integer values and handles
+$4765 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_13066
+if or
+  $4767 == 0 // integer values
+  $4767 == 2 // integer values
+jf @COUNT1_13161
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4766 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4766 // integer values and handles
+$4767 = 1 // integer values
+jump @COUNT1_13249
+
+:COUNT1_13161
+if or
+  $4769 == 0 // integer values
+  $4769 == 2 // integer values
+jf @COUNT1_13249
+0395: clear_area 0 at -689.73 -1259.37 range 15.24 1.0
+$4768 = Actor.Create(Gang5, #GDA, -689.73, -1259.37, 15.24)
+0084: $4753 = $4768 // integer values and handles
+$4769 = 1 // integer values
+
+:COUNT1_13249
+if
+   not Actor.Dead($4753)
+jf @COUNT1_13336
+if
+   not $4753 == -1 // integer values
+jf @COUNT1_13336
+0243: set_actor $4753 ped_stats_to 16
+Actor.Angle($4753) = 204.71
+0239: actor $4753 run_to -688.4 -1262.07
+$4751 += 1 // integer values
+$4750 += 1 // integer values
+$4752 = 1 // integer values
+
+:COUNT1_13336
+return
+
+:COUNT1_13338
+if
+  $4752 == 1 // integer values
+jf @COUNT1_13470
+if
+   not Actor.Dead($4753)
+jf @COUNT1_13463
+if
+00ED:   actor $4753 0 -688.4 -1262.07 radius 1.0 1.0
+jf @COUNT1_13456
+01B2: give_actor $4753 weapon 25 ammo 30000 // Load the weapon model before using this
+009E: set_actor $4753 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4753 kill_player $PLAYER_CHAR
+$4752 = 2 // integer values
+
+:COUNT1_13456
+jump @COUNT1_13470
+
+:COUNT1_13463
+$4752 = 2 // integer values
+
+:COUNT1_13470
+return
+
+:COUNT1_13472
+if
+  $4782 == 10 // integer values
+jf @COUNT1_13579
+if
+  $4755 == 1 // integer values
+jf @COUNT1_13579
+if
+   Actor.Dead($4754)
+jf @COUNT1_13550
+Actor.DestroyWithFade($4754)
+$4751 -= 1 // integer values
+$4755 = 2 // integer values
+jump @COUNT1_13579
+
+:COUNT1_13550
+009E: set_actor $4754 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4754 kill_player $PLAYER_CHAR
+
+:COUNT1_13579
+if
+  $4782 == 11 // integer values
+jf @COUNT1_13686
+if
+  $4757 == 1 // integer values
+jf @COUNT1_13686
+if
+   Actor.Dead($4756)
+jf @COUNT1_13657
+Actor.DestroyWithFade($4756)
+$4751 -= 1 // integer values
+$4757 = 2 // integer values
+jump @COUNT1_13686
+
+:COUNT1_13657
+009E: set_actor $4756 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4756 kill_player $PLAYER_CHAR
+
+:COUNT1_13686
+if
+  $4782 == 12 // integer values
+jf @COUNT1_13793
+if
+  $4759 == 1 // integer values
+jf @COUNT1_13793
+if
+   Actor.Dead($4758)
+jf @COUNT1_13764
+Actor.DestroyWithFade($4758)
+$4751 -= 1 // integer values
+$4759 = 2 // integer values
+jump @COUNT1_13793
+
+:COUNT1_13764
+009E: set_actor $4758 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4758 kill_player $PLAYER_CHAR
+
+:COUNT1_13793
+if
+  $4782 == 13 // integer values
+jf @COUNT1_13900
+if
+  $4761 == 1 // integer values
+jf @COUNT1_13900
+if
+   Actor.Dead($4760)
+jf @COUNT1_13871
+Actor.DestroyWithFade($4760)
+$4751 -= 1 // integer values
+$4761 = 2 // integer values
+jump @COUNT1_13900
+
+:COUNT1_13871
+009E: set_actor $4760 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4760 kill_player $PLAYER_CHAR
+
+:COUNT1_13900
+if
+  $4782 == 14 // integer values
+jf @COUNT1_14007
+if
+  $4763 == 1 // integer values
+jf @COUNT1_14007
+if
+   Actor.Dead($4762)
+jf @COUNT1_13978
+Actor.DestroyWithFade($4762)
+$4751 -= 1 // integer values
+$4763 = 2 // integer values
+jump @COUNT1_14007
+
+:COUNT1_13978
+009E: set_actor $4762 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4762 kill_player $PLAYER_CHAR
+
+:COUNT1_14007
+if
+  $4782 == 15 // integer values
+jf @COUNT1_14114
+if
+  $4765 == 1 // integer values
+jf @COUNT1_14114
+if
+   Actor.Dead($4764)
+jf @COUNT1_14085
+Actor.DestroyWithFade($4764)
+$4751 -= 1 // integer values
+$4765 = 2 // integer values
+jump @COUNT1_14114
+
+:COUNT1_14085
+009E: set_actor $4764 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4764 kill_player $PLAYER_CHAR
+
+:COUNT1_14114
+if
+  $4782 == 16 // integer values
+jf @COUNT1_14221
+if
+  $4767 == 1 // integer values
+jf @COUNT1_14221
+if
+   Actor.Dead($4766)
+jf @COUNT1_14192
+Actor.DestroyWithFade($4766)
+$4751 -= 1 // integer values
+$4767 = 2 // integer values
+jump @COUNT1_14221
+
+:COUNT1_14192
+009E: set_actor $4766 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4766 kill_player $PLAYER_CHAR
+
+:COUNT1_14221
+if
+  $4782 == 17 // integer values
+jf @COUNT1_14328
+if
+  $4769 == 1 // integer values
+jf @COUNT1_14328
+if
+   Actor.Dead($4768)
+jf @COUNT1_14299
+Actor.DestroyWithFade($4768)
+$4751 -= 1 // integer values
+$4769 = 2 // integer values
+jump @COUNT1_14328
+
+:COUNT1_14299
+009E: set_actor $4768 path $4744 $4745 $4746 unknown 0.5 1
+01CA: actor $4768 kill_player $PLAYER_CHAR
+
+:COUNT1_14328
+return
+
+:COUNT1_14330
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+0395: clear_area 0 at -684.9 -1248.98 range 30.14 2.0
+0395: clear_area 0 at -686.85 -1245.43 range 30.14 2.0
+Camera.SetPosition(-691.09, -1242.906, 31.45, 0.0, 0.0, 0.0)
+Camera.PointAt(-690.182, -1243.3, 31.46, 2)
+0211: actor $PLAYER_ACTOR walk_to -684.9 -1248.98
+16@ = 0 // integer values
+
+:COUNT1_14484
+if
+80ED:   not actor $PLAYER_ACTOR 0 -684.9 -1248.98 radius 0.5 0.5
+jf @COUNT1_14897
+wait 0
+01BD: $4775 = current_time_in_ms
+if
+  $4747 == 1 // integer values
+jf @COUNT1_14735
+if
+  $4778 == 0 // integer values
+jf @COUNT1_14582
+0084: $4776 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_14582
+if
+  $4778 == 1 // integer values
+jf @COUNT1_14642
+0084: $4777 = $4775 // integer values and handles
+0060: $4777 -= $4776 // integer values
+if
+  $4777 >= 1000 // integer values
+jf @COUNT1_14642
+$4778 = 2 // integer values
+
+:COUNT1_14642
+if
+  $4779 == 0 // integer values
+jf @COUNT1_14675
+0084: $4781 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_14675
+if
+  $4779 == 1 // integer values
+jf @COUNT1_14735
+0084: $4780 = $4775 // integer values and handles
+0060: $4780 -= $4781 // integer values
+if
+  $4780 >= 1000 // integer values
+jf @COUNT1_14735
+$4779 = 2 // integer values
+
+:COUNT1_14735
+if
+  16@ >= 6000 // integer values
+jf @COUNT1_14812
+if
+80ED:   not actor $PLAYER_ACTOR 0 -684.9 -1248.98 radius 0.5 0.5
+jf @COUNT1_14812
+Actor.PutAt($PLAYER_ACTOR, -684.9, -1248.98, 30.14)
+
+:COUNT1_14812
+gosub @COUNT1_6731
+if
+  $4741 == 1 // integer values
+jf @COUNT1_14890
+if
+  $4770 == 0 // integer values
+jf @COUNT1_14869
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_14869
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_14890
+jump @COUNT1_14484
+
+:COUNT1_14897
+03D1: play_wav 2
+00BC: text_highpriority 'CNT1_1' 5000 ms 1  // Who are you? Oooof! Aaiieee! Not the face! Not the face!
+03CF: load_wav 'CNT1_2' as 1
+
+:COUNT1_14928
+if
+83D2:   not wav 2 ended
+jf @COUNT1_15241
+wait 0
+01BD: $4775 = current_time_in_ms
+if
+  $4747 == 1 // integer values
+jf @COUNT1_15156
+if
+  $4778 == 0 // integer values
+jf @COUNT1_15003
+0084: $4776 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15003
+if
+  $4778 == 1 // integer values
+jf @COUNT1_15063
+0084: $4777 = $4775 // integer values and handles
+0060: $4777 -= $4776 // integer values
+if
+  $4777 >= 1000 // integer values
+jf @COUNT1_15063
+$4778 = 2 // integer values
+
+:COUNT1_15063
+if
+  $4779 == 0 // integer values
+jf @COUNT1_15096
+0084: $4781 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15096
+if
+  $4779 == 1 // integer values
+jf @COUNT1_15156
+0084: $4780 = $4775 // integer values and handles
+0060: $4780 -= $4781 // integer values
+if
+  $4780 >= 1000 // integer values
+jf @COUNT1_15156
+$4779 = 2 // integer values
+
+:COUNT1_15156
+gosub @COUNT1_6731
+if
+  $4741 == 1 // integer values
+jf @COUNT1_15234
+if
+  $4770 == 0 // integer values
+jf @COUNT1_15213
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_15213
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_15234
+jump @COUNT1_14928
+
+:COUNT1_15241
+03D5: remove_text 'CNT1_1'  // Who are you? Oooof! Aaiieee! Not the face! Not the face!
+
+:COUNT1_15251
+if
+83D0:   not wav 1 loaded
+jf @COUNT1_15564
+wait 0
+01BD: $4775 = current_time_in_ms
+if
+  $4747 == 1 // integer values
+jf @COUNT1_15479
+if
+  $4778 == 0 // integer values
+jf @COUNT1_15326
+0084: $4776 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15326
+if
+  $4778 == 1 // integer values
+jf @COUNT1_15386
+0084: $4777 = $4775 // integer values and handles
+0060: $4777 -= $4776 // integer values
+if
+  $4777 >= 1000 // integer values
+jf @COUNT1_15386
+$4778 = 2 // integer values
+
+:COUNT1_15386
+if
+  $4779 == 0 // integer values
+jf @COUNT1_15419
+0084: $4781 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15419
+if
+  $4779 == 1 // integer values
+jf @COUNT1_15479
+0084: $4780 = $4775 // integer values and handles
+0060: $4780 -= $4781 // integer values
+if
+  $4780 >= 1000 // integer values
+jf @COUNT1_15479
+$4779 = 2 // integer values
+
+:COUNT1_15479
+gosub @COUNT1_6731
+if
+  $4741 == 1 // integer values
+jf @COUNT1_15557
+if
+  $4770 == 0 // integer values
+jf @COUNT1_15536
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_15536
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_15557
+jump @COUNT1_15251
+
+:COUNT1_15564
+03D1: play_wav 1
+00BC: text_highpriority 'CNT1_2' 5000 ms 1  // Ok, I talk! I talk!
+
+:COUNT1_15583
+if
+83D2:   not wav 1 ended
+jf @COUNT1_15896
+wait 0
+01BD: $4775 = current_time_in_ms
+if
+  $4747 == 1 // integer values
+jf @COUNT1_15811
+if
+  $4778 == 0 // integer values
+jf @COUNT1_15658
+0084: $4776 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15658
+if
+  $4778 == 1 // integer values
+jf @COUNT1_15718
+0084: $4777 = $4775 // integer values and handles
+0060: $4777 -= $4776 // integer values
+if
+  $4777 >= 1000 // integer values
+jf @COUNT1_15718
+$4778 = 2 // integer values
+
+:COUNT1_15718
+if
+  $4779 == 0 // integer values
+jf @COUNT1_15751
+0084: $4781 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_15751
+if
+  $4779 == 1 // integer values
+jf @COUNT1_15811
+0084: $4780 = $4775 // integer values and handles
+0060: $4780 -= $4781 // integer values
+if
+  $4780 >= 1000 // integer values
+jf @COUNT1_15811
+$4779 = 2 // integer values
+
+:COUNT1_15811
+gosub @COUNT1_6731
+if
+  $4741 == 1 // integer values
+jf @COUNT1_15889
+if
+  $4770 == 0 // integer values
+jf @COUNT1_15868
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_15868
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_15889
+jump @COUNT1_15583
+
+:COUNT1_15896
+03D5: remove_text 'CNT1_2'  // Ok, I talk! I talk!
+Actor.PutAt($PLAYER_ACTOR, -685.59, -1247.87, 30.14)
+Actor.Angle($PLAYER_ACTOR) = 32.24
+0395: clear_area 0 at -686.85 -1245.43 range 30.14 2.0
+0395: clear_area 0 at -684.9 -1248.98 range 30.14 2.0
+0211: actor $PLAYER_ACTOR walk_to -686.85 -1245.43
+17@ = 0 // integer values
+
+:COUNT1_16006
+if
+80ED:   not actor $PLAYER_ACTOR 0 -686.85 -1245.43 radius 0.5 0.5
+jf @COUNT1_16419
+wait 0
+01BD: $4775 = current_time_in_ms
+if
+  $4747 == 1 // integer values
+jf @COUNT1_16257
+if
+  $4778 == 0 // integer values
+jf @COUNT1_16104
+0084: $4776 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_16104
+if
+  $4778 == 1 // integer values
+jf @COUNT1_16164
+0084: $4777 = $4775 // integer values and handles
+0060: $4777 -= $4776 // integer values
+if
+  $4777 >= 1000 // integer values
+jf @COUNT1_16164
+$4778 = 2 // integer values
+
+:COUNT1_16164
+if
+  $4779 == 0 // integer values
+jf @COUNT1_16197
+0084: $4781 = $4775 // integer values and handles
+$4778 = 1 // integer values
+
+:COUNT1_16197
+if
+  $4779 == 1 // integer values
+jf @COUNT1_16257
+0084: $4780 = $4775 // integer values and handles
+0060: $4780 -= $4781 // integer values
+if
+  $4780 >= 1000 // integer values
+jf @COUNT1_16257
+$4779 = 2 // integer values
+
+:COUNT1_16257
+if
+  17@ >= 4000 // integer values
+jf @COUNT1_16334
+if
+80ED:   not actor $PLAYER_ACTOR 0 -686.85 -1245.43 radius 0.5 0.5
+jf @COUNT1_16334
+Actor.PutAt($PLAYER_ACTOR, -686.85, -1245.43, 30.14)
+
+:COUNT1_16334
+gosub @COUNT1_6731
+if
+  $4741 == 1 // integer values
+jf @COUNT1_16412
+if
+  $4770 == 0 // integer values
+jf @COUNT1_16391
+17@ = 0 // integer values
+$4770 = 1 // integer values
+
+:COUNT1_16391
+gosub @COUNT1_12323
+gosub @COUNT1_13338
+gosub @COUNT1_13472
+
+:COUNT1_16412
+jump @COUNT1_16006
+
+:COUNT1_16419
+02A3: enable_widescreen 0
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+$4771 = 1 // integer values
+return
+
+:COUNT1_16457
+018E: stop_sound $4742
+Actor.RemoveReferences($4696)
+Actor.RemoveReferences($4702)
+Actor.RemoveReferences($4706)
+Actor.RemoveReferences($4710)
+Actor.RemoveReferences($4714)
+Actor.RemoveReferences($4718)
+Actor.RemoveReferences($4722)
+Actor.RemoveReferences($4726)
+Actor.RemoveReferences($4730)
+Actor.RemoveReferences($4734)
+Actor.RemoveReferences($4738)
+Actor.RemoveReferences($4754)
+Actor.RemoveReferences($4756)
+Actor.RemoveReferences($4758)
+Actor.RemoveReferences($4760)
+Actor.RemoveReferences($4762)
+Actor.RemoveReferences($4764)
+Actor.RemoveReferences($4766)
+Actor.RemoveReferences($4768)
+$4786 = 1 // integer values
+return

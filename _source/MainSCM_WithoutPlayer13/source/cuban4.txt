@@ -1,0 +1,3056 @@
+:CUBAN4
+thread 'CUBAN4'
+gosub @CUBAN4_46
+if
+wasted_or_busted
+jf @CUBAN4_37
+gosub @CUBAN4_20102
+
+:CUBAN4_37
+gosub @CUBAN4_20581
+end_thread
+
+:CUBAN4_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'CUBAN4'
+058E: set_restart_mission_taxi_destination -1173.5 -599.6 10.2 277.1
+$5685 = 0 // integer values
+$5686 = 1 // integer values
+$5687 = 0 // integer values
+$5688 = 0 // integer values
+$5689 = 0 // integer values
+$5690 = 0 // integer values
+$5691 = 0 // integer values
+$5692 = 0 // integer values
+$5693 = 0 // integer values
+$5694 = 0 // integer values
+$5695 = 0 // integer values
+$5696 = 0 // integer values
+$5697 = 0 // integer values
+$5698 = 0 // integer values
+$5699 = 0 // integer values
+$5700 = 46000 // integer values
+$5701 = 0 // integer values
+$5702 = 2 // integer values
+$5703 = 0 // integer values
+$5704 = 0 // integer values
+$5705 = 0 // integer values
+$5706 = 0 // integer values
+$5707 = 0 // integer values
+$5708 = 0 // integer values
+$5709 = 0 // integer values
+$5710 = 0 // integer values
+$5663 = 0 // integer values
+$5664 = 0 // integer values
+$5711 = 0 // integer values
+$5712 = 0 // integer values
+$5713 = 0 // integer values
+$5714 = 0 // integer values
+$5715 = 0 // integer values
+$5716 = 0 // integer values
+$5717 = 0 // integer values
+select_interior 7
+0522:
+042B: clear_peds_from_cube -1174.8 -609.0 10.4 -116.3 -632.5 15.3
+01EB: set_traffic_density_multiplier_to 0.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+03CF: load_wav 'MONO16' as 1
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSUMBTO'
+023C: load_special_actor 3 'FLOOZYB'
+023C: load_special_actor 4 'FLOOZYC'
+023C: load_special_actor 5 'CSPAPA'
+02F3: load_object #CUTOBJ01 'CCFAN'
+02F3: load_object #CUTOBJ02 'ESPRESO'
+Camera.SetAtPos(-1169.0, -620.0, 10.791)
+038B: load_requested_models
+
+:CUBAN4_518
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @CUBAN4_560
+wait 0
+jump @CUBAN4_518
+
+:CUBAN4_560
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @CUBAN4_592
+wait 0
+jump @CUBAN4_560
+
+:CUBAN4_592
+02E4: load_cutscene_data 'CUB_3'
+0244: set_cutscene_pos -1170.708 -608.327 10.791
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $181 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $181 'CSUMBTO'
+02E5: $175 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $175 'FLOOZYB'
+02E5: $176 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $176 'FLOOZYC'
+02E5: $179 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $179 'CSPAPA'
+02E5: $218 = create_cutscene_object #CUTOBJ01
+04BC:  'CCFAN'
+02E6: set_cutscene_anim $218 'CCFAN'
+02E5: $204 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $204 'ESPRESO'
+0395: clear_area 1 at -1170.9 -603.7 range 10.6 1.0
+0055: put_player $PLAYER_CHAR at -1170.9 -603.7 10.6
+0171: set_player $PLAYER_CHAR z_angle_to 15.3
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:CUBAN4_854
+if
+  1888 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_889
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_854
+
+:CUBAN4_889
+00BC: text_highpriority 'CUB4_A' 10000 ms 1  // Hey, ladies. You know what I'm gonna do?
+
+:CUBAN4_904
+if
+  5073 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_939
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_904
+
+:CUBAN4_939
+00BC: text_highpriority 'CUB4_B' 10000 ms 1  // I'm gonna kill me a Haitian. And then?
+
+:CUBAN4_954
+if
+  7958 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_989
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_954
+
+:CUBAN4_989
+00BC: text_highpriority 'CUB4_C' 10000 ms 1  // And then I'm going to make love like a man.
+
+:CUBAN4_1004
+if
+  9915 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1039
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1004
+
+:CUBAN4_1039
+00BC: text_highpriority 'CUB4_D' 10000 ms 1  // You know that, chica? Something like this.
+
+:CUBAN4_1054
+if
+  15514 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1089
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1054
+
+:CUBAN4_1089
+00BC: text_highpriority 'CUB4_E' 10000 ms 1  // Loser!
+
+:CUBAN4_1104
+if
+  17098 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1139
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1104
+
+:CUBAN4_1139
+00BC: text_highpriority 'CUB4_F' 10000 ms 1  // Prick.
+
+:CUBAN4_1154
+if
+  17491 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1189
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1154
+
+:CUBAN4_1189
+00BC: text_highpriority 'CUB4_G' 10000 ms 1  // Hey, baby, I wouldn't touch you with a ten foot pole!
+
+:CUBAN4_1204
+if
+  21119 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1239
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1204
+
+:CUBAN4_1239
+00BC: text_highpriority 'CUB4_H' 10000 ms 1  // Umberto Robina, he likes the ladies! Not some goat in a skirt!
+
+:CUBAN4_1254
+if
+  26363 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1289
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1254
+
+:CUBAN4_1289
+00BC: text_highpriority 'CUB4_I' 10000 ms 1  // Tommy!! Tommy, I love you, I love you! Let's go!
+
+:CUBAN4_1304
+if
+  31119 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1339
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1304
+
+:CUBAN4_1339
+00BC: text_highpriority 'CUB4_J' 10000 ms 1  // Go where? Can't I get a cup of coffee first?
+
+:CUBAN4_1354
+if
+  32804 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1391
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1354
+
+:CUBAN4_1391
+00BC: text_highpriority 'CUB4_K' 10000 ms 1  // No time for coffee! Besides, I just had one.
+
+:CUBAN4_1406
+if
+  36208 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1443
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1406
+
+:CUBAN4_1443
+00BC: text_highpriority 'CUB4_L' 10000 ms 1  // We gonna take out the Haitians.
+
+:CUBAN4_1458
+if
+  38251 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1495
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1458
+
+:CUBAN4_1495
+00BC: text_highpriority 'CUB4_M' 10000 ms 1  // Tommy, how do you take out a snake?
+
+:CUBAN4_1510
+if
+  41602 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1547
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1510
+
+:CUBAN4_1547
+00BC: text_highpriority 'CUB4_N' 10000 ms 1  // You bite him in the ass! Hahaha!
+
+:CUBAN4_1562
+if
+  43148 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1599
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1562
+
+:CUBAN4_1599
+00BC: text_highpriority 'CUB4_O' 10000 ms 1  // Whatever you say, Umberto.
+
+:CUBAN4_1614
+if
+  44248 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1651
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1614
+
+:CUBAN4_1651
+00BC: text_highpriority 'CUB4_P' 10000 ms 1  // Tommy, you go and get us a little Haitian car.
+
+:CUBAN4_1666
+if
+  46776 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1703
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1666
+
+:CUBAN4_1703
+00BC: text_highpriority 'CUB4_Q' 10000 ms 1  // When you get it, come back and pick up my boy.
+
+:CUBAN4_1718
+if
+  49338 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1755
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1718
+
+:CUBAN4_1755
+00BC: text_highpriority 'CUB4_R' 10000 ms 1  // Pepe, and take him out to the Haitians.
+
+:CUBAN4_1770
+if
+  53344 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1807
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1770
+
+:CUBAN4_1807
+00BC: text_highpriority 'CUB4_S' 10000 ms 1  // Then, you go around to the Haitians processing plant, and you use their solvent as an explosive.
+
+:CUBAN4_1822
+if
+  59927 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1859
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1822
+
+:CUBAN4_1859
+00BC: text_highpriority 'CUB4_T' 10000 ms 1  // Boom! Bye bye!
+
+:CUBAN4_1874
+if
+  62394 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1911
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1874
+
+:CUBAN4_1911
+00BC: text_highpriority 'CUB4_U' 10000 ms 1  // Umberto, what about you?
+
+:CUBAN4_1926
+if
+  64830 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_1963
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1926
+
+:CUBAN4_1963
+00BC: text_highpriority 'CUB4_V' 10000 ms 1  // Uhh... I'm going to stay behind, and watch over the cafe with Poppa.
+
+:CUBAN4_1978
+if
+  68153 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_2015
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_1978
+
+:CUBAN4_2015
+00BC: text_highpriority 'CUB4_W' 10000 ms 1  // He not feeling so good. You know?
+
+:CUBAN4_2030
+if
+  69153 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_2067
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_2030
+
+:CUBAN4_2067
+00BE: text_clear_all
+
+:CUBAN4_2069
+if
+  71424 > $CUT_SCENE_TIME // integer values
+jf @CUBAN4_2106
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN4_2069
+
+:CUBAN4_2106
+fade 0 1500
+00BE: text_clear_all
+wait 1000
+if
+856A:   not has_cutscene_been_interrupted
+jf @CUBAN4_2152
+if
+03D0:   wav 1 loaded
+jf @CUBAN4_2152
+03D1: play_wav 1
+
+:CUBAN4_2152
+if
+fading
+jf @CUBAN4_2176
+wait 0
+jump @CUBAN4_2152
+
+:CUBAN4_2176
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+select_interior 0
+$989 = 0 // integer values
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 1 60000
+03F1: pedtype 8 add_threat 1
+Model.Load(#HNA)
+Model.Load(#HNB)
+Model.Load(#CBB)
+Model.Load(#CBA)
+Model.Load(#SNIPER)
+Model.Load(#TEC9)
+Model.Load(#VOODOO)
+Model.Load(#DYNAMITE)
+
+:CUBAN4_2305
+if or
+   not Model.Available(#CBA)
+   not Model.Available(#CBB)
+   not Model.Available(#HNA)
+   not Model.Available(#HNB)
+jf @CUBAN4_2343
+wait 0
+jump @CUBAN4_2305
+
+:CUBAN4_2343
+if or
+   not Model.Available(#SNIPER)
+   not Model.Available(#TEC9)
+   not Model.Available(#VOODOO)
+   not Model.Available(#DYNAMITE)
+jf @CUBAN4_2384
+wait 0
+jump @CUBAN4_2343
+
+:CUBAN4_2384
+if
+  $ONMISSION == 0 // integer values
+jf @CUBAN4_2594
+018A: $5684 = create_checkpoint_at -1181.2 83.8 11.3
+018A: $5681 = create_checkpoint_at -1198.4 104.8 11.1
+018A: $5682 = create_checkpoint_at -1198.4 106.6 11.1
+018A: $5683 = create_checkpoint_at -1198.9 108.3 11.1
+018A: $5678 = create_checkpoint_at -1037.4 172.3 10.0
+018A: $5679 = create_checkpoint_at -1084.1 70.2 10.8
+$5675 = Actor.Create(Gang2, #HNA, -1197.9, 82.5, 10.1)
+$5676 = Actor.Create(Gang2, #HNA, -1189.0, 83.6, 10.1)
+$5677 = Actor.Create(Gang2, #HNA, -1190.5, 68.5, 10.1)
+
+:CUBAN4_2594
+if
+834E:   not move_object $1791 to -1114.5 67.0 10.1 speed 10.0 10.0 0.0 collision_check 0
+jf @CUBAN4_2653
+wait 0
+jump @CUBAN4_2594
+
+:CUBAN4_2653
+$5718 = Car.Create(#VOODOO, -1071.3, -608.4, 9.7)
+$5652 = Actor.Create(Gang8, #CBB, -1170.0, -607.0, 10.6)
+04F5: unknown_actor $5652 kiss_player $PLAYER_CHAR on 1
+01B2: give_actor $5652 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5652 threat_search
+02A9: set_actor $5652 immune_to_nonplayer 1
+039E: set_actor $5652 locked_while_in_vehicle 1
+0243: set_actor $5652 ped_stats_to 16
+0291: set_actor $5652 attack_when_provoked 1
+0319: set_actor $5652 running 1
+0568: set_actor $5652 untargetable 1
+fade 1 1500
+$5659 = Actor.Create(Gang2, #HNA, -1116.8, 74.3, 10.1)
+Actor.Angle($5659) = 234.8
+01B2: give_actor $5659 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5659 threat_search
+0243: set_actor $5659 ped_stats_to 16
+0291: set_actor $5659 attack_when_provoked 1
+0350: set_actor $5659 maintain_position_when_attacked 1
+$5660 = Actor.Create(Gang2, #HNB, -1179.4, 71.2, 23.9)
+Actor.Angle($5660) = 270.0
+01B2: give_actor $5660 weapon 28 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5660 threat_search
+0243: set_actor $5660 ped_stats_to 16
+0291: set_actor $5660 attack_when_provoked 1
+0350: set_actor $5660 maintain_position_when_attacked 1
+$5653 = Car.Create(#VOODOO, -1044.5, 172.7, 9.8)
+Car.Angle($5653) = 180.8
+Car.SetImmunities($5653, 0, 1, 0, 0, 0)
+Car.ImmuneToNonPlayer($5653) = True
+Car.SetMaxSpeed($5653, 0.0)
+020A: set_car $5653 door_status_to 2
+00AE: set_vehicle $5653 traffic_behavior_to 2
+0129: $5655 = create_actor 14 #CBB in_car $5653 driverseat
+04F5: unknown_actor $5655 kiss_player $PLAYER_CHAR on 1
+01B2: give_actor $5655 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5655 threat_search
+039E: set_actor $5655 locked_while_in_vehicle 1
+0568: set_actor $5655 untargetable 1
+01C8: $5656 = create_actor_pedtype 14 model #CBA in_car $5653 passenger_seat 0
+04F5: unknown_actor $5656 kiss_player $PLAYER_CHAR on 1
+01B2: give_actor $5656 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5656 threat_search
+039E: set_actor $5656 locked_while_in_vehicle 1
+0568: set_actor $5656 untargetable 1
+01ED: clear_actor $5655 threat_search
+01ED: clear_actor $5656 threat_search
+$5654 = Car.Create(#VOODOO, -1040.4, 173.4, 9.9)
+Car.Angle($5654) = 177.1
+Car.SetImmunities($5654, 0, 1, 0, 0, 0)
+Car.ImmuneToNonPlayer($5654) = True
+Car.SetMaxSpeed($5654, 0.0)
+020A: set_car $5654 door_status_to 2
+00AE: set_vehicle $5654 traffic_behavior_to 2
+0129: $5657 = create_actor 14 #CBA in_car $5654 driverseat
+04F5: unknown_actor $5657 kiss_player $PLAYER_CHAR on 1
+01B2: give_actor $5657 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5657 threat_search
+039E: set_actor $5657 locked_while_in_vehicle 1
+0568: set_actor $5657 untargetable 1
+01C8: $5658 = create_actor_pedtype 14 model #CBA in_car $5654 passenger_seat 0
+04F5: unknown_actor $5658 kiss_player $PLAYER_CHAR on 1
+01B2: give_actor $5658 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5658 threat_search
+039E: set_actor $5658 locked_while_in_vehicle 1
+0568: set_actor $5658 untargetable 1
+01ED: clear_actor $5657 threat_search
+01ED: clear_actor $5658 threat_search
+04BD: set_car $5653 is_part_of_convoy 1
+04E0: car $5653 abandon_path_radius 255
+04BD: set_car $5654 is_part_of_convoy 1
+04E0: car $5654 abandon_path_radius 255
+01DF: tie_actor $5652 to_player $PLAYER_CHAR
+16@ = 0 // integer values
+17@ = 0 // integer values
+00BC: text_highpriority 'CUB4_26' 5000 ms 1  // ~g~Take Pepe, head North into Little Haiti and steal a Voodoo car.
+
+:CUBAN4_3317
+wait 0
+if
+  $5709 == 0 // integer values
+jf @CUBAN4_3705
+if
+00E0:   player $PLAYER_CHAR driving
+jf @CUBAN4_3705
+00DA: $5651 = player $PLAYER_CHAR car
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_3705
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_3687
+03F2: pedtype 8 remove_threat 1
+Marker.Disable($5678)
+Marker.Disable($5679)
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_3680
+if
+00FB:   player $PLAYER_CHAR 0 $5652 radius 8.0 8.0 8.0
+jf @CUBAN4_3680
+03CF: load_wav 'CUB4_6' as 1
+
+:CUBAN4_3478
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_3504
+wait 0
+jump @CUBAN4_3478
+
+:CUBAN4_3504
+00BC: text_highpriority 'CUB4_13' 5000 ms 1  // Oye, let's go find our muchachos!
+03D1: play_wav 1
+
+:CUBAN4_3523
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_3554
+wait 0
+jump @CUBAN4_3523
+
+:CUBAN4_3554
+040D: unload_wav 1
+03D5: remove_text 'CUB4_13'  // Oye, let's go find our muchachos!
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_3613
+018A: $5678 = create_checkpoint_at -1037.4 172.3 10.0
+jump @CUBAN4_3633
+
+:CUBAN4_3613
+018A: $5679 = create_checkpoint_at -1084.1 70.2 10.8
+
+:CUBAN4_3633
+if
+  $5703 == 0 // integer values
+jf @CUBAN4_3673
+00BC: text_highpriority 'CUB4_27' 5000 ms 1  // ~g~Go and meet up with Rico and the other Cubans.
+$5703 = 1 // integer values
+
+:CUBAN4_3673
+$5709 = 1 // integer values
+
+:CUBAN4_3680
+jump @CUBAN4_3705
+
+:CUBAN4_3687
+03F1: pedtype 8 add_threat 1
+Car.RemoveReferences($5651)
+$5709 = 0 // integer values
+
+:CUBAN4_3705
+if
+  $5709 == 1 // integer values
+jf @CUBAN4_5039
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_5039
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_4895
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_4828
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_4821
+if
+0320:   actor $5652 in_range_of_player $PLAYER_CHAR
+jf @CUBAN4_4821
+if
+00FA:   player $PLAYER_CHAR stopped 1 -1037.4 172.3 10.0 radius 3.0 3.0 10.0
+jf @CUBAN4_4814
+Marker.Disable($5678)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+03BA: clear_cars_from_cube -1072.2 70.7 10.2 -1011.2 200.7 15.2
+Camera.SetPosition(-1029.6, 169.7, 13.1, 0.0, 0.0, 0.0)
+Camera.PointAt(-1030.5, 170.0, 12.9, 2)
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_4004
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_4004
+00AE: set_vehicle $5653 traffic_behavior_to 3
+00AE: set_vehicle $5654 traffic_behavior_to 3
+
+:CUBAN4_4004
+03CF: load_wav 'CUB4_2' as 1
+03CF: load_wav 'CUB4_1' as 2
+
+:CUBAN4_4028
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @CUBAN4_4058
+wait 0
+jump @CUBAN4_4028
+
+:CUBAN4_4058
+00BC: text_highpriority 'CUB4_08' 4000 ms 1  // Hola, amigos.
+03D1: play_wav 1
+
+:CUBAN4_4077
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4108
+wait 0
+jump @CUBAN4_4077
+
+:CUBAN4_4108
+040D: unload_wav 1
+03D5: remove_text 'CUB4_08'  // Hola, amigos.
+00BC: text_highpriority 'CUB4_07' 4000 ms 1  // Oy - the solvent is round the back, amigo.
+03D1: play_wav 2
+
+:CUBAN4_4141
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4172
+wait 0
+jump @CUBAN4_4141
+
+:CUBAN4_4172
+040D: unload_wav 2
+03D5: remove_text 'CUB4_07'  // Oy - the solvent is round the back, amigo.
+03CF: load_wav 'CUB4_3' as 1
+03CF: load_wav 'CUB4_4' as 2
+
+:CUBAN4_4210
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @CUBAN4_4240
+wait 0
+jump @CUBAN4_4210
+
+:CUBAN4_4240
+00BC: text_highpriority 'CUB4_09' 4000 ms 1  // Bueno. Haitian Putas. Muerte.
+03D1: play_wav 1
+
+:CUBAN4_4259
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4290
+wait 0
+jump @CUBAN4_4259
+
+:CUBAN4_4290
+040D: unload_wav 1
+03D5: remove_text 'CUB4_09'  // Bueno. Haitian Putas. Muerte.
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_4350
+Car.SetMaxSpeed($5653, 10.0)
+Car.DriveTo($5653, -1072.2, 70.7, 11.2)
+
+:CUBAN4_4350
+00BC: text_highpriority 'CUB4_10' 4000 ms 1  // Vamos.
+03D1: play_wav 2
+
+:CUBAN4_4369
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4400
+wait 0
+jump @CUBAN4_4369
+
+:CUBAN4_4400
+040D: unload_wav 2
+03D5: remove_text 'CUB4_10'  // Vamos.
+03CF: load_wav 'CUB4_5' as 1
+03CF: load_wav 'CUB4_7' as 2
+
+:CUBAN4_4438
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @CUBAN4_4468
+wait 0
+jump @CUBAN4_4438
+
+:CUBAN4_4468
+00BC: text_highpriority 'CUB4_11' 4000 ms 1  // Vamos indeed.
+03D1: play_wav 1
+
+:CUBAN4_4487
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4518
+wait 0
+jump @CUBAN4_4487
+
+:CUBAN4_4518
+040D: unload_wav 1
+03D5: remove_text 'CUB4_11'  // Vamos indeed.
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_4578
+Car.SetMaxSpeed($5654, 10.0)
+Car.DriveTo($5654, -1072.2, 70.7, 11.2)
+
+:CUBAN4_4578
+00BC: text_highpriority 'CUB4_14' 4000 ms 1  // Follow my compadres.
+03D1: play_wav 2
+
+:CUBAN4_4597
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_4628
+wait 0
+jump @CUBAN4_4597
+
+:CUBAN4_4628
+040D: unload_wav 2
+03D5: remove_text 'CUB4_14'  // Follow my compadres.
+wait 3000
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_4716
+Car.SetMaxSpeed($5653, 0.0)
+Car.PutAt($5653, -1101.2, 70.0, 10.8)
+Car.Angle($5653) = 87.8
+
+:CUBAN4_4716
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_4772
+Car.SetMaxSpeed($5654, 0.0)
+Car.PutAt($5654, -1093.0, 70.6, 10.8)
+Car.Angle($5654) = 90.6
+
+:CUBAN4_4772
+018A: $5679 = create_checkpoint_at -1084.1 70.2 10.8
+00BC: text_highpriority 'CUB4_28' 5000 ms 1  // ~g~Join the other Cubans at the Haitian Drugs Factory.
+$5710 = 1 // integer values
+
+:CUBAN4_4814
+$5702 = 0 // integer values
+
+:CUBAN4_4821
+jump @CUBAN4_4888
+
+:CUBAN4_4828
+if
+00FA:   player $PLAYER_CHAR stopped 1 -1084.1 70.2 10.8 radius 5.0 5.0 10.0
+jf @CUBAN4_4888
+Marker.Disable($5679)
+jump @CUBAN4_8143
+
+:CUBAN4_4888
+jump @CUBAN4_5039
+
+:CUBAN4_4895
+if
+  $5702 == 0 // integer values
+jf @CUBAN4_5022
+03CF: load_wav 'CUB4_5A' as 1
+
+:CUBAN4_4925
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_4951
+wait 0
+jump @CUBAN4_4925
+
+:CUBAN4_4951
+00BC: text_highpriority 'CUB4_12' 5000 ms 1  // Hey, we need a Haitian gang car!
+03D1: play_wav 1
+
+:CUBAN4_4970
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_5001
+wait 0
+jump @CUBAN4_4970
+
+:CUBAN4_5001
+040D: unload_wav 1
+03D5: remove_text 'CUB4_12'  // Hey, we need a Haitian gang car!
+$5702 = 1 // integer values
+
+:CUBAN4_5022
+Marker.Disable($5678)
+Marker.Disable($5679)
+$5709 = 0 // integer values
+
+:CUBAN4_5039
+if
+  17@ > 5000 // integer values
+jf @CUBAN4_5680
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_5651
+if
+  $5686 == 1 // integer values
+jf @CUBAN4_5151
+if
+8320:   not actor $5652 in_range_of_player $PLAYER_CHAR
+jf @CUBAN4_5151
+00BC: text_highpriority 'CUB4_24' 5000 ms 1  // You've left Pepe behind, go and get him.
+Marker.Disable($5678)
+Marker.Disable($5679)
+$5680 = Marker.CreateAboveActor($5652)
+$5686 = 0 // integer values
+
+:CUBAN4_5151
+if
+  $5686 == 0 // integer values
+jf @CUBAN4_5644
+if
+00FB:   player $PLAYER_CHAR 0 $5652 radius 8.0 8.0 8.0
+jf @CUBAN4_5644
+01DF: tie_actor $5652 to_player $PLAYER_CHAR
+Marker.Disable($5680)
+Marker.Disable($5678)
+Marker.Disable($5679)
+if
+80DE:   not player $PLAYER_CHAR driving_vehicle_type #VOODOO
+jf @CUBAN4_5381
+if
+  $5702 == 0 // integer values
+jf @CUBAN4_5374
+03CF: load_wav 'CUB4_5A' as 1
+
+:CUBAN4_5277
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_5303
+wait 0
+jump @CUBAN4_5277
+
+:CUBAN4_5303
+00BC: text_highpriority 'CUB4_12' 5000 ms 1  // Hey, we need a Haitian gang car!
+03D1: play_wav 1
+
+:CUBAN4_5322
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_5353
+wait 0
+jump @CUBAN4_5322
+
+:CUBAN4_5353
+040D: unload_wav 1
+03D5: remove_text 'CUB4_12'  // Hey, we need a Haitian gang car!
+$5702 = 1 // integer values
+
+:CUBAN4_5374
+jump @CUBAN4_5483
+
+:CUBAN4_5381
+03CF: load_wav 'CUB4_6' as 1
+
+:CUBAN4_5393
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_5419
+wait 0
+jump @CUBAN4_5393
+
+:CUBAN4_5419
+00BC: text_highpriority 'CUB4_13' 5000 ms 1  // Oye, let's go find our muchachos!
+03D1: play_wav 1
+
+:CUBAN4_5438
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_5469
+wait 0
+jump @CUBAN4_5438
+
+:CUBAN4_5469
+040D: unload_wav 1
+03D5: remove_text 'CUB4_13'  // Oye, let's go find our muchachos!
+
+:CUBAN4_5483
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_5637
+if
+0320:   actor $5652 in_range_of_player $PLAYER_CHAR
+jf @CUBAN4_5637
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_5637
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_5637
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_5637
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_5617
+018A: $5678 = create_checkpoint_at -1037.4 172.3 10.0
+jump @CUBAN4_5637
+
+:CUBAN4_5617
+018A: $5679 = create_checkpoint_at -1084.1 70.2 10.8
+
+:CUBAN4_5637
+$5686 = 1 // integer values
+
+:CUBAN4_5644
+jump @CUBAN4_5673
+
+:CUBAN4_5651
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_5673
+$5702 = 0 // integer values
+
+:CUBAN4_5680
+if
+  16@ > 5000 // integer values
+jf @CUBAN4_7911
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_7911
+if
+0320:   actor $5652 in_range_of_player $PLAYER_CHAR
+jf @CUBAN4_7911
+if
+00FB:   player $PLAYER_CHAR 0 $5652 radius 8.0 8.0 8.0
+jf @CUBAN4_7911
+if
+  $5712 == 0 // integer values
+jf @CUBAN4_6073
+if
+0056:   player $PLAYER_CHAR 0 -1222.1 -346.7 -996.3 -365.2
+jf @CUBAN4_6073
+03CF: load_wav 'CUB4_11' as 1
+
+:CUBAN4_5838
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_5933
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_5904
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_5926
+
+:CUBAN4_5904
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_5926
+jump @CUBAN4_5838
+
+:CUBAN4_5933
+00BC: text_highpriority 'CUB4_18' 5000 ms 1  // Man, this a nice part of town...
+03D1: play_wav 1
+
+:CUBAN4_5952
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_6052
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6023
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6045
+
+:CUBAN4_6023
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6045
+jump @CUBAN4_5952
+
+:CUBAN4_6052
+040D: unload_wav 1
+03D5: remove_text 'CUB4_18'  // Man, this a nice part of town...
+$5712 = 1 // integer values
+
+:CUBAN4_6073
+if
+  $5713 == 0 // integer values
+jf @CUBAN4_6376
+if
+0056:   player $PLAYER_CHAR 0 -989.3 -436.5 -1011.2 -500.6
+jf @CUBAN4_6376
+03CF: load_wav 'CUB4_13' as 1
+
+:CUBAN4_6141
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_6236
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6207
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6229
+
+:CUBAN4_6207
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6229
+jump @CUBAN4_6141
+
+:CUBAN4_6236
+00BC: text_highpriority 'CUB4_20' 5000 ms 1  // I had a beautiful woman... lived around this neighborhood.
+03D1: play_wav 1
+
+:CUBAN4_6255
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_6355
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6326
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6348
+
+:CUBAN4_6326
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6348
+jump @CUBAN4_6255
+
+:CUBAN4_6355
+040D: unload_wav 1
+03D5: remove_text 'CUB4_20'  // I had a beautiful woman... lived around this neighborhood.
+$5713 = 1 // integer values
+
+:CUBAN4_6376
+if
+  $5714 == 0 // integer values
+jf @CUBAN4_6679
+if
+0056:   player $PLAYER_CHAR 0 -1186.1 -95.5 -1054.3 -51.6
+jf @CUBAN4_6679
+03CF: load_wav 'CUB4_12' as 1
+
+:CUBAN4_6444
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_6539
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6510
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6532
+
+:CUBAN4_6510
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6532
+jump @CUBAN4_6444
+
+:CUBAN4_6539
+00BC: text_highpriority 'CUB4_19' 5000 ms 1  // This place is a dump, man.
+03D1: play_wav 1
+
+:CUBAN4_6558
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_6658
+wait 0
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6629
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6651
+
+:CUBAN4_6629
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6651
+jump @CUBAN4_6558
+
+:CUBAN4_6658
+040D: unload_wav 1
+03D5: remove_text 'CUB4_19'  // This place is a dump, man.
+$5714 = 1 // integer values
+
+:CUBAN4_6679
+if
+  $5715 == 0 // integer values
+jf @CUBAN4_7090
+if
+0056:   player $PLAYER_CHAR 0 -1063.6 101.9 -1078.9 67.0
+jf @CUBAN4_7090
+03CF: load_wav 'CUB4_14' as 1
+
+:CUBAN4_6747
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_6896
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_6889
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_6889
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_6889
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_6867
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_6889
+
+:CUBAN4_6867
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_6889
+jump @CUBAN4_6747
+
+:CUBAN4_6896
+00BC: text_highpriority 'CUB4_21' 5000 ms 1  // You know, they do nice pizzas here.
+03D1: play_wav 1
+
+:CUBAN4_6915
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_7069
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_7062
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_7062
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_7062
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_7040
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_7062
+
+:CUBAN4_7040
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_7062
+jump @CUBAN4_6915
+
+:CUBAN4_7069
+040D: unload_wav 1
+03D5: remove_text 'CUB4_21'  // You know, they do nice pizzas here.
+$5715 = 1 // integer values
+
+:CUBAN4_7090
+if
+  $5716 == 0 // integer values
+jf @CUBAN4_7484
+if
+  16@ > 60000 // integer values
+jf @CUBAN4_7484
+03CF: load_wav 'CUB4_16' as 1
+
+:CUBAN4_7141
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_7290
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_7283
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_7283
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_7283
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_7261
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_7283
+
+:CUBAN4_7261
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_7283
+jump @CUBAN4_7141
+
+:CUBAN4_7290
+00BC: text_highpriority 'CUB4_23' 5000 ms 1  // You lost, man?
+03D1: play_wav 1
+
+:CUBAN4_7309
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_7463
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_7456
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_7456
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_7456
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_7434
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_7456
+
+:CUBAN4_7434
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_7456
+jump @CUBAN4_7309
+
+:CUBAN4_7463
+040D: unload_wav 1
+03D5: remove_text 'CUB4_23'  // You lost, man?
+$5716 = 1 // integer values
+
+:CUBAN4_7484
+if
+  $5717 == 0 // integer values
+jf @CUBAN4_7911
+if
+00E0:   player $PLAYER_CHAR driving
+jf @CUBAN4_7911
+if
+0056:   player $PLAYER_CHAR 0 -1045.9 138.2 -1012.2 198.7
+jf @CUBAN4_7911
+03CF: load_wav 'CUB4_15' as 1
+
+:CUBAN4_7568
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_7717
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_7710
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_7710
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_7710
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_7688
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_7710
+
+:CUBAN4_7688
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_7710
+jump @CUBAN4_7568
+
+:CUBAN4_7717
+00BC: text_highpriority 'CUB4_22' 5000 ms 1  // Whoah, man. You drive like a crazy bitch!
+03D1: play_wav 1
+
+:CUBAN4_7736
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5652)
+jf @CUBAN4_7890
+wait 0
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_7883
+if
+   Car.Model($5651) == #VOODOO
+jf @CUBAN4_7883
+if
+00DC:   player $PLAYER_CHAR driving $5651
+jf @CUBAN4_7883
+if
+  $5710 == 0 // integer values
+jf @CUBAN4_7861
+03A1: clear_area_with_center_at_3D_coord -1037.4 172.3 10.0 radius 3.0
+jump @CUBAN4_7883
+
+:CUBAN4_7861
+03A1: clear_area_with_center_at_3D_coord -1084.1 70.2 10.8 radius 5.0
+
+:CUBAN4_7883
+jump @CUBAN4_7736
+
+:CUBAN4_7890
+040D: unload_wav 1
+03D5: remove_text 'CUB4_22'  // Whoah, man. You drive like a crazy bitch!
+$5717 = 1 // integer values
+
+:CUBAN4_7911
+if
+02D5:   player $PLAYER_CHAR firing_weapons_in_rectangle -1208.7 42.5 -1077.4 126.0 0
+jf @CUBAN4_8002
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_7980
+0239: actor $5659 run_to -1170.9 87.6
+
+:CUBAN4_7980
+00BC: text_highpriority 'CUB4_04' 5000 ms 1  // ~r~You've alerted the base, there is no way we will get in now!
+jump @CUBAN4_20102
+
+:CUBAN4_8002
+if or
+   Actor.Dead($5655)
+   Actor.Dead($5656)
+   Actor.Dead($5657)
+   Actor.Dead($5658)
+jf @CUBAN4_8055
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_8055
+if or
+   Car.Wrecked($5653)
+   Car.Wrecked($5654)
+jf @CUBAN4_8098
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_8098
+if
+   Actor.Dead($5659)
+jf @CUBAN4_8136
+00BC: text_highpriority 'CUB4_04' 5000 ms 1  // ~r~You've alerted the base, there is no way we will get in now!
+jump @CUBAN4_20102
+
+:CUBAN4_8136
+jump @CUBAN4_3317
+
+:CUBAN4_8143
+00BC: text_highpriority 'CUB4_03' 5000 ms 1  // ~g~Stay in the car until safely parked inside the compound.
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_8204
+02C2: car $5653 drive_to_point -1108.8 69.8 10.8
+Car.SetMaxSpeed($5653, 2.0)
+
+:CUBAN4_8204
+wait 0
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_8276
+if
+01AD:   car $5653 sphere 0 near_point -1108.8 69.8 radius 3.0 3.0
+jf @CUBAN4_8269
+jump @CUBAN4_8558
+
+:CUBAN4_8269
+jump @CUBAN4_8298
+
+:CUBAN4_8276
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_8298
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_8355
+if
+80DC:   not player $PLAYER_CHAR driving $5651
+jf @CUBAN4_8355
+00BC: text_highpriority 'CUB4_10' 5000 ms 1  // Vamos.
+jump @CUBAN4_20102
+
+:CUBAN4_8355
+if
+02D5:   player $PLAYER_CHAR firing_weapons_in_rectangle -1208.7 42.5 -1077.4 126.0 0
+jf @CUBAN4_8470
+if
+   not Actor.Dead($5660)
+jf @CUBAN4_8417
+01CC: actor $5660 kill_player $PLAYER_CHAR
+
+:CUBAN4_8417
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_8448
+0239: actor $5659 run_to -1170.9 87.6
+
+:CUBAN4_8448
+00BC: text_highpriority 'CUB4_09' 5000 ms 1  // Bueno. Haitian Putas. Muerte.
+jump @CUBAN4_20102
+
+:CUBAN4_8470
+if
+   Actor.Dead($5659)
+jf @CUBAN4_8508
+00BC: text_highpriority 'CUB4_09' 5000 ms 1  // Bueno. Haitian Putas. Muerte.
+jump @CUBAN4_20102
+
+:CUBAN4_8508
+if or
+   Actor.Dead($5652)
+   Car.Wrecked($5654)
+jf @CUBAN4_8551
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_8551
+jump @CUBAN4_8204
+
+:CUBAN4_8558
+wait 0
+if
+  $5687 == 0 // integer values
+jf @CUBAN4_8844
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_8822
+if
+80ED:   not actor $5659 0 -1115.6 71.6 radius 2.0 2.0
+jf @CUBAN4_8663
+0350: set_actor $5659 maintain_position_when_attacked 0
+0211: actor $5659 walk_to -1115.6 71.6
+jump @CUBAN4_8815
+
+:CUBAN4_8663
+if
+0126:   actor $5659 walking
+jf @CUBAN4_8815
+0350: set_actor $5659 maintain_position_when_attacked 1
+Actor.Angle($5659) = 261.1
+0372: set_actor $5659 anim 16 wait_state_time 1000 ms
+03CF: load_wav 'CUB4_8' as 1
+
+:CUBAN4_8718
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_8744
+wait 0
+jump @CUBAN4_8718
+
+:CUBAN4_8744
+00BC: text_highpriority 'CUB4_15' 4000 ms 1  // Ok, in you go...
+03D1: play_wav 1
+
+:CUBAN4_8763
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5659)
+jf @CUBAN4_8794
+wait 0
+jump @CUBAN4_8763
+
+:CUBAN4_8794
+040D: unload_wav 1
+03D5: remove_text 'CUB4_15'  // Ok, in you go...
+$5687 = 1 // integer values
+
+:CUBAN4_8815
+jump @CUBAN4_8844
+
+:CUBAN4_8822
+00BC: text_highpriority 'CUB4_09' 5000 ms 1  // Bueno. Haitian Putas. Muerte.
+jump @CUBAN4_20102
+
+:CUBAN4_8844
+if
+  $5687 == 1 // integer values
+jf @CUBAN4_9119
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_9097
+if
+80ED:   not actor $5659 0 -1116.8 74.3 radius 2.0 2.0
+jf @CUBAN4_8945
+0350: set_actor $5659 maintain_position_when_attacked 0
+0211: actor $5659 walk_to -1116.8 74.3
+jump @CUBAN4_9090
+
+:CUBAN4_8945
+if
+0126:   actor $5659 walking
+jf @CUBAN4_9090
+0350: set_actor $5659 maintain_position_when_attacked 1
+Actor.Angle($5659) = 234.8
+018C: play_sound 3 at -1114.64 72.85 11.13
+018D: $12 = create_sound 2 at -1114.64 72.85 11.13
+
+:CUBAN4_9019
+if
+834E:   not move_object $1791 to -1114.5 73.0 10.1 speed 0.1 0.1 0.0 collision_check 0
+jf @CUBAN4_9078
+wait 0
+jump @CUBAN4_9019
+
+:CUBAN4_9078
+018E: stop_sound $12
+$5687 = 2 // integer values
+
+:CUBAN4_9090
+jump @CUBAN4_9119
+
+:CUBAN4_9097
+00BC: text_highpriority 'CUB4_09' 5000 ms 1  // Bueno. Haitian Putas. Muerte.
+jump @CUBAN4_20102
+
+:CUBAN4_9119
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_9252
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_9223
+if
+  $5687 == 2 // integer values
+jf @CUBAN4_9216
+02C2: car $5653 drive_to_point -1126.1 70.5 10.8
+02C2: car $5654 drive_to_point -1126.1 70.5 10.8
+jump @CUBAN4_9587
+
+:CUBAN4_9216
+jump @CUBAN4_9245
+
+:CUBAN4_9223
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_9245
+jump @CUBAN4_9274
+
+:CUBAN4_9252
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_9274
+if
+02D5:   player $PLAYER_CHAR firing_weapons_in_rectangle -1208.7 42.5 -1077.4 126.0 0
+jf @CUBAN4_9389
+if
+   not Actor.Dead($5660)
+jf @CUBAN4_9336
+01CC: actor $5660 kill_player $PLAYER_CHAR
+
+:CUBAN4_9336
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_9367
+0239: actor $5659 run_to -1170.9 87.6
+
+:CUBAN4_9367
+00BC: text_highpriority 'CUB4_09' 5000 ms 1  // Bueno. Haitian Putas. Muerte.
+jump @CUBAN4_20102
+
+:CUBAN4_9389
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_9446
+if
+80DC:   not player $PLAYER_CHAR driving $5651
+jf @CUBAN4_9446
+00BC: text_highpriority 'CUB4_10' 5000 ms 1  // Vamos.
+jump @CUBAN4_20102
+
+:CUBAN4_9446
+if or
+   Actor.Dead($5652)
+   Car.Wrecked($5654)
+jf @CUBAN4_9489
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_9489
+if or
+   Actor.Dead($5655)
+   Actor.Dead($5656)
+   Actor.Dead($5657)
+   Actor.Dead($5658)
+jf @CUBAN4_9542
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_9542
+if
+   Actor.Dead($5659)
+jf @CUBAN4_9580
+00BC: text_highpriority 'CUB4_04' 5000 ms 1  // ~r~You've alerted the base, there is no way we will get in now!
+jump @CUBAN4_20102
+
+:CUBAN4_9580
+jump @CUBAN4_8558
+
+:CUBAN4_9587
+wait 0
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_10313
+if
+01AD:   car $5653 sphere 0 near_point -1126.1 70.5 radius 3.0 3.0
+jf @CUBAN4_9935
+if
+  $5705 == 0 // integer values
+jf @CUBAN4_9935
+$5661 = Actor.Create(Gang2, #HNA, -1143.4, 84.5, 11.1)
+Actor.Angle($5661) = 190.2
+01B2: give_actor $5661 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5661 threat_search
+0243: set_actor $5661 ped_stats_to 16
+0291: set_actor $5661 attack_when_provoked 1
+$5662 = Actor.Create(Gang2, #HNA, -1143.4, 83.3, 11.1)
+Actor.Angle($5662) = 190.2
+01B2: give_actor $5662 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5662 threat_search
+0243: set_actor $5662 ped_stats_to 16
+0291: set_actor $5662 attack_when_provoked 1
+$5665 = Actor.Create(Gang2, #HNA, -1168.2, 106.7, 10.1)
+Actor.Angle($5665) = 271.4
+01B2: give_actor $5665 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5665 threat_search
+0243: set_actor $5665 ped_stats_to 16
+0291: set_actor $5665 attack_when_provoked 1
+$5666 = Actor.Create(Gang2, #HNA, -1166.0, 107.1, 10.1)
+Actor.Angle($5666) = 92.5
+01B2: give_actor $5666 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5666 threat_search
+0243: set_actor $5666 ped_stats_to 16
+0291: set_actor $5666 attack_when_provoked 1
+03F9: make_actors $5665 $5666 converse_in 100000 ms
+$5705 = 1 // integer values
+
+:CUBAN4_9935
+if
+   not Actor.Dead($5661)
+jf @CUBAN4_10313
+if
+   not Actor.Dead($5662)
+jf @CUBAN4_10313
+if
+00B0:   car $5653 0 -1135.2 73.2 -1130.8 67.9
+jf @CUBAN4_10060
+if
+  $5663 == 0 // integer values
+jf @CUBAN4_10060
+0211: actor $5661 walk_to -1141.5 73.5
+0211: actor $5662 walk_to -1141.5 64.3
+$5663 = 1 // integer values
+
+:CUBAN4_10060
+if
+00EC:   actor $5661 0 -1141.5 73.5 radius 2.0 2.0
+jf @CUBAN4_10313
+if
+  $5708 == 0 // integer values
+jf @CUBAN4_10130
+17@ = 0 // integer values
+$5708 = 1 // integer values
+
+:CUBAN4_10130
+if
+0056:   player $PLAYER_CHAR 0 -1135.2 68.2 -1140.8 73.9
+jf @CUBAN4_10210
+if
+  $5664 == 0 // integer values
+jf @CUBAN4_10210
+0372: set_actor $5661 anim 16 wait_state_time 800 ms
+17@ = 0 // integer values
+$5664 = 1 // integer values
+
+:CUBAN4_10210
+if
+  17@ > 5000 // integer values
+jf @CUBAN4_10236
+$5664 = 1 // integer values
+
+:CUBAN4_10236
+if
+  $5664 == 1 // integer values
+jf @CUBAN4_10313
+if
+  $5663 == 1 // integer values
+jf @CUBAN4_10313
+if
+  17@ > 800 // integer values
+jf @CUBAN4_10313
+0211: actor $5661 walk_to -1141.5 61.9
+$5663 = 2 // integer values
+
+:CUBAN4_10313
+if
+  $5688 == 0 // integer values
+jf @CUBAN4_10447
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_10425
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_10418
+if
+01AD:   car $5651 sphere 0 near_point -1114.6 70.5 radius 5.0 5.0
+jf @CUBAN4_10418
+0372: set_actor $5659 anim 16 wait_state_time 800 ms
+$5688 = 1 // integer values
+
+:CUBAN4_10418
+jump @CUBAN4_10447
+
+:CUBAN4_10425
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_10447
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_11469
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_11469
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_11469
+if
+  $5689 == 0 // integer values
+jf @CUBAN4_10595
+if
+81AD:   not car $5653 sphere 0 near_point -1126.1 70.5 radius 3.0 3.0
+jf @CUBAN4_10588
+02C2: car $5653 drive_to_point -1126.1 70.5 10.8
+Car.SetMaxSpeed($5653, 5.0)
+jump @CUBAN4_10595
+
+:CUBAN4_10588
+$5689 = 1 // integer values
+
+:CUBAN4_10595
+if
+  $5689 == 1 // integer values
+jf @CUBAN4_10695
+if
+81AD:   not car $5653 sphere 0 near_point -1140.9 71.2 radius 3.0 3.0
+jf @CUBAN4_10688
+02C2: car $5653 drive_to_point -1140.9 71.2 10.8
+Car.SetMaxSpeed($5653, 5.0)
+jump @CUBAN4_10695
+
+:CUBAN4_10688
+$5689 = 2 // integer values
+
+:CUBAN4_10695
+if
+  $5689 == 2 // integer values
+jf @CUBAN4_10795
+if
+81AD:   not car $5653 sphere 0 near_point -1160.0 70.7 radius 3.0 3.0
+jf @CUBAN4_10788
+02C2: car $5653 drive_to_point -1160.0 70.7 11.3
+Car.SetMaxSpeed($5653, 5.0)
+jump @CUBAN4_10795
+
+:CUBAN4_10788
+$5689 = 3 // integer values
+
+:CUBAN4_10795
+if
+  $5689 == 3 // integer values
+jf @CUBAN4_10955
+if
+81AD:   not car $5653 sphere 0 near_point -1180.2 92.9 radius 3.0 3.0
+jf @CUBAN4_10888
+02C2: car $5653 drive_to_point -1180.2 92.9 11.3
+Car.SetMaxSpeed($5653, 20.0)
+jump @CUBAN4_10955
+
+:CUBAN4_10888
+0477: set_car $5653 action 5 time 10000
+Car.SetMaxSpeed($5653, 0.0)
+Marker.Disable($5684)
+018A: $5684 = create_checkpoint_at -1181.2 83.8 11.3
+00BC: text_highpriority 'CUB4_32' 5000 ms 1  // ~g~Park the car at the blip and get out.
+$5689 = 4 // integer values
+
+:CUBAN4_10955
+if
+  $5690 == 0 // integer values
+jf @CUBAN4_11055
+if
+81AD:   not car $5654 sphere 0 near_point -1126.1 70.5 radius 3.0 3.0
+jf @CUBAN4_11048
+02C2: car $5654 drive_to_point -1126.1 70.5 10.8
+Car.SetMaxSpeed($5654, 5.0)
+jump @CUBAN4_11055
+
+:CUBAN4_11048
+$5690 = 1 // integer values
+
+:CUBAN4_11055
+if
+  $5690 == 1 // integer values
+jf @CUBAN4_11155
+if
+81AD:   not car $5654 sphere 0 near_point -1140.9 71.2 radius 3.0 3.0
+jf @CUBAN4_11148
+02C2: car $5654 drive_to_point -1140.9 71.2 10.8
+Car.SetMaxSpeed($5654, 5.0)
+jump @CUBAN4_11155
+
+:CUBAN4_11148
+$5690 = 2 // integer values
+
+:CUBAN4_11155
+if
+  $5690 == 2 // integer values
+jf @CUBAN4_11255
+if
+81AD:   not car $5654 sphere 0 near_point -1160.0 70.7 radius 3.0 3.0
+jf @CUBAN4_11248
+02C2: car $5654 drive_to_point -1160.0 70.7 10.8
+Car.SetMaxSpeed($5654, 5.0)
+jump @CUBAN4_11255
+
+:CUBAN4_11248
+$5690 = 3 // integer values
+
+:CUBAN4_11255
+if
+  $5690 == 3 // integer values
+jf @CUBAN4_11375
+if
+81AD:   not car $5654 sphere 0 near_point -1166.2 85.1 radius 3.0 3.0
+jf @CUBAN4_11348
+02C2: car $5654 drive_to_point -1166.2 85.1 10.8
+Car.SetMaxSpeed($5654, 20.0)
+jump @CUBAN4_11375
+
+:CUBAN4_11348
+0477: set_car $5654 action 4 time 10000
+Car.SetMaxSpeed($5654, 0.0)
+$5690 = 4 // integer values
+
+:CUBAN4_11375
+if
+  $5689 == 4 // integer values
+jf @CUBAN4_11469
+if
+81AF:   not car $5651 1 -1181.2 83.8 11.3 radius 5.0 5.0 5.0
+jf @CUBAN4_11455
+$5689 = 4 // integer values
+jump @CUBAN4_11469
+
+:CUBAN4_11455
+gosub @CUBAN4_20686
+jump @CUBAN4_11835
+
+:CUBAN4_11469
+if or
+   Actor.Dead($5652)
+   Car.Wrecked($5653)
+   Car.Wrecked($5654)
+jf @CUBAN4_11517
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_11517
+if or
+   Actor.Dead($5655)
+   Actor.Dead($5656)
+   Actor.Dead($5657)
+   Actor.Dead($5658)
+jf @CUBAN4_11570
+00BC: text_highpriority 'CUB2_10' 5000 ms 1  // ~r~You are supposed to be killing Haitians, not Cubans.
+jump @CUBAN4_20102
+
+:CUBAN4_11570
+if
+  $5688 == 0 // integer values
+jf @CUBAN4_11681
+if
+02D5:   player $PLAYER_CHAR firing_weapons_in_rectangle -1208.7 42.5 -1077.4 126.0 0
+jf @CUBAN4_11681
+if
+   not Actor.Dead($5660)
+jf @CUBAN4_11650
+01CC: actor $5660 kill_player $PLAYER_CHAR
+
+:CUBAN4_11650
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_11681
+0239: actor $5659 run_to -1170.9 87.6
+
+:CUBAN4_11681
+if
+   not Car.Wrecked($5651)
+jf @CUBAN4_11768
+if
+0056:   player $PLAYER_CHAR 0 -1158.0 61.1 -1199.6 109.2
+jf @CUBAN4_11768
+if
+80DC:   not player $PLAYER_CHAR driving $5651
+jf @CUBAN4_11768
+gosub @CUBAN4_20686
+jump @CUBAN4_11835
+
+:CUBAN4_11768
+jump @CUBAN4_9587
+018A: $5681 = create_checkpoint_at -1187.2 103.0 10.1
+018A: $5682 = create_checkpoint_at -1181.5 81.2 10.1
+018A: $5683 = create_checkpoint_at -1173.6 70.2 16.9
+
+:CUBAN4_11835
+wait 0
+if
+  $5685 == 0 // integer values
+jf @CUBAN4_13979
+if
+  $5702 == 0 // integer values
+jf @CUBAN4_11927
+00BC: text_highpriority 'CUB4_29' 5000 ms 1  // ~g~Walk into each of the markers to plant a bomb at that location.
+00BB: text_lowpriority 'CUB4_02' 5000 ms 1  // ~g~The bombs will be set with a 45 second timer.
+00BB: text_lowpriority 'CUB4_30' 5000 ms 1  // ~g~After all three bombs are planted, get clear of the factory before it blows.
+$5702 = 1 // integer values
+
+:CUBAN4_11927
+if
+  $5694 == 3 // integer values
+jf @CUBAN4_12195
+03CF: load_wav 'CUB4_10' as 1
+
+:CUBAN4_11957
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_11983
+wait 0
+jump @CUBAN4_11957
+
+:CUBAN4_11983
+00BC: text_highpriority 'CUB4_17' 5000 ms 1  // RUN!!
+00BB: text_lowpriority 'CUB4_31' 5000 ms 1  // ~g~Get clear of the factory!!
+03D1: play_wav 1
+
+:CUBAN4_12017
+if
+83D2:   not wav 1 ended
+jf @CUBAN4_12043
+wait 0
+jump @CUBAN4_12017
+
+:CUBAN4_12043
+040D: unload_wav 1
+03D5: remove_text 'CUB4_17'  // RUN!!
+if
+   not Actor.Dead($5655)
+jf @CUBAN4_12088
+0350: set_actor $5655 maintain_position_when_attacked 0
+01DF: tie_actor $5655 to_player $PLAYER_CHAR
+
+:CUBAN4_12088
+if
+   not Actor.Dead($5656)
+jf @CUBAN4_12119
+0350: set_actor $5656 maintain_position_when_attacked 0
+01DF: tie_actor $5656 to_player $PLAYER_CHAR
+
+:CUBAN4_12119
+if
+   not Actor.Dead($5657)
+jf @CUBAN4_12150
+0350: set_actor $5657 maintain_position_when_attacked 0
+01DF: tie_actor $5657 to_player $PLAYER_CHAR
+
+:CUBAN4_12150
+if
+   not Actor.Dead($5658)
+jf @CUBAN4_12181
+0350: set_actor $5658 maintain_position_when_attacked 0
+01DF: tie_actor $5658 to_player $PLAYER_CHAR
+
+:CUBAN4_12181
+$5685 = 1 // integer values
+jump @CUBAN4_13139
+
+:CUBAN4_12195
+if
+  $5695 == 0 // integer values
+jf @CUBAN4_12493
+if
+00F9:   player $PLAYER_CHAR stopped 1 -1187.2 103.0 10.1 radius 1.0 1.0 2.0
+jf @CUBAN4_12493
+if
+  $5693 == 0 // integer values
+jf @CUBAN4_12293
+16@ = 0 // integer values
+$5693 = 1 // integer values
+
+:CUBAN4_12293
+wait 0
+if
+  2100 > 16@ // integer values
+jf @CUBAN4_12391
+if
+  $5698 == 0 // integer values
+jf @CUBAN4_12377
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Actor.Angle($PLAYER_ACTOR) = 344.6
+Camera.SetBehindPlayer
+0372: set_actor $PLAYER_ACTOR anim 31 wait_state_time 2000 ms
+$5698 = 1 // integer values
+
+:CUBAN4_12377
+jump @CUBAN4_12293
+jump @CUBAN4_12493
+
+:CUBAN4_12391
+018C: play_sound 16 at -1187.2 104.2 11.2
+$5672 = Object.Create(#DYNAMITE, -1187.2, 104.2, 11.2)
+Object.CollisionDetection($5672) = False
+Object.ToggleInMovingList($5672) = False
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+$5698 = 0 // integer values
+$5693 = 0 // integer values
+$5695 = 1 // integer values
+Marker.Disable($5681)
+$5694 += 1 // integer values
+
+:CUBAN4_12493
+if
+  $5696 == 0 // integer values
+jf @CUBAN4_12791
+if
+00F9:   player $PLAYER_CHAR stopped 1 -1180.2 81.2 10.1 radius 1.0 1.0 2.0
+jf @CUBAN4_12791
+if
+  $5693 == 0 // integer values
+jf @CUBAN4_12591
+16@ = 0 // integer values
+$5693 = 1 // integer values
+
+:CUBAN4_12591
+wait 0
+if
+  2100 > 16@ // integer values
+jf @CUBAN4_12689
+if
+  $5698 == 0 // integer values
+jf @CUBAN4_12675
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Actor.Angle($PLAYER_ACTOR) = 25.0
+Camera.SetBehindPlayer
+0372: set_actor $PLAYER_ACTOR anim 31 wait_state_time 2000 ms
+$5698 = 1 // integer values
+
+:CUBAN4_12675
+jump @CUBAN4_12591
+jump @CUBAN4_12791
+
+:CUBAN4_12689
+018C: play_sound 16 at -1181.5 82.1 11.2
+$5673 = Object.Create(#DYNAMITE, -1181.5, 82.1, 11.2)
+Object.CollisionDetection($5673) = False
+Object.ToggleInMovingList($5673) = False
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+$5698 = 0 // integer values
+$5693 = 0 // integer values
+$5696 = 1 // integer values
+Marker.Disable($5682)
+$5694 += 1 // integer values
+
+:CUBAN4_12791
+if
+  $5697 == 0 // integer values
+jf @CUBAN4_13089
+if
+00F9:   player $PLAYER_CHAR stopped 1 -1173.6 70.2 16.9 radius 1.0 1.0 2.0
+jf @CUBAN4_13089
+if
+  $5693 == 0 // integer values
+jf @CUBAN4_12889
+16@ = 0 // integer values
+$5693 = 1 // integer values
+
+:CUBAN4_12889
+wait 0
+if
+  2100 > 16@ // integer values
+jf @CUBAN4_12987
+if
+  $5698 == 0 // integer values
+jf @CUBAN4_12973
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Actor.Angle($PLAYER_ACTOR) = 7.5
+Camera.SetBehindPlayer
+0372: set_actor $PLAYER_ACTOR anim 31 wait_state_time 2000 ms
+$5698 = 1 // integer values
+
+:CUBAN4_12973
+jump @CUBAN4_12889
+jump @CUBAN4_13089
+
+:CUBAN4_12987
+018C: play_sound 16 at -1174.0 71.1 18.0
+$5674 = Object.Create(#DYNAMITE, -1174.0, 71.1, 18.0)
+Object.CollisionDetection($5674) = False
+Object.ToggleInMovingList($5674) = False
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+$5698 = 0 // integer values
+$5693 = 0 // integer values
+$5697 = 1 // integer values
+Marker.Disable($5683)
+$5694 += 1 // integer values
+
+:CUBAN4_13089
+if
+  $5694 == 1 // integer values
+jf @CUBAN4_13139
+if
+  $5699 == 0 // integer values
+jf @CUBAN4_13139
+014E: start_timer_at $5700 count_in_direction 1
+$5699 = 1 // integer values
+
+:CUBAN4_13139
+if
+  $5711 == 0 // integer values
+jf @CUBAN4_13515
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_13329
+020A: set_car $5653 door_status_to 1
+Car.ImmuneToNonPlayer($5653) = False
+if
+   not Actor.Dead($5655)
+jf @CUBAN4_13258
+0243: set_actor $5655 ped_stats_to 16
+01D3: actor $5655 leave_car $5653
+011A: set_actor $5655 search_threat 256
+011A: set_actor $5655 search_threat 64
+011A: set_actor $5655 search_threat 65536
+0239: actor $5655 run_to -1184.6 92.3
+
+:CUBAN4_13258
+if
+   not Actor.Dead($5656)
+jf @CUBAN4_13329
+0243: set_actor $5656 ped_stats_to 16
+01D3: actor $5656 leave_car $5653
+011A: set_actor $5656 search_threat 256
+011A: set_actor $5656 search_threat 64
+011A: set_actor $5656 search_threat 65536
+0239: actor $5656 run_to -1184.9 100.2
+
+:CUBAN4_13329
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_13501
+020A: set_car $5654 door_status_to 1
+Car.ImmuneToNonPlayer($5654) = False
+if
+   not Actor.Dead($5657)
+jf @CUBAN4_13430
+0243: set_actor $5657 ped_stats_to 16
+01D3: actor $5657 leave_car $5654
+011A: set_actor $5657 search_threat 256
+011A: set_actor $5657 search_threat 64
+011A: set_actor $5657 search_threat 65536
+0239: actor $5657 run_to -1157.7 73.5
+
+:CUBAN4_13430
+if
+   not Actor.Dead($5658)
+jf @CUBAN4_13501
+0243: set_actor $5658 ped_stats_to 16
+01D3: actor $5658 leave_car $5654
+011A: set_actor $5658 search_threat 256
+011A: set_actor $5658 search_threat 64
+011A: set_actor $5658 search_threat 65536
+0239: actor $5658 run_to -1157.5 69.5
+
+:CUBAN4_13501
+$5711 = 1 // integer values
+jump @CUBAN4_13979
+
+:CUBAN4_13515
+if
+   not Actor.Dead($5655)
+jf @CUBAN4_13631
+if
+80ED:   not actor $5655 0 -1184.6 92.3 radius 1.0 1.0
+jf @CUBAN4_13598
+0350: set_actor $5655 maintain_position_when_attacked 0
+0239: actor $5655 run_to -1184.6 92.3
+jump @CUBAN4_13631
+
+:CUBAN4_13598
+if
+0126:   actor $5655 walking
+jf @CUBAN4_13631
+0350: set_actor $5655 maintain_position_when_attacked 1
+Actor.Angle($5655) = 256.8
+
+:CUBAN4_13631
+if
+   not Actor.Dead($5656)
+jf @CUBAN4_13747
+if
+80ED:   not actor $5656 0 -1184.9 100.2 radius 1.0 1.0
+jf @CUBAN4_13714
+0350: set_actor $5656 maintain_position_when_attacked 0
+0239: actor $5656 run_to -1184.9 100.2
+jump @CUBAN4_13747
+
+:CUBAN4_13714
+if
+0126:   actor $5656 walking
+jf @CUBAN4_13747
+0350: set_actor $5656 maintain_position_when_attacked 1
+Actor.Angle($5656) = 257.4
+
+:CUBAN4_13747
+if
+   not Actor.Dead($5657)
+jf @CUBAN4_13863
+if
+80ED:   not actor $5657 0 -1157.7 73.5 radius 1.0 1.0
+jf @CUBAN4_13830
+0350: set_actor $5657 maintain_position_when_attacked 0
+0239: actor $5657 run_to -1157.7 73.5
+jump @CUBAN4_13863
+
+:CUBAN4_13830
+if
+0126:   actor $5657 walking
+jf @CUBAN4_13863
+0350: set_actor $5657 maintain_position_when_attacked 1
+Actor.Angle($5657) = 256.8
+
+:CUBAN4_13863
+if
+   not Actor.Dead($5658)
+jf @CUBAN4_13979
+if
+80ED:   not actor $5658 0 -1157.5 69.5 radius 1.0 1.0
+jf @CUBAN4_13946
+0350: set_actor $5658 maintain_position_when_attacked 0
+0239: actor $5658 run_to -1157.5 69.5
+jump @CUBAN4_13979
+
+:CUBAN4_13946
+if
+0126:   actor $5658 walking
+jf @CUBAN4_13979
+0350: set_actor $5658 maintain_position_when_attacked 1
+Actor.Angle($5658) = 257.4
+
+:CUBAN4_13979
+if
+  $5699 == 1 // integer values
+jf @CUBAN4_14037
+if
+  $5700 == 0 // integer values
+jf @CUBAN4_14037
+00BC: text_highpriority 'CUB4_06' 5000 ms 1  // ~r~You did not get far enough away from the base and we had to abort the explosion!
+jump @CUBAN4_20102
+
+:CUBAN4_14037
+if
+  $5685 == 1 // integer values
+jf @CUBAN4_20017
+if
+0056:   player $PLAYER_CHAR 0 -1077.4 125.9 -1200.0 47.9
+jf @CUBAN4_14107
+$5685 = 1 // integer values
+jump @CUBAN4_20017
+
+:CUBAN4_14107
+0395: clear_area 1 at -1191.1 84.8 range 11.1 50.0
+014F: stop_timer $5700
+if
+   not Actor.Dead($5661)
+jf @CUBAN4_14157
+Actor.RemoveReferences($5661)
+
+:CUBAN4_14157
+if
+   not Actor.Dead($5662)
+jf @CUBAN4_14178
+Actor.RemoveReferences($5662)
+
+:CUBAN4_14178
+if
+   not Actor.Dead($5665)
+jf @CUBAN4_14199
+Actor.RemoveReferences($5665)
+
+:CUBAN4_14199
+if
+   not Actor.Dead($5666)
+jf @CUBAN4_14220
+Actor.RemoveReferences($5666)
+
+:CUBAN4_14220
+if
+   not Actor.Dead($5675)
+jf @CUBAN4_14241
+Actor.RemoveReferences($5675)
+
+:CUBAN4_14241
+if
+   not Actor.Dead($5676)
+jf @CUBAN4_14262
+Actor.RemoveReferences($5676)
+
+:CUBAN4_14262
+if
+   not Actor.Dead($5677)
+jf @CUBAN4_14283
+Actor.RemoveReferences($5677)
+
+:CUBAN4_14283
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_14304
+Car.RemoveReferences($5653)
+
+:CUBAN4_14304
+$5661 = Actor.Create(Gang2, #HNA, -1180.2, 81.2, 10.1)
+Actor.Angle($5661) = 25.0
+0372: set_actor $5661 anim 25 wait_state_time 999999 ms
+$5662 = Actor.Create(Gang2, #HNA, -1197.1, 70.3, 10.1)
+0245: set_actor $5662 walk_style_to 50
+0239: actor $5662 run_to -1169.6 109.2
+$5665 = Actor.Create(Gang2, #HNA, -1197.4, 74.9, 10.1)
+0245: set_actor $5665 walk_style_to 50
+0239: actor $5665 run_to -1169.6 109.2
+$5666 = Actor.Create(Gang2, #HNA, -1189.8, 81.2, 10.1)
+0245: set_actor $5666 walk_style_to 50
+0239: actor $5666 run_to -1169.6 109.2
+$5675 = Actor.Create(Gang2, #HNA, -1189.0, 83.6, 10.1)
+0245: set_actor $5675 walk_style_to 50
+0239: actor $5675 run_to -1169.6 109.2
+$5676 = Actor.Create(Gang2, #HNA, -1190.5, 68.5, 10.1)
+0245: set_actor $5676 walk_style_to 50
+0239: actor $5676 run_to -1169.6 109.2
+$5653 = Car.Create(#VOODOO, -1166.2, 85.1, 9.8)
+Car.Angle($5653) = 112.8
+wait 1000
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+0336: set_player $PLAYER_CHAR visible 0
+Camera.SetPosition(-1198.59, 75.79, 13.74, 0.0, 0.0, 0.0)
+Camera.PointAt(-1184.6, 74.4, 15.3, 2)
+wait 2000
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1175.8 70.6 16.9
+020C: create_explosion_with_radius 11 at -1175.8 70.6 16.9
+020C: create_explosion_with_radius 1 at -1175.8 70.6 16.9
+020C: create_explosion_with_radius 6 at -1175.8 70.6 16.9
+Camera.Shake(900)
+wait 1000
+Camera.SetPosition(-1196.61, 68.74, 18.19, 0.0, 0.0, 0.0)
+Camera.PointAt(-1187.74, 83.15, 14.59, 2)
+wait 500
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+Camera.Shake(900)
+wait 1000
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+Camera.Shake(900)
+wait 1000
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+Camera.Shake(300)
+wait 300
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 2 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 2 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 10.1
+Camera.Shake(900)
+wait 1000
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+Camera.Shake(200)
+wait 200
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 2 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 2 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 10.1
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 2 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 10.1
+Camera.Shake(1400)
+wait 1500
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+Camera.Shake(400)
+wait 400
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 2 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 2 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 10.1
+Camera.Shake(300)
+wait 300
+020C: create_explosion_with_radius 2 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 2 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 10.1
+Camera.Shake(1400)
+wait 1500
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+Camera.Shake(200)
+wait 200
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 2 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 2 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 10.1
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 2 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 10.1
+Camera.Shake(900)
+wait 1000
+Camera.SetPosition(-1159.03, 108.49, 15.35, 0.0, 0.0, 0.0)
+Camera.PointAt(-1180.11, 90.65, 16.05, 2)
+020C: create_explosion_with_radius 2 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 11 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 1 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 6 at -1182.8 76.7 10.1
+020C: create_explosion_with_radius 2 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 11 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 1 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 6 at -1196.4 101.8 10.1
+020C: create_explosion_with_radius 2 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 11 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 1 at -1181.4 76.8 17.3
+020C: create_explosion_with_radius 6 at -1181.4 76.8 17.3
+039D: scatter_particles 4 5.0 0 0 0 11000 at -1184.97 96.72 11.13 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 11000 at -1184.97 96.72 11.13 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 11000 at -1184.97 96.72 11.13 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 11000 at -1184.97 96.72 11.13 16.0 0.0 0.1
+039D: scatter_particles 4 5.0 0 0 0 11000 at -1184.97 96.72 11.13 16.0 0.0 0.1
+Camera.Shake(600)
+wait 600
+020C: create_explosion_with_radius 2 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 11 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 1 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 6 at -1187.69 102.0 17.2
+020C: create_explosion_with_radius 2 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 17.1
+020C: create_explosion_with_radius 2 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 11 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 1 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 6 at -1198.1 103.2 10.1
+020C: create_explosion_with_radius 2 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 17.1
+020C: create_explosion_with_radius 2 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 11 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 1 at -1189.7 83.6 10.1
+020C: create_explosion_with_radius 6 at -1189.7 83.6 10.1
+Camera.Shake(200)
+wait 200
+020C: create_explosion_with_radius 2 at -1197.0 89.5 17.1
+020C: create_explosion_with_radius 11 at -1197.0 89.5 17.1
+020C: create_explosion_with_radius 1 at -1197.0 89.5 17.1
+020C: create_explosion_with_radius 6 at -1197.0 89.5 17.1
+020C: create_explosion_with_radius 2 at -1197.0 89.5 10.1
+020C: create_explosion_with_radius 11 at -1197.0 89.5 10.1
+020C: create_explosion_with_radius 1 at -1197.0 89.5 10.1
+020C: create_explosion_with_radius 6 at -1197.0 89.5 10.1
+020C: create_explosion_with_radius 2 at -1196.61 68.74 18.19
+020C: create_explosion_with_radius 11 at -1196.61 68.74 18.19
+020C: create_explosion_with_radius 1 at -1196.61 68.74 18.19
+020C: create_explosion_with_radius 6 at -1196.61 68.74 18.19
+Camera.Shake(1000)
+wait 1000
+020C: create_explosion_with_radius 2 at -1171.06 68.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 68.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 68.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 68.74 20.34
+020C: create_explosion_with_radius 2 at -1171.06 74.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 74.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 74.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 74.74 20.34
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1171.06 79.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 79.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 79.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 79.74 20.34
+020C: create_explosion_with_radius 2 at -1171.06 85.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 85.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 85.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 85.74 20.34
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1171.06 90.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 90.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 90.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 90.74 20.34
+020C: create_explosion_with_radius 2 at -1171.06 96.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 96.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 96.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 96.74 20.34
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1171.06 103.74 20.34
+020C: create_explosion_with_radius 11 at -1171.06 103.74 20.34
+020C: create_explosion_with_radius 1 at -1171.06 103.74 20.34
+020C: create_explosion_with_radius 6 at -1171.06 103.74 20.34
+020C: create_explosion_with_radius 2 at -1179.06 105.74 20.34
+020C: create_explosion_with_radius 11 at -1179.06 105.74 20.34
+020C: create_explosion_with_radius 1 at -1179.06 105.74 20.34
+020C: create_explosion_with_radius 6 at -1179.06 105.74 20.34
+Camera.Shake(100)
+wait 100
+020C: create_explosion_with_radius 2 at -1188.06 105.74 20.34
+020C: create_explosion_with_radius 11 at -1188.06 105.74 20.34
+020C: create_explosion_with_radius 1 at -1188.06 105.74 20.34
+020C: create_explosion_with_radius 6 at -1188.06 105.74 20.34
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_19692
+if
+80DC:   not player $PLAYER_CHAR driving $5653
+jf @CUBAN4_19692
+03F5: set_vehicle $5653 apply_damage_rules 1
+020B: explode_car $5653
+
+:CUBAN4_19692
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_19739
+if
+80DC:   not player $PLAYER_CHAR driving $5654
+jf @CUBAN4_19739
+03F5: set_vehicle $5654 apply_damage_rules 1
+020B: explode_car $5654
+
+:CUBAN4_19739
+0169: set_fade_color 255 255 255
+fade 0 400
+020C: create_explosion_with_radius 6 at -1159.03 108.49 10.35
+
+:CUBAN4_19776
+if
+fading
+jf @CUBAN4_19800
+wait 0
+jump @CUBAN4_19776
+
+:CUBAN4_19800
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @CUBAN4_19844
+03B6: replace_model_at -1165.346 85.534 17.783 radius 80.0 from #BUILD1 to #BUILDBLOWN
+
+:CUBAN4_19844
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @CUBAN4_19888
+03B6: replace_model_at -1165.346 85.534 17.783 radius 80.0 from #HDRUGFACTORYINT to #HDRUGFACTORYPOL
+
+:CUBAN4_19888
+if
+   not Player.Wasted($PLAYER_CHAR)
+jf @CUBAN4_19932
+03B6: replace_model_at -1165.346 85.534 17.783 radius 80.0 from #LODLD1 to #LODLDBLOWN
+
+:CUBAN4_19932
+Object.Destroy($5672)
+Object.Destroy($5673)
+Object.Destroy($5674)
+$5700 = 0 // integer values
+020C: create_explosion_with_radius 6 at -1159.03 108.49 10.35
+fade 1 1600
+wait 5000
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+Camera.SetAtPos($95, $96, $97)
+jump @CUBAN4_20119
+
+:CUBAN4_20017
+if
+   not $5694 == 3 // integer values
+jf @CUBAN4_20095
+if
+8056:   not player $PLAYER_CHAR 0 -1111.6 125.9 -1200.0 47.9
+jf @CUBAN4_20095
+00BC: text_highpriority 'CUB4_06' 5000 ms 1  // ~r~You did not get far enough away from the base and we had to abort the explosion!
+jump @CUBAN4_20102
+
+:CUBAN4_20095
+jump @CUBAN4_11835
+
+:CUBAN4_20102
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:CUBAN4_20119
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 10000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 10000
+030C: progress_made += 1
+
+:CUBAN4_20160
+if
+834E:   not move_object $1791 to -1114.5 73.0 10.1 speed 10.0 10.0 0.0 collision_check 0
+jf @CUBAN4_20219
+wait 0
+jump @CUBAN4_20160
+
+:CUBAN4_20219
+0318: set_latest_mission_passed 'CUB_4'  // Trojan Voodoo
+Marker.Disable($278)
+015C: set_zone_gang_info 'GHETTO1' 1 13 0 100 0 0 0 0 0 0 0 20
+015C: set_zone_gang_info 'GHETTO1' 0 10 0 100 0 0 0 0 0 0 0 10
+0152: set_zone_car_info 'GHETTO1' 1 12 0 100 0 0 0 0 0 0 0 10
+0152: set_zone_car_info 'GHETTO1' 0 10 0 100 0 0 0 0 0 0 0 10
+015C: set_zone_gang_info 'GHETTO2' 1 13 100 0 0 0 0 0 0 0 0 20
+015C: set_zone_gang_info 'GHETTO2' 0 10 100 0 0 0 0 0 0 0 0 10
+0152: set_zone_car_info 'GHETTO2' 1 12 100 0 0 0 0 0 0 0 0 10
+0152: set_zone_car_info 'GHETTO2' 0 10 100 0 0 0 0 0 0 0 0 10
+03F2: pedtype 8 remove_threat 128
+03F2: pedtype 7 remove_threat 256
+if
+  $5700 == 0 // integer values
+jf @CUBAN4_20572
+032B: $5671 = create_weapon_pickup #MINIGUN 15 ammo 100 at -1184.17 102.62 17.5
+$5700 = 1 // integer values
+
+:CUBAN4_20572
+$282 = 1 // integer values
+return
+
+:CUBAN4_20581
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+03F2: pedtype 8 remove_threat 16384
+Model.Destroy(#HNA)
+Model.Destroy(#HNB)
+Model.Destroy(#CBA)
+Model.Destroy(#CBB)
+Model.Destroy(#SNIPER)
+Model.Destroy(#TEC9)
+Model.Destroy(#VOODOO)
+Model.Destroy(#DYNAMITE)
+014F: stop_timer $5700
+Marker.Disable($5678)
+Marker.Disable($5679)
+Marker.Disable($5680)
+Marker.Disable($5681)
+Marker.Disable($5682)
+Marker.Disable($5683)
+Marker.Disable($5684)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:CUBAN4_20686
+Marker.Disable($5684)
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+018A: $5681 = create_checkpoint_at -1187.2 103.0 10.1
+018A: $5682 = create_checkpoint_at -1180.2 81.2 10.1
+018A: $5683 = create_checkpoint_at -1173.6 70.2 16.9
+if
+   not Actor.Dead($5652)
+jf @CUBAN4_20797
+011A: set_actor $5652 search_threat 256
+011A: set_actor $5652 search_threat 64
+02A9: set_actor $5652 immune_to_nonplayer 0
+
+:CUBAN4_20797
+if
+   not Actor.Dead($5661)
+jf @CUBAN4_20853
+011A: set_actor $5661 search_threat 128
+011A: set_actor $5661 search_threat 1
+011A: set_actor $5661 search_threat 64
+Actor.Angle($5661) = 4.7
+01CC: actor $5661 kill_player $PLAYER_CHAR
+
+:CUBAN4_20853
+if
+   not Actor.Dead($5662)
+jf @CUBAN4_20909
+011A: set_actor $5662 search_threat 128
+011A: set_actor $5662 search_threat 1
+011A: set_actor $5662 search_threat 64
+Actor.Angle($5662) = 4.7
+01CC: actor $5662 kill_player $PLAYER_CHAR
+
+:CUBAN4_20909
+if
+   not Actor.Dead($5665)
+jf @CUBAN4_20976
+011A: set_actor $5665 search_threat 128
+011A: set_actor $5665 search_threat 1
+011A: set_actor $5665 search_threat 64
+if
+   not Actor.Dead($5666)
+jf @CUBAN4_20976
+03F9: make_actors $5665 $5666 converse_in 100000 ms
+
+:CUBAN4_20976
+if
+   not Actor.Dead($5666)
+jf @CUBAN4_21014
+011A: set_actor $5666 search_threat 128
+011A: set_actor $5666 search_threat 1
+011A: set_actor $5666 search_threat 64
+
+:CUBAN4_21014
+if
+   not Actor.Dead($5659)
+jf @CUBAN4_21069
+011A: set_actor $5659 search_threat 128
+011A: set_actor $5659 search_threat 1
+011A: set_actor $5659 search_threat 64
+Actor.Angle($5659) = 109.6
+0350: set_actor $5659 maintain_position_when_attacked 1
+
+:CUBAN4_21069
+$5670 = Actor.Create(Gang2, #HNA, -1115.2, 67.0, 10.1)
+Actor.Angle($5670) = 85.4
+01B2: give_actor $5670 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5670 threat_search
+0243: set_actor $5670 ped_stats_to 16
+011A: set_actor $5670 search_threat 128
+011A: set_actor $5670 search_threat 1
+011A: set_actor $5670 search_threat 64
+0291: set_actor $5670 attack_when_provoked 1
+0350: set_actor $5670 maintain_position_when_attacked 1
+$5667 = Actor.Create(Gang2, #HNA, -1182.3, 80.5, 10.1)
+Actor.Angle($5667) = 355.1
+01B2: give_actor $5667 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5667 threat_search
+0243: set_actor $5667 ped_stats_to 16
+011A: set_actor $5667 search_threat 128
+011A: set_actor $5667 search_threat 1
+011A: set_actor $5667 search_threat 64
+0291: set_actor $5667 attack_when_provoked 1
+0350: set_actor $5667 maintain_position_when_attacked 1
+$5668 = Actor.Create(Gang2, #HNA, -1192.2, 102.7, 10.1)
+Actor.Angle($5668) = 109.6
+01B2: give_actor $5668 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5668 threat_search
+0243: set_actor $5668 ped_stats_to 16
+011A: set_actor $5668 search_threat 128
+011A: set_actor $5668 search_threat 1
+011A: set_actor $5668 search_threat 64
+0291: set_actor $5668 attack_when_provoked 1
+0350: set_actor $5668 maintain_position_when_attacked 1
+$5669 = Actor.Create(Gang2, #HNA, -1183.4, 67.0, 16.9)
+Actor.Angle($5669) = 12.0
+01B2: give_actor $5669 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5669 threat_search
+0243: set_actor $5669 ped_stats_to 16
+011A: set_actor $5669 search_threat 128
+011A: set_actor $5669 search_threat 1
+011A: set_actor $5669 search_threat 64
+0291: set_actor $5669 attack_when_provoked 1
+0350: set_actor $5669 maintain_position_when_attacked 1
+$5675 = Actor.Create(Gang2, #HNA, -1197.9, 82.5, 10.1)
+Actor.Angle($5675) = 347.0
+01B2: give_actor $5675 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5675 threat_search
+0243: set_actor $5675 ped_stats_to 16
+011A: set_actor $5675 search_threat 128
+011A: set_actor $5675 search_threat 1
+011A: set_actor $5675 search_threat 64
+0291: set_actor $5675 attack_when_provoked 1
+0350: set_actor $5675 maintain_position_when_attacked 1
+$5676 = Actor.Create(Gang2, #HNA, -1189.0, 83.6, 10.1)
+Actor.Angle($5676) = 20.0
+01B2: give_actor $5676 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5676 threat_search
+0243: set_actor $5676 ped_stats_to 16
+011A: set_actor $5676 search_threat 128
+011A: set_actor $5676 search_threat 1
+011A: set_actor $5676 search_threat 64
+0291: set_actor $5676 attack_when_provoked 1
+0350: set_actor $5676 maintain_position_when_attacked 1
+$5677 = Actor.Create(Gang2, #HNA, -1190.5, 68.5, 10.1)
+Actor.Angle($5677) = 13.8
+01B2: give_actor $5677 weapon 22 ammo 30000 // Load the weapon model before using this
+01ED: clear_actor $5677 threat_search
+0243: set_actor $5677 ped_stats_to 16
+011A: set_actor $5677 search_threat 128
+011A: set_actor $5677 search_threat 1
+011A: set_actor $5677 search_threat 64
+0291: set_actor $5677 attack_when_provoked 1
+0350: set_actor $5677 maintain_position_when_attacked 1
+if
+   not Car.Wrecked($5653)
+jf @CUBAN4_21736
+Car.ImmuneToNonPlayer($5653) = True
+
+:CUBAN4_21736
+if
+   not Car.Wrecked($5654)
+jf @CUBAN4_21759
+Car.ImmuneToNonPlayer($5654) = True
+
+:CUBAN4_21759
+03F1: pedtype 8 add_threat 1
+03F1: pedtype 8 add_threat 16384
+03CF: load_wav 'CUB4_9' as 1
+
+:CUBAN4_21784
+if
+83D0:   not wav 1 loaded
+jf @CUBAN4_21810
+wait 0
+jump @CUBAN4_21784
+
+:CUBAN4_21810
+00BC: text_highpriority 'CUB4_16' 4000 ms 1  // I'm going to plant the bomb, cover me!
+03D1: play_wav 1
+
+:CUBAN4_21829
+if
+83D2:   not wav 1 ended
+jf @CUBAN4_21855
+wait 0
+jump @CUBAN4_21829
+
+:CUBAN4_21855
+040D: unload_wav 1
+03D5: remove_text 'CUB4_16'  // I'm going to plant the bomb, cover me!
+
+:CUBAN4_21869
+if
+834E:   not move_object $1791 to -1114.5 67.0 10.1 speed 10.0 10.0 0.0 collision_check 0
+jf @CUBAN4_21928
+wait 0
+jump @CUBAN4_21869
+
+:CUBAN4_21928
+return

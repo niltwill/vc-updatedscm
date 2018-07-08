@@ -1,0 +1,123 @@
+:BUYPRO1
+thread 'BUYPRO1'
+$ONMISSION = 1 // integer values
+wait 0
+Marker.Disable($271)
+Marker.Disable($634)
+030C: progress_made += 1
+015C: set_zone_gang_info 'PRINTWK' 1 13 0 0 0 0 0 0 1000 0 0 0
+015C: set_zone_gang_info 'PRINTWK' 0 10 0 0 0 0 0 0 1000 0 0 0
+022A: remove_forbidden_for_peds_cube -1176.038 -266.898 0.0 -1012.796 -158.26 30.0
+0169: set_fade_color 0 0 1
+fade 0 500
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+
+:BUYPRO1_170
+if
+fading
+jf @BUYPRO1_237
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO1_230
+02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476
+create_thread @COU1
+end_thread
+
+:BUYPRO1_230
+jump @BUYPRO1_170
+
+:BUYPRO1_237
+0395: clear_area 1 at -1059.841 -278.7214 range 10.4044 1.0
+0055: put_player $PLAYER_CHAR at -1059.841 -278.7214 10.4044
+0171: set_player $PLAYER_CHAR z_angle_to 90.0
+02A3: enable_widescreen 1
+0169: set_fade_color 0 0 1
+fade 1 500
+Camera.SetPosition(-1027.339, -281.6154, 16.3511, 0.0, 0.0, 0.0)
+Camera.PointAt(-1028.162, -281.0542, 16.273, 2)
+
+:BUYPRO1_361
+if
+fading
+jf @BUYPRO1_428
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO1_421
+02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476
+create_thread @COU1
+end_thread
+
+:BUYPRO1_421
+jump @BUYPRO1_361
+
+:BUYPRO1_428
+01E3: text_1number_styled 'CNTBUY1' number $635 time 4000 style 6  // Printworks purchased: $~1~
+0529: add $635 to_money_spent_on_property_stats
+0542: add_property 1 to_property_own_stats
+0394: play_music 1
+043C: set_game_sounds_disable_on_fade 0
+wait 4000
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO1_515
+043C: set_game_sounds_disable_on_fade 1
+02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476
+create_thread @COU1
+end_thread
+
+:BUYPRO1_515
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:BUYPRO1_530
+if
+fading
+jf @BUYPRO1_601
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO1_594
+043C: set_game_sounds_disable_on_fade 1
+02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476
+create_thread @COU1
+end_thread
+
+:BUYPRO1_594
+jump @BUYPRO1_530
+
+:BUYPRO1_601
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+02A3: enable_widescreen 0
+02A7: $271 = create_icon_marker_and_sphere $426 at $474 $475 $476
+create_thread @COU1
+0169: set_fade_color 0 0 1
+fade 1 500
+
+:BUYPRO1_667
+if
+fading
+jf @BUYPRO1_713
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO1_706
+043C: set_game_sounds_disable_on_fade 1
+end_thread
+
+:BUYPRO1_706
+jump @BUYPRO1_667
+
+:BUYPRO1_713
+043C: set_game_sounds_disable_on_fade 1
+create_thread @PSAVE8
+$ONMISSION = 0 // integer values
+mission_cleanup
+end_thread

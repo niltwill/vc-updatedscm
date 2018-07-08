@@ -1,0 +1,1802 @@
+:CUBAN1
+thread 'CUBAN1'
+gosub @CUBAN1_46
+if
+wasted_or_busted
+jf @CUBAN1_37
+gosub @CUBAN1_10663
+
+:CUBAN1_37
+gosub @CUBAN1_10748
+end_thread
+
+:CUBAN1_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'CUBAN1'
+058E: set_restart_mission_taxi_destination -1173.5 -599.6 10.2 277.1
+$5484 = 0.0 // floating-point values
+$5485 = 0.0 // floating-point values
+$5486 = 0.0 // floating-point values
+$5487 = 0.0 // floating-point values
+$5488 = 0.0 // floating-point values
+$5489 = 0.0 // floating-point values
+$5389 = 181000 // integer values
+$5390 = 0 // integer values
+$5391 = 0 // integer values
+$5392 = 0 // integer values
+$5393 = 0 // integer values
+$5395 = 0.0 // floating-point values
+$5394 = 0 // integer values
+$5396 = 0 // integer values
+$5397 = 0 // integer values
+$5398 = 27 // integer values
+$5399 = 0 // integer values
+$5400 = 0 // integer values
+$5401 = 0 // integer values
+$5402 = 0 // integer values
+$5403 = -102.9375 // floating-point values
+$5404 = 171.7835 // floating-point values
+$5405 = 5.6727 // floating-point values
+$5406 = -64.7472 // floating-point values
+$5407 = 368.7051 // floating-point values
+$5408 = 5.505 // floating-point values
+$5409 = -27.916 // floating-point values
+$5410 = 482.466 // floating-point values
+$5411 = 16.0159 // floating-point values
+$5412 = 183.4692 // floating-point values
+$5413 = 614.9838 // floating-point values
+$5414 = 5.7676 // floating-point values
+$5415 = 239.9839 // floating-point values
+$5416 = 422.9632 // floating-point values
+$5417 = 5.9437 // floating-point values
+$5418 = 196.5818 // floating-point values
+$5419 = 227.5221 // floating-point values
+$5420 = 5.9738 // floating-point values
+$5421 = 336.4845 // floating-point values
+$5422 = 83.632 // floating-point values
+$5423 = 16.0888 // floating-point values
+$5424 = 417.2411 // floating-point values
+$5425 = -100.5402 // floating-point values
+$5426 = 15.9255 // floating-point values
+$5427 = 402.8727 // floating-point values
+$5428 = -300.6653 // floating-point values
+$5429 = 5.7619 // floating-point values
+$5430 = 290.0335 // floating-point values
+$5431 = -460.3196 // floating-point values
+$5432 = 5.9769 // floating-point values
+$5433 = 181.6709 // floating-point values
+$5434 = -617.7477 // floating-point values
+$5435 = 5.9921 // floating-point values
+$5436 = -4.6467 // floating-point values
+$5437 = -694.4938 // floating-point values
+$5438 = 5.8744 // floating-point values
+$5439 = -191.9626 // floating-point values
+$5440 = -772.1127 // floating-point values
+$5441 = 5.8744 // floating-point values
+$5442 = -335.464 // floating-point values
+$5443 = -910.51 // floating-point values
+$5444 = 5.4899 // floating-point values
+$5445 = -304.464 // floating-point values
+$5446 = -988.51 // floating-point values
+$5447 = 5.4899 // floating-point values
+$5448 = -244.464 // floating-point values
+$5449 = -922.51 // floating-point values
+$5450 = 5.4899 // floating-point values
+$5451 = -144.779 // floating-point values
+$5452 = -845.288 // floating-point values
+$5453 = 6.0213 // floating-point values
+$5454 = 26.0794 // floating-point values
+$5455 = -739.893 // floating-point values
+$5456 = 6.0163 // floating-point values
+$5457 = 154.4145 // floating-point values
+$5458 = -640.624 // floating-point values
+$5459 = 5.3606 // floating-point values
+$5460 = 304.531 // floating-point values
+$5461 = -431.591 // floating-point values
+$5462 = 16.0599 // floating-point values
+$5463 = 413.1744 // floating-point values
+$5464 = -280.507 // floating-point values
+$5465 = 5.9702 // floating-point values
+$5466 = 423.1779 // floating-point values
+$5467 = -89.6841 // floating-point values
+$5468 = 15.8592 // floating-point values
+$5469 = 339.5622 // floating-point values
+$5470 = 73.0977 // floating-point values
+$5471 = 6.0374 // floating-point values
+$5472 = 198.6796 // floating-point values
+$5473 = 243.2925 // floating-point values
+$5474 = 5.5461 // floating-point values
+$5475 = 75.6552 // floating-point values
+$5476 = 401.3978 // floating-point values
+$5477 = 5.6628 // floating-point values
+$5478 = -95.1011 // floating-point values
+$5479 = 295.7863 // floating-point values
+$5480 = 5.8772 // floating-point values
+$5481 = -86.3112 // floating-point values
+$5482 = 95.7909 // floating-point values
+$5483 = 5.6436 // floating-point values
+$5490 = -4.56 // floating-point values
+$5491 = 456.21 // floating-point values
+$5492 = 11.51 // floating-point values
+$5493 = -42.74 // floating-point values
+$5494 = 460.99 // floating-point values
+$5495 = -20.19 // floating-point values
+$5496 = 464.61 // floating-point values
+select_interior 7
+04E3: unknown_player $PLAYER_CHAR 0 60000
+042B: clear_peds_from_cube -1174.8 -609.0 10.4 -116.3 -632.5 15.3
+01EB: set_traffic_density_multiplier_to 0.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSPABLO'
+023C: load_special_actor 3 'CSPAPA'
+023C: load_special_actor 4 'CSPEPE'
+023C: load_special_actor 5 'CSUMBTO'
+02F3: load_object #CUTOBJ01 'CCFAN'
+02F3: load_object #CUTOBJ02 'LOBTRAY'
+02F3: load_object #CUTOBJ03 'ESPRESO'
+Camera.SetAtPos(-1169.0, -620.0, 10.791)
+038B: load_requested_models
+
+:CUBAN1_1325
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+jf @CUBAN1_1367
+wait 0
+jump @CUBAN1_1325
+
+:CUBAN1_1367
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @CUBAN1_1399
+wait 0
+jump @CUBAN1_1367
+
+:CUBAN1_1399
+02E4: load_cutscene_data 'CUB_1'
+0244: set_cutscene_pos -1170.708 -608.327 10.791
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $178 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $178 'CSPABLO'
+02E5: $179 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $179 'CSPAPA'
+02E5: $180 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $180 'CSPEPE'
+02E5: $181 = create_cutscene_object #SPECIAL05
+02E6: set_cutscene_anim $181 'CSUMBTO'
+02E5: $218 = create_cutscene_object #CUTOBJ01
+04BC:  'CCFAN'
+02E6: set_cutscene_anim $218 'CCFAN'
+02E5: $198 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $198 'LOBTRAY'
+02E5: $204 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $204 'ESPRESO'
+0395: clear_area 1 at -1170.9 -603.7 range 10.6 1.0
+0055: put_player $PLAYER_CHAR at -1170.9 -603.7 10.6
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:CUBAN1_1672
+if
+  2145 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1707
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1672
+
+:CUBAN1_1707
+00BC: text_highpriority 'CUB1_A' 10000 ms 1  // Si, men?
+
+:CUBAN1_1722
+if
+  3036 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1757
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1722
+
+:CUBAN1_1757
+00BC: text_highpriority 'CUB1_B' 10000 ms 1  // Hey, easy Papi, this man's for me. You, you the boy?
+
+:CUBAN1_1772
+if
+  10501 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1807
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1772
+
+:CUBAN1_1807
+00BC: text_highpriority 'CUB1_C' 10000 ms 1  // Oh yeh. You the boy. I think so, you know?
+
+:CUBAN1_1822
+if
+  14480 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1857
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1822
+
+:CUBAN1_1857
+00BC: text_highpriority 'CUB1_D' 10000 ms 1  // No. I don't think I do.
+
+:CUBAN1_1872
+if
+  16593 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1907
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1872
+
+:CUBAN1_1907
+00BC: text_highpriority 'CUB1_E' 10000 ms 1  // Oh yeah? You come here, tough guy.
+
+:CUBAN1_1922
+if
+  19202 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_1957
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1922
+
+:CUBAN1_1957
+00BC: text_highpriority 'CUB1_F' 10000 ms 1  // You think you can take me on?
+
+:CUBAN1_1972
+if
+  20637 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2007
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_1972
+
+:CUBAN1_2007
+00BC: text_highpriority 'CUB1_G' 10000 ms 1  // You think you can play stupid with me?
+
+:CUBAN1_2022
+if
+  22441 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2057
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2022
+
+:CUBAN1_2057
+00BC: text_highpriority 'CUB1_H' 10000 ms 1  // No, I think you're playing plenty stupid enough for both of us.
+
+:CUBAN1_2072
+if
+  24775 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2107
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2072
+
+:CUBAN1_2107
+00BC: text_highpriority 'CUB1_I' 10000 ms 1  // Hey, he call you dumb, son.
+
+:CUBAN1_2122
+if
+  27472 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2157
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2122
+
+:CUBAN1_2157
+00BC: text_highpriority 'CUB1_J' 10000 ms 1  // And I call him a little girl, Papi.
+
+:CUBAN1_2172
+if
+  30348 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2207
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2172
+
+:CUBAN1_2207
+00BC: text_highpriority 'CUB1_K' 10000 ms 1  // Look at him, all dressed up like that.
+
+:CUBAN1_2222
+if
+  33133 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2259
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2222
+
+:CUBAN1_2259
+00BC: text_highpriority 'CUB1_L' 10000 ms 1  // What is this, ladies night?
+
+:CUBAN1_2274
+if
+  35329 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2311
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2274
+
+:CUBAN1_2311
+00BC: text_highpriority 'CUB1_M' 10000 ms 1  // You some kind of tough guy, you dress like a woman?
+
+:CUBAN1_2326
+if
+  38022 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2363
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2326
+
+:CUBAN1_2363
+00BC: text_highpriority 'CUB1_N' 10000 ms 1  // You got on panties like a woman too, huh?
+
+:CUBAN1_2378
+if
+  40251 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2415
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2378
+
+:CUBAN1_2415
+00BC: text_highpriority 'CUB1_O' 10000 ms 1  // What you got against women? You prefer men, big boy?
+
+:CUBAN1_2430
+if
+  42742 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2467
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2430
+
+:CUBAN1_2467
+00BC: text_highpriority 'CUB1_P' 10000 ms 1  // I like women! I like all women! I love my mother, chico!
+
+:CUBAN1_2482
+if
+  46831 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2519
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2482
+
+:CUBAN1_2519
+00BC: text_highpriority 'CUB1_Q' 10000 ms 1  // Alright, alright, I'll take your word for it. Relax.
+
+:CUBAN1_2534
+if
+  51281 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2571
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2534
+
+:CUBAN1_2571
+00BC: text_highpriority 'CUB1_R' 10000 ms 1  // Can you drive, amigo?
+
+:CUBAN1_2586
+if
+  53403 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2623
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2586
+
+:CUBAN1_2623
+00BC: text_highpriority 'CUB1_S' 10000 ms 1  // Yeah... like a woman.
+
+:CUBAN1_2638
+if
+  57539 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2675
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2638
+
+:CUBAN1_2675
+00BC: text_highpriority 'CUB1_T' 10000 ms 1  // Very funny. I like you, big boy. Maybe you can help.
+
+:CUBAN1_2690
+if
+  62464 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2727
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2690
+
+:CUBAN1_2727
+00BC: text_highpriority 'CUB1_U' 10000 ms 1  // Maybe you can prove you a man. Huh?
+
+:CUBAN1_2742
+if
+  65377 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2779
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2742
+
+:CUBAN1_2779
+00BC: text_highpriority 'CUB1_V' 10000 ms 1  // Take out the boat.
+
+:CUBAN1_2794
+if
+  68974 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2831
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2794
+
+:CUBAN1_2831
+00BC: text_highpriority 'CUB1_W' 10000 ms 1  // Show me you got some big cojones,
+
+:CUBAN1_2846
+if
+  71656 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2883
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2846
+
+:CUBAN1_2883
+00BC: text_highpriority 'CUB1_X' 10000 ms 1  // and not some little bitty chiquita ones.
+
+:CUBAN1_2898
+if
+  75392 > $CUT_SCENE_TIME // integer values
+jf @CUBAN1_2935
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @CUBAN1_2898
+
+:CUBAN1_2935
+fade 0 1500
+00BE: text_clear_all
+
+:CUBAN1_2944
+if
+fading
+jf @CUBAN1_2968
+wait 0
+jump @CUBAN1_2944
+
+:CUBAN1_2968
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+select_interior 0
+$989 = 0 // integer values
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+00C0: set_current_time 10 0
+Model.Load(#SPEEDER)
+Model.Load(#CBB)
+Model.Load(#CADDY)
+Model.Load(#WMYGO)
+Model.Load(#WFOGO)
+Model.Load(#REEFER)
+
+:CUBAN1_3080
+if or
+   not Model.Available(#SPEEDER)
+   not Model.Available(#CBB)
+   not Model.Available(#CADDY)
+   not Model.Available(#WMYGO)
+   not Model.Available(#WFOGO)
+   not Model.Available(#REEFER)
+jf @CUBAN1_3129
+wait 0
+jump @CUBAN1_3080
+
+:CUBAN1_3129
+03CF: load_wav 'CUB1_9' as 1
+03CF: load_wav 'COL3_2B' as 2
+
+:CUBAN1_3153
+if or
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+jf @CUBAN1_3183
+wait 0
+jump @CUBAN1_3153
+
+:CUBAN1_3183
+set_weather 4
+01E8: create_forbidden_for_cars_cube 130.4 368.4 50.7 -228.4 724.5 0.0
+Camera.SetAtPos(-74.17, 90.2, 9.67)
+04E4: unknown_refresh_game_renderer_at -67.7 91.2
+0055: put_player $PLAYER_CHAR at -67.7 91.2 9.5
+$5375 = Actor.Create(Gang1, #CBB, -74.17, 90.2, 8.6)
+04F5: unknown_actor $5375 kiss_player $PLAYER_CHAR on 1
+Actor.Angle($5375) = 40.2
+$5382 = Car.Create(#CADDY, -31.7, 484.9, 7.3)
+Car.Angle($5382) = 205.8
+$5383 = Actor.Create(CivMale, #WMYGO, -29.5, 483.6, 7.7)
+Actor.Angle($5383) = 11.0
+Actor.Health($5383) = 10
+$5384 = Actor.Create(CivMale, #WMYGO, -27.2, 484.1, 7.7)
+Actor.Angle($5384) = 77.0
+Actor.Health($5384) = 10
+$5385 = Actor.Create(CivFemale, #WFOGO, -29.9, 484.4, 7.7)
+Actor.Angle($5385) = 282.0
+Actor.Health($5385) = 10
+$5386 = Actor.Create(CivFemale, #WFOGO, -28.4, 486.3, 7.7)
+Actor.Angle($5386) = 176.0
+Actor.Health($5386) = 10
+03F9: make_actors $5383 $5384 converse_in 86400000 ms
+03F9: make_actors $5385 $5386 converse_in 86400000 ms
+fade 1 1500
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-67.34, 85.31, 10.02, 0.0, 0.0, 0.0)
+Camera.PointAt(-86.4, 117.01, 13.04, 2)
+wait 1000
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_3633
+01D1: actor $PLAYER_ACTOR follow_actor $5375
+
+:CUBAN1_3633
+wait 2000
+00BC: text_highpriority 'CUB1_01' 4000 ms 1  // Hey, I'm Rico. You the man with the big cojones?
+03D1: play_wav 1
+
+:CUBAN1_3657
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_3769
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @CUBAN1_3737
+if
+  $61 == 1 // integer values
+jf @CUBAN1_3730
+$61 = 0 // integer values
+jump @CUBAN1_4106
+
+:CUBAN1_3730
+jump @CUBAN1_3762
+
+:CUBAN1_3737
+if
+  $61 == 0 // integer values
+jf @CUBAN1_3762
+$61 = 1 // integer values
+
+:CUBAN1_3762
+jump @CUBAN1_3657
+
+:CUBAN1_3769
+040D: unload_wav 1
+03D5: remove_text 'CUB1_01'  // Hey, I'm Rico. You the man with the big cojones?
+00BC: text_highpriority 'GEN3_4' 4000 ms 1  // Tommy Vercetti. Let's go...
+03D1: play_wav 2
+
+:CUBAN1_3802
+if
+83D2:   not wav 2 ended
+jf @CUBAN1_3909
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @CUBAN1_3877
+if
+  $61 == 1 // integer values
+jf @CUBAN1_3870
+$61 = 0 // integer values
+jump @CUBAN1_4106
+
+:CUBAN1_3870
+jump @CUBAN1_3902
+
+:CUBAN1_3877
+if
+  $61 == 0 // integer values
+jf @CUBAN1_3902
+$61 = 1 // integer values
+
+:CUBAN1_3902
+jump @CUBAN1_3802
+
+:CUBAN1_3909
+040D: unload_wav 2
+03D5: remove_text 'GEN3_4'  // Tommy Vercetti. Let's go...
+03CF: load_wav 'CUB1_10' as 1
+
+:CUBAN1_3935
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_3961
+wait 0
+jump @CUBAN1_3935
+
+:CUBAN1_3961
+00BC: text_highpriority 'CUB1_02' 4000 ms 1  // Ok man, treat her like a woman.
+03D1: play_wav 1
+
+:CUBAN1_3980
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_4092
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @CUBAN1_4060
+if
+  $61 == 1 // integer values
+jf @CUBAN1_4053
+$61 = 0 // integer values
+jump @CUBAN1_4106
+
+:CUBAN1_4053
+jump @CUBAN1_4085
+
+:CUBAN1_4060
+if
+  $61 == 0 // integer values
+jf @CUBAN1_4085
+$61 = 1 // integer values
+
+:CUBAN1_4085
+jump @CUBAN1_3980
+
+:CUBAN1_4092
+040D: unload_wav 1
+03D5: remove_text 'CUB1_02'  // Ok man, treat her like a woman.
+
+:CUBAN1_4106
+040D: unload_wav 1
+040D: unload_wav 2
+03EB: clear_small_messages_only
+Camera.Restore_WithJumpCut
+02A3: enable_widescreen 0
+0169: set_fade_color 1 1 1
+fade 0 1500
+
+:CUBAN1_4137
+if
+fading
+jf @CUBAN1_4161
+wait 0
+jump @CUBAN1_4137
+
+:CUBAN1_4161
+$5374 = Car.Create(#SPEEDER, -90.9, 105.1, 5.0)
+Car.Angle($5374) = 9.2
+0323: enable_boat $5374 anchor 1
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_4324
+0369: put_player $PLAYER_CHAR in_car $5374
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_4288
+0464: put_actor $5375 into_turret_on_car $5374 at_car_offset 0.0 1.8 1.2 position 0 angle 360.0 with_weapon 0
+020E: actor $5375 look_at_actor $PLAYER_ACTOR
+jump @CUBAN1_4317
+
+:CUBAN1_4288
+00BC: text_highpriority 'CUB1_11' 5000 ms 1  // ~r~You Killed Rico!
+fade 1 1500
+jump @CUBAN1_10663
+
+:CUBAN1_4317
+jump @CUBAN1_4353
+
+:CUBAN1_4324
+00BC: text_highpriority 'CUB1_11' 5000 ms 1  // ~r~You Killed Rico!
+fade 1 1500
+jump @CUBAN1_10663
+
+:CUBAN1_4353
+Camera.SetBehindPlayer
+Player.CanMove($PLAYER_CHAR) = True
+0086: $5484 = $5403 // floating-point values only
+0086: $5485 = $5404 // floating-point values only
+0086: $5486 = $5405 // floating-point values only
+0086: $5487 = $5406 // floating-point values only
+0086: $5488 = $5407 // floating-point values only
+0086: $5489 = $5408 // floating-point values only
+018A: $5387 = create_checkpoint_at $5484 $5485 $5486
+Marker.SetColor($5387, 4)
+018A: $5388 = create_checkpoint_at $5487 $5488 $5489
+Marker.SetColor($5388, 4)
+0168: set_blip $5388 size 2
+0166: set_marker $5388 brightness_to 1
+$5376 = Object.Create(#WATERJUMPX2, -34.26, 455.9, 5.5)
+Object.Angle($5376) = 343.6
+Object.CollisionDetection($5376) = True
+$5377 = Object.Create(#WATERJUMPX2, 312.2, 107.669, 5.5)
+Object.Angle($5377) = 230.88
+Object.CollisionDetection($5377) = True
+$5378 = Object.Create(#WATERJUMPX2, 414.5, -79.8, 5.5)
+Object.Angle($5378) = 184.9
+Object.CollisionDetection($5378) = True
+fade 1 1500
+00BC: text_highpriority 'CUB1_12' 5000 ms 1  // Go through the first checkpoint to begin the test.
+00BB: text_lowpriority 'CUB1_13' 5000 ms 1  // ~g~You have three minutes to get round the course.
+
+:CUBAN1_4623
+wait 0
+03BA: clear_cars_from_cube -185.35 -738.31 0.0 -150.63 -785.11 15.0
+if
+  4 > $5390 // integer values
+jf @CUBAN1_4761
+if
+  $5399 == 0 // integer values
+jf @CUBAN1_4761
+if
+   Actor.Dead($5383)
+jf @CUBAN1_4761
+01E3: text_1number_styled 'BONUS' number 100 time 1000 style 1  // ~g~BONUS $~1~
+018C: play_sound 1 at 0.0 0.0 0.0
+Player.Money($PLAYER_CHAR) += 100
+$5399 = 1 // integer values
+
+:CUBAN1_4761
+if
+  $5390 == 4 // integer values
+jf @CUBAN1_4871
+if
+   not Actor.Dead($5383)
+jf @CUBAN1_4802
+0350: set_actor $5383 maintain_position_when_attacked 1
+
+:CUBAN1_4802
+if
+   not Actor.Dead($5384)
+jf @CUBAN1_4825
+0350: set_actor $5384 maintain_position_when_attacked 1
+
+:CUBAN1_4825
+if
+   not Actor.Dead($5385)
+jf @CUBAN1_4848
+0350: set_actor $5385 maintain_position_when_attacked 1
+
+:CUBAN1_4848
+if
+   not Actor.Dead($5386)
+jf @CUBAN1_4871
+0350: set_actor $5386 maintain_position_when_attacked 1
+
+:CUBAN1_4871
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_6141
+if
+0056:   player $PLAYER_CHAR 0 $5493 $5494 $5495 $5496
+jf @CUBAN1_6141
+if
+  $5390 == 2 // integer values
+jf @CUBAN1_5019
+if
+   not Actor.Dead($5383)
+jf @CUBAN1_4956
+0193: set_actor $5383 objective_to_act_like_ped
+
+:CUBAN1_4956
+if
+   not Actor.Dead($5384)
+jf @CUBAN1_4977
+0193: set_actor $5384 objective_to_act_like_ped
+
+:CUBAN1_4977
+if
+   not Actor.Dead($5385)
+jf @CUBAN1_4998
+0193: set_actor $5385 objective_to_act_like_ped
+
+:CUBAN1_4998
+if
+   not Actor.Dead($5386)
+jf @CUBAN1_5019
+0193: set_actor $5386 objective_to_act_like_ped
+
+:CUBAN1_5019
+if
+00E0:   player $PLAYER_CHAR driving
+jf @CUBAN1_6141
+03C1: $5381 = player $PLAYER_CHAR car_no_save
+02E3: $5395 = car $5381 speed
+if
+82BF:   not car $5381 sunk
+jf @CUBAN1_5095
+if
+  $5395 > 15.0 // floating-point values
+jf @CUBAN1_5095
+$5392 = 1 // integer values
+
+:CUBAN1_5095
+if
+  $5392 == 1 // integer values
+jf @CUBAN1_6141
+015D: set_gamespeed 0.3
+Camera.SetPosition($5490, $5491, $5492, 0.0, 0.0, 0.0)
+Camera.OnVehicle($5381, 15, 2)
+
+:CUBAN1_5155
+if
+82BF:   not car $5381 sunk
+jf @CUBAN1_6111
+wait 0
+$5394 += 1 // integer values
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+if
+  $5393 == 0 // integer values
+jf @CUBAN1_5986
+if
+00F5:   player $PLAYER_CHAR 0 $5484 $5485 $5486 radius 7.0 7.0 7.0
+jf @CUBAN1_5986
+Marker.Disable($5387)
+Marker.Disable($5388)
+$5390 += 1 // integer values
+$5398 -= 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+if
+  $5390 == 3 // integer values
+jf @CUBAN1_5449
+$5490 = 369.99 // floating-point values
+$5491 = 74.3 // floating-point values
+$5492 = 8.66 // floating-point values
+$5493 = 308.57 // floating-point values
+$5494 = 99.09 // floating-point values
+$5495 = 340.835 // floating-point values
+$5496 = 107.66 // floating-point values
+0086: $5484 = $5412 // floating-point values only
+0086: $5485 = $5413 // floating-point values only
+0086: $5486 = $5414 // floating-point values only
+0086: $5487 = $5415 // floating-point values only
+0086: $5488 = $5416 // floating-point values only
+0086: $5489 = $5417 // floating-point values only
+
+:CUBAN1_5449
+if
+  $5390 == 7 // integer values
+jf @CUBAN1_5585
+$5490 = 396.14 // floating-point values
+$5491 = -90.01 // floating-point values
+$5492 = 11.48 // floating-point values
+$5493 = 421.73 // floating-point values
+$5494 = -83.21 // floating-point values
+$5495 = 403.83 // floating-point values
+$5496 = -91.97 // floating-point values
+0086: $5484 = $5424 // floating-point values only
+0086: $5485 = $5425 // floating-point values only
+0086: $5486 = $5426 // floating-point values only
+0086: $5487 = $5427 // floating-point values only
+0086: $5488 = $5428 // floating-point values only
+0086: $5489 = $5429 // floating-point values only
+
+:CUBAN1_5585
+if
+  $5390 == 8 // integer values
+jf @CUBAN1_5721
+$5490 = -194.5 // floating-point values
+$5491 = -783.5 // floating-point values
+$5492 = 9.2 // floating-point values
+$5493 = -183.166 // floating-point values
+$5494 = -756.844 // floating-point values
+$5495 = -181.8 // floating-point values
+$5496 = -780.26 // floating-point values
+0086: $5484 = $5427 // floating-point values only
+0086: $5485 = $5428 // floating-point values only
+0086: $5486 = $5429 // floating-point values only
+0086: $5487 = $5430 // floating-point values only
+0086: $5488 = $5431 // floating-point values only
+0086: $5489 = $5432 // floating-point values only
+
+:CUBAN1_5721
+if
+  $5390 == 20 // integer values
+jf @CUBAN1_5857
+$5490 = 435.65 // floating-point values
+$5491 = -98.08 // floating-point values
+$5492 = 11.97 // floating-point values
+$5493 = 409.8 // floating-point values
+$5494 = -109.11 // floating-point values
+$5495 = 433.46 // floating-point values
+$5496 = -100.21 // floating-point values
+0086: $5484 = $5463 // floating-point values only
+0086: $5485 = $5464 // floating-point values only
+0086: $5486 = $5465 // floating-point values only
+0086: $5487 = $5466 // floating-point values only
+0086: $5488 = $5467 // floating-point values only
+0086: $5489 = $5468 // floating-point values only
+
+:CUBAN1_5857
+if
+  $5390 == 22 // integer values
+jf @CUBAN1_5923
+0086: $5484 = $5469 // floating-point values only
+0086: $5485 = $5470 // floating-point values only
+0086: $5486 = $5471 // floating-point values only
+0086: $5487 = $5472 // floating-point values only
+0086: $5488 = $5473 // floating-point values only
+0086: $5489 = $5474 // floating-point values only
+
+:CUBAN1_5923
+018A: $5387 = create_checkpoint_at $5484 $5485 $5486
+Marker.SetColor($5387, 4)
+018A: $5388 = create_checkpoint_at $5487 $5488 $5489
+Marker.SetColor($5388, 4)
+0168: set_blip $5388 size 2
+0166: set_marker $5388 brightness_to 1
+$5393 = 1 // integer values
+
+:CUBAN1_5986
+if
+   Car.Wrecked($5381)
+jf @CUBAN1_6009
+jump @CUBAN1_6111
+
+:CUBAN1_6009
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @CUBAN1_6032
+jump @CUBAN1_6111
+
+:CUBAN1_6032
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @CUBAN1_6055
+jump @CUBAN1_6111
+
+:CUBAN1_6055
+if
+01C1:   car $5381 stopped
+jf @CUBAN1_6078
+jump @CUBAN1_6111
+
+:CUBAN1_6078
+if
+  $5394 > 1000 // integer values
+jf @CUBAN1_6104
+jump @CUBAN1_6111
+
+:CUBAN1_6104
+jump @CUBAN1_5155
+
+:CUBAN1_6111
+015D: set_gamespeed 1.0
+Camera.Restore_WithJumpCut
+$5392 = 0 // integer values
+$5393 = 0 // integer values
+$5394 = 0 // integer values
+
+:CUBAN1_6141
+if
+  $5390 == 26 // integer values
+jf @CUBAN1_6193
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 255 0 0 at $5484 $5485 $5486
+jump @CUBAN1_6221
+
+:CUBAN1_6193
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+
+:CUBAN1_6221
+if
+  $5390 == 1 // integer values
+jf @CUBAN1_6294
+if
+  $5396 == 0 // integer values
+jf @CUBAN1_6294
+03C3: set_timer_with_text_to $5389 type 1 text 'RACES'  // TIME:
+03C4: set_status_text_to $5398 0 'KICK1_9'  // CHECKPOINTS:
+$5396 = 1 // integer values
+
+:CUBAN1_6294
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_7593
+if
+00DC:   player $PLAYER_CHAR driving $5374
+jf @CUBAN1_7593
+if
+  $5397 == 0 // integer values
+jf @CUBAN1_6581
+if
+  $5390 > 1 // integer values
+jf @CUBAN1_6581
+03CF: load_wav 'CUB1_3' as 1
+
+:CUBAN1_6377
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_6431
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6377
+
+:CUBAN1_6431
+00BC: text_highpriority 'CUB1_05' 4000 ms 1  // Amigo, you a man, man.
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_6472
+0372: set_actor $5375 anim 19 wait_state_time 10000 ms
+
+:CUBAN1_6472
+03D1: play_wav 1
+
+:CUBAN1_6476
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_6535
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6476
+
+:CUBAN1_6535
+040D: unload_wav 1
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_6564
+0372: set_actor $5375 anim 0 wait_state_time 100 ms
+
+:CUBAN1_6564
+03D5: remove_text 'CUB1_05'  // Amigo, you a man, man.
+$5397 = 1 // integer values
+
+:CUBAN1_6581
+if
+  $5397 == 1 // integer values
+jf @CUBAN1_6833
+if
+  $5390 > 4 // integer values
+jf @CUBAN1_6833
+03CF: load_wav 'CUB1_4' as 1
+
+:CUBAN1_6629
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_6683
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6629
+
+:CUBAN1_6683
+00BC: text_highpriority 'CUB1_06' 4000 ms 1  // Call yourself a man, man?
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_6724
+0372: set_actor $5375 anim 19 wait_state_time 10000 ms
+
+:CUBAN1_6724
+03D1: play_wav 1
+
+:CUBAN1_6728
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_6787
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6728
+
+:CUBAN1_6787
+040D: unload_wav 1
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_6816
+0372: set_actor $5375 anim 0 wait_state_time 100 ms
+
+:CUBAN1_6816
+03D5: remove_text 'CUB1_06'  // Call yourself a man, man?
+$5397 = 2 // integer values
+
+:CUBAN1_6833
+if
+  $5397 == 2 // integer values
+jf @CUBAN1_7085
+if
+  $5390 > 9 // integer values
+jf @CUBAN1_7085
+03CF: load_wav 'CUB1_5' as 1
+
+:CUBAN1_6881
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_6935
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6881
+
+:CUBAN1_6935
+00BC: text_highpriority 'CUB1_07' 4000 ms 1  // You a little scaredy kitten, baby boy, go cry to your mommy!
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_6976
+0372: set_actor $5375 anim 19 wait_state_time 10000 ms
+
+:CUBAN1_6976
+03D1: play_wav 1
+
+:CUBAN1_6980
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_7039
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_6980
+
+:CUBAN1_7039
+040D: unload_wav 1
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_7068
+0372: set_actor $5375 anim 0 wait_state_time 100 ms
+
+:CUBAN1_7068
+03D5: remove_text 'CUB1_07'  // You a little scaredy kitten, baby boy, go cry to your mommy!
+$5397 = 3 // integer values
+
+:CUBAN1_7085
+if
+  $5397 == 3 // integer values
+jf @CUBAN1_7337
+if
+  $5390 > 15 // integer values
+jf @CUBAN1_7337
+03CF: load_wav 'CUB1_1' as 1
+
+:CUBAN1_7133
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_7187
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_7133
+
+:CUBAN1_7187
+00BC: text_highpriority 'CUB1_03' 4000 ms 1  // Not bad, you're a real man.
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_7228
+0372: set_actor $5375 anim 19 wait_state_time 10000 ms
+
+:CUBAN1_7228
+03D1: play_wav 1
+
+:CUBAN1_7232
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_7291
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_7232
+
+:CUBAN1_7291
+040D: unload_wav 1
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_7320
+0372: set_actor $5375 anim 0 wait_state_time 100 ms
+
+:CUBAN1_7320
+03D5: remove_text 'CUB1_03'  // Not bad, you're a real man.
+$5397 = 4 // integer values
+
+:CUBAN1_7337
+if
+  $5397 == 4 // integer values
+jf @CUBAN1_7465
+if
+  $5390 > 22 // integer values
+jf @CUBAN1_7465
+03CF: load_wav 'CUB1_7' as 1
+
+:CUBAN1_7385
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_7439
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_7385
+
+:CUBAN1_7439
+00BC: text_highpriority 'CUB1_09' 4000 ms 1  // Man, you the man, man. I like you, man. I like you a lot.
+03D1: play_wav 1
+$5397 = 5 // integer values
+
+:CUBAN1_7465
+if
+  $5397 == 5 // integer values
+jf @CUBAN1_7593
+if
+  $5390 > 23 // integer values
+jf @CUBAN1_7593
+03CF: load_wav 'CUB1_8' as 1
+
+:CUBAN1_7513
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_7567
+wait 0
+024F: create_corona_with_radius 5.0 type 6 lensflares 0 with_color 150 150 0 at $5484 $5485 $5486
+jump @CUBAN1_7513
+
+:CUBAN1_7567
+00BC: text_highpriority 'CUB1_10' 4000 ms 1  // Any time, man. 'cause you got cojones. And all my friends have big cojones.
+03D1: play_wav 1
+$5397 = 6 // integer values
+
+:CUBAN1_7593
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_10360
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_10326
+if
+00DC:   player $PLAYER_CHAR driving $5374
+jf @CUBAN1_10304
+03D5: remove_text 'CUB1_14'  // Get back in the boat!
+if
+00F5:   player $PLAYER_CHAR 0 $5484 $5485 $5486 radius 7.0 7.0 7.0
+jf @CUBAN1_10297
+$5390 += 1 // integer values
+$5398 -= 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($5387)
+Marker.Disable($5388)
+if
+  $5390 == 1 // integer values
+jf @CUBAN1_7805
+0086: $5484 = $5406 // floating-point values only
+0086: $5485 = $5407 // floating-point values only
+0086: $5486 = $5408 // floating-point values only
+0086: $5487 = $5409 // floating-point values only
+0086: $5488 = $5410 // floating-point values only
+0086: $5489 = $5411 // floating-point values only
+
+:CUBAN1_7805
+if
+  $5390 == 2 // integer values
+jf @CUBAN1_7871
+0086: $5484 = $5409 // floating-point values only
+0086: $5485 = $5410 // floating-point values only
+0086: $5486 = $5411 // floating-point values only
+0086: $5487 = $5412 // floating-point values only
+0086: $5488 = $5413 // floating-point values only
+0086: $5489 = $5414 // floating-point values only
+
+:CUBAN1_7871
+if
+  $5390 == 3 // integer values
+jf @CUBAN1_8007
+$5490 = 369.99 // floating-point values
+$5491 = 74.3 // floating-point values
+$5492 = 8.66 // floating-point values
+$5493 = 308.57 // floating-point values
+$5494 = 99.09 // floating-point values
+$5495 = 340.835 // floating-point values
+$5496 = 107.66 // floating-point values
+0086: $5484 = $5412 // floating-point values only
+0086: $5485 = $5413 // floating-point values only
+0086: $5486 = $5414 // floating-point values only
+0086: $5487 = $5415 // floating-point values only
+0086: $5488 = $5416 // floating-point values only
+0086: $5489 = $5417 // floating-point values only
+
+:CUBAN1_8007
+if
+  $5390 == 4 // integer values
+jf @CUBAN1_8098
+Car.RemoveReferences($5382)
+Actor.RemoveReferences($5383)
+Actor.RemoveReferences($5384)
+Actor.RemoveReferences($5385)
+Actor.RemoveReferences($5386)
+0086: $5484 = $5415 // floating-point values only
+0086: $5485 = $5416 // floating-point values only
+0086: $5486 = $5417 // floating-point values only
+0086: $5487 = $5418 // floating-point values only
+0086: $5488 = $5419 // floating-point values only
+0086: $5489 = $5420 // floating-point values only
+
+:CUBAN1_8098
+if
+  $5390 == 5 // integer values
+jf @CUBAN1_8164
+0086: $5484 = $5418 // floating-point values only
+0086: $5485 = $5419 // floating-point values only
+0086: $5486 = $5420 // floating-point values only
+0086: $5487 = $5421 // floating-point values only
+0086: $5488 = $5422 // floating-point values only
+0086: $5489 = $5423 // floating-point values only
+
+:CUBAN1_8164
+if
+  $5390 == 6 // integer values
+jf @CUBAN1_8230
+0086: $5484 = $5421 // floating-point values only
+0086: $5485 = $5422 // floating-point values only
+0086: $5486 = $5423 // floating-point values only
+0086: $5487 = $5424 // floating-point values only
+0086: $5488 = $5425 // floating-point values only
+0086: $5489 = $5426 // floating-point values only
+
+:CUBAN1_8230
+if
+  $5390 == 7 // integer values
+jf @CUBAN1_8366
+$5490 = 396.14 // floating-point values
+$5491 = -90.01 // floating-point values
+$5492 = 11.48 // floating-point values
+$5493 = 421.73 // floating-point values
+$5494 = -83.21 // floating-point values
+$5495 = 403.83 // floating-point values
+$5496 = -91.97 // floating-point values
+0086: $5484 = $5424 // floating-point values only
+0086: $5485 = $5425 // floating-point values only
+0086: $5486 = $5426 // floating-point values only
+0086: $5487 = $5427 // floating-point values only
+0086: $5488 = $5428 // floating-point values only
+0086: $5489 = $5429 // floating-point values only
+
+:CUBAN1_8366
+if
+  $5390 == 8 // integer values
+jf @CUBAN1_8502
+$5490 = -194.5 // floating-point values
+$5491 = -783.5 // floating-point values
+$5492 = 9.2 // floating-point values
+$5493 = -183.166 // floating-point values
+$5494 = -756.844 // floating-point values
+$5495 = -181.8 // floating-point values
+$5496 = -780.26 // floating-point values
+0086: $5484 = $5427 // floating-point values only
+0086: $5485 = $5428 // floating-point values only
+0086: $5486 = $5429 // floating-point values only
+0086: $5487 = $5430 // floating-point values only
+0086: $5488 = $5431 // floating-point values only
+0086: $5489 = $5432 // floating-point values only
+
+:CUBAN1_8502
+if
+  $5390 == 9 // integer values
+jf @CUBAN1_8568
+0086: $5484 = $5430 // floating-point values only
+0086: $5485 = $5431 // floating-point values only
+0086: $5486 = $5432 // floating-point values only
+0086: $5487 = $5433 // floating-point values only
+0086: $5488 = $5434 // floating-point values only
+0086: $5489 = $5435 // floating-point values only
+
+:CUBAN1_8568
+if
+  $5390 == 10 // integer values
+jf @CUBAN1_8634
+0086: $5484 = $5433 // floating-point values only
+0086: $5485 = $5434 // floating-point values only
+0086: $5486 = $5435 // floating-point values only
+0086: $5487 = $5436 // floating-point values only
+0086: $5488 = $5437 // floating-point values only
+0086: $5489 = $5438 // floating-point values only
+
+:CUBAN1_8634
+if
+  $5390 == 11 // integer values
+jf @CUBAN1_8700
+0086: $5484 = $5436 // floating-point values only
+0086: $5485 = $5437 // floating-point values only
+0086: $5486 = $5438 // floating-point values only
+0086: $5487 = $5439 // floating-point values only
+0086: $5488 = $5440 // floating-point values only
+0086: $5489 = $5441 // floating-point values only
+
+:CUBAN1_8700
+if
+  $5390 == 12 // integer values
+jf @CUBAN1_8766
+0086: $5484 = $5439 // floating-point values only
+0086: $5485 = $5440 // floating-point values only
+0086: $5486 = $5441 // floating-point values only
+0086: $5487 = $5442 // floating-point values only
+0086: $5488 = $5443 // floating-point values only
+0086: $5489 = $5444 // floating-point values only
+
+:CUBAN1_8766
+if
+  $5390 == 13 // integer values
+jf @CUBAN1_8832
+0086: $5484 = $5442 // floating-point values only
+0086: $5485 = $5443 // floating-point values only
+0086: $5486 = $5444 // floating-point values only
+0086: $5487 = $5445 // floating-point values only
+0086: $5488 = $5446 // floating-point values only
+0086: $5489 = $5447 // floating-point values only
+
+:CUBAN1_8832
+if
+  $5390 == 14 // integer values
+jf @CUBAN1_9018
+if
+  $5391 == 0 // integer values
+jf @CUBAN1_8970
+Object.Destroy($5376)
+Object.Destroy($5377)
+Object.Destroy($5378)
+$5376 = Object.Create(#WATERJUMP1, 295.2, -446.2, 5.5)
+Object.Angle($5376) = 326.5
+Object.CollisionDetection($5376) = True
+$5377 = Object.Create(#WATERJUMPX2, 421.2, -112.669, 5.5)
+Object.Angle($5377) = 356.88
+Object.CollisionDetection($5377) = True
+$5391 = 1 // integer values
+
+:CUBAN1_8970
+0086: $5484 = $5445 // floating-point values only
+0086: $5485 = $5446 // floating-point values only
+0086: $5486 = $5447 // floating-point values only
+0086: $5487 = $5448 // floating-point values only
+0086: $5488 = $5449 // floating-point values only
+0086: $5489 = $5450 // floating-point values only
+
+:CUBAN1_9018
+if
+  $5390 == 15 // integer values
+jf @CUBAN1_9084
+0086: $5484 = $5448 // floating-point values only
+0086: $5485 = $5449 // floating-point values only
+0086: $5486 = $5450 // floating-point values only
+0086: $5487 = $5451 // floating-point values only
+0086: $5488 = $5452 // floating-point values only
+0086: $5489 = $5453 // floating-point values only
+
+:CUBAN1_9084
+if
+  $5390 == 16 // integer values
+jf @CUBAN1_9150
+0086: $5484 = $5451 // floating-point values only
+0086: $5485 = $5452 // floating-point values only
+0086: $5486 = $5453 // floating-point values only
+0086: $5487 = $5454 // floating-point values only
+0086: $5488 = $5455 // floating-point values only
+0086: $5489 = $5456 // floating-point values only
+
+:CUBAN1_9150
+if
+  $5390 == 17 // integer values
+jf @CUBAN1_9216
+0086: $5484 = $5454 // floating-point values only
+0086: $5485 = $5455 // floating-point values only
+0086: $5486 = $5456 // floating-point values only
+0086: $5487 = $5457 // floating-point values only
+0086: $5488 = $5458 // floating-point values only
+0086: $5489 = $5459 // floating-point values only
+
+:CUBAN1_9216
+if
+  $5390 == 18 // integer values
+jf @CUBAN1_9282
+0086: $5484 = $5457 // floating-point values only
+0086: $5485 = $5458 // floating-point values only
+0086: $5486 = $5459 // floating-point values only
+0086: $5487 = $5460 // floating-point values only
+0086: $5488 = $5461 // floating-point values only
+0086: $5489 = $5462 // floating-point values only
+
+:CUBAN1_9282
+if
+  $5390 == 19 // integer values
+jf @CUBAN1_9348
+0086: $5484 = $5460 // floating-point values only
+0086: $5485 = $5461 // floating-point values only
+0086: $5486 = $5462 // floating-point values only
+0086: $5487 = $5463 // floating-point values only
+0086: $5488 = $5464 // floating-point values only
+0086: $5489 = $5465 // floating-point values only
+
+:CUBAN1_9348
+if
+  $5390 == 20 // integer values
+jf @CUBAN1_9414
+0086: $5484 = $5463 // floating-point values only
+0086: $5485 = $5464 // floating-point values only
+0086: $5486 = $5465 // floating-point values only
+0086: $5487 = $5466 // floating-point values only
+0086: $5488 = $5467 // floating-point values only
+0086: $5489 = $5468 // floating-point values only
+
+:CUBAN1_9414
+if
+  $5390 == 21 // integer values
+jf @CUBAN1_9480
+0086: $5484 = $5466 // floating-point values only
+0086: $5485 = $5467 // floating-point values only
+0086: $5486 = $5468 // floating-point values only
+0086: $5487 = $5469 // floating-point values only
+0086: $5488 = $5470 // floating-point values only
+0086: $5489 = $5471 // floating-point values only
+
+:CUBAN1_9480
+if
+  $5390 == 22 // integer values
+jf @CUBAN1_9546
+0086: $5484 = $5469 // floating-point values only
+0086: $5485 = $5470 // floating-point values only
+0086: $5486 = $5471 // floating-point values only
+0086: $5487 = $5472 // floating-point values only
+0086: $5488 = $5473 // floating-point values only
+0086: $5489 = $5474 // floating-point values only
+
+:CUBAN1_9546
+if
+  $5390 == 23 // integer values
+jf @CUBAN1_9612
+0086: $5484 = $5472 // floating-point values only
+0086: $5485 = $5473 // floating-point values only
+0086: $5486 = $5474 // floating-point values only
+0086: $5487 = $5475 // floating-point values only
+0086: $5488 = $5476 // floating-point values only
+0086: $5489 = $5477 // floating-point values only
+
+:CUBAN1_9612
+if
+  $5390 == 24 // integer values
+jf @CUBAN1_9678
+0086: $5484 = $5475 // floating-point values only
+0086: $5485 = $5476 // floating-point values only
+0086: $5486 = $5477 // floating-point values only
+0086: $5487 = $5478 // floating-point values only
+0086: $5488 = $5479 // floating-point values only
+0086: $5489 = $5480 // floating-point values only
+
+:CUBAN1_9678
+if
+  $5390 == 25 // integer values
+jf @CUBAN1_9744
+0086: $5484 = $5478 // floating-point values only
+0086: $5485 = $5479 // floating-point values only
+0086: $5486 = $5480 // floating-point values only
+0086: $5487 = $5481 // floating-point values only
+0086: $5488 = $5482 // floating-point values only
+0086: $5489 = $5483 // floating-point values only
+
+:CUBAN1_9744
+if
+  $5390 == 26 // integer values
+jf @CUBAN1_9786
+0086: $5484 = $5481 // floating-point values only
+0086: $5485 = $5482 // floating-point values only
+0086: $5486 = $5483 // floating-point values only
+
+:CUBAN1_9786
+if
+  $5390 == 27 // integer values
+jf @CUBAN1_10241
+Player.CanMove($PLAYER_CHAR) = False
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_9854
+0477: set_car $5374 action 5 time 10000
+02DB: set_boat $5374 speed_to 0.0
+0323: enable_boat $5374 anchor 1
+
+:CUBAN1_9854
+0169: set_fade_color 1 1 1
+fade 0 1500
+
+:CUBAN1_9869
+if
+fading
+jf @CUBAN1_9893
+wait 0
+jump @CUBAN1_9869
+
+:CUBAN1_9893
+014F: stop_timer $5389
+wait 1000
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_10017
+012A: put_player $PLAYER_CHAR at -79.3 82.22 8.6 and_remove_from_car
+0171: set_player $PLAYER_CHAR z_angle_to 120.75
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_10017
+0465: remove_actor $5375 from_turret_mode
+Actor.DestroyInstantly($5375)
+Car.PutAt($5374, -84.5, 82.7, 5.1)
+Car.Angle($5374) = 180.0
+0129: $5375 = create_actor 7 #CBB in_car $5374 driverseat
+
+:CUBAN1_10017
+fade 1 1500
+02A3: enable_widescreen 1
+Camera.SetPosition(-75.82, 83.66, 11.59, 0.0, 0.0, 0.0)
+Camera.PointAt(-80.32, 82.6, 9.96, 2)
+wait 1000
+03CF: load_wav 'CUB1_2' as 1
+
+:CUBAN1_10096
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_10122
+wait 0
+jump @CUBAN1_10096
+
+:CUBAN1_10122
+00BC: text_highpriority 'CUB1_04' 4000 ms 1  // You got real big cojones, amigo.
+03D1: play_wav 1
+
+:CUBAN1_10141
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_10172
+wait 0
+jump @CUBAN1_10141
+
+:CUBAN1_10172
+040D: unload_wav 1
+03D5: remove_text 'CUB1_04'  // You got real big cojones, amigo.
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_10212
+04BA: set_car $5374 speed_instantly 40.0
+
+:CUBAN1_10212
+Model.Destroy(#SPEEDER)
+Model.Destroy(#CBB)
+Camera.Restore_WithJumpCut
+wait 2000
+00A6: destroy_car $5374
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+jump @CUBAN1_10680
+
+:CUBAN1_10241
+018A: $5387 = create_checkpoint_at $5484 $5485 $5486
+Marker.SetColor($5387, 4)
+018A: $5388 = create_checkpoint_at $5487 $5488 $5489
+Marker.SetColor($5388, 4)
+0168: set_blip $5388 size 2
+0166: set_marker $5388 brightness_to 1
+
+:CUBAN1_10297
+jump @CUBAN1_10319
+
+:CUBAN1_10304
+00BC: text_highpriority 'CUB1_14' 5000 ms 1  // Get back in the boat!
+
+:CUBAN1_10319
+jump @CUBAN1_10353
+
+:CUBAN1_10326
+00BC: text_highpriority 'CUB1_11' 5000 ms 1  // ~r~You Killed Rico!
+Actor.DestroyInstantly($5375)
+jump @CUBAN1_10663
+
+:CUBAN1_10353
+jump @CUBAN1_10387
+
+:CUBAN1_10360
+00BC: text_highpriority 'CUB1_11' 5000 ms 1  // ~r~You Killed Rico!
+Actor.DestroyInstantly($5375)
+jump @CUBAN1_10663
+
+:CUBAN1_10387
+if
+  $5389 == 0 // integer values
+jf @CUBAN1_10566
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_10566
+03CF: load_wav 'CUB1_6' as 1
+
+:CUBAN1_10433
+if
+83D0:   not wav 1 loaded
+jf @CUBAN1_10459
+wait 0
+jump @CUBAN1_10433
+
+:CUBAN1_10459
+00BC: text_highpriority 'CUB1_08' 4000 ms 1  // You a big waste of space. Walk like a man, talk like a man, but you drive like an idiot.
+03D1: play_wav 1
+
+:CUBAN1_10478
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($5375)
+jf @CUBAN1_10509
+wait 0
+jump @CUBAN1_10478
+
+:CUBAN1_10509
+040D: unload_wav 1
+03D5: remove_text 'CUB1_08'  // You a big waste of space. Walk like a man, talk like a man, but you drive like an idiot.
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_10544
+Actor.DestroyWithFade($5375)
+
+:CUBAN1_10544
+00BC: text_highpriority 'CUB1_15' 5000 ms 1  // ~r~You are too slow, man.
+jump @CUBAN1_10663
+
+:CUBAN1_10566
+if
+   not Car.Wrecked($5374)
+jf @CUBAN1_10656
+if
+81FC:   not player $PLAYER_CHAR near_car $5374 radius 15.0 15.0 0
+jf @CUBAN1_10656
+if
+   not Actor.Dead($5375)
+jf @CUBAN1_10634
+Actor.DestroyWithFade($5375)
+
+:CUBAN1_10634
+00BC: text_highpriority 'T4X4_F' 5000 ms 1  // ~r~You bailed! Too tough for you?!
+jump @CUBAN1_10663
+
+:CUBAN1_10656
+jump @CUBAN1_4623
+
+:CUBAN1_10663
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:CUBAN1_10680
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 1000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 1000
+030C: progress_made += 1
+0318: set_latest_mission_passed 'CUB_1'  // Stunt Boat Challenge
+create_thread @CUB2
+$279 = 1 // integer values
+return
+
+:CUBAN1_10748
+$ONMISSION = 0 // integer values
+01E7: remove_forbidden_for_cars_cube 130.4 368.4 50.7 -228.4 724.5 0.0
+Player.CanMove($PLAYER_CHAR) = True
+Object.Destroy($5376)
+Object.Destroy($5377)
+Object.Destroy($5378)
+Model.Destroy(#SPEEDER)
+Model.Destroy(#CBB)
+Model.Destroy(#CADDY)
+Model.Destroy(#WMYGO)
+Model.Destroy(#WFOGO)
+Model.Destroy(#REEFER)
+Marker.Disable($5387)
+Marker.Disable($5388)
+014F: stop_timer $5389
+0151: remove_status_text $5398
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+01B7: release_weather
+mission_cleanup
+return

@@ -1,0 +1,2099 @@
+:BARON5
+gosub @BARON5_36
+if
+wasted_or_busted
+jf @BARON5_27
+gosub @BARON5_12284
+
+:BARON5_27
+gosub @BARON5_12919
+end_thread
+
+:BARON5_36
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$56 = 0 // integer values
+2@ = 0 // integer values
+$2928 = 0 // integer values
+$38 = 0 // integer values
+$33 = 0 // integer values
+$34 = 0 // integer values
+3@ = 0 // integer values
+$2931 = 0 // integer values
+$2932 = 0 // integer values
+$2929 = 0 // integer values
+$2930 = 0 // integer values
+$2935 = 0 // integer values
+$2940 = 0 // integer values
+6@ = 0 // integer values
+$2966 = 0 // integer values
+$2967 = 0 // integer values
+$2968 = 0 // integer values
+thread 'BARON5'
+wait 0
+054C: use_GXT_table 'BARON5'
+058E: set_restart_mission_taxi_destination -288.2 -487.5 9.8 275.0
+Model.Load(#STALLION)
+023C: load_special_actor 5 'IGBUDDY'
+038B: load_requested_models
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+$26 = Car.Create(#STALLION, -290.0, -489.0, 10.5)
+0229: set_car $26 color_to 51 55
+0129: $LANCE_VANCE = create_actor 4 #SPECIAL05 in_car $26 driverseat
+00AE: set_vehicle $26 traffic_behavior_to 3
+0395: clear_area 1 at -250.6 -488.1 range 10.5 40.0
+Car.Angle($26) = 270.0
+Car.SetMaxSpeed($26, 25.0)
+Car.DriveTo($26, -250.6, -488.1, 10.5)
+Camera.SetPosition(-239.7, -485.397, 11.393, 0.0, 0.0, 0.0)
+Camera.PointAt(-240.525, -485.962, 11.378, 2)
+0055: put_player $PLAYER_CHAR at -244.234 -493.784 10.6
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+0211: actor $PLAYER_ACTOR walk_to -243.73 -490.011
+wait 500
+fade 1 500
+17@ = 0 // integer values
+wait 500
+
+:BARON5_451
+if
+   not 17@ > 4000 // integer values
+jf @BARON5_505
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_498
+jump @BARON5_505
+
+:BARON5_498
+jump @BARON5_451
+
+:BARON5_505
+fade 0 1000
+
+:BARON5_512
+if
+fading
+jf @BARON5_536
+wait 0
+jump @BARON5_512
+
+:BARON5_536
+03AF: set_streaming 0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSBUDDY'
+02F3: load_object #CUTOBJ01 'MFOUR'
+02F3: load_object #CUTOBJ02 'CARBACK'
+038B: load_requested_models
+
+:BARON5_592
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @BARON5_632
+wait 0
+jump @BARON5_592
+
+:BARON5_632
+0395: clear_area 1 at $510 $511 range $512 40.0
+02E4: load_cutscene_data 'ASS_1'
+0244: set_cutscene_pos $510 $511 $512
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $136 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $136 'CSBUDDY'
+02E5: $2933 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $2933 'MFOUR01'
+02E5: $2933 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $2933 'MFOUR02'
+02E5: 4@ = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim 4@ 'CARBACK'
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BARON5_803
+if
+  1828 > $CUT_SCENE_TIME // integer values
+jf @BARON5_838
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_803
+
+:BARON5_838
+00BC: text_highpriority 'ASS1_A' 10000 ms 1  // I got us some cannons in the trunk.
+
+:BARON5_853
+if
+  3471 > $CUT_SCENE_TIME // integer values
+jf @BARON5_888
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_853
+
+:BARON5_888
+00BC: text_highpriority 'ASS1_B' 10000 ms 1  // Holy shit! Where'd you get all this stuff?
+
+:BARON5_903
+if
+  6244 > $CUT_SCENE_TIME // integer values
+jf @BARON5_938
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_903
+
+:BARON5_938
+00BC: text_highpriority 'ASS1_C' 10000 ms 1  // Been saving it for a rainy day.
+
+:BARON5_953
+if
+  10181 > $CUT_SCENE_TIME // integer values
+jf @BARON5_988
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_953
+
+:BARON5_988
+00BC: text_highpriority 'ASS1_D' 10000 ms 1  // You like?
+
+:BARON5_1003
+if
+  11087 > $CUT_SCENE_TIME // integer values
+jf @BARON5_1038
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_1003
+
+:BARON5_1038
+00BC: text_highpriority 'ASS1_E' 10000 ms 1  // Yeah, I like.
+
+:BARON5_1053
+if
+  12087 > $CUT_SCENE_TIME // integer values
+jf @BARON5_1088
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_1053
+
+:BARON5_1088
+00BE: text_clear_all
+
+:BARON5_1090
+if
+  17068 > $CUT_SCENE_TIME // integer values
+jf @BARON5_1125
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_1090
+
+:BARON5_1125
+fade 0 1500
+00BE: text_clear_all
+
+:BARON5_1134
+if
+fading
+jf @BARON5_1158
+wait 0
+jump @BARON5_1134
+
+:BARON5_1158
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Load(#CLA)
+Model.Load(#CLB)
+Model.Load(#M4)
+Model.Load(#UZI)
+Model.Load(#MP5LNG)
+023C: load_special_actor 4 'IGDIAZ'
+
+:BARON5_1217
+if or
+   not Model.Available(#CLA)
+   not Model.Available(#UZI)
+   not Model.Available(#M4)
+   not Model.Available(#MP5LNG)
+jf @BARON5_1258
+wait 0
+jump @BARON5_1217
+
+:BARON5_1258
+if or
+823D:   not special_actor 4 loaded
+823D:   not special_actor 5 loaded
+   not Model.Available(#CLB)
+jf @BARON5_1292
+wait 0
+jump @BARON5_1258
+
+:BARON5_1292
+wait 500
+fade 1 1500
+$1001 = 1 // integer values
+Object.Destroy($1787)
+022B: create_forbidden_for_peds_cube -396.4 -583.6 15.0 -360.5 -555.6 33.0
+022B: create_forbidden_for_peds_cube -271.6 -504.3 0.0 -510.5 -661.2 55.0
+015C: set_zone_gang_info 'GANG1' 1 0 0 0 0 0 0 0 0 0 0 0
+015C: set_zone_gang_info 'GANG1' 0 0 0 0 0 0 0 0 0 0 0 0
+01B1: give_player $PLAYER_CHAR weapon 26 ammo 150 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 26
+03F1: pedtype 10 add_threat 1
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_1584
+0362: put_actor $LANCE_VANCE at -254.9 -491.3 10.2 and_remove_from_car
+01ED: clear_actor $LANCE_VANCE threat_search
+0243: set_actor $LANCE_VANCE ped_stats_to 16
+0446: set_actor $LANCE_VANCE dismemberment_possible 0
+01B2: give_actor $LANCE_VANCE weapon 26 ammo 9999 // Load the weapon model before using this
+011A: set_actor $LANCE_VANCE search_threat 1024
+Actor.Health($LANCE_VANCE) = 200
+0319: set_actor $LANCE_VANCE running 1
+04F5: unknown_actor $LANCE_VANCE kiss_player $PLAYER_CHAR on 1
+0568: set_actor $LANCE_VANCE untargetable 1
+0483: unknown_actor $LANCE_VANCE 1500
+
+:BARON5_1584
+12@ = Actor.Create(Gang4, #CLB, -375.2, -552.1, 18.7)
+0243: set_actor 12@ ped_stats_to 16
+011A: set_actor 12@ search_threat 1
+011A: set_actor 12@ search_threat 16
+01B2: give_actor 12@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 12@ maintain_position_when_attacked 1
+0483: unknown_actor 12@ 1500
+Actor.Health(12@) = 150
+13@ = Actor.Create(Gang4, #CLA, -381.7, -552.4, 18.7)
+0243: set_actor 13@ ped_stats_to 16
+011A: set_actor 13@ search_threat 1
+011A: set_actor 13@ search_threat 16
+01B2: give_actor 13@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 13@ maintain_position_when_attacked 1
+0483: unknown_actor 13@ 1500
+Actor.Health(13@) = 150
+$2936 = Actor.Create(Gang4, #CLB, -327.9, -606.5, 12.1)
+Actor.Angle($2936) = 180.0
+0243: set_actor $2936 ped_stats_to 16
+011A: set_actor $2936 search_threat 1
+011A: set_actor $2936 search_threat 16
+01B2: give_actor $2936 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2936 maintain_position_when_attacked 1
+0483: unknown_actor $2936 1500
+Actor.Health($2936) = 150
+$2937 = Actor.Create(Gang4, #CLA, -363.9, -610.2, 9.6)
+Actor.Angle($2937) = 266.0
+0243: set_actor $2937 ped_stats_to 16
+011A: set_actor $2937 search_threat 1
+011A: set_actor $2937 search_threat 16
+01B2: give_actor $2937 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2937 maintain_position_when_attacked 1
+0483: unknown_actor $2937 1500
+Actor.Health($2937) = 150
+$2939 = Actor.Create(Gang4, #CLB, -392.6, -616.5, 10.9)
+Actor.Angle($2939) = 270.0
+0243: set_actor $2939 ped_stats_to 16
+011A: set_actor $2939 search_threat 1
+011A: set_actor $2939 search_threat 16
+01B2: give_actor $2939 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2939 maintain_position_when_attacked 1
+0483: unknown_actor $2939 1500
+Actor.Health($2939) = 150
+$2942 = Actor.Create(Gang4, #CLB, -303.5, -554.8, 12.1)
+0243: set_actor $2942 ped_stats_to 16
+011A: set_actor $2942 search_threat 1
+011A: set_actor $2942 search_threat 16
+01B2: give_actor $2942 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2942 maintain_position_when_attacked 1
+Actor.Angle($2942) = 270.0
+0483: unknown_actor $2942 1500
+0291: set_actor $2942 attack_when_provoked 1
+056B:  $2942 1
+Actor.Health($2942) = 150
+$2943 = Actor.Create(Gang4, #CLA, -301.8, -555.0, 12.1)
+0243: set_actor $2943 ped_stats_to 16
+011A: set_actor $2943 search_threat 1
+011A: set_actor $2943 search_threat 16
+01B2: give_actor $2943 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2943 maintain_position_when_attacked 1
+Actor.Angle($2943) = 90.0
+0483: unknown_actor $2943 1500
+03F9: make_actors $2942 $2943 converse_in 999999 ms
+056B:  $2943 1
+0291: set_actor $2943 attack_when_provoked 1
+Actor.Health($2943) = 150
+$2956 = Actor.Create(Gang4, #CLB, -287.0, -581.8, 12.1)
+Actor.Angle($2956) = 90.0
+0243: set_actor $2956 ped_stats_to 16
+011A: set_actor $2956 search_threat 1
+011A: set_actor $2956 search_threat 16
+01B2: give_actor $2956 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2956 maintain_position_when_attacked 1
+0483: unknown_actor $2956 1500
+Actor.Health($2956) = 150
+$2946 = Actor.Create(Gang4, #CLB, -468.3, -576.2, 11.9)
+Actor.Angle($2946) = 265.0
+0243: set_actor $2946 ped_stats_to 16
+011A: set_actor $2946 search_threat 1
+011A: set_actor $2946 search_threat 16
+01B2: give_actor $2946 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2946 maintain_position_when_attacked 1
+0483: unknown_actor $2946 1500
+Actor.Health($2946) = 150
+$2947 = Actor.Create(Gang4, #CLA, -471.1, -590.2, 11.9)
+Actor.Angle($2947) = 90.0
+0243: set_actor $2947 ped_stats_to 16
+011A: set_actor $2947 search_threat 1
+011A: set_actor $2947 search_threat 16
+01B2: give_actor $2947 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2947 maintain_position_when_attacked 1
+0483: unknown_actor $2947 1500
+Actor.Health($2947) = 150
+$2948 = Actor.Create(Gang4, #CLA, -407.7, -592.3, 10.9)
+Actor.Angle($2948) = 8.0
+0243: set_actor $2948 ped_stats_to 16
+011A: set_actor $2948 search_threat 1
+011A: set_actor $2948 search_threat 16
+01B2: give_actor $2948 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2948 maintain_position_when_attacked 1
+0483: unknown_actor $2948 1500
+Actor.Health($2948) = 150
+$2949 = Actor.Create(Gang4, #CLB, -407.0, -590.1, 10.6)
+Actor.Angle($2949) = 180.0
+0243: set_actor $2949 ped_stats_to 16
+011A: set_actor $2949 search_threat 1
+011A: set_actor $2949 search_threat 16
+01B2: give_actor $2949 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2949 maintain_position_when_attacked 1
+0483: unknown_actor $2949 1500
+Actor.Health($2949) = 150
+03F9: make_actors $2948 $2949 converse_in 999999 ms
+$2957 = Actor.Create(Gang4, #CLB, -374.2, -518.1, 11.7)
+Actor.Angle($2957) = 230.0
+0243: set_actor $2957 ped_stats_to 16
+011A: set_actor $2957 search_threat 1
+011A: set_actor $2957 search_threat 16
+01B2: give_actor $2957 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2957 maintain_position_when_attacked 1
+0483: unknown_actor $2957 1500
+Actor.Health($2957) = 150
+$2958 = Actor.Create(Gang4, #CLA, -372.0, -519.6, 11.7)
+Actor.Angle($2958) = 62.0
+0243: set_actor $2958 ped_stats_to 16
+011A: set_actor $2958 search_threat 1
+011A: set_actor $2958 search_threat 16
+01B2: give_actor $2958 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2958 maintain_position_when_attacked 1
+0483: unknown_actor $2958 1500
+Actor.Health($2958) = 150
+03F9: make_actors $2958 $2957 converse_in 999999 ms
+$2952 = Actor.Create(Gang4, #CLA, -312.4, -570.2, 12.0)
+Actor.Angle($2952) = 342.0
+0243: set_actor $2952 ped_stats_to 16
+011A: set_actor $2952 search_threat 1
+011A: set_actor $2952 search_threat 16
+01B2: give_actor $2952 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2952 maintain_position_when_attacked 1
+0483: unknown_actor $2952 1500
+Actor.Health($2952) = 150
+$2953 = Actor.Create(Gang4, #CLB, -316.4, -617.7, 9.5)
+Actor.Angle($2953) = 11.0
+0243: set_actor $2953 ped_stats_to 16
+011A: set_actor $2953 search_threat 1
+011A: set_actor $2953 search_threat 16
+01B2: give_actor $2953 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2953 maintain_position_when_attacked 1
+0483: unknown_actor $2953 1500
+Actor.Health($2953) = 150
+$2954 = Actor.Create(Gang4, #CLA, -445.0, -574.4, 12.0)
+Actor.Angle($2954) = 180.0
+0243: set_actor $2954 ped_stats_to 16
+011A: set_actor $2954 search_threat 1
+011A: set_actor $2954 search_threat 16
+01B2: give_actor $2954 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2954 maintain_position_when_attacked 1
+0483: unknown_actor $2954 1500
+Actor.Health($2953) = 150
+$2959 = Actor.Create(Gang4, #CLA, -293.7, -606.3, 12.0)
+Actor.Angle($2959) = 0.0
+0243: set_actor $2959 ped_stats_to 16
+011A: set_actor $2959 search_threat 1
+011A: set_actor $2959 search_threat 16
+01B2: give_actor $2959 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2959 maintain_position_when_attacked 1
+0483: unknown_actor $2959 1500
+Actor.Health($2959) = 150
+$2960 = Actor.Create(Gang4, #CLA, -343.9, -530.4, 14.4)
+Actor.Angle($2960) = 280.0
+0243: set_actor $2960 ped_stats_to 16
+011A: set_actor $2960 search_threat 1
+011A: set_actor $2960 search_threat 16
+01B2: give_actor $2960 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2960 maintain_position_when_attacked 1
+0483: unknown_actor $2960 1500
+Actor.Health($2960) = 150
+$2961 = Actor.Create(Gang4, #CLA, -442.8, -555.0, 13.1)
+Actor.Angle($2961) = 160.0
+0243: set_actor $2961 ped_stats_to 16
+011A: set_actor $2961 search_threat 1
+011A: set_actor $2961 search_threat 16
+01B2: give_actor $2961 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2961 maintain_position_when_attacked 1
+0483: unknown_actor $2961 1500
+Actor.Health($2961) = 150
+$2962 = Actor.Create(Gang4, #CLB, -443.7, -557.4, 13.1)
+Actor.Angle($2962) = 345.0
+0243: set_actor $2962 ped_stats_to 16
+011A: set_actor $2962 search_threat 1
+011A: set_actor $2962 search_threat 16
+01B2: give_actor $2962 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2962 maintain_position_when_attacked 1
+0483: unknown_actor $2962 1500
+Actor.Health($2962) = 150
+03F9: make_actors $2962 $2961 converse_in 999999 ms
+$2951 = Actor.Health($LANCE_VANCE)
+03C4: set_status_text_to $2951 1 'BUD1'  // Lances Health:
+$57 = Marker.CreateAboveActor($LANCE_VANCE)
+018B: show_on_radar $57 2
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+018A: 1@ = create_checkpoint_at -382.02 -596.57 24.9
+0@ = Actor.Create(Gang4, #SPECIAL04, -382.02, -596.57, 24.9)
+0446: set_actor 0@ dismemberment_possible 0
+054A: set_actor 0@ can_be_shot_in_a_car 0
+01ED: clear_actor 0@ threat_search
+Actor.Health(0@) = 1500
+Actor.Angle(0@) = 53.0
+0350: set_actor 0@ maintain_position_when_attacked 1
+0372: set_actor 0@ anim 24 wait_state_time 99999 ms
+0483: unknown_actor 0@ 1500
+$2934 = Object.Create(#MP5LNG, -383.126, -593.654, 25.06)
+Object.ToggleInMovingList($2934) = False
+0453: object $2934 set_rotation 90.0 0.0 10.0
+Object.RemoveFromMissionCleanupList($2934)
+041D: set_camera_near_clip 0.05
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Camera.SetPosition(-377.123, -597.167, 25.449, 0.0, 0.0, 0.0)
+Camera.PointAt(-378.119, -597.144, 25.534, 2)
+select_interior 2
+Camera.SetAtPos(-376.452, -593.374, 26.273)
+17@ = 0 // integer values
+
+:BARON5_3798
+if
+   not 17@ > 1200 // integer values
+jf @BARON5_3828
+wait 0
+jump @BARON5_3798
+
+:BARON5_3828
+if
+   not 17@ > 3200 // integer values
+jf @BARON5_3882
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_3875
+jump @BARON5_4646
+
+:BARON5_3875
+jump @BARON5_3828
+
+:BARON5_3882
+if
+   not Actor.Dead(0@)
+jf @BARON5_3923
+0372: set_actor 0@ anim 23 wait_state_time 500 ms
+0211: actor 0@ walk_to -383.8 -596.6
+
+:BARON5_3923
+17@ = 0 // integer values
+
+:BARON5_3930
+if
+   not 17@ > 1400 // integer values
+jf @BARON5_3984
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_3977
+jump @BARON5_4646
+
+:BARON5_3977
+jump @BARON5_3930
+
+:BARON5_3984
+Camera.SetPosition(-380.109, -591.29, 28.673, 0.0, 0.0, 0.0)
+Camera.PointAt(-380.595, -592.094, 28.331, 2)
+17@ = 0 // integer values
+
+:BARON5_4042
+if
+   not 17@ > 2500 // integer values
+jf @BARON5_4096
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_4089
+jump @BARON5_4646
+
+:BARON5_4089
+jump @BARON5_4042
+
+:BARON5_4096
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BARON5_4147
+Actor.PutAt($PLAYER_ACTOR, -273.0, -500.1, 10.7)
+0239: actor $PLAYER_ACTOR run_to -282.3 -511.0
+
+:BARON5_4147
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_4198
+Actor.PutAt($LANCE_VANCE, -270.5, -492.4, 10.2)
+0239: actor $LANCE_VANCE run_to -282.3 -511.0
+
+:BARON5_4198
+17@ = 0 // integer values
+
+:BARON5_4205
+if
+   not 17@ > 500 // integer values
+jf @BARON5_4259
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_4252
+jump @BARON5_4646
+
+:BARON5_4252
+jump @BARON5_4205
+
+:BARON5_4259
+select_interior 0
+Camera.SetAtPos(-277.513, -498.283, 13.227)
+Camera.SetPosition(-278.092, -497.514, 13.499, 0.0, 0.0, 0.0)
+Camera.PointAt(-277.513, -498.283, 13.227, 2)
+04C7: toggle_camera_green_scanlines 1
+17@ = 0 // integer values
+
+:BARON5_4342
+if
+   not 17@ > 3000 // integer values
+jf @BARON5_4396
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_4389
+jump @BARON5_4646
+
+:BARON5_4389
+jump @BARON5_4342
+
+:BARON5_4396
+if
+   not Actor.Dead(0@)
+jf @BARON5_4457
+Actor.Angle(0@) = 26.0
+Actor.PutAt(0@, -381.7, -595.9, 24.9)
+0211: actor 0@ walk_to -381.97 -593.9
+
+:BARON5_4457
+04C7: toggle_camera_green_scanlines 0
+Camera.SetPosition(-383.35, -592.699, 25.732, 0.0, 0.0, 0.0)
+Camera.PointAt(-382.977, -593.619, 25.612, 2)
+select_interior 2
+Camera.SetAtPos(-376.452, -593.374, 26.273)
+17@ = 0 // integer values
+
+:BARON5_4540
+if
+   not 17@ > 1500 // integer values
+jf @BARON5_4646
+wait 0
+if
+   not Actor.Dead(0@)
+jf @BARON5_4615
+if
+0126:   actor 0@ walking
+jf @BARON5_4615
+01BE: set_actor 0@ to_look_at_spot -383.126 -593.654 25.06
+
+:BARON5_4615
+if
+00E1:   player 0 pressed_button 16
+jf @BARON5_4639
+jump @BARON5_4646
+
+:BARON5_4639
+jump @BARON5_4540
+
+:BARON5_4646
+fade 0 1500
+
+:BARON5_4653
+if
+fading
+jf @BARON5_4677
+wait 0
+jump @BARON5_4653
+
+:BARON5_4677
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_4718
+011C: actor $LANCE_VANCE clear_objective
+Actor.PutAt($LANCE_VANCE, -276.3, -505.0, 11.7)
+
+:BARON5_4718
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @BARON5_4759
+011C: actor $PLAYER_ACTOR clear_objective
+Actor.PutAt($PLAYER_ACTOR, -282.3, -511.0, 11.7)
+
+:BARON5_4759
+if
+   not Actor.Dead(0@)
+jf @BARON5_4800
+011C: actor 0@ clear_objective
+Actor.PutAt(0@, -378.4, -586.8, 24.9)
+
+:BARON5_4800
+04C7: toggle_camera_green_scanlines 0
+select_interior 0
+Camera.SetAtPos(-282.3, -511.0, 11.7)
+Camera.Restore_WithJumpCut
+0171: set_player $PLAYER_CHAR z_angle_to 100.0
+Camera.SetBehindPlayer
+02A3: enable_widescreen 0
+fade 1 1500
+wait 500
+Player.CanMove($PLAYER_CHAR) = True
+if
+   not Actor.Dead(0@)
+jf @BARON5_4898
+Actor.PutAt(0@, -374.9, -585.2, 24.6)
+
+:BARON5_4898
+Model.Destroy(#STALLION)
+00BC: text_highpriority 'ASS1_16' 10000 ms 1  // ~g~Kill Diaz!
+17@ = 0 // integer values
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_4949
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+
+:BARON5_4949
+if
+80F5:   not player $PLAYER_CHAR 0 -345.6 -559.4 26.0 radius 12.0 2.0 10.0
+jf @BARON5_7764
+wait 0
+if
+  $38 == 0 // integer values
+jf @BARON5_5238
+if
+  17@ > 1000 // integer values
+jf @BARON5_5238
+if
+  $33 == 0 // integer values
+jf @BARON5_5094
+03CF: load_wav 'ASS_1' as 1
+03CF: load_wav 'ASS_2' as 2
+$33 = 1 // integer values
+jump @BARON5_5120
+
+:BARON5_5094
+if and
+03D0:   wav 1 loaded
+03D0:   wav 2 loaded
+jf @BARON5_5120
+$34 = 1 // integer values
+
+:BARON5_5120
+if
+  $34 == 1 // integer values
+jf @BARON5_5238
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 1
+03D1: play_wav 1
+00BC: text_highpriority 'ASS1_1' 4000 ms 1  // This place is going to be crawling with assholes...be careful...
+if
+03D2:   wav 1 ended
+jf @BARON5_5238
+wait 500
+03D1: play_wav 2
+00BC: text_highpriority 'ASS1_2' 3000 ms 1  // Don't worry Tommy, I'll cover you.
+04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 0
+$38 = 1 // integer values
+$33 = 0 // integer values
+$34 = 0 // integer values
+17@ = 0 // integer values
+
+:BARON5_5238
+if
+  $2940 == 0 // integer values
+jf @BARON5_5604
+if
+  $2935 == 0 // integer values
+jf @BARON5_5604
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_5604
+if or
+00FE:   actor $LANCE_VANCE 0 -455.1 -557.8 11.8 radius 4.0 3.0 5.0
+00FE:   actor $LANCE_VANCE 0 -490.1 -581.9 11.8 radius 3.0 4.0 5.0
+00FE:   actor $LANCE_VANCE 0 -458.3 -604.2 11.8 radius 4.0 3.0 5.0
+00FE:   actor $LANCE_VANCE 0 -303.0 -556.3 12.0 radius 12.0 2.0 5.0
+00FE:   actor $LANCE_VANCE 0 -239.8 -582.2 12.0 radius 3.0 3.0 5.0
+jf @BARON5_5604
+if
+00FB:   player $PLAYER_CHAR 0 $LANCE_VANCE radius 15.0 15.0 5.0
+jf @BARON5_5604
+if
+  $38 == 1 // integer values
+jf @BARON5_5604
+03CF: load_wav 'LAW2_4' as 1
+
+:BARON5_5552
+if
+83D0:   not wav 1 loaded
+jf @BARON5_5578
+wait 0
+jump @BARON5_5552
+
+:BARON5_5578
+03D1: play_wav 1
+00BC: text_highpriority 'ASS1_19' 2000 ms 2  // This way!
+$2935 = 1 // integer values
+
+:BARON5_5604
+if
+   Actor.Dead($LANCE_VANCE)
+jf @BARON5_5642
+00BC: text_highpriority 'COK4_30' 5000 ms 2  // ~r~Lance is dead!
+jump @BARON5_12284
+
+:BARON5_5642
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_5673
+$2951 = Actor.Health($LANCE_VANCE)
+$2951 /= 2 // integer values
+
+:BARON5_5673
+if
+  $2930 == 0 // integer values
+jf @BARON5_6108
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_5813
+if
+80FB:   not player $PLAYER_CHAR 0 $LANCE_VANCE radius 15.0 15.0 3.0
+jf @BARON5_5780
+if
+  $56 == 0 // integer values
+jf @BARON5_5773
+01E0: clear_leader $LANCE_VANCE
+$56 = 1 // integer values
+
+:BARON5_5773
+jump @BARON5_5813
+
+:BARON5_5780
+if
+  $56 == 1 // integer values
+jf @BARON5_5813
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+$56 = 0 // integer values
+
+:BARON5_5813
+if
+  $56 == 1 // integer values
+jf @BARON5_5838
+gosub @BARON5_14122
+
+:BARON5_5838
+if or
+00F5:   player $PLAYER_CHAR 0 -455.1 -557.8 11.8 radius 4.0 3.0 5.0
+00F5:   player $PLAYER_CHAR 0 -490.1 -581.9 11.8 radius 3.0 4.0 5.0
+00F5:   player $PLAYER_CHAR 0 -458.3 -604.2 11.8 radius 4.0 3.0 5.0
+jf @BARON5_5988
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_5988
+01E0: clear_leader $LANCE_VANCE
+$2930 = 1 // integer values
+
+:BARON5_5988
+if or
+00F5:   player $PLAYER_CHAR 0 -303.0 -556.3 12.0 radius 12.0 2.0 5.0
+00F5:   player $PLAYER_CHAR 0 -239.8 -582.2 12.0 radius 3.0 3.0 5.0
+jf @BARON5_6101
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_6101
+01E0: clear_leader $LANCE_VANCE
+$2930 = 2 // integer values
+
+:BARON5_6101
+jump @BARON5_6582
+
+:BARON5_6108
+if
+  $2940 == 0 // integer values
+jf @BARON5_6582
+if
+  $2930 == 1 // integer values
+jf @BARON5_6354
+if and
+00F5:   player $PLAYER_CHAR 0 -442.6 -574.9 11.8 radius 2.0 2.0 3.0
+00FE:   actor $LANCE_VANCE 0 -442.6 -574.9 11.8 radius 2.0 2.0 3.0
+jf @BARON5_6329
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+03F1: pedtype 10 add_threat 1
+03CF: load_wav 'ASS_4' as 2
+
+:BARON5_6255
+if
+83D0:   not wav 2 loaded
+jf @BARON5_6281
+wait 0
+jump @BARON5_6255
+
+:BARON5_6281
+if
+03D0:   wav 2 loaded
+jf @BARON5_6315
+03D1: play_wav 2
+00BC: text_highpriority 'ASS1_4' 1500 ms 2  // Diaz must be inside!
+
+:BARON5_6315
+$56 = 0 // integer values
+$2930 = 3 // integer values
+
+:BARON5_6329
+if
+  $2940 == 0 // integer values
+jf @BARON5_6354
+gosub @BARON5_13908
+
+:BARON5_6354
+if
+  $2930 == 2 // integer values
+jf @BARON5_6582
+if and
+00F5:   player $PLAYER_CHAR 0 -370.1 -596.4 9.5 radius 2.0 2.0 3.0
+00FE:   actor $LANCE_VANCE 0 -370.1 -596.4 9.5 radius 2.0 2.0 3.0
+jf @BARON5_6557
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+03F1: pedtype 10 add_threat 1
+03CF: load_wav 'ASS_4' as 2
+
+:BARON5_6483
+if
+83D0:   not wav 2 loaded
+jf @BARON5_6509
+wait 0
+jump @BARON5_6483
+
+:BARON5_6509
+if
+03D0:   wav 2 loaded
+jf @BARON5_6543
+03D1: play_wav 2
+00BC: text_highpriority 'ASS1_4' 1500 ms 2  // Diaz must be inside!
+
+:BARON5_6543
+$56 = 0 // integer values
+$2930 = 3 // integer values
+
+:BARON5_6557
+if
+  $2940 == 0 // integer values
+jf @BARON5_6582
+gosub @BARON5_14015
+
+:BARON5_6582
+if
+  $2930 == 3 // integer values
+jf @BARON5_6747
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_6722
+if
+80FB:   not player $PLAYER_CHAR 0 $LANCE_VANCE radius 15.0 15.0 3.0
+jf @BARON5_6689
+if
+  $56 == 0 // integer values
+jf @BARON5_6682
+01E0: clear_leader $LANCE_VANCE
+$56 = 1 // integer values
+
+:BARON5_6682
+jump @BARON5_6722
+
+:BARON5_6689
+if
+  $56 == 1 // integer values
+jf @BARON5_6722
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+$56 = 0 // integer values
+
+:BARON5_6722
+if
+  $56 == 1 // integer values
+jf @BARON5_6747
+gosub @BARON5_14122
+
+:BARON5_6747
+if
+  $2940 == 0 // integer values
+jf @BARON5_7349
+if
+00F5:   player $PLAYER_CHAR 0 -338.5 -578.7 11.6 radius 2.0 2.0 3.0
+jf @BARON5_7349
+Actor.DestroyInstantly(12@)
+Actor.DestroyInstantly(13@)
+Actor.DestroyInstantly($2936)
+Actor.DestroyInstantly($2937)
+Actor.DestroyInstantly($2939)
+Actor.DestroyInstantly($2942)
+Actor.DestroyInstantly($2943)
+Actor.DestroyInstantly($2952)
+$2938 = Actor.Create(Gang4, #CLA, -318.2, -577.1, 15.4)
+Actor.Angle($2938) = 90.0
+0243: set_actor $2938 ped_stats_to 16
+011A: set_actor $2938 search_threat 1
+011A: set_actor $2938 search_threat 16
+01B2: give_actor $2938 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2938 maintain_position_when_attacked 1
+0483: unknown_actor $2938 1500
+0291: set_actor $2938 attack_when_provoked 1
+056B:  $2938 1
+Actor.Health($2938) = 150
+$2941 = Actor.Create(Gang4, #CLB, -324.6, -581.2, 19.0)
+Actor.Angle($2941) = 305.0
+0243: set_actor $2941 ped_stats_to 16
+011A: set_actor $2941 search_threat 1
+011A: set_actor $2941 search_threat 16
+01B2: give_actor $2941 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2941 maintain_position_when_attacked 1
+0483: unknown_actor $2941 1500
+0291: set_actor $2941 attack_when_provoked 1
+056B:  $2941 1
+Actor.Health($2941) = 150
+$2955 = Actor.Create(Gang4, #CLB, -318.2, -573.4, 22.0)
+Actor.Angle($2955) = 90.0
+0243: set_actor $2955 ped_stats_to 16
+011A: set_actor $2955 search_threat 1
+011A: set_actor $2955 search_threat 16
+01B2: give_actor $2955 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2955 maintain_position_when_attacked 1
+0483: unknown_actor $2955 1500
+0291: set_actor $2955 attack_when_provoked 1
+056B:  $2955 1
+Actor.Health($2955) = 150
+$2944 = Actor.Create(Gang4, #CLB, -335.5, -568.6, 19.0)
+Actor.Angle($2944) = 180.0
+0243: set_actor $2944 ped_stats_to 16
+011A: set_actor $2944 search_threat 1
+011A: set_actor $2944 search_threat 16
+01B2: give_actor $2944 weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor $2944 maintain_position_when_attacked 1
+0483: unknown_actor $2944 1500
+0291: set_actor $2944 attack_when_provoked 1
+056B:  $2944 1
+Actor.Health($2944) = 150
+$2930 = 0 // integer values
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_7318
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+03F1: pedtype 10 add_threat 1
+Actor.PutAt($LANCE_VANCE, -341.0, -578.5, 10.9)
+
+:BARON5_7318
+03CF: load_wav 'ASS_11' as 1
+03CF: load_wav 'ASS_12' as 2
+$2940 = 1 // integer values
+
+:BARON5_7349
+if
+00F5:   player $PLAYER_CHAR 0 -378.4 -551.9 19.4 radius 4.0 1.0 3.0
+jf @BARON5_7412
+00BC: text_highpriority 'ASS1_18' 2000 ms 2  // ~g~The door is locked, try another route.
+
+:BARON5_7412
+if
+  $2940 == 1 // integer values
+jf @BARON5_7757
+Player.WantedLevel($PLAYER_CHAR) = 0
+if
+  $2966 == 0 // integer values
+jf @BARON5_7597
+if and
+00F5:   player $PLAYER_CHAR 0 -336.0 -570.8 18.5 radius 4.0 6.0 4.0
+00FE:   actor $LANCE_VANCE 0 -336.0 -570.8 18.5 radius 4.0 6.0 4.0
+jf @BARON5_7597
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_7597
+if
+03D0:   wav 1 loaded
+jf @BARON5_7597
+03D1: play_wav 1
+00BC: text_highpriority 'ASS1_11' 4500 ms 1  // Hey Tommy, can my room have a view of the bay?
+$2966 = 1 // integer values
+
+:BARON5_7597
+if
+  $2967 == 0 // integer values
+jf @BARON5_7757
+if and
+00F5:   player $PLAYER_CHAR 0 -336.0 -570.8 27.5 radius 4.0 6.0 4.0
+00FE:   actor $LANCE_VANCE 0 -336.0 -570.8 27.5 radius 4.0 6.0 4.0
+jf @BARON5_7757
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_7757
+if
+03D0:   wav 2 loaded
+jf @BARON5_7757
+03D1: play_wav 2
+00BC: text_highpriority 'ASS1_12' 4500 ms 1  // Beautiful high ceilings in here...
+$2967 = 1 // integer values
+
+:BARON5_7757
+jump @BARON5_4949
+
+:BARON5_7764
+Actor.DestroyInstantly(12@)
+Actor.DestroyInstantly(13@)
+14@ = Actor.Create(Gang4, #CLA, -373.5, -564.8, 18.7)
+0243: set_actor 14@ ped_stats_to 16
+011A: set_actor 14@ search_threat 1
+011A: set_actor 14@ search_threat 16
+01B2: give_actor 14@ weapon 23 ammo 9999 // Load the weapon model before using this
+Actor.Angle(14@) = 0.0
+0350: set_actor 14@ maintain_position_when_attacked 1
+0483: unknown_actor 14@ 1500
+Actor.Health(14@) = 150
+$2950 = Actor.Create(Gang4, #CLB, -383.7, -565.3, 18.7)
+0243: set_actor $2950 ped_stats_to 16
+011A: set_actor $2950 search_threat 1
+011A: set_actor $2950 search_threat 16
+01B2: give_actor $2950 weapon 23 ammo 9999 // Load the weapon model before using this
+Actor.Angle($2950) = 0.0
+0350: set_actor $2950 maintain_position_when_attacked 1
+0483: unknown_actor $2950 1500
+056B:  $2950 1
+Actor.Health($2950) = 150
+7@ = Actor.Create(Gang4, #CLA, -376.0, -582.5, 24.5)
+0243: set_actor 7@ ped_stats_to 16
+011A: set_actor 7@ search_threat 1
+011A: set_actor 7@ search_threat 16
+01B2: give_actor 7@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 7@ maintain_position_when_attacked 1
+0483: unknown_actor 7@ 1500
+Actor.Health(7@) = 150
+8@ = Actor.Create(Gang4, #CLB, -380.9, -582.6, 24.5)
+0243: set_actor 8@ ped_stats_to 16
+011A: set_actor 8@ search_threat 1
+011A: set_actor 8@ search_threat 16
+01B2: give_actor 8@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 8@ maintain_position_when_attacked 1
+0483: unknown_actor 8@ 1500
+Actor.Health(8@) = 150
+9@ = Actor.Create(Gang4, #CLA, -361.6, -559.3, 26.6)
+0243: set_actor 9@ ped_stats_to 16
+011A: set_actor 9@ search_threat 1
+011A: set_actor 9@ search_threat 16
+01B2: give_actor 9@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 9@ maintain_position_when_attacked 1
+Actor.Angle(9@) = 156.6
+0483: unknown_actor 9@ 1500
+Actor.Health(9@) = 150
+10@ = Actor.Create(Gang4, #CLB, -378.2, -560.7, 26.6)
+0243: set_actor 10@ ped_stats_to 16
+011A: set_actor 10@ search_threat 1
+011A: set_actor 10@ search_threat 16
+01B2: give_actor 10@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 10@ maintain_position_when_attacked 1
+Actor.Angle(10@) = 180.0
+0483: unknown_actor 10@ 1500
+Actor.Health(10@) = 150
+11@ = Actor.Create(Gang4, #CLB, -391.6, -566.5, 26.6)
+0243: set_actor 11@ ped_stats_to 16
+011A: set_actor 11@ search_threat 1
+011A: set_actor 11@ search_threat 16
+01B2: give_actor 11@ weapon 23 ammo 9999 // Load the weapon model before using this
+0350: set_actor 11@ maintain_position_when_attacked 1
+Actor.Angle(11@) = 248.7
+0483: unknown_actor 11@ 1500
+056B:  11@ 1
+Actor.Health(11@) = 150
+
+:BARON5_8384
+if
+   not Actor.Dead(0@)
+jf @BARON5_10371
+wait 0
+if
+   Actor.Dead(0@)
+jf @BARON5_8427
+jump @BARON5_10371
+
+:BARON5_8427
+if
+   Actor.Dead($LANCE_VANCE)
+jf @BARON5_8465
+00BC: text_highpriority 'COK4_30' 5000 ms 2  // ~r~Lance is dead!
+jump @BARON5_12284
+
+:BARON5_8465
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_8496
+$2951 = Actor.Health($LANCE_VANCE)
+$2951 /= 2 // integer values
+
+:BARON5_8496
+if
+0057:   player $PLAYER_CHAR 0 -360.8 -564.0 17.0 -396.0 -580.5 35.0
+jf @BARON5_9206
+if
+   not Actor.Dead(0@)
+jf @BARON5_9206
+if
+  3@ == 0 // integer values
+jf @BARON5_9206
+03CF: load_wav 'ASS_13' as 1
+03CF: load_wav 'ASS_14' as 2
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+Actor.Angle($PLAYER_ACTOR) = 180.0
+wait 0
+0395: clear_area 1 at 378.4 -588.4 range 24.5 1.0
+if
+   not Actor.Dead(0@)
+jf @BARON5_8844
+01B2: give_actor 0@ weapon 25 ammo 30000 // Load the weapon model before using this
+011C: actor 0@ clear_objective
+053D:  0@
+Actor.PutAt(0@, -378.4, -588.4, 24.5)
+0243: set_actor 0@ ped_stats_to 16
+0245: set_actor 0@ walk_style_to 33
+0395: clear_area 1 at -378.4 -575.7 range 24.5 1.0
+wait 0
+if
+   not Actor.Dead(0@)
+jf @BARON5_8780
+0211: actor 0@ walk_to -378.4 -575.7
+
+:BARON5_8780
+04C4: create_coordinate $2963 $2964 $2965 from_actor $PLAYER_ACTOR offset 0.0 2.0 0.0
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_8839
+Actor.PutAt($LANCE_VANCE, $2963, $2964, $2965)
+
+:BARON5_8839
+Object.Destroy($2934)
+
+:BARON5_8844
+Camera.SetPosition(-377.054, -578.589, 24.429, 0.0, 0.0, 0.0)
+Camera.PointAt(-377.288, -579.531, 24.668, 2)
+if
+   not Actor.Dead(0@)
+jf @BARON5_8926
+0211: actor 0@ walk_to -378.4 -575.7
+
+:BARON5_8926
+wait 2500
+if
+   not Actor.Dead(0@)
+jf @BARON5_8962
+0211: actor 0@ walk_to -378.4 -575.7
+
+:BARON5_8962
+if
+03D0:   wav 1 loaded
+jf @BARON5_8996
+03D1: play_wav 1
+00BC: text_highpriority 'ASS1_13' 4500 ms 1  // DIAZ?! I've come to take over your business!
+
+:BARON5_8996
+wait 3500
+if
+   not Actor.Dead(0@)
+jf @BARON5_9032
+0211: actor 0@ walk_to -378.4 -575.7
+
+:BARON5_9032
+Camera.SetPosition(-388.502, -583.468, 28.897, 0.0, 0.0, 0.0)
+Camera.PointAt(-387.833, -582.797, 28.577, 2)
+if
+03D0:   wav 2 loaded
+jf @BARON5_9117
+03D1: play_wav 2
+00BC: text_highpriority 'ASS1_14' 4500 ms 1  // TOMMY! You betrayed me, you idiot! I'm gonna kill you real soon..
+
+:BARON5_9117
+wait 3000
+if
+   not Actor.Dead(0@)
+jf @BARON5_9206
+0243: set_actor 0@ ped_stats_to 16
+02A9: set_actor 0@ immune_to_nonplayer 1
+011A: set_actor 0@ search_threat 1
+011A: set_actor 0@ search_threat 16
+01CA: actor 0@ kill_player $PLAYER_CHAR
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+Camera.Restore_WithJumpCut
+03CF: load_wav 'ASS_7' as 1
+3@ = 1 // integer values
+
+:BARON5_9206
+if
+  $2968 == 0 // integer values
+jf @BARON5_9315
+if
+  3@ == 1 // integer values
+jf @BARON5_9315
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_9315
+if
+02E0:   actor $LANCE_VANCE firing_weapon
+jf @BARON5_9315
+if
+03D0:   wav 1 loaded
+jf @BARON5_9315
+03D1: play_wav 1
+00BC: text_highpriority 'ASS1_7' 4500 ms 1  // Eat this, you murdering bastards!!
+$2968 = 1 // integer values
+
+:BARON5_9315
+if
+  3@ == 1 // integer values
+jf @BARON5_9665
+if
+  $2945 == 0 // integer values
+jf @BARON5_9665
+if
+   not Actor.Dead(0@)
+jf @BARON5_9665
+if
+8184:   not actor 0@ health >= 750
+jf @BARON5_9665
+if
+00FF:   actor 0@ 0 -378.4 -575.7 25.0 radius 5.0 5.0 4.0
+jf @BARON5_9454
+01ED: clear_actor 0@ threat_search
+0239: actor 0@ run_to -378.5 -589.6
+
+:BARON5_9454
+if
+00FF:   actor 0@ 0 -378.5 -589.6 25.0 radius 1.0 1.0 4.0
+jf @BARON5_9517
+0239: actor 0@ run_to -375.1 -595.5
+
+:BARON5_9517
+if
+00FF:   actor 0@ 0 -375.1 -595.5 25.0 radius 1.0 1.5 4.0
+jf @BARON5_9580
+0239: actor 0@ run_to -378.6 -595.7
+
+:BARON5_9580
+if
+00FF:   actor 0@ 0 -378.6 -595.7 25.0 radius 0.5 0.5 4.0
+jf @BARON5_9665
+020F: actor 0@ look_at_player $PLAYER_CHAR
+011A: set_actor 0@ search_threat 1
+011A: set_actor 0@ search_threat 16
+01CA: actor 0@ kill_player $PLAYER_CHAR
+$2945 = 1 // integer values
+
+:BARON5_9665
+if
+  $2931 == 0 // integer values
+jf @BARON5_10185
+if
+   not Actor.Dead(14@)
+jf @BARON5_9775
+if and
+00FB:   player $PLAYER_CHAR 0 14@ radius 20.0 20.0 10.0
+0123:   actor 14@ spotted_player $PLAYER_CHAR
+jf @BARON5_9750
+$2931 = 1 // integer values
+
+:BARON5_9750
+if
+8184:   not actor 14@ health >= 90
+jf @BARON5_9775
+$2931 = 1 // integer values
+
+:BARON5_9775
+if
+   not Actor.Dead($2950)
+jf @BARON5_9867
+if and
+00FB:   player $PLAYER_CHAR 0 $2950 radius 20.0 20.0 10.0
+0123:   actor $2950 spotted_player $PLAYER_CHAR
+jf @BARON5_9842
+$2931 = 1 // integer values
+
+:BARON5_9842
+if
+8184:   not actor $2950 health >= 90
+jf @BARON5_9867
+$2931 = 1 // integer values
+
+:BARON5_9867
+if
+   not Actor.Dead(9@)
+jf @BARON5_9966
+if and
+00FB:   player $PLAYER_CHAR 0 9@ radius 20.0 20.0 10.0
+0123:   actor 9@ spotted_player $PLAYER_CHAR
+jf @BARON5_9934
+$2931 = 1 // integer values
+
+:BARON5_9934
+if
+8184:   not actor 9@ health >= 90
+jf @BARON5_9959
+$2931 = 1 // integer values
+
+:BARON5_9959
+jump @BARON5_9973
+
+:BARON5_9966
+$2931 = 1 // integer values
+
+:BARON5_9973
+if
+   not Actor.Dead(10@)
+jf @BARON5_10072
+if and
+00FB:   player $PLAYER_CHAR 0 10@ radius 20.0 20.0 10.0
+0123:   actor 10@ spotted_player $PLAYER_CHAR
+jf @BARON5_10040
+$2931 = 1 // integer values
+
+:BARON5_10040
+if
+8184:   not actor 10@ health >= 90
+jf @BARON5_10065
+$2931 = 1 // integer values
+
+:BARON5_10065
+jump @BARON5_10079
+
+:BARON5_10072
+$2931 = 1 // integer values
+
+:BARON5_10079
+if
+   not Actor.Dead(11@)
+jf @BARON5_10178
+if and
+00FB:   player $PLAYER_CHAR 0 11@ radius 20.0 20.0 10.0
+0123:   actor 11@ spotted_player $PLAYER_CHAR
+jf @BARON5_10146
+$2931 = 1 // integer values
+
+:BARON5_10146
+if
+8184:   not actor 11@ health >= 90
+jf @BARON5_10171
+$2931 = 1 // integer values
+
+:BARON5_10171
+jump @BARON5_10185
+
+:BARON5_10178
+$2931 = 1 // integer values
+
+:BARON5_10185
+gosub @BARON5_13242
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_10314
+if
+80FB:   not player $PLAYER_CHAR 0 $LANCE_VANCE radius 15.0 15.0 3.0
+jf @BARON5_10281
+if
+  $56 == 0 // integer values
+jf @BARON5_10274
+01E0: clear_leader $LANCE_VANCE
+$56 = 1 // integer values
+
+:BARON5_10274
+jump @BARON5_10314
+
+:BARON5_10281
+if
+  $56 == 1 // integer values
+jf @BARON5_10314
+01DF: tie_actor $LANCE_VANCE to_player $PLAYER_CHAR
+$56 = 0 // integer values
+
+:BARON5_10314
+if
+  $56 == 1 // integer values
+jf @BARON5_10339
+gosub @BARON5_14122
+
+:BARON5_10339
+if
+  $2940 == 1 // integer values
+jf @BARON5_10364
+Player.WantedLevel($PLAYER_CHAR) = 0
+
+:BARON5_10364
+jump @BARON5_8384
+
+:BARON5_10371
+0151: remove_status_text $2951
+0169: set_fade_color 0 0 0
+fade 0 1000
+
+:BARON5_10391
+if
+fading
+jf @BARON5_10415
+wait 0
+jump @BARON5_10391
+
+:BARON5_10415
+Actor.DestroyInstantly(7@)
+Actor.DestroyInstantly(8@)
+Actor.DestroyInstantly(9@)
+Actor.DestroyInstantly(10@)
+Actor.DestroyInstantly(11@)
+Actor.DestroyInstantly(12@)
+Actor.DestroyInstantly(13@)
+Actor.DestroyInstantly($2957)
+Actor.DestroyInstantly($2958)
+Actor.DestroyInstantly(14@)
+Actor.DestroyInstantly($2950)
+Actor.DestroyInstantly(0@)
+Actor.DestroyInstantly($LANCE_VANCE)
+Actor.DestroyInstantly($2936)
+Actor.DestroyInstantly($2937)
+Actor.DestroyInstantly($2938)
+Actor.DestroyInstantly($2939)
+Actor.DestroyInstantly($2941)
+Actor.DestroyInstantly($2955)
+Actor.DestroyInstantly($2944)
+Actor.DestroyInstantly($2956)
+Actor.DestroyInstantly($2952)
+Actor.DestroyInstantly($2953)
+Actor.DestroyInstantly($2954)
+Actor.DestroyInstantly($2959)
+Actor.DestroyInstantly($2960)
+Actor.DestroyInstantly($2961)
+Actor.DestroyInstantly($2962)
+Actor.DestroyInstantly($2946)
+Actor.DestroyInstantly($2947)
+Actor.DestroyInstantly($2948)
+Actor.DestroyInstantly($2949)
+if
+047A:   actor $PLAYER_ACTOR driving_a_motorbike
+jf @BARON5_10640
+00DA: $2969 = player $PLAYER_CHAR car
+if
+   not Car.Wrecked($2969)
+jf @BARON5_10640
+0362: put_actor $PLAYER_ACTOR at -378.3 -592.4 24.8 and_remove_from_car
+Car.Destroy($2969)
+
+:BARON5_10640
+12@ = Actor.Create(Gang4, #CLB, -392.0, -559.5, 27.5)
+Actor.Angle(12@) = 286.0
+0446: set_actor 12@ dismemberment_possible 0
+0321: kill_actor 12@
+$2936 = Actor.Create(Gang4, #CLA, -393.0, -565.4, 27.5)
+Actor.Angle($2936) = 180.0
+0446: set_actor $2936 dismemberment_possible 0
+0321: kill_actor $2936
+$2937 = Actor.Create(Gang4, #CLA, -382.3, -557.7, 27.5)
+Actor.Angle($2937) = 90.0
+0446: set_actor $2937 dismemberment_possible 0
+0321: kill_actor $2937
+$2938 = Actor.Create(Gang4, #CLA, -371.8, -580.4, 25.5)
+Actor.Angle($2938) = 270.0
+0446: set_actor $2938 dismemberment_possible 0
+0321: kill_actor $2938
+$2939 = Actor.Create(Gang4, #CLA, -389.7, -580.2, 25.5)
+Actor.Angle($2939) = 166.0
+0446: set_actor $2939 dismemberment_possible 0
+0321: kill_actor $2939
+$2941 = Actor.Create(Gang4, #CLA, -370.3, -559.2, 27.5)
+Actor.Angle($2941) = 100.0
+0446: set_actor $2941 dismemberment_possible 0
+0321: kill_actor $2941
+01BD: $29 = current_time_in_ms
+$30 = 0 // integer values
+
+:BARON5_10928
+if and
+   not Player.Controllable($PLAYER_CHAR)
+  5000 > $30 // integer values
+jf @BARON5_10984
+wait 0
+01BD: $28 = current_time_in_ms
+0084: $30 = $28 // integer values and handles
+0060: $30 -= $29 // integer values
+jump @BARON5_10928
+
+:BARON5_10984
+Player.MakeSafe($PLAYER_CHAR)
+03AD: set_rubbish 0
+03AF: set_streaming 0
+04F9: set_extracolors 8 fade 0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSDIAZ'
+023C: load_special_actor 3 'CSBUDDY'
+02F3: load_object #CUTOBJ01 'CPYTH'
+02F3: load_object #CUTOBJ02 'DEAGL'
+Camera.SetAtPos(-378.3, -577.3, 25.3)
+038B: load_requested_models
+
+:BARON5_11084
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+jf @BARON5_11128
+wait 0
+jump @BARON5_11084
+
+:BARON5_11128
+wait 1500
+02E4: load_cutscene_data 'ASS_2'
+0395: clear_area 1 at -378.6 -552.6 range 25.5 40.0
+0395: clear_area 1 at -379.0 -564.6 range 19.8 40.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+0244: set_cutscene_pos -378.62 -552.676 18.534
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $161 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $161 'CSDIAZ'
+02E5: $136 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $136 'CSBUDDY'
+02E5: $2933 = create_cutscene_object #CUTOBJ01
+0524: unknown_cutscene_command $2933 $125 24
+02E5: 5@ = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim 5@ 'DEAGL'
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BARON5_11343
+if
+  5061 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11378
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11343
+
+:BARON5_11378
+00BC: text_highpriority 'ASS1_F' 10000 ms 1  // You stupid pricks...
+
+:BARON5_11393
+if
+  8717 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11428
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11393
+
+:BARON5_11428
+00BC: text_highpriority 'ASS1_G' 10000 ms 1  // my beautiful house
+
+:BARON5_11443
+if
+  11569 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11478
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11443
+
+:BARON5_11478
+00BC: text_highpriority 'ASS1_H' 10000 ms 1  // look what you've done to it!
+
+:BARON5_11493
+if
+  13154 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11528
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11493
+
+:BARON5_11528
+00BC: text_highpriority 'ASS1_I' 10000 ms 1  // This is for my brother!
+
+:BARON5_11543
+if
+  15615 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11578
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11543
+
+:BARON5_11578
+00BC: text_highpriority 'ASS1_J' 10000 ms 1  // I trusted you, Tommy.
+
+:BARON5_11593
+if
+  20715 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11628
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11593
+
+:BARON5_11628
+00BC: text_highpriority 'ASS1_K' 10000 ms 1  // I woulda had you made...
+
+:BARON5_11643
+if
+  23530 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11678
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11643
+
+:BARON5_11678
+00BC: text_highpriority 'ASS1_L' 5000 ms 1  // Say goodnight, Mr. Diaz.
+
+:BARON5_11693
+if
+  24530 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11728
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11693
+
+:BARON5_11728
+if
+  27376 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11763
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11728
+
+:BARON5_11763
+043C: set_game_sounds_disable_on_fade 0
+00BE: text_clear_all
+03EB: clear_small_messages_only
+0169: set_fade_color 255 255 255
+fade 0 0
+
+:BARON5_11788
+if
+  28876 > $CUT_SCENE_TIME // integer values
+jf @BARON5_11823
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BARON5_11788
+
+:BARON5_11823
+00BE: text_clear_all
+03EB: clear_small_messages_only
+
+:BARON5_11827
+if
+fading
+jf @BARON5_11851
+wait 0
+jump @BARON5_11827
+
+:BARON5_11851
+wait 1000
+00BE: text_clear_all
+03EB: clear_small_messages_only
+03AD: set_rubbish 1
+02EA: end_cutscene
+00BE: text_clear_all
+wait 0
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+043C: set_game_sounds_disable_on_fade 1
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+04FA: reset_sky_colors_with_fade 0
+014C: set_parked_car_generator $1987 cars_to_generate_to 101
+015C: set_zone_gang_info 'GANG1' 1 12 0 0 0 0 0 0 1000 0 0 0
+015C: set_zone_gang_info 'GANG1' 0 12 0 0 0 0 0 0 1000 0 0 0
+0395: clear_area 1 at -378.6 -552.6 range 25.5 40.0
+0395: clear_area 1 at -379.0 -564.6 range 19.8 40.0
+select_interior 0
+Camera.SetAtPos(-381.8, -536.0, 26.3)
+Camera.SetPosition(-415.273, -502.09, 39.183, 0.0, 0.0, 0.0)
+Camera.PointAt(-414.699, -502.788, 38.754, 2)
+fade 1 1500
+
+:BARON5_12117
+if
+fading
+jf @BARON5_12141
+wait 0
+jump @BARON5_12117
+
+:BARON5_12141
+0394: play_music 1
+00BA: text_styled 'PROP_A' 7000 ms 6  // PROPERTY ACQUIRED!
+wait 6000
+0169: set_fade_color 0 0 0
+fade 0 1000
+
+:BARON5_12180
+if
+fading
+jf @BARON5_12204
+wait 0
+jump @BARON5_12180
+
+:BARON5_12204
+0055: put_player $PLAYER_CHAR at -378.3 -592.4 24.8
+02A3: enable_widescreen 0
+0171: set_player $PLAYER_CHAR z_angle_to 0.0
+03C8: set_camera_directly_before_player
+Camera.Restore_WithJumpCut
+wait 500
+select_interior 2
+Camera.SetAtPos(-378.3, -592.4, 24.8)
+fade 1 1000
+00BE: text_clear_all
+jump @BARON5_12576
+
+:BARON5_12284
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BARON5_12540
+if or
+  $991 == 1 // integer values
+0057:   player $PLAYER_CHAR 0 -350.93 -574.95 10.0 -369.2 -598.84 13.5
+0057:   player $PLAYER_CHAR 0 -387.75 -598.51 10.0 -443.6 -571.64 13.5
+jf @BARON5_12540
+if
+   Actor.Dead($LANCE_VANCE)
+jf @BARON5_12540
+fade 0 1000
+
+:BARON5_12430
+if
+fading
+jf @BARON5_12454
+wait 0
+jump @BARON5_12430
+
+:BARON5_12454
+if
+   Player.Defined($PLAYER_CHAR)
+jf @BARON5_12533
+select_interior 0
+Camera.SetAtPos(-274.4, -492.9, 10.3)
+0055: put_player $PLAYER_CHAR at -274.4 -492.9 10.3
+0171: set_player $PLAYER_CHAR z_angle_to 270.0
+Camera.SetBehindPlayer
+Car.Destroy($26)
+Actor.DestroyInstantly($LANCE_VANCE)
+
+:BARON5_12533
+fade 1 1000
+
+:BARON5_12540
+$1787 = Object.Init(#MANSION_NEW_DOORS, -391.19, -575.906, 24.071)
+Object.RemoveFromMissionCleanupList($1787)
+$1001 = 0 // integer values
+return
+
+:BARON5_12576
+$PASSED_ASS1_RUB_OUT = 1 // integer values
+Object.Destroy($1788)
+$1789 = Object.Init(#MAN_DOOROPEN, -378.542, -554.006, 21.96)
+Object.RemoveFromMissionCleanupList($1789)
+$1001 = 2 // integer values
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 50000
+0318: set_latest_mission_passed 'ASS_1'  // Rub Out
+01F0: set_max_wanted_level_to 6
+030C: progress_made += 1
+014C: set_parked_car_generator $1996 cars_to_generate_to 101
+014C: set_parked_car_generator $1997 cars_to_generate_to 101
+014C: set_parked_car_generator $1998 cars_to_generate_to 101
+02FA: garage $686 change_to_type 31
+032B: $77 = create_weapon_pickup #M4 15 ammo 120 at -330.9 -569.7 11.6
+032B: $78 = create_weapon_pickup #CHROMEGUN 15 ammo 50 at -335.9 -569.5 11.6
+$79 = Pickup.Create(#HEALTH, 2, -330.702, -573.366, 11.6)
+$80 = Pickup.Create(#BODYARMOUR, 2, -336.0, -573.7, 11.6)
+055B: $1297 = create_clothes_pickup 1 at -384.5 -591.9 25.3
+$1278 = 1 // integer values
+014C: set_parked_car_generator $1880 cars_to_generate_to 0
+014C: set_parked_car_generator $83 cars_to_generate_to 101
+$855 = 1 // integer values
+$906 = 1 // integer values
+$907 = 1 // integer values
+create_thread @PRO1
+create_thread @PSAVE2
+create_thread @AUDIO_POSTMISSION_MONO 1
+Marker.Disable($234)
+Marker.Disable($265)
+01E3: text_1number_styled 'M_PASS' number 50000 time 2000 style 1  // MISSION PASSED! $~1~
+02A7: $265 = create_icon_marker_and_sphere 29 at -378.3 -579.8 24.5
+
+return
+
+:BARON5_12919
+$ONMISSION = 0 // integer values
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+Model.Destroy(#CLA)
+Model.Destroy(#CLB)
+Model.Destroy(#M4)
+Model.Destroy(#MP5LNG)
+Model.Destroy(#UZI)
+Model.Destroy(#STALLION)
+Actor.RemoveReferences(7@)
+Actor.RemoveReferences(8@)
+Actor.RemoveReferences(9@)
+Actor.RemoveReferences(10@)
+Actor.RemoveReferences(11@)
+Actor.RemoveReferences(12@)
+Actor.RemoveReferences(13@)
+Actor.RemoveReferences($2957)
+Actor.RemoveReferences($2958)
+Actor.RemoveReferences(14@)
+Actor.RemoveReferences($2950)
+Actor.RemoveReferences(0@)
+Actor.RemoveReferences($LANCE_VANCE)
+Actor.RemoveReferences($2936)
+Actor.RemoveReferences($2937)
+Actor.RemoveReferences($2938)
+Actor.RemoveReferences($2939)
+Actor.RemoveReferences($2941)
+Actor.RemoveReferences($2955)
+Actor.RemoveReferences($2944)
+Actor.RemoveReferences($2956)
+Actor.RemoveReferences($2952)
+Actor.RemoveReferences($2953)
+Actor.RemoveReferences($2954)
+Actor.RemoveReferences($2959)
+Actor.RemoveReferences($2960)
+Actor.RemoveReferences($2961)
+Actor.RemoveReferences($2962)
+Actor.RemoveReferences($2946)
+Actor.RemoveReferences($2947)
+Actor.RemoveReferences($2948)
+Actor.RemoveReferences($2949)
+0296: unload_special_actor 4
+0296: unload_special_actor 5
+Marker.Disable(1@)
+Marker.Disable($57)
+Object.Destroy($2934)
+Actor.DestroyWithFade($LANCE_VANCE)
+0151: remove_status_text $2951
+040D: unload_wav 1
+040D: unload_wav 2
+022A: remove_forbidden_for_peds_cube -271.6 -504.3 0.0 -510.5 -661.2 55.0
+022B: create_forbidden_for_peds_cube -396.4 -583.6 15.0 -360.5 -555.6 33.0
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+mission_cleanup
+return
+
+:BARON5_13242
+if
+  $2931 == 1 // integer values
+jf @BARON5_13906
+if
+  6@ == 0 // integer values
+jf @BARON5_13333
+if
+   not Actor.Dead(7@)
+jf @BARON5_13302
+01CA: actor 7@ kill_player $PLAYER_CHAR
+
+:BARON5_13302
+if
+   not Actor.Dead(8@)
+jf @BARON5_13326
+01CA: actor 8@ kill_player $PLAYER_CHAR
+
+:BARON5_13326
+6@ = 1 // integer values
+
+:BARON5_13333
+if
+  $2929 == 0 // integer values
+jf @BARON5_13499
+if
+   not Actor.Dead(9@)
+jf @BARON5_13382
+0350: set_actor 9@ maintain_position_when_attacked 0
+01CA: actor 9@ kill_player $PLAYER_CHAR
+
+:BARON5_13382
+if
+   not Actor.Dead(10@)
+jf @BARON5_13413
+0350: set_actor 10@ maintain_position_when_attacked 0
+01CA: actor 10@ kill_player $PLAYER_CHAR
+
+:BARON5_13413
+if
+   not Actor.Dead(11@)
+jf @BARON5_13437
+01CA: actor 11@ kill_player $PLAYER_CHAR
+
+:BARON5_13437
+if
+   not Actor.Dead(14@)
+jf @BARON5_13468
+0350: set_actor 14@ maintain_position_when_attacked 0
+01CA: actor 14@ kill_player $PLAYER_CHAR
+
+:BARON5_13468
+if
+   not Actor.Dead($2950)
+jf @BARON5_13492
+01CA: actor $2950 kill_player $PLAYER_CHAR
+
+:BARON5_13492
+$2929 = 1 // integer values
+
+:BARON5_13499
+if
+  16@ > 1000 // integer values
+jf @BARON5_13906
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+  3@ == 1 // integer values
+jf @BARON5_13698
+if
+   not Actor.Dead(7@)
+jf @BARON5_13624
+0350: set_actor 7@ maintain_position_when_attacked 0
+if
+8510:   not unknown_actor 7@ on_path $95 $96 $97 radius 1.0
+jf @BARON5_13624
+009E: set_actor 7@ path $95 $96 $97 unknown 1.0 1
+
+:BARON5_13624
+if
+   not Actor.Dead(8@)
+jf @BARON5_13698
+0350: set_actor 8@ maintain_position_when_attacked 0
+if
+8510:   not unknown_actor 8@ on_path $95 $96 $97 radius 1.0
+jf @BARON5_13698
+009E: set_actor 8@ path $95 $96 $97 unknown 1.0 1
+
+:BARON5_13698
+if
+   not Actor.Dead(9@)
+jf @BARON5_13765
+if
+8510:   not unknown_actor 9@ on_path $95 $96 $97 radius 1.0
+jf @BARON5_13765
+009E: set_actor 9@ path $95 $96 $97 unknown 1.0 1
+
+:BARON5_13765
+if
+   not Actor.Dead(10@)
+jf @BARON5_13832
+if
+8510:   not unknown_actor 10@ on_path $95 $96 $97 radius 1.0
+jf @BARON5_13832
+009E: set_actor 10@ path $95 $96 $97 unknown 1.0 1
+
+:BARON5_13832
+if
+   not Actor.Dead(14@)
+jf @BARON5_13899
+if
+8510:   not unknown_actor 14@ on_path $95 $96 $97 radius 1.0
+jf @BARON5_13899
+009E: set_actor 14@ path $95 $96 $97 unknown 1.0 1
+
+:BARON5_13899
+16@ = 0 // integer values
+
+:BARON5_13906
+return
+
+:BARON5_13908
+if
+  16@ > 1000 // integer values
+jf @BARON5_14013
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_14006
+if
+8510:   not unknown_actor $LANCE_VANCE on_path -442.6 -574.9 11.0 radius 0.5
+jf @BARON5_14006
+009E: set_actor $LANCE_VANCE path -442.6 -574.9 11.0 unknown 0.5 1
+
+:BARON5_14006
+16@ = 0 // integer values
+
+:BARON5_14013
+return
+
+:BARON5_14015
+if
+  16@ > 1000 // integer values
+jf @BARON5_14120
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_14113
+if
+8510:   not unknown_actor $LANCE_VANCE on_path -370.1 -596.4 9.5 radius 0.5
+jf @BARON5_14113
+009E: set_actor $LANCE_VANCE path -370.1 -596.4 9.5 unknown 0.5 1
+
+:BARON5_14113
+16@ = 0 // integer values
+
+:BARON5_14120
+return
+
+:BARON5_14122
+if
+  17@ > 1000 // integer values
+jf @BARON5_14229
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+   not Actor.Dead($LANCE_VANCE)
+jf @BARON5_14222
+if
+8510:   not unknown_actor $LANCE_VANCE on_path $95 $96 $97 radius 0.5
+jf @BARON5_14222
+009E: set_actor $LANCE_VANCE path $95 $96 $97 unknown 0.5 1
+
+:BARON5_14222
+17@ = 0 // integer values
+
+:BARON5_14229
+return

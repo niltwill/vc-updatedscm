@@ -1,0 +1,1377 @@
+:PHIL2
+thread 'PHIL2'
+gosub @PHIL2_46
+if
+wasted_or_busted
+jf @PHIL2_37
+gosub @PHIL2_6994
+
+:PHIL2_37
+gosub @PHIL2_7089
+end_thread
+
+:PHIL2_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'PHIL2'
+058E: set_restart_mission_taxi_destination -1004.5 311.1 9.9 155.7
+$4352 = 0 // integer values
+$4353 = 0 // integer values
+$4354 = 0 // integer values
+$4355 = 0 // integer values
+$4356 = 0 // integer values
+$4357 = 100 // integer values
+$4358 = 0 // integer values
+$4359 = 0 // integer values
+$4360 = 8 // integer values
+$4361 = 255 // integer values
+$4362 = 0 // integer values
+$4363 = 0 // integer values
+$95 = 0.0 // floating-point values
+$96 = 0.0 // floating-point values
+$97 = 0.0 // floating-point values
+$4364 = 0.0 // floating-point values
+$4365 = 0.0 // floating-point values
+$4366 = 0.0 // floating-point values
+$4367 = 0.0 // floating-point values
+$4368 = 0.0 // floating-point values
+$4369 = 0.0 // floating-point values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSPHIL'
+02F3: load_object #CUTOBJ01 'PHILBMB'
+Camera.SetAtPos(-1099.62, 327.21, 10.23)
+038B: load_requested_models
+
+:PHIL2_332
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+jf @PHIL2_362
+wait 0
+jump @PHIL2_332
+
+:PHIL2_362
+if
+   not Model.Available(#CUTOBJ01)
+jf @PHIL2_389
+wait 0
+jump @PHIL2_362
+
+:PHIL2_389
+0395: clear_area 1 at -1083.1 321.1 range 11.2 300.0
+02E4: load_cutscene_data 'PHIL_2'
+0244: set_cutscene_pos -1099.62 327.21 10.23
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $137 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $137 'CSPHIL'
+02E5: $4370 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $4370 'PHILBMB'
+0395: clear_area 1 at -1105.0 334.0 range 10.8 1.0
+0055: put_player $PLAYER_CHAR at -1105.0 334.0 10.8
+0171: set_player $PLAYER_CHAR z_angle_to 265.8
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:PHIL2_584
+if
+  1073 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_619
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_584
+
+:PHIL2_619
+00BC: text_highpriority 'PHIL2_A' 10000 ms 1  // Hey Phil, how's it goin?
+
+:PHIL2_634
+if
+  2713 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_669
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_634
+
+:PHIL2_669
+00BC: text_highpriority 'PHIL2_B' 10000 ms 1  // Heeyyyy, Tommy. Howyadoin'? Ish been too long...
+
+:PHIL2_684
+if
+  8842 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_719
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_684
+
+:PHIL2_719
+00BC: text_highpriority 'PHIL2_C' 10000 ms 1  // I swear you should lay off that boomshine, man -
+
+:PHIL2_734
+if
+  10547 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_769
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_734
+
+:PHIL2_769
+00BC: text_highpriority 'PHIL2_D' 10000 ms 1  // smells like paint stripper. Making my eyes burn...
+
+:PHIL2_784
+if
+  13397 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_819
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_784
+
+:PHIL2_819
+00BC: text_highpriority 'PHIL2_E' 10000 ms 1  // Shshs shhh youshelf Tommy,
+
+:PHIL2_834
+if
+  16619 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_869
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_834
+
+:PHIL2_869
+00BC: text_highpriority 'PHIL2_F' 10000 ms 1  // and come over here because there's someshin' I wanna show you.. someshin.
+
+:PHIL2_884
+if
+  20734 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_919
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_884
+
+:PHIL2_919
+00BC: text_highpriority 'PHIL2_G' 10000 ms 1  // Woof! God! Should I be able to smell that from way over here? I'm feeling woozy.
+
+:PHIL2_934
+if
+  24299 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_969
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_934
+
+:PHIL2_969
+00BC: text_highpriority 'PHIL2_H' 10000 ms 1  // Don'tchaworry about the shmell Tommy, you jush wash thish.
+
+:PHIL2_984
+if
+  32636 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1019
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_984
+
+:PHIL2_1019
+00BC: text_highpriority 'PHIL2_I' 10000 ms 1  // Shittycheapbatteriesh or shumin'. There'sh shum more on the bench.
+
+:PHIL2_1034
+if
+  44824 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1071
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1034
+
+:PHIL2_1071
+00BC: text_highpriority 'PHIL2_J' 10000 ms 1  // TA-DAAA!
+
+:PHIL2_1086
+if
+  46000 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1123
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1086
+
+:PHIL2_1123
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1193
+020C: create_explosion_with_radius 2 at -1083.8 352.7 11.3
+020C: create_explosion_with_radius 11 at -1083.8 352.7 11.3
+020C: create_explosion_with_radius 6 at -1083.8 352.7 11.3
+
+:PHIL2_1193
+if
+  48307 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1230
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1193
+
+:PHIL2_1230
+00BC: text_highpriority 'PHIL2_K' 10000 ms 1  // Aww Damn!
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1294
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1294
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1294
+if
+  48807 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1331
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1294
+
+:PHIL2_1331
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1380
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1380
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1380
+if
+  49307 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1417
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1380
+
+:PHIL2_1417
+00BE: text_clear_all
+
+:PHIL2_1419
+if
+  49907 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1456
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1419
+
+:PHIL2_1456
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1505
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1505
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1505
+if
+  50007 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1542
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1505
+
+:PHIL2_1542
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1591
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1591
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1591
+if
+  51007 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1628
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1591
+
+:PHIL2_1628
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1677
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1677
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1677
+if
+  52207 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1714
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1677
+
+:PHIL2_1714
+if
+856A:   not has_cutscene_been_interrupted
+jf @PHIL2_1763
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_1763
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+gosub @PHIL2_7155
+
+:PHIL2_1763
+00BE: text_clear_all
+
+:PHIL2_1765
+if
+  53376 > $CUT_SCENE_TIME // integer values
+jf @PHIL2_1802
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PHIL2_1765
+
+:PHIL2_1802
+fade 0 1500
+00BE: text_clear_all
+
+:PHIL2_1811
+if
+fading
+jf @PHIL2_1835
+wait 0
+jump @PHIL2_1811
+
+:PHIL2_1835
+03AD: set_rubbish 1
+02EA: end_cutscene
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 0 60000
+Model.Load(#PATRIOT)
+
+:PHIL2_1900
+if
+   not Model.Available(#PATRIOT)
+jf @PHIL2_1927
+wait 0
+jump @PHIL2_1900
+
+:PHIL2_1927
+03CF: load_wav 'PHIL2_1' as 2
+
+:PHIL2_1939
+if
+83D0:   not wav 2 loaded
+jf @PHIL2_1965
+wait 0
+jump @PHIL2_1939
+
+:PHIL2_1965
+if
+  $ONMISSION == 0 // integer values
+jf @PHIL2_2003
+018A: $4351 = create_checkpoint_at -1183.0 -664.2 10.5
+
+:PHIL2_2003
+023C: load_special_actor 1 'IGPHIL2'
+
+:PHIL2_2015
+if
+823D:   not special_actor 1 loaded
+jf @PHIL2_2041
+wait 0
+jump @PHIL2_2015
+
+:PHIL2_2041
+$4342 = Car.Create(#PATRIOT, -1097.0, 334.0, 10.8)
+Car.Angle($4342) = 269.2
+0369: put_player $PLAYER_CHAR in_car $4342
+Camera.SetBehindPlayer
+01C8: $4343 = create_actor_pedtype 4 model #SPECIAL01 in_car $4342 passenger_seat 1
+04F5: unknown_actor $4343 kiss_player $PLAYER_CHAR on 1
+03FD: set_player $PLAYER_CHAR handling_responsiveness $4360
+052C: set_player $PLAYER_CHAR drunk_visuals 255
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_2146
+0332: set_actor $4343 bleeding_to 1
+
+:PHIL2_2146
+039E: set_actor $4343 locked_while_in_vehicle 1
+0526: set_actor $4343 stay_in_car_when_jacked 1
+015D: set_gamespeed 1.0
+018A: $4350 = create_checkpoint_at -871.6 -469.5 9.9
+03C4: set_status_text_to $4357 1 'PHI2_04'  // PHIL'S HEALTH:
+$4358 = Car.Health($4342)
+$4358 /= 10 // integer values
+16@ = 0 // integer values
+17@ = 0 // integer values
+fade 1 1500
+00BC: text_highpriority 'PHI2_01' 5000 ms 1  // ~g~Quick, get Phil to the hospital.
+
+:PHIL2_2253
+wait 0
+if
+   not Car.Wrecked($4342)
+jf @PHIL2_4302
+if
+00DC:   player $PLAYER_CHAR driving $4342
+jf @PHIL2_4302
+if
+  $4363 == 0 // integer values
+jf @PHIL2_4298
+if
+  $4362 == 0 // integer values
+jf @PHIL2_2593
+if
+  85 > $4357 // integer values
+jf @PHIL2_2593
+03CF: load_wav 'PHIL2_4' as 1
+
+:PHIL2_2358
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_2453
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_2424
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_2446
+
+:PHIL2_2424
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_2446
+jump @PHIL2_2358
+
+:PHIL2_2453
+00BC: text_highpriority 'PHI2_08' 5000 ms 1  // Watch out! Charlie in the tree line!
+03D1: play_wav 1
+
+:PHIL2_2472
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_2572
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_2543
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_2565
+
+:PHIL2_2543
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_2565
+jump @PHIL2_2472
+
+:PHIL2_2572
+040D: unload_wav 1
+03D5: remove_text 'PHI2_08'  // Watch out! Charlie in the tree line!
+$4362 = 1 // integer values
+
+:PHIL2_2593
+if
+  $4362 == 1 // integer values
+jf @PHIL2_2876
+if
+  75 > $4357 // integer values
+jf @PHIL2_2876
+03CF: load_wav 'PHIL2_5' as 1
+
+:PHIL2_2641
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_2736
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_2707
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_2729
+
+:PHIL2_2707
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_2729
+jump @PHIL2_2641
+
+:PHIL2_2736
+00BC: text_highpriority 'PHI2_09' 5000 ms 1  // Is it me or are the roads made of jelly?
+03D1: play_wav 1
+
+:PHIL2_2755
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_2855
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_2826
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_2848
+
+:PHIL2_2826
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_2848
+jump @PHIL2_2755
+
+:PHIL2_2855
+040D: unload_wav 1
+03D5: remove_text 'PHI2_09'  // Is it me or are the roads made of jelly?
+$4362 = 2 // integer values
+
+:PHIL2_2876
+if
+  $4362 == 2 // integer values
+jf @PHIL2_3159
+if
+  65 > $4357 // integer values
+jf @PHIL2_3159
+03CF: load_wav 'PHIL2_6' as 1
+
+:PHIL2_2924
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_3019
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_2990
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3012
+
+:PHIL2_2990
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3012
+jump @PHIL2_2924
+
+:PHIL2_3019
+00BC: text_highpriority 'PHI2_10' 5000 ms 1  // Broken Spoon to Mother Hen, you copy?
+03D1: play_wav 1
+
+:PHIL2_3038
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_3138
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3109
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3131
+
+:PHIL2_3109
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3131
+jump @PHIL2_3038
+
+:PHIL2_3138
+040D: unload_wav 1
+03D5: remove_text 'PHI2_10'  // Broken Spoon to Mother Hen, you copy?
+$4362 = 3 // integer values
+
+:PHIL2_3159
+if
+  $4362 == 3 // integer values
+jf @PHIL2_3442
+if
+  55 > $4357 // integer values
+jf @PHIL2_3442
+03CF: load_wav 'PHIL2_7' as 1
+
+:PHIL2_3207
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_3302
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3273
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3295
+
+:PHIL2_3273
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3295
+jump @PHIL2_3207
+
+:PHIL2_3302
+00BC: text_highpriority 'PHI2_11' 5000 ms 1  // Spooney Wooney Woo Woo Woooo!
+03D1: play_wav 1
+
+:PHIL2_3321
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_3421
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3392
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3414
+
+:PHIL2_3392
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3414
+jump @PHIL2_3321
+
+:PHIL2_3421
+040D: unload_wav 1
+03D5: remove_text 'PHI2_11'  // Spooney Wooney Woo Woo Woooo!
+$4362 = 4 // integer values
+
+:PHIL2_3442
+if
+  $4362 == 4 // integer values
+jf @PHIL2_3725
+if
+  45 > $4357 // integer values
+jf @PHIL2_3725
+03CF: load_wav 'PHIL2_8' as 1
+
+:PHIL2_3490
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_3585
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3556
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3578
+
+:PHIL2_3556
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3578
+jump @PHIL2_3490
+
+:PHIL2_3585
+00BC: text_highpriority 'PHI2_12' 5000 ms 1  // He's come for me boy!
+03D1: play_wav 1
+
+:PHIL2_3604
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_3704
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3675
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3697
+
+:PHIL2_3675
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3697
+jump @PHIL2_3604
+
+:PHIL2_3704
+040D: unload_wav 1
+03D5: remove_text 'PHI2_12'  // He's come for me boy!
+$4362 = 5 // integer values
+
+:PHIL2_3725
+if
+  $4362 == 5 // integer values
+jf @PHIL2_4008
+if
+  35 > $4357 // integer values
+jf @PHIL2_4008
+03CF: load_wav 'PHIL2_9' as 1
+
+:PHIL2_3773
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_3868
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3839
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3861
+
+:PHIL2_3839
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3861
+jump @PHIL2_3773
+
+:PHIL2_3868
+00BC: text_highpriority 'PHI2_13' 5000 ms 1  // Black feathered wings beating all around...
+03D1: play_wav 1
+
+:PHIL2_3887
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_3987
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_3958
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_3980
+
+:PHIL2_3958
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_3980
+jump @PHIL2_3887
+
+:PHIL2_3987
+040D: unload_wav 1
+03D5: remove_text 'PHI2_13'  // Black feathered wings beating all around...
+$4362 = 6 // integer values
+
+:PHIL2_4008
+if
+  $4362 == 6 // integer values
+jf @PHIL2_4291
+if
+  25 > $4357 // integer values
+jf @PHIL2_4291
+03CF: load_wav 'PHIL210' as 1
+
+:PHIL2_4056
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_4151
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_4122
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_4144
+
+:PHIL2_4122
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_4144
+jump @PHIL2_4056
+
+:PHIL2_4151
+00BC: text_highpriority 'PHI2_14' 5000 ms 1  // It's beautiful, man ... it's beautiful ... but so cold ...
+03D1: play_wav 1
+
+:PHIL2_4170
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_4270
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_4241
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_4263
+
+:PHIL2_4241
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_4263
+jump @PHIL2_4170
+
+:PHIL2_4270
+040D: unload_wav 1
+03D5: remove_text 'PHI2_14'  // It's beautiful, man ... it's beautiful ... but so cold ...
+$4362 = 7 // integer values
+
+:PHIL2_4291
+jump @PHIL2_4302
+
+:PHIL2_4298
+040D: unload_wav 1
+
+:PHIL2_4302
+if
+   not Car.Wrecked($4342)
+jf @PHIL2_6927
+if and
+01F4:   car $4342 flipped
+01C1:   car $4342 stopped
+jf @PHIL2_4346
+$4354 = 1 // integer values
+
+:PHIL2_4346
+if and
+80DC:   not player $PLAYER_CHAR driving $4342
+  $4353 == 0 // integer values
+  $4354 == 0 // integer values
+jf @PHIL2_4419
+00BC: text_highpriority 'IN_VEH' 5000 ms 1  // ~g~Hey! Get back in the vehicle!
+$4349 = Marker.CreateAboveCar($4342)
+Marker.Disable($4350)
+Marker.Disable($4351)
+$4353 = 1 // integer values
+
+:PHIL2_4419
+if and
+00DC:   player $PLAYER_CHAR driving $4342
+  $4353 == 1 // integer values
+jf @PHIL2_4545
+Marker.Disable($4349)
+Marker.Disable($4350)
+Marker.Disable($4351)
+if
+  $4352 == 0 // integer values
+jf @PHIL2_4498
+018A: $4350 = create_checkpoint_at -871.6 -469.5 9.9
+
+:PHIL2_4498
+if
+  $4352 == 1 // integer values
+jf @PHIL2_4536
+018A: $4351 = create_checkpoint_at -1183.0 -664.2 10.5
+
+:PHIL2_4536
+00BE: text_clear_all
+$4353 = 0 // integer values
+
+:PHIL2_4545
+$4356 = Car.Health($4342)
+$4356 /= 10 // integer values
+if
+001C:   $4358 > $4356 // integer values
+jf @PHIL2_4603
+0084: $4359 = $4358 // integer values and handles
+0060: $4359 -= $4356 // integer values
+0060: $4357 -= $4359 // integer values
+
+:PHIL2_4603
+0084: $4358 = $4356 // integer values and handles
+if
+  16@ > 1000 // integer values
+jf @PHIL2_4644
+$4357 -= 1 // integer values
+16@ = 0 // integer values
+
+:PHIL2_4644
+if
+  1 > $4357 // integer values
+jf @PHIL2_4705
+if
+   not Actor.Dead($4343)
+jf @PHIL2_4683
+0321: kill_actor $4343
+
+:PHIL2_4683
+00BC: text_highpriority 'PHI2_03' 5000 ms 1  // ~r~Phil Cassidy is dead!!! Now who's gonna supply arms in Vice City?
+jump @PHIL2_6994
+
+:PHIL2_4705
+if
+  17@ > 20000 // integer values
+jf @PHIL2_4761
+$4360 -= 1 // integer values
+$4361 -= 30 // integer values
+03FD: set_player $PLAYER_CHAR handling_responsiveness $4360
+052C: set_player $PLAYER_CHAR drunk_visuals $4361
+17@ = 0 // integer values
+
+:PHIL2_4761
+02E3: $4368 = car $4342 speed
+if
+  $4368 > 5.0 // floating-point values
+jf @PHIL2_5191
+if
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+jf @PHIL2_5191
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+0086: $4364 = $95 // floating-point values only
+$4364 += 10.0 // floating-point values
+0086: $4365 = $96 // floating-point values only
+$4365 += 10.0 // floating-point values
+0086: $4366 = $95 // floating-point values only
+$4366 -= 10.0 // floating-point values
+0086: $4367 = $96 // floating-point values only
+$4367 -= 10.0 // floating-point values
+0469: create_actor $4344 in area $4364 $4365 $4366 $4367 unknown 1 0 0 0 0
+if
+   not $4344 == -1 // integer values
+jf @PHIL2_5186
+Player.WantedLevel($PLAYER_CHAR) = 1
+03CF: load_wav 'PHIL211' as 1
+
+:PHIL2_4958
+if
+83D0:   not wav 1 loaded
+jf @PHIL2_5053
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_5024
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_5046
+
+:PHIL2_5024
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_5046
+jump @PHIL2_4958
+
+:PHIL2_5053
+00BC: text_highpriority 'PHI2_15' 5000 ms 1  // 10-4 we've got a drunk driver.
+03D1: play_wav 1
+
+:PHIL2_5072
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($4343)
+jf @PHIL2_5172
+wait 0
+if
+  $4352 == 0 // integer values
+jf @PHIL2_5143
+03A1: clear_area_with_center_at_3D_coord -871.6 -469.5 9.9 radius 7.0
+jump @PHIL2_5165
+
+:PHIL2_5143
+03A1: clear_area_with_center_at_3D_coord -1183.0 -664.2 10.5 radius 7.0
+
+:PHIL2_5165
+jump @PHIL2_5072
+
+:PHIL2_5172
+040D: unload_wav 1
+03D5: remove_text 'PHI2_15'  // 10-4 we've got a drunk driver.
+
+:PHIL2_5186
+Actor.RemoveReferences($4344)
+
+:PHIL2_5191
+if
+  $4352 == 0 // integer values
+jf @PHIL2_5606
+if
+   not Car.Wrecked($4342)
+jf @PHIL2_5606
+if
+00DC:   player $PLAYER_CHAR driving $4342
+jf @PHIL2_5606
+if
+01B0:   car $4342 stopped 1 -871.6 -469.5 9.9 radius 7.0 7.0 7.0
+jf @PHIL2_5606
+Marker.Disable($4350)
+018A: $4351 = create_checkpoint_at -1183.0 -664.2 10.5
+$4363 = 1 // integer values
+00BC: text_highpriority 'PHI2_05' 5000 ms 1  // Not the hospital, man! Too many cops and Viet Cong!
+03D1: play_wav 2
+
+:PHIL2_5343
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4343)
+jf @PHIL2_5374
+wait 0
+jump @PHIL2_5343
+
+:PHIL2_5374
+040D: unload_wav 2
+03D5: remove_text 'PHI2_05'  // Not the hospital, man! Too many cops and Viet Cong!
+03CF: load_wav 'PHIL2_2' as 2
+
+:PHIL2_5400
+if
+83D0:   not wav 2 loaded
+jf @PHIL2_5426
+wait 0
+jump @PHIL2_5400
+
+:PHIL2_5426
+00BC: text_highpriority 'PHI2_06' 5000 ms 1  // There's an ex-army surgeon owes me a few favors and a lawnmower.
+03D1: play_wav 2
+
+:PHIL2_5445
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4343)
+jf @PHIL2_5476
+wait 0
+jump @PHIL2_5445
+
+:PHIL2_5476
+040D: unload_wav 2
+03D5: remove_text 'PHI2_06'  // There's an ex-army surgeon owes me a few favors and a lawnmower.
+03CF: load_wav 'PHIL2_3' as 2
+
+:PHIL2_5502
+if
+83D0:   not wav 2 loaded
+jf @PHIL2_5528
+wait 0
+jump @PHIL2_5502
+
+:PHIL2_5528
+00BC: text_highpriority 'PHI2_07' 5000 ms 1  // He's got a place down Little Havana - ooo look, a giant fish.
+03D1: play_wav 2
+
+:PHIL2_5547
+if and
+83D2:   not wav 2 ended
+   not Actor.Dead($4343)
+jf @PHIL2_5578
+wait 0
+jump @PHIL2_5547
+
+:PHIL2_5578
+040D: unload_wav 2
+03D5: remove_text 'PHI2_07'  // He's got a place down Little Havana - ooo look, a giant fish.
+$4363 = 0 // integer values
+$4352 = 1 // integer values
+
+:PHIL2_5606
+if
+  $4352 == 1 // integer values
+jf @PHIL2_6920
+if
+   not Car.Wrecked($4342)
+jf @PHIL2_6898
+if
+00DC:   player $PLAYER_CHAR driving $4342
+jf @PHIL2_6891
+if
+01B0:   car $4342 stopped 1 -1183.0 -664.2 10.5 radius 7.0 7.0 7.0
+jf @PHIL2_6891
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+052C: set_player $PLAYER_CHAR drunk_visuals 0
+if
+   not Actor.Dead($4343)
+jf @PHIL2_5789
+$4369 = Car.Angle($4342)
+Car.PutAt($4342, -1183.0, -664.2, 10.5)
+Car.Angle($4342) = $4369
+03E2: actor $4343 exit_car
+0245: set_actor $4343 walk_style_to 48
+
+:PHIL2_5789
+Camera.SetPosition(-1178.1, -676.3, 15.5, 0.0, 0.0, 0.0)
+Camera.PointAt(-1183.7, -656.7, 11.1, 2)
+03BA: clear_cars_from_cube -1190.0 -671.2 17.5 -1174.0 -657.2 3.5
+if
+   not Actor.Dead($4343)
+jf @PHIL2_5908
+011C: actor $4343 clear_objective
+0211: actor $4343 walk_to -1218.9 -665.1
+
+:PHIL2_5908
+16@ = 0 // integer values
+17@ = 0 // integer values
+
+:PHIL2_5922
+wait 0
+if
+  17@ > 500 // integer values
+jf @PHIL2_5990
+if
+   not Actor.Dead($4343)
+jf @PHIL2_5983
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_5983
+gosub @PHIL2_8127
+
+:PHIL2_5983
+17@ = 0 // integer values
+
+:PHIL2_5990
+if
+  16@ > 2000 // integer values
+jf @PHIL2_6030
+16@ = 0 // integer values
+17@ = 0 // integer values
+jump @PHIL2_6037
+
+:PHIL2_6030
+jump @PHIL2_5922
+
+:PHIL2_6037
+wait 0
+if
+   not Actor.Dead($4343)
+jf @PHIL2_6174
+if
+  17@ > 500 // integer values
+jf @PHIL2_6121
+if
+   not Actor.Dead($4343)
+jf @PHIL2_6114
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_6114
+gosub @PHIL2_8127
+
+:PHIL2_6114
+17@ = 0 // integer values
+
+:PHIL2_6121
+if or
+00ED:   actor $4343 0 -1218.9 -665.1 radius 3.0 3.0
+  16@ > 3000 // integer values
+jf @PHIL2_6174
+jump @PHIL2_6181
+
+:PHIL2_6174
+jump @PHIL2_6037
+
+:PHIL2_6181
+if
+   not Actor.Dead($4343)
+jf @PHIL2_6237
+011C: actor $4343 clear_objective
+Actor.PutAt($4343, -1191.7, -664.3, 10.5)
+0211: actor $4343 walk_to -1218.9 -665.1
+
+:PHIL2_6237
+16@ = 0 // integer values
+17@ = 0 // integer values
+Camera.SetPosition(-1174.3, -664.2, 15.9, 0.0, 0.0, 0.0)
+Camera.PointAt(-1184.5, -664.1, 11.64, 2)
+
+:PHIL2_6302
+wait 0
+if
+   not Actor.Dead($4343)
+jf @PHIL2_6439
+if
+  17@ > 500 // integer values
+jf @PHIL2_6386
+if
+   not Actor.Dead($4343)
+jf @PHIL2_6379
+if and
+840C:   not german_game
+840B:   not french_game
+jf @PHIL2_6379
+gosub @PHIL2_8127
+
+:PHIL2_6379
+17@ = 0 // integer values
+
+:PHIL2_6386
+if or
+00ED:   actor $4343 0 -1218.9 -665.1 radius 3.0 3.0
+  16@ > 3000 // integer values
+jf @PHIL2_6439
+jump @PHIL2_6446
+
+:PHIL2_6439
+jump @PHIL2_6302
+
+:PHIL2_6446
+015D: set_gamespeed 1.0
+fade 0 500
+
+:PHIL2_6460
+if
+fading
+jf @PHIL2_6484
+wait 0
+jump @PHIL2_6460
+
+:PHIL2_6484
+Actor.DestroyInstantly($4343)
+$4345 = Pickup.Create(#M60, 1, -1105.9, 335.3, 11.1)
+$4346 = Pickup.Create(#ROCKETLA, 1, -1105.9, 330.3, 11.1)
+$4347 = Pickup.Create(#MINIGUN, 1, -1105.9, 325.3, 11.1)
+$4348 = Pickup.Create(#BOMB, 1, -1105.9, 320.3, 11.1)
+Camera.SetAtPos(-1038.4, 309.7, 20.9)
+Camera.SetPosition(-1038.4, 309.7, 20.9, 0.0, 0.0, 0.0)
+Camera.PointAt(-1065.6, 322.1, 21.7, 2)
+fade 1 500
+
+:PHIL2_6664
+if
+fading
+jf @PHIL2_6688
+wait 0
+jump @PHIL2_6664
+
+:PHIL2_6688
+0394: play_music 1
+00BA: text_styled 'PHI_AS1' 5000 ms 6  // PHILS PLACE ASSET COMPLETED
+wait 5000
+Camera.SetAtPos(-1093.2, 345.0, 14.3)
+Camera.SetPosition(-1093.2, 345.0, 14.3, 0.0, 0.0, 0.0)
+Camera.PointAt(-1110.1, 331.3, 11.0, 2)
+00BC: text_highpriority 'PHI_AS2' 6000 ms 1  // ~g~New Weapons available to purchase from Phils Place.
+wait 6000
+fade 0 500
+
+:PHIL2_6807
+if
+fading
+jf @PHIL2_6831
+wait 0
+jump @PHIL2_6807
+
+:PHIL2_6831
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+Camera.SetAtPos($95, $96, $97)
+fade 1 500
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+052C: set_player $PLAYER_CHAR drunk_visuals $4361
+jump @PHIL2_7011
+
+:PHIL2_6891
+jump @PHIL2_6920
+
+:PHIL2_6898
+00BC: text_highpriority 'PHI2_03' 5000 ms 1  // ~r~Phil Cassidy is dead!!! Now who's gonna supply arms in Vice City?
+jump @PHIL2_6994
+
+:PHIL2_6920
+jump @PHIL2_6949
+
+:PHIL2_6927
+00BC: text_highpriority 'PHI2_03' 5000 ms 1  // ~r~Phil Cassidy is dead!!! Now who's gonna supply arms in Vice City?
+jump @PHIL2_6994
+
+:PHIL2_6949
+if
+   Actor.Dead($4343)
+jf @PHIL2_6987
+00BC: text_highpriority 'PHI2_03' 5000 ms 1  // ~r~Phil Cassidy is dead!!! Now who's gonna supply arms in Vice City?
+jump @PHIL2_6994
+
+:PHIL2_6987
+jump @PHIL2_2253
+
+:PHIL2_6994
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:PHIL2_7011
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 4000 time 5000 style 1  // MISSION PASSED! $~1~
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 4000
+030C: progress_made += 1
+0318: set_latest_mission_passed 'PHIL_2'  // Boomshine Saigon
+Marker.Disable($253)
+04CE: $253 = create_icon_marker_without_sphere $423 at $492 $493 $494
+$255 = 1 // integer values
+return
+
+:PHIL2_7089
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Model.Destroy(#PATRIOT)
+Actor.RemoveReferences($4344)
+Camera.Shake(0)
+Actor.DestroyWithFade($4343)
+0296: unload_special_actor 1
+Marker.Disable($4349)
+Marker.Disable($4350)
+Marker.Disable($4351)
+0151: remove_status_text $4357
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:PHIL2_7155
+if
+80E1:   not player 0 pressed_button 16
+jf @PHIL2_8125
+0400: create_coordinate $95 $96 $97 from_object $137 offset 0.3 0.3 0.3
+0437: scatter_particle 76 0.1 at $95 $96 $97 0.0 0.0 0.0
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 1.0 0.03
+0437: scatter_particle 41 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 41 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 41 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 41 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 41 0.0 at $95 $96 $97 0.0 0.0 0.03
+
+:PHIL2_8125
+return
+
+:PHIL2_8127
+04C4: create_coordinate $95 $96 $97 from_actor $4343 offset -0.3 0.3 0.3
+0437: scatter_particle 76 0.1 at $95 $96 $97 0.0 0.0 0.0
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 7 0.0 at $95 $96 $97 0.0 0.0 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+0437: scatter_particle 8 0.0 at $95 $96 $97 0.0 0.1 0.03
+return

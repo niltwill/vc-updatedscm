@@ -1,0 +1,1498 @@
+:GENERL1
+thread 'GENERL1'
+gosub @GENERL1_46
+if
+wasted_or_busted
+jf @GENERL1_37
+gosub @GENERL1_8868
+
+:GENERL1_37
+gosub @GENERL1_8997
+end_thread
+
+:GENERL1_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'GENERA1'
+058E: set_restart_mission_taxi_destination -163.0 -1439.4 9.0 201.5
+$2264 = 0 // integer values
+$2265 = 0 // integer values
+$2267 = 0 // integer values
+$2268 = 0 // integer values
+$2269 = 0 // integer values
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP03 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP04 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP05 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP24 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP25 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP28 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP32 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP35 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP41 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP47 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP50 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP51 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP64 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP70 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP71 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP72 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP73 0
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODARGOHULL2 0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSCOLO'
+023C: load_special_actor 3 'CGONA'
+023C: load_special_actor 4 'CSERVRB'
+02F3: load_object #CUTOBJ01 'LOBTRAY'
+02F3: load_object #CUTOBJ02 'LOBSTER'
+02F3: load_object #CUTOBJ03 'COKNIFE'
+02F3: load_object #CUTOBJ04 'COLTRAY'
+Model.Load(#BIG_POLY_TINGS)
+Object.StorePos($714, $448, $449, $450)
+$448 += 0.003 // floating-point values
+$449 -= 1.381 // floating-point values
+$450 += 3.149 // floating-point values
+Camera.SetAtPos($448, $449, $450)
+038B: load_requested_models
+
+:GENERL1_765
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+jf @GENERL1_803
+wait 0
+jump @GENERL1_765
+
+:GENERL1_803
+if or
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+   not Model.Available(#CUTOBJ04)
+   not Model.Available(#BIG_POLY_TINGS)
+jf @GENERL1_849
+wait 0
+jump @GENERL1_803
+
+:GENERL1_849
+Object.StorePos($714, $448, $449, $450)
+$716 = Object.Init(#BIG_POLY_TINGS, $448, $449, $450)
+02E4: load_cutscene_data 'COL_1'
+Object.StorePos($714, $448, $449, $450)
+$448 += 0.003 // floating-point values
+$449 -= 1.381 // floating-point values
+$450 += 3.149 // floating-point values
+0244: set_cutscene_pos $448 $449 $450
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $150 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $150 'CSCOLO'
+02E5: $193 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $193 'CGONA'
+02E5: $156 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $156 'CSERVRB'
+02E5: $198 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $198 'LOBTRAY'
+02E5: $199 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $199 'LOBSTER'
+02E5: $200 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $200 'COKNIFE'
+02E5: $201 = create_cutscene_object #CUTOBJ04
+02E6: set_cutscene_anim $201 'COLTRAY'
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:GENERL1_1137
+if
+  1250 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1172
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1137
+
+:GENERL1_1172
+00BC: text_highpriority 'GEN1_A' 10000 ms 1  // Mr. Vercetti!
+
+:GENERL1_1187
+if
+  3050 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1222
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1187
+
+:GENERL1_1222
+00BC: text_highpriority 'GEN1_B' 10000 ms 1  // Colonel.
+
+:GENERL1_1237
+if
+  4110 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1272
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1237
+
+:GENERL1_1272
+00BC: text_highpriority 'GEN1_C' 10000 ms 1  // Thank you for coming. Please sit. Lobster?
+
+:GENERL1_1287
+if
+  8180 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1322
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1287
+
+:GENERL1_1322
+00BC: text_highpriority 'GEN1_D' 10000 ms 1  // No - thanks.
+
+:GENERL1_1337
+if
+  10130 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1372
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1337
+
+:GENERL1_1372
+00BC: text_highpriority 'GEN1_E' 10000 ms 1  // I'm ashamed to admit that one of the causes of our mutual problem appears to have been the loose tongue of a man I used to trust.
+
+:GENERL1_1387
+if
+  17220 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1422
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1387
+
+:GENERL1_1422
+00BC: text_highpriority 'GEN1_F' 10000 ms 1  // I've been carrying Gonzalez for years, but now his incompetence reaches new heights!
+
+:GENERL1_1437
+if
+  23040 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1472
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1437
+
+:GENERL1_1472
+00BC: text_highpriority 'GEN1_G' 10000 ms 1  // It is only right that you kill Gonzalez...
+
+:GENERL1_1487
+if
+  25170 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1522
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1487
+
+:GENERL1_1522
+00BC: text_highpriority 'GEN1_H' 10000 ms 1  // Did he do it? It's the money that's important to me.
+
+:GENERL1_1537
+if
+  28100 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1572
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1537
+
+:GENERL1_1572
+00BC: text_highpriority 'GEN1_I' 10000 ms 1  // For this kindness I'll reward you, and then we will find your money together.
+
+:GENERL1_1587
+if
+  34160 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1624
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1587
+
+:GENERL1_1624
+00BC: text_highpriority 'GEN1_J' 10000 ms 1  // He will be at his Penthouse, half drunk probably.
+
+:GENERL1_1639
+if
+  37450 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1676
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1639
+
+:GENERL1_1676
+00BE: text_clear_all
+
+:GENERL1_1677
+if
+  40390 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1677B
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1677
+
+:GENERL1_1677B
+00BC: text_highpriority 'GEN1_K' 10000 ms 1  // Use this...
+
+:GENERL1_1678
+if
+  42112 > $CUT_SCENE_TIME // integer values
+jf @GENERL1_1715
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @GENERL1_1678
+
+:GENERL1_1715
+fade 0 1500
+00BE: text_clear_all
+
+:GENERL1_1724
+if
+fading
+jf @GENERL1_1748
+wait 0
+jump @GENERL1_1724
+
+:GENERL1_1748
+03AD: set_rubbish 1
+02EA: end_cutscene
+Object.Destroy($716)
+Model.Destroy(#BIG_POLY_TINGS)
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+Model.Destroy(#CUTOBJ04)
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP03 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP04 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP05 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP24 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP25 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP28 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP32 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP35 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP41 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP47 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP50 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP51 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP64 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP70 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP71 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP72 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP73 1
+0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODARGOHULL2 1
+04E4: unknown_refresh_game_renderer_at -244.2799 -1360.67
+0395: clear_area 1 at -244.2799 -1360.67 range 7.0786 1.0
+0055: put_player $PLAYER_CHAR at -244.2799 -1360.67 7.0786
+0171: set_player $PLAYER_CHAR z_angle_to 279.1362
+Player.CanMove($PLAYER_CHAR) = False
+Camera.SetBehindPlayer
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 1 60000
+set_weather 4
+Model.Load(#CHNSAW)
+Model.Load(#CLA)
+Model.Load(#CLB)
+
+:GENERL1_2389
+if or
+   not Model.Available(#CHNSAW)
+   not Model.Available(#CLA)
+   not Model.Available(#CLB)
+jf @GENERL1_2420
+wait 0
+jump @GENERL1_2389
+
+:GENERL1_2420
+023C: load_special_actor 1 'IGGONZ'
+
+:GENERL1_2432
+if
+823D:   not special_actor 1 loaded
+jf @GENERL1_2458
+wait 0
+jump @GENERL1_2432
+
+:GENERL1_2458
+038B: load_requested_models
+022B: create_forbidden_for_peds_cube 479.9 -1.4 11.0 450.3 59.5 40.0
+01B1: give_player $PLAYER_CHAR weapon 11 ammo 1 // Load the weapon model before using this
+018A: $2261 = create_checkpoint_at 476.8 30.4 11.0
+0376: $2258 = create_random_actor -242.8 -1342.5 7.1
+Actor.Angle($2258) = 204.5
+0376: $2259 = create_random_actor -240.8 -1344.1 7.1
+Actor.Angle($2259) = 89.6
+0376: $2260 = create_random_actor -242.3 -1344.7 7.1
+Actor.Angle($2260) = 349.2
+03F9: make_actors $2258 $2259 converse_in 86400000 ms
+03F9: make_actors $2260 $2259 converse_in 86400000 ms
+Object.Destroy($1816)
+$2254 = Object.Init(#SPAD_DR_OPEN3, 464.663, 30.336, 23.881)
+Object.RemoveFromMissionCleanupList($2254)
+Object.Destroy($1815)
+$2255 = Object.Init(#SPAD_DR_OPEN2, 461.961, 31.436, 31.24)
+Object.RemoveFromMissionCleanupList($2255)
+Object.Destroy($1814)
+$2256 = Object.Init(#SPAD_DR_OPEN1, 454.321, 31.436, 35.198)
+Object.RemoveFromMissionCleanupList($2256)
+$2257 = Object.Init(#SEXYPOOLCOVER, 470.68, 30.336, 30.19)
+Object.RemoveFromMissionCleanupList($2257)
+fade 1 1500
+Player.CanMove($PLAYER_CHAR) = True
+17@ = 0 // integer values
+00BC: text_highpriority 'GEN1_05' 5000 ms 1  // ~g~Go and kill Gonzalez!
+
+:GENERL1_2789
+if
+8057:   not player $PLAYER_CHAR 0 476.5 27.3 11.28 474.8 33.0 14.3
+jf @GENERL1_3045
+wait 0
+if
+  $2269 == 0 // integer values
+jf @GENERL1_2905
+if
+8121:   not player $PLAYER_CHAR in_zone 'BEACH1'  // Ocean Beach
+jf @GENERL1_2905
+Actor.RemoveReferences($2258)
+Actor.RemoveReferences($2259)
+Actor.RemoveReferences($2260)
+$2269 = 1 // integer values
+
+:GENERL1_2905
+if
+   not Actor.Dead($2258)
+jf @GENERL1_2942
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @GENERL1_2942
+Actor.RemoveReferences($2258)
+
+:GENERL1_2942
+if
+   not Actor.Dead($2259)
+jf @GENERL1_2979
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @GENERL1_2979
+Actor.RemoveReferences($2259)
+
+:GENERL1_2979
+if
+   not Actor.Dead($2260)
+jf @GENERL1_3016
+if
+02DF:   player $PLAYER_CHAR aggressive
+jf @GENERL1_3016
+Actor.RemoveReferences($2260)
+
+:GENERL1_3016
+03A1: clear_area_with_center_at_3D_coord 475.5 30.3 11.0 radius 3.0
+jump @GENERL1_2789
+
+:GENERL1_3045
+00BE: text_clear_all
+Marker.Disable($2261)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+01B1: give_player $PLAYER_CHAR weapon 11 ammo 1 // Load the weapon model before using this
+01B8: set_player $PLAYER_CHAR armed_weapon_to 11
+$2251 = Actor.Create(CivMale, #SPECIAL01, 466.0, 38.2, 32.0)
+01ED: clear_actor $2251 threat_search
+Actor.Health($2251) = 150
+02A9: set_actor $2251 immune_to_nonplayer 1
+0245: set_actor $2251 walk_style_to 50
+$2252 = Actor.Create(CivMale, #CLA, 466.1, 40.1, 32.0)
+01ED: clear_actor $2252 threat_search
+Actor.Angle($2252) = 180.0
+03F9: make_actors $2251 $2252 converse_in 9999999 ms
+$2253 = Actor.Create(CivMale, #CLB, 464.3, 43.7, 32.0)
+01ED: clear_actor $2253 threat_search
+0239: actor $PLAYER_ACTOR run_to 475.7 30.3
+16@ = 0 // integer values
+
+:GENERL1_3233
+wait 0
+if
+  16@ > 5000 // integer values
+jf @GENERL1_3263
+jump @GENERL1_3314
+
+:GENERL1_3263
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @GENERL1_3307
+if
+0126:   actor $PLAYER_ACTOR walking
+jf @GENERL1_3307
+0192: set_actor $PLAYER_ACTOR objective_to_stand_still
+jump @GENERL1_3314
+
+:GENERL1_3307
+jump @GENERL1_3233
+
+:GENERL1_3314
+011C: actor $PLAYER_ACTOR clear_objective
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:GENERL1_3334
+if
+fading
+jf @GENERL1_3358
+wait 0
+jump @GENERL1_3334
+
+:GENERL1_3358
+0055: put_player $PLAYER_CHAR at 454.4 31.3 33.86
+0171: set_player $PLAYER_CHAR z_angle_to 270.0
+Camera.SetPosition(468.1, 41.0, 33.5, 0.0, 0.0, 0.0)
+Camera.PointAt(461.0, 32.8, 33.0, 2)
+fade 1 500
+16@ = 0 // integer values
+if
+   not Actor.Dead($PLAYER_ACTOR)
+jf @GENERL1_3484
+0211: actor $PLAYER_ACTOR walk_to 460.7 27.5
+
+:GENERL1_3484
+if and
+80E3:   not player $PLAYER_CHAR 0 460.7 27.5 radius 0.5 0.5
+  5000 > 16@ // integer values
+jf @GENERL1_3660
+wait 0
+if
+00E3:   player $PLAYER_CHAR 0 460.7 27.5 radius 4.0 4.0
+jf @GENERL1_3653
+if
+00E1:   player 0 pressed_button 16
+jf @GENERL1_3628
+if
+  $61 == 1 // integer values
+jf @GENERL1_3621
+$61 = 0 // integer values
+jump @GENERL1_4463
+
+:GENERL1_3621
+jump @GENERL1_3653
+
+:GENERL1_3628
+if
+  $61 == 0 // integer values
+jf @GENERL1_3653
+$61 = 1 // integer values
+
+:GENERL1_3653
+jump @GENERL1_3484
+
+:GENERL1_3660
+if
+   not Actor.Dead($2251)
+jf @GENERL1_3689
+011C: actor $PLAYER_ACTOR clear_objective
+0210: player $PLAYER_CHAR look_at_actor $2251
+
+:GENERL1_3689
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+03CF: load_wav 'COL1_5' as 1
+
+:GENERL1_3711
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_3737
+wait 0
+jump @GENERL1_3711
+
+:GENERL1_3737
+00BC: text_highpriority 'GEN1_10' 4000 ms 1  // I'm going to shut that big mouth of yours!
+03D1: play_wav 1
+
+:GENERL1_3756
+if
+83D2:   not wav 1 ended
+jf @GENERL1_3863
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @GENERL1_3831
+if
+  $61 == 1 // integer values
+jf @GENERL1_3824
+$61 = 0 // integer values
+jump @GENERL1_4463
+
+:GENERL1_3824
+jump @GENERL1_3856
+
+:GENERL1_3831
+if
+  $61 == 0 // integer values
+jf @GENERL1_3856
+$61 = 1 // integer values
+
+:GENERL1_3856
+jump @GENERL1_3756
+
+:GENERL1_3863
+040D: unload_wav 1
+03D5: remove_text 'GEN1_10'  // I'm going to shut that big mouth of yours!
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+if
+   not Actor.Dead($2251)
+jf @GENERL1_3928
+0372: set_actor $2251 anim 0 wait_state_time 100 ms
+020F: actor $2251 look_at_player $PLAYER_CHAR
+0372: set_actor $2251 anim 0 wait_state_time 100 ms
+
+:GENERL1_3928
+if
+   not Actor.Dead($2252)
+jf @GENERL1_3949
+011C: actor $2252 clear_objective
+
+:GENERL1_3949
+Camera.SetPosition(462.4, 23.3, 36.2, 0.0, 0.0, 0.0)
+Camera.PointAt(459.2, 33.1, 34.0, 2)
+03CF: load_wav 'COL1_1' as 1
+
+:GENERL1_4012
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_4038
+wait 0
+jump @GENERL1_4012
+
+:GENERL1_4038
+00BC: text_highpriority 'GEN1_06' 4000 ms 1  // Eh! He's got a blade!
+03D1: play_wav 1
+
+:GENERL1_4057
+if
+83D2:   not wav 1 ended
+jf @GENERL1_4164
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @GENERL1_4132
+if
+  $61 == 1 // integer values
+jf @GENERL1_4125
+$61 = 0 // integer values
+jump @GENERL1_4463
+
+:GENERL1_4125
+jump @GENERL1_4157
+
+:GENERL1_4132
+if
+  $61 == 0 // integer values
+jf @GENERL1_4157
+$61 = 1 // integer values
+
+:GENERL1_4157
+jump @GENERL1_4057
+
+:GENERL1_4164
+040D: unload_wav 1
+03D5: remove_text 'GEN1_06'  // Eh! He's got a blade!
+if
+   not Actor.Dead($2251)
+jf @GENERL1_4218
+0372: set_actor $2251 anim 0 wait_state_time 100 ms
+0239: actor $2251 run_to 466.1 42.7
+
+:GENERL1_4218
+if
+   not Actor.Dead($2252)
+jf @GENERL1_4242
+01CA: actor $2252 kill_player $PLAYER_CHAR
+
+:GENERL1_4242
+if
+   not Actor.Dead($2253)
+jf @GENERL1_4266
+01CA: actor $2253 kill_player $PLAYER_CHAR
+
+:GENERL1_4266
+0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+03CF: load_wav 'COL1_6' as 1
+
+:GENERL1_4288
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_4314
+wait 0
+jump @GENERL1_4288
+
+:GENERL1_4314
+00BC: text_highpriority 'GEN1_11' 4000 ms 1  // Stop running you fat slimeball!
+03D1: play_wav 1
+
+:GENERL1_4333
+if
+83D2:   not wav 1 ended
+jf @GENERL1_4440
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @GENERL1_4408
+if
+  $61 == 1 // integer values
+jf @GENERL1_4401
+$61 = 0 // integer values
+jump @GENERL1_4463
+
+:GENERL1_4401
+jump @GENERL1_4433
+
+:GENERL1_4408
+if
+  $61 == 0 // integer values
+jf @GENERL1_4433
+$61 = 1 // integer values
+
+:GENERL1_4433
+jump @GENERL1_4333
+
+:GENERL1_4440
+040D: unload_wav 1
+03D5: remove_text 'GEN1_11'  // Stop running you fat slimeball!
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+
+:GENERL1_4463
+Object.Destroy($1814)
+Object.Destroy($2256)
+$1814 = Object.Init(#SPAD_DR_CLOSED1, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1814)
+0055: put_player $PLAYER_CHAR at 460.7 27.5 33.8
+00BE: text_clear_all
+040D: unload_wav 1
+040D: unload_wav 2
+011C: actor $PLAYER_ACTOR clear_objective
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 100 ms
+if
+   not Actor.Dead($2252)
+jf @GENERL1_4568
+01CA: actor $2252 kill_player $PLAYER_CHAR
+
+:GENERL1_4568
+if
+   not Actor.Dead($2253)
+jf @GENERL1_4592
+01CA: actor $2253 kill_player $PLAYER_CHAR
+
+:GENERL1_4592
+if
+   not Actor.Dead($2251)
+jf @GENERL1_4625
+0372: set_actor $2251 anim 0 wait_state_time 100 ms
+$2262 = Marker.CreateAboveActor($2251)
+
+:GENERL1_4625
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+16@ = 0 // integer values
+17@ = 250 // integer values
+
+:GENERL1_4653
+wait 0
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5401
+if
+  $2264 == 0 // integer values
+jf @GENERL1_4789
+if
+   not Actor.Dead($2251)
+jf @GENERL1_4789
+if
+00EC:   actor $2251 0 466.1 42.7 radius 1.0 1.0
+jf @GENERL1_4774
+0239: actor $2251 run_to 472.3 42.8
+$2264 = 1 // integer values
+jump @GENERL1_4789
+
+:GENERL1_4774
+0239: actor $2251 run_to 466.1 42.7
+
+:GENERL1_4789
+if
+  $2264 == 1 // integer values
+jf @GENERL1_4905
+if
+   not Actor.Dead($2251)
+jf @GENERL1_4905
+if
+00EC:   actor $2251 0 472.3 42.8 radius 1.0 1.0
+jf @GENERL1_4890
+0239: actor $2251 run_to 472.5 35.9
+$2264 = 2 // integer values
+jump @GENERL1_4905
+
+:GENERL1_4890
+0239: actor $2251 run_to 472.3 42.8
+
+:GENERL1_4905
+if
+  $2264 == 2 // integer values
+jf @GENERL1_5187
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5187
+if
+00EC:   actor $2251 0 472.5 35.9 radius 1.0 1.0
+jf @GENERL1_5172
+if
+0057:   player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_5127
+03CF: load_wav 'COL1_2' as 1
+
+:GENERL1_5037
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_5063
+wait 0
+jump @GENERL1_5037
+
+:GENERL1_5063
+00BC: text_highpriority 'GEN1_07' 4000 ms 1  // Go away from me, you cheap bastard!
+03D1: play_wav 1
+
+:GENERL1_5082
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($2251)
+jf @GENERL1_5113
+wait 0
+jump @GENERL1_5082
+
+:GENERL1_5113
+040D: unload_wav 1
+03D5: remove_text 'GEN1_07'  // Go away from me, you cheap bastard!
+
+:GENERL1_5127
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5158
+0239: actor $2251 run_to 464.0 35.6
+
+:GENERL1_5158
+$2264 = 3 // integer values
+jump @GENERL1_5187
+
+:GENERL1_5172
+0239: actor $2251 run_to 472.5 35.9
+
+:GENERL1_5187
+if
+  $2264 == 3 // integer values
+jf @GENERL1_5303
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5303
+if
+00EC:   actor $2251 0 464.0 35.6 radius 1.0 1.0
+jf @GENERL1_5288
+0239: actor $2251 run_to 463.0 31.6
+$2264 = 4 // integer values
+jump @GENERL1_5303
+
+:GENERL1_5288
+0239: actor $2251 run_to 464.0 35.6
+
+:GENERL1_5303
+if
+  $2264 == 4 // integer values
+jf @GENERL1_5394
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5394
+if
+00EC:   actor $2251 0 463.0 31.6 radius 1.0 1.0
+jf @GENERL1_5394
+011C: actor $2251 clear_objective
+0350: set_actor $2251 maintain_position_when_attacked 1
+jump @GENERL1_5484
+
+:GENERL1_5394
+jump @GENERL1_5470
+
+:GENERL1_5401
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'GEN1_19' 5000 ms 1  // ~g~The Vice City Police are on to you!
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+if or
+0329:   garage $684 respray_done
+0329:   garage $685 respray_done
+jf @GENERL1_5463
+
+:GENERL1_5463
+jump @GENERL1_8046
+
+:GENERL1_5470
+gosub @GENERL1_9214
+jump @GENERL1_4653
+
+:GENERL1_5484
+02A3: enable_widescreen 1
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Camera.SetPosition(470.2, 37.1, 34.2, 0.0, 0.0, 0.0)
+Camera.PointAt(460.1, 31.0, 32.0, 2)
+16@ = 0 // integer values
+
+:GENERL1_5560
+wait 0
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5652
+if
+00EC:   actor $2251 0 457.8 31.4 radius 1.0 1.0
+jf @GENERL1_5637
+011C: actor $2251 clear_objective
+jump @GENERL1_5685
+jump @GENERL1_5652
+
+:GENERL1_5637
+0239: actor $2251 run_to 457.8 31.4
+
+:GENERL1_5652
+if
+  16@ > 3000 // integer values
+jf @GENERL1_5678
+jump @GENERL1_5685
+
+:GENERL1_5678
+jump @GENERL1_5560
+
+:GENERL1_5685
+0395: clear_area 1 at 481.730 30.661 range 9.478 3.0
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:GENERL1_5700
+if
+fading
+jf @GENERL1_5724
+wait 0
+jump @GENERL1_5700
+
+:GENERL1_5724
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5770
+Actor.PutAt($2251, 474.7, 29.9, 11.07)
+Actor.Angle($2251) = 92.5
+
+:GENERL1_5770
+fade 1 500
+Camera.SetPosition(484.2, 37.0, 12.8, 0.0, 0.0, 0.0)
+Camera.PointAt(479.7, 27.5, 11.5, 2)
+if
+   not Actor.Dead($2251)
+jf @GENERL1_5866
+0350: set_actor $2251 maintain_position_when_attacked 0
+0239: actor $2251 run_to 482.8 30.9
+
+:GENERL1_5866
+03CF: load_wav 'COL1_3' as 1
+
+:GENERL1_5878
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_5904
+wait 0
+jump @GENERL1_5878
+
+:GENERL1_5904
+00BC: text_highpriority 'GEN1_08' 4000 ms 1  // Oh sweet Jesus, I've wasted my life and my looks!
+03D1: play_wav 1
+
+:GENERL1_5923
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($2251)
+jf @GENERL1_5954
+wait 0
+jump @GENERL1_5923
+
+:GENERL1_5954
+040D: unload_wav 1
+03D5: remove_text 'GEN1_08'  // Oh sweet Jesus, I've wasted my life and my looks!
+if
+   not Actor.Dead($2251)
+jf @GENERL1_6004
+01BE: set_actor $2251 to_look_at_spot 474.7 29.9 11.07
+
+:GENERL1_6004
+wait 1000
+if
+   not Actor.Dead($2251)
+jf @GENERL1_6040
+0239: actor $2251 run_to 402.1 -462.2
+
+:GENERL1_6040
+if
+0057:   player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_6118
+Actor.PutAt($PLAYER_ACTOR, 474.7, 29.9, 11.07)
+Actor.Angle($PLAYER_ACTOR) = 92.5
+
+:GENERL1_6118
+0350: set_actor $PLAYER_ACTOR maintain_position_when_attacked 0
+0239: actor $PLAYER_ACTOR run_to 482.8 30.9
+03CF: load_wav 'COL1_7' as 1
+
+:GENERL1_6152
+if and
+83D0:   not wav 1 loaded
+   not Actor.Dead($2251)
+jf @GENERL1_6183
+wait 0
+jump @GENERL1_6152
+
+:GENERL1_6183
+00BC: text_highpriority 'GEN1_12' 4000 ms 1  // Stand still and I'll make it quick!
+03D1: play_wav 1
+
+:GENERL1_6202
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($2251)
+jf @GENERL1_6233
+wait 0
+jump @GENERL1_6202
+
+:GENERL1_6233
+040D: unload_wav 1
+03D5: remove_text 'GEN1_12'  // Stand still and I'll make it quick!
+wait 1500
+Object.Destroy($2254)
+Object.Destroy($1816)
+$1816 = Object.Init(#SPAD_DR_CLOSED3, 464.663, 30.336, 23.881)
+Object.RemoveFromMissionCleanupList($1816)
+011C: actor $PLAYER_ACTOR clear_objective
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+02A3: enable_widescreen 0
+00BC: text_highpriority 'GEN1_05' 5000 ms 1  // ~g~Go and kill Gonzalez!
+16@ = 0 // integer values
+17@ = 250 // integer values
+
+:GENERL1_6344
+wait 0
+if
+   not Actor.Dead($2251)
+jf @GENERL1_7495
+if
+  16@ > 500 // integer values
+jf @GENERL1_6625
+if
+8510:   not unknown_actor $2251 on_path 402.1 -462.2 10.1 radius 1.0
+jf @GENERL1_6453
+009E: set_actor $2251 path 402.1 -462.2 10.1 unknown 1.0 1
+jump @GENERL1_6468
+
+:GENERL1_6453
+0239: actor $2251 run_to 402.1 -462.2
+
+:GENERL1_6468
+if
+   not Actor.Dead($2252)
+jf @GENERL1_6618
+if
+80FB:   not player $PLAYER_CHAR 0 $2252 radius 5.0 5.0 5.0
+jf @GENERL1_6610
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+8510:   not unknown_actor $2252 on_path $95 $96 $97 radius 1.0
+jf @GENERL1_6592
+009E: set_actor $2252 path $95 $96 $97 unknown 1.0 1
+jump @GENERL1_6603
+
+:GENERL1_6592
+0239: actor $2252 run_to $95 $96
+
+:GENERL1_6603
+jump @GENERL1_6618
+
+:GENERL1_6610
+01CA: actor $2252 kill_player $PLAYER_CHAR
+
+:GENERL1_6618
+16@ = 0 // integer values
+
+:GENERL1_6625
+if
+  17@ > 500 // integer values
+jf @GENERL1_6801
+if
+   not Actor.Dead($2253)
+jf @GENERL1_6794
+if
+80FB:   not player $PLAYER_CHAR 0 $2253 radius 5.0 5.0 5.0
+jf @GENERL1_6786
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+8510:   not unknown_actor $2253 on_path $95 $96 $97 radius 1.0
+jf @GENERL1_6768
+009E: set_actor $2253 path $95 $96 $97 unknown 1.0 1
+jump @GENERL1_6779
+
+:GENERL1_6768
+0239: actor $2253 run_to $95 $96
+
+:GENERL1_6779
+jump @GENERL1_6794
+
+:GENERL1_6786
+01CA: actor $2253 kill_player $PLAYER_CHAR
+
+:GENERL1_6794
+17@ = 0 // integer values
+
+:GENERL1_6801
+if
+  $2265 == 0 // integer values
+jf @GENERL1_6966
+if
+8057:   not player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_6966
+if
+   not Actor.Dead($2252)
+jf @GENERL1_6913
+Actor.PutAt($2252, 477.0, 28.7, 11.0)
+Actor.Angle($2252) = 272.4
+
+:GENERL1_6913
+if
+   not Actor.Dead($2253)
+jf @GENERL1_6959
+Actor.PutAt($2253, 477.0, 32.7, 11.0)
+Actor.Angle($2253) = 272.4
+
+:GENERL1_6959
+$2265 = 1 // integer values
+
+:GENERL1_6966
+if
+00E9:   player $PLAYER_CHAR 0 $2251 radius 5.0 5.0
+jf @GENERL1_7047
+if
+  $2264 == 4 // integer values
+jf @GENERL1_7022
+$2264 = 5 // integer values
+
+:GENERL1_7022
+if
+  $2264 == 6 // integer values
+jf @GENERL1_7047
+$2264 = 7 // integer values
+
+:GENERL1_7047
+if
+  $2264 == 5 // integer values
+jf @GENERL1_7174
+03CF: load_wav 'COL1_4' as 1
+
+:GENERL1_7077
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_7103
+wait 0
+jump @GENERL1_7077
+
+:GENERL1_7103
+00BC: text_highpriority 'GEN1_09' 4000 ms 1  // I pay you double, Tommy, DOUBLE!
+03D1: play_wav 1
+
+:GENERL1_7122
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($2251)
+jf @GENERL1_7153
+wait 0
+jump @GENERL1_7122
+
+:GENERL1_7153
+040D: unload_wav 1
+03D5: remove_text 'GEN1_09'  // I pay you double, Tommy, DOUBLE!
+$2264 = 6 // integer values
+
+:GENERL1_7174
+if
+   Actor.Dead($2251)
+jf @GENERL1_7259
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'GEN1_19' 5000 ms 1  // ~g~The Vice City Police are on to you!
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+if or
+0329:   garage $684 respray_done
+0329:   garage $685 respray_done
+jf @GENERL1_7252
+
+:GENERL1_7252
+jump @GENERL1_8046
+
+:GENERL1_7259
+if
+  $2264 == 7 // integer values
+jf @GENERL1_7417
+if
+00E9:   player $PLAYER_CHAR 0 $2251 radius 5.0 5.0
+jf @GENERL1_7410
+03CF: load_wav 'COL1_8' as 1
+
+:GENERL1_7320
+if
+83D0:   not wav 1 loaded
+jf @GENERL1_7346
+wait 0
+jump @GENERL1_7320
+
+:GENERL1_7346
+00BC: text_highpriority 'GEN1_13' 4000 ms 1  // Quit your squealing, no one cares, fatso!
+03D1: play_wav 1
+
+:GENERL1_7365
+if and
+83D2:   not wav 1 ended
+   not Actor.Dead($2251)
+jf @GENERL1_7396
+wait 0
+jump @GENERL1_7365
+
+:GENERL1_7396
+040D: unload_wav 1
+03D5: remove_text 'GEN1_13'  // Quit your squealing, no one cares, fatso!
+
+:GENERL1_7410
+$2264 = 8 // integer values
+
+:GENERL1_7417
+if
+   not Actor.Dead($2251)
+jf @GENERL1_7488
+if
+00FE:   actor $2251 0 398.3 -469.8 11.9 radius 15.0 15.0 15.0
+jf @GENERL1_7488
+jump @GENERL1_7571
+
+:GENERL1_7488
+jump @GENERL1_7564
+
+:GENERL1_7495
+018C: play_sound 1 at 0.0 0.0 0.0
+00BC: text_highpriority 'GEN1_19' 5000 ms 1  // ~g~The Vice City Police are on to you!
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+if or
+0329:   garage $684 respray_done
+0329:   garage $685 respray_done
+jf @GENERL1_7557
+
+:GENERL1_7557
+jump @GENERL1_8046
+
+:GENERL1_7564
+jump @GENERL1_6344
+
+:GENERL1_7571
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+02A3: enable_widescreen 1
+$1000 = 1 // integer values
+Camera.SetAtPos(393.5, -476.4, 12.3)
+0395: clear_area 1 at 405.5 -473.2 range 9.0 30.0
+Camera.SetPosition(403.96, -463.42, 15.2, 0.0, 0.0, 0.0)
+Camera.PointAt(396.33, -472.82, 11.8, 2)
+if
+00F5:   player $PLAYER_CHAR 0 398.3 -469.8 11.9 radius 15.0 15.0 15.0
+jf @GENERL1_7756
+0055: put_player $PLAYER_CHAR at 401.6179 -464.7001 9.6664
+
+:GENERL1_7756
+if
+0057:   player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_7834
+0055: put_player $PLAYER_CHAR at 479.5 30.11 10.07
+0171: set_player $PLAYER_CHAR z_angle_to 274.5
+
+:GENERL1_7834
+if
+   not Actor.Dead($2251)
+jf @GENERL1_7885
+011C: actor $2251 clear_objective
+Actor.PutAt($2251, 405.5, -473.2, 9.0)
+Actor.Angle($2251) = 49.0
+
+:GENERL1_7885
+wait 1000
+if
+   not Actor.Dead($2251)
+jf @GENERL1_7985
+if
+8510:   not unknown_actor $2251 on_path $95 $96 $97 radius 1.0
+jf @GENERL1_7970
+009E: set_actor $2251 path 393.5 -476.4 12.3 unknown 1.0 1
+jump @GENERL1_7985
+
+:GENERL1_7970
+0239: actor $2251 run_to 393.5 -476.4
+
+:GENERL1_7985
+wait 3000
+$1000 = 0 // integer values
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Actor.DestroyInstantly($2251)
+02A3: enable_widescreen 0
+00BC: text_highpriority 'GEN1_18' 5000 ms 1  // ~r~Gonzalez has made it safely to the Police Station!
+jump @GENERL1_8868
+
+:GENERL1_8046
+Marker.Disable($2262)
+if
+   not $2264 == 1 // integer values
+jf @GENERL1_8076
+$2264 = 0 // integer values
+
+:GENERL1_8076
+if
+0057:   player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_8156
+Object.Destroy($1814)
+$2256 = Object.Init(#SPAD_DR_OPEN1, 454.321, 31.436, 35.198)
+Object.RemoveFromMissionCleanupList($2256)
+
+:GENERL1_8156
+00BB: text_lowpriority 'GEN1_23' 10000 ms 1  // ~g~Go back through the doors to return to the ground floor.
+
+:GENERL1_8171
+if
+0057:   player $PLAYER_CHAR 0 434.7 51.5 45.6 480.4 12.0 24.0
+jf @GENERL1_8546
+wait 0
+03A1: clear_area_with_center_at_3D_coord 461.7 31.5 29.9 radius 3.0
+03A1: clear_area_with_center_at_3D_coord 454.1 31.3 33.8 radius 3.0
+if or
+0057:   player $PLAYER_CHAR 0 463.22 32.4 30.2 462.04 30.47 32.5
+0057:   player $PLAYER_CHAR 0 455.9 30.33 33.83 454.15 32.56 36.57
+jf @GENERL1_8539
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:GENERL1_8367
+if
+fading
+jf @GENERL1_8391
+wait 0
+jump @GENERL1_8367
+
+:GENERL1_8391
+Object.Destroy($2256)
+Object.Destroy($2255)
+Object.Destroy($2254)
+Object.Destroy($1814)
+Object.Destroy($1815)
+Object.Destroy($1816)
+$1814 = Object.Init(#SPAD_DR_CLOSED1, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1814)
+$1815 = Object.Init(#SPAD_DR_CLOSED2, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1815)
+$1816 = Object.Init(#SPAD_DR_CLOSED3, 464.663, 30.336, 23.881)
+Object.RemoveFromMissionCleanupList($1816)
+0055: put_player $PLAYER_CHAR at 479.5 30.11 10.07
+0171: set_player $PLAYER_CHAR z_angle_to 274.5
+fade 1 500
+
+:GENERL1_8539
+jump @GENERL1_8171
+
+:GENERL1_8546
+03D5: remove_text 'GEN1_23'  // ~g~Go back through the doors to return to the ground floor.
+00BB: text_lowpriority 'GEN1_20' 10000 ms 1  // ~g~Get into a vehicle.
+
+:GENERL1_8571
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @GENERL1_8605
+wait 0
+gosub @GENERL1_9214
+jump @GENERL1_8571
+
+:GENERL1_8605
+03D5: remove_text 'GEN1_20'  // ~g~Get into a vehicle.
+00BB: text_lowpriority 'GEN1_21' 5000 ms 1  // ~g~Get to the~h~ Pay 'N' Spray~g~ in~h~ Vice Point~g~.
+0335: set_free_paynspray_to 1
+018A: $2263 = create_checkpoint_at 327.2 429.9 10.3
+
+:GENERL1_8654
+wait 0
+if or
+0329:   garage $684 respray_done
+0329:   garage $685 respray_done
+jf @GENERL1_8713
+Marker.Disable($2263)
+wait 4000
+03D5: remove_text 'GEN1_22'  // Drive your vehicle into the spray shop to lose your ~h~wanted level, ~h~repair and ~h~respray your vehicle. Cost - ~h~$100. This time it's free.
+jump @GENERL1_8885
+jump @GENERL1_8738
+
+:GENERL1_8713
+if and
+   not Player.WantedLevel($PLAYER_CHAR) > 0
+   80E0:   not player $PLAYER_CHAR driving
+jf @GENERL1_8738
+jump @GENERL1_8885
+
+:GENERL1_8738
+if
+  $2264 == 0 // integer values
+jf @GENERL1_8826
+if and
+00F5:   player $PLAYER_CHAR 1 327.2 429.9 10.3 radius 2.5 2.5 2.5
+00E0:   player $PLAYER_CHAR driving
+jf @GENERL1_8826
+03E5: text_box 'GEN1_22'  // Drive your vehicle into the spray shop to lose your ~h~wanted level, ~h~repair and ~h~respray your vehicle. Cost - ~h~$100. This time it's free.
+$2264 = 1 // integer values
+
+:GENERL1_8826
+if
+80E0:   not player $PLAYER_CHAR driving
+jf @GENERL1_8854
+Marker.Disable($2263)
+jump @GENERL1_8046
+
+:GENERL1_8854
+gosub @GENERL1_9214
+jump @GENERL1_8654
+
+:GENERL1_8868
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:GENERL1_8885
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 250 time 5000 style 1  // MISSION PASSED! $~1~
+055B: $1290 = create_clothes_pickup 8 at 414.3 1042.0 25.4
+$1270 = 1 // integer values
+create_thread @CLOTH6
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.Money($PLAYER_CHAR) += 250
+0318: set_latest_mission_passed 'COL_1'  // Treacherous Swine
+030C: progress_made += 1
+$905 = 1 // integer values
+create_thread @GEN2
+$PASSED_COL1_TREACHEROUS_SWINE = 1 // integer values
+return
+
+:GENERL1_8997
+$ONMISSION = 0 // integer values
+Player.CanMove($PLAYER_CHAR) = True
+Actor.DestroyWithFade($2251)
+0296: unload_special_actor 1
+Model.Destroy(#CLA)
+Model.Destroy(#CLB)
+Model.Destroy(#CHNSAW)
+0335: set_free_paynspray_to 0
+01B7: release_weather
+$1000 = 0 // integer values
+Object.Destroy($2256)
+Object.Destroy($2255)
+Object.Destroy($2254)
+Object.Destroy($1814)
+Object.Destroy($1815)
+Object.Destroy($1816)
+$1814 = Object.Init(#SPAD_DR_CLOSED1, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1814)
+$1815 = Object.Init(#SPAD_DR_CLOSED2, 465.375, 30.336, 33.181)
+Object.RemoveFromMissionCleanupList($1815)
+$1816 = Object.Init(#SPAD_DR_CLOSED3, 464.663, 30.336, 23.881)
+Object.RemoveFromMissionCleanupList($1816)
+Object.Destroy($2257)
+Marker.Disable($2261)
+Marker.Disable($2262)
+Marker.Disable($2263)
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+022A: remove_forbidden_for_peds_cube 479.9 -1.4 11.0 450.3 59.5 40.0
+mission_cleanup
+return
+
+:GENERL1_9214
+if
+  16@ > 500 // integer values
+jf @GENERL1_9390
+if
+   not Actor.Dead($2252)
+jf @GENERL1_9383
+if
+80FB:   not player $PLAYER_CHAR 0 $2252 radius 7.0 7.0 7.0
+jf @GENERL1_9375
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+8510:   not unknown_actor $2252 on_path $95 $96 $97 radius 1.0
+jf @GENERL1_9357
+009E: set_actor $2252 path $95 $96 $97 unknown 1.0 1
+jump @GENERL1_9368
+
+:GENERL1_9357
+0239: actor $2252 run_to $95 $96
+
+:GENERL1_9368
+jump @GENERL1_9383
+
+:GENERL1_9375
+01CA: actor $2252 kill_player $PLAYER_CHAR
+
+:GENERL1_9383
+16@ = 0 // integer values
+
+:GENERL1_9390
+if
+  17@ > 500 // integer values
+jf @GENERL1_9566
+if
+   not Actor.Dead($2253)
+jf @GENERL1_9559
+if
+80FB:   not player $PLAYER_CHAR 0 $2253 radius 7.0 7.0 7.0
+jf @GENERL1_9551
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+if
+8510:   not unknown_actor $2253 on_path $95 $96 $97 radius 1.0
+jf @GENERL1_9533
+009E: set_actor $2253 path $95 $96 $97 unknown 1.0 1
+jump @GENERL1_9544
+
+:GENERL1_9533
+0239: actor $2253 run_to $95 $96
+
+:GENERL1_9544
+jump @GENERL1_9559
+
+:GENERL1_9551
+01CA: actor $2253 kill_player $PLAYER_CHAR
+
+:GENERL1_9559
+17@ = 0 // integer values
+
+:GENERL1_9566
+return

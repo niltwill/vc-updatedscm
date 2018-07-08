@@ -1,0 +1,1680 @@
+:BANKJO3
+thread 'BANKJO3'
+gosub @BANKJO3_46
+if
+wasted_or_busted
+jf @BANKJO3_37
+gosub @BANKJO3_7380
+
+:BANKJO3_37
+gosub @BANKJO3_7642
+end_thread
+
+:BANKJO3_46
+increment_mission_attempts
+$ONMISSION = 1 // integer values
+$986 = 0 // integer values
+$4085 = 0 // integer values
+$4013 = 0 // integer values
+$3997 = 0 // integer values
+$3994 = 7.0 // floating-point values
+$4088 = 0 // integer values
+$4089 = 0 // integer values
+$4090 = 0 // integer values
+$4092 = 0 // integer values
+$4087 = 0 // integer values
+$4094 = 0 // integer values
+$4095 = 0 // integer values
+$4096 = 0 // integer values
+$4097 = 0 // integer values
+$4098 = 0 // integer values
+wait 0
+054C: use_GXT_table 'BANKJ3'
+03CF: load_wav 'MONO13' as 1
+058E: set_restart_mission_taxi_destination 512.591 -74.9 9.573 189.24
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKEN'
+023C: load_special_actor 3 'CSPHIL'
+02F3: load_object #CUTOBJ01 'GCFAN'
+02F3: load_object #CUTOBJ02 'CLCHR'
+02F3: load_object #CUTOBJ03 'COLPHON'
+select_interior 17
+Camera.SetAtPos(481.03, -64.21, 8.98)
+038B: load_requested_models
+
+:BANKJO3_309
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+   not Model.Available(#CUTOBJ01)
+   not Model.Available(#CUTOBJ02)
+   not Model.Available(#CUTOBJ03)
+jf @BANKJO3_358
+wait 0
+jump @BANKJO3_309
+
+:BANKJO3_358
+02E4: load_cutscene_data 'BANK_3A'
+0244: set_cutscene_pos 476.972 -65.499 8.943
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $137 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $137 'CSPHIL'
+02E5: $189 = create_cutscene_object #CUTOBJ01
+04BC:  'GCFAN'
+02E6: set_cutscene_anim $189 'GCFAN'
+02E5: $190 = create_cutscene_object #CUTOBJ02
+02E6: set_cutscene_anim $190 'CLCHR'
+02E5: $211 = create_cutscene_object #CUTOBJ03
+02E6: set_cutscene_anim $211 'COLPHON'
+0395: clear_area 1 at 493.1 -82.4 range 9.8 1.0
+0055: put_player $PLAYER_CHAR at 493.1 -82.4 9.8
+0171: set_player $PLAYER_CHAR z_angle_to 220.0
+fade 1 3000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BANKJO3_601
+if
+  2827 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_636
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_601
+
+:BANKJO3_636
+00BC: text_highpriority 'BJM3_A' 10000 ms 1  // Things are starting to come together nicely here.
+
+:BANKJO3_651
+if
+  4964 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_686
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_651
+
+:BANKJO3_686
+00BC: text_highpriority 'BJM3_B' 10000 ms 1  // What's the plan, Tommy? Que pasa, amigo?
+
+:BANKJO3_701
+if
+  7438 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_736
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_701
+
+:BANKJO3_736
+00BC: text_highpriority 'BJM3_C' 10000 ms 1  // The plan is you keep doing that like a moron. Anyhow, we need a driver.
+
+:BANKJO3_751
+if
+  12291 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_786
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_751
+
+:BANKJO3_786
+00BC: text_highpriority 'BJM3_D' 10000 ms 1  // Tommy, I'll do it. I can drive.
+
+:BANKJO3_801
+if
+  14893 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_836
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_801
+
+:BANKJO3_836
+00BC: text_highpriority 'BJM3_E' 10000 ms 1  // You want Hilary, mister. Not some smart-talking law school chump.
+
+:BANKJO3_851
+if
+  19162 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_886
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_851
+
+:BANKJO3_886
+00BC: text_highpriority 'BJM3_F' 10000 ms 1  // Hilary's the real deal. You ain't never seen anyone drive so fast. I'll give him a call here.
+
+:BANKJO3_901
+if
+  26056 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_936
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_901
+
+:BANKJO3_936
+00BC: text_highpriority 'BJM3_G' 10000 ms 1  // Hey Hil, it's Phil. How's it going? No. don't talk. We'll reminisce later. You want to do me a favor?
+
+:BANKJO3_951
+if
+  34674 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_988
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_951
+
+:BANKJO3_988
+00BC: text_highpriority 'BJM3_H' 10000 ms 1  // I got me a guy from up north. No, no, I don't think he was in the service, but he wants a driver.
+
+:BANKJO3_1003
+if
+  40799 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1040
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1003
+
+:BANKJO3_1040
+00BC: text_highpriority 'BJM3_I' 10000 ms 1  // For a bit of action. Okay, I understand.
+
+:BANKJO3_1055
+if
+  46343 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1092
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1055
+
+:BANKJO3_1092
+00BC: text_highpriority 'BJM3_J' 10000 ms 1  // What'd he say?
+
+:BANKJO3_1107
+if
+  47448 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1144
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1107
+
+:BANKJO3_1144
+00BC: text_highpriority 'BJM3_K' 10000 ms 1  // Well, he'll do it, no problem. Well, there might be a little problem - see, he has abandonment issues.
+
+:BANKJO3_1159
+if
+  52709 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1196
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1159
+
+:BANKJO3_1196
+00BC: text_highpriority 'BJM3_L' 10000 ms 1  // Seems he won't work for anyone who can't beat him. Something to do with his momma.
+
+:BANKJO3_1211
+if
+  56624 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1248
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1211
+
+:BANKJO3_1248
+00BC: text_highpriority 'BJM3_M' 10000 ms 1  // Anyway, he wants to race you first, said he'd meet you outside..
+
+:BANKJO3_1263
+if
+  59809 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1300
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1263
+
+:BANKJO3_1300
+00BE: text_clear_all
+fade 0 2000
+00BE: text_clear_all
+wait 1000
+if
+856A:   not has_cutscene_been_interrupted
+jf @BANKJO3_1348
+if
+03D0:   wav 1 loaded
+jf @BANKJO3_1348
+03D1: play_wav 1
+
+:BANKJO3_1348
+if
+fading
+jf @BANKJO3_1372
+wait 0
+jump @BANKJO3_1348
+
+:BANKJO3_1372
+00BA: text_styled 'BEACH3' 3000 ms 2  // Vice Point
+03AD: set_rubbish 1
+02EA: end_cutscene
+01EB: set_traffic_density_multiplier_to 1.0
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
+Model.Destroy(#CUTOBJ03)
+select_interior 0
+04FA: reset_sky_colors_with_fade 0
+Camera.SetAtPos(449.89, -116.18, 9.74)
+$986 = 0 // integer values
+01E8: create_forbidden_for_cars_cube 439.691 -319.016 8.0 533.378 139.155 14.0
+03BA: clear_cars_from_cube 439.691 -319.016 8.0 533.378 139.155 14.0
+042B: clear_peds_from_cube 439.691 -319.016 8.0 533.378 139.155 14.0
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSHLARY'
+02F3: load_object #CUTOBJ01 'HLRYCAR'
+Camera.SetAtPos(479.09, -149.436, 9.0)
+038B: load_requested_models
+
+:BANKJO3_1613
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+   not Model.Available(#CUTOBJ01)
+jf @BANKJO3_1648
+wait 0
+jump @BANKJO3_1613
+
+:BANKJO3_1648
+02E4: load_cutscene_data 'BANK_3B'
+0244: set_cutscene_pos 479.09 -149.436 9.0
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $186 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $186 'CSHLARY'
+02E5: $187 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $187 'HLRYCAR'
+0395: clear_area 1 at 449.89 -116.18 range 9.74 1.0
+0055: put_player $PLAYER_CHAR at 449.89 -116.18 9.74
+0171: set_player $PLAYER_CHAR z_angle_to 310.41
+fade 1 2000
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:BANKJO3_1819
+if
+  4501 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1854
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1819
+
+:BANKJO3_1854
+00BC: text_highpriority 'BJM3_2A' 10000 ms 1  // You Tommy? Of course you're Tommy, I mean,
+
+:BANKJO3_1869
+if
+  7978 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1904
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1869
+
+:BANKJO3_1904
+00BC: text_highpriority 'BJM3_2B' 10000 ms 1  // Why else would anyone want to speak to me?
+
+:BANKJO3_1919
+if
+  9549 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_1954
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1919
+
+:BANKJO3_1954
+00BC: text_highpriority 'BJM3_2C' 10000 ms 1  // OK. Consider it this way -
+
+:BANKJO3_1969
+if
+  11840 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_2004
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_1969
+
+:BANKJO3_2004
+00BC: text_highpriority 'BJM3_2D' 10000 ms 1  // I'll drive for you IF, and only IF, you can drive properly.
+
+:BANKJO3_2019
+if
+  17081 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_2054
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_2019
+
+:BANKJO3_2054
+00BC: text_highpriority 'BJM3_2E' 10000 ms 1  // Leave me alone - and I'll never forgive you.
+
+:BANKJO3_2069
+if
+  20480 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_2104
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_2069
+
+:BANKJO3_2104
+00BE: text_clear_all
+
+:BANKJO3_2106
+if
+  24056 > $CUT_SCENE_TIME // integer values
+jf @BANKJO3_2141
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @BANKJO3_2106
+
+:BANKJO3_2141
+fade 0 2000
+00BE: text_clear_all
+
+:BANKJO3_2150
+if
+fading
+jf @BANKJO3_2174
+wait 0
+jump @BANKJO3_2150
+
+:BANKJO3_2174
+03AD: set_rubbish 1
+02EA: end_cutscene
+Camera.SetBehindPlayer
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+Model.Destroy(#CUTOBJ01)
+04E3: unknown_player $PLAYER_CHAR 1 60000
+$3999 = 479.09 // floating-point values
+$4000 = -149.436 // floating-point values
+$4001 = 9.0 // floating-point values
+$3990 = 185.022 // floating-point values
+$4020 = 18 // integer values
+$4007 = 483.19 // floating-point values
+$4008 = -149.436 // floating-point values
+$4009 = 9.0 // floating-point values
+$4021 = 479.06 // floating-point values
+$4022 = -174.68 // floating-point values
+$4023 = 9.0 // floating-point values
+$4024 = 477.68 // floating-point values
+$4025 = -213.29 // floating-point values
+$4026 = 10.77 // floating-point values
+$4027 = 458.74 // floating-point values
+$4028 = -315.75 // floating-point values
+$4029 = 9.08 // floating-point values
+$4030 = 418.92 // floating-point values
+$4031 = -397.27 // floating-point values
+$4032 = 8.95 // floating-point values
+$4033 = 230.78 // floating-point values
+$4034 = -697.36 // floating-point values
+$4035 = 9.28 // floating-point values
+$4036 = 71.23 // floating-point values
+$4037 = -1006.72 // floating-point values
+$4038 = 9.31 // floating-point values
+$4039 = 171.8 // floating-point values
+$4040 = -1132.57 // floating-point values
+$4041 = 9.28 // floating-point values
+$4042 = 160.03 // floating-point values
+$4043 = -1331.92 // floating-point values
+$4044 = 9.28 // floating-point values
+$4045 = 38.84 // floating-point values
+$4046 = -1473.71 // floating-point values
+$4047 = 9.3 // floating-point values
+$4048 = -54.79 // floating-point values
+$4049 = -1560.57 // floating-point values
+$4050 = 9.28 // floating-point values
+$4051 = -190.29 // floating-point values
+$4052 = -1215.46 // floating-point values
+$4053 = 9.31 // floating-point values
+$4054 = -88.78 // floating-point values
+$4055 = -936.21 // floating-point values
+$4056 = 9.31 // floating-point values
+$4057 = 124.88 // floating-point values
+$4058 = -800.59 // floating-point values
+$4059 = 9.31 // floating-point values
+$4060 = 183.11 // floating-point values
+$4061 = -496.49 // floating-point values
+$4062 = 9.9 // floating-point values
+$4063 = 277.36 // floating-point values
+$4064 = -176.64 // floating-point values
+$4065 = 10.3 // floating-point values
+$4066 = 446.8 // floating-point values
+$4067 = 68.27 // floating-point values
+$4068 = 10.16 // floating-point values
+$4069 = 489.63 // floating-point values
+$4070 = 67.13 // floating-point values
+$4071 = 10.0 // floating-point values
+$4072 = 517.55 // floating-point values
+$4073 = -74.78 // floating-point values
+$4074 = 9.59 // floating-point values
+01EB: set_traffic_density_multiplier_to 0.3
+Model.Load(#SABRETUR)
+Model.Load(#SENTINEL)
+023C: load_special_actor 3 'IGHLARY'
+03CF: load_wav 'CARREV' as 1
+03CF: load_wav 'BNK3_3A' as 2
+
+:BANKJO3_2877
+if or
+   not Model.Available(#SABRETUR)
+   not Model.Available(#SENTINEL)
+83D0:   not wav 1 loaded
+83D0:   not wav 2 loaded
+823D:   not special_actor 3 loaded
+jf @BANKJO3_2921
+wait 0
+jump @BANKJO3_2877
+
+:BANKJO3_2921
+0395: clear_area 1 at 526.2 -76.85 range 10.78 5.0
+$3996 = Car.Create(#SABRETUR, $3999, $4000, $4001)
+020A: set_car $3996 door_status_to 2
+Car.SetImmunities($3996, 1, 1, 1, 0, 1)
+039C: set_car $3996 watertight 1
+03AB: set_car $3996 strong 1
+0423: car $3996 improve_handling 1.5
+03ED: set_car $3996 not_damaged_when_upside_down 1
+04E0: car $3996 abandon_path_radius 200
+0129: $4005 = create_actor 4 #SPECIAL03 in_car $3996 driverseat
+01ED: clear_actor $4005 threat_search
+039E: set_actor $4005 locked_while_in_vehicle 1
+Car.Angle($3996) = $3990
+Car.SetToNormalDriver($3996)
+00AE: set_vehicle $3996 traffic_behavior_to 2
+Car.SetMaxSpeed($3996, 45.0)
+Car.ImmuneToNonPlayer($3996) = True
+$4093 = Car.Create(#SENTINEL, $4007, $4008, $4009)
+Car.Angle($4093) = $3990
+036A: put_actor $PLAYER_ACTOR in_car $4093
+0395: clear_area 0 at 473.713 -149.895 range 10.546 1.0
+Camera.SetPosition(473.713, -149.895, 10.546, 0.0, 0.0, 0.0)
+Camera.PointAt(474.708, -149.824, 10.479, 2)
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+if
+   not Actor.Dead($4005)
+jf @BANKJO3_3252
+022C: set_actor $4005 to_look_at_actor $PLAYER_ACTOR
+022C: set_actor $PLAYER_ACTOR to_look_at_actor $4005
+jump @BANKJO3_3274
+
+:BANKJO3_3252
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_3274
+0169: set_fade_color 0 0 0
+wait 500
+fade 1 1500
+
+:BANKJO3_3294
+if
+fading
+jf @BANKJO3_3471
+wait 0
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_3334
+jump @BANKJO3_7380
+
+:BANKJO3_3334
+if
+   Actor.Dead($4005)
+jf @BANKJO3_3393
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+if
+   not Car.Wrecked($3996)
+jf @BANKJO3_3393
+Car.SetToNormalDriver($3996)
+
+:BANKJO3_3393
+$4083 = Car.Health($3996)
+if or
+  1000 > $4083 // integer values
+0496:   vehicle $3996 tire 4 deflated
+jf @BANKJO3_3441
+$4083 = 9 // integer values
+jump @BANKJO3_3849
+
+:BANKJO3_3441
+if
+   Car.Wrecked($4093)
+jf @BANKJO3_3464
+jump @BANKJO3_7380
+
+:BANKJO3_3464
+jump @BANKJO3_3294
+
+:BANKJO3_3471
+if or
+80FA:   not player $PLAYER_CHAR stopped 1 $4007 $4008 $4009 radius 2.0 2.0 2.0
+04A8:   player $PLAYER_CHAR driving_boat
+04C9:   player $PLAYER_CHAR driving_plane
+jf @BANKJO3_3849
+wait 0
+if
+00F5:   player $PLAYER_CHAR 0 $4007 $4008 $4009 radius 2.0 2.0 2.0
+jf @BANKJO3_3726
+if or
+04A8:   player $PLAYER_CHAR driving_boat
+04C9:   player $PLAYER_CHAR driving_plane
+jf @BANKJO3_3637
+if
+  $4092 == 0 // integer values
+jf @BANKJO3_3630
+00BC: text_highpriority 'BJM3_4' 5000 ms 1  // ~g~You need a car to take part!
+$4092 = 1 // integer values
+
+:BANKJO3_3630
+jump @BANKJO3_3719
+
+:BANKJO3_3637
+if
+00F9:   player $PLAYER_CHAR stopped 0 $4007 $4008 $4009 radius 2.0 2.0 2.0
+jf @BANKJO3_3719
+if
+  $4092 == 0 // integer values
+jf @BANKJO3_3719
+00BC: text_highpriority 'BJM3_4' 5000 ms 1  // ~g~You need a car to take part!
+$4092 = 1 // integer values
+
+:BANKJO3_3719
+jump @BANKJO3_3733
+
+:BANKJO3_3726
+$4092 = 0 // integer values
+
+:BANKJO3_3733
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_3756
+jump @BANKJO3_7380
+
+:BANKJO3_3756
+if
+   Actor.Dead($4005)
+jf @BANKJO3_3794
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_3794
+$4083 = Car.Health($3996)
+if or
+  1000 > $4083 // integer values
+0496:   vehicle $3996 tire 4 deflated
+jf @BANKJO3_3842
+$4083 = 9 // integer values
+jump @BANKJO3_3849
+
+:BANKJO3_3842
+jump @BANKJO3_3471
+
+:BANKJO3_3849
+03D1: play_wav 1
+if
+  $4083 == 9 // integer values
+jf @BANKJO3_3895
+00BA: text_styled 'RACE1' 1200 ms 4  // ~g~3..2..1.. GO GO GO!
+Camera.Restore_WithJumpCut
+jump @BANKJO3_4301
+
+:BANKJO3_3895
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+00BA: text_styled 'RACE2' 1500 ms 4  // ~g~3
+018C: play_sound 7 at 0.0 0.0 0.0
+wait 1500
+0395: clear_area 0 at 481.704 -155.509 range 10.9 1.0
+Camera.SetPosition(481.704, -155.509, 10.9, 0.0, 0.0, 0.0)
+Camera.PointAt(481.675, -154.522, 10.741, 2)
+00BA: text_styled 'RACE3' 1500 ms 4  // ~g~2
+018C: play_sound 8 at 0.0 0.0 0.0
+wait 1500
+0395: clear_area 0 at 487.907 -148.861 range 11.167 1.0
+Camera.SetPosition(487.907, -148.861, 11.167, 0.0, 0.0, 0.0)
+Camera.PointAt(486.924, -148.899, 10.98, 2)
+00BA: text_styled 'RACE4' 1500 ms 4  // ~g~1
+018C: play_sound 9 at 0.0 0.0 0.0
+wait 1500
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+022F: set_actor $PLAYER_ACTOR stop_looking
+if
+   not Actor.Dead($4005)
+jf @BANKJO3_4220
+022F: set_actor $4005 stop_looking
+jump @BANKJO3_4242
+
+:BANKJO3_4220
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_4242
+00BA: text_styled 'RACE5' 800 ms 4  // ~g~GO!
+018C: play_sound 10 at 0.0 0.0 0.0
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+
+:BANKJO3_4301
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_4339
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_4339
+Marker.TieToCar($3998, $3996, 0, 1)
+03CC: car $3996 add_to_stuck_car_check 0.1 = 1000
+gosub @BANKJO3_7827
+0086: $4010 = $4075 // floating-point values only
+0086: $4011 = $4076 // floating-point values only
+0086: $4012 = $4077 // floating-point values only
+0086: $4014 = $4078 // floating-point values only
+0086: $4015 = $4079 // floating-point values only
+0086: $4016 = $4080 // floating-point values only
+0086: $4002 = $4075 // floating-point values only
+0086: $4003 = $4076 // floating-point values only
+0086: $4004 = $4077 // floating-point values only
+018A: $4081 = create_checkpoint_at $4010 $4011 $4012
+0167: $4082 = create_marker_at $4014 $4015 $4016 color 5 flag 2
+0168: set_blip $4082 size 2
+0166: set_marker $4082 brightness_to 1
+Car.DriveTo($3996, $4002, $4003, $4004)
+03C3: set_timer_with_text_to $4087 type 0 text 'R_TIME'  // RACE TIME:
+
+:BANKJO3_4518
+if
+001C:   $4020 > $4013 // integer values
+jf @BANKJO3_6106
+wait 0
+if
+  $4085 >= 4 // integer values
+jf @BANKJO3_5049
+if
+  $4088 == 0 // integer values
+jf @BANKJO3_4599
+if
+03D0:   wav 2 loaded
+jf @BANKJO3_4599
+$4088 = 1 // integer values
+
+:BANKJO3_4599
+if
+  $4088 == 1 // integer values
+jf @BANKJO3_4650
+03D1: play_wav 2
+00BC: text_highpriority 'BNK3_3A' 5000 ms 1  // Illegal street race in progress at Vice Point.
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$4088 = 2 // integer values
+
+:BANKJO3_4650
+if
+  $4088 == 2 // integer values
+jf @BANKJO3_4700
+if
+03D2:   wav 2 ended
+jf @BANKJO3_4700
+03D5: remove_text 'BNK3_3A'  // Illegal street race in progress at Vice Point.
+$4088 = 3 // integer values
+
+:BANKJO3_4700
+if
+  $4088 == 3 // integer values
+jf @BANKJO3_4749
+03CF: load_wav 'BNK3_3B' as 1
+03CF: load_wav 'BNK3_3C' as 2
+$4088 = 4 // integer values
+
+:BANKJO3_4749
+if
+  $4088 == 4 // integer values
+jf @BANKJO3_4789
+if
+03D0:   wav 1 loaded
+jf @BANKJO3_4789
+$4088 = 5 // integer values
+
+:BANKJO3_4789
+if
+  $4088 == 5 // integer values
+jf @BANKJO3_4833
+03D1: play_wav 1
+00BC: text_highpriority 'BNK3_3B' 5000 ms 1  // Calling all officers.
+$4088 = 6 // integer values
+
+:BANKJO3_4833
+if
+  $4088 == 6 // integer values
+jf @BANKJO3_4883
+if
+03D2:   wav 1 ended
+jf @BANKJO3_4883
+03D5: remove_text 'BNK3_3B'  // Calling all officers.
+$4088 = 7 // integer values
+
+:BANKJO3_4883
+if
+  $4088 == 7 // integer values
+jf @BANKJO3_4923
+if
+03D0:   wav 2 loaded
+jf @BANKJO3_4923
+$4088 = 8 // integer values
+
+:BANKJO3_4923
+if
+  $4088 == 8 // integer values
+jf @BANKJO3_4967
+03D1: play_wav 2
+00BC: text_highpriority 'BNK3_3C' 5000 ms 1  // Street racers, this is illegal and forbidden!
+$4088 = 9 // integer values
+
+:BANKJO3_4967
+if
+  $4088 == 9 // integer values
+jf @BANKJO3_5049
+if
+03D2:   wav 2 ended
+jf @BANKJO3_5049
+03D5: remove_text 'BNK3_3C'  // Street racers, this is illegal and forbidden!
+01E7: remove_forbidden_for_cars_cube 439.691 -319.016 8.0 533.378 139.155 14.0
+$4088 = 10 // integer values
+
+:BANKJO3_5049
+if
+  $4090 == 0 // integer values
+jf @BANKJO3_5078
+040D: unload_wav 1
+$4090 = 1 // integer values
+
+:BANKJO3_5078
+if
+  $4088 == 1 // integer values
+jf @BANKJO3_5142
+if
+03D2:   wav 2 ended
+jf @BANKJO3_5142
+03D5: remove_text 'BNK3_3A'  // Illegal street race in progress at Vice Point.
+03D5: remove_text 'BNK3_3B'  // Calling all officers.
+040D: unload_wav 2
+$4088 = 2 // integer values
+
+:BANKJO3_5142
+$4086 = 0 // integer values
+if and
+00F7:   player $PLAYER_CHAR sphere 0 near_point_in_car $4010 $4011 $4012 radius 6.0 6.0 6.0
+84A8:   not player $PLAYER_CHAR driving_boat
+84C9:   not player $PLAYER_CHAR driving_plane
+jf @BANKJO3_5390
+$4013 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4081)
+Marker.Disable($4082)
+0084: $4085 = $4013 // integer values and handles
+gosub @BANKJO3_7827
+0086: $4010 = $4075 // floating-point values only
+0086: $4011 = $4076 // floating-point values only
+0086: $4012 = $4077 // floating-point values only
+0086: $4014 = $4078 // floating-point values only
+0086: $4015 = $4079 // floating-point values only
+0086: $4016 = $4080 // floating-point values only
+if
+003A:   $4013 == $4020 // integer values and handles
+jf @BANKJO3_5326
+jump @BANKJO3_6111
+
+:BANKJO3_5326
+018A: $4081 = create_checkpoint_at $4010 $4011 $4012
+if
+  17 > $4013 // integer values
+jf @BANKJO3_5390
+0167: $4082 = create_marker_at $4014 $4015 $4016 color 5 flag 2
+0166: set_marker $4082 brightness_to 1
+0168: set_blip $4082 size 2
+
+:BANKJO3_5390
+if
+   Actor.Dead($4005)
+jf @BANKJO3_5428
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_5428
+if
+   not Car.Wrecked($3996)
+jf @BANKJO3_5931
+if
+   Actor.Dead($4005)
+jf @BANKJO3_5482
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_5482
+0084: $4084 = $3996 // integer values and handles
+0084: $4085 = $3997 // integer values and handles
+0086: $4075 = $4002 // floating-point values only
+0086: $4076 = $4003 // floating-point values only
+0086: $4077 = $4004 // floating-point values only
+gosub @BANKJO3_9017
+if
+01AF:   car $3996 0 $4002 $4003 $4004 radius $3994 $3994 $3994
+jf @BANKJO3_5769
+$3997 += 1 // integer values
+if
+  $4097 == 0 // integer values
+jf @BANKJO3_5604
+04E0: car $3996 abandon_path_radius 20
+$4097 = 1 // integer values
+
+:BANKJO3_5604
+0084: $4085 = $3997 // integer values and handles
+gosub @BANKJO3_7827
+0086: $4002 = $4075 // floating-point values only
+0086: $4003 = $4076 // floating-point values only
+0086: $4004 = $4077 // floating-point values only
+if
+003A:   $3997 == $4020 // integer values and handles
+jf @BANKJO3_5672
+$3994 = 6.0 // floating-point values
+
+:BANKJO3_5672
+if
+003A:   $3997 == $4020 // integer values and handles
+jf @BANKJO3_5713
+00BC: text_highpriority 'RACEFA' 5000 ms 1  // ~r~You failed to win the race!
+jump @BANKJO3_7380
+
+:BANKJO3_5713
+if
+  $3994 == 7.0 // floating-point values
+jf @BANKJO3_5755
+Car.DriveTo($3996, $4002, $4003, $4004)
+jump @BANKJO3_5769
+
+:BANKJO3_5755
+02C2: car $3996 drive_to_point $4002 $4003 $4004
+
+:BANKJO3_5769
+if
+02BF:   car $3996 sunk
+jf @BANKJO3_5924
+if
+82CA:   not car $3996 bounding_sphere_visible
+jf @BANKJO3_5924
+Car.StorePos($3996, $4017, $4018, $4019)
+02C1: set $4017 $4018 $4019 to_car_path_coords_closest_to $4017 $4018 $4019
+if
+838A:   not car_in_cube $4017 $4018 $4019 4.0 4.0 4.0
+jf @BANKJO3_5924
+if
+80C2:   not sphere_onscreen $4017 $4018 $4019 3.0
+jf @BANKJO3_5924
+Car.PutAt($3996, $4017, $4018, $4019)
+039F: car $3996 race_to $4002 $4003
+
+:BANKJO3_5924
+jump @BANKJO3_5954
+
+:BANKJO3_5931
+if
+82BF:   not car $3996 sunk
+jf @BANKJO3_5954
+$3997 = 0 // integer values
+
+:BANKJO3_5954
+if
+  $4086 == 0 // integer values
+jf @BANKJO3_5986
+00BB: text_lowpriority 'FIRST' 100 ms 1  // ~b~1st
+
+:BANKJO3_5986
+if
+  $4086 == 1 // integer values
+jf @BANKJO3_6018
+00BB: text_lowpriority 'SECOND' 100 ms 1  // ~b~2nd
+
+:BANKJO3_6018
+if
+  $4013 == 17 // integer values
+jf @BANKJO3_6070
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 0 0 at $4010 $4011 $4012
+jump @BANKJO3_6099
+
+:BANKJO3_6070
+024F: create_corona_with_radius 5.5 type 6 lensflares 0 with_color 255 137 205 at $4010 $4011 $4012
+
+:BANKJO3_6099
+jump @BANKJO3_4518
+
+:BANKJO3_6106
+014F: stop_timer $4087
+
+:BANKJO3_6111
+Player.ClearWantedLevel($PLAYER_CHAR)
+Player.CanMove($PLAYER_CHAR) = False
+02A3: enable_widescreen 1
+if
+00E0:   player $PLAYER_CHAR driving
+jf @BANKJO3_6158
+0221: set_player $PLAYER_CHAR apply_brakes_to_car 1
+00DA: $4091 = player $PLAYER_CHAR car
+
+:BANKJO3_6158
+0169: set_fade_color 1 1 1
+fade 0 1500
+
+:BANKJO3_6173
+if
+fading
+jf @BANKJO3_6258
+wait 0
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_6228
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6228
+if
+   Car.Wrecked($4091)
+jf @BANKJO3_6251
+jump @BANKJO3_7380
+
+:BANKJO3_6251
+jump @BANKJO3_6173
+
+:BANKJO3_6258
+Camera.SetPosition(515.93, -82.24, 12.87, 0.0, 0.0, 0.0)
+Camera.PointAt(515.92, -81.38, 12.55, 2)
+0395: clear_area 1 at 513.7 -74.3 range 9.58 4.0
+03BA: clear_cars_from_cube 528.63 64.64 8.0 376.19 -320.62 16.0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+Car.PutAt($4091, 513.7, -74.3, 9.58)
+Car.Angle($4091) = 180.0
+Car.PutAt($3996, 517.19, -74.3, 9.58)
+Car.Angle($3996) = 180.0
+Marker.Disable($3998)
+Car.SetMaxSpeed($3996, 0.0)
+Car.SetToNormalDriver($3996)
+if
+  $4089 == 0 // integer values
+jf @BANKJO3_6496
+03CF: load_wav 'BNK3_1' as 1
+$4089 = 1 // integer values
+
+:BANKJO3_6496
+if
+83D0:   not wav 1 loaded
+jf @BANKJO3_6583
+wait 0
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_6553
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6553
+if
+   Car.Wrecked($4091)
+jf @BANKJO3_6576
+jump @BANKJO3_7380
+
+:BANKJO3_6576
+jump @BANKJO3_6496
+
+:BANKJO3_6583
+0169: set_fade_color 1 1 1
+fade 1 1500
+
+:BANKJO3_6598
+if
+fading
+jf @BANKJO3_6683
+wait 0
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_6653
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6653
+if
+   Car.Wrecked($4091)
+jf @BANKJO3_6676
+jump @BANKJO3_7380
+
+:BANKJO3_6676
+jump @BANKJO3_6598
+
+:BANKJO3_6683
+if
+   not Actor.Dead($4005)
+jf @BANKJO3_6722
+022E: set_player $PLAYER_CHAR to_look_at_actor $4005
+022D: set_actor $4005 to_look_at_player $PLAYER_CHAR
+jump @BANKJO3_6744
+
+:BANKJO3_6722
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6744
+if
+003A:   $4013 == $4020 // integer values and handles
+jf @BANKJO3_6782
+03D1: play_wav 1
+00BC: text_highpriority 'BNK3_1' 6000 ms 1  // Ok. I'll drive for you, but please, treat me bad.
+
+:BANKJO3_6782
+if
+83D2:   not wav 1 ended
+jf @BANKJO3_6923
+wait 0
+if
+   Actor.Dead($4005)
+jf @BANKJO3_6839
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6839
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_6893
+if
+   Actor.Dead($4005)
+jf @BANKJO3_6893
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6893
+if
+   Car.Wrecked($4091)
+jf @BANKJO3_6916
+jump @BANKJO3_7380
+
+:BANKJO3_6916
+jump @BANKJO3_6782
+
+:BANKJO3_6923
+040D: unload_wav 1
+03D5: remove_text 'BNK3_1'  // Ok. I'll drive for you, but please, treat me bad.
+if
+   not Actor.Dead($4005)
+jf @BANKJO3_6970
+0230: set_player $PLAYER_CHAR stop_looking
+022F: set_actor $4005 stop_looking
+jump @BANKJO3_6992
+
+:BANKJO3_6970
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_6992
+if
+   not Car.Wrecked($3996)
+jf @BANKJO3_7043
+03CD: car $3996 remove_from_stuck_car_check
+Car.SetMaxSpeed($3996, 30.0)
+Car.DriveTo($3996, 478.26, -129.32, 9.01)
+
+:BANKJO3_7043
+17@ = 0 // integer values
+16@ = 0 // integer values
+
+:BANKJO3_7057
+if and
+02CB:   actor $4005 bounding_sphere_visible
+  3000 > 16@ // integer values
+jf @BANKJO3_7294
+wait 0
+if
+   Actor.Dead($4005)
+jf @BANKJO3_7123
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_7123
+if
+   Car.Wrecked($3996)
+jf @BANKJO3_7177
+if
+   Actor.Dead($4005)
+jf @BANKJO3_7177
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_7177
+if
+  16@ >= 5000 // integer values
+jf @BANKJO3_7264
+if
+   not Actor.Dead($4005)
+jf @BANKJO3_7242
+if
+02CB:   actor $4005 bounding_sphere_visible
+jf @BANKJO3_7235
+jump @BANKJO3_7294
+
+:BANKJO3_7235
+jump @BANKJO3_7264
+
+:BANKJO3_7242
+00BC: text_highpriority 'BJM3_2' 5000 ms 1  // ~r~Hilary is dead!
+jump @BANKJO3_7380
+
+:BANKJO3_7264
+if
+   Car.Wrecked($4091)
+jf @BANKJO3_7287
+jump @BANKJO3_7380
+
+:BANKJO3_7287
+jump @BANKJO3_7057
+
+:BANKJO3_7294
+Car.SetToNormalDriver($3996)
+Actor.DestroyInstantly($4005)
+Car.Destroy($3996)
+if
+   not Car.Wrecked($4091)
+jf @BANKJO3_7339
+0221: set_player $PLAYER_CHAR apply_brakes_to_car 0
+jump @BANKJO3_7346
+
+:BANKJO3_7339
+jump @BANKJO3_7380
+
+:BANKJO3_7346
+02A3: enable_widescreen 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+Player.CanMove($PLAYER_CHAR) = True
+Camera.Restore_WithJumpCut
+jump @BANKJO3_7448
+
+:BANKJO3_7380
+03D5: remove_text 'FIRST'  // ~b~1st
+03D5: remove_text 'SECOND'  // ~b~2nd
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+if
+   not Car.Wrecked($3996)
+jf @BANKJO3_7446
+Car.SetMaxSpeed($3996, 0.0)
+Car.SetToNormalDriver($3996)
+
+:BANKJO3_7446
+return
+
+:BANKJO3_7448
+$250 = 1 // integer values
+0318: set_latest_mission_passed 'BANK_3'  // The Driver
+030C: progress_made += 1
+0394: play_music 1
+Player.ClearWantedLevel($PLAYER_CHAR)
+0084: $4096 = $4087 // integer values and handles
+$4096 /= 1000 // integer values
+042E: downdate_integer_stat 1 to $4096
+0084: $4094 = $4096 // integer values and handles
+$4094 /= 60 // integer values
+0084: $4095 = $4094 // integer values and handles
+$4095 *= 60 // integer values
+0060: $4096 -= $4095 // integer values
+Player.Money($PLAYER_CHAR) += 3000
+01E3: text_1number_styled 'M_PASS' number 3000 time 5000 style 1  // MISSION PASSED! $~1~
+if
+  $4096 >= 10 // integer values
+jf @BANKJO3_7611
+02FD: text_2numbers_lowpriority 'RACETM' $4094 $4096 5000 flag 1  // ~b~RACE TIME: ~1~:~1~
+jump @BANKJO3_7632
+
+:BANKJO3_7611
+02FD: text_2numbers_lowpriority 'RACETM2' $4094 $4096 5000 flag 1  // ~b~RACE TIME: ~1~:0~1~
+
+:BANKJO3_7632
+create_thread @BANK4
+return
+
+:BANKJO3_7642
+Actor.DestroyWithFade($4005)
+if
+   not Car.Wrecked($3996)
+jf @BANKJO3_7699
+Car.SetImmunities($3996, 0, 0, 0, 0, 0)
+039C: set_car $3996 watertight 0
+03AB: set_car $3996 strong 0
+03ED: set_car $3996 not_damaged_when_upside_down 0
+
+:BANKJO3_7699
+01E7: remove_forbidden_for_cars_cube 439.691 -319.016 8.0 533.378 139.155 14.0
+01EB: set_traffic_density_multiplier_to 1.0
+$ONMISSION = 0 // integer values
+01EB: set_traffic_density_multiplier_to 1.0
+0296: unload_special_actor 3
+Model.Destroy(#SABRETUR)
+Model.Destroy(#SENTINEL)
+01E7: remove_forbidden_for_cars_cube 444.9 -203.82 8.0 572.14 133.77 20.0
+Marker.Disable($3998)
+Marker.Disable($4081)
+Marker.Disable($4082)
+014F: stop_timer $4087
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
+
+:BANKJO3_7827
+if
+  $4085 == 0 // integer values
+jf @BANKJO3_7893
+0086: $4075 = $4021 // floating-point values only
+0086: $4076 = $4022 // floating-point values only
+0086: $4077 = $4023 // floating-point values only
+0086: $4078 = $4024 // floating-point values only
+0086: $4079 = $4025 // floating-point values only
+0086: $4080 = $4026 // floating-point values only
+
+:BANKJO3_7893
+if
+  $4085 == 1 // integer values
+jf @BANKJO3_7959
+0086: $4075 = $4024 // floating-point values only
+0086: $4076 = $4025 // floating-point values only
+0086: $4077 = $4026 // floating-point values only
+0086: $4078 = $4027 // floating-point values only
+0086: $4079 = $4028 // floating-point values only
+0086: $4080 = $4029 // floating-point values only
+
+:BANKJO3_7959
+if
+  $4085 == 2 // integer values
+jf @BANKJO3_8025
+0086: $4075 = $4027 // floating-point values only
+0086: $4076 = $4028 // floating-point values only
+0086: $4077 = $4029 // floating-point values only
+0086: $4078 = $4030 // floating-point values only
+0086: $4079 = $4031 // floating-point values only
+0086: $4080 = $4032 // floating-point values only
+
+:BANKJO3_8025
+if
+  $4085 == 3 // integer values
+jf @BANKJO3_8091
+0086: $4075 = $4030 // floating-point values only
+0086: $4076 = $4031 // floating-point values only
+0086: $4077 = $4032 // floating-point values only
+0086: $4078 = $4033 // floating-point values only
+0086: $4079 = $4034 // floating-point values only
+0086: $4080 = $4035 // floating-point values only
+
+:BANKJO3_8091
+if
+  $4085 == 4 // integer values
+jf @BANKJO3_8157
+0086: $4075 = $4033 // floating-point values only
+0086: $4076 = $4034 // floating-point values only
+0086: $4077 = $4035 // floating-point values only
+0086: $4078 = $4036 // floating-point values only
+0086: $4079 = $4037 // floating-point values only
+0086: $4080 = $4038 // floating-point values only
+
+:BANKJO3_8157
+if
+  $4085 == 5 // integer values
+jf @BANKJO3_8223
+0086: $4075 = $4036 // floating-point values only
+0086: $4076 = $4037 // floating-point values only
+0086: $4077 = $4038 // floating-point values only
+0086: $4078 = $4039 // floating-point values only
+0086: $4079 = $4040 // floating-point values only
+0086: $4080 = $4041 // floating-point values only
+
+:BANKJO3_8223
+if
+  $4085 == 6 // integer values
+jf @BANKJO3_8289
+0086: $4075 = $4039 // floating-point values only
+0086: $4076 = $4040 // floating-point values only
+0086: $4077 = $4041 // floating-point values only
+0086: $4078 = $4042 // floating-point values only
+0086: $4079 = $4043 // floating-point values only
+0086: $4080 = $4044 // floating-point values only
+
+:BANKJO3_8289
+if
+  $4085 == 7 // integer values
+jf @BANKJO3_8355
+0086: $4075 = $4042 // floating-point values only
+0086: $4076 = $4043 // floating-point values only
+0086: $4077 = $4044 // floating-point values only
+0086: $4078 = $4045 // floating-point values only
+0086: $4079 = $4046 // floating-point values only
+0086: $4080 = $4047 // floating-point values only
+
+:BANKJO3_8355
+if
+  $4085 == 8 // integer values
+jf @BANKJO3_8421
+0086: $4075 = $4045 // floating-point values only
+0086: $4076 = $4046 // floating-point values only
+0086: $4077 = $4047 // floating-point values only
+0086: $4078 = $4048 // floating-point values only
+0086: $4079 = $4049 // floating-point values only
+0086: $4080 = $4050 // floating-point values only
+
+:BANKJO3_8421
+if
+  $4085 == 9 // integer values
+jf @BANKJO3_8487
+0086: $4075 = $4048 // floating-point values only
+0086: $4076 = $4049 // floating-point values only
+0086: $4077 = $4050 // floating-point values only
+0086: $4078 = $4051 // floating-point values only
+0086: $4079 = $4052 // floating-point values only
+0086: $4080 = $4053 // floating-point values only
+
+:BANKJO3_8487
+if
+  $4085 == 10 // integer values
+jf @BANKJO3_8553
+0086: $4075 = $4051 // floating-point values only
+0086: $4076 = $4052 // floating-point values only
+0086: $4077 = $4053 // floating-point values only
+0086: $4078 = $4054 // floating-point values only
+0086: $4079 = $4055 // floating-point values only
+0086: $4080 = $4056 // floating-point values only
+
+:BANKJO3_8553
+if
+  $4085 == 11 // integer values
+jf @BANKJO3_8619
+0086: $4075 = $4054 // floating-point values only
+0086: $4076 = $4055 // floating-point values only
+0086: $4077 = $4056 // floating-point values only
+0086: $4078 = $4057 // floating-point values only
+0086: $4079 = $4058 // floating-point values only
+0086: $4080 = $4059 // floating-point values only
+
+:BANKJO3_8619
+if
+  $4085 == 12 // integer values
+jf @BANKJO3_8685
+0086: $4075 = $4057 // floating-point values only
+0086: $4076 = $4058 // floating-point values only
+0086: $4077 = $4059 // floating-point values only
+0086: $4078 = $4060 // floating-point values only
+0086: $4079 = $4061 // floating-point values only
+0086: $4080 = $4062 // floating-point values only
+
+:BANKJO3_8685
+if
+  $4085 == 13 // integer values
+jf @BANKJO3_8751
+0086: $4075 = $4060 // floating-point values only
+0086: $4076 = $4061 // floating-point values only
+0086: $4077 = $4062 // floating-point values only
+0086: $4078 = $4063 // floating-point values only
+0086: $4079 = $4064 // floating-point values only
+0086: $4080 = $4065 // floating-point values only
+
+:BANKJO3_8751
+if
+  $4085 == 14 // integer values
+jf @BANKJO3_8817
+0086: $4075 = $4063 // floating-point values only
+0086: $4076 = $4064 // floating-point values only
+0086: $4077 = $4065 // floating-point values only
+0086: $4078 = $4066 // floating-point values only
+0086: $4079 = $4067 // floating-point values only
+0086: $4080 = $4068 // floating-point values only
+
+:BANKJO3_8817
+if
+  $4085 == 15 // integer values
+jf @BANKJO3_8883
+0086: $4075 = $4066 // floating-point values only
+0086: $4076 = $4067 // floating-point values only
+0086: $4077 = $4068 // floating-point values only
+0086: $4078 = $4069 // floating-point values only
+0086: $4079 = $4070 // floating-point values only
+0086: $4080 = $4071 // floating-point values only
+
+:BANKJO3_8883
+if
+  $4085 == 16 // integer values
+jf @BANKJO3_8949
+0086: $4075 = $4069 // floating-point values only
+0086: $4076 = $4070 // floating-point values only
+0086: $4077 = $4071 // floating-point values only
+0086: $4078 = $4072 // floating-point values only
+0086: $4079 = $4073 // floating-point values only
+0086: $4080 = $4074 // floating-point values only
+
+:BANKJO3_8949
+if
+  $4085 == 17 // integer values
+jf @BANKJO3_9015
+0086: $4075 = $4072 // floating-point values only
+0086: $4076 = $4073 // floating-point values only
+0086: $4077 = $4074 // floating-point values only
+0086: $4078 = $4072 // floating-point values only
+0086: $4079 = $4073 // floating-point values only
+0086: $4080 = $4074 // floating-point values only
+
+:BANKJO3_9015
+return
+
+:BANKJO3_9017
+$4083 = Car.Health($4084)
+if
+  500 > $4083 // integer values
+jf @BANKJO3_9052
+Car.Health($4084) = 1000
+
+:BANKJO3_9052
+if
+003A:   $4013 == $4085 // integer values and handles
+jf @BANKJO3_9276
+Car.StorePos($4084, $4017, $4018, $4019)
+0086: $3991 = $4017 // floating-point values only
+0061: $3991 -= $4010 // floating-point values
+0086: $3992 = $4018 // floating-point values only
+0061: $3992 -= $4011 // floating-point values
+0069: $3991 *= $3991 // floating-point values
+0069: $3992 *= $3992 // floating-point values
+0086: $3993 = $3991 // floating-point values only
+0059: $3993 += $3992 // floating-point values
+01FB: $3995 = square_root $3993
+0054: store_player $PLAYER_CHAR position_to $4017 $4018 $4019
+0086: $3991 = $4017 // floating-point values only
+0061: $3991 -= $4010 // floating-point values
+0086: $3992 = $4018 // floating-point values only
+0061: $3992 -= $4011 // floating-point values
+0069: $3991 *= $3991 // floating-point values
+0069: $3992 *= $3992 // floating-point values
+0086: $3993 = $3991 // floating-point values only
+0059: $3993 += $3992 // floating-point values
+01FB: $4006 = square_root $3993
+if
+0024:   $4006 > $3995 // floating-point values only
+jf @BANKJO3_9269
+$4086 += 1 // integer values
+
+:BANKJO3_9269
+jump @BANKJO3_9302
+
+:BANKJO3_9276
+if
+001C:   $4085 > $4013 // integer values
+jf @BANKJO3_9302
+$4086 += 1 // integer values
+
+:BANKJO3_9302
+if
+03CE:   car $4084 stuck
+jf @BANKJO3_9791
+if
+82CA:   not car $4084 bounding_sphere_visible
+jf @BANKJO3_9791
+if
+81FF:   not player $PLAYER_CHAR near_car $4084 radius 30.0 30.0 30.0 unknown 0
+jf @BANKJO3_9791
+Car.StorePos($4084, $4017, $4018, $4019)
+02C1: set $4017 $4018 $4019 to_car_path_coords_closest_to $4017 $4018 $4019
+if
+838A:   not car_in_cube $4017 $4018 $4019 4.0 4.0 3.0
+jf @BANKJO3_9590
+if
+80C2:   not sphere_onscreen $4017 $4018 $4019 4.0
+jf @BANKJO3_9583
+Car.PutAt($4084, $4017, $4018, $4019)
+039F: car $4084 race_to $4002 $4003
+if
+  $3994 == 7.0 // floating-point values
+jf @BANKJO3_9552
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+Car.DriveTo($4084, $4075, $4076, $4077)
+jump @BANKJO3_9583
+
+:BANKJO3_9552
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+02C2: car $4084 drive_to_point $4075 $4076 $4077
+
+:BANKJO3_9583
+jump @BANKJO3_9791
+
+:BANKJO3_9590
+04D3: get_nearest_car_path_coords_from $4017 $4018 $4019 type 2 store_to $4017 $4018 $4019
+if
+838A:   not car_in_cube $4017 $4018 $4019 4.0 4.0 3.0
+jf @BANKJO3_9791
+if
+80C2:   not sphere_onscreen $4017 $4018 $4019 4.0
+jf @BANKJO3_9791
+Car.PutAt($4084, $4017, $4018, $4019)
+039F: car $4084 race_to $4002 $4003
+if
+  $3994 == 7.0 // floating-point values
+jf @BANKJO3_9760
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+Car.DriveTo($4084, $4075, $4076, $4077)
+jump @BANKJO3_9791
+
+:BANKJO3_9760
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+02C2: car $4084 drive_to_point $4075 $4076 $4077
+
+:BANKJO3_9791
+if
+01F4:   car $4084 flipped
+jf @BANKJO3_10298
+if
+82CA:   not car $4084 bounding_sphere_visible
+jf @BANKJO3_10298
+if
+81FF:   not player $PLAYER_CHAR near_car $4084 radius 30.0 30.0 30.0 unknown 0
+jf @BANKJO3_10298
+Car.StorePos($4084, $4017, $4018, $4019)
+02C1: set $4017 $4018 $4019 to_car_path_coords_closest_to $4017 $4018 $4019
+0395: clear_area 0 at $4017 $4018 range $4019 4.0
+if
+838A:   not car_in_cube $4017 $4018 $4019 4.0 4.0 3.0
+jf @BANKJO3_10097
+if
+80C2:   not sphere_onscreen $4017 $4018 $4019 4.0
+jf @BANKJO3_10090
+Car.PutAt($4084, $4017, $4018, $4019)
+039F: car $4084 race_to $4002 $4003
+if
+  $3994 == 7.0 // floating-point values
+jf @BANKJO3_10059
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+Car.DriveTo($4084, $4075, $4076, $4077)
+jump @BANKJO3_10090
+
+:BANKJO3_10059
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+02C2: car $4084 drive_to_point $4075 $4076 $4077
+
+:BANKJO3_10090
+jump @BANKJO3_10298
+
+:BANKJO3_10097
+04D3: get_nearest_car_path_coords_from $4017 $4018 $4019 type 2 store_to $4017 $4018 $4019
+if
+838A:   not car_in_cube $4017 $4018 $4019 4.0 4.0 3.0
+jf @BANKJO3_10298
+if
+80C2:   not sphere_onscreen $4017 $4018 $4019 4.0
+jf @BANKJO3_10298
+Car.PutAt($4084, $4017, $4018, $4019)
+039F: car $4084 race_to $4002 $4003
+if
+  $3994 == 7.0 // floating-point values
+jf @BANKJO3_10267
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+Car.DriveTo($4084, $4075, $4076, $4077)
+jump @BANKJO3_10298
+
+:BANKJO3_10267
+00AE: set_vehicle $4084 traffic_behavior_to 2
+Car.SetMaxSpeed($4084, 45.0)
+02C2: car $4084 drive_to_point $4075 $4076 $4077
+
+:BANKJO3_10298
+0084: $4098 = $4013 // integer values and handles
+$4098 -= 3 // integer values
+if
+001C:   $4098 > $4085 // integer values
+jf @BANKJO3_10447
+if
+82CA:   not car $4084 bounding_sphere_visible
+jf @BANKJO3_10447
+if
+838A:   not car_in_cube $4002 $4003 $4004 4.0 4.0 3.0
+jf @BANKJO3_10447
+if
+80C2:   not sphere_onscreen $4002 $4003 $4004 4.0
+jf @BANKJO3_10447
+Car.PutAt($4084, $4002, $4003, $4004)
+039F: car $4084 race_to $4010 $4011
+04BA: set_car $4084 speed_instantly 30.0
+
+:BANKJO3_10447
+0084: $4098 = $4013 // integer values and handles
+$4098 += 2 // integer values
+if
+001C:   $4085 > $4098 // integer values
+jf @BANKJO3_10498
+Car.SetMaxSpeed($4084, 35.0)
+jump @BANKJO3_10508
+
+:BANKJO3_10498
+Car.SetMaxSpeed($4084, 45.0)
+
+:BANKJO3_10508
+return

@@ -1,0 +1,120 @@
+:BUYPRO4
+thread 'BUYPRO4'
+$ONMISSION = 1 // integer values
+if
+  $ONMISSION == 0 // integer values
+jf @BUYPRO4_58
+0570: $613 = create_asset_radar_marker_with_icon 20 at $570 $571 $572
+018B: show_on_radar $613 2
+
+:BUYPRO4_58
+wait 0
+Marker.Disable($613)
+030C: progress_made += 1
+0169: set_fade_color 0 0 1
+fade 0 500
+Player.CanMove($PLAYER_CHAR) = False
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
+03F4: set_all_vehicles_apply_damage_rules 0
+
+:BUYPRO4_104
+if
+fading
+jf @BUYPRO4_176
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO4_169
+0570: $613 = create_asset_radar_marker_with_icon 20 at $570 $571 $572
+018B: show_on_radar $613 2
+$999 = 0 // integer values
+$STRIP_CLUB_BOUGHT = 1 // integer values
+end_thread
+
+:BUYPRO4_169
+jump @BUYPRO4_104
+
+:BUYPRO4_176
+0570: $613 = create_asset_radar_marker_with_icon 20 at $570 $571 $572
+018B: show_on_radar $613 2
+create_thread @PSAVE5
+$999 = 0 // integer values
+$STRIP_CLUB_BOUGHT = 1 // integer values
+055B: $1291 = create_clothes_pickup 9 at 158.3 -1275.9 10.6
+$1271 = 1 // integer values
+create_thread @CLOTH7
+0395: clear_area 1 at 100.9297 -1470.622 range 9.3871 1.0
+0055: put_player $PLAYER_CHAR at 100.9297 -1470.622 9.3871
+0171: set_player $PLAYER_CHAR z_angle_to 218.0275
+02A3: enable_widescreen 1
+0169: set_fade_color 0 0 1
+fade 1 500
+Camera.SetPosition(112.9674, -1486.218, 11.2691, 0.0, 0.0, 0.0)
+Camera.PointAt(112.1791, -1485.63, 11.4509, 2)
+
+:BUYPRO4_375
+if
+fading
+jf @BUYPRO4_417
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO4_410
+end_thread
+
+:BUYPRO4_410
+jump @BUYPRO4_375
+
+:BUYPRO4_417
+01E3: text_1number_styled 'STRPBUY' number $614 time 5000 style 6  // Pole Position Club purchased: $~1~
+0529: add $614 to_money_spent_on_property_stats
+0542: add_property 7 to_property_own_stats
+0394: play_music 1
+043C: set_game_sounds_disable_on_fade 0
+wait 4000
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO4_479
+043C: set_game_sounds_disable_on_fade 1
+end_thread
+
+:BUYPRO4_479
+0169: set_fade_color 0 0 1
+fade 0 500
+
+:BUYPRO4_494
+if
+fading
+jf @BUYPRO4_540
+wait 0
+if
+   not Player.Defined($PLAYER_CHAR)
+jf @BUYPRO4_533
+043C: set_game_sounds_disable_on_fade 1
+end_thread
+
+:BUYPRO4_533
+jump @BUYPRO4_494
+
+:BUYPRO4_540
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+03F4: set_all_vehicles_apply_damage_rules 1
+02A3: enable_widescreen 0
+0169: set_fade_color 0 0 1
+fade 1 500
+
+:BUYPRO4_581
+if
+fading
+jf @BUYPRO4_605
+wait 0
+jump @BUYPRO4_581
+
+:BUYPRO4_605
+043C: set_game_sounds_disable_on_fade 1
+$ONMISSION = 0 // integer values
+mission_cleanup
+end_thread

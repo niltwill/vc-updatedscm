@@ -1,0 +1,1173 @@
+:PROTEC1
+thread 'PROTEC1'
+gosub @PROTEC1_46
+if
+wasted_or_busted
+jf @PROTEC1_37
+gosub @PROTEC1_6937
+
+:PROTEC1_37
+gosub @PROTEC1_7051
+end_thread
+
+:PROTEC1_46
+03D5: remove_text 'M_FAIL'  // MISSION FAILED!
+$ONMISSION = 1 // integer values
+increment_mission_attempts
+wait 0
+054C: use_GXT_table 'PROT1'
+058E: set_restart_mission_taxi_destination -288.2 -487.5 9.8 275.0
+$4565 = 0 // integer values
+$4566 = 301000 // integer values
+$4567 = 0 // integer values
+$4568 = 0 // integer values
+$4569 = 0 // integer values
+$4570 = 0 // integer values
+$4571 = 0 // integer values
+$4572 = 0 // integer values
+$4573 = 0 // integer values
+$4574 = 0 // integer values
+$4575 = 0 // integer values
+$4576 = 0 // integer values
+$4577 = 0 // integer values
+$4578 = 0 // integer values
+$4579 = 0 // integer values
+$4580 = 0 // integer values
+$4581 = 0 // integer values
+$4582 = 0 // integer values
+$4583 = 0 // integer values
+$4584 = 0 // integer values
+$4585 = 0 // integer values
+$4586 = 0 // integer values
+$4587 = 0 // integer values
+$4588 = 0 // integer values
+$4589 = 0 // integer values
+$4590 = 0 // integer values
+$4591 = 0 // integer values
+$4592 = 0 // integer values
+$4593 = 0 // integer values
+$4594 = 0 // integer values
+$4595 = 0 // integer values
+$4596 = 0 // integer values
+$4597 = 0 // integer values
+$4598 = 0 // integer values
+$4599 = 0 // integer values
+$4600 = 0 // integer values
+$4601 = 0 // integer values
+$4602 = 0 // integer values
+$4603 = 0 // integer values
+select_interior 2
+$991 = 1 // integer values
+023C: load_special_actor 1 'CSPLAY'
+023C: load_special_actor 2 'CSKEN'
+023C: load_special_actor 3 'CSBUDDY'
+023C: load_special_actor 4 'CSAVERY'
+Camera.SetAtPos(-378.62, -552.676, 18.534)
+038B: load_requested_models
+
+:PROTEC1_455
+if or
+823D:   not special_actor 1 loaded
+823D:   not special_actor 2 loaded
+823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded
+jf @PROTEC1_493
+wait 0
+jump @PROTEC1_455
+
+:PROTEC1_493
+02E4: load_cutscene_data 'BUD_1'
+0395: clear_area 1 at -378.6 -552.6 range 25.5 15.0
+0395: clear_area 1 at -379.0 -564.6 range 19.8 15.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+0244: set_cutscene_pos -378.62 -552.676 18.534
+041D: set_camera_near_clip 0.1
+02E5: $125 = create_cutscene_object #SPECIAL01
+02E6: set_cutscene_anim $125 'CSPLAY'
+02E5: $141 = create_cutscene_object #SPECIAL02
+02E6: set_cutscene_anim $141 'CSKEN'
+02E5: $136 = create_cutscene_object #SPECIAL03
+02E6: set_cutscene_anim $136 'CSBUDDY'
+02E5: $149 = create_cutscene_object #SPECIAL04
+02E6: set_cutscene_anim $149 'CSAVERY'
+fade 1 1500
+03AD: set_rubbish 0
+03AF: set_streaming 1
+02E7: start_cutscene
+02E8: $CUT_SCENE_TIME = cutscenetime
+
+:PROTEC1_684
+if
+  498 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_719
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_684
+
+:PROTEC1_719
+00BC: text_highpriority 'PRO1_A' 10000 ms 1  // Oh, we gotta redecorate this place. We gotta make it look older.
+
+:PROTEC1_734
+if
+  3470 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_769
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_734
+
+:PROTEC1_769
+00BC: text_highpriority 'PRO1_B' 10000 ms 1  // I can't stand this look. Tommy, whadaya say? Whadaya say we put a bar in...
+
+:PROTEC1_784
+if
+  7473 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_819
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_784
+
+:PROTEC1_819
+00BC: text_highpriority 'PRO1_C' 10000 ms 1  // You're my lawyer, Rosenberg, not my interior decorator. Got it?
+
+:PROTEC1_834
+if
+  11644 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_869
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_834
+
+:PROTEC1_869
+00BC: text_highpriority 'PRO1_D' 10000 ms 1  // Listen to me,
+
+:PROTEC1_884
+if
+  12448 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_919
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_884
+
+:PROTEC1_919
+00BC: text_highpriority 'PRO1_E' 10000 ms 1  // The time to take over this town is now. It's all out there waiting for us.
+
+:PROTEC1_934
+if
+  16477 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_969
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_934
+
+:PROTEC1_969
+00BC: text_highpriority 'PRO1_F' 10000 ms 1  // We need to start seizing territory,
+
+:PROTEC1_984
+if
+  18657 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1019
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_984
+
+:PROTEC1_1019
+00BC: text_highpriority 'PRO1_G' 10000 ms 1  // let Vice City know we're the new players in town, know what I'm saying?
+
+:PROTEC1_1034
+if
+  21849 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1069
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1034
+
+:PROTEC1_1069
+00BC: text_highpriority 'PRO1_I' 10000 ms 1  // What you need is a legitimate front Tommy, real estate. It's never done me no harm.
+
+:PROTEC1_1084
+if
+  26212 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1119
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1084
+
+:PROTEC1_1119
+00BC: text_highpriority 'PRO1_J' 10000 ms 1  // We need to start using some muscle or we can kiss all that hard work goodbye.
+
+:PROTEC1_1134
+if
+  30323 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1169
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1134
+
+:PROTEC1_1169
+00BC: text_highpriority 'PRO1_K' 10000 ms 1  // Local businesses know Diaz is dead, and they're refusing to pay protection!
+
+:PROTEC1_1184
+if
+  34351 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1221
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1184
+
+:PROTEC1_1221
+00BC: text_highpriority 'PRO1_L' 10000 ms 1  // Ooh! We could try bribery...
+
+:PROTEC1_1236
+if
+  36310 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1273
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1236
+
+:PROTEC1_1273
+00BC: text_highpriority 'PRO1_M' 10000 ms 1  // Bribery? Screw bribery! I'll show you how to make 'em scared!
+
+:PROTEC1_1288
+if
+  40077 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1325
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1288
+
+:PROTEC1_1325
+00BC: text_highpriority 'PRO1_N' 10000 ms 1  // I'll be back here in five minutes...
+
+:PROTEC1_1340
+if
+  41077 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1377
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1340
+
+:PROTEC1_1377
+00BE: text_clear_all
+
+:PROTEC1_1379
+if
+  42112 > $CUT_SCENE_TIME // integer values
+jf @PROTEC1_1416
+wait 0
+02E8: $CUT_SCENE_TIME = cutscenetime
+jump @PROTEC1_1379
+
+:PROTEC1_1416
+fade 0 1500
+00BE: text_clear_all
+
+:PROTEC1_1425
+if
+fading
+jf @PROTEC1_1449
+wait 0
+jump @PROTEC1_1425
+
+:PROTEC1_1449
+03AD: set_rubbish 1
+02EA: end_cutscene
+04FA: reset_sky_colors_with_fade 0
+0296: unload_special_actor 1
+0296: unload_special_actor 2
+0296: unload_special_actor 3
+0296: unload_special_actor 4
+03DE: set_pedestrians_density_multiplier_to 1.0
+01EB: set_traffic_density_multiplier_to 1.0
+$991 = 0 // integer values
+select_interior 0
+0169: set_fade_color 0 0 0
+wait 500
+Camera.SetAtPos(-375.9, -510.6, 16.2)
+0055: put_player $PLAYER_CHAR at -375.9 -544.6 16.2
+0171: set_player $PLAYER_CHAR z_angle_to 360.0
+Camera.SetBehindPlayer
+04E3: unknown_player $PLAYER_CHAR 3 60000
+Marker.Disable($434)
+Marker.Disable($437)
+Model.Load(#STINGER)
+
+:PROTEC1_1585
+if
+   not Model.Available(#STINGER)
+jf @PROTEC1_1612
+wait 0
+jump @PROTEC1_1585
+
+:PROTEC1_1612
+$4538 = Car.Create(#STINGER, -345.3, -524.6, 11.5)
+032B: $4539 = create_weapon_pickup #UZI 3 ammo 250 at -347.8 -527.2 12.7
+fade 1 1500
+00BC: text_highpriority 'PRO1_11' 5000 ms 1  // ~g~Get to ~y~The North Point Mall~g~ in ~y~Vice Point~g~.
+00BB: text_lowpriority 'PRO1_01' 5000 ms 1  // ~g~Do a hit and run on the shop fronts and the owners will be begging for protection.
+00BB: text_lowpriority 'PRO1_13' 5000 ms 1  // ~g~You have five minutes to smash them all.
+0540: unknown_player $PLAYER_CHAR window_washer_credibility 0
+018A: $4540 = create_checkpoint_at 459.9 1004.1 18.1
+018A: $4541 = create_checkpoint_at 467.2 1012.0 18.1
+018A: $4542 = create_checkpoint_at 457.5 1197.6 18.1
+018A: $4543 = create_checkpoint_at 463.8 1207.4 18.1
+018A: $4544 = create_checkpoint_at 466.8 1211.8 18.1
+018A: $4545 = create_checkpoint_at 369.9 1222.0 18.1
+018A: $4546 = create_checkpoint_at 369.9 1212.2 18.1
+018A: $4547 = create_checkpoint_at 356.5 1120.0 24.5
+018A: $4548 = create_checkpoint_at 356.6 1115.5 24.5
+018A: $4549 = create_checkpoint_at 361.1 1110.2 24.5
+018A: $4550 = create_checkpoint_at 364.2 1107.2 24.5
+018A: $4551 = create_checkpoint_at 367.0 1104.2 24.5
+018A: $4552 = create_checkpoint_at 369.2 1101.7 24.5
+018A: $4553 = create_checkpoint_at 403.1 1022.0 24.5
+018A: $4554 = create_checkpoint_at 403.1 1033.0 24.5
+018A: $4555 = create_checkpoint_at 406.7 1041.0 24.5
+018A: $4556 = create_checkpoint_at 421.0 1041.0 24.5
+018A: $4557 = create_checkpoint_at 425.1 1035.7 24.5
+018A: $4558 = create_checkpoint_at 425.1 1021.8 24.5
+018A: $4559 = create_checkpoint_at 403.1 1024.6 18.1
+018A: $4560 = create_checkpoint_at 403.1 1033.0 18.1
+018A: $4561 = create_checkpoint_at 406.7 1041.0 18.1
+018A: $4562 = create_checkpoint_at 421.0 1041.0 18.1
+018A: $4563 = create_checkpoint_at 425.1 1035.7 18.1
+018A: $4564 = create_checkpoint_at 425.1 1021.8 18.1
+014E: start_timer_at $4566 count_in_direction 1
+
+:PROTEC1_2229
+wait 0
+if
+  $1003 == 1 // integer values
+jf @PROTEC1_5792
+if
+  $4598 == 0 // integer values
+jf @PROTEC1_2291
+00BC: text_highpriority 'PRO1_12' 5000 ms 1  // ~g~Smash the panes of glass in each shop front and the owners will be begging for new protection.
+$4598 = 1 // integer values
+
+:PROTEC1_2291
+if
+  $4567 == 25 // integer values
+jf @PROTEC1_2323
+$4565 = 1 // integer values
+jump @PROTEC1_5792
+
+:PROTEC1_2323
+if
+  2 > $4568 // integer values
+jf @PROTEC1_2523
+if
+  $4573 == 0 // integer values
+jf @PROTEC1_2432
+if
+0523:   unknown_glass_window_at 459.9 1004.1 19.7 broken
+jf @PROTEC1_2432
+$4568 += 1 // integer values
+$4573 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4540)
+
+:PROTEC1_2432
+if
+  $4574 == 0 // integer values
+jf @PROTEC1_2523
+if
+0523:   unknown_glass_window_at 467.2 1012.0 19.7 broken
+jf @PROTEC1_2523
+$4568 += 1 // integer values
+$4574 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4541)
+
+:PROTEC1_2523
+if
+  $4568 == 2 // integer values
+jf @PROTEC1_2645
+03CF: load_wav 'BUD1_1' as 1
+
+:PROTEC1_2553
+if
+83D0:   not wav 1 loaded
+jf @PROTEC1_2579
+wait 0
+jump @PROTEC1_2553
+
+:PROTEC1_2579
+00BC: text_highpriority 'PRO1_04' 4000 ms 1  // My livelihood, destroyed!
+03D1: play_wav 1
+
+:PROTEC1_2598
+if
+83D2:   not wav 1 ended
+jf @PROTEC1_2624
+wait 0
+jump @PROTEC1_2598
+
+:PROTEC1_2624
+040D: unload_wav 1
+03D5: remove_text 'PRO1_04'  // My livelihood, destroyed!
+$4568 = 3 // integer values
+
+:PROTEC1_2645
+if
+  $4568 == 3 // integer values
+jf @PROTEC1_2767
+03CF: load_wav 'BUD1_9' as 2
+
+:PROTEC1_2675
+if
+83D0:   not wav 2 loaded
+jf @PROTEC1_2701
+wait 0
+jump @PROTEC1_2675
+
+:PROTEC1_2701
+00BC: text_highpriority 'PRO1_09' 4000 ms 1  // Vercetti. Remember the name.
+03D1: play_wav 2
+
+:PROTEC1_2720
+if
+83D2:   not wav 2 ended
+jf @PROTEC1_2746
+wait 0
+jump @PROTEC1_2720
+
+:PROTEC1_2746
+040D: unload_wav 2
+03D5: remove_text 'PRO1_09'  // Vercetti. Remember the name.
+$4568 = 4 // integer values
+
+:PROTEC1_2767
+if
+  3 > $4569 // integer values
+jf @PROTEC1_3058
+if
+  $4575 == 0 // integer values
+jf @PROTEC1_2876
+if
+0523:   unknown_glass_window_at 457.5 1197.6 19.7 broken
+jf @PROTEC1_2876
+$4569 += 1 // integer values
+$4575 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4542)
+
+:PROTEC1_2876
+if
+  $4576 == 0 // integer values
+jf @PROTEC1_2967
+if
+0523:   unknown_glass_window_at 463.8 1207.4 19.7 broken
+jf @PROTEC1_2967
+$4569 += 1 // integer values
+$4576 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4543)
+
+:PROTEC1_2967
+if
+  $4577 == 0 // integer values
+jf @PROTEC1_3058
+if
+0523:   unknown_glass_window_at 466.8 1211.8 19.7 broken
+jf @PROTEC1_3058
+$4569 += 1 // integer values
+$4577 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4544)
+
+:PROTEC1_3058
+if
+  $4569 == 3 // integer values
+jf @PROTEC1_3180
+03CF: load_wav 'BUD1_2' as 1
+
+:PROTEC1_3088
+if
+83D0:   not wav 1 loaded
+jf @PROTEC1_3114
+wait 0
+jump @PROTEC1_3088
+
+:PROTEC1_3114
+00BC: text_highpriority 'PRO1_05' 4000 ms 1  // Ruined...RUINED!!
+03D1: play_wav 1
+
+:PROTEC1_3133
+if
+83D2:   not wav 1 ended
+jf @PROTEC1_3159
+wait 0
+jump @PROTEC1_3133
+
+:PROTEC1_3159
+040D: unload_wav 1
+03D5: remove_text 'PRO1_05'  // Ruined...RUINED!!
+$4569 = 4 // integer values
+
+:PROTEC1_3180
+if
+  2 > $4570 // integer values
+jf @PROTEC1_3380
+if
+  $4578 == 0 // integer values
+jf @PROTEC1_3289
+if
+0523:   unknown_glass_window_at 369.9 1222.0 19.7 broken
+jf @PROTEC1_3289
+$4570 += 1 // integer values
+$4578 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4545)
+
+:PROTEC1_3289
+if
+  $4579 == 0 // integer values
+jf @PROTEC1_3380
+if
+0523:   unknown_glass_window_at 369.9 1212.2 19.7 broken
+jf @PROTEC1_3380
+$4570 += 1 // integer values
+$4579 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4546)
+
+:PROTEC1_3380
+if
+  $4570 == 2 // integer values
+jf @PROTEC1_3502
+03CF: load_wav 'BUD1_3' as 1
+
+:PROTEC1_3410
+if
+83D0:   not wav 1 loaded
+jf @PROTEC1_3436
+wait 0
+jump @PROTEC1_3410
+
+:PROTEC1_3436
+00BC: text_highpriority 'PRO1_06' 4000 ms 1  // I pay through the ass for protection!
+03D1: play_wav 1
+
+:PROTEC1_3455
+if
+83D2:   not wav 1 ended
+jf @PROTEC1_3481
+wait 0
+jump @PROTEC1_3455
+
+:PROTEC1_3481
+040D: unload_wav 1
+03D5: remove_text 'PRO1_06'  // I pay through the ass for protection!
+$4570 = 3 // integer values
+
+:PROTEC1_3502
+if
+  $4570 == 3 // integer values
+jf @PROTEC1_3624
+03CF: load_wav 'BUD1_10' as 2
+
+:PROTEC1_3532
+if
+83D0:   not wav 2 loaded
+jf @PROTEC1_3558
+wait 0
+jump @PROTEC1_3532
+
+:PROTEC1_3558
+00BC: text_highpriority 'PRO1_10' 4000 ms 1  // I run this town now. ME!
+03D1: play_wav 2
+
+:PROTEC1_3577
+if
+83D2:   not wav 2 ended
+jf @PROTEC1_3603
+wait 0
+jump @PROTEC1_3577
+
+:PROTEC1_3603
+040D: unload_wav 2
+03D5: remove_text 'PRO1_10'  // I run this town now. ME!
+$4570 = 4 // integer values
+
+:PROTEC1_3624
+if
+  6 > $4571 // integer values
+jf @PROTEC1_4188
+if
+  $4580 == 0 // integer values
+jf @PROTEC1_3733
+if
+0523:   unknown_glass_window_at 356.5 1120.0 25.7 broken
+jf @PROTEC1_3733
+$4571 += 1 // integer values
+$4580 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4547)
+
+:PROTEC1_3733
+if
+  $4581 == 0 // integer values
+jf @PROTEC1_3824
+if
+0523:   unknown_glass_window_at 356.6 1115.5 25.7 broken
+jf @PROTEC1_3824
+$4571 += 1 // integer values
+$4581 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4548)
+
+:PROTEC1_3824
+if
+  $4582 == 0 // integer values
+jf @PROTEC1_3915
+if
+0523:   unknown_glass_window_at 361.1 1110.2 25.7 broken
+jf @PROTEC1_3915
+$4571 += 1 // integer values
+$4582 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4549)
+
+:PROTEC1_3915
+if
+  $4583 == 0 // integer values
+jf @PROTEC1_4006
+if
+0523:   unknown_glass_window_at 364.2 1107.2 25.7 broken
+jf @PROTEC1_4006
+$4571 += 1 // integer values
+$4583 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4550)
+
+:PROTEC1_4006
+if
+  $4584 == 0 // integer values
+jf @PROTEC1_4097
+if
+0523:   unknown_glass_window_at 367.0 1104.2 25.7 broken
+jf @PROTEC1_4097
+$4571 += 1 // integer values
+$4584 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4551)
+
+:PROTEC1_4097
+if
+  $4585 == 0 // integer values
+jf @PROTEC1_4188
+if
+0523:   unknown_glass_window_at 369.2 1101.7 25.7 broken
+jf @PROTEC1_4188
+$4571 += 1 // integer values
+$4585 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4552)
+
+:PROTEC1_4188
+if
+  $4571 == 6 // integer values
+jf @PROTEC1_4310
+03CF: load_wav 'BUD1_4' as 1
+
+:PROTEC1_4218
+if
+83D0:   not wav 1 loaded
+jf @PROTEC1_4244
+wait 0
+jump @PROTEC1_4218
+
+:PROTEC1_4244
+00BC: text_highpriority 'PRO1_07' 4000 ms 1  // My beautiful window display!
+03D1: play_wav 1
+
+:PROTEC1_4263
+if
+83D2:   not wav 1 ended
+jf @PROTEC1_4289
+wait 0
+jump @PROTEC1_4263
+
+:PROTEC1_4289
+040D: unload_wav 1
+03D5: remove_text 'PRO1_07'  // My beautiful window display!
+$4571 = 7 // integer values
+
+:PROTEC1_4310
+if
+  12 > $4572 // integer values
+jf @PROTEC1_5420
+if
+  $4586 == 0 // integer values
+jf @PROTEC1_4419
+if
+0523:   unknown_glass_window_at 403.1 1022.0 25.7 broken
+jf @PROTEC1_4419
+$4572 += 1 // integer values
+$4586 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4553)
+
+:PROTEC1_4419
+if
+  $4587 == 0 // integer values
+jf @PROTEC1_4510
+if
+0523:   unknown_glass_window_at 403.1 1033.0 25.7 broken
+jf @PROTEC1_4510
+$4572 += 1 // integer values
+$4587 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4554)
+
+:PROTEC1_4510
+if
+  $4588 == 0 // integer values
+jf @PROTEC1_4601
+if
+0523:   unknown_glass_window_at 406.7 1041.0 25.7 broken
+jf @PROTEC1_4601
+$4572 += 1 // integer values
+$4588 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4555)
+
+:PROTEC1_4601
+if
+  $4589 == 0 // integer values
+jf @PROTEC1_4692
+if
+0523:   unknown_glass_window_at 421.0 1041.0 25.7 broken
+jf @PROTEC1_4692
+$4572 += 1 // integer values
+$4589 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4556)
+
+:PROTEC1_4692
+if
+  $4590 == 0 // integer values
+jf @PROTEC1_4783
+if
+0523:   unknown_glass_window_at 425.1 1035.7 25.7 broken
+jf @PROTEC1_4783
+$4572 += 1 // integer values
+$4590 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4557)
+
+:PROTEC1_4783
+if
+  $4591 == 0 // integer values
+jf @PROTEC1_4874
+if
+0523:   unknown_glass_window_at 425.1 1021.8 25.7 broken
+jf @PROTEC1_4874
+$4572 += 1 // integer values
+$4591 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4558)
+
+:PROTEC1_4874
+if
+  $4592 == 0 // integer values
+jf @PROTEC1_4965
+if
+0523:   unknown_glass_window_at 403.1 1024.6 19.7 broken
+jf @PROTEC1_4965
+$4572 += 1 // integer values
+$4592 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4559)
+
+:PROTEC1_4965
+if
+  $4593 == 0 // integer values
+jf @PROTEC1_5056
+if
+0523:   unknown_glass_window_at 403.1 1033.0 19.7 broken
+jf @PROTEC1_5056
+$4572 += 1 // integer values
+$4593 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4560)
+
+:PROTEC1_5056
+if
+  $4594 == 0 // integer values
+jf @PROTEC1_5147
+if
+0523:   unknown_glass_window_at 406.7 1041.0 19.7 broken
+jf @PROTEC1_5147
+$4572 += 1 // integer values
+$4594 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4561)
+
+:PROTEC1_5147
+if
+  $4595 == 0 // integer values
+jf @PROTEC1_5238
+if
+0523:   unknown_glass_window_at 421.0 1041.0 19.7 broken
+jf @PROTEC1_5238
+$4572 += 1 // integer values
+$4595 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4562)
+
+:PROTEC1_5238
+if
+  $4596 == 0 // integer values
+jf @PROTEC1_5329
+if
+0523:   unknown_glass_window_at 425.1 1035.7 19.7 broken
+jf @PROTEC1_5329
+$4572 += 1 // integer values
+$4596 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4563)
+
+:PROTEC1_5329
+if
+  $4597 == 0 // integer values
+jf @PROTEC1_5420
+if
+0523:   unknown_glass_window_at 425.1 1021.8 19.7 broken
+jf @PROTEC1_5420
+$4572 += 1 // integer values
+$4597 = 1 // integer values
+$4567 += 1 // integer values
+018C: play_sound 1 at 0.0 0.0 0.0
+Marker.Disable($4564)
+
+:PROTEC1_5420
+if
+  $4572 == 12 // integer values
+jf @PROTEC1_5542
+03CF: load_wav 'BUD1_5' as 1
+
+:PROTEC1_5450
+if
+83D0:   not wav 1 loaded
+jf @PROTEC1_5476
+wait 0
+jump @PROTEC1_5450
+
+:PROTEC1_5476
+00BC: text_highpriority 'PRO1_08' 4000 ms 1  // My store. My wonderful store.
+03D1: play_wav 1
+
+:PROTEC1_5495
+if
+83D2:   not wav 1 ended
+jf @PROTEC1_5521
+wait 0
+jump @PROTEC1_5495
+
+:PROTEC1_5521
+040D: unload_wav 1
+03D5: remove_text 'PRO1_08'  // My store. My wonderful store.
+$4572 = 13 // integer values
+
+:PROTEC1_5542
+if
+  $4567 > 4 // integer values
+jf @PROTEC1_5592
+if
+  $4599 == 0 // integer values
+jf @PROTEC1_5592
+Player.SetMinWantedLevel($PLAYER_CHAR, 1)
+$4599 = 1 // integer values
+
+:PROTEC1_5592
+if
+  $4567 > 9 // integer values
+jf @PROTEC1_5642
+if
+  $4600 == 0 // integer values
+jf @PROTEC1_5642
+Player.SetMinWantedLevel($PLAYER_CHAR, 2)
+$4600 = 1 // integer values
+
+:PROTEC1_5642
+if
+  $4567 > 14 // integer values
+jf @PROTEC1_5692
+if
+  $4601 == 0 // integer values
+jf @PROTEC1_5692
+Player.SetMinWantedLevel($PLAYER_CHAR, 3)
+$4601 = 1 // integer values
+
+:PROTEC1_5692
+if
+  $4567 > 19 // integer values
+jf @PROTEC1_5742
+if
+  $4602 == 0 // integer values
+jf @PROTEC1_5742
+Player.SetMinWantedLevel($PLAYER_CHAR, 4)
+$4602 = 1 // integer values
+
+:PROTEC1_5742
+if
+  $4567 > 24 // integer values
+jf @PROTEC1_5792
+if
+  $4603 == 0 // integer values
+jf @PROTEC1_5792
+Player.SetMinWantedLevel($PLAYER_CHAR, 5)
+$4603 = 1 // integer values
+
+:PROTEC1_5792
+if
+  $4566 == 0 // integer values
+jf @PROTEC1_5832
+00BC: text_highpriority 'PRO1_03' 5000 ms 1  // ~r~This was supposed to be a hit and run, not a 'hit and have coffee'.
+jump @PROTEC1_6937
+
+:PROTEC1_5832
+if
+  $4565 == 1 // integer values
+jf @PROTEC1_6930
+Pickup.Destroy($PRINT_WORKS_ASSET)
+0570: $634 = create_asset_radar_marker_with_icon 25 at $549 $550 $551 
+018B: show_on_radar $634 2 
+0518: $PRINT_WORKS_ASSET = create_available_asset_pickup 'PRNT_L' at $549 $550 $551 price $635  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Print Works for $~1~
+create_thread @COUBUY 
+Pickup.Destroy($CAR_SHOWROOM_ASSET)
+0570: $624 = create_asset_radar_marker_with_icon 25 at $552 $553 $554 
+018B: show_on_radar $624 2 
+0518: $CAR_SHOWROOM_ASSET = create_available_asset_pickup 'CAR_L' at $552 $553 $554 price $625  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showroom for $~1~
+create_thread @CARBUY 
+Pickup.Destroy($FILM_STUDIO_ASSET)
+0570: $629 = create_asset_radar_marker_with_icon 25 at $555 $556 $557 
+018B: show_on_radar $629 2 
+0518: $FILM_STUDIO_ASSET = create_available_asset_pickup 'PORN_L' at $555 $556 $557 price $630  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Film Studios for $~1~
+create_thread @PORNBUY 
+Pickup.Destroy($ICE_CREAM_FACTORY_ASSET)
+0570: $608 = create_asset_radar_marker_with_icon 25 at $558 $559 $560 
+018B: show_on_radar $608 2 
+0518: $ICE_CREAM_FACTORY_ASSET = create_available_asset_pickup 'ICE_L' at $558 $559 $560 price $609  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Ice Cream Factory for $~1~
+create_thread @ICEBUY 
+Pickup.Destroy($678)
+0570: $619 = create_asset_radar_marker_with_icon 25 at $561 $562 $563 
+018B: show_on_radar $619 2 
+0518: $678 = create_available_asset_pickup 'TAXI_L' at $561 $562 $563 price $620  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Taxi Company for $~1~
+create_thread @TAXIBUY 
+Pickup.Destroy($679)
+0570: $638 = create_asset_radar_marker_with_icon 25 at $564 $565 $566 
+018B: show_on_radar $638 2 
+0518: $679 = create_available_asset_pickup 'BANK_L' at $564 $565 $566 price $639  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase The Malibu for $~1~
+create_thread @BANKBUY 
+Pickup.Destroy($680)
+0570: $603 = create_asset_radar_marker_with_icon 25 at $567 $568 $569 
+018B: show_on_radar $603 2 
+0518: $680 = create_available_asset_pickup 'BOAT_L' at $567 $568 $569 price $604  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Boatyard for $~1~
+create_thread @BOATBUY 
+Pickup.Destroy($615)
+0518: $615 = create_available_asset_pickup 'STRP_L' at $570 $571 $572 price $614  // Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Pole Position Club for $~1~
+0570: $613 = create_asset_radar_marker_with_icon 25 at $570 $571 $572 
+018B: show_on_radar $613 2 
+create_thread @STRPBUY 
+Player.CanMove($PLAYER_CHAR) = False
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 1 
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1 
+fade 0 1500
+
+:PROTEC1_6366
+if
+fading
+jf @PROTEC1_6390
+wait 0
+jump @PROTEC1_6366
+
+:PROTEC1_6390
+02A3: enable_widescreen 1
+00C0: set_current_time 22 0
+if
+  $1003 == 1 // integer values
+jf @PROTEC1_6422
+select_interior 0
+
+:PROTEC1_6422
+01EB: set_traffic_density_multiplier_to 0.0
+03DE: set_pedestrians_density_multiplier_to 0.0
+Camera.SetAtPos(475.4, -67.8, 19.6)
+fade 1 1500
+Camera.SetPosition(524.9, -88.8, 15.6, 0.0, 0.0, 0.0)
+Camera.PointAt(498.2, -74.0, 13.6, 2)
+17@ = 0 // integer values
+00BC: text_highpriority 'BUYP1' 8000 ms 1  // You can now buy property in certain areas of the map.
+
+:PROTEC1_6533
+if
+   not 17@ > 8000 // integer values
+jf @PROTEC1_6587
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @PROTEC1_6580
+jump @PROTEC1_6790
+
+:PROTEC1_6580
+jump @PROTEC1_6533
+
+:PROTEC1_6587
+17@ = 0 // integer values
+Camera.SetPosition(495.7, -79.5, 12.6, 0.0, 0.0, 0.0)
+Camera.PointAt(488.6, -79.7, 12.3, 2)
+00BC: text_highpriority 'BUYP2' 8000 ms 1  // If you see a green house pickup, you can buy that property.
+
+:PROTEC1_6660
+if
+   not 17@ > 8000 // integer values
+jf @PROTEC1_6714
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @PROTEC1_6707
+jump @PROTEC1_6790
+
+:PROTEC1_6707
+jump @PROTEC1_6660
+
+:PROTEC1_6714
+17@ = 0 // integer values
+00BC: text_highpriority 'BUYP3' 8000 ms 1  // Stand inside the pickup, then press the ~h~~k~~PED_ANSWER_PHONE~~w~ button to purchase that property.
+
+:PROTEC1_6736
+if
+   not 17@ > 8000 // integer values
+jf @PROTEC1_6790
+wait 0
+if
+00E1:   player 0 pressed_button 16
+jf @PROTEC1_6783
+jump @PROTEC1_6790
+
+:PROTEC1_6783
+jump @PROTEC1_6736
+
+:PROTEC1_6790
+fade 0 1000
+
+:PROTEC1_6797
+if
+fading
+jf @PROTEC1_6821
+wait 0
+jump @PROTEC1_6797
+
+:PROTEC1_6821
+if
+  $1003 == 1 // integer values
+jf @PROTEC1_6843
+select_interior 4
+
+:PROTEC1_6843
+01EB: set_traffic_density_multiplier_to 1.0
+03DE: set_pedestrians_density_multiplier_to 1.0
+0054: store_player $PLAYER_CHAR position_to $95 $96 $97
+Camera.SetAtPos($95, $96, $97)
+Camera.SetBehindPlayer
+Camera.Restore_WithJumpCut
+Player.CanMove($PLAYER_CHAR) = True
+02A3: enable_widescreen 0
+01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
+03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
+fade 1 1000
+Player.ClearWantedLevel($PLAYER_CHAR)
+jump @PROTEC1_6954
+
+:PROTEC1_6930
+jump @PROTEC1_2229
+
+:PROTEC1_6937
+00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+return
+
+:PROTEC1_6954
+00BE: text_clear_all
+01E3: text_1number_styled 'M_PASS' number 2000 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
+Player.Money($PLAYER_CHAR) += 2000
+030C: progress_made += 1
+0318: set_latest_mission_passed 'BUD_1'  // Shakedown
+Marker.Disable($265)
+02A7: $265 = create_icon_marker_and_sphere 29 at -397.4 -561.3 18.7
+create_thread @PRO2
+$856 = 1 // integer values
+$266 = 1 // integer values
+return
+
+:PROTEC1_7051
+$ONMISSION = 0 // integer values
+0540: unknown_player $PLAYER_CHAR window_washer_credibility 1
+Marker.Disable($434)
+Marker.Disable($437)
+04CE: $434 = create_icon_marker_without_sphere 16 at 364.8 1051.5 21.0
+04CE: $437 = create_icon_marker_without_sphere 18 at 364.8 1086.5 21.0
+Marker.Disable($4540)
+Marker.Disable($4541)
+Marker.Disable($4542)
+Marker.Disable($4543)
+Marker.Disable($4544)
+Marker.Disable($4545)
+Marker.Disable($4546)
+Marker.Disable($4547)
+Marker.Disable($4548)
+Marker.Disable($4549)
+Marker.Disable($4550)
+Marker.Disable($4551)
+Marker.Disable($4552)
+Marker.Disable($4553)
+Marker.Disable($4554)
+Marker.Disable($4555)
+Marker.Disable($4556)
+Marker.Disable($4557)
+Marker.Disable($4558)
+Marker.Disable($4559)
+Marker.Disable($4560)
+Marker.Disable($4561)
+Marker.Disable($4562)
+Marker.Disable($4563)
+Marker.Disable($4564)
+if
+   not Pickup.Picked_up($4539)
+jf @PROTEC1_7265
+Pickup.Destroy($4539)
+
+:PROTEC1_7265
+Model.Destroy(#STINGER)
+Player.CanMove($PLAYER_CHAR) = True
+014F: stop_timer $4566
+01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
+mission_cleanup
+return
