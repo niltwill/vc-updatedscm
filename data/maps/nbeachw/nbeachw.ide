@@ -1,0 +1,200 @@
+objs
+3800, nbeachroads01, nbeachwgen, 1, 108, 0
+3801, nbeachroads02, nbeachwgen, 1, 108, 0
+3802, nbeachroads03, nbeachwgen, 1, 145, 0
+3803, starbits13, starwaterfrnt01, 1, 108, 4
+3804, starbits22, starbits22, 1, 60, 128
+3805, starbits20, generic, 1, 60, 4
+3806, starbits24, starbits24, 1, 60, 128
+3807, starbits17, starbits17, 1, 60, 128
+3808, starbits06, starbits06, 1, 60, 128
+3809, starbits05, nbeachwgen, 1, 100, 128
+3810, const_woodfence30, buildsite, 1, 120, 128
+3811, buildingground40, buildsite, 1, 108, 128
+3812, buildingground50, buildsite, 1, 108, 128
+3813, starbits45, starvillas01, 1, 42, 128
+3814, starbits46, starvillas01, 1, 42, 128
+3815, nw_nbwroad01, generic, 1, 155, 1
+3816, starwaterfrnt05, starwaterfrnt01, 1, 108, 128
+3817, starwaterfrnt06, starwaterfrnt01, 1, 108, 128
+3818, starwaterfrnt09, starwaterfrnt01, 1, 128, 0
+3819, starwaterfrnt10, starwaterfrnt01, 1, 108, 4
+3820, starwaterfrnt11, starwaterfrnt01, 1, 108, 4
+3821, starwaterfrnt12, starwaterfrnt01, 1, 108, 4
+3822, nbt_htlpoolbase02, nbt_htlpoolbase, 1, 108, 128
+3823, nw_nbwroad04, generic, 1, 108, 1
+3824, starblocks02, sta_pinkblock, 1, 179.4, 128
+3825, starblocks03, sta_pinkblock, 1, 179.4, 128
+3826, nw_nbwroad06, generic, 1, 179.4, 1
+3827, starblocks04, starbuildsite, 1, 108, 128
+3828, nbw_bush01, generic, 1, 200, 4
+3829, starscaffold_pole, starbuildsite, 1, 100, 4
+3830, buildingsite2, buildingsite2, 1, 300, 128
+3831, starbits49, starbits49, 1, 60, 128
+3832, starbits50, starbits50, 1, 60, 128
+3833, starbits51, starbits51, 1, 60, 128
+3834, starbits52, nbeachwgen, 1, 84, 128
+3835, nbeachwjetty01, nbwjetty, 1, 100, 128
+3836, starbits54, starvillas01, 1, 42, 128
+3837, starbits55, starvillas01, 1, 42, 128
+3838, starbits56, starvillas01, 1, 42, 128
+3839, starbits57, starvillas01, 1, 42, 128
+3840, starbits58, starvillas01, 1, 42, 128
+3841, starbits59, starvillas01, 1, 42, 128
+3842, nbthotel08fence02, nbthotel08fence, 1, 42, 132
+3843, nbthotel10, nbthotel08, 1, 64, 128
+3844, nbt_hotel08, nbw_hotel06, 1, 108, 128
+3845, stardepot, stardepot, 1, 120, 0
+3846, nbt_hotel13, nbw_hotel06, 1, 108, 128
+3847, nbt_hotel15, nbw_hotel06, 1, 108, 128
+3848, nbt_apartpool01, nbt_apartpool, 1, 108, 4
+3849, nbt_apartpool02, nbt_apartpool01, 1, 108, 132
+3850, nbt_balcony02, nbw_hotel06balcony, 1, 60, 132
+3851, nbt_balcony03, nbw_hotel06balcony, 1, 60, 132
+3852, nbt_balcony05, nbw_hotel06balcony, 1, 60, 132
+3853, nbt_htlpoolbar01, nbt_htlpoolbar01, 1, 60, 128
+3854, nbt_apartpool03, nbt_apartpool, 1, 60, 132
+3855, nbt_barfence01, nbt_barfence01, 1, 30, 132
+3856, nbt_htlpoolrm01, nbt_htlpoolrm, 1, 60, 128
+3857, nbt_htlpoolrm02, nbt_htlpoolrm, 1, 60, 128
+3858, nbt_htlpoolbase01, htlpoolbase, 1, 108, 128
+3859, LODachroads02, LODnbeachwbig, 1, 2000, 0
+3860, LODachroads03, LODnbeachwbig, 1, 2000, 0
+3861, LODrbits13, LODnbeachwbig, 1, 2000, 0
+3862, LODrbits22, LODnbchw, 1, 800, 0
+3863, LODrbits06, LODnbchw, 1, 800, 0
+3864, LODrbits05, LODnbchw, 1, 800, 0
+3865, LODldingground40, LODnbeachwbig, 1, 2000, 0
+3866, LODldingground50, LODnbeachwbig, 1, 2000, 0
+3867, LODnbwroad01, LODnbeachwbig, 1, 2000, 0
+3868, LODrwaterfrnt05, LODnbeachwbig, 1, 2000, 0
+3869, LODrwaterfrnt06, LODnbeachwbig, 1, 2000, 0
+3870, LODrwaterfrnt07, LODnbeachwbig, 1, 2000, 0
+3871, LODrwaterfrnt08, LODnbeachwbig, 1, 2000, 0
+3872, LODrwaterfrnt11, LODnbeachwbig, 1, 2000, 0
+3873, LODrwaterfrnt12, LODnbeachwbig, 1, 2000, 0
+3874, LOD_htlpoolbase02, LODnbeachwbig, 1, 2000, 0
+3875, LODnbwroad04, LODnbeachwbig, 1, 2000, 0
+3876, LODachroads01, LODnbeachwbig, 1, 2000, 0
+3877, LODnbwroad06, LODnbeachwbig, 1, 2000, 0
+3878, LODnbwroad05, LODnbeachwbig, 1, 2000, 0
+3879, LODrblocks04, LODnbeachwbig, 1, 2000, 0
+3880, LODldingsite2, LODnbeachwbig, 1, 2000, 4
+3881, LODrbits49, LODnbchw, 1, 800, 0
+3882, LODrbits50, LODnbchw, 1, 800, 0
+3883, LODrbits51, LODnbchw, 1, 800, 0
+3884, LODrbits52, LODnbeachwbig, 1, 1000, 0
+3885, LODachwjetty01, LODnbeachwbig, 1, 1000, 0
+3886, LOD_htlpoolbase01, LODnbeachwbig, 1, 2000, 0
+3887, LODrwaterfrnt10, LODnbeachwbig, 1, 2000, 0
+3888, LODst_woodfence30, LODnbeachwbig, 1, 1000, 0
+3889, LODrbits17, LODnbchw, 1, 800, 0
+3890, LODrbits24, LODnbchw, 1, 800, 0
+3891, LODrdepot, LODnbchw, 1, 700, 0
+3892, LODrbits46, LODnbchw, 1, 700, 0
+3893, LODrbits45, LODnbchw, 1, 700, 0
+3894, LODrblocks02, LODnbchw, 1, 800, 0
+3895, LODrblocks03, LODnbchw, 1, 800, 0
+3896, LOD_hotel13, LODnbeachwbig, 1, 1500, 0
+3897, LOD_htlpoolbar01, LODnbchw, 1, 800, 0
+3898, LODdingsite1, LODnbchw, 1, 700, 0
+3899, LODrbits54, LODnbchw, 1, 700, 0
+3900, LODrbits56, LODnbchw, 1, 700, 0
+3901, LODrbits58, LODnbchw, 1, 700, 0
+3902, LODrbits55, LODnbchw, 1, 700, 0
+3903, LODrbits57, LODnbchw, 1, 700, 0
+3904, LODrbits59, LODnbchw, 1, 700, 0
+3905, LODhotel10, LODnbchw, 1, 700, 0
+3906, LOD_hotel08, LODnbeachwbig, 1, 1500, 0
+3907, LOD_hotel15, LODnbeachwbig, 1, 1500, 0
+3908, bldngst2mesh, buildingsite2, 1, 135, 132
+3909, bldigste1mesh, starbuildsite, 1, 84, 132
+3910, nbroofst11, nbrooft, 1, 60, 0
+3911, nb2glue, nbglue, 1, 21, 4
+3912, nw_nbwroad08, nbwbridge, 1, 185, 1
+3913, nbt_htlpoolbase03, htlpoolbase, 1, 108, 128
+3914, LOD_htlpoolbase03, LODnbeachwbig, 1, 2000, 0
+3915, LODnbwroad08, LODnbeachwbig, 1, 1000, 0
+3916, LODrwaterfrnt09, LODnbeachwbig, 1, 2000, 0
+3917, nbt_htlpoolbase04, nbt_htlpoolbase, 1, 108, 128
+3918, LOD_htlpoolrm02, LODnbchw, 1, 700, 0
+3919, LOD_htlpoolrm01, LODnbchw, 1, 700, 0
+3920, starbitbush, generic, 1, 60, 4
+3921, nbeachroads09, nbeachwgen, 1, 130, 0
+3922, LODachroads09, LODnbeachwbig, 1, 2000, 0
+3923, starwaterfrnt09b, starwaterfrnt01, 1, 108, 4
+3924, LODrwaterfrnt09b, LODnbeachwbig, 1, 2000, 0
+3925, starsbush2, generic, 1, 200, 4
+3926, LOD_htlpoolbase04, LODnbeachwbig, 1, 2000, 0
+3927, starbits13b, starwaterfrnt01, 1, 108, 4
+3928, LODrbits13b, LODnbeachwbig, 1, 2000, 0
+3929, starbits13c, starwaterfrnt01, 1, 108, 4
+3930, LODrbits13c, LODnbeachwbig, 1, 2000, 0
+3931, nbt_htlpoolbase01b, htlpoolbase, 1, 108, 128
+3932, LOD_htlpoolbase01b, LODnbeachwbig, 1, 2000, 0
+3933, starwaterfrnt07, starwaterfrnt01, 1, 128, 128
+3934, starwaterfrnt08, starwaterfrnt01, 1, 128, 128
+3935, nw_nbwroad05, generic, 1, 108, 1
+3936, buldingsite1, starbuildsite, 1, 84, 132
+3937, nw_nbwroad07, generic, 1, 145, 1
+3938, nw_nbwroad03, generic, 1, 108, 1
+3939, nw_nbwroad02, generic, 1, 108, 1
+3940, nbw_grssypatch, starwaterfrnt01, 1, 100, 0
+3941, nbw_bridgew, generic, 1, 130, 1
+3942, LODnbwroad07, LODnbeachwbig, 1, 2000, 0
+3943, LODnbwroad03, LODnbeachwbig, 1, 2000, 0
+3944, LODnbwroad02, LODnbeachwbig, 1, 2000, 0
+3945, LOD_bridgew, LODnbeachwbig, 1, 2000, 0
+3946, LOD_grssypatch, nbw_grssypatch, 1, 600, 0
+3947, nbt_htlpool01, htlpoolbase, 1, 108, 128
+#3948, LODngst2mesh, LODnbeachwbig, 1, 2000, 0
+3948, LODngst2mesh, buildingsite2, 1, 3000, 132
+3949, LODigste1mesh, LODnbchw, 1, 700, 0
+3950, starbl02b, nbw_pinkblock, 1, 145, 128
+3951, LODrbl02b, LODnbchw, 1, 1000, 0
+3952, nbeachwjetty02, nbwjetty, 1, 120, 128
+3953, LODachwjetty02, LODnbeachwbig, 1, 1000, 128
+3954, starwaterfrnt06b, starwaterfrnt01, 1, 108, 128
+3955, LODrwaterfrnt06b, LODnbeachwbig, 1, 2000, 0
+3956, starwaterfrnt07b, starwaterfrnt01, 1, 108, 128
+3957, LODrwaterfrnt07b, LODnbeachwbig, 1, 2000, 0
+3958, wash_hardwares, nbwtoolshp5, 1, 100, 128
+3959, nbchwbridge, nbwbridge, 1, 120, 1
+3960, LODh_hardwares, LODnbchw, 1, 800, 0
+3961, nbeachbed01, nbw_pinkblock, 1, 65, 132
+3962, nbw_bush02, sta_pinkblock, 1, 100, 132
+3963, LODhwbridge, LODnbeachwbig, 1, 1000, 0
+#3964, bldngst2meshdam, buildingsite2, 1, 135, 132
+3964, bldngst2meshdam, buildingsite2, 1, 300, 132
+6308, LODngst2meshdam, buildingsite2, 1, 3000, 132
+3967, nbt_htlpiswr01, nbt_htlpoolrm, 1, 100, 4
+3968, nbt_htlpiswr02, nbt_htlpoolrm, 1, 100, 4
+3969, nbw_roadsigns, buildsite, 1, 150, 128
+3970, nbbridgbit2, nbwbridge, 1, 185, 1
+3971, nbchwbridgb, nbwbridge, 1, 120, 1
+3972, nbwbusshy2, generic, 1, 240, 4
+3973, nbeachbed02, nbw_pinkblock, 1, 65, 4
+3974, wash_hardwindow, nbwtoolshp5, 1, 100, 132
+3975, muck_nbeachw, nbeachwgen, 1, 100, 132
+3976, stardepot_FENCE, stardepot, 1, 160, 4
+end
+tobj
+3965, nbwneon01, nbt_htlpoolbar01, 1, 100, 4, 22, 5
+3966, nbwneon02, nbthotel08, 1, 100, 4, 22, 5
+end
+path
+end
+2dfx
+3858, 27.8228, -7.57376, 0.307362, 184, 255, 0, 120, 3, 0, 0.998003, -0.0631588, 0, 0.998003, -0.0631588, 0
+3858, 29.7117, -18.1357, -1.31046, 184, 255, 0, 120, 3, 0, 0.998003, -0.0631588, 0, 0.998003, -0.0631588, 0
+3931, -6.73262, 24.2913, 1.36178, 184, 255, 0, 120, 3, 1, -0.0429181, 0.999079, 0, -0.0429181, 0.999079, 0
+3931, 6.99932, 28.0563, 0.129468, 184, 255, 0, 120, 3, 1, -0.0429187, 0.999079, 0, -0.0429187, 0.999079, 0
+3931, 23.4455, 28.2732, 0.129468, 184, 255, 0, 120, 3, 1, -0.0429194, 0.999079, 0, -0.0429194, 0.999079, 0
+3931, 44.0757, 28.6932, 0.129468, 184, 255, 0, 120, 3, 1, -0.0429271, 0.999078, 0, -0.0429271, 0.999078, 0
+3931, 46.8791, 28.7086, 0.129468, 184, 255, 0, 120, 3, 1, -0.0429271, 0.999078, 0, -0.0429271, 0.999078, 0
+3931, 70.7424, 29.789, 0.129468, 184, 255, 0, 120, 3, 1, -0.0429194, 0.999079, 0, -0.0429194, 0.999079, 0
+3937, 19.1705, -38.3627, 0.458043, 184, 255, 0, 120, 3, 1, 0.162334, 0.986736, 0, 0.162334, 0.986736, 0
+3937, 1.8886, -38.1968, 0.984698, 184, 255, 0, 120, 3, 1, 0.0266318, 0.999645, 0, 0.0266318, 0.999645, 0
+3950, 0.0265503, -26.7243, 0.242106, 184, 255, 0, 120, 3, 1, 0.0609005, -0.998144, 0, 0.0609005, -0.998144, 0
+3950, 4.49588, -21.5992, 0.330629, 184, 255, 0, 120, 3, 1, 0.914442, -0.404717, 0, 0.914442, -0.404717, 0
+end

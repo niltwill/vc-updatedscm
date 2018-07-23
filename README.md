@@ -19,11 +19,9 @@ The author of this mod does not take any responsibility for damaged or corrupted
 
 ## Install with modloader
 
-1. If you don't already have mod loader, download it from GTAGarage:
-	http://www.gtagarage.com/mods/show.php?id=25377
+1. Download [Mod Loader](https://github.com/thelink2012/modloader/releases).
 
-2. Also download ThirteenAG's Ultimate ASI Loader:
-	https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases
+2. Also download [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
 
 3. First, extract the Ultimate ASI Loader and copy all of its content to where you installed your game (root folder).
 This, by default (on 64 bit systems and non-Steam version) should be "C:\Program Files (x86)\Rockstar Games\Grand Theft Auto Vice City"
@@ -37,11 +35,41 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 6. Copy folders "data", "text" and "to gta3.img" to the newly created "UpdatedSCM" folder.
 	-- Alternatively, use one of the other SCM files from the "other_scms" folder. --
 
-7. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use steve-m's COL Editor: http://ce2.steve-m.com
-	-- This is not required if you use the SCM without MC Tommy.
+7. In "data > maps > nbeachw > nbeachw.ide", change line:
 
-8. I highly recommend using CLEO: http://cleo.li/download.html
-	...and using "extras > cleo > cs-playmodels.cs" + "marina-bay-carpark-wl.cs" one is for the Marina bay carpark water level, and the other is if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
+`3830, buildingsite2, buildingsite2, 1, 108, 128`
+
+To:
+
+`3830, buildingsite2, buildingsite2, 1, 300, 128`
+
+Change line:
+
+`3948, LODngst2mesh, LODnbeachwbig, 1, 2000, 0`
+
+To:
+
+`3948, LODngst2mesh, buildingsite2, 1, 3000, 132`
+
+Next change the following line:
+
+`3964, bldngst2meshdam, buildingsite2, 1, 135, 132`
+
+To:
+
+`3964, bldngst2meshdam, buildingsite2, 1, 300, 132`
+
+And after that, add this line:
+
+`6308, LODngst2meshdam, buildingsite2, 1, 3000, 132`
+
+(Alternatively if you did not mod that file, you can simply overwrite it.)
+
+**Warning:** You should use the [Open Limit Adjuster](https://github.com/ThirteenAG/III.VC.SA.LimitAdjuster/releases) to avoid the game crashing after that.
+
+8. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use [steve-m's COL Editor](http://ce2.steve-m.com). (This is not required if you use the SCM without MC Tommy.)
+
+9. I highly recommend using [CLEO](http://cleo.li/download.html) and using "extras > cleo > cs-playmodels.cs" + "marina-bay-carpark-wl.cs" one is for the Marina bay carpark water level, and the other is if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
 
 
 ## Install manually
@@ -66,13 +94,45 @@ Create a backup of the original files and then do the necessary changes. By defa
 	* IGavery.txd (add)
 	* IGdlove.dff (add)
 	* IGdlove.txd (add)
+	** LODngst2mesh.dff (add) <<= make sure to add this!
+	** LODngst2meshdam.dff (add) <<= make sure to add this!
 	* play13.dff (add)
 	* play13.txd (add)
 
-**Warning:**
-The game is going to stall in a black screen if you don't add "csruger.dff" and "csruger.txd" in the mission "Supply & Demand", so at the very least, you have to do that! If you don't add IGavery and IGdlove, they will appear untextured (white) ingame. For MC Tommy, please at least use play13.dff and play13.txd. The CSplay12 and CSplay13 is only needed if you use the extra "cs-playmodels" cleo script.
+**Warning:** The game is going to stall in a black screen if you don't add "csruger.dff" and "csruger.txd" in the mission "Supply & Demand", so at the very least, you have to do that! If you don't add IGavery and IGdlove, they will appear untextured (white) ingame. For MC Tommy, please at least use play13.dff and play13.txd. The CSplay12 and CSplay13 is only needed if you use the extra "cs-playmodels" cleo script.
 
+The two LOD model files "LODngst2mesh.dff" and "LODngst2meshdam.dff" are needed to fix the destroyed construction building, so it remains destroyed from far away as well.
+4. In "data > maps > nbeachw > nbeachw.ide", change line:
 
+`3830, buildingsite2, buildingsite2, 1, 108, 128`
+
+To:
+
+`3830, buildingsite2, buildingsite2, 1, 300, 128`
+
+Change line:
+
+`3948, LODngst2mesh, LODnbeachwbig, 1, 2000, 0`
+
+To:
+
+`3948, LODngst2mesh, buildingsite2, 1, 3000, 132`
+
+Next change the following line:
+
+`3964, bldngst2meshdam, buildingsite2, 1, 135, 132`
+
+To:
+
+`3964, bldngst2meshdam, buildingsite2, 1, 300, 132`
+
+And after that, add this line:
+
+`6308, LODngst2meshdam, buildingsite2, 1, 3000, 132`
+
+(Alternatively if you did not mod that file, you can simply overwrite it.)
+
+**Warning:** You should use the [Open Limit Adjuster](https://github.com/ThirteenAG/III.VC.SA.LimitAdjuster/releases) to avoid the game crashing after that.
 
 
 ## Extras

@@ -1,4 +1,11 @@
 ------------------------------
+{V2.0e}
+------------------------------
+
+[*] Fixed the appearance of the construction building that you destroy in 'Demolition Man'
+
+
+------------------------------
 {V2.0d}
 ------------------------------
 
