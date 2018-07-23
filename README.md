@@ -94,8 +94,8 @@ Create a backup of the original files and then do the necessary changes. By defa
 	* IGavery.txd (add)
 	* IGdlove.dff (add)
 	* IGdlove.txd (add)
-	** LODngst2mesh.dff (add) <<= make sure to add this!
-	** LODngst2meshdam.dff (add) <<= make sure to add this!
+	* **LODngst2mesh.dff** (add) <<= make sure to add this!
+	* **LODngst2meshdam.dff** (add) <<= make sure to add this!
 	* play13.dff (add)
 	* play13.txd (add)
 
