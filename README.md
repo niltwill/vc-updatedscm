@@ -69,7 +69,7 @@ And after that, add this line:
 
 8. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use [steve-m's COL Editor](http://ce2.steve-m.com). (This is not required if you use the SCM without MC Tommy.)
 
-9. I highly recommend using [CLEO](http://cleo.li/download.html) and using "extras > cleo > cs-playmodels.cs" + "marina-bay-carpark-wl.cs" one is for the Marina bay carpark water level, and the other is if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
+9. I highly recommend using [CLEO](http://cleo.li/download.html) and using "extras > cleo > cs-playmodels.cs" if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
 
 
 ## Install manually
@@ -102,6 +102,7 @@ Create a backup of the original files and then do the necessary changes. By defa
 **Warning:** The game is going to stall in a black screen if you don't add "csruger.dff" and "csruger.txd" in the mission "Supply & Demand", so at the very least, you have to do that! If you don't add IGavery and IGdlove, they will appear untextured (white) ingame. For MC Tommy, please at least use play13.dff and play13.txd. The CSplay12 and CSplay13 is only needed if you use the extra "cs-playmodels" cleo script.
 
 The two LOD model files "LODngst2mesh.dff" and "LODngst2meshdam.dff" are needed to fix the destroyed construction building, so it remains destroyed from far away as well.
+
 4. In "data > maps > nbeachw > nbeachw.ide", change line:
 
 `3830, buildingsite2, buildingsite2, 1, 108, 128`
@@ -133,6 +134,10 @@ And after that, add this line:
 (Alternatively if you did not mod that file, you can simply overwrite it.)
 
 **Warning:** You should use the [Open Limit Adjuster](https://github.com/ThirteenAG/III.VC.SA.LimitAdjuster/releases) to avoid the game crashing after that.
+
+5. To be able to enter the interior of the Howlin' Petes, you also need to change a COL file. Extract your "downtows.col" from gta3.img archive and replace the dowbikershop with the one from the "extras" folder. To modify COL files, use [steve-m's COL Editor](http://ce2.steve-m.com). (This is not required if you use the SCM without MC Tommy.)
+
+6. I highly recommend using [CLEO](http://cleo.li/download.html) and using "extras > cleo > cs-playmodels.cs" if you wish to have support for all the player CS models. From what I've seen, cleo scripts might not work well under modloader, so copy it to your game root directory's cleo folder instead. And alternatively of using the GXT files, you can use the FXT ones in "extras > cleo > CLEO_TEXT"
 
 
 ## Extras
