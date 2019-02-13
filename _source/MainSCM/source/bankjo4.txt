@@ -19,6 +19,7 @@ increment_mission_attempts
 wait 0
 $4099 = 1 // integer values
 $4101 = 0 // integer values
+$bankjo4_no_wanted_level = 0
 $4102 = 0 // integer values
 $357 = 0 // integer values
 $4104 = 0 // integer values
@@ -475,9 +476,6 @@ if and
    	$BANKJOB_DIALOGUE == 1 // integer values
 jf @BANKJO4_C3
 00BC: text_highpriority 'WANTED2' 5000 ms 1  // ~g~Shake the cops and lose your wanted level!
-03BD: destroy_sphere $BANKJOB_SPHERE
-Marker.Disable($4191)
-$4134 = 1 // integer values
 $BANKJOB_DIALOGUE = 2 // integer values
 
 :BANKJO4_C3
@@ -487,9 +485,6 @@ jf @BANKJO4_2600
 if
     810F:   not player $PLAYER_CHAR wanted_level > 0
 jf @BANKJO4_2600
-03BD: destroy_sphere $BANKJOB_SPHERE
-Marker.Disable($4191)
-$4134 = 0 // integer values
 $BANKJOB_DIALOGUE = 1 // integer values
 
 :BANKJO4_2600
@@ -527,7 +522,8 @@ $4134 = 0 // integer values
 jump @BANKJO4_3296
 
 :BANKJO4_2782
-if
+if and
+  $bankjo4_no_wanted_level == 1
   $4101 == 1 // integer values
 jf @BANKJO4_3183
 if
@@ -571,7 +567,6 @@ if
   $4134 == 0 // integer values
 jf @BANKJO4_3088
 018A: $4191 = create_checkpoint_at -833.0 -348.0 10.0
-03BC: $BANKJOB_SPHERE = create_sphere -833.0 -348.0 10.0 4.0
 $4134 = 1 // integer values
 
 :BANKJO4_3088
@@ -580,10 +575,9 @@ if and
   $4192 == 1 // integer values
 jf @BANKJO4_3176
 if and
-01AF:   car $4135 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+01AF:   car $4135 1 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
 01C1:   car $4135 stopped
 81F4:   not car $4135 flipped
-810F:   not player $PLAYER_CHAR wanted_level > 0
 jf @BANKJO4_3176
 jump @BANKJO4_3328
 
@@ -625,7 +619,6 @@ $4212 = 0 // integer values
 Player.CanMove($PLAYER_CHAR) = False
 02A3: enable_widescreen 1
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
-03BD: destroy_sphere $BANKJOB_SPHERE
 Marker.Disable($4191)
 if
    not Car.Wrecked($4135)
@@ -3915,6 +3908,17 @@ jf @BANKJO4_24694
 $4105 = 1 // integer values
 
 :BANKJO4_24694
+if 010F:   player $PLAYER_CHAR wanted_level > 0
+then
+    $bankjo4_no_wanted_level = 0
+    if $4134 == 1
+    then
+        Marker.Disable($4191)
+        $4134 = 0
+    end
+else
+    $bankjo4_no_wanted_level = 1
+end
 jump @BANKJO4_24723
 
 :BANKJO4_24701
@@ -4152,26 +4156,6 @@ $4125 = 0 // integer values
 
 :BANKJO4_25927
 return
-if or
-  $4124 == 1 // integer values
-  $4125 == 1 // integer values
-  $4126 == 1 // integer values
-jf @BANKJO4_25975
-$4134 = 0 // integer values
-jump @BANKJO4_26038
-
-:BANKJO4_25975
-if
-  $4101 == 1 // integer values
-jf @BANKJO4_26038
-if
-  $4134 == 0 // integer values
-jf @BANKJO4_26038
-018A: $4191 = create_checkpoint_at -896.5 -341.0 13.4
-$4134 = 1 // integer values
-
-:BANKJO4_26038
-return
 
 :BANKJO4_26040
 01BD: $CURRENT_TIME_IN_MS = current_time_in_ms
@@ -4331,7 +4315,7 @@ if
   $4212 == 1 // integer values
 jf @BANKJO4_26966
 if
-00F5:   player $PLAYER_CHAR 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+00F5:   player $PLAYER_CHAR 1 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
 jf @BANKJO4_26966
 
 :BANKJO4_26966
@@ -4350,7 +4334,7 @@ if
   $4212 == 1 // integer values
 jf @BANKJO4_27066
 if
-00F5:   player $PLAYER_CHAR 0 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
+00F5:   player $PLAYER_CHAR 1 -833.0 -348.0 10.0 radius 4.0 4.0 4.0
 jf @BANKJO4_27066
 
 :BANKJO4_27066
