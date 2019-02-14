@@ -2,6 +2,8 @@
 
 In short, this mod is to increase the gaming experience with GTA: Vice City. It contains mostly fixes and some improvements.
 
+Besides this, I also recommend to use [NW-Fixes](https://www.mediafire.com/file/icak6l2mtimp6uq/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
+
 
 ## Backup
 
