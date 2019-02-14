@@ -1067,6 +1067,7 @@ Player.MakeSafe($PLAYER_CHAR)
 023C: load_special_actor 1 'CSPLAY'
 023C: load_special_actor 2 'CSBUDDY'
 02F3: load_object #CUTOBJ01 'CSRUGER'
+02F3: load_object #CUTOBJ02 'DELCSB'
 038B: load_requested_models
 
 while true
@@ -1074,6 +1075,7 @@ while true
         823D:   not special_actor 1 loaded
         823D:   not special_actor 2 loaded
         not Model.Available(#CUTOBJ01)
+   	not Model.Available(#CUTOBJ02)
     jf break
     wait 0
 end
@@ -1087,9 +1089,13 @@ end
 02E5: $136 = create_cutscene_object #SPECIAL02
 02E6: set_cutscene_anim $136 'CSBUDDY'
 02E5: $2894 = create_cutscene_object #CUTOBJ01
+02E6: set_cutscene_anim $2894 'CSRUGER'
+02E5: $158 = create_cutscene_object #CUTOBJ02 
+02E6: set_cutscene_anim $158 'DELCSB' 
 054B: attach_cutscene_object_to_vehicle $125 $64
 054B: attach_cutscene_object_to_vehicle $136 $64
 054B: attach_cutscene_object_to_vehicle $2894 $64
+0524: attach_cutscene_object_to_bone $158 $125 24
 
 fade 1 1500
 03AD: set_rubbish 0
@@ -1101,7 +1107,7 @@ while 7628 > $CUT_SCENE_TIME
     wait 0
     02E8: $CUT_SCENE_TIME = cutscenetime
 end
-
+0524: attach_cutscene_object_to_bone $158 $125 53
 00BC: text_highpriority 'COK4_W' 10000 ms 1  // Uugghh! That's the last of them.
 
 while 9366 > $CUT_SCENE_TIME
@@ -1123,10 +1129,9 @@ while 11721 > $CUT_SCENE_TIME
     02E8: $CUT_SCENE_TIME = cutscenetime
 end
 
-0524: attach_cutscene_object_to_bone $2894 $125 24
-
 if not Car.Wrecked(5@)
 then
+    0524: attach_cutscene_object_to_bone $2894 $125 24
     0323: enable_boat 5@ anchor 0
     02D3: boat 5@ drive_to 170.678 618.991 5.816
     02DB: set_boat 5@ speed_to 20.0
@@ -1156,6 +1161,7 @@ end
 0296: unload_special_actor 1
 0296: unload_special_actor 2
 Model.Destroy(#CUTOBJ01)
+Model.Destroy(#CUTOBJ02)
 
 0323: enable_boat $64 anchor 0
 
