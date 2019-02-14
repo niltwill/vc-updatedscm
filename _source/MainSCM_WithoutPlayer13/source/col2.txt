@@ -447,6 +447,7 @@ jf @COL2_2621
 if
   11 > $2278 // integer values
 jf @COL2_2709
+011C: actor 0@ clear_objective
 0411: set_actor 0@ use_pednode_seek 0
 02A9: set_actor 0@ immune_to_nonplayer 0
 Actor.PutAt(0@, -8.3703, -934.7144, 9.4119)
@@ -830,11 +831,11 @@ $2278 = 4 // integer values
 03D1: play_wav 1
 
 //Clear some area up, to remove blocking cars and make sure the courier can escape
-0395: clear_area 1 at 3.808 -910.346 range 9.478 10.0
+/*0395: clear_area 1 at 3.808 -910.346 range 9.478 10.0
 0395: clear_area 1 at 3.757 -919.273 range 9.478 10.0
 0395: clear_area 1 at 3.797 -927.448 range 9.478 10.0
 0395: clear_area 1 at -3.044 -931.342 range 9.478 8.0
-0395: clear_area 1 at -11.232 -932.270 range 9.478 10.0
+0395: clear_area 1 at -11.232 -932.270 range 9.478 10.0*/
 
 :COL2_5278
 Actor.Angle(0@) = $2285

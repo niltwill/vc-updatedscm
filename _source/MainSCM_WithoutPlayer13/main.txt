@@ -388,24 +388,24 @@ $715 = Object.Init(#YT_MAIN_BODY2, -375.499, -1322.31, 9.81124)
 $717 = Object.Init(#YT_DOORS14, -375.499, -1322.31, 9.81124)
 $718 = Object.Init(#YT_TMP_BOAT, -375.499, -1322.31, 9.81124)
 $719 = Object.Init(#LODMAIN_BODY, -375.499, -1322.31, 9.81124)
-$720 = Object.Init(#YT_GANGPLNK_TMP, -375.525, -1322.71, 9.79468)
 Object.RemoveFromMissionCleanupList($714)
 Object.RemoveFromMissionCleanupList($715)
 Object.RemoveFromMissionCleanupList($717)
 Object.RemoveFromMissionCleanupList($718)
 Object.RemoveFromMissionCleanupList($719)
-Object.RemoveFromMissionCleanupList($720)
 049D: attach_scripted_file $722 with_object $714
 049D: attach_scripted_file $722 with_object $715
 049D: attach_scripted_file $722 with_object $717
 049D: attach_scripted_file $722 with_object $718
 049D: attach_scripted_file $722 with_object $719
-049D: attach_scripted_file $722 with_object $720
 049E: set_scripted_file $722 speed_to 0.0
 wait 0
 wait 0
 $721 = Object.Init(#YACHT_CHUNK_KB, $448, $449, $450)
 Object.RemoveFromMissionCleanupList($721)
+$720 = Object.Init(#YT_GANGPLNK_TMP, -375.525, -1322.71, 9.79468)
+Object.RemoveFromMissionCleanupList($720)
+//049D: attach_scripted_file $722 with_object $720
 start_mission INTRO  // Intro
 create_thread @O4X4_1
 create_thread @TAXI_L

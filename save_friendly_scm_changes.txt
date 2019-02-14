@@ -83,3 +83,5 @@ something misbehaving, or some missing collision. So use this at your own risk a
 [*] Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)
 [*] In 'V.I.P.', fixed looped arrow marker (that's the reason behind why it seemed standstill) and delivering him with the rival taxi will no longer fail the mission
 [*] Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)
+[*] The courier should no longer get stuck if you skip his cutscene in "Mall Shootout"
+[*] You can no longer go back with the boat in "The Fastest Boat" before releasing it from the docks

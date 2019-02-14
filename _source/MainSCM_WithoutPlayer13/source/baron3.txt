@@ -353,6 +353,7 @@ Object.Destroy($1786)
 $64 = Car.Create(#SQUALO, -597.6, -1507.7, 5.4)
 Car.Angle($64) = 250.0
 $65 = Marker.CreateAboveCar($64)
+0519: lock_vehicle $64 in_current_position 1
 00BC: text_highpriority 'COK3_8' 10000 ms 1  // ~g~Go to the boatyard at the docks and steal the fastest boat.
 
 :BARON3_1939
@@ -452,7 +453,14 @@ jf @BARON3_2881
 if
 00DC:   player $PLAYER_CHAR driving $64
 jf @BARON3_2881
+if
+    $2890 == 2
+then
 jump @BARON3_6799
+else
+00BC: text_highpriority 'COK3_5' 6000 ms 1  // ~g~Find the switch to lower the boat.
+jump @BARON3_2881
+end
 
 :BARON3_2881
 if
@@ -1340,6 +1348,7 @@ $2890 = 1 // integer values
 if
 00F6:   player $PLAYER_CHAR 0 -665.4 -1484.7 12.8 radius 0.5 0.5 1.5
 jf @BARON3_9491
+0519: lock_vehicle $64 in_current_position 0
 Player.CanMove($PLAYER_CHAR) = False
 02A3: enable_widescreen 1
 0171: set_player $PLAYER_CHAR z_angle_to 150.0
@@ -1392,6 +1401,7 @@ Player.CanMove($PLAYER_CHAR) = True
 02A3: enable_widescreen 0
 Camera.Restore_WithJumpCut 
 018D: $865 = create_sound 0 at -668.596 -1485.48 17.3233
+$2890 = 2 // integer values
 00BC: text_highpriority 'COK3_9' 8000 ms 1  // ~g~Now get into the boat.
 $2899 = Actor.Create(Gang1, #WMYST, -640.6, -1500.3, -100.0)
 Actor.Angle($2899) = 335.0

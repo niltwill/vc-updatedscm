@@ -1,4 +1,15 @@
 ------------------------------
+{V2.1}
+------------------------------
+
+[*] Removed the initial greetings from "The Chase" and "Phnom Penh '86" (saving time with multiple mission restarts)
+[*] You can no longer go back with the boat in "The Fastest Boat" before releasing it from the docks
+[*] The courier should no longer get stuck if you skip his cutscene in "Mall Shootout"
+[*] Fixed the yacht's gangplank (should no longer remain attached in "All Hands On Deck")
+|*| Silent's contribution: fixes in "The Job" mission (the sphere, the wanted level check, unnecessary code cleanup)
+
+
+------------------------------
 {V2.0e}
 ------------------------------
 

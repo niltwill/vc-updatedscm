@@ -16,21 +16,8 @@ thread 'BARON1'
 wait 0
 054C: use_GXT_table 'BARON1'
 058E: set_restart_mission_taxi_destination -288.2 -487.5 9.8 275.0
-03CF: load_wav 'STAR_4' as 1
 wait 500
-
-while 83D0:   not wav 1 loaded
-    wait 0
-end
-
-03D1: play_wav 1
-
-while 83D2:   not wav 1 ended
-    wait 0
-end
-
-040D: unload_wav 1
-
+fade 1 1500
 1@ = 0 // integer values
 $2818 = 391.6 // floating-point values
 $2819 = 251.2 // floating-point values
