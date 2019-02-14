@@ -98,7 +98,7 @@ Create a backup of the original files and then do the necessary changes. By defa
 	* IGdlove.txd (add)
 	* **LODngst2mesh.dff** (add) <<= make sure to add this!
 	* **LODngst2meshdam.dff** (add) <<= make sure to add this!
-	* **nbeachw.col** (add) <<= make sure to add this!
+	* **nbeachw.col** (replace) <<= make sure to add this!
 	* play13.dff (add)
 	* play13.txd (add)
 
