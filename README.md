@@ -91,6 +91,8 @@ Create a backup of the original files and then do the necessary changes. By defa
 	* CSplay13.txd (add)
 	* **csruger.dff** (add) <<= make sure to add this!
 	* **csruger.txd** (add) <<= make sure to add this!
+	* **delcsb.dff** (add) <<= make sure to add this!
+	* **delcsb.txd** (add) <<= make sure to add this!
 	* dowbikershop.dff (replace)
 	* IGavery.dff (add)
 	* IGavery.txd (add)
@@ -102,11 +104,11 @@ Create a backup of the original files and then do the necessary changes. By defa
 	* play13.dff (add)
 	* play13.txd (add)
 
-**Warning:** The game is going to stall in a black screen if you don't add "csruger.dff" and "csruger.txd" in the mission "Supply & Demand", so at the very least, you have to do that! If you don't add IGavery and IGdlove, they will appear untextured (white) ingame. For MC Tommy, please at least use play13.dff and play13.txd. The CSplay12 and CSplay13 is only needed if you use the extra "cs-playmodels" cleo script.
+**Warning:** The game is going to stall in a black screen if you don't add "csruger.dff" and "csruger.txd" and also delcsb.dff and delcsb.txd" in the mission "Supply & Demand", so at the very least, you have to do that! If you don't add IGavery and IGdlove, they will appear untextured (white) ingame. For MC Tommy, please at least use play13.dff and play13.txd. The CSplay12 and CSplay13 is only needed if you use the extra "cs-playmodels" cleo script.
 
-The two LOD model files "LODngst2mesh.dff" and "LODngst2meshdam.dff" are needed to fix the destroyed construction building, so it remains destroyed from far away as well.
+The two LOD model files "LODngst2mesh.dff" and "LODngst2meshdam.dff" also collision file "nbeachw.col" are needed to fix the destroyed construction building, so it remains destroyed from far away as well.
 
-**Warning:** Make sure to add "nbeachw.col" to gta3.img otherwise the game will crash with an unhandled exception after passing "Demolition Man" and driving away as the LOD model won't be able to find its collisions.
+**Warning:** Make sure to replace "nbeachw.col" in gta3.img otherwise the game will crash with an unhandled exception after passing "Demolition Man" and driving away as the LOD model won't be able to find its collisions.
 
 4. In "data > maps > nbeachw > nbeachw.ide", change line:
 
