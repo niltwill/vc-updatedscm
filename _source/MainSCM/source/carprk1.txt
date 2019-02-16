@@ -450,6 +450,7 @@ jump @CARPRK1_3252
 
 :CARPRK1_3226
 01E3: text_1number_styled 'M_PASS' number 200 time 5000 style 1  // MISSION PASSED! $~1~
+0394: play_music 1
 Player.Money($PLAYER_CHAR) += 200
 
 :CARPRK1_3252
