@@ -797,6 +797,7 @@ $1612 = 100 // integer values
 :T4X4_1_6464
 01E3: text_1number_styled 'M_PASS' number $1612 time 5000 style 1  // MISSION PASSED! $~1~
 Player.ClearWantedLevel($PLAYER_CHAR)
+0394: play_music 1
 Player.Money($PLAYER_CHAR) += $1612
 if
   $339 == 0 // integer values
