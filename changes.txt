@@ -1,4 +1,12 @@
 ------------------------------
+{V2.1b}
+------------------------------
+*Added a briefcase in restored 'Supply & Demand' cutscene.
+*Fixed issues with the mission 'Treacherous Swine' not passing once wanted level is lost and player sits in the car.
+*Removed Tommy hands animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
+
+
+------------------------------
 {V2.1}
 ------------------------------
 
