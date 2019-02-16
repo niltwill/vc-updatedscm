@@ -1,10 +1,11 @@
 ------------------------------
 {V2.1b}
 ------------------------------
-*Added a briefcase in restored 'Supply & Demand' cutscene.
-*Fixed issues with the mission 'Treacherous Swine' not passing once wanted level is lost and player sits in the car.
-*Removed Tommy hands animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
-*Fixed a bug where Mission Passed sound wouldn't play after 'PCJ Playground' is passed (Rockstar's Bug)
+[*] Added a briefcase in restored 'Supply & Demand' cutscene.
+[*] Fixed issues with the mission 'Treacherous Swine' not passing once wanted level is lost and player sits in the car.
+[*] Removed Tommy hands animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
+[*] Fixed a bug where Mission Passed sound wouldn't play after 'PCJ Playground' is passed (Rockstar's Bug)
+[*] Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
 
 
 ------------------------------
