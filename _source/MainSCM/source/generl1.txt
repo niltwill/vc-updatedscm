@@ -506,7 +506,7 @@ jf @GENERL1_3689
 0210: player $PLAYER_CHAR look_at_actor $2251
 
 :GENERL1_3689
-0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 10000 ms
 03CF: load_wav 'COL1_5' as 1
 
 :GENERL1_3711
@@ -627,7 +627,7 @@ jf @GENERL1_4266
 01CA: actor $2253 kill_player $PLAYER_CHAR
 
 :GENERL1_4266
-0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 10000 ms
 03CF: load_wav 'COL1_6' as 1
 
 :GENERL1_4288
