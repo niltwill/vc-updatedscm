@@ -83,5 +83,10 @@ something misbehaving, or some missing collision. So use this at your own risk a
 [*] Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)
 [*] In 'V.I.P.', fixed looped arrow marker (that's the reason behind why it seemed standstill) and delivering him with the rival taxi will no longer fail the mission
 [*] Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)
-[*] The courier should no longer get stuck if you skip his cutscene in "Mall Shootout"
-[*] You can no longer go back with the boat in "The Fastest Boat" before releasing it from the docks
+[*] The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
+[*] You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks
+[*] Tweaked the wanted level check in 'Treacherous Swine' (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
+[*] Removed Tommy hand animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
+[*] Fixed a bug where "Mission Passed" sound wouldn't play after 'PCJ Playground' is passed (Rockstar's Bug)
+[*] Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
+[*] Fine-tuned the car health's check in 'Jury Fury' (hitting it with the fist once or very slightly damaging the car would not not trigger the nearby jury's attention before)

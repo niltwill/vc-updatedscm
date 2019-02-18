@@ -1331,6 +1331,9 @@ jump @GENERL1_8171
 
 :GENERL1_8571
 if
+Player.WantedLevel($PLAYER_CHAR) > 0
+jf @GENERL1_8885
+if
 80E0:   not player $PLAYER_CHAR driving
 jf @GENERL1_8605
 wait 0
@@ -1365,14 +1368,16 @@ jump @GENERL1_8885
 if
   $2264 == 0 // integer values
 jf @GENERL1_8826
-if 
+if and
 00F5:   player $PLAYER_CHAR 1 327.2 429.9 10.3 radius 2.5 2.5 2.5
-
+00E0:   player $PLAYER_CHAR driving
 jf @GENERL1_8826
 03E5: text_box 'GEN1_22'  // Drive your vehicle into the spray shop to lose your ~h~wanted level, ~h~repair and ~h~respray your vehicle. Cost - ~h~$100. This time it's free.
 $2264 = 1 // integer values
 
 :GENERL1_8826
+if
+80E0:   not player $PLAYER_CHAR driving
 jf @GENERL1_8854
 Marker.Disable($2263)
 jump @GENERL1_8046

@@ -506,7 +506,7 @@ jf @GENERL1_3689
 0210: player $PLAYER_CHAR look_at_actor $2251
 
 :GENERL1_3689
-0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 10000 ms
 03CF: load_wav 'COL1_5' as 1
 
 :GENERL1_3711
@@ -627,7 +627,7 @@ jf @GENERL1_4266
 01CA: actor $2253 kill_player $PLAYER_CHAR
 
 :GENERL1_4266
-0372: set_actor $PLAYER_ACTOR anim 19 wait_state_time 10000 ms
+0372: set_actor $PLAYER_ACTOR anim 0 wait_state_time 10000 ms
 03CF: load_wav 'COL1_6' as 1
 
 :GENERL1_4288
@@ -1331,6 +1331,9 @@ jump @GENERL1_8171
 
 :GENERL1_8571
 if
+Player.WantedLevel($PLAYER_CHAR) > 0
+jf @GENERL1_8885
+if
 80E0:   not player $PLAYER_CHAR driving
 jf @GENERL1_8605
 wait 0
@@ -1356,9 +1359,8 @@ jump @GENERL1_8885
 jump @GENERL1_8738
 
 :GENERL1_8713
-if and
+if
    not Player.WantedLevel($PLAYER_CHAR) > 0
-   80E0:   not player $PLAYER_CHAR driving
 jf @GENERL1_8738
 jump @GENERL1_8885
 

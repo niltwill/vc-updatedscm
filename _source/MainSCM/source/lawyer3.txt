@@ -878,7 +878,7 @@ jf @LAWYER3_5221
 if or
 02DF:   player $PLAYER_CHAR aggressive
 8184:   not actor $2147 health >= 299
-8185:   not car $2159 health >= 990
+8185:   not car $2159 health >= 999
 0457:   player $PLAYER_CHAR aiming_at_actor $2147
 jf @LAWYER3_5221
 if
