@@ -296,6 +296,7 @@ jump @RANGE_1810
 
 :RANGE_1906
 03D5: remove_text 'BNK2_2'  // AIM 3-2-1 FIRE!
+03C3: set_timer_with_text_to $3677 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $3677 count_in_direction 1
 04F7: status_text $3988 0 line 2 'BJM2_18'  // SCORE TO BEAT:
 04F7: status_text $3968 0 line 1 'BJM2_15'  // SCORE:
