@@ -133,6 +133,7 @@ jf @PIZZA_943
 $7993 = Marker.CreateAboveCar($7965)
 
 :PIZZA_943
+03C3: set_timer_with_text_to $8012 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $8012 count_in_direction 1
 03C4: set_status_text_to $8008 0 'PIZ1_12'  // Pizzas left:
 if
