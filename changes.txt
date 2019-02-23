@@ -7,6 +7,7 @@
 [*] Added 'Time' next to the clock in Vigilante,Firefigter,Paramedic,PizzaBoy,Shooting Range and Cone Crazy like in other gta games.
 [*] Love Fist limo now has 10% chance of alarm trigger once you steal it.
 [*] Fixed some grammar mistakes regarding death messages of npcs in the missions (LCS/VCS uses the same fix actually)
+[*] Fixed the sphere in front of the Ocean View Hotel during the intro, now its destroyed as soon as you approach the marker instead of after the cutscene ends.
 
 
 ------------------------------
