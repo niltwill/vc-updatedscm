@@ -5911,6 +5911,7 @@ if or
 00F6:   player $PLAYER_CHAR 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
 jf @HELP_1228
 Player.CanMove($PLAYER_CHAR) = False
+Marker.Disable($66)
 Camera.SetPosition(264.334, -1311.16, 10.297, 0.0, 0.0, 0.0)
 Camera.PointAt(263.577, -1310.574, 10.589, 2)
 wait 1000
@@ -5949,7 +5950,6 @@ jf @HELP_1822
 if
 00F5:   player $PLAYER_CHAR 0 225.0 -1277.3 11.5 radius 2.5 2.5 3.0
 jf @HELP_1822
-Marker.Disable($66)
 if
   $222 == 0 // integer values
 jf @HELP_1383
