@@ -806,6 +806,7 @@ $332 = 1 // integer values
 if
   $6845 == 0 // integer values
 jf @FIRETRU_5254
+03C3: set_timer_with_text_to $6841 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $6841 count_in_direction 1
 $6845 = 1 // integer values
 jump @FIRETRU_5258
