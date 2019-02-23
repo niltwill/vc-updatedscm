@@ -158,6 +158,7 @@ if and
   $1607 == 1 // integer values
   $1613 == 0 // integer values
 jf @CARPRK1_1194
+03C3: set_timer_with_text_to $1614 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $1614 count_in_direction 1
 16@ = 0 // integer values
 $1613 = 1 // integer values
