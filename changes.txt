@@ -6,6 +6,7 @@
 [*] Removed alarm from ambulance and vigilante vehicles (this was supposed to be done in 2.0b but it wasnt)
 [*] Added 'Time' next to the clock in Vigilante,Firefigter,Paramedic,PizzaBoy,Shooting Range and Cone Crazy like in other gta games.
 [*] Love Fist limo now has 10% chance of alarm trigger once you steal it.
+[*] Fixed some grammar mistakes regarding death messages of npcs in the missions (LCS/VCS uses the same fix actually)
 
 
 ------------------------------
