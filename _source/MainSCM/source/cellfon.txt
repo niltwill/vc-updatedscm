@@ -2313,6 +2313,7 @@ jf @CELL_15593
 if
     82D8:   not actor $PLAYER_ACTOR current_weapon == 0
 then
+    046F: store_player $PLAYER_CHAR currently_armed_weapon_to $713
     01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
 end
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
@@ -2476,6 +2477,8 @@ if
 jf @CELL_16087
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Player.CanMove($PLAYER_CHAR) = True
+WAIT 1000
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
 04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 0
 
