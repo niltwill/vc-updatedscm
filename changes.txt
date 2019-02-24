@@ -8,6 +8,7 @@
 [*] Love Fist limo now has 10% chance of alarm trigger once you steal it.
 [*] Fixed some grammar mistakes regarding death messages of npcs in the missions (LCS/VCS uses the same fix actually)
 [*] Fixed the sphere in front of the Ocean View Hotel during the intro, now its destroyed as soon as you approach the marker instead of after the cutscene ends.
+[*] Weapon equipped before the player anwsered a phonecall is now restored to players hands after the phonecall is over (Like in GTA LCS and SA)
 
 
 ------------------------------
