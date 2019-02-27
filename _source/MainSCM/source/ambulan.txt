@@ -138,6 +138,7 @@ $6745 += 1 // integer values
 0070: $6740 /= $6744 // integer values
 0084: $6755 = $6740 // integer values and handles
 $6755 /= 2 // integer values
+03C3: set_timer_with_text_to $6740 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $6740 count_in_direction 1
 if
   $ONMISSION == 0 // integer values

@@ -695,6 +695,7 @@ $6900 = 45000 // integer values
 
 :COPCAR_4298
 $6900 += 30000 // integer values
+03C3: set_timer_with_text_to $6900 type 1 text 'RACES'  // TIME:
 014E: start_timer_at $6900 count_in_direction 1
 $6909 = 1 // integer values
 

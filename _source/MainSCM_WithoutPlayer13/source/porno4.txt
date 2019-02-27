@@ -534,7 +534,7 @@ jf @PORNO4_2640
 
 :PORNO4_2640
 $4517 = Car.Create(#PCJ600, -6.4, 957.1, 9.4)
-02AC: set_car $4517 immunities 0 0 0 1 0
+0224: set_car $4517 health_to 3000
 $4518 = Actor.Create(CivMale, #GDA, 0.3, 958.3, 9.9)
 fade 1 1500
 00BC: text_highpriority 'POR4_01' 5000 ms 1  // ~g~Go ~y~Downtown~g~ and adjust the spotlight on top of the building.

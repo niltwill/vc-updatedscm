@@ -6,7 +6,7 @@ ATUTOR2 ~g~Drive the patients to the Hospital carefully! Each crash reduces thei
 A_COMP1 Paramedic missions complete: $~1~
 A_COMP2 Paramedic Level 12 completed! Outrun your foes and leave them in the dust with the unlimited sprint ability!
 A_FAIL2 ~r~Your lack of urgency was fatal to the patient!
-A_FAIL3 ~r~You killed one of the patients!
+A_FAIL3 ~r~One of the patients died!
 A_FULL ~r~Ambulance full! Drop your current patients off at the ~g~Hospital~r~ first!
 A_PASS Patient rescued!
 A_OVER ~r~Your time as an ambulance driver is over!
@@ -250,7 +250,7 @@ COK4_28 ~g~Get to the Marquis before the other boats do!
 COK4_3 So why in the hell are we running errands for him?
 COK4_31 ~g~Go to the Squalo at the jetty!
 COK4_34 ~g~Take those boats out!
-COK4_36 ~r~You killed the freelancer!
+COK4_36 ~r~The freelancer died!
 COK4_4 The more we learn now, the less we have to learn when we take this town over!
 COK4_5 I like your style, man. Real fresh.
 COK4_A Eject! PLASTIC CRAP!
@@ -437,7 +437,7 @@ CUB1_07 You a little scaredy kitten, baby boy! Go cry to your mommy!
 CUB1_08 You a big waste of space. Walk like a man, talk like a man, but you drive like an idiot!
 CUB1_09 Man, you the man, mang! I like you, mang. I like you a lot!
 CUB1_10 Anytime, mang! 'cause you got cojones. And all my friends, they got big cojones!
-CUB1_11 ~r~You Killed Rico!
+CUB1_11 ~r~Rico died!
 CUB1_12 Go through the first checkpoint to begin the test.
 CUB1_13 ~g~You have three minutes to get round the course.
 CUB1_14 ~r~Get back in the boat!
@@ -843,7 +843,7 @@ LAW1_14 Wow, I like, really dig your motorcycle.
 LAW1_15 Yeah babe, just picked it up from Howlin' Pete's.
 LAW1_2 ~g~Get to the Colonel's yacht.
 LAW1_3 ~g~Take Mercedes to the Pole Position club.
-LAW1_4 ~r~You killed Mercedes!
+LAW1_4 ~r~Mercedes died!
 LAW1_5 Will you be working for my father?
 LAW1_6 Maybe.
 LAW1_7 Do you mind me resting my hand in your lap?
@@ -940,7 +940,7 @@ LAW3_4 You know he's not guilty.
 LAW3_5 You remember Giorgio? Remember he's innocent?
 LAW3_6 Not guilty, understand? Good.
 LAW3_7 ~g~Go and intimidate the two jurors, but DON'T kill them!
-LAW3_8 ~r~You killed a Juror!
+LAW3_8 ~r~A Juror died!
 LAW3_9 ~g~Smash up the Juror's car to get him out!
 LAW3_A Ugh! Oh, for god's sake, it's you! Oh, jeez, I'm gonna need new pants!
 LAW3_B Hey, those psychos from up north, they've been on the horn, and they're coming down here soon.
@@ -2290,7 +2290,7 @@ PRO3_01 OK, Lance. Let's get the cops' attention!
 PRO3_02 ~h~Take a cop car and go and plant the bomb at the ~g~Tarbrush Cafž~h~ in the ~y~North Point Mall~h~.
 PRO3_03 ~g~You've left Lance behind, go and get him.
 PRO3_04 ~g~Let's go.
-PRO3_05 ~r~You killed Lance!
+PRO3_05 ~r~Lance died!
 PRO3_07 ~q~You have blown your cover. Hurry up and plant the bomb!
 PRO3_08 ~g~Get back to the Vercetti Estate on Starfish Island.
 PRO3_09 Tie 'em up and gag 'em!

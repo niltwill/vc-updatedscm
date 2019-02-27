@@ -5910,6 +5910,7 @@ if or
 00FA:   player $PLAYER_CHAR stopped 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
 00F6:   player $PLAYER_CHAR 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
 jf @HELP_1228
+Marker.Disable($66)
 Player.CanMove($PLAYER_CHAR) = False
 Camera.SetPosition(264.334, -1311.16, 10.297, 0.0, 0.0, 0.0)
 Camera.PointAt(263.577, -1310.574, 10.589, 2)
