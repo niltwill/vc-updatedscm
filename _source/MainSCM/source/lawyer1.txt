@@ -774,32 +774,17 @@ jump @LAWYER1_4398
 0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODCARGOSHP73 0
 0363: toggle_model_render_at -647.0 -1323.0 19.9 radius 100.0 object #LODARGOHULL2 0
 00C0: set_current_time 23 00
-if
-00E0:   player $PLAYER_CHAR driving
-jf @LAWYER1_5013
-00DA: $2108 = player $PLAYER_CHAR car
-Car.StorePos($2108, $2116, $2117, $2118)
-$2119 = Car.Angle($2108)
-03F3: get_car $2108 color 3@ 4@
-$2109 = Car.Model($2108)
-if
-00DC:   player $PLAYER_CHAR driving $2108
 jf @LAWYER1_5006
 012A: put_player $PLAYER_CHAR at -246.5 -1360.5 7.1 and_remove_from_car
-Car.Destroy($2108)
 $2107 = 1 // integer values
 
 :LAWYER1_5006
 jump @LAWYER1_5033
 
 :LAWYER1_5013
-0055: put_player $PLAYER_CHAR at -246.5 -1360.5 7.1
+012A: put_player $PLAYER_CHAR at -246.5 -1360.5 7.1 and_remove_from_car
 
 :LAWYER1_5033
-Car.Destroy($2102)
-Car.Destroy($2103)
-Car.Destroy($2104)
-Car.Destroy($2105)
 if
    not Actor.Dead(13@)
 jf @LAWYER1_5074
@@ -808,10 +793,6 @@ Actor.RemoveReferences(13@)
 :LAWYER1_5074
 Model.Destroy(#FREEWAY)
 Model.Destroy(#HMYST)
-Model.Destroy(#CHEETAH)
-Model.Destroy(#INFERNUS)
-Model.Destroy(#STRETCH)
-Model.Destroy(#BANSHEE)
 01BD: $29 = current_time_in_ms
 $30 = 0 // integer values
 
@@ -1636,42 +1617,18 @@ Model.Load(#BANSHEE)
 :LAWYER1_9661
 if or
    not Model.Available(#FREEWAY)
-   not Model.Available(#CHEETAH)
-   not Model.Available(#INFERNUS)
-   not Model.Available(#STRETCH)
-   not Model.Available(#BANSHEE)
 823D:   not special_actor 3 loaded
 jf @LAWYER1_9712
 wait 0
 jump @LAWYER1_9661
 
 :LAWYER1_9712
-0395: clear_area 1 at -246.5 -1360.5 range 7.1 1.0
-0395: clear_area 1 at -249.1 -1362.1 range 7.1 1.0
-0395: clear_area 1 at -236.6 -1374.6 range 7.1 1.0
-0395: clear_area 1 at -240.8 -1355.3 range 7.1 1.0
-0395: clear_area 1 at -244.2 -1339.2 range 7.1 1.0
-0395: clear_area 1 at -233.3 -1386.0 range 7.1 1.0
-$2102 = Car.Create(#CHEETAH, -236.6, -1374.6, -100.0)
-Car.Angle($2102) = 280.3
-$2103 = Car.Create(#INFERNUS, -240.8, -1355.3, -100.0)
-Car.Angle($2103) = 99.8
-$2104 = Car.Create(#STRETCH, -244.2, -1339.2, -100.0)
-Car.Angle($2104) = 103.8
-$2105 = Car.Create(#BANSHEE, -233.3, -1386.0, -100.0)
-Car.Angle($2105) = 96.8
-if
   $2107 == 1 // integer values
 jf @LAWYER1_10049
-Model.Load($2109)
-038B: load_requested_models
-$2108 = Car.Create($2109, $2116, $2117, $2118)
-Car.Angle($2108) = $2119
-0229: set_car $2108 color_to 3@ 4@
 
 :LAWYER1_10049
 Camera.SetAtPos(-245.8, -1360.7, 7.1)
-0055: put_player $PLAYER_CHAR at -245.8 -1360.7 7.1
+012A: put_player $PLAYER_CHAR at -245.8 -1360.7 7.1 and_remove_from_car
 0171: set_player $PLAYER_CHAR z_angle_to 276.0
 $2099 = Actor.Create(CivFemale, #SPECIAL03, -244.5, -1362.1, 7.1)
 039E: set_actor $2099 locked_while_in_vehicle 1
