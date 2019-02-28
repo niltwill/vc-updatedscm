@@ -1,24 +1,27 @@
 ------------------------------
+{V2.1d}
+------------------------------
+[*] Vehicles in 'The Party' will no longer despawn and spawn again after the yaht cutscene resulting in player's vehicle and parked cars fixing themself if you damaged them before the cutscene (as well as player's vehicle fixing itself after the cutscene)
+
+------------------------------
 {V2.1c}
 ------------------------------
-
-[*] PCJ-600 in 'G-spotlight' now has incereased health a bit so it wont be possible to catch fire with it easily (Previous fix didnt worked as for some reason VC ignores damage proof code on bikes)
-[*] Removed alarm from ambulance and vigilante vehicles (this was supposed to be done in 2.0b but it wasnt)
-[*] Added 'Time' next to the clock in Vigilante,Firefigter,Paramedic,PizzaBoy,Shooting Range and Cone Crazy like in other gta games.
-[*] Love Fist limo now has 10% chance of alarm trigger once you steal it.
-[*] Fixed some grammar mistakes regarding death messages of npcs in the missions (LCS/VCS uses the same fix)
-[*] Fixed the sphere in front of the Ocean View Hotel during the intro, now its destroyed as soon as you approach the marker instead of after the cutscene ends.
-[*] Weapon equipped in Tommy's hands before you anwsered a phonecall is now restored after phonecall is over (Like in LCS and SA)
+[*] PCJ-600 in 'G-spotlight' now has increased health so it won't be possible to catch fire with it easily (previous fix didn't work as for some reason the game ignores damage-proof code on bikes)
+[*] Removed alarm from ambulance and vigilante vehicles (this was supposed to be done in 2.0b but it wasn't)
+[*] Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
+[*] The Love Fist limo and the Romero Hearse now has a 10% chance of an alarm trigger once you steal it
+[*] Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
+[*] Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends
+[*] Before answering a phone call, the equipped weapon in Tommy's hands now gets restored after the call is over (like in LCS and SA)
 
 
 ------------------------------
 {V2.1b}
 ------------------------------
-
 [*] Added a briefcase in restored 'Supply & Demand' cutscene.
 [*] Tweaked the wanted level check in 'Treacherous Swine' (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
 [*] Removed Tommy hand animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
-[*] Fixed a bug where "Mission Passed" sound wouldn't play after 'PCJ Playground' is passed (Rockstar's Bug)
+[*] Fixed a bug where the "Mission Passed" sound wouldn't play after 'PCJ Playground' is passed
 [*] Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
 [*] Fine-tuned the car health's check in 'Jury Fury' (hitting it with the fist once or very slightly damaging the car would not not trigger the nearby jury's attention before)
 
