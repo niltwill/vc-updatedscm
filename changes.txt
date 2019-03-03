@@ -2,6 +2,7 @@
 {V2.1d}
 ------------------------------
 [*] Vehicles in 'The Party' will no longer despawn and spawn again after the yaht cutscene resulting in player's vehicle and parked cars fixing themself if you damaged them before the cutscene (as well as player's vehicle fixing itself after the cutscene)
+[*] "Press TAB to anwser the Call" textbox will now always display,game destroys previous textboxes correctly now (Previous fix was broken so it didnt had any effect on the game)
 
 ------------------------------
 {V2.1c}
