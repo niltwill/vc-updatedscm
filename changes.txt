@@ -1,4 +1,11 @@
 ------------------------------
+{V2.1d}
+------------------------------
+[*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
+[*] The "press TAB to answer the call" textbox will now always display, the game now correctly destroys previous textboxes
+
+
+------------------------------
 {V2.1c}
 ------------------------------
 [*] PCJ-600 in 'G-spotlight' now has increased health so it won't be possible to catch fire with it easily (previous fix didn't work as for some reason the game ignores damage-proof code on bikes)

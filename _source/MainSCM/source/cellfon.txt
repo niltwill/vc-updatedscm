@@ -2235,6 +2235,7 @@ return
 $1177 = 1 // integer values
 $1173 = 0 // integer values
 03E6: remove_text_box
+wait 1000
 0512: show_permanent_text_box 'ANSWER'
 $ONMISSION = 1 // integer values
 $1180 = 1 // integer values

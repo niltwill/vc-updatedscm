@@ -92,3 +92,4 @@ something misbehaving, or some missing collision. So use this at your own risk a
 [*] Fine-tuned the car health's check in 'Jury Fury' (hitting it with the fist once or very slightly damaging the car would not not trigger the nearby jury's attention before)
 [*] PCJ-600 in 'G-spotlight' now has increased health so it won't be possible to catch fire with it easily (previous fix didn't work as for some reason the game ignores damage-proof code on bikes)
 [*] Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
+[*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
