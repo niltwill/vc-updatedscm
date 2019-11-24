@@ -1,4 +1,13 @@
 ------------------------------
+{V2.1e}
+------------------------------
+
+[*] The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
+
+NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you don't want to lose your save games for earlier UpdatedSCM, DON'T upgrade to this new version (which only contains this one change), just use the extra CLEO script.
+
+
+------------------------------
 {V2.1d}
 ------------------------------
 [*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
