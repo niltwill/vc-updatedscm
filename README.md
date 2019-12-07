@@ -1,12 +1,10 @@
 # GTA: Vice City Updated SCM
-test:
-
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
-
 Besides this, I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
 
-**Warning:**
+
+## Warning:
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
 It could corrupt your previous save files, if you use a different SCM for it.
 It's best used for a 100% completed save file if you cannot afford the time to restart the game.
@@ -14,6 +12,7 @@ It's best used for a 100% completed save file if you cannot afford the time to r
 Before you load OR overwrite any saved files with the Save Friendly SCM, please create a backup of your save files, so if they get corrupted or anything, you can restore them. The save files can be found under "your username > Documents > GTA Vice City User Files"
 
 The author of this mod does not take any responsibility for damaged or corrupted save files. Use this mod at your own risk and care.
+
 
 ## Installation guidelines:
 
@@ -116,8 +115,8 @@ And after that, add this line:
 </details>
 
 
-## Extras
-
+<details>
+  <summary>Extras (click me to expand)</summary>
 * I highly recommend to check out the few other additional CLEO scripts. See the "readme" file there for more information about what they do.
 
 * If you want to see the "VCPD Cheetah" displayed, then edit "data\default.ide"
@@ -136,23 +135,12 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 
 
 * If you frequently get peds to deliver to at the not-yet-accessible Haitian factory during pizzaboy side mission in Little Havanna, you may overwrite the "paths.ipl". It doesn't do anything else other then removing the ped paths at the Haitian Factory. Afterwards the mission, it's probably the best if you restore the original file.
+</details>
 
 
-## Could not fix
-
+<details>
+  <summary>Couldn't be fixed: (click me to expand)</summary>
 * Camera angles when entering/exiting certain interiors (and in some missions) in standard control
 * "Can you make SWAT not to attack player after losing the cops when you get out from the bank in The Job..." I tried for a while, but there is not a good outcome, maybe that's why it has been left this way. To get around this problem, I recommend either killing them all or going on a different route. Might try to experiment with this a bit more later on.
 * "Make soldiers attack you only when you get into Fort Baxter and make them spawn only in the base" I experimented for a bit, but if the soldiers are friendly to you outside, then civilians seem to spawn inside the base AND no soldiers ever spawn until you get into or near to Fort Baxter. And if you go into the area of the base, then the soldiers will immediately spawn and attack. Therefore, this cannot be tweaked.
-
-
-## Leftover suggestions
-
-These are not likely to be included any time soon.
-
-* Reimplement a "Get Back in" timer for taxi driver, firefighter and paramedic sidemissions. Not done, due to it being crash prone.
-* Implement a trash dash sidemission like in LCS (seems quite complicated).
-* "Make taxi driver side-mission more interesting like in GTA VCS that you need to follow the car, rob the shops, and all that in taxi"
-
-
-## Did not include
-* All beta things: UpdatedSCM is NOT a beta mod (despite that it includes some beta stuff). UpdatedSCM aims to keep the vanilla VC experience with a few improvements,fixes and extras but nothing-over-the-line.
+</details>
