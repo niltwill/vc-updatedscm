@@ -1,4 +1,9 @@
-# GTA: Vice City's Updated SCM
+# GTA: Vice City Updated SCM
+test:
+<details>
+  <summary>Click to expand</summary>
+  whatever
+</details>
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 
