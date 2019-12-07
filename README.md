@@ -15,7 +15,7 @@ Before you load OR overwrite any saved files with the Save Friendly SCM, please 
 
 The author of this mod does not take any responsibility for damaged or corrupted save files. Use this mod at your own risk and care.
 
-##Installation guidelines:
+## Installation guidelines:
 
 <details>
   <summary>Installation manual for average user: (click me to expand)</summary>
