@@ -15,9 +15,10 @@ Before you load OR overwrite any saved files with the Save Friendly SCM, please 
 
 The author of this mod does not take any responsibility for damaged or corrupted save files. Use this mod at your own risk and care.
 
+##Installation guidelines:
 
 <details>
-  <summary>## Installation manual for average user: (click me to expand)</summary>
+  <summary>Installation manual for average user: (click me to expand)</summary>
 	
 1. Download [Mod Loader](https://github.com/thelink2012/modloader/releases).
 
@@ -38,7 +39,7 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 
 
 <details>
-  <summary>##Experienced user installation manual: (click me to expand)</summary>
+  <summary>Installation manual for experienced user: (click me to expand)</summary>
 	*WARNING: ALWAYS create a backup of the original files and then do the necessary changes.
 
 6. Copy folders "data", "text" to the root game's directory.
