@@ -6,55 +6,24 @@
 
 NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you don't want to lose your save games for earlier UpdatedSCM, DON'T upgrade to this new version (which only contains this one change), just use the extra CLEO script.
 
-
-------------------------------
-{V2.1d}
-------------------------------
 [*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
 [*] The "press TAB to answer the call" textbox should now always display, the game now correctly destroys previous textboxes????
-
 [*] Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
 [*] The Love Fist limo now has a 10% chance of alarm going off once you steal it
 [*] Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
 [*] Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends
-
-
-------------------------------
-{V2.1b}
-------------------------------
 [*] Added a briefcase in restored 'Supply & Demand' cutscene.
 [*] Tweaked the wanted level check in 'Treacherous Swine' (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
 [*] Removed Tommy hand animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
 [*] Fixed a bug where the "Mission Passed" sound wouldn't play after 'PCJ Playground' is passed
 [*] Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
-
-
-------------------------------
-{V2.1}
-------------------------------
-
 [*] You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks
 [*] The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
 |*| Silent's contribution: 'The Job' mission code cleanup)
-
-
-------------------------------
-{V2.0e}
-------------------------------
-
 [*] Fixed the appearance of the construction building that you destroy in 'Demolition Man'
-
-
-------------------------------
-{V2.0d}
-------------------------------
-
 [*] Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)
 [*] The Pole Position Club is now accessible without buying it, and the private service is also available, but it will cost you $50 each segment instead of $5 and it will not complete the asset mission, regardless of how much you stay, without you buying the asset first
-
-
 [*] Text colorization is mostly restored to the default pink ones (in american.gxt and american.fxt)????
-
 [*] Included the spanish translation now
 [*] Vercetti's Gang car changed to Banshee from Stallion
 [*] In 'Jury Fury', damaging the Admiral will now make the jury enter the car instead of just doing nothing
@@ -62,21 +31,12 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] The third Cuban should also die now if he somewhat gets stuck while charging at the sniper
 [*] Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)???
 [*] In 'V.I.P.', fixed looped arrow marker (that's the reason behind why it seemed standstill) and delivering him with the rival taxi will no longer fail the mission
-
 [*] Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
-
 [*] Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
 [*] Timer in taxi mission will be set according to destination each time, thus the time will not increase infinitely anymore??????
-
-
 [*] "Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing
-
-
 [*] You cannot start the mission 'Alloy Wheels of Steel' if in the cop outfit.
-
-
 [*] No more infinite ammo with the pistol in 'The Shootist' in the first round, and you can also no longer shoot before the message "live ammunition...
-
 [*] Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)??
 [*] Fixed(?) random traffic vehicle passing by in 'Alloy Wheels of Steel' (might be sometimes visible)???
 [*] The target in 'Four Iron' will now escape when you hit him with a (not-so-deadly) weapon from the distance (otherwise if you do not get too close, you can easily kill him without him moving an inch)
@@ -93,14 +53,10 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 		- Demolition Man (the control of the RC heli)
 		- Mall Shootout (ammu-nation hint, triangle blip help)
 		- Guardian Angels (the assault rifle help, crouching, bike drive-by help)
-
 [*] GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
 [*] Phil now sits in the left side of the Patriot in Boomshine Saigon??????
 [*] In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger
-
-[*] Fixed randomization in FUD 
-[*] Fixed original time counting bug in TAXI
-
+[*] Fixed randomization in FUD
 [*] In 'The Job' mission, you will now have to lose your wanted level before initiating the bank robbery
 [*] Increased bike's health in 'G-spotlight'
 [*] Game no longer says 'tutorial' messages around Ocean View Hotel while on a mission?????
@@ -108,16 +64,12 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] The taxi driver in taxi sidemission will not enter as passenger anymore (because when he does, Tommy can no longer enter back to that taxi)??????
 [*] Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)??????
 [*] Male ped in 'The Shootist' is now the one used in the cutscene instead of MALE01
-
-
 [*] Fix some male actors being created as female ones
 [*] No more afternoon time setting in 'Supply & Demand'
 [*] Skimmer inside large hangar at airport now spawns after mission 'Dildo Dodo'????
 [*] Romero Hearse now spawns next to the pizza restaurant in Little Haiti after 'Two Bit Hit'
 [*] Changed text from "Mission failed" to "Pizza mission ended" when you turn off pizza mission needs revisit the text??
 [*] Prostitute health bonus is no longer removed upon saving
-
-
 [*] Fixed camera in 'The Party' after leaving Rafael's (now facing towards the bike)?????
 [*] Player is no longer facing towards the Lawyer's office in 'Jury Fury' after the opening cutscene????
 [*] In 'Riot', after getting the worker clothes you will no longer face Rafael's entrance???
@@ -198,16 +150,8 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] Fixed the Pole Position Strip Club's dark world bike glitch
 [*] Added more ped variety in 'The Job' (inside the bank)
 [*] Tommy is relocated at the back seat of the Admiral in intro cutscene.
-
-
-------------------------------
-{V1.6b}
-------------------------------
-
 [*] Post mission monologues in KENT1 and BARON5 are now handled by a separate script
 [*] All R3 submissions now require a double-tap to cancel, like in LCS and VCS
-
-
 - Fixed all-caps ragetext in Navel Engagement mission - KILL ALL THE HAITIANS ON THE BOAT -> Kill the Haitians on the boats
 - Tidied up dialogue from 'In the Beginning' (Subtitles now synchronise properly)????
 - 'Ocean View' --> 'Ocean View Hotel'????
@@ -257,28 +201,13 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 - Coloured more of the mission specific dialogue where it was needed
 - Corrected raeg caps for wheelies / stoppies????
 - Fixed up the hidden package reward names so they're coloured like the outfit delivery messages????
-
 [*] Cheetah, Infernus, Stretch and Banshee no longer disappears in "The Party".???????
 [*] GDA and GDB appear as the security now (so one can give a different texture to GDB)
 [*] In 'Hog Tied' mission, the shark gang members no longer fade away like ghosts.
 [*] In 'Hog Tied', Tommy no longer gets stuck when leaving the bike at the mission's end.
 [*] Added MC Tommy outfit (available after completing 'Hog Tied' mission).
-
-
-------------------------------
-{V1.5b}
-------------------------------
-
 [*] Drug dealer in Love Juice changed to BMYCR from BMYBB????
-
-
-------------------------------
-{V1.5a}
-------------------------------
-
 [*] You can no longer block the courier's path with a car in "Mall Shootout" (at the exit).
-[*] The French in "All Hands On Deck!" now appear as the FSFA model instead of HMOST?????
-
 [*] Fixed the cellphone-weapon selecting glitch (prevents Tommy from glitching weapons in place of phone etc.)
 [*] Mesa Grande in Fort Baxter Air Base (like on VCS, spawns after mission "The Fastest Boat") revisit pls logic
 [*] Stretch in front of hotel in Washington Beach near the Pay 'n' Spray by Apartment 3C
@@ -288,57 +217,20 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 * Fixed monologue in BARON5 - now plays only after the mission is passed
 * Fixed monologues in ROCKB1, COUNT1, CAP_1 - their behaviour now matches stock post-cutscene monologues
 * Removed unused code from OVALRNG, JUNKFUD, HJ, USJ, sh*t, SECURI, IMPORT, CELL, PICKUPS
-
-Note: Save-friendly SCM doesn't seem to load old save games with these, so it remained as it was.
-
+Note: Save-friendly SCM doesn't seem to load old save games with these above, so it remained as it was.
 [*] Mercedes will now only say "Do you mind me resting my hand in your lap?" in 'The Party' mission if she sits next to you in a car.
-
-
 [*] Added two extra audio lines in "The Job" by Tommy if you get the attention of the cops: "Crap, now the cops are onto us!", "And we're not even there yet!"
-
-
 [*] Fixed the borked vehicle spawn points and added Zera's fixed vehicle spawn points (and forgot to mention some of these).
 	- The rewarded Hunter at Ocean Beach is now positioned at the helipad properly.
  	- Phil's Patriot position slightly changed.?????
-	- Now both the Admiral and Stretch spawns simultaneously at the Mansion (hopefully).
-
-
-	=> Thanks to Jitterdoomer for contributions.
+	- Now both the Admiral and Stretch spawns simultaneously at the Mansion.
 [*] Tommy's clothes are no longer reverted to his default one when entering missions 'Riot', 'Four Iron', 'No Escape?', 'Cop Land'.
-
-------------------------------
-[*] Added some extra CLEO spawns that extend the save-friendly SCM
-
 [*] Voodoo model now gets destroyed in 'Cannon Fodder' instead of the non-existing 'Stinger' (original car)????
-
-
-------------------------------
-{V1.3}
-------------------------------
-
-Zera's additional contributions:
-
 [*] Hotring cars now spawn as a reward after completing the mission "Hotring" (similarly to Bloodring)??
 [*] Spand Express now spawns regularly after you complete "Riot" (at that mission location)
 [*] Fix for the bodyguards on Vercetti Estate almost never spawning (the ones you get after 100% completion)
-
 [*] The "An Old Friend..." as the latest mission if you save the game before Lawyer's first mission is now displayed instead of "In the beginning..."????
-
-
-------------------------------
-{V1.2a}
-------------------------------
-
 [*] Fixed the quadruple insane stunt
-	=> Thanks to Zera
-
-
-------------------------------
-{V1.2}
-------------------------------
-
-Here are the changes I borrowed from BeckermannDewitt's improvements and fixes, many thanks for him for letting me merge these:
-
 [*] Added the PS2 scene skips in the intro "Enter does a full skip and Shift/Space/LMB do partial skips. Also made the gamepad do a full skip with Cross/A and partial skip with Triangle/Y. Both Cross and Start just perform a full cutscene skip."
 [*] In mission 'Jury Fury', the woman the jury talks with is WFYBU instead of BFYBE, and the golfer now runs over a construction worker (WMYCW) instead of dockworker (HMYAP)
 [*] After the Spand Express van hits the Admiral in 'Jury Fury', it now drops a screwdriver and a hammer, instead of two hammers.
@@ -353,17 +245,9 @@ Here are the changes I borrowed from BeckermannDewitt's improvements and fixes, 
 [*] The hidden package under Starfish Island is no longer below the ground
 [*] Added long-needed Ambulance spawn point in front of hospital in Little Havana (similar to Vice City Stories).
 [*] Solid black palette used for UC vehicles changed to a lighter shade (still black).
-
 [*] At the Pole Position Strip Club, if the barkeeper's alive, she will now say some random lines to you if you get nearby to the counter (these were unused audio).
 [*] Fixed clothing pickups for Havana outfit
-	=> Thanks to Blackbird88
 [*] Fixed a player animation stuck bug in 'The Job' (when you get out of the car around the bank area).
-
-
-------------------------------
-{V1.1}
-------------------------------
-
 [*] Restored Tommy's speaking animation with the french in "Mall Shoutout" and with Lance in "Guardian Angels" (at the carpark).
 [*] Lance now does not disappear instantly in Guardian Angels after the bike ambush (if you ever looked back before getting on the bike, he just vanished without a trace...).
 [*] Phnom Penh '86 now includes three additional audio lines: "You sure is better at shooting than talking." and "Thanks. You're a real charmer yourself." and "I know, Tommy."
@@ -383,9 +267,6 @@ Here are the changes I borrowed from BeckermannDewitt's improvements and fixes, 
 [*] The Topfun van is no longer locked in position at the end of 'Bombs Away!'
 [*] Bugfix in 'Love Juice' regarding trying to pick up Mercedes. It is now only possible in a car or motorcycle (with exception Pizza Boy/Baggage) as per instructed. No more easy heli rides!
 [*] The player is now removed from any vehicle and the vehicle despawned after the intro cutscene in 'Publicity Tour' if he was in one.
-
-
-
 [*] Lance now appears as IGBudy3 instead of the usual IGBuddy in 'Death Row'.
 [*] Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
 
