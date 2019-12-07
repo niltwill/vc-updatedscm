@@ -1,9 +1,6 @@
 # GTA: Vice City Updated SCM
 test:
-<details>
-  <summary>Click to expand</summary>
-  whatever
-</details>
+
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 
@@ -20,7 +17,8 @@ The author of this mod does not take any responsibility for damaged or corrupted
 
 
 ## Installation manual for average user:
-
+<details>
+  <summary>Click to expand</summary>
 1. Download [Mod Loader](https://github.com/thelink2012/modloader/releases).
 
 2. Also download [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
@@ -37,6 +35,7 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 6.Copy "UpdatedSCM" folder to your Mod Loader folder inside of game's root directory
 
 ## End of Modloader version installation tutorial.
+</details>
 
 
 
