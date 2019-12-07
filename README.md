@@ -17,7 +17,8 @@ The author of this mod does not take any responsibility for damaged or corrupted
 
 
 <details>
-  <summary>## Installation manual for average user: (click me)</summary>
+  <summary>## Installation manual for average user: (click me to expand)</summary>
+	
 1. Download [Mod Loader](https://github.com/thelink2012/modloader/releases).
 
 2. Also download [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
@@ -32,14 +33,12 @@ This, by default (on 64 bit systems and non-Steam version) should be "C:\Program
 5. Extract "UpdatedSCM" archive and then find and open "Mod Loader Version"
 
 6.Copy "UpdatedSCM" folder to your Mod Loader folder inside of game's root directory
-
-## End of Modloader version installation tutorial.
 </details>
 
 
 
-##Experienced user installation manual:
-
+<details>
+  <summary>##Experienced user installation manual: (click me to expand)</summary>
 	*WARNING: ALWAYS create a backup of the original files and then do the necessary changes.
 
 6. Copy folders "data", "text" to the root game's directory.
@@ -113,6 +112,7 @@ And after that, add this line:
 	The two LOD model files "LODngst2mesh.dff" and "LODngst2meshdam.dff" also collision file "nbeachw.col" are needed to fix the destroyed construction building, so it remains destroyed from far away as well.
 
 	*Warning: Make sure to replace "nbeachw.col" in gta3.img otherwise the game will crash with an unhandled exception after passing "Demolition Man" and driving away as the LOD model won't be able to find its collisions.
+</details>
 
 
 ## Extras
