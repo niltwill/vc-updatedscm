@@ -16,9 +16,8 @@ Before you load OR overwrite any saved files with the Save Friendly SCM, please 
 The author of this mod does not take any responsibility for damaged or corrupted save files. Use this mod at your own risk and care.
 
 
-## Installation manual for average user:
 <details>
-  <summary>Click to expand</summary>
+  <summary>## Installation manual for average user: (click me)</summary>
 1. Download [Mod Loader](https://github.com/thelink2012/modloader/releases).
 
 2. Also download [ThirteenAG's Ultimate ASI Loader](https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases).
