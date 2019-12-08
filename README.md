@@ -533,3 +533,10 @@ something misbehaving, or some missing collision. So use this at your own risk a
 [*] Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
 [*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
 </details>
+
+## Special thanks for several things in the mod goes to:
+ - Noskillx (Organization & coding)
+ - Silent (Organization & coding)
+ - Kalvin (MC-Tommy outfit)
+ - Zera (quadruple insane stunt as well as vehicle spawn fixes)
+ - Blackbird88 (Havava outfit fix)
