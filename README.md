@@ -2,8 +2,6 @@
 ### Current version: v2.0 reorganized
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
-Besides this, I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
-
 
 ## Warning:
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
@@ -136,6 +134,8 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 
 
 * If you frequently get peds to deliver to at the not-yet-accessible Haitian factory during pizzaboy side mission in Little Havanna, you may overwrite the "paths.ipl". It doesn't do anything else other then removing the ped paths at the Haitian Factory. Afterwards the mission, it's probably the best if you restore the original file.
+
+I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
 </details>
 
 
