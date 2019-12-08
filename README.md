@@ -1,4 +1,4 @@
-# GTA: Vice City Updated SCM
+# GTA: Vice City Updated SCM :palm_tree::palm_tree:
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 Besides this, I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
