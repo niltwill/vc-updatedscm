@@ -1,4 +1,5 @@
 # GTA: Vice City Updated SCM :palm_tree::palm_tree:
+### Current version: v2.0 reorganized
 
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 Besides this, I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
@@ -421,27 +422,27 @@ Changes and improvements made to the original:
 - Supply & Demand now includes the lines: "We made it! Those other boats ain't VIP class." (when reaching the Marquis), "They're matchwood! And fish food!" while damaging the cuban ships, plus "Bridge coming up!" after the jetty part (if the helicopter is still there).
 - In The Job mission, Tommy now says "New threads, huh? You need more than that, pal!" during the closing cutscene in response to Kent Paul. Also the line from "Yeah, and you'll put somebody's eye out!" is now said after "For god's sake, Phil, stop waving that thing around!"
 - Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
-- +Added some audio lines ingame:
+- Added some audio lines ingame:
 	- During the mission "The Chase" after the Shark boss gets into the BF injection, Tommy will soon make the remark: "Sick of 		these pricks!"
 	- During the mission "Death Row", Diaz's goons will taunt you verbally at the junk yard: "Do you think you can get away with 		this?".
 	- During the mission "Keep your Friends Close", Tommy will now shout "Sonny? SONNY! I'm coming for ya!" in response to Sonny's 		killing order.
 	- Strippers now say some comments to you in the Pole Position Club when the camera changes, at the private stripteaser room. -		This might increase the monotonous scene's atmosphere a bit.
 
-+Phone call additions:
-[*] During Umberto Robina's call, Tommy will now reply with an additional "Yeah, maybe..." when Umberto asks: "wanna work for me?"
-[*] Ken Rosenberg now gives you some business advice (after completing the mission 'Shakedown')
-[*] Kent Paul rings you up regarding the the SWAT retirement fund which is later seized in the mission 'The Job', happens shortly after you purchase the Malibu Club.
-[*] Phil Cassidy now calls after you complete the last storyline mission (Keep your Friends Close)
-[*] Mercedes now also rings you up after you complete the mission 'Rub Out'.
-[*] Mercedes now rants to you about Jezz Torrent after you complete the mission 'Love Juice'.
+- Phone call additions:
+	- During Umberto Robina's call, Tommy will now reply with an additional "Yeah, maybe..." when Umberto asks: "wanna work for 		me?"
+	- Ken Rosenberg now gives you some business advice (after completing the mission 'Shakedown')
+	- Kent Paul rings you up regarding the the SWAT retirement fund which is later seized in the mission 'The Job', happens shortly 		after you purchase the Malibu Club.
+	- Phil Cassidy now calls after you complete the last storyline mission (Keep your Friends Close)
+	- Mercedes now also rings you up after you complete the mission 'Rub Out'.
+	- Mercedes now rants to you about Jezz Torrent after you complete the mission 'Love Juice'.
 
-+ Tommy is more talkative and says a few more inner-monologues to the player:
-[*] After completing the mission 'Death Row'
-[*] After completing the mission 'Rub Out'
-[*] After initial cutscene of 'Love Juice'
-[*] After initial cutscene of 'Spilling the Beans'
-[*] After initial cutscene of 'Cap the Collector'
-[*] After finishing with Avery's business advice call (after 'Shakedown')
+- Tommy is more talkative and says a few more inner-monologues to the player:
+	- After completing the mission 'Death Row'
+	- After completing the mission 'Rub Out'
+	- After initial cutscene of 'Love Juice'
+	- After initial cutscene of 'Spilling the Beans'
+	- After initial cutscene of 'Cap the Collector'
+	- After finishing with Avery's business advice call (after 'Shakedown')
 </details>
 
 
