@@ -203,7 +203,7 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 - Fixed Havana Outfit (cuban) clothing pickup being no longer accessible if you do some missions in certain order.
 - Fixed a player animation stuck bug in 'The Job' (when you get out of the car around the bank area).
 
-### - Some fixes from the Japanese re-release:
+- Some fixes from the Japanese re-release:
 	- The message 'Come back when you have finished the Biker gang missions.' is shown for 4 seconds instead of 1
 	- Duration of Pole Position mission complete cutscene is slightly longer.
 	- The Infernus spawn inside the mall is disabled during 'All Hands On Deck!'
