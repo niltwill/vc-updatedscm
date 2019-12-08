@@ -1,7 +1,6 @@
 # GTA: Vice City Updated SCM :palm_tree::palm_tree:
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 ### Current version: v2.0 new (reorganized)
-Latest version changes only:
 
 ## Warning:
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
@@ -148,12 +147,12 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 ## Changelog:
 
 <details>
-  <summary>Latest changes (click me to expand) (full changelog underneath)</summary>
+  <summary>Latest changelog (click me to expand) (full changelog underneath)</summary>
 - Comming soon
 </details>
 
 <details>
-  <summary>Full version (click me to expand)</summary>
+  <summary>Full changelog (click me to expand)</summary>
 Fixes:
 
 - The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
@@ -450,7 +449,7 @@ Changes and improvements made to the original:
 
 
 <details>
-  <summary>Save compatibile version (click me to expand)</summary>
+  <summary>Save-friendly changelog (click me to expand)</summary>
 This save-friendly version contains only fixes, but nothing that would make your old save game files crash or force you to start a new game.
 Audio additions are all removed because they might cause some ... bugs and then make it unable to complete the game..The old saved ones.
 Also there are no model changes of any kind. Though some vehicle additions exist as CLEO scripts.
