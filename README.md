@@ -534,7 +534,7 @@ something misbehaving, or some missing collision. So use this at your own risk a
 [*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
 </details>
 
-## Special thanks for several things in the mod goes to:
+## Special thanks to:
  - Noskillx (Organization & coding)
  - Silent (Organization & coding)
  - Kalvin (MC-Tommy outfit)
