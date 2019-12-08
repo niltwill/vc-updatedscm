@@ -150,29 +150,51 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 
 <details>
   <summary>UpdatedSCM Full</summary>
-------------------------------
-{V2.1e}
-------------------------------
+Fixes:
 
-[*] The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
++The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
++Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends.
++Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
++You no longer have to be in a vehicle after loosing wanted levelin 'Treacherous Swine' for the mission to pass. (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
++Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene.
++Fixed a bug where severe side-missions wouldn't play "Mission Passed" sound after you pass them.
++You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks.
++The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
++Fixed the appearance of the construction building that you destroy in 'Demolition Man'
++The third Cuban should also die now if he somewhat gets stuck while charging at the sniper in "Cannon Fodder"
++Fixed looped arrow marker in the mission "V.I.P" (that's the reason behind why it seemed standstill) and delivering client with the rival taxi will no longer fail the mission.
++Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
++Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
++"Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing.
++Fixed(?) random traffic vehicle passing by in 'Alloy Wheels of Steel' (might be sometimes visible)???
++In 'Sir, Yes Sir' mission, "I'm getting out of here" will no longer play if both the soldiers in the tank are dead, and the "Civilian in the TANK! STOP HIM!" will no longer play if all soldiers are killed?????
++GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
++Fixed randomization in FUD.
++Game no longer says 'tutorial' messages around Ocean View Hotel while on a mission?????
++Fixed the text bug with 80 hidden packages (now will say either Diaz's Mansion or Vercetti Estate)
++Male ped in 'The Shootist' is now the one used in the cutscene instead of MALE01.
++Fixed some male actors being created as female ones.
++Prostitute health bonus is no longer removed upon saving.
++Fixed widescreen issues in Avery missions and at the end of G-spotlight.
++The player can no longer move before the cutscenes in Avery missions (previously you could even move enough to KO yourself with the limo)
++Fixed the model destroys at the end of 'Jury Fury'???
++The GiGN no longer disappear after you chase after Pierre in the mission 'Mall Shootout'???
++Fixed bug in 'The Shootist' when you start mission using a weapon that's not a Colt pistol???
++Fixed the stuck animation in 'The Fastest Boat' after releasing the Squalo.
++In 'Treacherous Swine', after you start the mission (finished initial cutscene) in the black fade you can no longer move (previously you can accidentally get into the water)
++Fixed cutscene's end when buying the Cherry Popper Icecreams asset (previously the old lady remains visible)
+
+
 
 NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you don't want to lose your save games for earlier UpdatedSCM, DON'T upgrade to this new version (which only contains this one change), just use the extra CLEO script.
 
-[*] Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene
 [*] The "press TAB to answer the call" textbox should now always display, the game now correctly destroys previous textboxes????
 [*] Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
 [*] The Love Fist limo now has a 10% chance of alarm going off once you steal it
-[*] Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
-[*] Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends
 [*] Added a briefcase in restored 'Supply & Demand' cutscene.
-[*] Tweaked the wanted level check in 'Treacherous Swine' (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
 [*] Removed Tommy hand animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
-[*] Fixed a bug where the "Mission Passed" sound wouldn't play after 'PCJ Playground' is passed
 [*] Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
-[*] You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks
-[*] The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
 |*| Silent's contribution: 'The Job' mission code cleanup)
-[*] Fixed the appearance of the construction building that you destroy in 'Demolition Man'
 [*] Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)
 [*] The Pole Position Club is now accessible without buying it, and the private service is also available, but it will cost you $50 each segment instead of $5 and it will not complete the asset mission, regardless of how much you stay, without you buying the asset first
 [*] Text colorization is mostly restored to the default pink ones (in american.gxt and american.fxt)????
@@ -180,20 +202,14 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] Vercetti's Gang car changed to Banshee from Stallion
 [*] In 'Jury Fury', damaging the Admiral will now make the jury enter the car instead of just doing nothing
 [*] Cubans entering your vehicle at the start of 'Cannon Fodder' now takes longer than two seconds
-[*] The third Cuban should also die now if he somewhat gets stuck while charging at the sniper
+
 [*] Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)???
-[*] In 'V.I.P.', fixed looped arrow marker (that's the reason behind why it seemed standstill) and delivering him with the rival taxi will no longer fail the mission
-[*] Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
-[*] Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
 [*] Timer in taxi mission will be set according to destination each time, thus the time will not increase infinitely anymore??????
-[*] "Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing
 [*] You cannot start the mission 'Alloy Wheels of Steel' if in the cop outfit.
 [*] No more infinite ammo with the pistol in 'The Shootist' in the first round, and you can also no longer shoot before the message "live ammunition...
 [*] Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)??
-[*] Fixed(?) random traffic vehicle passing by in 'Alloy Wheels of Steel' (might be sometimes visible)???
 [*] The target in 'Four Iron' will now escape when you hit him with a (not-so-deadly) weapon from the distance (otherwise if you do not get too close, you can easily kill him without him moving an inch)
 [*] In 'All Hands On Deck', the heli drivers and hunter driver are changed to FSFA
-[*] In 'Sir, Yes Sir' mission, "I'm getting out of here" will no longer play if both the soldiers in the tank are dead, and the "Civilian in the TANK! STOP HIM!" will no longer play if all soldiers are killed?????
 [*] Lance will now say "Come on man, drive more careful!" if you damage the Infernus quite some in 'Back Alley Brawl'. (The other with the Strip Club is removed, as it conflicts with the other, there can only be one dialogue and because we first have to buy that before we can even enter it, so it makes no sense for Lance to say that! Not to mention we got sorta introduced to it in the first mission.)?????
 [*] You can now skip tutorial messages and info pickups at the start of the game. Press the SPRINT button to quit the player lock and go on without having to wait a little, or press the ACTION key under 6 seconds to remove help. If no action is taken, game includes help after 6 seconds. This does not have much impact on the game, it's merely an additional option for the seasoned players who don't need this info being repeated.
 	In no-help mode, some of these missions' help messages are also disabled:
@@ -205,37 +221,32 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 		- Demolition Man (the control of the RC heli)
 		- Mall Shootout (ammu-nation hint, triangle blip help)
 		- Guardian Angels (the assault rifle help, crouching, bike drive-by help)
-[*] GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
+
 [*] Phil now sits in the left side of the Patriot in Boomshine Saigon??????
 [*] In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger
-[*] Fixed randomization in FUD
+
 [*] In 'The Job' mission, you will now have to lose your wanted level before initiating the bank robbery
 [*] Increased bike's health in 'G-spotlight'
-[*] Game no longer says 'tutorial' messages around Ocean View Hotel while on a mission?????
-[*] Fixed the text bug with 80 hidden packages (now will say either Diaz's Mansion or Vercetti Estate)
 [*] The taxi driver in taxi sidemission will not enter as passenger anymore (because when he does, Tommy can no longer enter back to that taxi)??????
 [*] Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)??????
-[*] Male ped in 'The Shootist' is now the one used in the cutscene instead of MALE01
-[*] Fix some male actors being created as female ones
+
+
 [*] No more afternoon time setting in 'Supply & Demand'
 [*] Skimmer inside large hangar at airport now spawns after mission 'Dildo Dodo'????
 [*] Romero Hearse now spawns next to the pizza restaurant in Little Haiti after 'Two Bit Hit'
 [*] Changed text from "Mission failed" to "Pizza mission ended" when you turn off pizza mission needs revisit the text??
-[*] Prostitute health bonus is no longer removed upon saving
 [*] Fixed camera in 'The Party' after leaving Rafael's (now facing towards the bike)?????
 [*] Player is no longer facing towards the Lawyer's office in 'Jury Fury' after the opening cutscene????
 [*] In 'Riot', after getting the worker clothes you will no longer face Rafael's entrance???
 [*] The 'G-spotlight' mission now starts at 22:00 instead of 17:00
-[*] Fixed widescreen error at the end of G-spotlight
-[*] Fixed widescreen errors in Avery missions
-[*] The player can no longer move before the cutscenes in Avery missions (previously you could even move enough to KO yourself with the limo)
+
+
+
 [*] Added two star wanted level if you fail the mission 'Waste the Wife'
-[*] Fixed the two identical HMYAP peds in the Bobcat in 'Autocide' (now the driver is BMODK)
+[*] Changed the two identical HMYAP peds in the Bobcat in 'Autocide' (now the driver is BMODK)
 [*] Decreased the last target's bike speed in 'Autocide'????
 [*] Vehicles and targets no longer instantly disappear in 'Autocide'
 [*] Replaced the HMYRI ped in 'Road Kill' with the Burger guy
-[*] Fixed the model destroys at the end of 'Jury Fury'???
-[*] The GiGN no longer disappear after you chase after Pierre in the mission 'Mall Shootout'??
 [*] Army gang now carries MP5 as secondary weapon???
 [*] Vercetti's gang now uses the Stallion.
 [*] Moved the unique white admiral at the mansion and tucked it next to the stairs
@@ -246,7 +257,9 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] Limos now have unique colors in 'Keep Your Friends Close'
 [*] The mobs now wear Uzi instead of Tec-9s in 'Keep Your Friends Close'?????
 [*] Sonny's ruger is replaced to M4 in 'Keep Your Friends Close'?????
-[*] Fixed bug in 'The Shootist' when you start mission using a weapon that's not a Colt pistol???
+
+
+
 [*] After you release the Squalo in 'The Fastest Boat', an alarm will sound off
 [*] The Diaz goons in 'Treacherous Swine' are now CLA and CLB (originally they are both CLA)
 [*] The shark goons no longer fly the sparrows during "Phnom Penh '86" (HMORI -> sea sparrow, WMOBU -> sparrow)???
@@ -260,11 +273,14 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] The PSG-1 (laser) rifle pickup is changed to the regular Sniper one in 'Cannon Fodder'
 [*] In 'All Hands On Deck!' mission, the GiGN now arrive in the FBI Washington (instead of the regular Washington)needs to be removed makes no sense
 [*] The speed of drug dealer in 'Love Juice' is slightly decreased????
-[*] Fixed the stuck animation in 'The Fastest Boat' after releasing the Squalo
+
+
 [*] More bad guy variety in 'The Fastest Boat' (looks better than having to face the same HMYST guys)
 [*] In 'Demolition Man', now HMYAP and WMYCW are the workers (instead of just WMYCW)
 [*] In 'Demolition Man', there is now GDA and GDB instead of just GDA (if you use a different texture)
-[*] In 'Treacherous Swine', after you start the mission (finished initial cutscene) in the black fade you can no longer move (previously you can accidentally get into the water)
+
+
+
 [*] In 'Treacherous Swine', at the penthouse, if you park a vehicle near the entrance it will now disappear when Gonzales is leaving???
 [*] Added a chauffeur, Avery Carrington and Donald Love when the limo arrives
 [*] From the Coach controlled by the AI, random peds will exit now and not only MALE01?????
@@ -290,7 +306,11 @@ NOTE: Only UpdatedSCM contains the new fix. For the save-friendly SCM or if you 
 [*] The counter for drug deals (Distribution) no longer resets back to 0 (only after 1000 deals), it keeps adding up (no longer need to do 50 all at once)
 [*] Slightly increased detection of the pizzabox because sometimes when you toss the pizza at them, they don't comprehend it
 [*] Fixed dark sky glitch after cutscene in 'The Fastest Boat'
-[*] Fixed cutscene's end when buying the Cherry Popper Icecreams asset (previously the old lady remains visible)
+
+
+
+
+
 [*] Red Tracksuit outfit now gets unlocked after completion of Juju Scramble (instead of being available since the very beginning of the game)
 [*] The weapons for sale at Ammu-Nation / tool stores were wonky or floating out of bounds: now the weapons lie flat against the wall instead of floating away from it
 [*] Increased the owners health in Ammu-Nation and tool stores (they do not die as quickly now)
