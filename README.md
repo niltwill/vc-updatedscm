@@ -152,7 +152,7 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
   <summary>UpdatedSCM Full</summary>
 Fixes:
 
-+The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
+> +The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
 +Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends.
 +Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
 +You no longer have to be in a vehicle after loosing wanted levelin 'Treacherous Swine' for the mission to pass. (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
