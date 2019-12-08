@@ -1,15 +1,13 @@
 # GTA: Vice City Updated SCM :palm_tree::palm_tree:
-### Current version: v2.0 reorganized
-
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
+### Current version: v2.0 reorganized
+Latest version changes only:
 
 ## Warning:
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
 It could corrupt your previous save files, if you use a different SCM for it.
-It's best used for a 100% completed save file if you cannot afford the time to restart the game.
-
+It's best used with a 100% completed save file if you cannot afford the time to restart the game.
 Before you load OR overwrite any saved files with the Save Friendly SCM, please create a backup of your save files, so if they get corrupted or anything, you can restore them. The save files can be found under "your username > Documents > GTA Vice City User Files"
-
 The author of this mod does not take any responsibility for damaged or corrupted save files. Use this mod at your own risk and care.
 
 
