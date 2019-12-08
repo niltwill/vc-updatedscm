@@ -152,37 +152,37 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
   <summary>UpdatedSCM Full</summary>
 Fixes:
 
-> +The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
->+Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends.
-> +Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
-> +You no longer have to be in a vehicle after loosing wanted levelin 'Treacherous Swine' for the mission to pass. (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
-> +Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene.
-> +Fixed a bug where severe side-missions wouldn't play "Mission Passed" sound after you pass them.
-> +You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks.
-> +The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
-> +Fixed the appearance of the construction building that you destroy in 'Demolition Man'
-> +The third Cuban should also die now if he somewhat gets stuck while charging at the sniper in "Cannon Fodder"
-> +Fixed looped arrow marker in the mission "V.I.P" (that's the reason behind why it seemed standstill) and delivering client with the rival taxi will no longer fail the mission.
-> +Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
-> +Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
-> +"Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing.
-> +Fixed(?) random traffic vehicle passing by in 'Alloy Wheels of Steel' (might be sometimes visible)???
-> +In 'Sir, Yes Sir' mission, "I'm getting out of here" will no longer play if both the soldiers in the tank are dead, and the "Civilian in the TANK! STOP HIM!" will no longer play if all soldiers are killed?????
-> +GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
-> +Fixed randomization in FUD.
-> +Game no longer says 'tutorial' messages around Ocean View Hotel while on a mission?????
-> +Fixed the text bug with 80 hidden packages (now will say either Diaz's Mansion or Vercetti Estate)
-> +Male ped in 'The Shootist' is now the one used in the cutscene instead of MALE01.
-> +Fixed some male actors being created as female ones.
-> +Prostitute health bonus is no longer removed upon saving.
-> +Fixed widescreen issues in Avery missions and at the end of G-spotlight.
-> +The player can no longer move before the cutscenes in Avery missions (previously you could even move enough to KO yourself with the limo)
-> +Fixed the model destroys at the end of 'Jury Fury'???
-> +The GiGN no longer disappear after you chase after Pierre in the mission 'Mall Shootout'???
-> +Fixed bug in 'The Shootist' when you start mission using a weapon that's not a Colt pistol???
-> +Fixed the stuck animation in 'The Fastest Boat' after releasing the Squalo.
-> +In 'Treacherous Swine', after you start the mission (finished initial cutscene) in the black fade you can no longer move (previously you can accidentally get into the water)
-> +Fixed cutscene's end when buying the Cherry Popper Icecreams asset (previously the old lady remains visible)
+- The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
+- Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends.
+- Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
+- You no longer have to be in a vehicle after loosing wanted levelin 'Treacherous Swine' for the mission to pass. (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
+- Vehicles in 'The Party' will no longer despawn and spawn again after the yacht cutscene, resulting in the player's vehicle and the parked cars getting repaired if you damaged them before the cutscene.
+- Fixed a bug where severe side-missions wouldn't play "Mission Passed" sound after you pass them.
+- You can no longer go back with the boat in 'The Fastest Boat' before releasing it from the docks.
+- The courier should no longer get stuck if you skip his cutscene in 'Mall Shootout'
+- Fixed the appearance of the construction building that you destroy in 'Demolition Man'
+- The third Cuban should also die now if he somewhat gets stuck while charging at the sniper in "Cannon Fodder"
+- Fixed looped arrow marker in the mission "V.I.P" (that's the reason behind why it seemed standstill) and delivering client with the rival taxi will no longer fail the mission.
+- Game no longer crashes when you type cheat BIGBANG to destroy all vehicles in first cutscene while Ken is driving to his office (making this a fast way to get your game started if you're impatient)
+- Weather will now reset to extra sunny (like the other two Avery missions) in Two Bit Hit (previously if it's raining, the rain falls inside the limo)
+- "Use this" subtitle will now be displayed in 'Treacherous Swine' at the right timing.
+- Fixed(?) random traffic vehicle passing by in 'Alloy Wheels of Steel' (might be sometimes visible)???
+- In 'Sir, Yes Sir' mission, "I'm getting out of here" will no longer play if both the soldiers in the tank are dead, and the "Civilian in the TANK! STOP HIM!" will no longer play if all soldiers are killed?????
+- GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
+- Fixed randomization in FUD.
+- Game no longer says 'tutorial' messages around Ocean View Hotel while on a mission?????
+- Fixed the text bug with 80 hidden packages (now will say either Diaz's Mansion or Vercetti Estate)
+- Male ped in 'The Shootist' is now the one used in the cutscene instead of MALE01.
+- Fixed some male actors being created as female ones.
+- Prostitute health bonus is no longer removed upon saving.
+- Fixed widescreen issues in Avery missions and at the end of G-spotlight.
+- The player can no longer move before the cutscenes in Avery missions (previously you could even move enough to KO yourself with the limo)
+- Fixed the model destroys at the end of 'Jury Fury'???
+- The GiGN no longer disappear after you chase after Pierre in the mission 'Mall Shootout'???
+- Fixed bug in 'The Shootist' when you start mission using a weapon that's not a Colt pistol???
+- Fixed the stuck animation in 'The Fastest Boat' after releasing the Squalo.
+- In 'Treacherous Swine', after you start the mission (finished initial cutscene) in the black fade you can no longer move (previously you can accidentally get into the water)
+- Fixed cutscene's end when buying the Cherry Popper Icecreams asset (previously the old lady remains visible)
 
 
 
