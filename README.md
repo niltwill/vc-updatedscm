@@ -148,6 +148,11 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 ## Changelog:
 
 <details>
+  <summary>Latest changes (click me to expand) (full changelog underneath)</summary>
+- Comming soon
+</details>
+
+<details>
   <summary>Full version (click me to expand)</summary>
 Fixes:
 
