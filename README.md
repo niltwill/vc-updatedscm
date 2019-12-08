@@ -150,7 +150,7 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 ## Changelog:
 
 <details>
-  <summary>UpdatedSCM Full</summary>
+  <summary>Full version (click me to expand)</summary>
 Fixes:
 
 - The Ocean View Hotel's lightning issue fixed (the door was very black and the interior was darker than what it's supposed to be). 
@@ -447,7 +447,7 @@ Changes and improvements made to the original:
 
 
 <details>
-  <summary>save-friendly version</summary>
+  <summary>Save compatibile version (click me to expand)</summary>
 This save-friendly version contains only fixes, but nothing that would make your old save game files crash or force you to start a new game.
 Audio additions are all removed because they might cause some ... bugs and then make it unable to complete the game..The old saved ones.
 Also there are no model changes of any kind. Though some vehicle additions exist as CLEO scripts.
