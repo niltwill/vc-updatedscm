@@ -1,4 +1,4 @@
-!(https://cdn.discordapp.com/attachments/404222921440231435/653619316964458507/updatedscmlogofinal.png)
+![Image description](https://cdn.discordapp.com/attachments/404222921440231435/653619316964458507/updatedscmlogofinal.png)
 In short, this mod is supposed to increase the gaming experience with GTA: Vice City. It mostly contains fixes and some improvements.
 ### Current version: v2.0 new (reorganized)
 
