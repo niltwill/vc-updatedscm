@@ -540,5 +540,6 @@ something misbehaving, or some missing collision. So use this at your own risk a
  - Noskillx (Organization & coding)
  - Silent (Organization & coding)
  - Kalvin (MC-Tommy outfit)
- - Zera (quadruple insane stunt as well as vehicle spawn fixes)
+ - B_Smiles (quadruple insane stunt as well as vehicle spawn fixes)
  - Blackbird88 (Havava outfit fix)
+ - Matt1010 Realization of the logo.
