@@ -636,7 +636,7 @@ jf @ROCKB1_3445
 00D9: $6132 = actor $6118 car // add to mission cleanup
 0190: add_vehicle $6132 to_flipped_check
 03CC: car $6132 add_to_stuck_car_check 0.1 = 2000
-Car.SetMaxSpeed($6132, 37.0)
+Car.SetMaxSpeed($6132, 40.0)
 00AE: set_vehicle $6132 traffic_behavior_to 2
 Car.SetToPsychoDriver($6132)
 $6152 = 0 // integer values
@@ -1534,7 +1534,7 @@ jf @ROCKB1_8500
 $6120 = Marker.CreateAboveActor($6118)
 00BC: text_highpriority 'RBM1_17' 5000 ms 1  // ~g~Kill the dealer and get the drugs!
 00AE: set_vehicle $6122 traffic_behavior_to 2
-Car.SetMaxSpeed($6122, 37.0)
+Car.SetMaxSpeed($6122, 40.0)
 Car.SetToPsychoDriver($6122)
 $6131 = 1 // integer values
 $6130 = 7 // integer values
@@ -1568,7 +1568,7 @@ if
    not Car.Wrecked($6122)
 jf @ROCKB1_8639
 00AE: set_vehicle $6122 traffic_behavior_to 2
-Car.SetMaxSpeed($6122, 37.0)
+Car.SetMaxSpeed($6122, 40.0)
 Car.SetToPsychoDriver($6122)
 
 :ROCKB1_8639

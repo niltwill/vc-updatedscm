@@ -1054,7 +1054,7 @@ jf @ASSIN3_6463
 if
    Actor.InCar($6375, $6383)
 jf @ASSIN3_6455
-Car.SetMaxSpeed($6383, 37.0)
+Car.SetMaxSpeed($6383, 42.0)
 00AE: set_vehicle $6383 traffic_behavior_to 2
 Car.SetToPsychoDriver($6383)
 $6399 = 0 // integer values
