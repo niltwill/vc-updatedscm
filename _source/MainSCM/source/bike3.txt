@@ -716,6 +716,10 @@ jump @BIKE3_2986
 $123 = 1 // integer values
 Marker.Disable($5284)
 Marker.Disable($5283)
+Car.Destroy($5356)
+Car.Destroy($5357)
+Car.Destroy($5358)
+Car.Destroy($5359)
 02A3: enable_widescreen 1
 Player.ClearWantedLevel($PLAYER_CHAR)
 Player.CanMove($PLAYER_CHAR) = False
@@ -769,7 +773,7 @@ jump @BIKE3_4358
 
 :BIKE3_4509
 011C: actor $PLAYER_ACTOR clear_objective
-$5345 = Actor.Create(Gang6, #BKA, -608.72, 650.2, 10.06)
+$5345 = Actor.Create(Gang6, #BKA, -615.72, 650.2, 10.06)
 01ED: clear_actor $5345 threat_search
 0319: set_actor $5345 running 1
 0239: actor $PLAYER_ACTOR run_to -593.153 657.515

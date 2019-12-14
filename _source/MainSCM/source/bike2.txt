@@ -26,6 +26,7 @@ wait 0
 023C: load_special_actor 1 'CSBIGM'
 023C: load_special_actor 2 'CSPLAY'
 023C: load_special_actor 3 'MGOONA'
+023C: load_special_actor 4 'MSERVER'
 select_interior 11
 Camera.SetAtPos(-597.02, 642.46, 11.0)
 04F9: set_extracolors 15 fade 0
@@ -36,6 +37,7 @@ if or
 823D:   not special_actor 1 loaded
 823D:   not special_actor 2 loaded
 823D:   not special_actor 3 loaded
+823D:   not special_actor 4 loaded 
 jf @BIKE2_258
 wait 0
 jump @BIKE2_220
@@ -50,6 +52,8 @@ jump @BIKE2_220
 02E6: set_cutscene_anim $125 'CSPLAY'
 02E5: $144 = create_cutscene_object #SPECIAL03
 02E6: set_cutscene_anim $144 'MGOONA'
+02E5: $156 = create_cutscene_object #SPECIAL04 
+02E6: set_cutscene_anim $156 'MSERVER'
 0395: clear_area 1 at -597.25 655.87 range 10.06 1.0
 0055: put_player $PLAYER_CHAR at -597.25 655.87 10.06
 0171: set_player $PLAYER_CHAR z_angle_to 0.0
