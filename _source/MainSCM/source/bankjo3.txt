@@ -461,7 +461,7 @@ $4073 = -74.78 // floating-point values
 $4074 = 9.59 // floating-point values
 01EB: set_traffic_density_multiplier_to 0.3
 Model.Load(#SABRETUR)
-Model.Load(#SENTINEL)
+Model.Load(#SENTXS)
 023C: load_special_actor 3 'IGHLARY'
 03CF: load_wav 'CARREV' as 1
 03CF: load_wav 'BNK3_3A' as 2
@@ -469,7 +469,7 @@ Model.Load(#SENTINEL)
 :BANKJO3_2877
 if or
    not Model.Available(#SABRETUR)
-   not Model.Available(#SENTINEL)
+   not Model.Available(#SENTXS)
 83D0:   not wav 1 loaded
 83D0:   not wav 2 loaded
 823D:   not special_actor 3 loaded
@@ -495,7 +495,7 @@ Car.SetToNormalDriver($3996)
 00AE: set_vehicle $3996 traffic_behavior_to 2
 Car.SetMaxSpeed($3996, 45.0)
 Car.ImmuneToNonPlayer($3996) = True
-$4093 = Car.Create(#SENTINEL, $4007, $4008, $4009)
+$4093 = Car.Create(#SENTXS, $4007, $4008, $4009)
 Car.Angle($4093) = $3990
 036A: put_actor $PLAYER_ACTOR in_car $4093
 0395: clear_area 0 at 473.713 -149.895 range 10.546 1.0
@@ -1270,7 +1270,7 @@ $ONMISSION = 0 // integer values
 01EB: set_traffic_density_multiplier_to 1.0
 0296: unload_special_actor 3
 Model.Destroy(#SABRETUR)
-Model.Destroy(#SENTINEL)
+Model.Destroy(#SENTXS)
 01E7: remove_forbidden_for_cars_cube 444.9 -203.82 8.0 572.14 133.77 20.0
 Marker.Disable($3998)
 Marker.Disable($4081)
