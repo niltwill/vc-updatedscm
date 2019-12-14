@@ -280,7 +280,6 @@ Changes and improvements made to the original:
 - The 'G-spotlight' mission now starts at 22:00 instead of 17:00
 - Added two star wanted level if you fail the mission 'Waste the Wife'
 - Changed the two identical HMYAP peds in the Bobcat in 'Autocide' (now the driver is BMODK)
-- Decreased the last target's bike speed in 'Autocide'????
 - Vehicles and targets no longer instantly disappear in 'Autocide'
 - Replaced the HMYRI ped in 'Road Kill' with the Burger guy
 - Army gang now carries MP5 as secondary weapon???
@@ -305,7 +304,6 @@ Changes and improvements made to the original:
 - In mission 'RC Bandit Race', randomized the vehicle colours (originally all were always the same colour)
 - The PSG-1 (laser) rifle pickup is changed to the regular Sniper one in 'Cannon Fodder'
 - In 'All Hands On Deck!' mission, the GiGN now arrive in the FBI Washington (instead of the regular Washington)needs to be removed makes no sense
-- The speed of drug dealer in 'Love Juice' is slightly decreased????
 - More bad guy variety in 'The Fastest Boat' (looks better than having to face the same HMYST guys)
 - In 'Demolition Man', now HMYAP and WMYCW are the workers (instead of just WMYCW)
 - In 'Demolition Man', there is now GDA and GDB instead of just GDA (if you use a different texture)
