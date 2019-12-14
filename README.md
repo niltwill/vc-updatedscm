@@ -137,18 +137,24 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 
 
 <details>
-  <summary>Couldn't be fixed: (click me to expand)</summary>
-* Camera angles when entering/exiting certain interiors (and in some missions) in standard control
-* "Can you make SWAT not to attack player after losing the cops when you get out from the bank in The Job..." I tried for a while, but there is not a good outcome, maybe that's why it has been left this way. To get around this problem, I recommend either killing them all or going on a different route. Might try to experiment with this a bit more later on.
-* "Make soldiers attack you only when you get into Fort Baxter and make them spawn only in the base" I experimented for a bit, but if the soldiers are friendly to you outside, then civilians seem to spawn inside the base AND no soldiers ever spawn until you get into or near to Fort Baxter. And if you go into the area of the base, then the soldiers will immediately spawn and attack. Therefore, this cannot be tweaked.
+  <summary>To-do: (click me to expand)</summary>
+- Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay'n'Spray.
+- Fix Army spawning and attacking the player outside of Fort Baxter.
 </details>
 
 
 ## Changelog:
 
 <details>
-  <summary>Latest changelog (click me to expand) (full changelog underneath)</summary>
-- Comming soon
+  <summary>Latest update changelog (click me to expand) (full changelog underneath)</summary>
+- Replaced Sentinel with Sentinel XS in "The Driver"
+- Removed changes related to "slowing down" certain npc's vehicles in missions included in previous releases, we don't want to touch game's difficulty.
+- Phil's patriot in "Boomshine Saigon" is now fireproof and Phil will no longer flee out of the vehicle if you'l try to catch the car on fire.
+- Ability to skip all of the game help messages when starting new game is back.
+- Phone-calls are now skip-able again. (the same way like in GTA SA/LCS)
+- Restored the misplaced waitress in "Messing with the man" so you can use a mod to fix her model and animations to see it.
+- Moved biker's spawn location in the last cutscene of "Hog Tied" so he'l no longer appear out of nowhere (this is done to support "RestoreCutsceneFOV = 0" option in Widescreen Fix)
+- Gang Burrito's are now instantly destroyed once you park Angel in the marker in front of Biker Clubhouse in "Hog Tied" (This is done to prevent some weird stuff going on on the cutscene like in the original)
 </details>
 
 <details>
