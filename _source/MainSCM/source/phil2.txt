@@ -218,10 +218,6 @@ jump @PHIL2_1193
 if
 856A:   not has_cutscene_been_interrupted
 jf @PHIL2_1294
-if and
-840C:   not german_game
-840B:   not french_game
-jf @PHIL2_1294
 gosub @PHIL2_7155
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -237,10 +233,6 @@ jump @PHIL2_1294
 :PHIL2_1331
 if
 856A:   not has_cutscene_been_interrupted
-jf @PHIL2_1380
-if and
-840C:   not german_game
-840B:   not french_game
 jf @PHIL2_1380
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -269,10 +261,6 @@ jump @PHIL2_1419
 if
 856A:   not has_cutscene_been_interrupted
 jf @PHIL2_1505
-if and
-840C:   not german_game
-840B:   not french_game
-jf @PHIL2_1505
 gosub @PHIL2_7155
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -288,10 +276,6 @@ jump @PHIL2_1505
 :PHIL2_1542
 if
 856A:   not has_cutscene_been_interrupted
-jf @PHIL2_1591
-if and
-840C:   not german_game
-840B:   not french_game
 jf @PHIL2_1591
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -309,10 +293,6 @@ jump @PHIL2_1591
 if
 856A:   not has_cutscene_been_interrupted
 jf @PHIL2_1677
-if and
-840C:   not german_game
-840B:   not french_game
-jf @PHIL2_1677
 gosub @PHIL2_7155
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -328,10 +308,6 @@ jump @PHIL2_1677
 :PHIL2_1714
 if
 856A:   not has_cutscene_been_interrupted
-jf @PHIL2_1763
-if and
-840C:   not german_game
-840B:   not french_game
 jf @PHIL2_1763
 gosub @PHIL2_7155
 gosub @PHIL2_7155
@@ -409,17 +385,15 @@ jump @PHIL2_2015
 :PHIL2_2041
 $4342 = Car.Create(#PATRIOT, -1097.0, 334.0, 10.8)
 Car.Angle($4342) = 269.2
+Car.SetImmunities($4342, 0, 1, 0, 0, 0)
 0369: put_player $PLAYER_CHAR in_car $4342
 Camera.SetBehindPlayer
 01C8: $4343 = create_actor_pedtype 4 model #SPECIAL01 in_car $4342 passenger_seat 1
 04F5: unknown_actor $4343 kiss_player $PLAYER_CHAR on 1
 03FD: set_player $PLAYER_CHAR handling_responsiveness $4360
 052C: set_player $PLAYER_CHAR drunk_visuals 255
-if and
-840C:   not german_game
-840B:   not french_game
-jf @PHIL2_2146
 0332: set_actor $4343 bleeding_to 1
+jf @PHIL2_2146
 
 :PHIL2_2146
 039E: set_actor $4343 locked_while_in_vehicle 1
@@ -1105,10 +1079,6 @@ jf @PHIL2_5990
 if
    not Actor.Dead($4343)
 jf @PHIL2_5983
-if and
-840C:   not german_game
-840B:   not french_game
-jf @PHIL2_5983
 gosub @PHIL2_8127
 
 :PHIL2_5983
@@ -1135,10 +1105,6 @@ if
 jf @PHIL2_6121
 if
    not Actor.Dead($4343)
-jf @PHIL2_6114
-if and
-840C:   not german_game
-840B:   not french_game
 jf @PHIL2_6114
 gosub @PHIL2_8127
 
@@ -1179,10 +1145,6 @@ if
 jf @PHIL2_6386
 if
    not Actor.Dead($4343)
-jf @PHIL2_6379
-if and
-840C:   not german_game
-840B:   not french_game
 jf @PHIL2_6379
 gosub @PHIL2_8127
 
@@ -1282,6 +1244,7 @@ jump @PHIL2_2253
 
 :PHIL2_6994
 00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
+Car.SetImmunities($4342, 0, 0, 0, 0, 0)
 return
 
 :PHIL2_7011
@@ -1299,6 +1262,7 @@ return
 :PHIL2_7089
 $ONMISSION = 0 // integer values
 Player.CanMove($PLAYER_CHAR) = True
+Car.SetImmunities($4342, 0, 0, 0, 0, 0)
 Model.Destroy(#PATRIOT)
 Actor.RemoveReferences($4344)
 Camera.Shake(0)

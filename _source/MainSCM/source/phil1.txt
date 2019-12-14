@@ -1353,8 +1353,6 @@ jump @PHIL1_8333
 
 :PHIL1_8210
 $4281 -= 1 // integer values
-if
-840C:   not german_game
 jf @PHIL1_8316
 if
   13 > $4301 // integer values
@@ -1508,8 +1506,6 @@ jump @PHIL1_9334
 
 :PHIL1_9211
 $4281 -= 1 // integer values
-if
-840C:   not german_game
 jf @PHIL1_9317
 if
   13 > $4301 // integer values
@@ -1663,8 +1659,6 @@ jump @PHIL1_10335
 
 :PHIL1_10212
 $4281 -= 1 // integer values
-if
-840C:   not german_game
 jf @PHIL1_10318
 if
   13 > $4301 // integer values
@@ -1818,8 +1812,6 @@ jump @PHIL1_11336
 
 :PHIL1_11213
 $4281 -= 1 // integer values
-if
-840C:   not german_game
 jf @PHIL1_11319
 if
   10 > $4301 // integer values
