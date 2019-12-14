@@ -3,6 +3,7 @@ In short, this mod is supposed to increase the gaming experience with GTA: Vice 
 ### Current version: v2.0 new (reorganized)
 
 ## Warning:
+UpdatedSCM is incompatibile with Stories NPC 'Taxi Service' by Ryadica Cahya (you won't be able to start Paramedic and Firefighter)
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
 It could corrupt your previous save files, if you use a different SCM for it.
 It's best used with a 100% completed save file if you cannot afford the time to restart the game.
