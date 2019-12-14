@@ -147,6 +147,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 
 <details>
   <summary>Latest update changelog (click me to expand) (full changelog underneath)</summary>
+	
 - Replaced Sentinel with Sentinel XS in "The Driver"
 - Removed changes related to "slowing down" certain npc's vehicles in missions included in previous releases, we don't want to touch game's difficulty.
 - Phil's patriot in "Boomshine Saigon" is now fireproof and Phil will no longer flee out of the vehicle if you'l try to catch the car on fire.
