@@ -2665,8 +2665,6 @@ jf @CUB4_492
 if
 00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
 jf @CUB4_492
-if
-040C:   german_game
 jf @CUB4_302
 if
   $PASSED_HAT2_BOMBS_AWAY == 1 // integer values
