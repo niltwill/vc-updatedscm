@@ -138,6 +138,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 
 <details>
   <summary>To-do: (click me to expand)</summary>
+
 - Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay'n'Spray.
 - Fix Army spawning and attacking the player outside of Fort Baxter.
 </details>
