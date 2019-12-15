@@ -2665,7 +2665,6 @@ jf @CUB4_492
 if
 00F6:   player $PLAYER_CHAR 0 $480 $481 $482 radius 2.0 2.2 3.0
 jf @CUB4_492
-jf @CUB4_302
 if
   $PASSED_HAT2_BOMBS_AWAY == 1 // integer values
 jf @CUB4_204
@@ -5717,8 +5716,22 @@ jf @HELP_2876
 if 
   $220 == 1 // integer values 
 jf @HELP_2876 
+if
+  $CANCEL_HELP_MSGS > 0
+jf @HELP_DISABLE_PROCESS
+if and
+  $45 == 0
+  $CANCEL_HELP_MSGS == 2
+then
+    0189: $66 = unknown_create_checkpoint_at $453 $454 $455
+    03E5: text_box 'HELP42' // Follow the ~q~pink blip~w~ to find the hotel.
+    $45 = 1
+end
 if 
   $45 == 0 // integer values 
+jf @HELP_195
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_195 
 wait 500 
 0293: $18 = get_controller_mode 
@@ -5747,6 +5760,9 @@ jump @HELP_942
 if
   $82 == 0 // integer values
 jf @HELP_283
+if
+    $CANCEL_HELP_MSGS < 2
+jf @HELP_283
 if and
 $ONMISSION == 0
 00F5:   player $PLAYER_CHAR 0 240.4 -1280.2 10.0 radius 25.0 25.0 5.0
@@ -5761,6 +5777,15 @@ if
 jf @HELP_942
 if
   $25 == 0 // integer values
+jf @HELP_625
+if and
+    $25 == 0 // integer values
+    $CANCEL_HELP_MSGS == 2
+then
+    $25 = 1 // integer values
+end
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_625
 if
 00E0:   player $PLAYER_CHAR driving
@@ -5834,6 +5859,9 @@ if
   $85 == 1 // integer values
 jf @HELP_942
 if
+    $CANCEL_HELP_MSGS < 2
+jf @HELP_766
+if
    Player.Defined($PLAYER_CHAR)
 jf @HELP_942
 if
@@ -5867,6 +5895,9 @@ if
 jf @HELP_942
 if
   $47 == 0 // integer values
+jf @HELP_942
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_942
 if or
 02D7:   player $PLAYER_CHAR currentweapon == 22
@@ -5903,6 +5934,9 @@ if
 jf @HELP_1228
 if
   $17 == 0 // integer values
+jf @HELP_1228
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_1228
 if or
 00FA:   player $PLAYER_CHAR stopped 0 240.4 -1280.2 10.0 radius 4.0 4.0 3.0
@@ -5955,11 +5989,18 @@ jf @HELP_1383
 0189: $66 = unknown_create_checkpoint_at $453 $454 $455
 
 :HELP_1383
-Player.CanMove($PLAYER_CHAR) = False
-Camera.SetPosition(223.301, -1277.655, 13.822, 0.0, 0.0, 0.0)
-Camera.PointAt(222.578, -1277.013, 13.565, 2)
-03E5: text_box 'S_PROMP'  // When not on a mission you can save your progress by collecting the ~h~cassette tape pickup.
-16@ = 0 // integer values
+if
+  not $CANCEL_HELP_MSGS == 2
+then
+    Player.CanMove($PLAYER_CHAR) = False
+    Camera.SetPosition(223.301, -1277.655, 13.822, 0.0, 0.0, 0.0)
+    Camera.PointAt(222.578, -1277.013, 13.565, 2)
+    03E5: text_box 'S_PROMP'  // When not on a mission you can save your progress by collecting the ~h~cassette tape pickup.
+    16@ = 0 // integer values
+else
+    $44 = 1 // integer values
+    //jump @HELP_1822
+end
 
 :HELP_1458
 if
@@ -6065,10 +6106,14 @@ jf @HELP_1940
 Player.CanMove($PLAYER_CHAR) = True
 
 :HELP_1940
-03E5: text_box 'HELP14'  // To find the Lawyer's office, follow the ~h~L blip~w~ on the radar
-03E7: flash_hud 8 
-wait 2000 
-03E7: flash_hud -1 
+if
+  not $CANCEL_HELP_MSGS == 2
+then
+    03E5: text_box 'HELP14'  // To find the Lawyer's office, follow the ~h~L blip~w~ on the radar
+    03E7: flash_hud 8 
+    wait 2000 
+    03E7: flash_hud -1
+end 
 $46 = 1 // integer values
 
 :HELP_1970
@@ -6080,6 +6125,9 @@ if
 jf @HELP_2086
 if
   $86 == 0 // integer values
+jf @HELP_2086
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_2086
 wait 4000
 0293: $18 = get_controller_mode
@@ -6096,6 +6144,14 @@ jump @HELP_2079
 $86 = 1 // integer values
 
 :HELP_2086
+if
+  $CANCEL_HELP_MSGS == 2
+then
+    Pickup.Destroy($670)
+    Pickup.Destroy($671)
+    Pickup.Destroy($672)
+    Pickup.Destroy($673)
+end
 if and
   $47 == 1 // integer values 
   $48 == 1 // integer values 
@@ -6175,6 +6231,9 @@ $104 = 1 // integer values
 if
   $105 == 0 // integer values
 jf @HELP_2718
+if
+    $CANCEL_HELP_MSGS < 2
+jf @HELP_2718
 if or
    Pickup.Picked_up($110)
    Pickup.Picked_up($111)
@@ -6217,6 +6276,9 @@ $105 = 1 // integer values
 :HELP_2718
 if
   $106 == 0 // integer values
+jf @HELP_2787
+if
+    $CANCEL_HELP_MSGS < 2
 jf @HELP_2787
 if
 057B:   wanted_level_suspended
@@ -6509,6 +6571,49 @@ else
             $MISSION_CANCEL_STAGE = 2
         end
     end
+end
+return
+
+//before the game can begin, player can skip game's help
+:HELP_DISABLE_PROCESS
+0512: show_permanent_text_box 'HELP62' // Press the~h~ ~k~~PED_ANSWER_PHONE~ ~w~button to skip tutorial messages or the~h~ ~k~~PED_SPRINT~ ~w~button to continue with help included.
+16@ = 0
+
+:HELP_DISABLE_PROCESS2
+wait 0
+gosub @HELP_DISABLE_KEY
+if
+    16@ > 6000
+then
+    16@ = 0
+    03E6: remove_text_box
+    $CANCEL_HELP_MSGS = 1
+    jump @HELP_10
+end
+if
+    $CANCEL_HELP_MSGS == 0
+then
+    jump @HELP_DISABLE_PROCESS2
+else
+    jump @HELP_10
+end
+    
+:HELP_DISABLE_KEY
+if and
+    00E1:   player 0 pressed_button 16
+   Player.Defined($PLAYER_CHAR)
+then
+    16@ = 0
+    03E6: remove_text_box
+    $CANCEL_HELP_MSGS = 1
+end
+if and
+    00E1:   player 0 pressed_button 4
+   Player.Defined($PLAYER_CHAR)
+then
+    16@ = 0
+    03E6: remove_text_box
+    $CANCEL_HELP_MSGS = 2
 end
 return
 

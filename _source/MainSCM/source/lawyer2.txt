@@ -885,6 +885,9 @@ jf @LAWYER2_5021
 01CA: actor $2125 kill_player $PLAYER_CHAR
 011C: actor $PLAYER_ACTOR clear_objective
 0372: set_actor $2125 anim 0 wait_state_time 0 ms
+if
+  not $CANCEL_HELP_MSGS == 2
+jf @LAWYER2_5021
 0293: $18 = get_controller_mode
 if or
   $18 == 0 // integer values
@@ -1314,7 +1317,10 @@ jf @LAWYER2_7455
 
 :LAWYER2_7455
 00BC: text_highpriority 'LAW2_4' 2000 ms 2  // This way!
-wait 500
+wait 692
+if
+  not $CANCEL_HELP_MSGS == 2
+jf @LAWYER2_7571
 0293: $18 = get_controller_mode
 if or
   $18 == 0 // integer values
@@ -1368,6 +1374,9 @@ wait 0
 if
   $2123 == 0 // integer values
 jf @LAWYER2_7828
+if
+  not $CANCEL_HELP_MSGS == 2
+jf @LAWYER2_7882
 if
   16@ > 5000 // integer values
 jf @LAWYER2_7828
@@ -1790,6 +1799,9 @@ jump @LAWYER2_10173
 Actor.RemoveReferences($2128)
 
 :LAWYER2_10173
+if
+  not $CANCEL_HELP_MSGS == 2
+jf @LAWYER2_10326
 if
   7@ == 0 // integer values
 jf @LAWYER2_10326

@@ -795,6 +795,9 @@ $3391 = 1 // integer values
 
 :SERG3_5209
 if
+  not $CANCEL_HELP_MSGS == 2
+jf @SERG3_6178
+if
   $3391 == 1 // integer values
 jf @SERG3_5269
 if

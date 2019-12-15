@@ -371,6 +371,9 @@ if
   $2284 == 0 // integer values
 jf @COL2_2228
 if
+  not $CANCEL_HELP_MSGS == 2
+jf @COL2_2228
+if
 001C:   $4811 > $2283 // integer values
 jf @COL2_2228
 03E6: remove_text_box
@@ -395,6 +398,9 @@ $2284 = 2 // integer values
 :COL2_2276
 if
   $2281 == 0 // integer values
+jf @COL2_2371
+if
+  not $CANCEL_HELP_MSGS == 2
 jf @COL2_2371
 if
 00E3:   player $PLAYER_CHAR 0 3.353 -938.9778 radius 100.0 100.0

@@ -83,8 +83,7 @@ $7855 = 0 // integer values
 
 $MISSION_CANCEL_TIMER = -1
 $MISSION_CANCEL_STAGE = 0
-
-//$CANCEL_HELP_MSGS = 0
+$CANCEL_HELP_MSGS = 0
 
 $291 = 0 // integer values
 $305 = 0 // integer values
@@ -683,7 +682,6 @@ $1604 = 0 // integer values
 0236: set_gang 1 car_to #VOODOO
 0236: set_gang 2 car_to #GANGBUR
 0236: set_gang 5 car_to #ANGEL
-0236: set_gang 6 car_to #BANSHEE
 0592: unknown_gang 4 flag 1
 0237: set_gang 0 primary_weapon_to 17 secondary_weapon_to 0
 0237: set_gang 1 primary_weapon_to 17 secondary_weapon_to 0
@@ -1203,7 +1201,7 @@ $2020 = Pickup.Create(#KATANA, 15, -554.11, -547.7, 10.7)
 032B: $2032 = create_weapon_pickup #PYTHON 15 ammo 12 at -1182.7 -61.1 11.4
 032B: $2033 = create_weapon_pickup #BUDDYSHOT 15 ammo 10 at -1305.2 177.1 11.4
 032B: $2034 = create_weapon_pickup #LASER 15 ammo 14 at -1114.3 -602.0 26.0
-$2037 = Pickup.Create(#HEALTH, 1, -138.131, -981.670, 10.4)
+$2037 = Pickup.Create(#HEALTH, 1, -113.2, -975.7, 10.4)
 $2038 = Pickup.Create(#HEALTH, 15, -225.1, -1158.1, 9.1)
 $2039 = Pickup.Create(#HEALTH, 15, 456.2, -471.4, 16.6)
 $2040 = Pickup.Create(#HEALTH, 15, 377.4, 467.7, 11.6)

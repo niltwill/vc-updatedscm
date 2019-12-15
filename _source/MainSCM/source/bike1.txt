@@ -1201,9 +1201,7 @@ jump @BIKE1_7321
 02FD: text_2numbers_lowpriority 'RACETM2' $5266 $5267 5000 flag 1  // ~b~RACE TIME: ~1~:0~1~
 
 :BIKE1_7321
-jf @BIKE1_7349
-create_thread @BIK3
-jump @BIKE1_7357
+jump @BIKE1_7349
 
 :BIKE1_7349
 create_thread @BIK2

@@ -392,10 +392,9 @@ Camera.SetBehindPlayer
 04F5: unknown_actor $4343 kiss_player $PLAYER_CHAR on 1
 03FD: set_player $PLAYER_CHAR handling_responsiveness $4360
 052C: set_player $PLAYER_CHAR drunk_visuals 255
-0332: set_actor $4343 bleeding_to 1
-jf @PHIL2_2146
 
 :PHIL2_2146
+0332: set_actor $4343 bleeding_to 1
 039E: set_actor $4343 locked_while_in_vehicle 1
 0526: set_actor $4343 stay_in_car_when_jacked 1
 015D: set_gamespeed 1.0
@@ -1244,7 +1243,6 @@ jump @PHIL2_2253
 
 :PHIL2_6994
 00BA: text_styled 'M_FAIL' 5000 ms 1  // MISSION FAILED!
-Car.SetImmunities($4342, 0, 0, 0, 0, 0)
 return
 
 :PHIL2_7011

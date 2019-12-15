@@ -420,11 +420,15 @@ $2112 = 10.4 // floating-point values
 014C: set_parked_car_generator $1949 cars_to_generate_to 0
 00BC: text_highpriority 'LAW1_1' 10000 ms 1  // ~g~Go get some new threads from Rafael's clothes shop.
 02A8: $59 = create_marker 28 at $99 $100 $101
+if
+    not $CANCEL_HELP_MSGS == 2
+then
 wait 3500
 03E5: text_box 'HELP20'  // Follow the ~h~T-shirt~w~ blip on the radar to find Rafael's.
 03E7: flash_hud 8
 wait 2000
 03E7: flash_hud -1
+end
 
 :LAWYER1_2242
 if
@@ -1845,8 +1849,9 @@ Object.Destroy($1007)
 if
    not Actor.Dead($2099)
 jf @LAWYER1_11473
-if
-   Actor.Driving($2099)
+if or
+   00DF:   actor $2099 in_any_car
+   0449:   actor $2099 sitting_in_any_car
 jf @LAWYER1_11419
 0395: clear_area 1 at 98.1 -1475.3 range 9.4 1.0
 0362: put_actor $2099 at 98.1 -1475.3 9.4 and_remove_from_car
@@ -1974,10 +1979,6 @@ wait 1000
 fade 1 1000
 
 :LAWYER1_12140
-Actor.DestroyInstantly($2099)
-Camera.Restore_WithJumpCut
-043C: set_game_sounds_disable_on_fade 1
-00BE: text_clear_all
 jump @LAWYER1_12177
 
 :LAWYER1_12160
@@ -1985,6 +1986,10 @@ jump @LAWYER1_12177
 return
 
 :LAWYER1_12177
+Actor.DestroyInstantly($2099)
+Camera.Restore_WithJumpCut
+043C: set_game_sounds_disable_on_fade 1
+00BE: text_clear_all
 $PASSED_LAW1_THE_PARTY = 1 // integer values
 0394: play_music 1
 01E3: text_1number_styled 'M_PASS' number 100 time 5000 style 1  // MISSION PASSED! $~1~

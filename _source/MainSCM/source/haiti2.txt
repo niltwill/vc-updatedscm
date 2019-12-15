@@ -2997,12 +2997,8 @@ Player.Money($PLAYER_CHAR) += 2000
 0318: set_latest_mission_passed 'HAT_2'  // Bombs Away!
 030C: progress_made += 1
 0394: play_music 1
-jf @HAIT2_17655
 create_thread @HAT3
 jump @HAIT2_17660
-
-:HAIT2_17655
-Marker.Disable($283)
 
 :HAIT2_17660
 return

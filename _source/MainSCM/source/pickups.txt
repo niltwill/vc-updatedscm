@@ -1075,6 +1075,9 @@ fade 1 500
 if
   $1351 == 0 // integer values
 jf @PACKAGE_927
+if
+  not $CANCEL_HELP_MSGS == 2
+jf @PACKAGE_927
 03E5: text_box 'CLT_HL2'  // When a Clothes Pickup is collected, a one star or two star wanted level will be cleared.
 $1351 = 1 // integer values
 jump @PACKAGE_937
