@@ -1307,7 +1307,7 @@ $2095 = Pickup.Create(#ADRENALINE, 1, -839.0, 740.6, 11.3)
 02EC: put_hidden_package_at 82.7 1113.8 18.7
 02EC: put_hidden_package_at 70.5 599.3 14.5
 02EC: put_hidden_package_at 162.4 246.4 12.2
-02EC: put_hidden_package_at 43.1 -150.9 12.2
+02EC: put_hidden_package_at 44.46 -149.7 12.3
 02EC: put_hidden_package_at -46.6 257.7 24.5
 02EC: put_hidden_package_at 43.4 -15.0 17.3
 02EC: put_hidden_package_at -236.9 -588.1 10.3
