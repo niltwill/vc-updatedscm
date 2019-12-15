@@ -349,7 +349,7 @@ jump @BARON3_1811
 
 :BARON3_1853
 Object.Destroy($1786)
-03BC: $2898 = create_sphere -665.4 -1484.7 12.8 1.0
+03BC: $2898 = create_sphere -665.4 -1484.5 13.8 1.0
 $64 = Car.Create(#SQUALO, -597.6, -1507.7, 5.4)
 Car.Angle($64) = 250.0
 $65 = Marker.CreateAboveCar($64)
@@ -474,7 +474,6 @@ jf @BARON3_3128
 if
 02B3:   player $PLAYER_CHAR in_cube -643.2 -1495.3 12.0 -679.1 -1481.3 18.0 radius -19.5 sphere 0
 jf @BARON3_3106
-03BD: destroy_sphere $2898
 Marker.Disable($65)
 
 :BARON3_3013
@@ -1350,6 +1349,7 @@ if
 jf @BARON3_9491
 0519: lock_vehicle $64 in_current_position 0
 Player.CanMove($PLAYER_CHAR) = False
+03BD: destroy_sphere $2898
 02A3: enable_widescreen 1
 0171: set_player $PLAYER_CHAR z_angle_to 150.0
 046F: store_player $PLAYER_CHAR currently_armed_weapon_to 13@
