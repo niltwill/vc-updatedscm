@@ -158,10 +158,16 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Restored the misplaced waitress in "Messing with the man" so you can use a mod to fix her model and animations to see it.
 - Moved biker's spawn location in the last cutscene of "Hog Tied" so he'l no longer appear out of nowhere (this is done to support "RestoreCutsceneFOV = 0" option in Widescreen Fix)
 - Gang Burrito's are now instantly destroyed once you park Angel in the marker in front of Biker Clubhouse in "Hog Tied" (This is done to prevent some weird stuff going on on the cutscene like in the original)
-- Removed script-related censorship for German and French languages.
 - Fixed misplaced release switch sphere in "The Fastest Boat"
 - Fixed sphere in front of the panel not being removed on the cutscene when Tommy presses release switch in "The Fastest Boat"
 - "Pizza Boy Mission" is now called "THE WELL STACKED PIZZA" and the game will now display "Pizza odd-job completed" instead of "Pizza boy mission completed" as its far more correct sentence (same way like in LCS)
+- Lance's "This Way" dialogue line audio no longer gets cut in 'Back Alley Brawl'
+- A missing short fade out added in Jury Fury and after the cutscene, player is now moved whether he is in a car or not.
+- Mercedes no longer remains as a ped if you quickly leave your car when dropping her off at the Pole Position Strip Club (interrupting the cutscene).
+- Health pickup at Washington Hospital moved back to original location.
+- Vercetti's gang vehicle removed.
+- Ocean View Hotel's door does not remain so dark as before when entering the interior.
+- Removed script-related censorship limitations for German and French languages.
 </details>
 
 <details>
