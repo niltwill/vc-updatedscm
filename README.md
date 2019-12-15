@@ -161,7 +161,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Removed script-related censorship for German and French languages.
 - Fixed misplaced release switch sphere in "The Fastest Boat"
 - Fixed sphere in front of the panel not being removed on the cutscene when Tommy presses release switch in "The Fastest Boat"
-- Mission is now called "THE WELL STACKED PIZZA" instead of "Pizza Boy Mission" and the game will now say "Pizza odd-job completed" instead of "Pizza boy mission completed" for more correct grammar (same way like in LCS)
+- "Pizza Boy Mission" is now called "THE WELL STACKED PIZZA" and the game will now display "Pizza odd-job completed" instead of "Pizza boy mission completed" as its far more correct sentence (same way like in LCS)
 </details>
 
 <details>
