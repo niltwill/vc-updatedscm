@@ -168,6 +168,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Vercetti's gang vehicle removed.
 - Ocean View Hotel's door does not remain so dark as before when entering the interior.
 - Removed script-related censorship limitations for German and French languages.
+- Fixed wooden leaf links bridge hidden package Spawn location.
 </details>
 
 <details>
