@@ -2374,8 +2374,51 @@ Car.SetToNormalDriver(0@)
 :INTRO_12964
 if
    Actor.Dead(2@)
-jf @INTRO_12980
+jf @INTRO_12970
 jump @INTRO_14275
+
+:INTRO_12970
+if
+   3500 > 16@
+jf @INTRO_12980
+wait 0
+gosub @INTRO_PROCESS_SKIP
+if
+  $INTRO_PARTIAL_CUT_SKIP == 4
+then
+    0169: set_fade_color 0 0 0
+	fade 0 1000
+	while fading
+		wait 0
+	end
+    040D: unload_wav 1
+    040D: unload_wav 2
+    00BE: text_clear_all
+    if
+       not Car.Wrecked(0@)
+    then
+        Car.SetToNormalDriver(0@)
+        Car.PutAt(0@, 136.276, -819.859, 9.324)
+        Car.Angle(0@) = 207.1698
+    end
+    if and
+        0256:   player $player_char defined
+        8118:   not actor $player_actor dead
+    then
+        0362: put_actor $PLAYER_ACTOR at 136.847 -817.831 9.470 and_remove_from_car
+        Actor.Angle($PLAYER_ACTOR) = 225.495
+        Camera.SetBehindPlayer
+        Camera.Restore_WithJumpCut
+    end
+    02A3: enable_widescreen 0
+    fade 1 1000
+    while fading
+    	wait 0
+    end
+    16@ = 0
+    17@ = 0
+    jump @INTRO_14275
+end
 
 :INTRO_12980
 if
@@ -2512,6 +2555,7 @@ if
 83D2:   not wav 2 ended
 jf @INTRO_13741
 wait 0
+
 if
    Car.Wrecked(0@)
 jf @INTRO_13718

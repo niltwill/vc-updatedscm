@@ -6576,7 +6576,7 @@ return
 
 //before the game can begin, player can skip game's help
 :HELP_DISABLE_PROCESS
-0512: show_permanent_text_box 'HELP62' // Press the~h~ ~k~~PED_ANSWER_PHONE~ ~w~button to skip tutorial messages or the~h~ ~k~~PED_SPRINT~ ~w~button to continue with help included.
+03E5: text_box 'HELP62' // Press the~h~ ~k~~PED_ANSWER_PHONE~ ~w~button to skip tutorial messages or the~h~ ~k~~PED_SPRINT~ ~w~button to continue with help included.
 16@ = 0
 
 :HELP_DISABLE_PROCESS2
