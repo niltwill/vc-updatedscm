@@ -474,9 +474,8 @@ This save-friendly version contains only fixes, but nothing that would make your
 Audio additions are all removed because they might cause some ... bugs and then make it unable to complete the game..The old saved ones.
 Also there are no model changes of any kind. Though some vehicle additions exist as CLEO scripts.
 
-## Warning!
-Despite these changes not breaking old save games, in these saved games you _might_ see weird glitches like an unusual floating building,
-something misbehaving, or some missing collision. So use this at your own risk and it's still best practice to start a new game above all else to make sure everything goes smoothly!
+**Warning!**
+Despite these changes not breaking old save games, in these saved games you _might_ see weird glitches like an unusual floating building, something misbehaving, or some missing collision. So use this at your own risk and it's still best practice to start a new game above all else to make sure everything goes smoothly!
 
 - Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
 - Speeder given by Cortez now matches colour of the one attached to the yacht.
