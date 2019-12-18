@@ -389,9 +389,10 @@ jf @SECURI_2605
 if
   $931 == 0 // integer values
 jf @SECURI_2598
-01E7: remove_forbidden_for_cars_cube -291.0 -287.0 0.0 208.0 648.0 35.0
-01E7: remove_forbidden_for_cars_cube -291.0 -287.0 0.0 208.0 648.0 35.0
-01E7: remove_forbidden_for_cars_cube -283.0 372.0 0.0 -137.0 608.0 35.0
+//Real fix would be to use different zones or switch to using coordinate cubes to determine areas to not count area outside of the club as golf club, this is a temporary fix!
+//01E8: create_forbidden_for_cars_cube -291.0 -287.0 0.0 208.0 648.0 35.0
+//01E8: create_forbidden_for_cars_cube -291.0 -287.0 0.0 208.0 648.0 35.0
+//01E8: create_forbidden_for_cars_cube -283.0 372.0 0.0 -137.0 608.0 35.0
 if
   $PASSED_COK2_PHNOM_PENH_86 == 0 // integer values
 jf @SECURI_2591
