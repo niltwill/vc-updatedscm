@@ -143,7 +143,9 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay 'n' Spray.
 - Fix Army spawning and attacking the player outside of Fort Baxter.
 - Skippable phone-calls. (The same way like in GTA SA/LCS)
-- Replace Leaf Links bridge traffic flow workaround with a proper fix.
+- Replace Leaf Links bridge traffic flow workaround with a proper fix (Check how VCS does it maybe?)
+- Fix possible crash when starting new game quickly after the Ken's office intro cutscene skip?
+- Fix the Jury not falling out of the car in "Jury Fury" if headshotted inside of the admiral with an M4 rifle (original VC bug)
 </details>
 
 
@@ -174,6 +176,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - A bit more delay added for the Pole Position Strip Club's bar girl audio sayings.
 - Initial Ken's cutscene is now skippable (since you're in a vehicle: with the acceleration key).
 - Fixed Leaf Links bridge traffic flow not spawning.
+- Spand Express driver in "Jury Fury" now agressivly drives away from the accident place if you pass or fail the mission.
 </details>
 
 <details>
