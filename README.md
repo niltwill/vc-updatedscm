@@ -143,6 +143,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay 'n' Spray.
 - Fix Army spawning and attacking the player outside of Fort Baxter.
 - Skippable phone-calls. (The same way like in GTA SA/LCS)
+- Replace Leaf Links bridge traffic flow workaround with a proper fix.
 </details>
 
 
@@ -172,6 +173,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Pole Position Strip Club now only open for the player after 'Back Alley Brawl' is completed.
 - A bit more delay added for the Pole Position Strip Club's bar girl audio sayings.
 - Initial Ken's cutscene is now skippable (since you're in a vehicle: with the acceleration key).
+- Fixed Leaf Links bridge traffic flow not spawning.
 </details>
 
 <details>
