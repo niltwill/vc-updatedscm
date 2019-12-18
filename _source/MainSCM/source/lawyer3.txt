@@ -1456,6 +1456,12 @@ $ONMISSION = 0 // integer values
 Marker.Disable($2157)
 Marker.Disable($2158)
 Marker.Disable($2165)
+8119: not car $2161 wrecked
+jf @LAWYER_8989
+00AD: set_car_cruise_speed $2161 to 18.0
+00AE: set_car_driving_style $2161 to 2
+00AF: set_car_mission $2161 to 1
+:LAWYER_8989
 Model.Destroy(#HMORI)
 Model.Destroy(#BMYBU)
 Model.Destroy(#ADMIRAL)
