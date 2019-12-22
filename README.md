@@ -177,6 +177,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Fixed Leaf Links bridge traffic flow not spawning.
 - Spand Express driver in "Jury Fury" now agressivly drives away from the accident place if you pass or fail the mission.
 - New GXT Source format, GXT changes required for the mod are now re-done from scratch.
+- Fixed an issue related to VCPD HQ where the player would recive 2 stars wanted level upon leaving it.
 </details>
 
 <details>
