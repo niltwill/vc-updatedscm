@@ -1,0 +1,59 @@
+RBM3_1    ~g~Drive Love Fist to the venue.
+RBM3_2    While the bomb is armed if you try to leave the car it will explode...
+RBM3_3    If the detonation bar completely fills the bomb will explode.
+RBM3_4    ~r~You've killed Love Fist!
+RBM3_6    DETONATION:
+RBM3_7    ~g~BOMB DEFUSED!
+RBM3_8    The faster you drive the lower the detonation bar will go.
+RBM3_9    If you are stopped or drive slowly the detonation bar will increase.
+RBM3_A    Tommy! Tommy! Tommy, man, that psycho's back!
+RBM3_B    What's going on?
+RBM3_C    That psycho won't leave Love Fist alone!
+RBM3_D    You didnae kill him man. And now he's back.
+RBM3_E    Yeah, yeah, yeah, and the thing is...
+RBM3_F    The thing is, we need someone to drive the limo we can trust,
+RBM3_G    cause that nutter keeps making threats!
+RBM3_H    I'm shitin' masel' man. I need ma ma!
+RBM3_I    We're all bricking ourselves, man.
+RBM3_J    Okay guys, calm down, I'll handle this.
+RBM3_K    Normally I wouldn't busy myself with driving around a bunch of drunken Scottish bisexuals,
+RBM3_L    but, in your case I'll make an exception.
+ROK3_1    At last man, time for a well earned drink. The venue's just a hundred yards down the road.
+ROK3_10   Hey, the vodka bottle's got wires coming out of it! That's not vodka, that's BOOMSHINE!
+ROK3_11   WAAAAAAGGGHHHH!!!! And it's wired to blow!! WAAAAAAAAAAAAGGGHHHHHHHH!!!!
+ROK3_12   They always said the drink would kill me. I've seen this on the telly. you gotta pull out one of the wires. Which wire? I don't know, man.
+ROK3_13   I don't have a clue. Willy, say something. I'm gonna play bass in hell.
+ROK3_14   Tommy man, keep driving fast, pal. Somebody do something. Aye, clever!
+ROK3_15   'Somebody do something', what kind of crap is that, I've seen braver girls. Okay tough guy, you do something.
+ROK3_16   Look, man, I play a musical instrument I don't have a clue about bomb disposal. Willy could just suck the boomshine out with a straw.
+ROK3_17   Aye, I've heard that your good at that kind of thing. Hey, I was off my tits that night, as well you know!
+ROK3_18   Just pass Willy a straw! A straw?!?! This is the Love Fist Tour Bus!
+ROK3_19   Where am I gonna get a straw from, know wot I mean? Which wire, Tommy? The green one. There isn't a green one.
+ROK3_2    Better make it a large one then. Hey Tommy, change the tunes, man.
+ROK3_20   Or is this one green? Any of these wires look green to you?
+ROK3_21   Oh no! Death's on the cards! Everything looks green! I should have dumped you lot when I had the chance man.
+ROK3_22   Glory seeker. Capitalist. I've been carrying you for years. Shut up. You're a muppit.
+ROK3_23   A big screaming girl. Yeah. Shut up and pull a wire. Which wire? This one..
+ROK3_24   NO! Man, we're okay. We ain't been blown up, pal.
+ROK3_25   Tommy, man, nice one. Rock and roll, man. Ain't we got a gig to go to?
+ROK3_26   A racket to make? Groupies to abuse? LOVE FIST!
+ROK3_27   Have you finished with that bottle?
+ROK3_3    I get confused if my head ain't banging. Ah look, what's this? Hey Tommy, stick this tape on.
+ROK3_4    Love Fist. Your time polluting the airwaves is over. I gave you the chance to be friends.
+ROK3_5    Now, I'm giving you the chance to die. Try to slow down and your limousine will explode, along with your BIG, HAIRY ARSES!
+ROK3_6    Tommy pal, you gotta save the band! I'm getting bored of this. Just keep the pedal to the metal!!
+ROK3_62   so we thought we'd show you our Temple of Rock -
+ROK3_63   Get a feel for that Love Fist fury!
+ROK3_64   Listen to yourself, man. It's papier-mache and gaffa tape.
+ROK3_65   Hey, to the kids, it's a temple and we are the priests!
+ROK3_66   Aye, well, if the kids like their priests half cut and tone deaf,
+ROK3_67   who am I to argue?
+ROK3_68   Oh geez, the tape's getting chewed again.
+ROK3_69   At this rate, we'll never get to play live.
+ROK3_7    We gotta find the bomb! Can't we just drive around all day? Aye, we've got plenty to drink..
+ROK3_70   Oohh shite! My bowels...
+ROK3_71   We gotta get on with it - thanks again Tommy, Know what I am saying, nice one, bye!
+ROK3_73   Jezz is running the tape,
+ROK3_8    Won't the bomb not be in the engine? We'll have to stop to get it. We're all going to die! I'm gonna get drunk!
+ROK3_9    Hey, there's a queue here pal! The answer ain't in the drinks cabinet! Get out of my way!
+

@@ -1,0 +1,28 @@
+TAXC_A    Guess you're the new owner.
+TAXC_A1   Just grab a taxi from the garage if you feel like jumping in.
+TAXC_B    What are you, mob? Cartel? You don't look Mexican...
+TAXC_C    Anyhoo, I guess you better get on with the 'things are gonna change around here' crap,
+TAXC_D    maybe threaten one of the drivers -
+TAXC_E    go steady on Ted over there, he's just had his hernia fixed.
+TAXC_F    Well, yeah. Things are going to change around here, lady.
+TAXC_G    Oh crap, sonny. Might as well leave this to me -
+TAXC_H    I've been doing this for years.
+TAXC_I    Now hear this.
+TAXC_J    We are now under new management and things are going to change around here again.
+TAXC_K    Our new management, the
+TAXC_L    - Which gang are you?
+TAXC_M    Well, I'm not part of any gang actually.
+TAXC_N    What's your goddamned name, kid?
+TAXC_O    Vercetti, Tommy Vercetti.
+TAXC_P    Our new management, the Vercetti Gang,
+TAXC_Q    is gonna make sure we get no trouble.
+TAXC_R    Capiche? Out!
+TAXC_S    Did you like the 'capiche'? I liked the 'capiche'.
+TAXC_T    So this is how it's worked in the past,
+TAXC_U    We run the firm as usual.
+TAXC_V    If we get any trouble from rival firms, you beat the crap out of them.
+TAXC_W    Then they beat the crap out of us,
+TAXC_X    then you beat the crap out of them,
+TAXC_Y    etcetera, etcetera. You got it?
+TAXC_Z    Uh, yeah, I guess...
+

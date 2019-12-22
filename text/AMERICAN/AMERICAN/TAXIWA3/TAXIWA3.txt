@@ -1,0 +1,10 @@
+TAX3_1    Car 13, We got a Miss Cortez, asked for you especially.
+TAX3_2    Ok, I got it. Car 13 out!
+TAX3_3    Hmmmm, no sign of Mercedes...
+TAX3_4    It's time for Kaufman Cab's guardian angel to eat some fender!
+TAX3_5    Hey boy I'm gonna tan your hide!
+TAXW3_2   ~g~Stay alive until the timer runs out.
+TAXW3_3   ~g~Take out the leader cab!
+TAX_AS1   TAXI FIRM ASSET COMPLETED
+TAX_AS2   ~g~Kaufman Cabs will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+

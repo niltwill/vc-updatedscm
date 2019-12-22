@@ -1,0 +1,81 @@
+ASSET_A   BANK HEIST ASSET COMPLETED!
+ASSET_B   ~g~The Malibu Club will now generate revenue up to a maximum of $~1~ per day. Pick up your cash regularly!
+BK4_12A   Damn! It's a Flange 9000!
+BK4_12B   This could take hours to crack,
+BK4_12C   Or five minutes if you could find the manager.
+BK4_14A   Phil, things still sweet?
+BK4_19A   It's on a time lock,
+BK4_19B   You might as well give up now!
+BK4_20A   Hell, I can bypass the time lock,
+BK4_20B   Then we just need your key code and we're good!
+BK4_23A   Give me 5 minutes!
+BK4_24A   I'm gonna check on Phil, I'll be right back.
+BK4_24B   I told you not to touch that alarm!
+BK4_31A   Tommy! The vault's open!
+BK4_34A   Ok, we got the SWAT retirement fund. Let's get out of here!
+BK4_34B   Ok, you asked for it! You've had your last chance!
+BK4_35A   They're storming the place!
+BK4_35B   Take cover!
+BM_DEAD   ~r~You needed the bank manager alive!!
+BNK422A   Cam, how long?
+BNK4_1    I'll drive.
+BNK4_10   Wilco roger that!
+BNK4_11   Come on Cam, the vault's upstairs...
+BNK4_13   I'll go find where he's holed up.
+BNK4_15   Sure. Everything's reeaal quiet.
+BNK4_16   You - you're coming with me!
+BNK4_17   Ok! Ok! Just don't shoot!
+BNK4_18   I SAID NOBODY MOVE!
+BNK4_2    Great. A passenger. Wait 'til I tell the group about this.
+BNK4_21   Stay here. You try anything and you're dead.
+BNK4_25   The SWAT team will be here any minute!
+BNK4_27   I could do with some help here, Tommy!
+BNK4_28   Vice City S.W.A.T! You are completely surrounded!
+BNK4_29   Surrounded? HA HA HA HAAAAAaaa!
+BNK4_30   They're crapping themselves, corrupt bastards!
+BNK4_3A   Hey, watch the wheels, Tommy!
+BNK4_3B   Tommy, Hilary's taking up too much room!
+BNK4_3C   I am not!
+BNK4_3D   Are too!
+BNK4_3E   Hey, shut up you two, or you can get out and walk.
+BNK4_3F   Yeah - HILARY.
+BNK4_3I   For god's sake, Phil, stop waving that thing around!
+BNK4_3J   Yeah, you'll have somebody's eye out!
+BNK4_3M   The car's ruined. RUINED!
+BNK4_3O   You cling to an illusion of permanence.
+BNK4_3P   What?
+BNK4_3Q   You think all things will last.
+BNK4_3R   Youth, loved ones, pizza,
+BNK4_3S   All will pass or end and you must accept that.
+BNK4_3T   You're right. Thanks, Cam.
+BNK4_3U   Don't mention it.
+BNK4_3V   Hey Tommy, why have we stopped?
+BNK4_4A   ~w~Keep driving around the block, OK?
+BNK4_5    ~w~Okay, Tommy, Okay.
+BNK4_6    ~w~THIS IS A RAID!
+BNK4_7    ~w~NOBODY MOVE!
+BNK4_8    ~w~EVERYBODY UP AGAINST THAT WALL!
+BNK4_9    Phil, hold down the fort!
+BNK4_94   ~w~Ok, guys. Nice an easy just as we planned.
+BNK4_A    ~w~As you can see, gentlemen, this is going to be the easiest buck we ever made.
+BNK4_B    ~w~Tommy, seriously, you gotta consider going into law.
+BNK4_C    ~w~What the hell are you smoking, man? This ain't no simple plan!
+BNK4_D    ~w~Well, who needs a simple plan anyway?
+BNK4_E    ~w~Take communism, now that was a simple plan. Didn't do Russia any favors, huh?
+BNK4_F    ~w~Calm down, all right? With a team like this it's going to be no problem.
+BNK4_G    ~w~We got Cam on safe. Phil? You and me will handle security, and Hilary'll drive the getaway car.
+BNK4_H    ~w~Uh, heh heh, aren't you forgetting somebody? Somebody who helped you to no end in this town? Somebody who...
+BNK4_I    ~w~Ken... Ken, that's right. Ken here, he washes the money for us and he keeps the drinks on ice.
+BNK4_J    ~w~I don't understand what I am supposed to be doing here.
+BNK4_K    ~w~Look, it's easy. Haven't you ever seen a movie?
+BNK4_L    ~w~We walk into the bank, we wave the gun around, and leave very rich men.
+C_DEAD    ~r~Cam's dead!!
+C_HIND    ~r~Cam's been left behind!
+GETCAR    ~g~Get in the getaway car to do the bank job!
+H_DEAD    ~r~Hilary's dead!!
+H_HIND    ~r~Hilary's been abandoned!
+IDIOT     ~r~ That's right, just wander about dressed like a lunatic and draw attention to yourself, IDIOT!
+P_DEAD    ~r~Phil's dead!!
+P_HIND    ~r~You've lost Phil!
+TRASHED   ~r~YOU TRASHED THE GETAWAY CAR!!
+

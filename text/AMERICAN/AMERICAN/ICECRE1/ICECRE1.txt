@@ -1,0 +1,22 @@
+ICC1_1    ~g~Use your Ice Cream van distribute drugs around Vice City.
+ICC1_10   ~g~You made ~1~ deals!
+ICC1_11   ~g~You made ~1~ deal!
+ICC1_12   PROPERTY ACQUIRED!
+ICC1_13   ~r~You didn't make any deals!
+ICC1_14   ICECREAM ASSET COMPLETED
+ICC1_15   ~g~The icecream factory will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+ICC1_16   ~g~Use your Mr. Whoopee van to distribute Cherry Poppers product around Vice City.
+ICC1_17   Distribution mission over
+ICC1_18   Total ice cream sales: $~1~
+ICC1_19   Total deals done: ~1~
+ICC1_2    ~g~Park your van and press the ~h~~k~~VEHICLE_HORN~~w~ to play your ice cream jingle to notify customers that your ready for business.
+ICC1_3    ~g~You receive money for each transaction you make, but the more transactions you make the more police attention you get.
+ICC1_4    ~g~There aren't any customers in this area try another one.
+ICC1_5    Deals done:
+ICC1_6    ~g~Use the Mr. Whoopee van to distribute Cherry Poppers product around Vice City.
+ICC1_7    ~g~You receive money for each transaction you make, but the more transactions you make the more police attention you get.
+ICC1_8    ~g~To make a transaction, ~h~park your van ~g~and press the ~h~~k~~VEHICLE_HORN~ ~g~button to play the ice cream jingle to attract customers.
+ICC1_9    ~g~Local gangs will not appreciate you doing business on their turf so expect hostility if you do so.
+ICE_AT1   ICECREAM FACTORY ASSET COMPLETED
+ICE_AT2   ~g~The Cherry Popper factory will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+

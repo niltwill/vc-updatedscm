@@ -1,0 +1,73 @@
+DEFSAFE   ~g~Get back to the safe and defend it.
+FIN1_01   What's going on?
+FIN1_02   Tommy! Oh good, good. Listen, listen. Uh, listen,
+FIN1_03   I like fish. I love fish.
+FIN1_04   I love them as pets in bowls, or as food on a plate,
+FIN1_05   but as much as I love em, I don't want to sleep with them.
+FIN1_06   Okay, but right now your Italian brothers are coming from up there to fit me with some cement shoes, and I...
+FIN1_07   Shut up Ken. Sit down.
+FIN1_08   Lance, what the hell's going on?
+FIN1_09   It's your friends up north Tommy. They ain't too happy you capped their man.
+FIN1_10   They're coming down to see the business today.
+FIN1_11   They took longer than I thought...
+FIN1_12   Guys, we gotta make this final we gotta leave no doubt that this is my operation. Mine!
+FIN1_13   Ken, you get the first run of counterfeit cash and put three mil in briefcases.
+FIN1_14   Lance, you get the guys together...
+FIN2_01   Tommy!
+FIN2_02   What? No big hugs for your old buddy?
+FIN2_03   I've had fifteen years out of the loop,
+FIN2_04   I'm a bit rusty on family etiquette.
+FIN2_05   Always angry, eh Tommy.
+FIN2_06   Didn't I say your temper would get you into trouble, huh?
+FIN2_07   There's three mil in the cases...
+FIN2_08   How many was it? Ten? No, eleven men.
+FIN2_09   That's how you get to be called the Harwood Butcher! Heh-heh-heh!
+FIN2_10   You sent me to kill one man, ONE MAN. They knew I was coming Sonny...
+FIN2_11   Tommy, Tommy, watch your tone.
+FIN2_12   Anyone would think you blame me for that unfortunate set of circumstances.
+FIN2_13   Just take the money...
+FIN2_14   Get the damn cash.
+FIN2_15   You know, Tommy? I did what I could for you, I pulled strings, called in favors.
+FIN2_16   I was your friend, Tommy. I hoped you'd see sense, see what's good for business.
+FIN2_17   I trusted you, Tommy, and you disappointed me.
+FIN2_18   But at least someone in your chicken shit organization knows how to do business,
+FIN2_19   Isn't that right, Lance?
+FIN2_20   I'm sorry Tommy. This is Vice City. This is business.
+FIN2_21   You sold us out...
+FIN2_22   No. I sold YOU out, Tommy, I sold YOU out.
+FIN2_23   The real cash is upstairs in the safe.
+FIN2_24   Tommy, what was the big plan?
+FIN2_25   You think I'd just take the fake cash?
+FIN2_26   Save face and run away with my tail between my legs?!
+FIN2_27   No.
+FIN2_28   I just wanted to piss you off before I kill you.
+FIN3_01   Tommy?
+FIN3_02   Oh my god, Tommy! What happened?
+FIN3_03   What does it look like?
+FIN3_04   It looks like you ruined your suit!
+FIN3_05   and Tommy, that was a beautiful suit! Tommy, what on earth happened?
+FIN3_06   I had a disagreement with a business associate, you know how it is.
+FIN3_07   Tommy, I have a disagreement, I send them an angry letter.
+FIN3_08   Maybe I pee in their mailbox. I don't start World War III.
+FIN3_09   You know, maybe you should speak to my shrink...
+FIN3_10   That stupid prick, Lance...
+FIN3_11   Tommy. I never liked that guy, okay?
+FIN3_12   He's neurotic, he's insecure, he's self-centered - the guy's an asshole!
+FIN3_13   I'm glad you took him out!
+FIN3_14   I don't think we're gonna be getting any more heat from up north either...
+FIN3_15   ...'cause there ain't no 'up north', anymore.
+FIN3_16   It's all down south now.
+FIN3_17   Wait, does that mean what I think it means..? Tommy, baby!
+FIN3_18   What do you think it means?
+FIN3_19   That we're in charge... I mean, that you're in charge. Oh, Tommy!
+FIN3_20   You know, Ken. I think this could be the beginning of a beautiful business relationship....
+FIN3_21   After all, you're a conniving, backstabbing, two-bit thief
+FIN3_22   and I'm a convicted psychotic killer and drug dealer.
+FIN3_23   I know. Ain't it just beautiful?
+FIN_B1    ~g~Go and kill ~y~Lance Vance~g~ the backstabber.
+FIN_B2    ~g~Kill ~p~Sonny~g~ and finish this once and for all.
+FIN_B3    ~g~The Mafia are trying to steal your money. Defend the safe.
+FIN_B4    ~g~You are close to death, get some ~w~health~g~ from downstairs.
+FIN_B5    ~g~The Mafia is stealing your money, defend the ~c~safe
+FIN_B7    ~r~The mafia has stolen all your money.
+

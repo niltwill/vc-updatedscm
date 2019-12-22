@@ -1,0 +1,53 @@
+CUB4_02   ~g~The bombs will be set with a 45 second timer.
+CUB4_03   ~g~Stay in the car until safely parked inside the compound.
+CUB4_04   ~r~You've alerted the base, there is no way we will get in now!
+CUB4_06   ~r~You did not get far enough away from the base and we had to abort the explosion!
+CUB4_07   Oy - the solvent is round the back, amigo.
+CUB4_08   Hola, amigos.
+CUB4_09   Bueno. Haitian Putas. Muerte.
+CUB4_10   Vamos.
+CUB4_11   Vamos indeed.
+CUB4_12   Hey, we need a Haitian gang car!
+CUB4_13   Oye, let's go find our muchachos!
+CUB4_14   Follow my compadres.
+CUB4_15   Ok, in you go...
+CUB4_16   I'm going to plant the bomb, cover me!
+CUB4_17   RUN!!
+CUB4_18   Man, this a nice part of town...
+CUB4_19   This place is a dump, man.
+CUB4_20   I had a beautiful woman... lived around this neighborhood.
+CUB4_21   You know, they do nice pizzas here.
+CUB4_22   Whoah, man. You drive like a crazy bitch!
+CUB4_23   You lost, man?
+CUB4_24   You've left Pepe behind, go and get him.
+CUB4_26   ~g~Take Pepe, head North into Little Haiti and steal a Voodoo car.
+CUB4_27   ~g~Go and meet up with Rico and the other Cubans.
+CUB4_28   ~g~Join the other Cubans at the Haitian Drugs Factory.
+CUB4_29   ~g~Walk into each of the markers to plant a bomb at that location.
+CUB4_30   ~g~After all three bombs are planted, get clear of the factory before it blows.
+CUB4_31   ~g~Get clear of the factory!!
+CUB4_32   ~g~Park the car at the blip and get out.
+CUB4_A    Hey, ladies. You know what I'm gonna do?
+CUB4_B    I'm gonna kill me a Haitian. And then?
+CUB4_C    And then I'm going to make love like a man.
+CUB4_D    You know that, chica? Something like this.
+CUB4_E    Loser!
+CUB4_F    Prick.
+CUB4_G    Hey, baby, I wouldn't touch you with a ten foot pole!
+CUB4_H    Umberto Robina, he likes the ladies! Not some goat in a skirt!
+CUB4_I    Tommy!! Tommy, I love you, I love you! Let's go!
+CUB4_J    Go where? Can't I get a cup of coffee first?
+CUB4_K    No time for coffee! Besides, I just had one.
+CUB4_L    We gonna take out the Haitians.
+CUB4_M    Tommy, how do you take out a snake?
+CUB4_N    You bite him in the ass! Hahaha!
+CUB4_O    Whatever you say, Umberto.
+CUB4_P    Tommy, you go and get us a little Haitian car.
+CUB4_Q    When you get it, come back and pick up my boy.
+CUB4_R    Pepe, and take him out to the Haitians.
+CUB4_S    Then, you go around to the Haitians processing plant, and you use their solvent as an explosive.
+CUB4_T    Boom! Bye bye!
+CUB4_U    Umberto, what about you?
+CUB4_V    Uhh... I'm going to stay behind, and watch over the cafe with Poppa.
+CUB4_W    He not feeling so good. You know?
+

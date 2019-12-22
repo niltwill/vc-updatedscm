@@ -1,0 +1,37 @@
+PIZ1_01   ~g~Go deliver these pizzas, you must throw the pizza to the customers. Do a drive-by to throw the pizzas.
+PIZ1_02   ~g~You have thrown all your pizzas, go back and get some more.
+PIZ1_05   ~g~You have five minutes to deliver the orders before the customers phone another pizza shop.
+PIZ1_06   Press the~h~ ~k~~TOGGLE_SUBMISSIONS~~w~ when on the bike to cancel the mission.
+#UpdatedSCM edited
+PIZ1_07   ~r~One of the customers is dead! You're fired.
+PIZ1_08   ~r~You are out of time. You're fired.
+PIZ1_09   ~r~You destroyed our bike! You're fired.
+PIZ1_11   Hey! Get back on the bike!
+PIZ1_12   Pizzas left:
+PIZ1_13   Get these delivered nice and hot.
+PIZ1_14   Pal, pizza's for you.
+PIZ1_15   Hey, come on Mister, deliver these quick.
+PIZ1_16   What are you waiting around for Mister? You got pizza to deliver.
+PIZ1_17   I know you didn't want to be a pizza boy, well I don't give a damn.
+PIZ1_18   Deliver these.
+PIZ1_19   These need delivering.
+PIZ1_20   Come on Mister, deliver these things or you're sacked.
+PIZ1_21   We got people waiting pal.
+PIZ1_22   What are you waiting around for? These need delivering!
+PIZ1_23   Deliver the damn food Mister.
+PIZ1_24   These need delivering pal.
+PIZ1_25   Man, can you take these?
+PIZ1_26   Mister, deliver these pronto, avamos amigo.
+PIZ1_27   Come on, we're in a rush, deliver these.
+PIZ1_28   You again? well deliver these quick pal.
+PIZ1_29   No wasting time this time pal.
+PIZ1_30   Come on you lazy bastard, deliver this crap on time.
+PIZ1_31   You'll never get a promotion unless you move faster this time.
+PIZ1_32   ~r~Pizza's too hot to handle?
+PIZ1_33   ~g~Return to the restaurant for more orders.
+PIZ1_34   ~g~Pizza delivered, here's your cash.
+#UpdatedSCM only
+PIZ_OVE   Pizza odd-job ended!
+#UpdatedSCM edited
+PIZ_WON   Pizza odd-job Complete. Your max Health increased to 150.
+

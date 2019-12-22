@@ -1,0 +1,23 @@
+BM2_1     CHAOSMETER:
+BM2_2     ~g~You must fill the Chaos Meter in the time given to show us how much of a badass you are!
+BM2_3     ~g~This sound indicates that you have filled a part of the meter, continue to do so.
+BM2_4     ~r~You failed to fill the Chaos Meter in time!
+BM2_A     Ah, got ya again.
+BM2_B     Hey Vercetti.
+BM2_C     Cougar says you can handle a bike pretty good.
+BM2_D     Yeah, how many more errands am I gonna to have to run?
+BM2_E     I'm a very busy man.
+BM2_F     If it's a fight that's gonna settle this then bring it on.
+BM2_G     Being one of us ain't just about brawlin'. It's about being part of a family.
+BM2_H     Yeah, I've been part of a family before alright. It didn't work out.
+BM2_I     Yeah, right, but this family takes care of its own.
+BM2_J     We don't ask a man to do the dirty work and then let him do fifteen years hard time.
+BM2_K     Yeah, that's right. I've done my homework.
+BM2_L     This here's the biggest family of misfits, outcasts and badasses.
+BM2_M     Hell, some of us has even been betrayed by our own country.
+BM2_N     I was locked up during 'Nam. Ugly business.
+BM2_O     Which is why I'm gonna ask you to go mess with the man.
+BM2_P     This whole damn country needs a kick in the ass, and we're the ones to deliver it.
+BM2_Q     So get out there, grab a bike and show this city how pissed you are!
+BM2_R     Alright, alright.
+

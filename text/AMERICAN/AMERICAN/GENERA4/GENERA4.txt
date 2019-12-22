@@ -1,0 +1,42 @@
+COL410    I have a buyer for a piece of military hardware that is being taken through town. Pick it up for me...
+COL411    and once you get it, I want you to call me immediately, then...
+COL4_01   Diaz was pleased, and would like to meet you again.
+COL4_02   Is that a good thing?
+COL4_03   Of course! Although I'm starting to think that Diaz was responsible for our unfortunate loss...
+COL4_04   What makes you say that?
+COL4_05   One does not wave accusations at a man like Diaz - I'm merely thinking out loud...
+COL4_06   No matter. I have a proposal that you could profit from...
+COL4_07   I don't have time to run more errands, Cortez.
+COL4_08   I would have thought a man with such dangerous debts would be hungry for opportunities. Please, Tommy, at least hear me out.
+COL4_09   Go on...
+COL4_1    What's up with the Gunner? - Don't know Sir!
+COL4_11   Get that civilian out of our way soldier! - Sir, Yes Sir!
+COL4_12   Civilian in the TANK! STOP HIM!
+COL4_13   This is a military convoy, do not obstruct our route.
+COL4_14   Drop him soldier.
+COL4_15   Get that civilian vehicle out of our way! - Sir! Moving vehicle Sir!
+COL4_17   Ok, PLATOON MOVE IT OUT!
+COL4_18   Someone's on the tank Sir!
+COL4_19   Go get some doughnuts, soldier! - Sir, Yes Sir!
+COL4_20   Target acquired, Sir
+COL4_21   SNIPER!
+COL4_22   I'm getting out of here.
+COL4_23   Objective completed! Platoon dismissed! - Lets go eat some doughnuts.
+COL4_24   Security protocol Delta India Echo triggered! Vehicle self destruct initiated!
+COL4_26   Prepare to die Communist scum!
+COL4_3    CONVOY HALT!
+COL4_4    Get topside soldier. - Sir, Yes Sir!
+COL4_6    WE'RE TAKING ENEMY FIRE!
+COL4_7    Civilian, move away from the tank!
+COL4_8    I SAID, move away, IMMEDIATELY!
+COL4_9    DEFENSIVE POSITIONS!
+COL4_B1   ~g~Go and acquire the piece of military hardware that is being taken through town.
+COL4_B2   ~r~The tank arrived at its destination safely!
+COL4_B3   ~g~Drop the tank off in the Colonels lockup before it self destructs.
+COL4_B4   ~g~The tank is locked. Find a way to lure out the occupants.
+COL4_B5   ~r~The tank has been destroyed!
+COL4_B6   ~g~Find a way to steal the tank!
+COL4_B7   ~g~Drive the tank into the garage.
+COL4_B8   ~g~Get out of the tank and walk out of the garage.
+DETON     DETONATION:
+

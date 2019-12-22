@@ -1,0 +1,14 @@
+#UpdatedSCM edited
+FIREPRO   Fire Fighter Mission level 12 complete. You are now completely fireproof!!
+F_CANC    ~r~Fire Fighter mission cancelled!
+F_EXTIN   FIRES:
+F_FAIL1   Fire Fighter mission ended.
+F_FAIL2   ~r~You're too late!
+F_PASS1   Fire extinguished!
+F_STAR1   ~g~Burning vehicles reported in the ~a~ area. Go and extinguish the fire.
+F_START   ~g~Burning vehicle reported in the ~a~ area. Go and extinguish the fire.
+SIREN_1   To turn on this vehicle's sirens tap the ~h~~k~~VEHICLE_HORN~ ~w~button.
+SIREN_2   To turn on this vehicle's sirens tap the ~h~~k~~VEHICLE_HORN~ ~w~button.
+SPRAY_1   Use the ~h~~k~~PED_FIREWEAPON~ ~w~button to fire the water cannon. Aim using ~h~~k~~VEHICLE_TURRETLEFT~~w~ and ~h~~k~~VEHICLE_TURRETRIGHT~~w~.
+SPRAY_4   Use the ~h~~k~~PED_FIREWEAPON~ ~w~button to fire the water cannon. Aim using ~h~~k~~VEHICLE_TURRETLEFT~~w~ and ~h~~k~~VEHICLE_TURRETRIGHT~~w~.
+

@@ -1,0 +1,19 @@
+PRO2_01   ~g~Take out the guards protecting the Front Page Bar and find out who supplied them.
+PRO2_02   Your protection needs a little more protection.
+PRO2_03   Aw hell, not again! I don't need this crap!
+PRO2_04   These idiots operate out of DBP Security around the block.
+PRO2_05   You guys just sort it out amongst yourselves.
+PRO2_06   I'll be seeing you later.
+PRO2_07   Yeah, yeah, whatever.
+PRO2_08   ~g~DBP Security will know you are on your way, go and get them before they clear out.
+PRO2_09   ~g~Go and speak to the Front Page Bar Owner.
+PRO2_10   ~g~Two more have made a run for it. Track them down and finish this.
+PRO2_11   Get in the car, useless.
+PRO2_A    What's the problem?
+PRO2_B    Some bar is refusing to pay.
+PRO2_C    They reckon they're protected by a local gang of thugs.
+PRO2_D    But don't worry Tommy, I can handle it.
+PRO2_E    You call this handling it?
+PRO2_F    You two, off your asses...
+PRO2_G    Let's go.
+

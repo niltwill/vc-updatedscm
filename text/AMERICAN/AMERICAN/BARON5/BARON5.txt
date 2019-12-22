@@ -1,0 +1,26 @@
+ASS1_1    This place is going to be crawling with assholes...be careful...
+ASS1_13   DIAZ?! I've come to take over your business!
+ASS1_14   TOMMY! You betrayed me, you idiot! I'm gonna kill you real soon..
+ASS1_15   ~g~Storm the mansion and kill Diaz!
+ASS1_16   ~g~Kill Diaz!
+ASS1_17   ~g~There are multiple routes into the mansion.
+ASS1_18   ~g~The door is locked, try another route.
+ASS1_19   This way!
+ASS1_2    Don't worry Tommy, I'll cover you.
+ASS1_20   Tommy, my problem with Quentin, not wit you, man!
+ASS1_A    I got us some cannons in the trunk.
+ASS1_B    Holy shit! Where'd you get all this stuff?
+ASS1_C    Been saving it for a rainy day.
+ASS1_D    You like?
+ASS1_E    Yeah, I like.
+ASS1_F    You stupid pricks...
+ASS1_G    my beautiful house
+ASS1_H    look what you've done to it!
+ASS1_I    This is for my brother!
+ASS1_J    I trusted you, Tommy.
+ASS1_K    I woulda had you made...
+ASS1_L    Say goodnight, Mr. Diaz.
+BUD1      Lances Health:
+COK4_30   ~r~Lance is dead!
+PROP_A    PROPERTY ACQUIRED!
+

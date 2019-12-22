@@ -1,0 +1,45 @@
+COK2_1    One thing puzzling me, What's with 'Quentin!?
+COK2_13   Lance Vance. Poor bastard.
+COK2_14   Ok, we're almost there.
+COK2_15   We'll make a couple of passes.
+COK2_16   So take out as many guns as you can.
+COK2_17   Then I'll set you down and you're on your way.
+COK2_2    I dunno, I always kinda liked it...Quentin Vance...
+COK2_20   Damn! This is a war zone! Take out some of those gunmen!
+COK2_21   We're taking hits here, man!
+COK2_22   This thing ain't cheap to fix! Take them out!
+COK2_23   Ok, you're on your own from here! Good luck, brother!
+COK2_24   Heli Health:
+COK2_25   ~g~Go and collect the money on the roof.
+COK2_27   You're on MY turf asshole!
+COK2_28   You're going down!
+COK2_3    Vance? Your name's Lance Vance?
+COK2_4    Hey! I got enough of that at school!
+COK2_5    You ever fired one of those from a whirly?
+COK2_6    No. I'll get a bit of practice on the way though.
+COK2_8    Where the hell are we headed anyway?
+COK2_9    Prawn Island.
+COK2_A    What kind of incompetent fool are you?
+COK2_B    FOOL! FOOL! FOOL! FOOL!
+COK2_C    Tommy!
+COK2_D    What, Ricardo?
+COK2_E    These idiots - they always trying to screw you.
+COK2_F    That's the problem with this business.
+COK2_G    What do you think you're doing?
+COK2_H    These pricks have failed me miserably,
+COK2_I    Soon any mom and pop will think they can sell gallo in Vice City.
+COK2_J    What next, huh? The stinking Mafia?!
+COK2_K    That gang place is a fortress at ground level,
+COK2_L    so Quentin here - Quentin! QUENTIN!
+COK2_M    He'll fly you over the area!
+COK2_N    Eradicate them!
+COK2_O    What do you think you're doing?
+COK2_P    What are you doing here?
+COK2_Q    Hey, I've been asking around and it's obvious
+COK2_R    that Diaz jumped the deal and iced my brother.
+COK2_S    And he'll kill you, too!
+COK2_T    I can take Diaz!
+COK2_U    No - listen to me! I'll handle Diaz -
+COK2_V    - he's beginning to trust me.
+OPEN_B    The road blocks to the mainland have now been removed
+

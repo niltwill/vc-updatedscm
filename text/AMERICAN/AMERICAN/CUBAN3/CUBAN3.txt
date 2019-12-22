@@ -1,0 +1,27 @@
+CUB3_01   Hey Rico. Nice boat, you ready?
+CUB3_02   ~g~KILL ALL THE HAITIANS ON THE BOATS!!
+CUB3_03   ~g~Collect all the briefcases filled with the drugs and cash.
+CUB3_04   ~g~Get the drugs and cash back to Umberto.
+CUB3_05   Si Tommy. Now you be a good shot today,
+CUB3_06   My boat, she no good full of holes, ok?
+CUB3_07   ~g~ Go meet Rico. He'll drive you to the meet location.
+CUB3_08   Uh oh.. Pack of Cubans. We under attack!
+CUB3_A    Alberto. Una cafe, senor.
+CUB3_B    Poppa, don't serve this snake in the straw.
+CUB3_C    You're two-faced, Tommy!
+CUB3_D    You're either two-faced, or you're a wimp, baby boy!
+CUB3_E    The Haitians, man. They're laughing at me!
+CUB3_F    Easy, easy. What's your problem?
+CUB3_G    They're laughing at me, Tommy. At me!
+CUB3_H    Umberto Robina! They're doing whatever they like!
+CUB3_I    Nobody does whatever they like, Umberto, they do what you let them do.
+CUB3_J    What?
+CUB3_K    You want somebody taken care of?
+CUB3_L    I can handle it, but it's gonna cost you.
+CUB3_M    I know we're brothers and all, but this is business.
+CUB3_N    Tommy. You a real man. Businessman, a gentleman.
+CUB3_O    These Haitians. They have a load of product coming in off shore, really good stuff.
+CUB3_P    We take it, and we finish them.
+CUB3_Q    You take it, and I look after you. Like my brother. Like my son.
+CUB3_R    I think I prefer the cash to being bounced on your knee, amigo.
+

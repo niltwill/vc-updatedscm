@@ -1,0 +1,40 @@
+CUB1_01   Hey, I'm Rico. You the man with the big cojones?
+CUB1_02   Ok man, treat her like a woman.
+CUB1_03   Not bad, you're a real man.
+CUB1_04   You got real big cojones, amigo.
+CUB1_05   Amigo, you a man, man.
+CUB1_06   Call yourself a man, man?
+CUB1_07   You a little scaredy kitten, baby boy, go cry to your mommy!
+CUB1_08   You a big waste of space. Walk like a man, talk like a man, but you drive like an idiot.
+CUB1_09   Man, you the man, man. I like you, man. I like you a lot.
+CUB1_10   Any time, man. 'cause you got cojones. And all my friends have big cojones.
+CUB1_11   ~r~You Killed Rico!
+CUB1_12   Go through the first checkpoint to begin the test.
+CUB1_13   ~g~You have three minutes to get round the course.
+CUB1_14   Get back in the boat!
+CUB1_15   ~r~You are too slow, man.
+CUB1_A    Si, men?
+CUB1_B    Hey, easy Papi, this man's for me. You, you the boy?
+CUB1_C    Oh yeh. You the boy. I think so, you know?
+CUB1_D    No. I don't think I do.
+CUB1_E    Oh yeah? You come here, tough guy.
+CUB1_F    You think you can take me on?
+CUB1_G    You think you can play stupid with me?
+CUB1_H    No, I think you're playing plenty stupid enough for both of us.
+CUB1_I    Hey, he call you dumb, son.
+CUB1_J    And I call him a little girl, Papi.
+CUB1_K    Look at him, all dressed up like that.
+CUB1_L    What is this, ladies night?
+CUB1_M    You some kind of tough guy, you dress like a woman?
+CUB1_N    You got on panties like a woman too, huh?
+CUB1_O    What you got against women? You prefer men, big boy?
+CUB1_P    I like women! I like all women! I love my mother, chico!
+CUB1_Q    Alright, alright, I'll take your word for it. Relax.
+CUB1_R    Can you drive, amigo?
+CUB1_S    Yeah... like a woman.
+CUB1_T    Very funny. I like you, big boy. Maybe you can help.
+CUB1_U    Maybe you can prove you a man. Huh?
+CUB1_V    Take out the boat.
+CUB1_W    Show me you got some big cojones,
+CUB1_X    and not some little bitty chiquita ones.
+

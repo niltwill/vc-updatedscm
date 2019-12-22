@@ -1,0 +1,6 @@
+RCPL1_4   ~g~Compete in a CHECKPOINT RACE with 3 other RC Plane's
+RCPL1_5   ~g~Fly through the checkpoints scattered throughout Vice City.
+RCPL1_6   ~g~If you wish to quit this mission press the ~h~~k~~PED_FIREWEAPON~ ~g~button to detonate your RC Plane.
+RCPL1_8   ~g~Your RC Plane is going out of range!
+RCPL1_9   ~r~Your RC Plane went out of range!
+

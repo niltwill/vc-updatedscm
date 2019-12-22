@@ -1,0 +1,28 @@
+HELP38    If you take out someone who's holding a weapon, they will drop it.
+HELP39    You can target and shoot explosive barrels but keep your distance.
+LAW4_1    Please disperse. The management will discuss any grievances in the appropriate manner!
+LAW4_13   ~g~Start fighting with at least 4 workers to get a riot started.
+LAW4_14   ~g~Destroy the vans in the compound!
+LAW4_2    Please disperse. Go back to your homes!
+LAW4_3    Please disperse! This is inappropriate!
+LAW4_4    Please disperse. You will all end up on the streets.
+LAW4_5    Sticks out, boys! Let's crack some commie skulls!
+LAW4_A    Avery, it goes without saying... Tommy! Tommy! Any progress? No, no, no - tell me later, tell me later.
+LAW4_B    Tommy, this is Avery Carrington - I believe you met at the party?
+LAW4_C    Not in person.
+LAW4_D    Howdy.
+LAW4_E    Avery here has a proposition.
+LAW4_F    Haven't we got other things on our mind?
+LAW4_G    I'm trying to keep the wolves from the door, so could you please cut me some slack?
+LAW4_H    I'm stretched like a wire and even if I'm dead by the end of the week, I'd like to think that I didn't die poor.
+LAW4_I    Now just calm down, both of you.
+LAW4_J    Son, you help me and any greaseballs giving you a hard time, I'll see to it they take a long dirt nap.
+LAW4_K    Ok. What could I do for ya'?
+LAW4_L    This delivery company's got its depot on some prime land. They won't sell.
+LAW4_M    They're hanging on like a big old prairie rat, so we gotta go in there and smoke that vermin out.
+LAW4_N    Head on down there and stir up a hornet's nest
+LAW4_O    - the security will have their hands full and then you can sneak in and put 'em out of business.
+LAW4_P    And you could drop by Rafael's for a change of clothes. You might be there a while, but yeah, go for it.
+LAW4_Q    Should be a riot.
+LAW4_R    If the balls drop like they should, stop by my office sometime...
+

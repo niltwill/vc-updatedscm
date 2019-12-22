@@ -1,0 +1,31 @@
+HAM1_1    ~g~The cops are closing in on our stashes. BE quick, and beat dem to it!
+HAM1_2    ~r~The cops got to the stash first!
+HAM1_3    ~g~Get this stuff back to the hideout!
+HAM1_4    ~g~Good! Now get the next one!
+HAM1_6    ~r~The Stash was destroyed, you idiot!
+HAM1_7    ~g~The cops have got our stash! Retrieve it before they get away!
+HAM1_8    ~g~The cops are on the way to pick up the stash, get a move on!
+HAM1_A    Hello? Hello?
+HAM1_B    Come in, my dear, and rest your soul.
+HAM1_C    You must be the big bad man me grandaddy been chattin' 'bout.
+HAM1_D    Tells me tings about you, you know, when he visits,
+HAM1_E    and about the others who wait for you.
+HAM1_F    Now, we all dead for long time, but you,
+HAM1_G    I wouldn't want to be in your shoes, ha ha ha ha ha!
+HAM1_H    I got a message to come here.
+HAM1_I    Can you hear dem?
+HAM1_J    Dem callin' your name, boy, must want you pretty bad, don't ya tink?
+HAM1_K    Now you do old Auntie Poulet a turn, huh, maybe she help you.
+HAM1_L    Maybe she can give you a little juju after all of dis.
+HAM1_M    Give you some magic to give the law man the stink eye, hmmmmm?
+HAM1_N    Look, this is all very, um... give me what?
+HAM1_O    I,I, I think I've got the wrong address...
+HAM1_P    Do me these tings, Tommy......
+HAM1_Q    The Cubans, nasty proud foofoos, mmm,
+HAM1_R    been making my lovely Haitian boys shake de heads.
+HAM1_S    Now they told the policeman where me been stashing my powders.
+HAM1_T    Dey tink it drugs, them stupid.
+HAM1_U    Now be a good boy Tommy and go and get the powders for Auntie Poulet.
+HAM1_V    Yeah, yeah, sure, sure.
+HAT_1A    ~g~Don't move a muscle, chump!
+

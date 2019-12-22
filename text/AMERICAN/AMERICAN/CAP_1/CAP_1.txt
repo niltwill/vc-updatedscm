@@ -1,0 +1,45 @@
+CAP1B10   You've capped the Collectors. More are on their way.
+CAP1_10   I'll murder you Vercetti.
+CAP1_11   You always were a jerk.
+CAP1_12   You're going to die, Vercetti.
+CAP1_2    You know the rules, Vercetti!
+CAP1_3    Mr. Forelli sends his regards!
+CAP1_4    It's the Harwood Butcher!
+CAP1_5    You tell Sonny - stay away!
+CAP1_6    Vice City is MINE now, NOT his.
+CAP1_7    You think you can take me down, Vercetti?
+CAP1_8    We'll keep coming after you until you die, Vercetti.
+CAP1_9    You don't stand a chance, you psychotic prick.
+CAP1_B0   ~g~The mafia has taxed the film studio!
+CAP1_B1   ~g~The Mafia is taxing your businesses. Find them and kill them.
+CAP1_B2   ~g~The Mafia has taxed the Boatyard!
+CAP1_B3   ~g~The Mafia has taxed the Ice Cream Factory!
+CAP1_B4   ~g~The Mafia has taxed the Car Showroom!
+CAP1_B5   ~g~The Mafia has taxed the Taxi Firm!
+CAP1_B6   ~g~You have found the collector, kill him.
+CAP1_B7   ~g~You've lost the collector.
+CAP1_B8   ~r~The collector has taxed all of your businesses.
+CAP1_B9   ~g~The mafia has taxed The Malibu!
+CAP1_C0   ~g~The Mafia has arrived at the film studio!
+CAP1_C2   ~g~The Mafia has arrived at the Boatyard!
+CAP1_C3   ~g~The Mafia has arrived at the Ice Cream Factory!
+CAP1_C4   ~g~The Mafia has arrived at the Car Showroom!
+CAP1_C5   ~g~The Mafia has arrived at the Taxi Firm!
+CAP1_C9   ~g~The Mafia has arrived at The Malibu!
+CAP1_D0   ~g~The Mafia is leaving the film studio!
+CAP1_D2   ~g~The Mafia is leaving the Boatyard!
+CAP1_D3   ~g~The Mafia is leaving the Ice Cream Factory!
+CAP1_D4   ~g~The Mafia is leaving the Car Showroom!
+CAP1_D5   ~g~The Mafia is leaving the Taxi Firm!
+CAP1_D9   ~g~The Mafia is leaving The Malibu!
+CAP_01    Ok, what's the emergency?
+CAP_02    WHO?
+CAP_03    Tommy...some mob thugs ...said they'd come to take their cut...
+CAP_04    ...said it was a Mr. Forello's money...I feel like crap.
+CAP_05    Forelli? SONNY Forelli?
+CAP_06    Yeah, that's the guy...I think...they were very insistent...
+CAP_07    Don't you worry, pop, I'm not angry with you.
+CAP_08    Get him to the hospital.
+CAP_09    Tommy...rip that guy a new asshole for me...
+CAP_10    I'm gonna rip him two!
+

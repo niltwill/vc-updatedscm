@@ -1,0 +1,65 @@
+GEN3_1    Hogging all the action, I see...
+GEN3_10   Tommy.
+GEN3_11   I see you soon, amigo, I think!
+GEN3_12   Shit. Where's that guy Lance?
+GEN3_14   Tommy! I need some help here!
+GEN3_15   Don't worry, I got you covered!
+GEN3_16   Diaz's men are getting cut down!
+GEN3_18   ~g~Here come the Cubans, keep close to Diaz. Watch over the deal making Diaz and Lance are safe.
+GEN3_19   ~g~Haitians! They're busting the deal! Protect Diaz!
+GEN3_2    Look, you wanna do something other than just shadowing me everywhere? Why don't you come along and show me if you're any use.
+GEN3_20   ~g~The Colonel has arranged some firepower for you at the multistory carpark.
+GEN3_22   Diaz's Health:
+GEN3_23   ~g~You've left Lance behind! Go and get him!
+GEN3_25   ~r~Lance died!
+GEN3_28   ~g~Take the briefcase back to Diaz.
+GEN3_29   ~g~Collect the briefcase and take it back to Diaz.
+GEN3_3    I might just do that. The name's Lance, by the way.
+GEN3_30   ~r~He got away with the money! Diaz will have your balls for this!
+GEN3_33   ~r~Check your fire!! You're supposed to be watching over Diaz and his men, not shooting them!
+GEN3_34   ~r~There ain't gonna be a deal if you shoot the Cubans!
+GEN3_35   ~g~He's stolen Diaz's money!
+GEN3_36   ~g~Grab the bike, chase him down and get Diaz's money back!
+GEN3_37   ~g~Here come the Cubans. Watch over the deal making sure Diaz and Lance are safe.
+GEN3_38   ~r~Diaz died! You failed to protect him!
+GEN3_39   ~g~Get to your vantage point up the stairs.
+GEN3_40   To ~h~shoot straight ahead ~w~on a ~h~motorbike ~w~press the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+GEN3_41   To ~h~shoot straight ahead ~w~on a ~h~motorbike ~w~press the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+GEN3_44   ~g~Go with Lance to the drop off and watch over Diaz.
+GEN3_45   They'll be here any minute, we both better get a good vantage point.
+GEN3_46   Sheeit!
+GEN3_47   Tommy!
+GEN3_48   Damn!
+GEN3_49   lance's health:
+GEN3_5    You must be Cortez's new gun.
+GEN3_50   ~r~You lost Diaz's money! Next time try not to reduce the money to ashes!
+GEN3_51   More damned Haitians in a shitty van!
+GEN3_52   These Haitians think they can take RICARDO DIAZ!?!
+GEN3_53   MY MONEY!
+GEN3_54   Don't just stand there, you pricks, chase that Haitian dickhead down!
+GEN3_55   Tommy! I'll stay here and watch over Diaz!
+GEN3_56   ~r~Diaz was ambushed and died! Next time keep him in your sights!
+GEN3_57   The Kruger is an assault rifle, which allows you to manually aim in 1st person.
+GEN3_58   Press and hold the~h~ ~k~~PED_LOCK_TARGET~~w~ button to ~h~aim~w~ with an assault rifle.
+GEN3_59   Press and hold the~h~ ~k~~PED_LOCK_TARGET~~w~ button to ~h~aim~w~ with an assault rifle.
+GEN3_6    Until more gainful opportunities arise.
+GEN3_60   Press the ~h~~k~~PED_FIREWEAPON~~w~ button to ~h~fire~w~ an assault rifle.
+GEN3_61   Press the ~h~~k~~PED_FIREWEAPON~~w~ button to ~h~fire~w~ an assault rifle.
+GEN3_62   Press the ~h~~k~~PED_FIREWEAPON~~w~ button to ~h~fire~w~ an assault rifle.
+GEN3_63   As well as performing drive-by's,~h~ motorbikes ~w~allow you to ~h~shoot forwards~w~.
+GEN3_64   To shoot forwards while on a bike press the ~h~~k~~PED_FIREWEAPON~~w~ button.
+GEN3_65   To shoot forwards while on a bike press the ~h~~k~~PED_FIREWEAPON~~w~ button.
+GEN3_66   To shoot forwards while on a bike press the ~h~~k~~PED_FIREWEAPON~~w~ button.
+GEN3_67   You must have a sub machine gun to shoot forwards on a motorbike.
+GEN3_7    They'll be here any minute - we both better get a good vantage point...
+GEN3_8    OK! I'll take the balcony, you get the roof across the yard.
+GEN3_9    I live! Dickheads! And it's all down to you! What is your name?
+GEN3_A    Thomas, I appreciate your coming.
+GEN3_B    Forgive me for getting straight to business.
+GEN3_C    Diaz has asked me to oversee a minor business transaction.
+GEN3_D    Let's hope it goes better than last time, huh?
+GEN3_E    Which is why I thought of you, my friend.
+GEN3_F    I've dropped some protection at the multistory carpark.
+GEN3_G    Pick it up - then go and watch over Diaz's men at the drop off.
+GEN3_H    Gracias, amigo.
+

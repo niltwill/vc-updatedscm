@@ -1,0 +1,15 @@
+ASM2_1    ~g~Mrs. Dawson will be leaving the Jewelry shop in Vice Point soon. Kill her. It must look like a car accident.
+ASM2_10   ~g~When her car bursts into flames make your self scarce!
+ASM2_11   Help me!
+ASM2_12   Somebody help me!
+ASM2_13   Oh my god!
+ASM2_2    health:
+ASM2_3    ~g~She's gonna blow! Get out of there!
+ASM2_4    ~r~You smashed up her car when she wasn't in it! She won't touch it now!
+ASM2_5    ~r~She got away!
+ASM2_6    ~r~You were too near the scene of the 'accident'!
+ASM2_7    ~r~It's supposed to look like an accident! Try ramming her off the road instead!
+ASM2_8    ~g~You must make Mrs. Dawson's death look like an accident. Do not use any weapons.
+ASM2_9    ~g~You need some wheels for this job!
+ASM2_A    My compliments on a job well done Mr. Teal. My client was very pleased.
+

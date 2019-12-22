@@ -1,0 +1,33 @@
+POR4_01   ~g~Go ~y~Downtown~g~ and adjust the spotlight on top of the building.
+POR4_02   ~g~A fast bike will be needed to jump from roof to roof. The Security Guard usually drives a ~y~PCJ 600~g~ to work...
+POR4_03   ~g~You will need to get onto the roofs of the buildings. There should be a lift into one of the upper offices...
+POR4_05   ~g~These stairs will lead round to a lower office.
+POR4_06   ~g~Return to the lower office if you need access to the rooftops again.
+POR4_07   ~g~You will need a bike so you can jump from building to building.
+POR4_08   ~g~Smash through the window to start the course. You have until 07:00 before it gets too light to get up there unseen.
+POR4_09   ~g~The pickups will show you which building to jump to next.
+POR4_10   ~r~It's too light to get up there unseen.
+POR4_11   ~g~Return to the ladder if you need access to the rooftops again.
+POR4_A    I'm sorry, but I just can't swallow this right now.
+POR4_B    Oh COME ON darling!
+POR4_C    He's hung like a sperm whale for pity's sake,
+POR4_D    how can you not feel the part?!
+POR4_E    But Stevie...
+POR4_F    How's my star director?
+POR4_G    Oh, man. The struggle between the artistic integrity and
+POR4_H    the humping, pumping action continues unabated.
+POR4_I    And before you ask, yes, all four videos will be released by their...
+POR4_J    Honey, can you PLEASE keep the anaconda in the shot,
+POR4_K    he costs more per hour than you do!
+POR4_L    Oh, sorry Steve.
+POR4_M    I was thinking, we need some kind of big stunt to really promote the launch.
+POR4_N    Something that will make a real impact on the City - you got any ideas?
+POR4_O    Well, in the old days they used to have gala events,
+POR4_P    stars, limos, the night sky crisscrossed with searchlights...
+POR4_Q    Searchlights! I've got an idea...
+POR4_R    ...yeah, yeah, yeah. The little sequined numbers, and the limos, oh, premieres
+POR4_S    Oh, yes ma'am, of course ma'am,
+POR4_T    and the press, and the barrage of lights...
+POR_AS1   FILM STUDIO ASSET COMPLETED
+POR_AS2   ~g~Inter Global Films will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+

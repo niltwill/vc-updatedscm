@@ -1,0 +1,12 @@
+OUTTIME   ~r~Too slow, man, too slow!
+TAX1_1    Ok, we got a high class fare needs picking up from Starfish island - any takers?
+TAX1_2    Tommy here, I'll take it!
+TAX1_3    This is my fare, back off asshole!
+TAX1_4    Come on come on, Get in, quick!
+TAX1_5    Ok, ok! Just don't hurt me!
+TAXW1_1   ~g~Pick up the V.I.P. on Starfish Island.
+TAXW1_2   ~g~Get the V.I.P back! Take the other car out!
+TAXW1_3   ~r~The V.I.P. is dead!
+TAXW1_4   ~r~The V.I.P. has been dropped off!
+TAXW1_6   ~g~Take the V.I.P. to the airport!
+

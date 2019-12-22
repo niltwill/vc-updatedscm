@@ -1,0 +1,73 @@
+GUN_2A    Hold the ~h~~k~~PED_LOCK_TARGET~ ~w~button to ~h~auto-target~w~, press the ~h~~k~~PED_FIREWEAPON~ ~w~button to ~h~fire!
+GUN_2C    Hold the ~h~~k~~PED_LOCK_TARGET~ ~w~button to ~h~auto-target~w~, press the ~h~~k~~PED_FIREWEAPON~ ~w~button to ~h~fire!
+GUN_2D    Hold the ~h~~k~~PED_LOCK_TARGET~ ~w~button to ~h~auto-target~w~, press the ~h~~k~~PED_FIREWEAPON~ ~w~button to ~h~fire!
+HELP17    Press the ~h~~k~~PED_FIREWEAPON~ ~w~button to attack the chef.
+HELP18    Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to attack the chef.
+LAW2B_A   Where'd you pop up from?
+LAW2B_B   I've been looking for a bird like you for ages, mate...
+LAW2B_C   Kent Paul, mate. Yeah, I'm the guvnor 'round here.
+LAW2B_D   I'm looking for some English guy...
+LAW2B_E   I sort things out, you know what I mean?
+LAW2B_F   I'll treat you. Whatever you want, I'll get you, girl.
+LAW2B_G   Don't you worry about a thing, mate.
+LAW2B_H   Get lost, honey.
+LAW2B_I   Oi oi oi oi oi!
+LAW2B_J   You Kent Paul? I'm a friend of Rosenberg's...
+LAW2B_K   Rosenberg...Rosenberg...Oh, that bonkers ambulance chaser!
+LAW2B_L   That guy could defend an innocent man all the way to death row!
+LAW2B_M   Give us another drink, bruv.
+LAW2B_N   Everybody's a comedian.
+LAW2B_O   Listen to me, I'm missing twenty keys and a lot of cash...
+LAW2B_P   Drugs, mate? It's a mug's game.
+LAW2B_Q   What do you know about it?
+LAW2B_R   Oi oi! What I was coming to was,
+LAW2B_S   there's some chef-cum-trumpetshifter who deals out kitchen of a hotel on Ocean Drive.
+LAW2B_T   He's been looking real pleased with himself lately. You could go and check him out...?!
+LAW2B_U   I will - and I'll be seeing you around.
+LAW2B_V   Yeah, that's right. Go on - walk away, you mug. I'll knock you spark out!
+LAW2B_W   Give me a drink - and where's that slut!
+LAW2C_A   Oh, way to go, tough guy. Beat him to a pulp. That should make him real chatty.
+LAW2C_B   You want some, too?
+LAW2C_C   Hey, chill. I want what you want, brother.
+LAW2C_D   Oh, yeah? And what's that?
+LAW2C_E   Your green - and my dead brother's white lady. Unfortunately, you just silenced our lead.
+LAW2C_F   Accidents happen. Get lost.
+LAW2C_G   Hey, hey, whoa. No need to go all 'Lone Ranger' on my ass.
+LAW2C_H   The way I see it - we two hombres in a strange town. We need to watch each other's back.
+LAW2C_I   My back's just fine, brother...
+LAW2C_J   You sure about that? Here, take this.
+LAW2C_K   Follow me!
+LAW2_1    Hey, whatchoo lookin' at?
+LAW2_10   ~g~Drive back to the hotel.
+LAW2_11   ~g~Pick up his cell phone.
+LAW2_12   Cell phone acquired! You can now receive phone calls.
+LAW2_13   ~g~You've left Lance behind! Go and get him!
+LAW2_14   We gotta get the hell outta here!
+LAW2_15   ~g~Go to Ammu-Nation.
+LAW2_16   One thing you gotta realize about this town. You gotta pack some heat.
+LAW2_17   C'mon, the local gun shop's a couple of blocks away.
+LAW2_18   Tommy, every man needs a little R&R once in a while.
+LAW2_19   This here's the Pole Position Strip Club. You might want to drop in some time.
+LAW2_2    You better start talking..
+LAW2_3    Hey, make me, you prick!
+LAW2_4    This way!
+LAW2_5    I'm going to go see what I can dig up. I'll be watching you, Tommy.
+LAW2_6    ~g~Go to the Malibu Club and find Kent Paul.
+LAW2_7    ~g~Go and find the chef on Ocean Drive.
+LAW2_A    Ah! Well, I hope you're having a good time. Because I'm going out of my mind with worry here. What did you find out?
+LAW2_B    That there are more criminals in this town than in prison. We need a lead from the streets...
+LAW2_C    Ok, let me think, let me think, let me think -
+LAW2_D    - AH! I've got it!
+LAW2_E    Ok, There's this limey, some music industry slimeball,
+LAW2_F    goes by the name of Kent Paul.
+LAW2_G    Anyway, he's got his nose so far up most of Vice City's ass
+LAW2_H    that if anybody knows the whereabouts of 20 k's of coke,
+LAW2_I    it's this guy, all right? He's always at The Malibu.
+LAW2_J    I'll go pay him a visit.
+LAW2_K    Take it easy now.
+LAW3_11   Stand in the ~q~pink marker~w~ to view the weapons on offer.
+LAW3_12   You can select weapons by pressing ~h~left~w~ or ~h~right~w~ on the ~h~directional button.
+LAW3_13   If you have enough cash you can buy weapons by pressing the ~h~~k~~PED_SPRINT~ ~w~button.
+LAW3_14   You can exit the shop by pressing the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button.
+LAW3_15   Follow the ~h~Gun blip~w~ on the radar to find ~h~Ammu-Nation.
+

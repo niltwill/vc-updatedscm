@@ -1,0 +1,37 @@
+COL5A_1   Circumstances force a hasty departure, amigo.
+COL5A_2   What's the problem?
+COL5A_3   Ehh, the French want their missile technology back and after that last incident,
+COL5A_4   I feel it is time to find safer harbors.
+COL5A_5   Wouldn't it be safer to fly?
+COL5A_6   I'd be dead before I reached check-in. Besides, I need to get my merchandise out of the country.
+COL5A_7   Need another gun?
+COL5A_8   You, my friend, are worth ten guns...
+COL5B_1   Thomas, you have protected and served me well.
+COL5B_2   But now you must leave us before we reach the open seas.
+COL5B_3   I will lower my personal launch. Keep it, my friend, a token of my gratitude.
+COL5B_4   Thank you, Colonel.
+COL5B_5   One more request. While I'm away, could you keep an eye on Mercedes for me?
+COL5B_6   I think she could look after herself, but sure, I'll keep an eye out.
+COL5B_7   Gracias, amigo. Hasta luego.
+COL5B_8   Adios, amigo.
+COL5_1    Port side! Port side!
+COL5_10   I have diplomatic immunity!
+COL5_11   Don't shoot, I am a Colonel!
+COL5_12   Thomas, kill them, my country will love you.
+COL5_13   Tommy, we are being overrun by the French!
+COL5_14   Tommy, everywhere I look, there are French men, I hate it!
+COL5_15   Tommy, how are you?
+COL5_16   This is for Piaf and Gainesbourg and your stupid french bread!
+COL5_2    They're attacking from starboard!
+COL5_3    The bridge up ahead!
+COL5_4    They've got a helicopter!
+COL5_7    Stop shooting at me!
+COL5_9    Tommy, stop them shooting at me!
+COL5_B1   ~g~Defend the Colonel and his yacht at all costs.
+COL5_B2   ~g~Get up front and clear the route for the Colonel's yacht.
+COL5_B3   ~r~The Colonel is dead!
+COL5_B4   ~g~Shoot the attacking helicopter out of the sky.
+COL5_B5   ~g~Shoot down the helicopters, do not endanger the yacht.
+COL5_B6   ~g~You have run out of ammo, get more from the stairs on the top deck.
+COL5_B7   ~g~You are running low on health, get more from the stairs on the top deck.
+

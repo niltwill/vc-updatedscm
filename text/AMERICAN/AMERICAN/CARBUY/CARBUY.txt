@@ -1,0 +1,19 @@
+CAR1_1    B.J. Smith. And you must be Mr. Vercetti.
+CAR1_10   The business wasn't too strong,
+CAR1_11   and my staff took it upon themselves to get a bit more
+CAR1_12   creative with the generation of wealth.
+CAR1_13   Obviously, I could wind down the business before I hand it over.
+CAR1_14   Hell, I could burn the place down if I wanted to.
+CAR1_15   This is prime development land.
+CAR1_16   Oh, I wouldn't worry about any of that.
+CAR1_17   This place seems perfect.
+CAR1_18   Yeh it does, So I take it we have a deal?
+CAR1_2    Would you like the tour?
+CAR1_3    Might as well.
+CAR1_4    Well, I'm very sad to be selling the dealership to y'all.
+CAR1_5    This was my first investment after I turned pro.
+CAR1_6    But now it's time for me to move on.
+CAR1_7    You're leaving town?
+CAR1_8    Not in too much of a hurry, I hope?
+CAR1_9    No. I'm just coming out of retirement, and preparing for my future comeback.
+

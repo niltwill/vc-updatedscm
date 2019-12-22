@@ -1,0 +1,19 @@
+BM3_1     ~g~A local gang has stolen Mitch Baker's Angel. Get it back!
+BM3_2     ~r~You were supposed to bring the bike back, not destroy it!
+BM3_3     ~g~Get the bike back to the bar!
+BM3_4     ~g~Get on the bike!
+BM3_6     ~g~They are holed up behind Ammu-Nation in the Downtown area.
+BM3_7     ~g~You will need a fast bike to gain access to the roof.
+BM3_8     ~g~Use the bike to jump from these stairs to the roof on the far side of the road.
+BM3_9     ~g~Get Mitch's Angel and get out of there!
+BM3_A     Hey there, Mitch.
+BM3_B     Well, if it ain't 'bad ass' Vercetti.
+BM3_C     Now I wanna see how good you can fight for your patch.
+BM3_D     A local street gang made the mistake of stealing my hog...
+BM3_E     probably because of some machismo thing or somethin'.
+BM3_F     Me and the boys would go over there and teach them a lesson in respect an'all.
+BM3_G     Anyways.
+BM3_H     Then I got to thinking - this would make a good initiation for you.
+BM3_I     You get my bike back, you can tell Paul he's got his security.
+INTRUDE   ~g~You've been spotted!
+

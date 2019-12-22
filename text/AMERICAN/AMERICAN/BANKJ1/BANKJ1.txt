@@ -1,0 +1,28 @@
+BJM1_1    ~g~Break Cam Jones out of police custody!
+BJM1_2    ~r~You were supposed to bust Cam out, not get him killed!
+BJM1_20   Put the weapon away or face the consequences!
+BJM1_21   ~g~The key card to the cells can be found upstairs in the station.
+BJM1_22   ~g~Get Cam back to his house!
+BJM1_23   ~g~You need to get the key card first!
+BJM1_3    ~g~You will find something useful in the station's locker room.
+BJM1_4    He's armed! Kill him!
+BJM1_5    Only authorized personnel beyond this point!
+BJM1_A    Tommy! Hey, Tommy, look at this, this is great! I've got us this minibar installed!
+BJM1_B    We got a whole bar downstairs, Ken.
+BJM1_C    Yeah, yeah, whatever. Well, I got the chalkboard you asked for.
+BJM1_D    Ah, that's the benefit of a law school education: the ability to follow instructions.
+BJM1_E    Now, I need a safe man.
+BJM1_F    Oh, all right, well, let me think...safe, safe, safe, safe - I got it! This guy will blow you away!
+BJM1_G    Ahh, nah, that schmuck. He's on the inside.
+BJM1_H    Where inside?
+BJM1_I    In a police headquarter cell awaiting transfer.
+BJM1_J    I think he's about to get paroled....
+BNK1_10   Yeah, that's me..
+BNK1_11   Whatever you say!
+BNK1_12   Lose the heat and get me back to my place!
+BNK1_13   I'm gonna be doing a job and you're my safe cracker.
+BNK1_14   Beats losing my ass in a cell!
+BNK1_7    Cam Jones?
+BNK1_8    I'm busting you out!
+WANTED1   ~g~Shake the cops and lose your wanted level!
+

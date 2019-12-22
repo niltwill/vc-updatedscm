@@ -1,0 +1,14 @@
+DRUG_1    Hello? Hel-lo?! Hello?
+DRUG_10   and she can hold like twenty bales of the best Jamaican smoke right in the hull!
+DRUG_11   So go ahead dude, she's ready to fly!
+DRUG_12   Yo yo, uh, suit dude, you gotta light?
+DRUG_13   Dude?
+DRUG_2    Put it out. There's a dude here.
+DRUG_3    Hey suit dude! I guess you're the new owner?
+DRUG_4    Yeah. Which one of the boats is the fastest?
+DRUG_5    It's already in the water, dude,
+DRUG_6    I though you might want to try her out.
+DRUG_7    Dude, she's already running with a 300 horse power engine...
+DRUG_8    ...and the fiberglass hull, she just shoots through the waves.!
+DRUG_9    She can do like zero to sixty in four seconds flat dude...
+

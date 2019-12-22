@@ -1,0 +1,21 @@
+PHI1_01   ~g~Go and knock the arms off the back of the dealers' trucks.
+PHI1_02   ~g~The arms dealer dropped his load. Smash the crate and pick up the weapon.
+PHI1_03   ~g~Looks like they have called for back up.
+PHI1_04   ~g~Now go and finish off the remaining arms dealers.
+PHI1_HP   When using Detonator Grenades, throw a grenade then trigger the explosion at any time.
+PHIL1_A   Phil?
+PHIL1_B   RUN!
+PHIL1_C   Run
+PHIL1_D   Never get a naked flame too close to one of Phil Cassidy's Boomshine stills!
+PHIL1_E   Shit Phil, you drink that stuff?
+PHIL1_F   Hell, you don't have to drink it
+PHIL1_G   - just a good whiff will set you off. Hoowwee!
+PHIL1_H   Listen Phil, you said you could fix me up with some firepower...
+PHIL1_I   Sure thing.
+PHIL1_J   There's some Mexican gun-runner been doing me for business of late.
+PHIL1_K   He does his weekly run about now.
+PHIL1_L   Ram his hardware off the back of his trucks before he goes to ground.
+PHIL1_M   And you'd be doing me a favor while you're at it.
+PHIL1_N   Then finish him off.
+PHIL1_O   Hoooooweeeeee!
+

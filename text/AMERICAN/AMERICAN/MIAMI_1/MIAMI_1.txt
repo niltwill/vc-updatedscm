@@ -1,0 +1,6 @@
+GETBIK1   You have ~1~ seconds to get on a PCJ 600!
+GETBIK3   ~r~You need a PCJ 600 to attempt this mission!
+T4X4_1A   ~g~You have ~1~ seconds to collect ~y~24~g~ checkpoints. ~g~You may collect them in ~y~ANY ORDER.
+T4X4_1B   ~y~PASS THROUGH~g~ the first checkpoint to start the ~r~TIMER.
+T4X4_1C   ~1~ of 24!
+

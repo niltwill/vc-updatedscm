@@ -1,0 +1,13 @@
+ALEVEL    Paramedic Mission Level ~1~
+ATUTOR2   ~g~Drive the patients to Hospital CAREFULLY. Each bump reduces their chances of survival.
+A_CANC    ~r~Paramedic mission cancelled!
+A_COMP1   Paramedic missions complete: $~1~
+A_COMP2   You will never get tired!
+A_COMP3   Paramedic missions complete! You will never get tired when running!
+A_FAIL1   Paramedic mission ended.
+A_FAIL2   ~r~Your lack of urgency has been fatal to the patient!
+A_FAIL3   ~r~The patient is dead!!
+A_FULL    ~r~Ambulance full!!
+A_PASS    Rescued!
+A_SAVES   PEOPLE SAVED: ~1~
+

@@ -1,0 +1,20 @@
+ASM4_10   ~g~Looks like you're not the only one after the briefcase! Get it to Ammu-Nation, quick time!
+ASM4_12   Distance:
+ASM4_15   ~g~Get the sniper rifle to your right.
+ASM4_16   ~g~Watch the woman on the balcony, she will walk down the escalators and ask someone the time.
+ASM4_17   ~g~Once the conversation has finished kill the person she spoke to, but do not kill her.
+ASM4_18   ~g~Once the target is dead retrieve his briefcase and take it to Ammu-Nation in Downtown.
+ASM4_19   ~g~Keep your distance from the target! Use the distance bar in the upper right corner of the screen.
+ASM4_20   ~g~If it gets full he will see you.
+ASM4_21   ~g~Get the briefcase!
+ASM4_22   ~g~Take the briefcase to Ammu-Nation in Downtown.
+ASM4_23   ~g~He has spotted you! Nail him and get the briefcase!
+ASM4_25   ~r~You killed the woman you fool!
+ASM4_26   ~r~The target has boarded his flight!
+ASM4_27   ~r~The target has seen you! You should have kept your distance!
+ASM4_28   ~r~The target heard you firing your weapon!
+ASM4_29   ~r~Itchy trigger finger? You killed him too soon!
+ASM4_A    Time to fry bigger fish, Mr. Teal. There's a rifle in the foliage to your right.
+ASM4_B    Watch the woman standing on the balcony above the check-in desks. She will walk through the crowd and ask someone the time.
+ASM4_C    You must kill that person, retrieve his case and take it to the location taped under the phone.
+

@@ -1,0 +1,11 @@
+BLOD_01   Drive through the checkpoints to increase your overall time.
+BLOD_02   You will fail if your overall time reaches zero.
+BLOD_03   Get your overall time above the Target Time to win!
+BLOD_04   CAR HEALTH:
+BLOD_05   ~g~TARGET TIME: ~1~ Minute
+BLOD_06   ~g~TARGET TIME: ~1~ Minutes
+BLOD_07   NEW Best Time: ~1~ Seconds
+BLOD_08   Cars Destroyed: ~1~
+BLOD_09   $~1~
+BLOD_10   WINNER!!
+

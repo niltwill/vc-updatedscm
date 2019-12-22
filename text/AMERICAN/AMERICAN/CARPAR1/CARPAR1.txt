@@ -1,0 +1,4 @@
+CONE_1    ~r~You smashed a cone!!
+MM_1_A    ~g~Collect ~y~5 checkpoints~r~ WITHOUT ~g~smashing any ~r~CONES! ~g~You may collect checkpoints in ~y~ANY ORDER.
+MM_1_C    ~y~PASS THROUGH~g~ a checkpoint to start the timer. ~g~Each checkpoint will credit you with ~y~~1~ SECONDS~g~.
+

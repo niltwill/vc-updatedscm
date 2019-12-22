@@ -1,0 +1,28 @@
+PSYCH_1   I'll see Love Fist burn!
+PSYCH_2   Love Fist ruined my life!
+RBM2_1    ~g~Drive the limo to the signing event and try to draw the psycho out.
+RBM2_2    ~r~You've wrecked the band's car!
+RBM2_3    ~g~Get to the signing!
+RBM2_4    ~g~Get the Psycho! Don't let him escape!
+RBM2_5    ~r~You lost him, you idiot!
+RBM2_7    ~r~The fans have been attacked, the psycho won't show!
+RBM2_8    ~r~The security guards have been attacked, the psycho won't show!
+RBM2_A    Tommy, man. Am I glad to see you!
+RBM2_B    What's going on?
+RBM2_C    Bad vibes, Tommy....
+RBM2_D    Aye, I'm not joking, it's heavy stuff man, heavy you know?
+RBM2_E    There's this cat, we hardly know him, but he knows us.
+RBM2_F    Like this cat. Knows all about us.
+RBM2_G    Knows that Willy likes his ladies' underwear, eh!
+RBM2_H    Or that Percy likes Duran Duran!
+RBM2_I    Shut up ye fool. Just 'cause Jezz bangs sheep.
+RBM2_J    It's a love rocket thing, you know?
+RBM2_K    Yeah, the love rocket thing, right. But listen, this cat...
+RBM2_L    yeh, yeh, the guy, he wants Love Fist dead.
+RBM2_M    Dead Tommy.
+RBM2_N    Love Fist gone. You know what they say, the good die young.
+RBM2_O    but Tommy, you gotta save Love Fist!
+RBM2_P    We got a signing in two hours and I think...
+RBM2_Q    And the boys think the stalker's gonna try some monkey business there.
+RBM2_R    Oi shut it!
+

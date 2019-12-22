@@ -1,0 +1,20 @@
+TEX2_A    Tommy, this is Donald Love. Donald, this here is Tommy Vercetti,
+TEX2_B    the latest gunslinger to come to these parts.
+TEX2_C    Yeh...uh...
+TEX2_D    Donald, you just shut up and listen, and you might learn something.
+TEX2_E    Now, nothing brings down real estate prices quicker than a good old-fashioned gang war -
+TEX2_F    'cept maybe a disaster, like a biblical plague or something,
+TEX2_G    but, that may be going too far in this case.
+TEX2_H    You getting this down, you four-eyed prick?
+TEX2_I    Now recently a Haitian gang lord died. Apparently the Cubans did it, nobody's certain.
+TEX2_J    But let's make them certain! You disguise yourself as a Cuban hombre,
+TEX2_K    and head on down to crash that funeral. Mix it up, and then high tail it.
+TEX2_L    You getting this down, Donald?
+TEX2_M    Well, that ought to put the coyote in the chicken coop, huh?
+TEX2_N    And then we'll just sit back, and watch the prices tumble.
+TEXEXIT   ~g~Now get out of Little Haiti!
+TEX_2A    ~g~Excellent! They've spotted you!
+TEX_2B    ~r~Fool! People have to WITNESS a Cuban doing the hit!
+TEX_2C    ~g~Go get yourself some Cuban gang colors in Little Havana!
+TEX_2D    ~g~Take out the Haitian Gang Lord at Romero's Funeral Parlor!
+

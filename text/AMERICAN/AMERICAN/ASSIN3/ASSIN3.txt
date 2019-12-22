@@ -1,0 +1,16 @@
+ASM3_11   TIME:
+ASM3_12   ~g~A selection of weapons have been left for you nearby if you require them. You have ~h~9 MINUTES ~g~to kill all members of the gang.
+ASM3_13   ~g~Mike Griffin is working on an advertising board in Washington.
+ASM3_14   ~g~Dick Tanner is working for DBP Security in Ocean Drive.
+ASM3_15   ~g~Marcus Hammond and Franco Carter are located near the Jewelry shop in Vice Point.
+ASM3_16   ~g~Nick Kong is cruising off Washington Beach.
+ASM3_17   ~g~Charlie Dilson is riding in Washington.
+ASM3_18   ~g~Don't get too close to the target or he may spot you!
+ASM3_19   ~g~He's seen you! Waste him!
+ASM3_20   ~g~They have seen you! Make sure you waste them both!
+ASM3_21   ~r~You did not kill all the gang members in time!
+ASM3_22   ~g~Don't get too close to the targets or they may spot you!
+ASM3_C    A European gang plans to hit a bank in Vice City. My employers would rather this didn't happen.
+ASM3_D    Each member of the gang has a cover while they are here in Vice City. Some have menial jobs, others are on vacation.
+ASM3_E    Each target and their likely whereabouts are taped under the phone.
+

@@ -1,0 +1,37 @@
+CUB2_01   Not enough room, man, you need a bigger car.
+CUB2_02   We need reinforcements from the cafe!
+CUB2_03   ~g~Get a car and pick up the Cubans from outside Robina's Cafe.
+CUB2_04   ~g~Go and drop the Cubans off at the fight.
+CUB2_05   Take out that cowardly sniper!
+CUB2_07   They fight like girls! Take cover!
+CUB2_09   Sniper on the roof!
+CUB2_11   ~r~You fool, we needed that car.
+CUB2_12   Hey amigo! Good to see you could make it!
+CUB2_13   Stinking nest of Haitians, we gonna kill 'em all!
+CUB2_14   CHAAAAAARGE!
+CUB2_15   Now, my brothers, CHAAARRRGGEE!!
+CUB2_16   Tommy, we have proved our manful bravery!
+CUB2_17   Let us steal the van full of drugs and make good our escape!
+CUB2_18   ~g~Get a car and pick up the Cubans
+CUB2_19   We gonna fight like men!
+CUB2_21   Fight like men with huge cojones!
+CUB2_22   ~g~ Finish off the rest of the Haitians so the Cubans can move forward.
+CUB2_23   ~g~ Little Haiti will be swarming with Haitians trying to even the score with the Cubans. Watch your back.
+CUB2_24   ~g~Return to Robina's Cafe with the Van and park it round the back.
+CUB2_25   KILL ALL THE HAITIANS!!
+CUB2_A    Un cafecito, por favor, Alberto..
+CUB2_B    Papi! Una grande problema!
+CUB2_C    The Haitians! I hate these Haitians!
+CUB2_D    They mess with me for the last time!
+CUB2_E    These Hai - these Haitians! We take 'em out!
+CUB2_F    Only we need some backup.
+CUB2_G    I lost a few hermanos already out there.
+CUB2_H    Amigo, you drive good!
+CUB2_I    For a woman. Right?
+CUB2_J    This is no time for joking!
+CUB2_K    Come on, drive for me again!
+CUB2_L    Take my boys over there, and then we'll take these Haitians down!
+CUB2_M    They mess with me, they mess with the biggest boy in town!
+CUB2_N    No problema, Tommy.
+CUB2_O    Umberto my son, what happened?
+

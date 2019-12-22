@@ -1,0 +1,8 @@
+RCR1_1    ~g~Compete in a checkpoint race with 3 other RC Cars.
+RCR1_2    ~g~Be the first to complete two laps of the track to win!
+RCR1_4    laps left:
+RCR1_6    ~g~Your RC Car is going out of range!
+RCR1_7    ~r~Your RC Car went out of range!
+RCRC1_1   ~g~Compete in a CHECKPOINT RACE with 3 other RC Bandits over 2 LAPS
+RCRC1_3   ~g~Final lap!
+

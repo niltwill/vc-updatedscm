@@ -1,0 +1,34 @@
+HELP23    You can follow the ~h~hammer blip~w~ on the radar if you want to buy melee weapons from the hardware store.
+HELP40    You can smash cars up by using the hammer or a similar weapon.
+HELP41    or you can ram them with a vehicle
+LAW3_1    Giorgio sends his regards.
+LAW3_16   Dumb Florida Moron.
+LAW3_17   Get out of the way!
+LAW3_2    Remember, guilty is a dirty word.
+LAW3_20   ~g~Smash up the Juror's car!
+LAW3_21   I can't believe this is happening!
+LAW3_22   Unbelievable!
+LAW3_23   Ok! Ok, man! I get the message!
+LAW3_24   ~g~That hammer would be useful.
+LAW3_3    Innocent until I say otherwise.
+LAW3_4    You know he's not guilty.
+LAW3_5    You remember Giorgio? You remember he's innocent.
+LAW3_6    Not guilty, understand? Good.
+LAW3_7    ~g~Go and intimidate the two jurors, but DON'T kill them!
+LAW3_8    ~r~You killed a Juror!
+LAW3_9    ~g~Smash up the Juror's car to get him out!
+LAW3_A    Aaah! Oh, for god's sake, it's you! Oh, Jeez - I'm gonna need new pants!
+LAW3_B    Hey, those psychos from up north - they've been on the horn, and they're coming down here soon.
+LAW3_C    Now where is the goddamn money?!
+LAW3_D    Relax, relax. We're not at that part yet.
+LAW3_E    Ohhh... I thought that you were taking care of this, I really did!
+LAW3_F    And now those guidos say we gotta do them a favor.
+LAW3_G    You mean I gotta do 'em a favor.
+LAW3_H    Oh, of course that's what I mean. Do I look like I can intimidate a jury?
+LAW3_I    I couldn't intimidate a child - and believe me, I've tried.
+LAW3_J    Now, look. It's either that, or Forelli's cousin, Giorgio, gets five years for fraud.
+LAW3_K    You gotta take these guys OUT!
+LAW3_L    I understand. Help the jury change their minds. Don't worry about it.
+LAW3_M    No no no no no - NO! I tried that. The jury case didn't go so well,
+LAW3_N    so MAKE them change their minds.
+

@@ -1,0 +1,7 @@
+RCH1_12   ~g~The RC helicopter is getting too far out of range!
+RCH1_13   ~r~The RC helicopter went out of range!
+RCH1_4    Checkpoints:
+RCH1_7    ~g~There are 20 checkpoints in total.
+RCH1_8    ~g~If you wish to quit this mission press the ~h~~k~~PED_FIREWEAPON~ ~g~button to detonate your RC Helicopter.
+WRECKED   ~r~The vehicle is wrecked!
+

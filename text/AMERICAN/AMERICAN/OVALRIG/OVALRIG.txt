@@ -1,0 +1,35 @@
+HOTR_01   ~g~The Race lasts for 12 laps. Only 1st, 2nd and 3rd places qualify for winnings.
+HOTR_02   ~g~If your car is destroyed you will be disqualified.
+HOTR_03   ~g~When your car is damaged you can get it repaired at the pitstop.
+HOTR_04   ~g~This is the way to leave the stadium.
+HOTR_05   Car Health:
+HOTR_06   Laps:
+HOTR_07   New best time: ~1~:0~1~
+HOTR_08   Time: ~1~:~1~
+HOTR_09   Position:
+HOTR_10   Race Time:
+HOTR_11   New best lap time: ~1~.~1~ seconds
+HOTR_12   ~r~Your car has been destroyed!
+HOTR_13   ~r~You didn't win the race!
+HOTR_14   ~r~You have been disqualified!
+HOTR_15   Time: ~1~:~1~
+HOTR_16   Time: ~1~:0~1~
+HOTR_17   Best Time: ~1~:~1~
+HOTR_18   Best Time: ~1~:0~1~
+HOTR_19   Best Time: NA
+HOTR_20   New Best Time: ~1~:~1~
+HOTR_21   New Best Time: ~1~:0~1~
+HOTR_22   Best Result: NA
+HOTR_23   Best Result: 1st
+HOTR_24   Best Result: 2nd
+HOTR_25   Best Result: 3rd
+HOTR_26   Best Result: ~1~th
+HOTR_27   Best Lap Time: ~1~.~1~ seconds
+HOTR_28   Best Lap Time: ~1~.0~1~ seconds
+HOTR_29   $~1~
+HOTR_30   1ST PLACE
+HOTR_31   2ND PLACE
+HOTR_32   3RD PLACE
+HOTR_33   Best Lap Time: NA
+HOTR_34   New best lap time: ~1~.0~1~ seconds
+

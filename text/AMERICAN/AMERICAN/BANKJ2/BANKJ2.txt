@@ -1,0 +1,57 @@
+BJM2_1    ~g~Go to Ammu-Nation in Downtown and talk to Phil Cassidy.
+BJM2_11   ~r~Phil's dead!
+BJM2_12   ~r~One of the shooters is dead!
+BJM2_14   ~g~Move on to the next area!
+BJM2_15   SCORE:
+BJM2_17   ~g~Go and talk to Phil.
+BJM2_18   SCORE TO BEAT:
+BJM2_19   ~g~Hit as many targets as you can in the time limit!
+BJM2_2    ~g~To exit the round press the ~h~~k~~PED_JUMPING~ ~g~button.
+BJM2_20   ~g~When you run out of ~w~time ~g~or ~w~ammunition ~g~the round is over!
+BJM2_22   ~r~You have left the shooting range!
+BJM2_23   ~g~If you leave the shooting range during the competition, you will fail the mission.
+BJM2_24   ~g~The closest target is worth one point.
+BJM2_25   ~g~The middle target is worth two points.
+BJM2_26   ~g~The far target is worth three points.
+BJM2_27   ~g~All targets this round are worth one point.
+BJM2_28   SCORE ROUND THREE: ~1~
+BJM2_2A   You Phil Cassidy?
+BJM2_2B   Why?
+BJM2_2C   I'm looking for a man who can handle a gun. From this setup, I'm not too convinced.
+BJM2_2D   Son, I could shoot a fly off your head at 80 feet.
+BJM2_2E   Oh really?
+BJM2_2F   Yeah. I learnt in the army.
+BJM2_2G   Fly shooting real popular in the army? Glad I don't pay tax.
+BJM2_2H   You tryin' to be funny kid?
+BJM2_2I   Ha ha ha ha ha!
+BJM2_2J   Let's shoot.
+BJM2_3    HIT RATE: ~1~%
+BJM2_4    SCORE ROUND ONE: ~1~
+BJM2_6    SCORE ROUND TWO: ~1~
+BJM2_7    TOTAL SCORE FOR SHOOT: ~1~
+BJM2_9    ~g~Get to round two's starting point.
+BJM2_A    We need a stick up man. You know one?
+BJM2_B    Hey, Tommy, Tommy, Tommy, this stuff keeps you sharp, man.
+BJM2_C    WoooOOOooo!
+BJM2_D    I could be your stick up man! Stick 'em up! Stick 'em up!
+BJM2_E    You ain't a stick up man, you're an idiot.
+BJM2_F    Now get yourself a drink and shut up.
+BJM2_G    Hey, get outta my way! Yeh yeh yeh - ow ow ow!
+BJM2_H    Cam, what do you think?
+BJM2_I    Well, the best shooter in this town is a guy named Cassidy.
+BJM2_J    Is that so?
+BJM2_K    Yeah. A military guy, or he thinks he is.
+BJM2_L    I doubt he was ever in the army, but he certainly knows how to get a hold of guns.
+BJM2_M    He'll be down at the shooting range.
+BJM2_N    Relax
+BNK2_1    LIVE AMMUNITION
+BNK2_2    AIM 3-2-1 FIRE!
+BNK2_3    AREA CLEAR!
+BNK2_4    Hoooeee!
+BNK2_5    Couldn't hit a barn door!
+BNK2_7    So you wanna do me a favor, and help me put together a job?
+BNK2_8    Son, after shooting like that, if you asked me to be your wife, I'd say yes.
+BNK2_9A   Son, you better get your fancy talking and big ideas and shove 'em where there ain't no sun. You can't shoot nothin'!
+BNK2_9B   You can't shoot nothin'.
+RANGE_1   SCORE FOR SHOOT: ~1~
+

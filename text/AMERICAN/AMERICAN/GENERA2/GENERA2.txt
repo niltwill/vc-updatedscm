@@ -1,0 +1,26 @@
+BLIPHLP   The blip on the radar is a triangle pointing up, this shows that the target is higher than the player.
+COL2_1    Ze rain, she is tres wet zis time of the year...
+COL2_2    What?
+COL2_3    Ah, comment?
+COL2_4    Look, Cortez sent me. Just give me the damn chips.
+COL2_5    Oh...d'accord.
+COL2_6A   Freeze, imperialist American pig! Zat iz propertay of ze government Francais. 'And eet over!
+COL2_A    Tommy! Come, join me.
+COL2_B    This looks delicious, huh? Tapir snout?
+COL2_B1   ~g~Meet the courier at the mall.
+COL2_B2   ~g~The courier is fleeing with the guidance chips! Don't let him get away!
+COL2_B3   ~g~Take the guidance chips back to the Colonel.
+COL2_C    Uhhh... no, no. No, thanks.
+COL2_D    Tommy, you are like a pampas breeze that has freed me from the stench of corruption,
+COL2_E    although, I must appear to mourn his passing and carry on with business as usual.
+COL2_F    This isn't getting me any closer to my money...
+COL2_F1   ~r~You killed the contact!
+COL2_F2   ~g~The courier is dead. Grab the guidance chips.
+COL2_F3   ~r~The guidance chips are at the bottom of the sea.
+COL2_F4   ~r~The courier has escaped! You failed to get the guidance chips.
+COL2_G    Tommy, my friend, you are not in Liberty now. Here we do things differently.
+COL2_H    I will continue with my enquiries but in the meantime I have a valuable deal to close.
+COL2_I    A favor for a friend, Cortez?
+COL2_J    You're a good friend, Tommy. I knew you would not let me down.
+COL2_K    I need you to meet a courier who has obtained some valuable technology for me...
+

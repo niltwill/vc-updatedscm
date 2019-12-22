@@ -1,0 +1,6 @@
+ASM1_5    ~r~Your target completed his deliveries!
+ASM1_6    Deliveries left:
+ASM1_7    ~g~Carl Pearson, Pizza Delivery Man. Kill him before he completes his deliveries.
+ASM1_A    Mr. Teal, your help in eradicating those out-of-towners was invaluable to business. I have more work for you with a more 'hands-on' approach.
+ASM1_D    Mr. Teal, your help in eradicating those out-of-towners was invaluable to business.
+

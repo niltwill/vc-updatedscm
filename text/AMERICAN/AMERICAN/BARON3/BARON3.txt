@@ -1,0 +1,22 @@
+COK3_5    ~g~Find the switch to lower the boat.
+COK3_6    ~g~Get the boat to the mansion.
+COK3_7    ~r~You destroyed the boat!
+COK3_8    ~g~Go to the boatyard at the docks and steal the fastest boat.
+COK3_9    ~g~Now get into the boat.
+COK3_A    Not so pleased with your selves NOW, huh!
+COK3_B    Ahahahahaa, Ahahahahaa.
+COK3_C    Whoa! Watch where you're waving that thing!
+COK3_D    No more pigeon shit on MY car, eh Tommy!
+COK3_E    Guess not.
+COK3_F    You're damn right. Now listen,
+COK3_G    you know who owns the fastest boat on the east coast?
+COK3_H    Not off hand, no.
+COK3_I    ME. And I want it to stay that way.
+COK3_J    Every smuggler from here to Caracas has one dream, a faster boat.
+COK3_K    Rumor has it the boatyard has just completed such a vessel.
+COK3_L    for some Costa Rican dickhead.
+COK3_M    And Tommy...I WANT THAT BOAT!!!
+COK3_N    I think your pigeons are back.
+COK3_O    Ah! I thought I got you. Where'd you come from?
+COK3_P    Pigeons! Boom! Aaaaah!
+

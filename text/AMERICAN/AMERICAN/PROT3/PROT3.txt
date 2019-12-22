@@ -1,0 +1,53 @@
+PRO3_01   Ok Lance, let's get the cops' attention!
+PRO3_02   ~g~ Take a cop car and go and plant the bomb at the Tarbrush Coffee Shop in the Mall.
+PRO3_03   ~g~ You've left Lance behind, go and get him.
+PRO3_04   ~g~ Let's go.
+PRO3_05   ~r~You killed Lance!
+PRO3_07   ~g~ You have blown your cover. Hurry up and plant the bomb!
+PRO3_08   ~g~ Get back to ~h~Vercetti Estate~g~ on ~h~Starfish Island~g~.
+PRO3_09   Tie 'em up and gag 'em!
+PRO3_10   Ooo. Fits perfectly!
+PRO3_11   Bit tight around the crotch though...
+PRO3_12   Oh yeah yeah, mine too. Mine too.
+PRO3_13   Easy brother! No cop drives this bad!
+PRO3_14   Remember - smile at the other cops
+PRO3_15   Hey there officer. Nice badge, nice badge.
+PRO3_16   Real smooth, Lance.
+PRO3_17   Ok, timers are set, 5 seconds and ticking.
+PRO3_18   5 seconds?!! We got to get the hell out of here!
+PRO3_19   Now that got them really irritated.
+PRO3_20   ~g~ Get two cops to follow you into the garage.
+PRO3_21   ~g~Get a wanted level so the cops will follow you into the lock-up.
+PRO3_22   ~g~The lock-up door is blocked! You need to clear the door so it can close.
+PRO3_23   ~g~Walk into the marker to plant the bomb.
+PRO3_24   ~g~Get clear of the Cafe!
+PRO3_A    You moron! What were you thinking?!
+PRO3_A1   Alright.
+PRO3_B    Do you realize what this means?!
+PRO3_C    We could all be sunk!
+PRO3_D    The timer must have got screwed.
+PRO3_E    That place was wired to go up like a firework factory.
+PRO3_F    Then somebody tipped off the cops...
+PRO3_G    What's the problem, fellas?
+PRO3_H    Mike was supposed to torch some place in the mall,
+PRO3_I    but he screwed the fuses and now the cops are crawling all over it.
+PRO3_J    We gotta get our stuff and get out of here!
+PRO3_K    Relax, both of you, let me think for a second!
+PRO3_L    Tommy Vercetti just doesn't cut and run.
+PRO3_M    The cops are gonna be going over that building with a fine toothed comb, right?
+PRO3_N    But that takes time.
+PRO3_O    We gotta go in and torch that place ourselves.
+PRO3_P    Yeah, but...
+PRO3_Q    No one but a cop could get within a mile of that place!
+PRO3_R    So we go as cops.
+PRO3_S    We gotta get uniforms - and we're gonna need a squad car.
+PRO3_T    All thanks to you Mike.
+PRO3_U    I'm sorry.
+PRO3_V    I got it.
+PRO3_W    What we got to do is lure the cops in with the finger,
+PRO3_X    put them in a lock-up
+PRO3_Y    and jump 'em.
+PRO3_Z    Good plan. Let's go!
+PRO_AS1   PROTECTION RING ASSET COMPLETED
+PRO_AS2   ~g~Vercetti Estate will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+

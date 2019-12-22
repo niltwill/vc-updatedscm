@@ -1,0 +1,25 @@
+TEX1_0    ~g~The target is at the driving range enjoying a game of golf. Make sure it's his last.
+TEX1_1    ~g~Go and pick up some golfing clothes from Jocksports.
+TEX1_10   Kill that Psycho!
+TEX1_2    ~g~Now head to the Leaf Links Golf Club.
+TEX1_3    Who's this guy? Boys, deal with him.
+TEX1_6    Nice ass baby!
+TEX1_7    Is this me?
+TEX1_8    Each time you enter a caddy you automatically receive a golf club, providing your melee weapon slot is empty.
+TEX1_9    Get him!
+TEX1_A    Come in and park yourself on the hide, son.
+TEX1_B    Hell, my daddy used to say, never look a gift horse in the mouth, and by golly, he never did.
+TEX1_C    Would you like a drop of the old Kentucky?
+TEX1_D    No thanks.
+TEX1_E    A clean thinker! I like that.
+TEX1_F    Now, the property business isn't all about high-falootin' paper pushing.
+TEX1_G    It's about dirt! And the will to claim that dirt! You with me, son?
+TEX1_H    Oh yeah.
+TEX1_I    Well, I need some tenacious bastard to let go of some dirt,
+TEX1_J    and you look to me like the kind of guy to persuade him.
+TEX1_K    Persuasion's my forte.
+TEX1_L    Yeh, he'll be down at the country club, down on the golf course.
+TEX1_M    They don't allow guns, so his bodyguards won't be packing lawgivers.
+TEX1_N    Go beat eight tons of crap out of him.
+TEX1_O    Here now - I got you a membership, and boy you're going to need more appropriate clothing.
+

@@ -1,0 +1,21 @@
+COK1_1    Ooh shit!
+COK1_10   ~g~Go to the thief's house and find out where he's stashing the money.
+COK1_11   ~g~Have a look through his window.
+COK1_2    Too slow grandad!
+COK1_4    Loser.
+COK1_5    You better keep on running, asshole!
+COK1_7    ~g~He's escaped to the roof, keep on his tail but don't kill him!
+COK1_8    ~g~Quick! Grab some wheels and follow him!
+COK1_9    ~r~You're supposed to follow him, not kill him!
+COK1_A    Come on, baby, go! Yeah! Yeah! Arrrrr!
+COK1_B    Stupid horse! I'll chop your head off! Grrrrr...
+COK1_C    Who is this dickhead?
+COK1_D    Tommy Vercetti. You remember me.
+COK1_E    Excuse me. I'm a little anxious. Never trust a goddamn horse!
+COK1_F    You do a good job - you work for me now.
+COK1_G    I work for money.
+COK1_H    As I said, amigo, you work for me now. Shut up. Some Judas has betrayed me.
+COK1_I    He thinks I don't know how much money I should be making, but stealing 3% is as good as stealing 100%.
+COK1_J    No one does this to me. NO ONE!!
+COK1_K    You follow him from his apartment and you see where he goes! Later, we will kill him.
+

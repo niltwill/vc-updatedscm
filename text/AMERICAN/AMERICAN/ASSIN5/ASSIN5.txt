@@ -1,0 +1,7 @@
+ASM5_1    ~g~Enter the compound behind the Cherry Popper Ice Cream Company The deal is taking place on the roof.
+ASM5_2    ~g~Get the merchandise and take it to the helipad at the airport!
+ASM5_3    ~g~Take the merchandise to the helipad at the airport!
+ASM5_A    There is a valuable exchange taking place on the roof of the Cherry Popper Ice Cream Company.
+ASM5_B    Kill everyone involved, steal the merchandise and take it to the helipad at the airport.
+ASM5_C    There is a gate to your left that leads to the back of the factory.
+

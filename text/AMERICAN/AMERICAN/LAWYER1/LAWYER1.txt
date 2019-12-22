@@ -1,0 +1,91 @@
+HELP20    Follow the ~h~T-shirt~w~ blip on the radar to find Rafael's.
+LAW1_10   See you around, handsome!
+LAW1_11   I'm sure you will.
+LAW1_12   Hmmmm...nice bike.
+LAW1_13   No! My Bike!
+LAW1_14   Wow, I like, really dig your motorcycle.
+LAW1_15   Yeah babe, just picked it up from Howlin' Pete's
+LAW1_2    ~g~Get to the Colonel's boat.
+LAW1_3    ~g~Take the Colonel's daughter to the Pole Position club.
+LAW1_4    ~r~You killed the Colonel's daughter!
+LAW1_5    Will you be working for my father?
+LAW1_6    Maybe.
+LAW1_7    Do you mind me resting my hand in your lap?
+LAW1_8    Maybe...
+LAW1_9    It's so difficult having a rich and powerful father. Vamos.
+LAW1_A    Go get some sleep, he says -
+LAW1_B    - I have been sitting in this chair all night with the lights off drinking coffee!
+LAW1_C    This is a disaster. We are so screwed, man!
+LAW1_D    These gorillas, listen to me, are gonna come down here and rip my head off. It's ridiculous!
+LAW1_E    I did NOT go to law school for this! Ok, now what the hell are we gonna do?
+LAW1_F    Shut up, sit down, relax. I'll tell you what we're gonna do.
+LAW1_G    You're gonna find out who took our cocaine - and then, I'm gonna kill them.
+LAW1_H    That's a good idea. That's a GREAT idea. Let me think, let me think, let me think.
+LAW1_I    - OH! There's this retired Colonel, Colonel Juan Garcia Cortez.
+LAW1_J    He's the one that helped me set up this deal
+LAW1_K    well away from Vice City's established thugs. Ok?
+LAW1_L    Now, listen. He's holding his party out in the bay on his expensive yacht
+LAW1_M    and all of Vice City's big players are gonna be there. OK?
+LAW1_N    I have an invite, of course I have an invite,
+LAW1_O    but there's no way that I'm going out there, sticking my head out the door - no way! Not gonna happen.
+LAW1_P    I told you, shut up! I'll go myself...
+LAW1_Q    Ho - whoa, whoa! Hey, I like 1978 too, but, y'know, this isn't gonna be a beer and strippers do.
+LAW1_R    I mean, no offense, but I think that you might turn heads on the runway for the wrong reasons.
+LAW1_S    What's wrong with the way I'm dressed?
+LAW1_T    Ok, look, here. Stop by Rafael's, tell him I sent 'ya. He'll make you look respectable.
+LAW1_U    OK, go, c'mon...
+LAWP_1    Buenas noches.
+LAWP_10   but such a delicate matter will take time.
+LAWP_11   Perhaps we will talk later.
+LAWP_12   Meanwhile, let me introduce you to my daughter,
+LAWP_13   Mercedes!
+LAWP_14   Caramia, could you look after our guest while I attend to my necessary obligations?
+LAWP_15   Of course, daddy.
+LAWP_16   Please excuse me.
+LAWP_17   Mercedes!?
+LAWP_18   You try living with it.
+LAWP_19   Anyway, let me point out some of our more distinguished guests...
+LAWP_2    I understand you are here on the behalf of Mr. Rosenberg,
+LAWP_20   That's our congressman Alex Shrub with rising silicone star Candy Suxxx...
+LAWP_21   And have you met my lovely wife Laura? No?
+LAWP_22   Well, unfortunately she's in Alabama. This is Candy.
+LAWP_23   And over there we have the Vice City Mambas' star tight end, BJ -
+LAWP_24   always the charmer.
+LAWP_25   I blocked down on him and then I put him in a wheelchair!
+LAWP_26   Haha, that is good!
+LAWP_27   Well now, I'm looking at some prime real estate property.
+LAWP_28   And that poolside amphibian is Jezz Torrent,
+LAWP_29   lead singer with Love Fist.
+LAWP_3    I hope any recent problems have not affected his health, or uh,
+LAWP_30   Can I tell yous - do you know how they play ping-pong in Thailand?
+LAWP_31   Let me tell you's,
+LAWP_32   it does not involve a paddle, if you know what I mean!
+LAWP_33   Impotent.
+LAWP_34   And the chatty trio.
+LAWP_35   That sleeping sweat gland is Papa's right hand gimp, Gonzalez
+LAWP_36   and the other two are Pastor Richards
+LAWP_37   and pseudo intellectual film director, Steve Scott.
+LAWP_38   ...passion with the nympho invaders,
+LAWP_39   when the giant shark comes in and
+LAWP_4    mental well being, Mr...uh?
+LAWP_40   just bites their dicks off!
+LAWP_41   Ha now, you never saw anything like that before, have you?
+LAWP_42   Colonel!
+LAWP_43   your parties as ever are a triumph, hahahaha!
+LAWP_44   I can only apologize for my late arrival.
+LAWP_45   Ah, de nada amigo. How do we find you?
+LAWP_46   Our business is very trying - barbarians at the gates.
+LAWP_47   A time for rewarding one's friends and liquidating one's enemies, amigo.
+LAWP_48   Who's the loudmouth?
+LAWP_49   Ricardo Diaz. He's Mr. Coke.
+LAWP_5    Vercetti. He's just got a touch of...agoraphobia.
+LAWP_50   Mercedes!
+LAWP_51   Oh, I was just taking my friend back into town.
+LAWP_52   Another time, Ricardo!
+LAWP_53   Let's get out of here.
+LAWP_54   Actually, take me to the Pole Position club.
+LAWP_6    Excellent, excellent. And you?
+LAWP_7    I just want my merchandise.
+LAWP_8    Ah. It's an unfortunate set of circumstances for all involved.
+LAWP_9    Of course I have initiated my own lines of inquiry,
+

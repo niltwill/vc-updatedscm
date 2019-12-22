@@ -1,0 +1,48 @@
+MERC_39   I'll see you later, big boy.
+MOB_07A   Hey mate, the guys could do with some company, if you know what I mean...
+MOB_07B   I know just the girl.
+RBM1_1    ~g~Go and collect Mercedes from her apartment.
+RBM1_10   ~r~You idiot! You have destroyed the merchandise!
+RBM1_12   ~g~Go and collect the 'Love Juice' ingredients from the dealer.
+RBM1_13   ~g~Get the 'Love Juice' and Mercedes to the band before they are needed on stage.
+RBM1_14   ~g~You need a car or a motorcycle!
+RBM1_15   ~r~You have lost the dealer, our cash and the drugs!
+RBM1_17   ~g~Kill the dealer and get the drugs!
+RBM1_7    ~r~You did not get the Love Juice in time!
+RBM1_8    ~r~Mercedes is dead!
+RBM1_9    ~g~Go and collect some love juice from the dealer for Love Fist!
+RBM1_A    AllllllllRrrighttt!
+RBM1_B    Yessss! Brilliant, bloody brilliant!
+RBM1_C    Hey, Tommy! Glad you could make it.
+RBM1_D    Hey, you ever met Love Fist before?
+RBM1_E    No, I haven't but I've always loved your music.
+RBM1_F    Let me introduce you to the band.
+RBM1_G    This is Percy, Dick, and Willy's in the kaze, and that was Jezz in the booth earlier,
+RBM1_H    and guys, I want you to meet a good friend of mine.
+RBM1_I    This is Tommy. We go way back.
+RBM1_J    All right, pal.
+RBM1_K    And eh, what was your name again?
+RBM1_L    Leave it out, Jezz you, remember -
+RBM1_M    don't be playing them games with me, mate,
+RBM1_N    I'm too crafty for that, sunshine!
+RBM1_O    You see, the thing is, Tom, the boys need some help.
+RBM1_P    They ain't too connected here, they don't have the old 'how's your father?'
+RBM1_Q    We need some drugs, pal!
+RBM1_R    Gonna get on the old Love Fist fury, you know?!
+RBM1_S    Well, this is Vice City, man. What's the problem?
+RBM1_T    We need Love Juice, man, you know?
+RBM1_U    Love Juice, man!
+RBM1_V    Love Juice?
+RBM1_W    Aye, two parts boomshine, 1 part trumpet, 5 fizz bombs and a liter of petrol.
+RBM1_X    Can you help us out, pal?
+RBM1_Y    Aw, it would really mean a lot to the boys.
+RBM1_Z    You can do that for the boys, right?
+ROK1_1A   Looking for something special? I got what you need!
+ROK1_2    NO LONGER NEEDED
+ROK1_3    NO LONGER NEEDED
+ROK1_5    Hey, Mercedes!
+ROK1_6    Hiya, Tommy. And how are you?
+ROK1_7    Just fine. Listen, you fancy having Love Fist?
+ROK1_8    Ok, but just as a favor I expect returned..
+ROK1_9    Thanks for the money, sucker!
+

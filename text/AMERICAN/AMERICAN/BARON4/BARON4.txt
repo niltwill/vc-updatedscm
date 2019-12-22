@@ -1,0 +1,44 @@
+COK4_1    So Tommy, we know it was Diaz busted our deal..
+COK4_12   Watch yourself, they're coming from all over!
+COK4_13   Got 'em. Head for Diaz's as fast as you can!
+COK4_14   You want some of this?!
+COK4_15   Sleep with the fish!
+COK4_16   Eat it! EAT IT!
+COK4_19   More trouble up ahead!
+COK4_20   There are gunmen on that jetty!
+COK4_24   Good shooting, my friend. You're a real, proper, grade A lunatic.
+COK4_25   Well, thank you.
+COK4_26   See you around, Tommy.
+COK4_27   Okay, Mr. Lance Vance Dance.
+COK4_28   ~g~Get to the yacht before the other boats do!
+COK4_3    So why the hell are we running errands for him?
+COK4_31   ~g~Go to the fastest boat at the jetty!
+COK4_32   ~r~Too slow!
+COK4_33   ~r~You destroyed the boat!
+COK4_34   ~g~Take those boats out!
+COK4_35   Boat health:
+COK4_4    The more we learn now, the less we have to learn when we take this town over!
+COK4_5    I like your style, man. Real fresh.
+COK4_A    Eject! PLASTIC CRAP!
+COK4_B    You doing this to me?
+COK4_C    Who do you think you are, you piece of plastic SHIT? Aaarrgh!
+COK4_D    SCREW YOU!
+COK4_E    It eats my favorite El burro movie, it die!
+COK4_F    What else could I do?
+COK4_G    It's probably not plugged in.
+COK4_H    What?
+COK4_I    Damn - no matter, I can buy a hundred more.
+COK4_J    Now Tommy,
+COK4_K    each month a freelancer sails into Vice City and moors his yacht.
+COK4_L    He sells his cargo to the first boat.
+COK4_M    I want you to take the speedboat
+COK4_N    and beat all the other shitheads to it,
+COK4_O    then you bring the cargo here, ok!?
+COK4_P    Let me guess, you thought I could use a guardian angel.
+COK4_Q    I'm just saying you need to let me in there, my man.
+COK4_R    Now you can feed me all this 'lonely tough guy' crap,
+COK4_S    but I know one day I'm gonna save your ass,
+COK4_T    and you're probably gonna wanna kiss me!
+COK4_U    Wacko.
+COK4_V    Hahahahahaha!
+

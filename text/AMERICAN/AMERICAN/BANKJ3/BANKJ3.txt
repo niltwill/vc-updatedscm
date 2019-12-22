@@ -1,0 +1,25 @@
+BJM3_2    ~r~Hilary is dead!
+BJM3_2A   You Tommy? Of course you're Tommy, I mean,
+BJM3_2B   Why else would anyone want to speak to me?
+BJM3_2C   OK. Consider it this way -
+BJM3_2D   I'll drive for you IF, and only IF, you can drive properly.
+BJM3_2E   Leave me alone - and I'll never forgive you.
+BJM3_4    ~g~You need a car to take part!
+BJM3_A    Things are starting to come together nicely here.
+BJM3_B    What's the plan, Tommy? Que pasa, amigo?
+BJM3_C    The plan is you keep doing that like a moron. Anyhow, we need a driver.
+BJM3_D    Tommy, I'll do it. I can drive.
+BJM3_E    You want Hilary, mister. Not some smart-talking law school chump.
+BJM3_F    Hilary's the real deal. You ain't never seen anyone drive so fast. I'll give him a call here.
+BJM3_G    Hey Hil, it's Phil. How's it going? No. don't talk. We'll reminisce later. You want to do me a favor?
+BJM3_H    I got me a guy from up north. No, no, I don't think he was in the service, but he wants a driver.
+BJM3_I    For a bit of action. Okay, I understand.
+BJM3_J    What'd he say?
+BJM3_K    Well, he'll do it, no problem. Well, there might be a little problem - see, he has abandonment issues.
+BJM3_L    Seems he won't work for anyone who can't beat him. Something to do with his momma.
+BJM3_M    Anyway, he wants to race you first, said he'd meet you outside..
+BNK3_1    Ok. I'll drive for you, but please, treat me bad.
+BNK3_3A   Illegal street race in progress at Vice Point.
+BNK3_3B   Calling all officers.
+BNK3_3C   Street racers, this is illegal and forbidden!
+

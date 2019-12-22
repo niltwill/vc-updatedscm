@@ -1,0 +1,21 @@
+CNT2_01   ~g~The counterfeit plates ~y~courier~g~ is arriving at the ~r~docks~g~ in a helicopter any second now.
+CNT2_02   ~r~The plates courier has fled in the helicopter.
+CNT2_03   ~r~The courier has arrived at his destination safely, you're too late!
+CNT2_04   ~r~You destroyed the plates in the explosion!
+CNT2_05   ~g~You have the counterfeit plates. Take them to the print works.
+CNT2_06   ~g~The courier has died and dropped the plates, get to them before anyone else.
+CNT2_07   ~g~One of the guards has picked up the plates, don't let 'em get away.
+CNT2_08   ~g~The ~r~courier~g~ with the plates has arrived at the docks.
+CNT2_09   PRINT WORKS ASSET COMPLETED
+CNT2_10   ~g~The print works will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+CNT2_11   ~r~The plates are at the bottom of the sea!
+CNT2_4    Private business. You're not welcome!
+CNT2_B1   Alright, the courier's moving the plates from the docks today.
+CNT2_B2   I'm gonna go intercept them, grab the plates, lose any heat, and make my way back here.
+CNT2_B3   Now. Depending how well this goes,
+CNT2_B4   we may have five minutes to print the money before the counterfeit syndicate finds us, or we may have all year.
+CNT2_B5   Either way, I want green rolling off the presses five minutes after I get back. Got it?
+CNT2_B6   Don't you worry Tommy. We'll be ready.
+CNT2_B7   Me an'the boys will be around in the neighborhood case you need any heat taken care of.
+CNT2_B8   All right, everybody cool? All right. I'll catch you later...
+

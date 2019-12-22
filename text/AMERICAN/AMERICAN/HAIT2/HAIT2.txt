@@ -1,0 +1,22 @@
+HAT2_1    Oh, sorry, I - I must have the wrong address...
+HAT2_10   Me nephew bin making lickle flying bombs to take dem out.
+HAT2_11   Blow de boats to coffin wood.
+HAT2_12   Thanks for the tea.
+HAT2_2    Well, you might as well come in and rest your soles and have some tea.
+HAT2_3    Do you have something there for me, Tommy?
+HAT2_4    Yeah...
+HAT2_5    This place feels familiar to me, uh - it's - a smell from childhood - a deja vu...
+HAT2_6    Now Tommy, I'm going to whisper a lickle errand for you. Hear me well, aye?
+HAT2_7    You look like someone I, I...
+HAT2_8    The Cubans have fast boats they use to cross the seas with drugs.
+HAT2_9    It is their livelihood.
+HAT2_B1   ~g~Get to the van that contains the flying bombs.
+HAT2_B2   Kill the Cubans...
+HAT2_B3   Press the ~h~~k~~PED_FIREWEAPON~ ~w~button to drop a bomb. Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to cancel.
+HAT2_B4   ...and destroy their boats!
+HAT2_B5   ~g~The Cubans are making a run for it. Don't let them get away!
+HAT2_B6   ~r~The RC plane is getting too far out of range!
+HAT2_B7   ~g~One of the Cubans in escaping in a car. Don't leave any witnesses!
+HAT2_B8   ~r~You have no RC planes left!
+HAT2_B9   RC Planes:
+

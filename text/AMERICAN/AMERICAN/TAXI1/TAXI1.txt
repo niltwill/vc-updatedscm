@@ -1,0 +1,42 @@
+FARE1     ~g~Destination ~w~'The Pole Position Club' ~g~in Ocean Beach.
+FARE10    ~g~Destination ~w~'The Beach' ~g~in Vice Point.
+FARE11    ~g~Destination ~w~'Hospital' ~g~in Ocean Beach.
+FARE12    ~g~Destination ~w~'Hospital' ~g~in Vice Point.
+FARE13    ~g~Destination ~w~'Police Station' ~g~in Washington Beach.
+FARE14    ~g~Destination ~w~'Police Station' ~g~in Vice Point.
+FARE15    ~g~Destination ~w~'Pizza Restaurant' ~g~in Vice Point.
+FARE2     ~g~Destination ~w~'The Malibu club' ~g~in Vice Point.
+FARE3     ~g~Destination ~w~'The Marina' ~g~in Ocean Beach.
+FARE4     ~g~Destination ~w~'Ammu-Nation' ~g~in Ocean Beach.
+FARE5     ~g~Destination ~w~'The Hardware store' ~g~in Washington Beach.
+FARE6     ~g~Destination ~w~'The North Point Mall' ~g~in Vice Point.
+FARE7     ~g~Destination ~w~'The Jewelers' ~g~in Vice Point.
+FARE8     ~g~Destination ~w~'The Beach' ~g~in Ocean Beach.
+FARE9     ~g~Destination ~w~'The Beach' ~g~in Washington Beach.
+FARES     FARES:
+IN_ROW    ~1~ IN A ROW bonus! $~1~
+MFARE1    ~g~Destination ~w~'Ammu-Nation' ~g~in Downtown.
+MFARE2    ~g~Destination ~w~'the Terminal' ~g~at Escobar International Airport.
+TAXI1     ~g~Look for a fare.
+TAXI3     ~r~Your passenger fled in terror!
+TAXI4     Fare complete!
+TAXI5     SPEED BONUS!!
+#UpdatedSCM edited
+TAXI6     Taxi Driver mission over
+TAXI7     ~r~Your car is trashed, get it repaired.
+TAXIH1    Stop near a highlighted pedestrian to pick them up then drive them to their destination before the time runs out.
+TSCORE2   $~1~
+WFARE10   ~g~Destination ~w~'Hospital' ~g~in Little Havana.
+WFARE11   ~g~Destination ~w~'The Stadium' ~g~in Downtown.
+WFARE12   ~g~Destination ~w~'Pizza Restaurant' ~g~in Little Haiti.
+WFARE13   ~g~Destination ~w~'Pizza Restaurant' ~g~in Downtown.
+WFARE14   ~g~Destination ~w~'Docks' ~g~in Viceport.
+WFARE15   ~g~Destination ~w~'Chemist' ~g~in Little Haiti.
+WFARE3    ~g~Destination ~w~'Sunshine Autos' ~g~in Little Havana.
+WFARE4    ~g~Destination ~w~'Kaufman Cabs' ~g~in Little Haiti.
+WFARE5    ~g~Destination ~w~'The Hardware store' ~g~in Little Havana.
+WFARE6    ~g~Destination ~w~'Howlin Petes Bike Emporium' ~g~in Downtown.
+WFARE7    ~g~Destination ~w~'Police Station' ~g~in Little Havana.
+WFARE8    ~g~Destination ~w~'Police Station' ~g~in Downtown.
+WFARE9    ~g~Destination ~w~'Hospital' ~g~in Downtown.
+

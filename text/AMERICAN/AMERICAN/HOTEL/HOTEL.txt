@@ -1,0 +1,22 @@
+INTB_A    Tommy! Tommy, it's been too long.
+INTB_B    Hello Sonny.
+INTB_C    I know, I know. You're just overwhelmed with emotion.
+INTB_D    Fifteen years - seems like only yesterday.
+INTB_E    I guess that's a perspective thing.
+INTB_F    Hey, doing time for the family is no piece of cake,
+INTB_G    but the family looks after its own, ok?
+INTB_H    So, how'd the deal go down - you sitting on some white gold?
+INTB_I    Look Sonny, we were set up. The deal was an ambush. Harry and Lee are dead.
+INTB_J    You better be kidding me Tommy. Tell me you still got the money.
+INTB_K    ...no Sonny...I don't have the money.
+INTB_L    That was my money, Tommy, MY MONEY!
+INTB_M    You better not be screwing me Tommy because you know I'm not a man to be screwed with!
+INTB_N    Wait Sonny.
+INTB_O    You have my personal assurance that I'm going to get your money back and the drugs.
+INTB_P    And I'm gonna mail you the dicks of those responsible.
+INTB_Q    Hey, I already know that. You're not a fool Tommy, but I warn you, neither am I.
+INTB_R    If it was anybody else you'd be DEAD already.
+INTB_S    But because it's you, because we got history, I'm gonna let you handle this.
+INTB_T    Look, Sonny, you got my word.
+INTB_U    I'll be in touch.
+

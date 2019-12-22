@@ -1,0 +1,20 @@
+HAM3_1    ~g~We must win this battle. If all the Haitians die we lose.
+HAM3_2    ~r~The Haitians have died!
+HAM3_3    ~g~I expect the Cubans to cheat so be on your guard.
+HAM3_4    ~r~You have been spotted! The mission is a failure!
+HAM3_5    ~g~You must kill the Cubans from a distance. You must not be seen.
+HAM3_7    ~g~Look Out! The Cubans have brought reinforcements. Kill them all!!
+HAM3_8    ~g~Haitians are dying! Improve your aim.
+HAM3_A    Hello? Hello - uh..I'm looking for somebody around here...
+HAM3_B    You looking hungry, Tommy.
+HAM3_C    Do I know you?
+HAM3_D    Hush now.
+HAM3_E    One more ting an I can let you go, Tommy.
+HAM3_F    My boys gone war wit dem Cuban boys.
+HAM3_G    But no guns.
+HAM3_H    Hmm, but de Cubans have a surprise comin'.
+HAM3_I    While they fight in de streets, you take this rifle and kill dem in de hubbub.
+HAM3_J    No one sees you, no one hear you.
+HAM3_K    Now, Tommy, you do this for me, and you no longer tied to my apron strings.
+HAM3_L    Kay auntie..
+

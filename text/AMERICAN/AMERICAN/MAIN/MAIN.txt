@@ -1,0 +1,2492 @@
+ACCURA    Accuracy
+ADMIRAL   Admiral
+AMBULAN   Ambulance
+AMBUL_M   'PARAMEDIC'
+AMMU      Go inside Ammu-Nation to buy a weapon.
+AMMUHLP   If you need any weapons visit ~h~Ammu-Nation~w~. Follow the ~h~Gun blip~w~ on the radar.
+ANGEL     Angel
+ANSWER    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to answer your cell phone.
+#UpdatedSCM only
+ANSWR2    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your cell phone call.
+APACHE    Hunter delivered to helipad in Ocean Beach.
+APR       Apr
+ARMOUR    Body Armor
+ASM       ASSASSIN MISSIONS
+ASM1_1    ~g~Mr. Teal, your help in eradicating those out-of-towners was invaluable to business. I have more work for you with a more 'hands-on' approach. Your next job is taped under the phone.
+ASM1_2    ~g~Get to the payphone outside the Mall in Washington.
+ASM1_3    ~g~Carl Pearson, Pizza Delivery Man. He must not complete his deliveries.
+ASM1_4    ~g~Kill the Pizza Delivery Man before he completes his deliveries.
+ASM1_B    Your next job is taped under the phone.
+ASM1_C    I have more work for you with a more 'hands-on' approach.
+ASM3_1    ~g~Go and get the weapon Mr. Black has left for you.
+ASM3_10   ~r~You failed to kill them all.
+ASM3_2    ~g~Don't get too close to the target or he may spot you!
+ASM3_3    ~g~For a quick safe kill find a secluded spot nearby with a clear view of your target.
+ASM3_4    ~g~He's seen you! Better waste him any way you can!
+ASM3_5    ~g~Marcus Hammond is working on an advertising board in Washington.
+ASM3_6    ~g~Franco Carter is working for DBP Security off Ocean Drive.
+ASM3_7    ~g~Dick Tanner is situated near the Jewelry shop in Vice Point.
+ASM3_8    ~g~Nick Kong is situated near Washington Beach.
+ASM3_9    ~g~Stuntman Driver is situated in Washington.
+#ASM3_A    TEXT NO LONGER NEEDED
+#ASM3_B    TEXT NO LONGER NEEDED
+ASM4_1    ~g~Go get the rifle left for you in the foliage outside the airport terminal.
+ASM4_11   ~r~The target has seen you! The deal is off!
+ASM4_13   ~g~He's spotted you and is making a run for it, nail him and get the briefcase!
+ASM4_14   ~g~The distance bar in the upper right of the screen gives you an indication to how close you are to your target do not let it fill or he will see you.
+ASM4_2    ~g~Don't miss your target or you may alert his bodyguards, and remember keep your distance so he does not spot you.
+ASM4_24   distance:
+ASM4_3    ~g~Watch the woman on the balcony above the check-in desks inside the airport terminal. DO NOT KILL HER.
+ASM4_4    ~g~Kill the man she hands the briefcase to but only AFTER HE PICKS IT UP. Then retrieve the briefcase and take it to Ammu-Nation in Downtown.
+ASM4_5    ~g~Get the briefcase!
+ASM4_6    ~g~Take the briefcase to Ammu-Nation in Downtown.
+ASM4_7    ~r~You killed the woman, you fool!
+ASM4_8    ~r~The target heard you firing your weapon! The deal is off!
+ASM4_9    ~r~The target has boarded his flight!
+ASM_1     ASSASSIN MISSION 1
+ASM_2     ASSASSIN MISSION 2
+ASM_3     ASSASSIN MISSION 3
+ASM_4     ASSASSIN MISSION 4
+ASM_5     ASSASSIN MISSION 5
+ASS1_10   Hey, this is a real nice herbaceous border
+ASS1_11   Hey Tommy, can my room have a view of the bay?
+ASS1_12   Beautiful high ceilings in here...
+ASS1_3    Lance! I need cover!
+ASS1_4    Diaz must be inside!
+ASS1_5    Lance!
+ASS1_6    Go on Tommy, I'll be ok!
+ASS1_7    Eat this, you murdering bastards!!
+ASS1_8    I'm pinned down!
+ASS1_9    I got you covered Tommy!
+ASSET_C   POLE POSITION ASSET COMPLETED!
+ASSET_D   ~g~The Pole Position Club will now generate revenue up to a maximum of $~1~ per day. Pick up your cash regularly!
+ASS_1     Rub Out
+ATUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~button to toggle Paramedic missions on or off.
+ATUTOR3   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Paramedic missions on or off.
+AUG       Aug
+AVERY     AVERY MISSIONS
+A_PORT    Escobar International
+A_TIME    +~1~ seconds
+BAGGAGE   Baggage Handler
+BANK      BANKJOB MISSIONS
+BANK1     BANKJOB MISSION 1
+BANK2     BANKJOB MISSION 2
+BANK3     BANKJOB MISSION 3
+BANKBUY   The Malibu purchased: $~1~
+BANKINT   El Banco Corrupto Grande
+BANK_1    No Escape?
+BANK_2    The Shootist
+BANK_3    The Driver
+BANK_4    The Job
+BANK_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase The Malibu for $~1~
+BANK_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase The Malibu for $~1~
+BANK_NO   You cannot buy The Malibu at this time, come back later.
+BANK_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase The Malibu for $~1~
+BANSHEE   Banshee
+BARRCKS   Barracks OL
+BASEBAT   Baseball bat
+BEACH1    Ocean Beach
+BEACH2    Washington Beach
+BEACH3    Vice Point
+BENSON    Benson
+BFINJC    BF Injection
+BIKE      THE BIKER GANG MISSIONS
+BIKE1     BIKER MISSION 1
+BIKE2     BIKER MISSION 2
+BIKE3     BIKER MISSION 3
+BIKE_1    Alloy Wheels of Steel
+BIKE_2    Messing with the Man
+BIKE_3    Hog Tied
+BJM2_21   ~g~Hit as many targets as you can while your ammo lasts.
+BJM3_1    ~g~Get a fast car and get to the starting grid.
+BK4_40A   I'll give him abandonment issues!
+BLISTAC   Blista Compact
+BLODRNG   BLOODRING
+BLOODRA   Bloodring Banger
+BLOODRB   Bloodring Banger
+BMXFAIL   ~r~You failed to set a new record!
+BMXRAIN   ~g~Looks like rain...
+BMXREW1   ~g~Each time you beat your previous record for the two laps
+BMXREW2   ~g~a larger ~y~REWARD ~g~will be awarded!
+BMX_1     'Trial by Dirt'
+BMX_2     'Test Track'
+BMX_HOW   ~g~Do two laps of the dirt track, ~y~passing through ~g~the ~y~CHECKPOINTS ~g~as you go!
+BMX_REC   ~g~New Record Set:~1~ !!
+BNK1_1    Can I help you, sir?
+BNK1_2    There's an imposter!
+BNK1_3    He's gone insane!
+BNK1_4    Who the hell are you?
+BNK1_5    Where's your badge?
+BNK1_6    There they are! Shoot to kill!
+BNK2_6    This guy's a lunatic!
+BNK3_2    I'm not driving for you, no way, I'm sharing this at group.
+BNK450A   What'd I tell you Tommy? What'd I tell you? Bent SWAT better watch out when Kent Paul is in town.
+BNK450B   Come on, gimme a bigger slice, mate, c'mon. I gotta get some new threads.
+#UpdatedSCM only
+BNK450C   New threads? Huh. You need more than that, pal!
+BNK4_26   Hot damn! Here they come!
+BNK4_2A   Boys at the car lot did a great job on this baby.
+BNK4_32   Use explosives to open the deposit boxes!
+BNK4_36   Where's Cam?
+BNK4_37   History...
+BNK4_38   That's the last of them. GO! GO! GO!
+BNK4_3G   Oh crap, now the cops are onto us!
+BNK4_3H   - and we're not even there yet.
+BNK4_3K   We'll have to lose the cops first...
+BNK4_3L   Christ Tommy, you trying to kill us all!?
+BNK4_3N   Everything I care about gets trashed!
+BNK4_42   Hey guys! Get in! I got you covered!
+BNK4_43   I've got our asses covered, DRIVE!
+BNK4_44   We made it! We're rich! RICH!
+BNK4_45   Shame Cam didn't make it, he was a good guy!
+BNK4_46   Yeah. Still... more for us!
+BNK4_47   Damned straight! YEEEEHAAAH!
+BNK4_48   Tommy, would you like a massage?
+BNK4_49   Well, Hi there, Mercedes! Yeah, I'm a little tense...
+BNK4_51   You look fine to me.
+BNK_39    Shit! Where's Hilary?
+BOATBUY   Boatyard purchased: $~1~
+BOATYAR   The Boatyard
+BOAT_A2   BOATYARD ASSET COMPLETED
+BOAT_AS   ~g~The Boatyard will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+BOAT_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Boatyard for $~1~
+BOAT_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Boatyard for $~1~
+BOAT_N    Checkpoint Charlie
+BOAT_NO   You cannot buy the Boatyard at this time, come back later.
+BOAT_P    ~g~collect the packages before the time runs out.
+BOAT_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Boatyard for $~1~
+BOA_EXP   Boats destroyed
+BOBCAT    Bobcat
+BOLLOX    Press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button to drop a bomb. Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to cancel.
+BONUS     ~g~BONUS $~1~
+BOXVILL   Boxville
+BRIBE1    You have just picked up a police bribe, this will reduce your wanted level by one star.
+BRID_CL   Storm warning: All bridges to the mainland are closed.
+BRID_OP   Storm warning over, all bridges to the mainland are now open.
+BSTSTU    Best INSANE stunt so far
+BUD_1     Shakedown
+BUD_2     Bar Brawl
+BUD_3     Cop Land
+BUL_FIR   Bullets fired
+BUL_HIT   Bullets that hit
+BURRITO   Burrito
+BUS       Bus
+BUSTED    BUSTED!
+BUYGARG   ~g~You can also store vehicles in this garage.
+BUYGARS   ~g~You can also store vehicles in these garages.
+BUYSAVE   ~g~You can now save your game here when not on a mission.
+CABBIE    Cabbie
+CADDY     Caddy
+#UpdatedSCM only
+CAN_CON   Use ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~again to cancel the mission.
+CAP_1     Cap the Collector
+CARBUY    Car Showroom purchased: $~1~
+CARSOFF   Cars turned off.
+CARS_ON   Cars turned on.
+CAR_1     Ambulance
+CAR_AS1   CAR SHOWROOM ASSET COMPLETED
+CAR_AS2   ~g~Sunshine Auto's will now generate revenue up to a maximum of $~1~. Make sure you collect it regularly.
+CAR_C     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showroom for $~1~
+CAR_EXP   Road Vehicles destroyed
+CAR_L     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showroom for $~1~
+CAR_NO    You cannot buy the Car Showroom at this time, come back later.
+CAR_T     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Car Showroom for $~1~
+CDERROR   Error reading the Grand Theft Auto: Vice City DVD
+CHAINSA   Chainsaw
+CHASE     Highest media attention
+CHASE1    Ignored
+CHASE10   Local TV Live coverage
+CHASE11   UFA Today page 12
+CHASE12   UFA Today page 4
+CHASE13   Picture in UFA Today
+CHASE14   National TV 4am
+CHASE15   National TV news
+CHASE16   National TV live coverage
+CHASE17   International news
+CHASE18   National crisis
+CHASE19   International crisis
+CHASE2    Boring
+CHASE20   World event
+CHASE21   Stuff of legends
+CHASE3    Vaguely interesting
+CHASE4    Local paper Page 7
+CHASE5    Front page of local paper
+CHASE6    Vice Courier Page 2
+CHASE7    Vice Courier Front page
+CHASE8    Local TV 3am
+CHASE9    Local TV news
+CHEAT1    Cheat activated
+CHEAT2    Weapon cheat
+CHEAT3    Health cheat
+CHEAT4    Armor cheat
+CHEAT5    Wanted level cheat
+CHEAT6    Money cheat
+CHEAT7    Weather cheat
+CHEATOF   Cheat mode OFF
+CHEATON   Cheat mode ON
+CHEETAH   Cheetah
+CHERRYP   Cherry Popper Icecreams
+CHSE      CHASE
+CINCAM    Cinematic Camera
+CLEVER    Meat Cleaver
+CLOHELP   Clean Clothes!!
+CLOTH1    Soiree outfit delivered to Rafael's on Ocean Beach.
+#UpdatedSCM edited
+CLOTH10   Bank Robber outfit delivered to Malibu Club in Vice Point.
+#UpdatedSCM only
+CLOTH11   MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
+#UpdatedSCM only
+CLOTH12   Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
+CLOTH2    Street outfit delivered to Safehouses.
+CLOTH3    Coveralls outfit delivered to Tooled Up in The North Point Mall.
+CLOTH4    Country Club outfit delivered to The Golf Club in Leaf Links.
+#UpdatedSCM edited
+CLOTH5    Cuban Dress outfit delivered to Little Havana Streetwear in Little Havana.
+CLOTH6    Cop outfit delivered to Police Station on Washington Beach.
+CLOTH7    Casual outfit delivered to Gash in The North Point Mall.
+#UpdatedSCM edited
+CLOTH8    Mr. Vercetti outfit delivered to Collar & Cuffs on Ocean Beach.
+#UpdatedSCM edited
+CLOTH9    Black Tracksuit outfit delivered to Jocksport in Downtown.
+CLT_HL2   When a Clothes Pickup is collected, a one star or two star wanted level will be cleared.
+CNT2_1    Kill him.
+CNT2_2    Get the Plates!
+CNT2_3    Protect the courier!
+CNTBUY1   Printworks purchased: $~1~
+CNT_1     Spilling the Beans
+CNT_2     Hit the Courier
+COACH     Coach
+COASTG    Coast Guard
+COASTMA   Coastguard Maverick
+COK1_3    Hope you fall and break your neck!
+COK1_6    I'm sick of these pricks.
+COK2_10   You sure is better at shooting than talking.
+COK2_11   Thanks. You're a real charmer yourself.
+COK2_12   I Know, Tommy.
+COK2_18   You cool with Kenny Loggins
+COK2_19   Hell, I love this record
+#UpdatedSCM edited
+COK2_26   ~r~Lance died!
+COK2_7    See those marker boys? Try taking out the lights!
+COK3_1    Don't shoot, dude!
+COK3_2    What's in this stuff?
+COK3_3    He's taking the boat. Bummer.
+COK3_4    Help! Some square's stealing the boat, man!
+COK4_10   They're matchwood! And fish food.
+COK4_11   We made it! Those other boats ain't VIP class.
+COK4_17   They're getting desperate!
+COK4_18   My damn feet are wet! WE'RE TAKING ON WATER!
+COK4_2    Yeah.
+COK4_21   Bridge coming up!
+COK4_22   Bail out, she's about to blow!
+COK4_23   Good shooting.
+#UpdatedSCM edited
+COK4_29   ~r~Lance died!
+COK4_6    Do you know where we're going?
+COK4_7    Are we lost?
+COK4_8    We got some competition!
+COK4_9    Take 'em out!
+COK4_9A   It's time for the Lance Vance Dance!
+COK4_W    Uugghh! That's the last of them.
+COK4_X    I'm going to start her up.
+COK4_Y    I think we've got some new friends.
+COKE      THE COKE BARON MISSIONS
+COK_1     The Chase
+COK_2     Phnom Penh '86
+COK_3     The Fastest Boat
+COK_4     Supply & Demand
+COL2_6    Freeze, imperialist American pig!
+COL2_6B   Zat iz propertay of ze government Francais.
+COL2_6C   'And eet over!
+COL2_9    You American idiot! They followed you here!
+COL3_A    Thomas I appreciate you coming
+COL3_B    Forgive me for getting straight to business,
+COL3_C    Diaz has asked me to oversee a minor business transaction.
+COL3_D    Let's hope it goes better than last time.
+COL3_E    Which is why I thought of you, my friend.
+COL3_F    I've dropped some protection at the multistory carpark.
+COL3_G    Pick it up then go and watch over Diaz's men at the drop off.
+COL4_10   Lets go eat some doughnuts.
+COL4_16   Sir! Moving vehicle Sir!
+COL4_2    Don't know Sir!
+COL4_25   Vehicle self destruct initiated!
+COL4_5    Sir, Yes Sir!
+COL5_17   Oh my god they've got a helicopter!
+COL5_18   Shoot the helicopter!
+COL5_19   Tommy, take that chopper out!
+COL5_20   He's coming again! Blow that chopper!
+COL5_21   Look at the size of that chopper!
+COL5_22   Here he comes again!
+COL5_5    Die French peegs!
+COL5_6    Mercedes, that girl will be the death of me.
+COL5_8    Damn cockroach!
+COL_1     Treacherous Swine
+COL_2     Mall Shootout
+COL_3     Guardian Angels
+COL_4     Sir, Yes Sir!
+COL_5     All Hands On Deck!
+COMET     Comet
+COM_ZON   Vice City Mainland
+COP_M     'VIGILANTE'
+COP_M2    'VICE SQUAD'
+COP_M3    'BROWN THUNDER'
+COUNT     COUNTERFEITING MISSIONS
+COUNT1    COUNTERFEITING MISSION 1
+COUNT2    COUNTERFEITING MISSION 2
+CO_ALL    You got all of them. Here's a little something...
+CO_ONE    Hidden Package ~1~ of ~1~
+CRD001A   STUDIO DIRECTOR
+CRD001B   ANDREW SEMPLE
+CRD002A   DEVELOPMENT DIRECTOR
+CRD013A   IMRAN SARWAR
+CRD013B   JAMES WORRALL
+CRD013C   JOHN HAIME
+CRD018A   CHARACTER DESIGNER
+CRD019A   TOKS SOLARIN
+CRD019B   ALAN DAVIDSON
+CRD022A   ANIMATORS
+CRD022B   DUNCAN SHIELDS
+CRD022C   GUS BRAID
+CRD023A   JOLYON ORME
+CRD023B   ALAN DUNCAN
+CRD024A   LEAD VEHICLE DESIGNER
+CRD031A   STEVEN MULHOLLAND
+CRD031B   WAYLAND STANDING
+CRD031C   CAMPBELL J. DICK
+CRD031D   GRAPHIC DESIGNER
+CRD031E   STUART PETRI
+CRD032A   PROGRAMMERS
+CRD037A   ALAN CAMPBELL
+CRD037B   MARK HANLON
+CRD037C   ANDRZEJ MADAJCZYK
+CRD041A   AUDIO ENGINEER
+CRD041B   AUDIO
+CRD042A   WILL MORTON
+CRD056A   GEORGE WILLIAMSON
+CRD056B   MATT JONES
+CRD056C   ROB HARBOUR
+CRD056D   TOM WHITTAKER
+CRD057A   TECHNICAL SUPPORT
+CRD060A   OFFICE SUPPORT
+CRD060B   KIM GURNEY
+CRD060C   CASSIE OLIVER
+CRD071A   DIRECTOR OF QUALITY ASSURANCE
+CRD072A   JEFF ROSA
+CRD084A   DANIEL EINZIG
+CRD084B   JACEN BURROWS
+CRD084C   LINN PR
+CRD084D   COVER ART
+CRD084E   STEPHEN BLISS
+CRD086A   PRODUCED BY ADAM TEDMAN
+CRD088A   ADAM TEDMAN
+CRD088B   DAVID YU
+CRD088C   JERRY LUNA
+CRD088D   STUART PETRI
+CRD088E   MICHAEL CARNEVALE
+CRD088F   GREG LAU
+CRD088G   FUTABA HAYASHI
+CRD092A   JOE HOWELL
+CRD092B   MARC FERNANDEZ
+CRD098A   ELIZABETH SATTERWHITE
+CRD098B   JAMEEL VEGA
+CRD098C   MIKE HONG
+CRD110A   TALENT PROCUREMENT: JAMIE KING, SEAN MACALUSO
+CRD111A   SUPPORTING CHARACTERS
+CRD134A   CAM JONES - GREG SIMS
+CRD134B   PSYCHO - HUNTER PLATIN
+CRD134C   MAUDE THE ICE CREAM LADY - JANE GENNARO
+CRD134D   JETHRO - JOHN ZURHELLEN
+CRD134E   GONZALES - JORGE PUPO
+CRD134F   DWAYNE - NAVID KHONSARI
+CRD134G   DICK - PETER MCKAY
+CRD134H   MIKE THE GOON & PORN GUY - ROBERT CIHRA
+CRD134I   PERCY - RUSSELL FOREMAN
+CRD136A   TECHNICAL DIRECTION BY ALEX HORTON
+CRD137A   DIRECTED BY NAVID KHONSARI
+CRD138A   PRODUCED BY JAMIE KING
+CRD138B   RENAUD SEBBANE
+CRD140A   BLAYNE PERRY
+CRD140B   JONATHON SALE
+CRD140C   CHARLES TUCKER
+CRD140D   EDDIE MARRERO
+CRD140E   WILLIAM MCCALL
+CRD140F   JORGE PUPO
+CRD140G   ROBERT JACKSON
+CRD140H   TARA RADCLIFFE
+CRD140I   JENIFER GAMBETESE
+CRD140J   KRIS ACHEVARRIA
+CRD140K   ALI ORDOUBADI
+CRD140L   KAHLEEM POOLE
+CRD141A   WRITTEN BY DAN HOUSER, MARC FERNANDEZ, GILLIAN TELLING AND NAVID KHONSARI
+CRD141B   WITH HELP FROM JEREMY POPE, LANCE WILLIAMS, AND JENNY JEMISON
+CRD142A   DAN HOUSER AND JAMES WORRALL
+CRD218A   HEINZ HENN
+CRD218B   STUART ROSS
+CRD229A   TONI-MARIA CHAMBERS
+CRD229B   IMAGING VOICE AND PRODUCTION-JEFF BERLIN
+CRD251A   THE POND
+CRD252A   PIVO
+CRD344A   AUDIO RECORDED AT DIGITAL ARTS STUDIOS,
+CRD345A   SYNC SOUND, NYC AND RADIO LAZLOW, LONG ISLAND.
+CREAM     Distribution
+CRED001   ROCKSTAR NORTH
+CRED002   PRODUCER
+CRED003   LESLIE BENZIES
+CRED004   ART DIRECTOR
+CRED005   AARON GARBUT
+CRED006   TECHNICAL DIRECTORS
+CRED007   OBBE VERMEIJ
+CRED008   ADAM FOWLER
+CRED009   MISSION DESIGN
+CRED010   ANDREW DUTHIE
+CRED011   CRAIG FILSHIE
+CRED012   WILLIAM MILLS
+CRED013   CHRIS ROTHWELL
+CRED014   WRITTEN BY
+CRED015   JAMES WORRALL
+CRED016   PAUL KUROWSKI
+CRED017   DAN HOUSER
+CRED018   LEAD CHARACTER DESIGNER
+CRED019   IAN MCQUE
+CRED020   LEAD ANIMATOR
+CRED021   ALEX HORTON
+CRED022   LEE MONTGOMERY
+CRED023   VEHICLE DESIGNERS
+CRED024   PAUL KUROWSKI
+CRED025   MAP DESIGNERS
+CRED026   ADAM COCHRANE
+CRED027   NIK TAYLOR
+CRED028   GARY MCADAM
+CRED029   KEIRAN BAILLIE
+CRED030   ALISDAIR WOOD
+CRED031   ANDREW SOOSAY
+CRED032   LEAD PROGRAMMER
+CRED033   ALEXANDER ROGER
+CRED034   GRAEME WILLIAMSON
+CRED035   BARANE CHAN
+CRED036   DEREK PAYNE
+CRED037   GORDON YEOMAN
+CRED038   LEAD MUSIC PRODUCER
+CRED039   CRAIG CONNER
+CRED040   STUART ROSS
+CRED041   LEAD AUDIO ENGINEER
+CRED042   ALLAN WALKER
+CRED043   AUDIO PROGRAMMER
+CRED044   RAYMOND USHER
+CRED045   TEST MANAGER
+CRED046   CRAIG ARBUTHNOTT
+CRED047   LEAD QA
+CRED048   NEIL CORBETT
+CRED049   KEVIN WONG
+CRED050   QA
+CRED051   DAVID BEDDOES
+CRED052   DAVID WATSON
+CRED053   BARRY CLARK
+CRED054   ROSS SPARROW
+CRED055   JAMES ALLAN
+CRED056   NEIL MEIKLE
+CRED057   LEAD TECHNICAL SUPPORT
+CRED058   LORRAINE ROY
+CRED059   CHRISTINE CHALMERS
+CRED060   ROCKSTAR NEW YORK
+CRED061   EXECUTIVE PRODUCER
+CRED062   SAM HOUSER
+CRED063   PRODUCER
+CRED064   DAN HOUSER
+CRED065   VP OF DEVELOPMENT
+CRED066   JAMIE KING
+CRED067   CHIEF TECHNOLOGY OFFICER
+CRED068   GARY J. FOREMAN
+CRED069   ASSOCIATE PRODUCER
+CRED070   JEREMY POPE
+CRED071   MUSIC SUPERVISOR
+CRED072   TERRY DONOVAN
+CRED073   PRODUCTION TEAM
+CRED074   TERRY DONOVAN
+CRED075   JENNIFER KOLBE
+CRED076   JENEFER GROSS
+CRED077   LAURA PATERSON
+CRED078   JEFF CASTANEDA
+CRED079   JERONIMO BARRERA
+CRED080   CARLY SLATER
+CRED081   JUNG KWAK
+CRED082   BRIAN WOOD
+CRED083   RENAUD SEBANNE
+CRED084   RICHARD KRUGER
+CRED085   KENT PAUL'S 80 NOSTALGIA ZONE
+CRED086   WRITTEN BY DAN HOUSER
+CRED087   WWW.KENTPAUL.COM AND WWW.VICECITY.COM
+CRED088   CREATED BY
+CRED089   QA MANAGER
+CRED090   CRAIG ARBUTHNOTT
+CRED091   LEAD ANALYST
+CRED092   ADAM DAVIDSON
+CRED093   GAME ANALYST
+CRED094   RICHARD HUIE
+CRED095   ROCKSTAR TEST TEAM
+CRED096   LANCE WILLIAMS
+CRED097   JOE GREENE
+CRED098   BRIAN PLANER
+CRED099   LEE CUMMINGS
+CRED100   STORY
+CRED101   JAMES WORRALL
+CRED102   DAN HOUSER
+CRED103   ADAM TEDMAN
+CRED104   PAUL YEATES
+CRED105   JENEFER GROSS
+CRED106   LAURA PATERSON
+CRED107   CUT SCENES
+CRED108   WRITTEN BY DAN HOUSER AND JAMES WORRALL
+CRED109   AUDIO DIRECTED BY DAN HOUSER AND NAVID KHONSARI
+CRED110   PRODUCED BY JAMIE KING
+CRED111   CAST
+CRED112   TOMMY VERCETTI - RAY LIOTTA
+CRED113   KEN ROSENBERG - WILLIAN FICHTNER
+CRED114   SONNY FORELLI - TOM SIZEMORE
+CRED115   STEVE SCOTT - DENNIS HOPPER
+CRED116   AVERY CARRINGTON - BURT REYNOLDS
+CRED117   RICARDO DIAZ - LUIS GUZMAN
+CRED118   LANCE VANCE - PHILIP MICHAEL THOMAS
+CRED119   COLONEL JUAN CORTEZ - ROBERT DAVI
+CRED120   UMBERTO ROBINA - DANNY TREJO
+CRED121   PHIL CASSIDY - GARY BUSEY
+CRED122   MITCH BAKER - LEE MAJORS
+CRED123   MERCEDES CORTEZ - FAIRUZA BALK
+CRED124   KENT PAUL - DANNY DYER
+CRED125   JEZZ TORRENT - KEVIN MCKIDD
+CRED126   TAXI CONTROLLER - DEBORAH HARRY
+CRED127   CANDY SUXXX - JENNA JAMESON
+CRED128   BJ SMITH - LAWRENCE TAYLOR
+CRED129   AUNTIE POULET - YOUREE CLEOMILI HARRIS
+CRED130   SUPPLIER - ARMANDO RIESCO
+CRED131   COUGAR - BLAYNE PERRY
+CRED132   HILARY - CHARLES TUCKER
+CRED133   CONGRESSMAN ALEX SHRUB - CHRIS LUCAS
+CRED134   OLD MAN KELLY - GEORGE DICENZO
+CRED135   MOTION CAPTURE
+CRED136   ANIMATED BY
+CRED137   DIRECTED BY
+CRED138   PRODUCED BY
+CRED139   RECORDED AT PERSPECTIVE STUDIOS, BROOKLYN
+CRED140   MOTION CAPTURE ACTORS
+CRED141   PEDESTRIAN DIALOGUE
+CRED142   WRITTEN BY
+CRED143   DIRECTED BY DAN HOUSER, CRAIG CONNER, MARC FERNANDEZ, AND ALLAN WALKER
+CRED144   PRODUCED BY RENAUD SEBANNE
+CRED145   PEDESTRIANS
+CRED146   ADAM DAVIDSON, ADAM WATKINS, ALEJANDRO K. BROWN, ALEX ANTHONY SIOUKAS, ALEX GARCIA,
+CRED147   ALICE SALTZMAN, ALISON CIHRA, AMY SALIMA, AMY SALZMAN, ANDREA VIDELA, ANTHONY ATTI,
+CRED148   ANTHONY RIVERA, BIJAN SHAMS, BLAYNE PERRY, BRETT BISOGNO, BREYE MATA, BRIAN PANEN,
+CRED149   BROCK VODER, CAREY BERTINI, CHARISSE LAMBERT, CHRIS DIFAT, CHRIS REISENBERGER,
+CRED150   CHRISTOPHER BRODAY, CHRISTOPHER CARRO, CYNTHIA GREENE, DAMARIES LOPEZ, DAN LEE,
+CRED151   DAN SCHNEIDER, DAN TOYAMA, DAVID DEAN CHALTFIELD, JR., DAVID HARRISON, DAVID WILEY,
+CRED152   DEBORAH COLLINS, DEBRANDA CHANEY-GILES, DEMETRA KOUKOULAS, DENISE ROSADO,
+CRED153   DEVIN BENNETT, DEVIN WINTERBOTTOM, DORIS WOO, DOUGLAS HARRISON, DUNCAN COUTTS,
+CRED154   DUPE AJAYI, EDWIN AVELLANEDA, ELIZABETH HOWELL, ELIZABETH SATTERWHITE, ERIC NAGLE,
+CRED155   ESTEBAN KARPLUS, F. FONT, FUTABA HAYASHI, GENE HILGREEN, GERALD COSGROVE,
+CRED156   GERARD LUNA, GILLIAN TELLING, GREGG CARLUCCI, GREGORY CLERVOIX, GREGORY SCHWEIZER,
+CRED157   HADLEY TOMICKI, J. ROSSETT, JAMEEL VEGA, JASON JONES, JEFF ROSA, JENNIFER JEMISON,
+CRED158   JEREMY TAGGERT, JESSICA RIDER, JOSEPH GREENE,JOSEPH HOWELL, KATE DUKICH,
+CRED159   KEL O'NEILL, KEVIN HOPKINS, LADAWN JAMES, LANCE WILLIAMS, LAURA BUBBLES,
+CRED160   LAURA PATTERSON, LEE CUMMINGS, LETICIA L. YOUNG, LINDSAY KENNEDY, LISA ORITZ,
+CRED161   LORNA JORDAN, LUCIO AMADIO, MARCO FERNANDEZ, MARIKO TANAKA, MARLON MATTHEWS,
+CRED162   MARY TELLING, MASAYOSHI MITSUYAMA, MATTHEW CHUNG, MAX ALLSTADT, MAX BOGDANOV,
+CRED163   MELISSA ALVAREZ, MICHAEL MAY, MICHAEL ROTHSTEIN, MIGUEL VIDAL, MIKE FEDERLINE,
+CRED164   NATALIE DESCALZO, N'GAI MEMBERS, NICOLAS MALLO, NOELLE SADLER, NORBERT MORIVAN,
+CRED165   OSWALD GREENE, JR., PETER MCKAY, PETER APPEL, PRESTON SAVARESE, RAFAEL GONZALES,
+CRED166   RANDY JOHNSON, REY CONCEPCION, RICHARD KROGER, ROB TIBBS, ROBERT JACKSON,
+CRED167   ROBERT SCHULER, ROSS A. MCINTYRE, RUSSELL FOREMAN, RUTH NUNEZ, SALVADORE SUAZO,
+CRED168   SAM WHITE, SANTOS GONZALES, SCOTT SMITH, SEYMOUR FRAILMAN, SPELMAN BRAUMAN,
+CRED169   STEPHANIE TELLING, STEVE KNEZEVICH, STEVE ROBERT, SUMIKO YASUDA, SUSAN LEWIS,
+CRED170   SYLVIA COLACIOS, TOMOKO MIYAZAKI, TRON, VERDEL HALE, YVES MONDESIR, ZENO LEINFELDER,
+CRED171   DAVID BEDDOES, CHRISTINE CHALMERS, BARRY CLARK, NEIL CORBETT, KIM GURNEY, NEIL MEIKLE,
+CRED172   CASSIE OLIVER, LORRAINE ROY, DAVID WATSON, KEVIN WONG, WILL MORTON
+CRED175   ADAM DAVIDSON
+CRED176   LANCE WILLIAMS
+CRED177   NEIL MCCAFFREY
+CRED178   LAURA PATERSON
+CRED179   REY CONCEPCION
+CRED180   CHARLES HEROLD
+CRED181   ANDREW GREENWALD
+CRED182   JAMES MIELKE
+CRED183   PETER SUCIU
+CRED184   ALEX ODULIO
+CRED185   DON NKRUMAH
+CRED186   KENDALL PITTMAN
+CRED187   SAL SUAZO
+CRED188   EREK MATEO
+CRED189   CHRIS DIFATE
+CRED190   LEILA MILTON
+CRED191   DARREN ZOLTOWSKI
+CRED192   VIRGINIA SMITH
+CRED193   KEVIN CASSIN
+CRED194   JASON SHIGEMORI
+CRED195   KELLY KINSELLA
+CRED196   MOLLIE STICKNEY
+CRED197   STANTON SARJEANT
+CRED198   LAURA WALSH
+CRED199   MARK GARONE
+CRED200   JOANNA SLY
+CRED201   ELIZABETH HOWELL
+CRED202   ANA HERCULES
+CRED203   SHIRLEY IRICK
+CRED204   KASHONA FIELDS
+CRED205   JOEL M. LILJE
+CRED206   JOHN DIBENEDETTO
+CRED207   NANCY GILES
+CRED208   RYAN CROY
+CRED209   JENNIFER KOLBE
+CRED210   LIAM BURKE
+CRED211   SIGRID PREISSL
+CRED212   ANITA FITZSIMONS
+CRED213   PHILIPPA RASELLI
+CRED214   WIL QUESNEL
+CRED215   FALKO BURKERT
+CRED216   SARA SEWELL
+CRED217   RADIO STATIONS AND MUSIC
+CRED218   MUSIC CONSULTANCY
+CRED219   SOUNDTRACK CO-ORDINATOR
+CRED220   TERRY DONOVAN
+CRED221   PRODUCER FOR ROCKSTAR GAMES
+CRED222   DAN HOUSER AND LAZLOW
+CRED223   PRODUCER FOR ROCKSTAR NORTH
+CRED224   CRAIG CONNER
+CRED225   ALLAN WALKER
+CRED226   LAZLOW
+CRED227   DJ BANTER AND IMAGING
+CRED228   WRITTEN BY DAN HOUSER AND LAZLOW
+CRED229   FLASH FM
+CRED230   SPECIAL THANKS TO
+CRED231   TOMMY MOTTOLA,
+CRED232   MICHELLE ANTHONY,
+CRED233   STEVE BARNETT,
+CRED234   CHUCK FLECKENSTEIN,
+CRED235   RITA LIBERATOR
+CRED236   MARTIN & CLAIRE LOGAN
+CRED237   SANDRA HUTTON
+CRED238   CHRISTINE DAVIDSON
+CRED239   ALAN, RED & BIGFOOT
+CRED240   LE T
+CRED241   COLIN DONALD
+CRED242   KERRY STALLWOOD
+CRED243   ALAN MCGREGOR
+CRED244   CHRIS MORTON
+CRED245   EMIL BUSSE
+CRED246   EMILY BAILLIE
+CRED247   KEVIN ARCHIBALD
+CRED248   MORAG KERR
+CRED249   CATH WALKER
+CRED250   ISO BAR
+CRED251   WATERLINE
+CRED252   NEWS CAFE
+CRED253   BUDGET VIDEO RENTALS
+CRED254   LORNA'S SCOOTER
+CRED255   GARETH MURFIN
+CRED256   ADDITIONAL ART
+CRED257   TONY PORTER
+CRED258   CRAIG MOORE
+CRED259   CUT SCENE LIP-SYNC ANIMATION
+CRED260   COSGROVE HALL FILMS
+CRED261   PRODUCER - OWEN BALLHATCHET
+CRED262   SENIOR ANIMATOR - JON TURNER
+CRED263   ANIMATORS - RICHARD DRUMM
+CRED264   DAVE BROWN
+CRED265   MAIR THOMAS
+CRED266   PRASHANT PATEL
+CRED267   AUDIO TECHNOLOGY CONSULTANT
+CRED268   RIK EDE FOR GAMESOUND LTD.
+CRED269   DTS INTEGRATION SUPPORT
+CRED270   TED LAVERTY FOR DTS
+CRED271   CHRIS GREER FOR DTS
+CRED272   JASON PAGE FOR SCEE
+CRED273   RESEARCH AND ANALYSIS
+CRED274   VROCK
+CRED275   DJ: LAZLOW AS HIMSELF
+CRED276   IMAGING VOICE-JOE KELLY
+CRED277   IMAGING PRODUCTION-JONATHAN HANST
+CRED278   WAVE 103
+CRED279   DJ: ADAM FIRST-JAMIE CANFIELD
+CRED280   IMAGING VOICE-JEN SWEENEY
+CRED281   IMAGING PRODUCTION-JONATHAN HANST
+CRED282   FEVER 105
+CRED283   DJ: OLIVER 'LADYKILLER' BISCUIT-JULIUS DYSON
+CRED284   IMAGING VOICE MALE-ED MCMANN
+CRED285   IMAGING VOICE FEMALE-SHAWNEE SMITH
+CRED286   IMAGING PRODUCTION- LISTEN KITCHEN
+CRED287   EMOTION 98.3
+CRED288   DJ: FERNANDO- FRANK CHAVEZ
+CRED289   IMAGING VOICE-JEN SWEENEY
+CRED290   IMAGING PRODUCTION-JONATHAN HANST
+CRED291   RADIO ESPANTOSO
+CRED292   DJ: PEPE-TONY CHILRODES
+CRED293   WILDSTYLE
+CRED294   DJ: MISTER MAGIC AS HIMSELF
+CRED295   IMAGING VOICE-FRANK SILVESTRO
+CRED296   IMAGING PRODUCTION-LAZLOW
+CRED297   KCHAT
+CRED298   WRITTEN BY DAN HOUSER AND LAZLOW
+CRED299   PRODUCED AND EDITED BY LAZLOW
+CRED300   DJ AMY SHECKENHAUSEN -LEYNA WEBER
+CRED301   JEZ TORRENT-KEVIN MCKIDD
+CRED302   MANDY -COLLEEN CORBETT
+CRED303   MICHELLE CARAPADIS-MARY BIRDSONG
+CRED304   MR.ZOO-CARL DOWLING
+CRED305   GETHSEMANEE-LYNN LIPTON
+CRED306   CLAUDE MAGINOT-JOHN MAUCERI
+CRED307   BJ SMITH-LAWRENCE TAYLOR
+CRED308   THOR-FRANK FAVA
+CRED309   RADIO CALLERS
+CRED310   COUZIN ED, JOSH CLARK, JASON BUHRMESTER, JUAN ALLER, WAYNE OLIVER, SUSAN LEWIS, GILLIAN TELLING, TOM MURRAY, MIKE FERRANTE SR., EMMANUEL GOLDSTEIN, DAN HOUSER, NICK MANDELOS, GERRY COSGROVE, MIKE PALERMO, PORKCHOP, KEITH BROADAS
+CRED311   LEWIS, GILLIAN TELLING, TOM MURRAY, MIKE FERRANTE SR., EMMANUEL GOLDSTEIN,
+CRED312   DAN HOUSER, NICK MANDELOS, GERRY COSGROVE, MIKE PALERMO, PORKCHOP,
+CRED313   KEITH BROADAS
+CRED314   VCPR
+CRED315   WRITTEN BY DAN HOUSER AND LAZLOW
+CRED316   PRODUCED BY LAZLOW
+CRED317   MAURICE CHAVEZ-PHILLIP ANTHONY RODRIGUEZ
+CRED318   JONATHAN FREELOADER- PATRICK OLSEN
+CRED319   MICHELLE MONTANIUS-KELLY GUEST
+CRED320   REP. ALEX SHRUB- CHRIS LUCAS
+CRED321   CALLUM CRAYSHAW- SEAN MODICA
+CRED322   JOHN F. HICKORY- LJ GANSEN
+CRED323   PASTOR RICHARDS- DAVID GREEN
+CRED324   JAN BROWN- MAUREEN SILLIMAN
+CRED325   BARRY STARK- RENAUD SEBBANE
+CRED326   JENNY LOUISE CRAB- MARY BIRDSONG
+CRED327   KONSTANTINOS SMITH- KONSTANTINOS.COM
+CRED328   JEREMY ROBARD-PETER SILVESTRO
+CRED329   RADIO COMMERCIALS
+CRED330   WRITTEN BY DAN HOUSER AND LAZLOW
+CRED331   PRODUCED BY LAZLOW
+CRED332   ADDITIONAL JINGLES PRODUCED BY CRAIG CONNER
+CRED333   COMMERCIAL VOICES:
+CRED334   ADAM DAVIDSON, ALEX ANTHONY, ALICE SALTZMAN, AMY SALZMAN, KATE DUKICH,
+CRED335   ARAN RONICLE, BARB JONES, BEN KRECH, BRIAN THOMAS, BROCK YODER, CHRIS
+CRED336   FERRANTE, CRAIG CONNER, DAVE RYAN, DAVID GREEN, DORIS WOO, DOUGLAS
+CRED337   HARRISON, ED MCMANN, FRANK CHAVEZ, FRANK FAVA, GENE HILGREEN, GREG
+CRED338   SCHWEIZER, HUNTER PLATIN, JAMES FERRANTE, JEFF BERLIN, JEFF ROSA, JOE KELLY,
+CRED339   JOHN MAUCERI, JOSH CLARK, JULIE WEMYSS, KEVIN STRALEY, KIM GURNEY, LANCE
+CRED340   WILLIAMS, LAURA PATERSON, LAZLOW, LISA ORTIZ, LORNA JORDAN, LUCIEN JONES,
+CRED341   MAUREEN SILLIMAN, MIKE FERRANTE JR., PETE GUSTIN, PETER SILVESTRO, RAFF
+CRED342   CROLLA, RANDY JOHNSON, RICHARD KRUGER, RON REEVE, SHELLEY MILLER, SKY, TJ ALLARD
+CRED344   NYC, TRACK 9 STUDIOS, NYC,
+CRED345   WEDDINGTON MULTIMEDIA, LOS ANGELES,
+CRED346   THANKS TO AXEL ERICSON AND WON LEE AT DIGITAL ARTS, PAUL VASQUEZ AT TRACK 9 STUDIOS, JOHN BOWEN AND JOHN HASSLER AT SYNC SOUND
+CRED347   MARK LLOYD
+CRED348   TIM BATES
+CRED349   KIT BROWN
+CRED350   ANDY MASON
+CRED351   PHIL DEANE
+CRED352   PHIL ALEXANDER
+CRED353   MATT HEWITT
+CRED354   DENBY GRACE
+CRED355   ANTOINE CABROL
+CRED356   JONOTHAN STONES
+CRED357   MIKE BLACKBURN
+CRED358   TIM MCGAFF
+CRED359   LEE JOHNSON
+CRED360   HENDRIK LESSER
+CRED361   PASQUALE STACCHIOTTI
+CRED362   ENRIQUE FERNANDEZ
+CRED363   PAUL BYERS
+CRED364   MIKE EMENY
+CRED365   ROB DUNKIN
+CRED366   CHARLIE KINLOCH
+CRED367   KEVIN HOBSON
+CRED368   JIM CREE
+CRED369   JOHN MCCARDLE
+CRED370   DAVID MURDOCH
+CRED371   CHRIS BROWN
+CRED372   PAUL GREEN
+CRED373   KYLE MILNE
+CRED374   KEVIN YUN
+CRED375   ERICK COBBS
+CRED376   RANDY BLAKE
+CRED377   BRANDON LIM
+CRED378   BRANDON FENOL
+CRED379   MICHAEL MANOLE
+CRED380   ALETHEIA SIMONSON
+CRED381   JOHN JANSEN
+CRIMRA    Criminal rating:
+CR_1      Crane cannot lift this vehicle.
+CTUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Vigilante missions on or off.
+CTUTOR2   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle Vigilante missions on or off.
+CUB2_10   ~r~You are supposed to be killing Haitians, not Cubans.
+CUBAN     Cuban Hermes
+CUBAN1    CUBAN MISSION 1
+CUBAN2    CUBAN MISSION 2
+CUBAN3    CUBAN MISSION 3
+CUBAN4    CUBAN MISSION 4
+CUBANM    THE CUBAN GANG MISSIONS
+CUBJET    Cuban Jetmax
+CUB_1     Stunt Boat Challenge
+CUB_2     Cannon Fodder
+CUB_3     Naval Engagement
+CUB_4     Trojan Voodoo
+#UpdatedSCM edited
+CUNTY     Frankie outfit delivered to the Vercetti Estate!
+CVT_ERR   You have run out of disk space. Please make some space on your harddisk before continuing. Press ESC to cancel.
+CVT_MSG   Converting textures to optimal format for your video card
+C_ESCP    ~r~The suspect has escaped!
+C_FAIL    Vigilante mission ended!
+C_KILLS   CRIMINALS KILLED: ~1~
+C_VIGIL   VIGILANTE BONUS!!
+DAYPLC    Daily police spending
+DAYSPS    Days passed in game
+DBINST    Double insane stunt
+DBPINS    Perfect double insane stunt
+DEAD      WASTED!
+DEC       Dec
+DED_CRI   Criminals wasted
+DEFDT     --:---:---- --:--:--
+DELUXO    Deluxo
+DESPERA   Desperado
+DINGHY    Dinghy
+DIRTRNG   DIRTRING
+DISTBIK   Dist. traveled by bike (miles)
+DISTBIM   Distance traveled by bike (m)
+DISTBOA   Dist. traveled by boat (miles)
+DISTBOM   Distance traveled by boat (m)
+DISTGOL   Dist. traveled by golf cart (miles)
+DISTGOM   Distance traveled by golf cart (m)
+DISTHEL   Dist. traveled by helicopter (miles)
+DISTHEM   Distance traveled by helicopter (m)
+DOCKS     Viceport
+DODO      Dodo
+DODO_FT   You flew for ~1~ seconds!
+DTOWN     Downtown
+ENFORCR   Enforcer
+ESPERAN   Esperanto
+EXIT_1    Press the ~h~~k~~PED_SPRINT~ ~w~button to exit.
+FAGGIO    Faggio
+FBICAR    FBI Washington
+FBIRANC   FBI Rancher
+FEA_2SP   2 Speakers
+FEA_3DH   AUDIO HARDWARE
+FEA_4SP   More than 2 speakers
+FEA_ADP   AUTO-DETECT HARDWARE
+FEA_CHA   Changing audio output to STEREO. Please wait...
+FEA_CHD   Warning! You are changing from STEREO output to DTS. Please wait...
+FEA_CTD   Warning! This feature requires DTS compatible hardware to be connected. Proceed?
+FEA_DSM   Warning! This savegame is set to use DTS. This requires DTS compatible hardware to be connected. Please select whether you want to proceed using DTS or STEREO output.
+FEA_DTS   DTS
+FEA_EAR   Headphones
+FEA_FM0   WILDSTYLE
+FEA_FM1   FLASH FM
+FEA_FM2   KCHAT
+FEA_FM3   FEVER 105
+FEA_FM4   VROCK
+FEA_FM5   VCPR
+FEA_FM6   ESPANTOSO
+FEA_FM7   EMOTION 98.3
+FEA_FM8   WAVE 103
+FEA_MP3   MP3 PLAYER
+FEA_MPB   MP3 VOLUME BOOST
+FEA_MUS   MUSIC VOLUME
+FEA_NAH   NO AUDIO HARDWARE
+FEA_NM3   NO MP3 FILES FOUND
+FEA_NON   RADIO OFF
+FEA_OUT   Output
+FEA_RSS   Radio station
+FEA_SFX   SFX VOLUME
+FEA_SPK   SPEAKERS CONFIGURATION
+FEA_ST    Stereo
+FEB       Feb
+FEC_ABR   Accelerate, Brake or Reverse
+FEC_ACC   Accelerate
+FEC_ACL   Vehicle Accelerate
+FEC_ANS   Action
+FEC_ATT   Attack or Fire weapon
+FEC_BAC   Backwards
+FEC_BRA   Brake or Reverse
+FEC_BRK   Vehicle Brake
+FEC_BSP   BSPACE
+FEC_CAM   Camera modes
+FEC_CAW   Car weapon
+FEC_CCF   Configuration
+FEC_CCM   Center Camera Behind player.
+FEC_CDP   Controller Display
+FEC_CEN   Center camera
+FEC_CF1   Setup 1
+FEC_CF2   Setup 2
+FEC_CF3   Setup 3
+FEC_CF4   Setup 4
+FEC_CLE   Cycle Weapon Left
+FEC_CLK   CAPSLOCK
+FEC_CMM   Common Controls
+FEC_CMP   COMBO: LOOK L+R
+FEC_CMR   Change camera
+FEC_CMS   Change camera mode all situations.
+FEC_CR3   Crouch (L3 button)
+FEC_CRD   Change Radio Station
+FEC_CRI   Cycle Weapon Right
+FEC_CRO   Crouch
+FEC_CSU   Controller Setup
+FEC_CWL   Cycle Weapon left
+FEC_CWR   Cycle Weapon right
+FEC_DBG   DEBUG MENU
+FEC_DLF   Delete Failed.
+FEC_DLL   DEL
+FEC_DOT   NUM .
+FEC_DWA   DOWN
+FEC_EEX   Enter+exit
+FEC_END   END
+FEC_ENT   Enter/Exit Vehicle
+FEC_ENV   Enter vehicle
+FEC_ERI   Error! One or more control actions are not bound to a key or button. Please check all control actions are set
+FEC_ETR   ENT
+FEC_EXV   Enter and exit vehicle
+FEC_FIR   Fire
+FEC_FNC   F~1~
+FEC_FOR   Forward
+FEC_FPC   First person camera
+FEC_FPO   1st Person Weapons
+FEC_FPR   Controls For First Person
+FEC_FWS   NUM /
+FEC_HAB   Hand brake
+FEC_HBR   Vehicle Handbrake
+FEC_HME   HOME
+FEC_HND   Handbrake
+FEC_HO3   Horn (L3 button)
+FEC_HOR   Horn
+FEC_HRN   Horn
+FEC_IBT   -
+FEC_ILU   Invert Look in 1st Person
+FEC_INC   In car
+FEC_IRT   INS
+FEC_IVH   Invert Mouse Horizontally:
+FEC_IVV   INVERT MOUSE VERTICALLY
+FEC_JBO   JOY ~1~
+FEC_JMP   Jump
+FEC_JOY   Joystick
+FEC_JUM   Jump
+FEC_LAL   LALT
+FEC_LB    Look behind
+FEC_LB1   Look
+FEC_LB2   behind
+FEC_LB3   Look behind
+FEC_LB4   Look behind (R3 button)
+FEC_LBA   Look behind
+FEC_LBC   Use Look Left With Look Right.
+FEC_LBH   Look Behind Vehicle
+FEC_LCT   LCTRL
+FEC_LDN   1st Person Look Down
+FEC_LDU   Look Down
+FEC_LEF   Left
+FEC_LFA   LEFT
+FEC_LKL   First Person Look Left
+FEC_LKT   Lock Target
+FEC_LL    Look left
+FEC_LLF   Look Left of Vehicle
+FEC_LOF   Look forward
+FEC_LOL   Look left
+FEC_LOR   Look right
+FEC_LR    Look right
+FEC_LRG   Look Right of Vehicle
+FEC_LRT   First Person Look Right
+FEC_LSF   LSHIFT
+FEC_LUD   Look Up
+FEC_LUN   Load Unsuccessful. File Corrupted, Please delete.
+FEC_LUP   1st Person Look Up
+FEC_LWD   LWIN
+FEC_MIN   NUM -
+FEC_MOU   Mouse Settings
+FEC_MOV   Movement
+FEC_MSH   MOUSE SENSITIVITY
+FEC_MSL   LMB
+FEC_MSM   MMB
+FEC_MSR   RMB
+FEC_MWB   MS WHEEL DN
+FEC_MWF   MS WHEEL UP
+FEC_MXO   MXB1
+FEC_MXT   MXB2
+FEC_NA    NA
+FEC_NLK   NUMLOCK
+FEC_NMN   NUM~1~
+FEC_NTR   Next target
+FEC_NUM   NUM
+FEC_NUS   NOT USED
+FEC_NWE   Next weapon
+FEC_OJS   Only One Joystick Buttons per action allowed
+FEC_OKK   O.K.
+FEC_OMS   Only One Mouse Keys Allowed
+FEC_ONF   On foot
+FEC_ORR   or
+FEC_PAD   Gamepad
+FEC_PAS   Pause
+FEC_PAU   Pause
+FEC_PED   Controls On Foot
+FEC_PFR   Fire Weapon
+FEC_PGD   PGDN
+FEC_PGU   PGUP
+FEC_PJP   Ped Jump
+FEC_PLB   Look Behind.
+FEC_PLS   NUM +
+FEC_PSB   BREAK
+FEC_PSH   Ped Shoot
+FEC_PSP   Ped Sprint
+FEC_PTL   Use LockTarget with Weapon Switch Left.
+FEC_PTR   Use LockTarget with Weapon Switch Right.
+FEC_PTT   Previous target
+FEC_PWE   Previous weapon
+FEC_PWF   Walk Forward
+FEC_PWL   Go Left
+FEC_PWR   Go Right
+FEC_PWT   Walk towards camera
+FEC_QUE   ???
+FEC_R3    (R3 button)
+FEC_RAD   Radio
+FEC_RAL   RALT
+FEC_RCT   RCTRL
+FEC_RED   Redefine Controls
+FEC_RFA   RIGHT
+FEC_RIG   Right
+FEC_RS3   Radio station cycle (L3 button)
+FEC_RSC   Radio stations
+FEC_RSF   RSHIFT
+FEC_RTN   RET
+FEC_RUN   Run
+FEC_RWD   RWIN
+FEC_SFT   SHIFT
+FEC_SLK   SCROLL LOCK
+FEC_SM3   Sub-mission (R3 button)
+FEC_SMS   Show mouse pointer
+FEC_SMT   Sub-mission
+FEC_SPC   SPC
+FEC_SPN   Sprint
+FEC_STR   NUM STAR
+FEC_SUB   Sub-mission
+FEC_SVU   Save Unsuccessful.
+FEC_SZI   Sniper Rifle Zoom In
+FEC_SZO   Sniper Rifle Zoom Out
+FEC_TAB   TAB
+FEC_TAR   Target
+FEC_TDO   Turn Debug Camera Off
+FEC_TFD   Turret + Lean Down
+FEC_TFL   Look left+Turret L
+FEC_TFR   Look right+Turret R
+FEC_TFU   Turret + Lean Up
+FEC_TGD   Toggle Pad Game/Debug
+FEC_TLF   Next Target To Left
+FEC_TRG   Next Target to Right
+FEC_TSM   Toggle SubMissions
+FEC_TSS   Take Screen Shot
+FEC_TUC   Turret control
+FEC_TWO   Only Two Keyboard Keys Allowed
+FEC_UJS   Unique Joystick buttons only please.
+FEC_UMS   Unique Mouse Keys only please.
+FEC_UNB   UNBOUND
+FEC_UPA   UP
+FEC_VEH   Controls In Vehicle
+FEC_VES   Vehicle control
+FEC_VIB   Vibration
+FEC_WAR   Warning
+FEC_WPN   Fire Weapon
+FEC_WRC   WINCLICK
+FEC_ZIN   Zoom in
+FEC_ZOT   Zoom out
+FEDL_WR   Deleting saved game. Please wait...
+FEDS_TB   Back
+FED_BRI   Brightness
+FED_DBG   Menu Debug
+FED_DFL   CTheScripts::DbgFlag
+FED_DLS   Big White Debug Light Switched
+FED_DSR   Debug Streaming Requests
+FED_HUD   HUD MODE
+FED_PAH   Parse Heap
+FED_POS   Screen Position
+FED_RDB   BLIPS ONLY
+FED_RDM   MAP & BLIPS
+FED_RDR   RADAR MODE
+FED_RES   SCREEN RESOLUTION
+FED_RID   Reload IDE
+FED_RIP   Reload IPL
+FED_SCP   gbShowCollisionPolys
+FED_SCR   Show Car Road Grups
+FED_SCZ   Show Cull Zones
+FED_SPR   Show Ped Road Groups
+FED_SUB   Subtitles
+FED_TRA   Trails
+FED_WIS   Wide Screen
+FEH_AUD   AUDIO
+FEH_BRI   BRIEF
+FEH_CON   CONTROLS
+FEH_DIS   DISPLAY
+FEH_LAN   LANGUAGE
+FEH_LOA   LOAD
+FEH_MAP   MAP
+FEH_MPH   MOUSE, CURSORS TO MOVE - PGUP, PGDN, MSWHEEL TO ZOOM, L - LEGEND
+FEH_NA    OPTION NOT AVAILABLE
+FEH_SGA   START NEW GAME
+FEH_SSA   CURSORS TO MOVE - S TO SAVE TO FILE
+FEH_STA   STATS
+FEH_VMP   VIEW MAP
+FEI_BAC   Back
+FEI_BTD   ; = > < -
+FEI_BTR   > < -
+FEI_BTT   " button -
+FEI_BTU   ; = -
+FEI_BTX   / button -
+FEI_HOL   Hold
+FEI_NA    N\A
+FEI_NAV   Navigate
+FEI_R1B   R1 \ R2 button -
+FEI_RES   Resume
+FEI_SCR   Scroll
+FEI_SEL   Select
+FEI_STA   START button -
+FEI_STO   Stop
+FEI_ZOO   Zoom
+FELD_WR   Loading game. Please wait...
+FEL_ENG   English
+FEL_FRE   French
+FEL_GER   German
+FEL_ITA   Italian
+FEL_SPA   Spanish
+FEM_FRM   FRAME LIMITER
+FEM_LOD   DRAW DISTANCE
+FEM_MM    MAIN MENU
+FEM_NO    No
+FEM_OFF   OFF
+FEM_OK    OK
+FEM_ON    ON
+FEM_RET   RETRY
+FEM_SL1   Save File 1 Not Present
+FEM_SL2   Save File 2 Not Present
+FEM_SL3   Save File 3 Not Present
+FEM_SL4   Save File 4 Not Present
+FEM_SL5   Save File 5 Not Present
+FEM_SL6   Save File 6 Not Present
+FEM_SL7   Save File 7 Not Present
+FEM_SL8   Save File 8 Not Present
+FEM_STE   USE STEREO
+FEM_VSC   FRAME SYNC
+FEM_YES   Yes
+FEN_STA   START GAME
+FEO_AUD   Audio Setup
+FEO_CON   Controller Setup
+FEO_DIS   Display Setup
+FEO_LAN   Language Setup
+FEO_PLA   Player Setup
+FEP_BRI   Briefs
+FEP_OPT   Options
+FEP_QUI   Quit Game
+FEP_RES   Resume
+FEP_STA   Stats
+FEP_STG   Start Game
+FEQ_SRE   Are you sure you want to quit? All progress since the last save game will be lost. Proceed?
+FEQ_SRW   Are you sure you want to quit the game?
+FESTDCM   Distance traveled by car (m)
+FESTDFM   Distance traveled on foot (m)
+FEST_BB   Bling-bling Scramble:
+FEST_CC   Criminals killed on Vigilante Mission
+FEST_DC   Dist. traveled by car (miles)
+FEST_DF   Dist. traveled on foot (miles)
+FEST_FE   Total fires extinguished
+FEST_GC   Gang Cars Totaled:
+FEST_H0   Most checkpoints
+FEST_H1   Diablo destruction
+FEST_H2   Mafia Massacre
+FEST_H3   Casino Calamity
+FEST_H4   Rumpo Wrecker
+FEST_HA   Highest Paramedic Mission level
+FEST_HV   Highest Vigilante Mission level
+FEST_LS   People saved in an Ambulance
+FEST_MP   Missions passed
+FEST_OO   out of
+FEST_RP   Rampages passed
+FESZ_CA   Cancel
+FESZ_LS   Load Successful.
+FESZ_QC   Proceed with overwriting this corrupted save game?
+FESZ_QD   Proceed with deleting this save game?
+FESZ_QL   All unsaved progress in your current game will be lost. Proceed with loading?
+FESZ_QO   Proceed with overwriting this save game?
+FESZ_QR   Are you sure you want to start a new game? All progress will be lost. Proceed?
+FESZ_QZ   Are you sure you want to save this game?
+FESZ_WR   Saving current game. Please wait...
+FES_CAN   Cancel
+FES_CHE   Warning! One or more cheats have been activated. This may affect your save game. It is recommended that you do not save this game.
+FES_CMI   LAST MISSION PASSED
+FES_CMP   Save failed! Please try again.
+FES_CSA   Select a skin from the list below:
+FES_DAT   DATE
+FES_DEE   Delete Failed! Please try again.
+FES_DEL   Delete game
+FES_DSC   Delete Successful. Select OK to continue.
+FES_FMS   Format Successful. Select OK to continue.
+FES_LCG   Load the game and continue playing?
+FES_LOA   Load game
+FES_NGA   New Game
+FES_SCG   Save the current game?
+FES_SET   Use Skin
+FES_SKN   SKIN NAME
+FES_SSC   Save Successful. Select OK to continue.
+FET_APP   APPLY
+FET_CAC   ACTION
+FET_CCR   IN CAR
+FET_CFT   ON FOOT
+FET_CIG   BACKSPACE TO CLEAR - LMB, RETURN TO CHANGE
+FET_CTI   Classic Controls
+FET_CTL   CONTROLLER SETUP
+FET_DAM   DYNAMIC ACOUSTIC MODELING
+FET_DEF   Restore Defaults
+FET_DSN   Default Player Skin.bmp
+FET_EIG   CANNOT SET A CONTROL FOR THIS ACTION
+FET_HRD   DEFAULT SETTINGS RESTORED
+FET_LG    LOAD GAME
+FET_MIG   LEFT, RIGHT, MOUSEWHEEL TO ADJUST
+FET_MST   MOUSE CONTROLLED STEERING
+FET_OPT   OPTIONS
+FET_PAU   PAUSE MENU
+FET_PS    PLAYER SKIN SETUP
+FET_QG    QUIT GAME
+FET_RIG   SELECT A NEW CONTROL FOR THIS ACTION
+FET_RSC   HARDWARE NOT AVAILABLE - ORIGINAL SETTING RESTORED
+FET_RSO   ORIGINAL SETTING RESTORED
+FET_SG    SAVE GAME
+FET_STI   Standard Controls
+FET_STS   STATS SAVED TO 'STATS.HTML' + 'STATS.TXT'
+FE_MLG    MAP LEGEND
+FINKILL   Ok boys, kill him!
+FIN_1     Keep your Friends Close...
+FIN_10    Sonny? SONNY! I'm coming for ya!
+FIN_11A   You took fifteen years from me Sonny...
+FIN_11B   And now I'm gonna make you pay!
+FIN_12A   You still don't get it do you!
+FIN_12B   I OWN you, Tommy.
+FIN_12C   Those fifteen years were mine to spend!
+FIN_13    Get him boys, he never understood a thing.
+FIN_1A    Come here you double-crossing piece of shit!
+FIN_1B    You're going down, you back stabbing prick!
+FIN_1C    This is the last dance for lance vance!
+FIN_2B    Oh you think so!
+FIN_2C    I said I had enough of that at school!
+FIN_3     No one to cover your ass now, eh Tommy?
+FIN_4     You're history, Tommy, history
+FIN_5     You picked the wrong side, Lance...
+FIN_6     Sonny's up with the safe and MY money...
+FIN_B6    You do not have enough money to start this mission.
+#UpdatedSCM edited
+FIRELVL   Fire Fighter Mission level ~1~
+#UpdatedSCM edited
+FIRETRK   Fire Truck
+FIRE_M    'FIREFIGHTER'
+FIRST     ~b~1st
+FLATBED   Flatbed
+FOURTH    ~b~4th
+FREEWAY   Freeway
+FST_LFR   Least Favorite Radio Station
+FST_MFR   Most Favorite Radio Station
+#UpdatedSCM edited
+FTUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire fighter missions on or off.
+#UpdatedSCM edited
+FTUTOR2   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire fighter missions on or off.
+GANGBUR   Gang Burrito
+GA_1      Whoa! I don't touch nothing THAT hot!
+GA_10     Nice one. Here's your $~1~
+GA_11     We got these wheels already. It's worthless to us!
+GA_12     Bomb armed
+GA_13     Delivered like a pro. Complete the list and there'll be a bonus for you.
+GA_14     All the cars. NICE! Here's a little something.
+GA_15     Hope you like the new color.
+GA_16     Respray is complementary.
+GA_19     We're not interested in that model.
+GA_1A     Come back when you're not so busy...
+GA_2      New engine and paint job. The cops won't recognize you!
+GA_20     We got more of these than we can shift. Sorry man, no deal.
+GA_21     You cannot store any more cars in this garage.
+GA_3      No more freebies. $100 to respray!
+GA_4      Car bombs are $500 each
+GA_5      Your car is already fitted with a bomb.
+GA_6      Park it, prime it by pressing the ~h~~k~~PED_FIREWEAPON~ ~w~button and LEG IT!
+GA_6B     Park it, prime it by pressing the ~h~~k~~PED_FIREWEAPON~ ~w~button and LEG IT!
+GA_7      Arm with the ~h~~k~~PED_FIREWEAPON~ ~w~button. Bomb will go off when engine is started.
+GA_7B     Arm with the ~h~~k~~PED_FIREWEAPON~ ~w~button. Bomb will go off when engine is started.
+GA_8      Use the detonator to activate the bomb.
+GEN3_13   What's the matter with you man?! Get on the roof across the yard before they turn up!
+GEN3_17   Sheeit! You trying to kill me?!
+GEN3_21   ~g~He got Diaz's money! Chase him down and get it back!
+GEN3_24   ~r~Diaz died! You failed to protect him!
+GEN3_26   ~r~You shot Diaz!
+GEN3_27   ~r~You shot Diaz's bodyguards!
+GEN3_31   ~g~Now go to the drop off and watch over Diaz.
+GEN3_32   ~g~Get to your vantage point on the roof of the building opposite Lance.
+GEN3_4    Tommy Vercetti. Let's go...
+GENERAL   THE COLONEL MISSIONS
+GLENDAL   Glendale
+GMSAVE    Save Game
+GNG_WST   Gang members wasted
+GOAWAY1   ~g~Come back when you have finished the Haitian gang missions.
+GOAWAY2   ~g~Come back when you have finished the Biker gang missions.
+#UpdatedSCM only
+GOAWAY3   ~g~Come back when you are not wearing cop outfit.
+GOLFC     Leaf Links
+GOODBOY   $50 Good Citizen Bonus!
+GREENWO   Greenwood
+GREET     Greetings from...
+GRENADE   Grenades
+GUN_H1    ~w~Press the~h~ ~k~~PED_SPRINT~ ~w~button to buy. Press the~h~ ~k~~VEHICLE_ENTER_EXIT~ ~w~button to exit.
+G_COST    Cost: $~1~
+HAIT      THE HAITIAN GANG MISSIONS
+HAIT1     HAITIAN MISSION 1
+HAIT2     HAITIAN MISSION 2
+HAIT3     HAITIAN MISSION 3
+HAITI     Little Haiti
+#HAM1_5    NO LONGER NEEDED
+HAM3_6    ~g~Use the sniper rifle I have left to accomplish your task.
+HAMMER    Hammer
+HAT_1     Juju Scramble
+HAT_2     Bombs Away!
+HAT_3     Dirty Lickin's
+HAVANA    Little Havana
+#UpdatedSCM edited
+HEAL_A    Your ~h~health~w~ is displayed in pink in the top right of the screen.
+HEAL_B    When you are ~h~'wasted'~w~ you are returned to the nearest hospital.
+HEAL_C    You will lose your weapons and the doctors will take some cash for patching you up.
+HEAL_E    You will find ways of healing or protecting yourself the more you play the game.
+HELI      Helicopter
+HELIODD   Helicopter odd jobs
+HELI_1    Downtown Chopper Checkpoint
+HELI_1A   Test your skills with the Sparrow, see how quickly you can complete the course.
+HELI_1B   Course Complete! $ ~1~
+HELI_2    Ocean Beach Chopper Checkpoint
+HELI_3    Vice Point Chopper Checkpoint
+HELI_4    Little Haiti Chopper Checkpoint
+HELI_F1   ~r~Heli Checkpoint mission cancelled!
+HELP1     Stop in the center of the ~q~pink marker.
+HELP10    This badge indicates you have a police wanted level.
+HELP11    The more badges the higher your wanted level.
+HELP12    Walk into the center of the ~q~pink marker~w~ to trigger a mission.
+HELP13    Sometimes you may need to use pathways not shown on the radar.
+HELP14    To find the Lawyer's office, follow the ~h~L blip~w~ on the radar
+HELP15    When on foot press the ~h~~k~~PED_LOOKBEHIND~ ~w~button to ~h~look behind~w~.
+HELP16    Walk through the front door of the ~h~Ocean View~w~ Hotel to enter the building.
+HELP19    Walk into the ~q~pink marker ~w~to continue.
+HELP21    Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to enter or exit a vehicle.
+HELP22    Go to the green house blip on the radar.
+HELP24    You can now take jobs from the Colonel.
+HELP25    You can now take jobs from Avery Carrington.
+HELP26    Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to enter or exit a vehicle.
+HELP27    Press the ~h~~k~~VEHICLE_TURRETUP~~w~ button and the ~h~~k~~VEHICLE_TURRETDOWN~~w~ button, to shift your weight on a bike.
+HELP28    Press the ~h~~k~~VEHICLE_TURRETUP~~w~ button and the ~h~~k~~VEHICLE_TURRETDOWN~~w~ button, to shift your weight on a bike.
+HELP29    You can visit the clothes store when you're not on a mission.
+HELP2A2   Press the ~h~~k~~PED_SPRINT~~w~ button when running to ~h~sprint
+HELP2_A   Press the ~h~~k~~PED_SPRINT~ ~w~button when running to ~h~sprint
+HELP3     You can only sprint for short periods before becoming tired.
+HELP30    When you buy new clothes your wanted level will be set to zero.
+HELP31    To do a drive-by, first look left or right using the ~h~~k~~VEHICLE_LOOKLEFT~~w~ or the ~h~~k~~VEHICLE_LOOKRIGHT~.
+HELP32    Then fire using the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+HELP33    Then fire using the ~h~~k~~PED_FIREWEAPON~ ~w~button.
+HELP34    You must have a sub machine gun to perform a drive-by.
+HELP35    Press the ~h~~k~~GO_LEFT~~w~, and the ~h~~k~~GO_RIGHT~~w~, to steer the vehicle.
+HELP36    Press the ~h~~k~~GO_LEFT~~w~, and the ~h~~k~~GO_RIGHT~~w~, to steer the vehicle.
+HELP37    If you do not want to enter the vehicle while car jacking someone, press the ~h~~k~~PED_SPRINT~ ~w~button.
+HELP42    Follow the ~q~pink blip~w~ to find the hotel.
+HELP43    ~g~Goto the ~h~Ocean View~g~ hotel on Ocean Drive.
+HELP44    Stop in the ~q~pink marker.
+HELP45    Press the ~h~~k~~PED_DUCK~~w~ button to duck. This will increase the accuracy of guns you are holding.
+HELP46    There are eight different types of weapon.
+HELP47    You can carry one of each type of weapon at a time - one type of pistol, one type of shotgun.
+HELP4_A   Press the ~h~~k~~VEHICLE_ACCELERATE~ ~w~button to accelerate.
+HELP4_D   Push the right analog stick up to ~h~accelerate.
+HELP50    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ button to set the camera behind you.
+HELP51    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ button to set the camera behind you.
+HELP52    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ button to set the camera behind you.
+HELP53    Press ~h~~k~~PED_CYCLE_WEAPON_LEFT~~w~ button or ~h~~k~~PED_CYCLE_WEAPON_RIGHT~~w~ button to cycle through your available weapons.
+HELP54    ~w~Cost: $~1~ ~r~Buying this will replace your current weapon.
+HELP55    Press the ~h~~k~~PED_FIREWEAPON~~w~ button to attack the chef.
+HELP56    Press the ~h~~k~~CAMERA_CHANGE_VIEW_ALL_SITUATIONS~~w~ button to change camera modes.
+HELP57    Press the ~h~~k~~CAMERA_CHANGE_VIEW_ALL_SITUATIONS~~w~ button to change camera modes.
+HELP58    While targeting you can press the ~h~~k~~PED_CYCLE_TARGET_LEFT~ button or ~k~~PED_CYCLE_TARGET_RIGHT~ ~w~button to cycle through targets.
+HELP59    While targeting you can press the ~h~~k~~PED_CYCLE_TARGET_LEFT~ button or ~k~~PED_CYCLE_TARGET_RIGHT~ ~w~button to cycle through targets.
+HELP5_A   Press the ~h~~k~~VEHICLE_BRAKE~ ~w~button to brake, or to reverse if the vehicle has stopped.
+HELP5_D   Pull the right analog stick back to brake, or to reverse if the vehicle has stopped.
+HELP60    If you press the ~w~~k~~PED_SPRINT~ ~w~button while car jacking, you will not enter that vehicle.
+HELP61    You now have limitless ammo and double health on all vehicles.
+HELP6_A   Press the~h~ ~k~~VEHICLE_HANDBRAKE~ button ~w~to apply the vehicle's ~h~handbrake.
+HELP6_C   Press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button to apply the vehicle's handbrake.
+HELP6_D   Press the~h~ ~k~~VEHICLE_HANDBRAKE~ button ~w~to apply the vehicle's ~h~handbrake.
+HELP7_A   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ button ~w~to ~h~target~w~ with the sniper rifle.
+HELP7_D   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ button ~w~to ~h~target ~w~with the sniper rifle.
+HELP8_A   Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ button ~w~to ~h~zoom in ~w~with the rifle and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ button ~w~to ~h~zoom out ~w~again.
+HELP8_B   Press the ~h~~k~~PED_SNIPER_ZOOM_IN~ button ~w~to ~h~zoom in ~w~with the rifle and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ button ~w~to ~h~zoom out ~w~again.
+HELP9_A   Press the~h~ ~k~~PED_FIREWEAPON~ button ~w~to ~h~fire~w~ the sniper rifle.
+HELP9_B   Press the~h~ ~k~~PED_FIREWEAPON~ button ~w~to ~h~fire~w~ the sniper rifle.
+HELP9_C   Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to ~h~fire~w~ the sniper rifle.
+HEL_DST   Planes & Helicopters destroyed
+HERMES    Hermes
+HEY       ~g~Don't go solo, keep your posse together!
+HJSTAT    Distance: ~1~.~1~m Height: ~1~.~1~m Flips: ~1~ Rotation: ~1~_
+HJSTATF   Distance: ~1~ft Height: ~1~ft Flips: ~1~ Rotation: ~1~_
+HJSTATW   Distance: ~1~.~1~m Height: ~1~.~1~m Flips: ~1~ Rotation: ~1~_ And what a great landing!
+HJSTAWF   Distance: ~1~ft Height: ~1~ft Flips: ~1~ Rotation: ~1~_ And what a great landing!
+HJ_DIS    DOUBLE INSANE STUNT BONUS: $~1~
+HJ_IS     INSANE STUNT BONUS: $~1~
+HJ_PDIS   PERFECT DOUBLE INSANE STUNT BONUS: $~1~
+HJ_PIS    PERFECT INSANE STUNT BONUS: $~1~
+HJ_PQIS   PERFECT QUADRUPLE INSANE STUNT BONUS: $~1~
+HJ_PTIS   PERFECT TRIPLE INSANE STUNT BONUS: $~1~
+HJ_QIS    QUADRUPLE INSANE STUNT BONUS: $~1~
+HJ_TIS    TRIPLE INSANE STUNT BONUS: $~1~
+HLPSN_A   The sniper rifle allows you to zoom in and fire accurately at targets from a distance.
+HLPSN_B   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the sniper rifle.
+HLPSN_C   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the sniper rifle.
+HLPSN_D   Press the ~h~~k~~PED_SNIPER_ZOOM_IN~~w~ button ~w~to ~h~zoom in ~w~with the rifle and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ button ~w~to ~h~zoom out ~w~again.
+HLPSN_E   Press the ~h~~k~~PED_FIREWEAPON~~w~ button ~w~to ~h~fire~w~ the sniper rifle.
+HLPSN_F   Press the ~h~~k~~PED_FIREWEAPON~~w~ button ~w~to ~h~fire~w~ the sniper rifle.
+HLPSN_G   Press the ~h~~k~~PED_FIREWEAPON~~w~ button to ~h~fire~w~ the sniper rifle.
+HORN      ~g~Sound the horn.
+HORN1     Press the ~h~~k~~VEHICLE_HORN~ ~w~button to activate the ~h~horn.
+HORN2     Press the ~h~~k~~VEHICLE_HORN~ ~w~button to activate the ~h~horn
+HORN3     Press the ~h~~k~~VEHICLE_HORN~ ~w~button to activate the ~h~horn
+HOTEL     Ocean View
+HOTRINA   Hotring Racer
+HOTRINB   Hotring Racer
+HOTRING   Hotring Racer
+HOTRNG    HOTRING
+HUNTER    Hunter
+HYCOBUY   Hyman Condo purchased: $~1~
+HYCO_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
+HYCO_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
+HYCO_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Hyman Condo for $~1~
+ICC1_O    What is wrong with you??
+ICEBUY    Ice Cream Factory purchased: $~1~
+ICE_1     Distribution
+ICE_C     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Ice Cream Factory for $~1~
+ICE_L     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Ice Cream Factory for $~1~
+ICE_NO    You cannot buy the Ice Cream Factory at this time, come back later.
+ICE_T     Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Ice Cream Factory for $~1~
+IDAHO     Idaho
+IMPORT1   Go outside and wait for your vehicle.
+IND_ZON   Vice City Beach
+INFERNS   Infernus
+INGRAM    Mac
+INSTUN    Insane stunt
+INTB_1    ~g~Go to the Lawyer's office.
+INT_B     An Old Friend
+IN_VEH    ~g~Hey! Get back in the vehicle!
+ITBEG     In the beginning...
+JAN       Jan
+JOB_1     Road Kill
+JOB_2     Waste the Wife
+JOB_3     Autocide
+JOB_4     Check Out at the Check In
+JOB_5     Loose Ends
+JUL       Jul
+JUN       Jun
+JUNKY     Junk Yard
+KATANA    Katana
+KAUFCAB   Kaufman Cabs
+KAUFMAN   Kaufman Cab
+KENT      KENT PAULS MISSIONS
+KENT1     KENT PAUL MISSION1
+KENT_1    Death Row
+KGS_EXP   Kgs of explosives used
+KICK      KICKSTART
+KICK1_3   ~g~Number of times foot put down: ~1~
+KICK1_4   ~g~Time penalty: ~1~ seconds
+KICK1_9   CHECKPOINTS:
+KNIFE     Knife
+LANCE_1   Come on man, drive more careful!
+LANCE_2   Hey watch what you're doin!
+LANCE_3   Hey where are we goin' now?
+LANCE_4   What are we doin' now?
+LANDSTK   Landstalker
+LASER     .308 Sniper
+LAW       THE LAWYER MISSIONS
+LAW1_1    ~g~Go get some new threads from Rafael's clothes shop.
+LAW4_10   Rich management suck!
+LAW4_11   Fight! Fight! Fight! Fight!
+LAW4_12   Viva la revolution!
+LAW4_15   More money!
+LAW4_6    Burn the management!
+LAW4_7    Kill the bosses!
+LAW4_8    Fight, Fight, Fight, Fight.
+LAW4_9    More Holiday, Less Work!
+LAW_1     The Party
+LAW_1A    law_1a
+LAW_1B    law_1b
+LAW_2     Back Alley Brawl
+LAW_2A    law_2a
+LAW_2B    law_2b
+LAW_3     Jury Fury
+LAW_4     Riot
+LEGAL     ~g~Eliminate the criminal threat!
+LG_01     Player position
+LG_02     Avery Carrington
+LG_03     Biker Contact
+LG_04     Colonel Cortez
+LG_05     Ricardo Diaz
+LG_06     Kent Paul
+LG_07     Lawyer
+LG_08     Phil Cassidy
+LG_09     Boatyard
+LG_10     Malibu Club
+LG_11     Cubans
+LG_12     Film Studio
+LG_13     Ammu-Nation
+LG_14     Haitians
+LG_15     Hardware Store
+LG_16     Safe House
+LG_17     Ice Cream
+LG_18     Kaufman Cabs
+LG_19     Love Fist
+LG_20     Print Works
+LG_21     Property
+LG_22     Pay 'n' Spray
+LG_23     Clothes Shop
+LG_24     Tommy's Mansion
+LG_25     Telephone
+LG_26     Wildstyle Radio Station
+LG_27     Flash FM Radio Station
+LG_28     KChat Radio Station
+LG_29     Fever 105 Radio Station
+LG_30     VROck Radio Station
+LG_31     VCPR Radio Station
+LG_32     Espantoso Radio Station
+LG_33     Emotion 98.3 Radio Station
+LG_34     Wave 103 Radio Station
+LG_35     Destination
+LG_36     Sun Yard
+LG_37     Strip Club
+LG_38     Target
+LINERUN   Linerunner
+LNKVBUY   Links View Apartment purchased: $~1~
+LNKV_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+LNKV_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+LNKV_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Links View Apartment for $~1~
+LOADCAR   LOADING VEHICLE... (PRESS L1 TO CANCEL)
+LOADCOL   Loading...
+LOVEFIS   Love Fist
+M4        M4
+MACHETE   Machete
+MAFIACR   Mafia Cruiser
+MALIBU    The Malibu Club
+MALL1     North Point Mall
+MANANA    Manana
+MANSION   Diaz's Mansion
+MAP_LEG   Map Legend
+MAP_YAH   YOU ARE HERE
+MAR       Mar
+MARQUIS   Marquis
+MAVERIC   Maverick
+MAY       May
+MERC_26   FASTER, FASTER, FASTER!
+MERC_27   Careful, Tommy, I only have a nose job last month.
+MERC_28   Tommy, drive careful.
+MERC_29   Tommy, go slower.
+MERC_30   Tommy, please kill someone other than me.
+MERC_31   Tommy, baby, don't kill me!
+MERC_32   Tommy, I'm glad you stole this car!
+MERC_40   I had so much fun.
+MERC_43   Adios, angel.
+MERC_44   You keep working out, now, you hear.
+MERC_45   Ciao, beautiful.
+MERC_5    Nice car, Mr. Vercetti.
+MESA      Mesa Grande
+MM_1      'CONE CRAZY'
+MOB12_A   Hey Tommy, it's Avery! Now listen, I got me all tied up at the moment
+MOB12_B   and I have a representative of mine needs chaperoning out to the Gator Keys.
+MOB12_C   I'm after some land out that way, so I'm sending someone out to sweeten the deal.
+MOB12_D   Could you do me a favor and make sure he gets there ok?
+MOB12_E   Yeah, sure thing Avery. Where'd you want me to pick him up?
+MOB12_F   He's just finishing some business at the building site. I said you'd pick him up from there.
+MOB12_G   No problem. See you later, Avery.
+MOB13_A   Vercetti? VERCETTI!! Damn you man, you've got to help me!
+MOB13_B   Mr. Moffat? How's family life?
+MOB13_C   Damn you to hell, HELL, do hear me?!
+MOB13_D   Well it was nice chatting...
+MOB13_E   WAIT! Wait, Vercetti - Tommy, can I call you Tommy?
+MOB13_F   We're both businessmen, yeah? You know a good deal when you hear one, ok?
+MOB13_G   I don't have time to chat, get to the point.
+MOB13_H   MONEY. Money is the goddamned point.
+MOB13_I   I've escaped the coop again, but it's never long before they track me down - they think it's a damned game!
+MOB13_J   I'm at a pay phone somewhere in this god forsaken shit hole.
+MOB13_K   Get me out of here before they take me back and...and..oh go-o-od...
+MOB13_L   Well, I'm busy for the next -
+MOB13_M   No! Don't shit with me here, have a heart! No man should have to do such, such things.
+MOB13_N   I'm on my knees here Tommy, in the dirt begging you please...
+MOB13_O   I guess I could swing by that way, see if I can spot you...
+MOB13_P   Oh god, they're coming. For the love of Christ hurry, hurry!
+MOB15_A   Tommy, mate, it's Paul, from Kent,
+MOB15_B   a couple of proper sorts have your name written all over them, down at the Malibu.
+MOB15_C   What are you talking about?
+MOB15_D   Sorts. Birds. You know. Girls. Tastey ones, don't think they're brasses or nothing.
+MOB15_E   You gotta come check them out.
+MOB16_A   Tommy, Paulo here, que pasa amigo?
+MOB16_B   What do you want Paul. I don't want any fake label clothes.
+MOB16_C   Very funny, mate, but you know I don't touch bent gear.
+MOB16_D   Nah, I was just calling to see if I get a part in one your movies,
+MOB16_E   back in England I did a lot of blue stuff, mate.
+MOB16_F   I'm packing more heat than you, my son.
+MOB16_G   Paul, thanks for the offer, I'll bear it in mind.
+MOB16_H   Seriously, don't forget about me, after all I done for you.
+MOB16_I   That's what I'm trying to forget about.
+MOB19_A   Tommy V, It's KP here. Kent Paul. Word on the street is people want to rip you off.
+MOB19_B   Keep your eye's peeled, my son. And remember, I didn't say nothing to you about this.
+MOB21_A   Tommy, Thomas, it's Cortez. Que pasa?
+MOB21_B   Things are interesting. How are you, my friend?
+MOB21_C   Tommy, it is always a struggle here. Excuse the poor line, we have just had another failed coup.
+MOB21_D   The people are the most demanding mistress of all.
+MOB21_E   So far, we have had three revolutions and four coups since I return from Vice City.
+MOB21_F   Luckily, I have been promoted each time.
+MOB21_G   I wanted to ask you about Mercedes.
+MOB21_H   Ok, what about her?
+MOB21_I   Oh Tommy, Tommy. I, I hear these stories, all these stories - I don't know what to think.
+MOB21_J   Maybe everyone is humiliating me.
+MOB21_K   Maybe she thinks she can do what she likes, but Tommy, tell me, is it true?
+MOB21_L   but tell me Tommy, is it true?
+MOB21_M   Is what true?
+MOB21_N   These stories I hear. Is she really going to be a lawyer?
+MOB21_O   Oh Tommy, the shame, the shame! You know, we Cortez's are a proud family.
+MOB21_P   We would never allow a daughter of ours to become a lawyer. Please tell me it isn't so. I don't think I could take it.
+MOB21_Q   Oh Colonel, I can assure you Mercedes is never going to become a lawyer. Don't worry about it.
+MOB21_R   Oh thank you, Tommy. Tommy, thank you. The shame would be unbearable. She is a lady, not a parasite, you know.
+MOB21_S   I know, colonel.
+MOB21_T   Anyway, Tommy, you must excuse me, the new minister of the interior has arrived.
+MOB21_U   Many years ago, I killed his father in a failed coup so I must be polite. Good day, amigo.
+MOB22_A   Tommy, you are proving very useful, my friend.
+MOB22_B   Thanks, Cortez. What about my deal?
+MOB22_C   Tommy, I am working tirelessly on your behalf to ensue we get to the bottom of this trench of stinking lies and deceit,
+MOB22_D   you have my word on that, but in the meantime,
+MOB22_E   please accept the esteemed thanks of my people for your work on our behalf.
+MOB45_A   Tommy We gotta talk about stuff.
+MOB45_B   What's the problem Lance?
+MOB45_C   It's you, my friend, I feel you're not giving me a fair slice.
+MOB45_D   And more than that, you been embarrassing me in front of the boys. I can't have that.
+MOB45_E   Lance, it ain't like that. You've been making mistakes.
+MOB45_F   Tommy, I'm not your message boy. I'm not your running boy.
+MOB45_G   Lance, don't screw up, and we won't have any problems. I screw up, you can lay into me any time.
+MOB45_H   Tommy, I've done everything for you, you treat me like a fool. Don't do that.
+MOB45_I   Lance, I won't rip you off or stab you in the back, okay?
+MOB45_J   Just take it easy. This is tough enough without you getting all emotional on me.
+MOB45_K   Trust me. Do you hear me, do you hear me?
+MOB45_L   I hear you, Tommy, but I can't take this much more.
+MOB45_M   Lance, don't be like this. Now I'm warning you.
+MOB45_N   Do you hear me? Just relax, take a few days off. Okay? I'll talk to you.
+MOB46_A   Yo, Tommy! It's Lance.
+MOB46_B   Yeah?
+MOB46_C   Oh, nice to hear from you, Lance. Come on, man, be cool, be cool.
+MOB46_D   I'm in the middle of something. What do you want?
+MOB46_E   Nothing. Just to say, you know. Look Tommy, we can do this thing.
+MOB46_F   You and me, no problem. You know what I mean?
+MOB46_G   We're going to have to do it, 'cause otherwise, we're going to be dead, Lance.
+MOB46_H   We're in too far now. But thanks for the call. I'll speak to you later.
+MOB52_A   Hey Leo, I think we got a buyer for Diaz's merchandise.
+MOB52_B   You gotta give him a ring, man, set up the deal, you know?
+MOB52_C   Where are you now?
+MOB52_D   You ok Leo? You sound kinda different.
+MOB52_E   Just tell me where you are.
+MOB52_F   Who the hell is this? Put Leo on, man!
+MOB52_G   Leo's gone away for a while, he left me in charge.
+MOB52_H   Screw you, man!
+MOB54_A   Hiya Tommy!
+MOB54_B   Hi Mercedes, howyadoin'?
+MOB54_C   I got a new apartment up in Vice Point
+MOB54_D   - thought you might want to drop by sometime.
+MOB54_E   I'd love to. I'll catch you later.
+MOB55_A   Tommy, it's me.
+MOB55_B   Hi Mercedes.
+MOB55_C   Tommy, I so bored, when we going to have some fun?
+MOB55_D   What do you mean?
+MOB55_E   Well, I know you're busy fighting and killing and corrupting people,
+MOB55_F   but I just want to have some fun. So don't forget about me, you hear?
+MOB56_A   Tommy, I hear you kill Ricardo Diaz.
+MOB56_B   there was an unfortunate fire at his mansion.
+MOB56_C   I think he burnt to death in an acrylic shirt.
+MOB56_D   Tommy, I so proud of you. I knew you were a real man.
+MOB56_E   He awful trouser stain of a man, you make me so proud to be your friend.
+MOB56_F   No, I know you going to be busy trying to take over this town,
+MOB56_G   but don't forget about me, you hear?
+MOB57_A   It's merceedes. I no longer love you Tommy.
+MOB57_B   I no longer do. Honest. 'cause you no longer nice to Mercedes.
+MOB57_C   You no longer treat her like a lady. You ignore me and I hate you.
+MOB57_D   I insist you come to see me right away!
+MOB58_A   Tommy.
+MOB58_B   Hey Mercedes.
+MOB58_C   Hey indeed Mr. Tough Guy. I real angry with you Tommy.
+MOB58_D   Never make me hang out with Jezz Torrent again.
+MOB58_E   He is pathetic. Half way through he starts crying about his doggie
+MOB58_F   that died when he was 7 years old and that his mommy never loved him.
+MOB58_G   And Tommy. He wear a wig and a bra in private.
+MOB58_H   I not very happy with you!
+MOB59_A   Ooh Tommy, its Mercedes.
+MOB59_B   I just want to say, I have so much fun on that film set.
+MOB59_C   Anything else you have like that, you let me know.
+MOB59_D   I really mean that. I always wanted to be an actress.
+MOB59_E   I think I learn a lot about the dramatic process.
+MOB59_F   It so enlightening! Thank you. Thank you. I see you real soon. Adios.
+MOB_01A   Awright me ol'china! It's Paul. I might have a little result for you, but I need to speak to you in person.
+MOB_01B   I'm enjoying a little R&R at the Club Malibu.
+MOB_01C   Reckon you're gonna owe me a favor or two after this, sunshine. I'll see you later.
+MOB_02A   Ssssnniiiiffffff Hey! Hello, Tommy? Tommy!
+MOB_02B   We got a situation over at the Print Works. You better go and check it out.
+MOB_02C   Some kind of mess or other. Things are messed up. I gotta go.
+MOB_03A   Mr. Vercetti? I have here a signed piece of crap stating
+MOB_03B   that you have taken on all of BJ's Auto's debts.
+MOB_03C   With BJ's sudden disappearance I have no choice
+MOB_03D   but to hold you responsible for his financial insecurities.
+MOB_03E   Until this account is settled in full
+MOB_03F   you should consider Vice City's streets to be very unfriendly.
+MOB_04A   How you doin' mate? It's Paulo again.
+MOB_04B   Look Tommy, I forgot to mention we're going to need some extra muscle for the concert. A bit of security.
+MOB_04C   There's a biker gang led by Mitch Baker, it would be great publicity. Very rock and roll, baby.
+MOB_04D   Sort this out for me and I'll get you some back stage passes for the gig, awright?
+MOB_05A   Hey, it's Mitch. You did good Tommy, it's good to have the old girl back.
+MOB_05B   You tell Kent Paul he'll get his security for the gig.
+MOB_05C   You have my word on that.
+MOB_05D   Now keep yourself out of trouble.
+MOB_06A   Tommy, 'nuf dead man been chattin' about you, my dear.
+MOB_06B   Thought you might need something to make you feel better. So Auntie Poulet make you some stew, aye?
+MOB_06C   Come by me kitchen some time, ok Tommy?
+MOB_08A   Hey Tommy, I thought you might need some business advice.
+MOB_08B   Once you got an operation up and running, you'll need to drop by and take the week's cash.
+MOB_08C   Let the guys think they got the run of the place and they'll try shaving the profits - ok?
+MOB_08D   Hey, I know how to handle business, Ken, ok?
+MOB_08E   Ok, ok. I know, you know. I know. I was,
+MOB_08F   I was just, you know, telling you I know, that you know, that I know.
+MOB_08G   Just keeping it sharp baby!
+MOB_08H   Whatever, Ken, whatever...
+MOB_09A   Hey Leo! I got some work for you!
+MOB_09B   This ain't Leo.
+MOB_09C   Hey, if Leo knows you got his phone, he gonna kill you!
+MOB_09D   Maybe Leo's already dead. Maybe I killed Leo and took his phone - you think of that prick?
+MOB_09E   You killed Leo? You must have big cojones - wanna work for me?!
+MOB_09F   Drop by my father's cafe in Little Havana and we'll talk mano a mano.
+MOB_10A   Tommy! Look, I gotta ask you a favor.
+MOB_10B   Steve! How's filming going!
+MOB_10C   Fine, fine. I, heh, WE need a car chase scene, but our budget can't stretch to it.
+MOB_10D   I've left some wheels around town. You'll know what to do.
+MOB_10E   Ok Steve, I'll keep an eye out. Catch you later.
+MOB_11A   Howdy son, just thought I'd ring you up and give you some advice.
+MOB_11B   Hey, Avery. What's eating you?
+MOB_11C   There's a lot of opportunity in this town if you own the right real estate, you catch my drift?
+MOB_11D   I reckon so...
+MOB_11E   All I'm saying is keep your eyes open and you might find the perfect business opportunity. I'll catch y'later.
+MOB_11F   Later, Avery.
+MOB_14A   Hey there Tommy, you're gonna love me mate.
+MOB_14B   A little birdy told me that Vice City SWAT Division has a deposit box at a certain rather large banking establishment,
+MOB_14C   where they keep all the bribes they've taken over the years,
+MOB_14D   like some kind of old boys' retirement fund.
+MOB_14E   Of course, if this information should ever help you acquire any of that cash,
+MOB_14F   I guess you'd feel obliged to push some of it my way?
+MOB_14G   I'll bear that in mind, thanks Kent.
+MOB_14H   It's Paul. I'm from Kent, near London, you prat.
+MOB_14I   My provincial English geography ain't what it was.
+MOB_16A   Tommy, Paulo here, que pasa amigo?
+MOB_16B   What do you want Paul? I don't want any fake label clothes.
+MOB_16C   Very funny, mate, but you know I don't touch bent gear. Nah, I was just calling to see if I get a part in one your movies.
+MOB_16D   Back in England I did a lot of blue stuff, mate. I'm packing more heat than you, my son.
+MOB_16E   Paul, thanks for the offer, I'll bear it in mind.
+MOB_16F   Seriously, don't forget about me, after all I done for you.
+MOB_16G   That's what I'm trying to forget about.
+MOB_17A   Tommy Vercetti, how's it going, Mr. big shot? I hear all these things about you, some kind of player in town, now eh...
+MOB_17B   Paul, you're drunk.
+MOB_17C   Nah, you stupid prat, I ain't drunk. I only had a couple and some treats, ain't been to bed for a couple of days, you know.
+MOB_17D   Anyway, don't give me that. I ain't a mug. Who set you up in this town? Who? Me. That's who.
+MOB_17F   Really?
+MOB_17G   Don't give me that. Don't! I introduced you to people. I showed you the ropes, did a lot of stuff for you, and this is how you repay me.
+MOB_17H   You ignore me. You won't give me a way in, after all I did for you! What do you think I am? A div or something?
+MOB_17I   Paul, take it easy. I've been busy, don't be an idiot.
+MOB_17J   I ain't no idiot, mush. That's what they said in borstal. Are you asking for trouble son, because you're going to get it!
+MOB_17K   Tommy, mate. Please. You was my big hope! Please, don't laugh at me!
+MOB_17L   Paul, get some sleep, seriously.
+MOB_18A   Tommy, it's Paulo, how are you? Right mate, anyway, thought I had to drop you a line.
+MOB_18B   Oh my good lord, my son, you will not believe the quality of the brass I just encountered.
+MOB_18C   Street walker or something, just down in Little Havana, mate.
+MOB_18D   Said her name was Mercedes or something.
+MOB_18E   Oh my god, mate. You gotta check this bird out.
+MOB_18F   Could strip the lead out of a pencil. Said I was the best she ever had and all.
+MOB_18G   Keep you potatoes skinned for her. Be seeing you.
+MOB_20A   Alright, Tommy, it's Paul. I just heard from a mush that you've been a real naughty boy.
+MOB_20B   Somebody has taken offense to you acting like the big guy all of a sudden, giving it the big shot thing.
+MOB_20C   Well, don't say I never warned you or nothing. Boasting is a mug's game, son.
+MOB_20D   Anyway, I heard there's some price been put on your head and someone's going to have a crack at you,
+MOB_20E   so watch yourself, and remember me, mate.
+MOB_24A   Hola, is this Mr. Vercetti?
+MOB_24B   Yeah.
+MOB_24C   This is Cortez. You were at my party.
+MOB_24D   Yeah. I remember.
+MOB_24E   Mr. Vercetti, it was a most unfortunate incident that happened with your business deal.
+MOB_24F   I know.
+MOB_24G   I want you to know me and my people are doing their utmost to get to the bottom of it.
+MOB_24H   If you'd like to talk to me more privately, you can find me at the boat, eh? Okay? Good day, senor.
+MOB_25A   Tommy, Thomas it's Cortez. Look, the French are giving me all kinds of trouble, amigo.
+MOB_25B   Damn hypocrites. They spend a hundred years stealing from poor countries and they call me a thief!
+MOB_25C   I am going to need your help as soon as possible, amigo.
+MOB_25D   So please hurry, Tommy, I need you, all right? I hate the damn French.
+MOB_26A   Hello, Tommy?
+MOB_26B   Yeah?
+MOB_26C   It's Baker. I just wanted to say I really enjoyed the show.
+MOB_26D   Me and the boys want to thank you, and remind you,
+MOB_26E   you got our respect. Good day. Keep riding hard, son.
+MOB_29A   Hello, is this Mr. Tommy Vercetti?
+MOB_29B   Yes.
+MOB_29C   Well, I hear through the vine of grapes you the man when someone got a vermin infestation.
+MOB_29D   Maybe...
+MOB_29E   Well, I got a real vermin infestation. Haitians everywhere.
+MOB_29F   My name is Umberto Robina and I want you to meet me at the Cafe Robina as soon as you can,
+MOB_29G   'cause I tell you, these damn Haitians gone too far this time.
+MOB_29H   Test
+MOB_30A   Tommy, is Umberto Robina
+MOB_30B   Hey, how's the cafe?
+MOB_30C   Oh, wonderful. Incredible. Tommy, incredible. No wimps, Tommy, just real men, and the beautiful women!
+MOB_30D   Anyway, I wanted to tell you, me and Papi, to us, you Cuban.
+MOB_30E   You have proved yourself, man. You got big cojones.
+MOB_30F   Well thank you, Umberto. Nobody's said that to me since I left jail. I'll see you around.
+MOB_33A   Tommy, it's Phil, now cut out all the reminiscing crap and listen to me, you hear?
+MOB_33B   Good. I got me some extra strength boomshine nearing fermentation time and I was wondering if you'd fancy having a shot.
+MOB_33C   Seriously, Tommy, if you like a drink, or if you need to strip paint, this stuff'll make a man out of you.
+MOB_33D   Sure did out of me, even though I can't see out of one eye. I'll be waiting for you, y'hear.
+MOB_34A   Tommy, I really enjoyed working with you. Ain't had so much fun since the ridge in Nam, pal.
+MOB_34B   Anyhows, you need anything, you call on me, you hear?
+MOB_34C   I always remember those I served with,
+MOB_34D   and I am sure I can help you out, you hear?
+MOB_35A   Tommy, the wound is healing well. Funny thing is,
+MOB_35B   I have fought in 6 battle zones and always walked away without a scratch, and now this!
+MOB_35C   One armed Phil. Still, I got me a healthy selection of one handed fire power so I'll never be unarmed Phil, you hear.
+MOB_35D   Any way son, cut out the sentimental crap and go buy yourself a drink, you hear!
+MOB_36A   Tommy, it's Phil, I want to thank you for helping me out back there son,
+MOB_36B   Damn Charlie, he'll always ambush you somewhere or other,
+MOB_36C   Anyway the wound is healing well, and it means I'll no longer be defrauding the government on my disability check.
+MOB_40A   Hey Tommy, it's Sonny. How's the sun tan?
+MOB_40B   I ain't got no sun tan.
+MOB_40C   Well, you ain't got my money, either, so I'm wondering to myself,
+MOB_40D   what are you doing? So, tell me, Tommy, what are you doing?
+MOB_40E   I'm looking for the money, Sonny. Don't worry.
+MOB_40F   I am worrying, Tommy, that's my style,
+MOB_40G   because I seem to have this problem in my life with unreliable people.
+MOB_40H   Don't be an unreliable person, Tommy, please.
+MOB_40I   Do us both a favor. I'm looking forward to hearing from you.
+MOB_41A   Tommy, remember me?
+MOB_41B   Hello Sonny.
+MOB_41C   That's right, Sonny. We're old friends,
+MOB_41D   You never write me, you never call. Don't you want to be friends no more?
+MOB_41E   I've been busy trying to sort things out. You didn't give me a lot of support down here, Sonny.
+MOB_41F   Oh, my fault is it? We'll I've heard you been busy all right.
+MOB_41G   Busy killing drugs barons. Busy taking over.
+MOB_41H   Don't forget about us, Tommy, 'cause I can assure you, I ain't forgotten about you.
+MOB_42A   Tommy.
+MOB_42B   Sonny.
+MOB_42C   Obviously you are suffering from hearing problems, so I'll try again.
+MOB_42D   Where's the goddamned money, where's the goddamned stuff, and where's my cut of your new action?
+MOB_42E   You are making an idiot out of me, Tommy, and I'm not laughing yet.
+MOB_43A   Tommy, Tommy, Tommy, I had Sonny on the phone, ok, are you with me?.
+MOB_43B   I don't know about you, but there's something about a man threatening to murder my family
+MOB_43C   which really scares the crap out of me. What are you going to do?
+MOB_43D   Ken, take it easy.
+MOB_43E   I AM calm, calm as a man can be when he's fearing for his life!
+MOB_43F   Stay off the idiot fuel and look after yourself.
+MOB_43G   No one's gonna take us out. I'll see you later.
+MOB_43H   I am calm. Don't I sound calm? Must be impending death that is doing this to my voice.
+MOB_47A   Tommy, Lance, we got big problems. Come down here. Right away.
+MOB_62A   Tommy, is Ricardo Diaz, I want to thank you for looking out for me my man.
+MOB_62B   I ask that prick Cortez, he say you the real deal, my friend, why you not come see me.
+MOB_62C   I need a guy like you. All I have now is dickheads,
+MOB_62D   dickheads everywhere, yo. I make you real rich.
+MOB_63A   Tommy, it's Earnest. Earnest Kelly.
+MOB_63B   How are you?
+MOB_63C   I'm doing okay. I'll need a stick to walk, but I should be back at work soon enough.
+MOB_63D   Good.
+MOB_63E   I heard about Lance. What a little prick, eh?
+MOB_63F   Yes.
+MOB_63G   Never trust a man who walks the streets in his pajamas. That's what I say. Glad you killed him. I hope it was painful for the prick.
+MOB_63H   I think it was. I just didn't think he was like that...
+MOB_63I   Tommy, for a raging lunatic, you're pretty naive. I'll be back at work soon, teach you a thing or two about life, you hear.
+MOB_63J   Take your time, Earnest. Look after yourself.
+MOB_66A   Tommy, Tommy why you coming back here for?
+MOB_66B   I tell you we don't want to see you around here no more.
+MOB_67A   Tommy, me thinks you should be staying away, you hear?
+MOB_67B   The Haitian boys not too 'appy with you.
+MOB_68A   Tommy son, have I got a surprise for you
+MOB_68B   I'm down at the recording studios with some major artists
+MOB_68C   Why don't you pay us a visit?
+MOB_68D   You know it makes sense, dontcha? See ya later.
+MOB_70A   Tommy, it's me, Colonel Cortez. Look senor, I believe you are a man who can get things done. So please help me.
+MOB_70B   You can find me at the boat.
+MOB_72A   Tommy, it's me, Lance. Keep your mouth shut there Tommy, 'cause I ain't got time to talk.
+MOB_72B   I ain't interested in what you got to say. Why should I be? You don't care about me, do you?
+MOB_72C   You gotta look after me a bit better. Give me a fair slice. You know...
+MOB_72D   Tommy... oh, look, man, I'm sorry. It's just that...
+MOB_72E   People patronize me all my life, treat me like a little kid.
+MOB_72F   My brother would do that. Please, man, don't do that.
+MOB_72G   I gotta go.
+MOB_73A   Tommy, it's Steve.
+MOB_73B   Hey, Steve.
+MOB_73C   Hey indeed, genius. You're a marvel! I'm a marvel! They love us. We are re-writing the record books, pal.
+MOB_73D   We are talking major awards here. Finally, I can put my dad in a home an tell him to shut up.
+MOB_73E   Eeer, that's cool, Steve.
+MOB_73F   Cool? It's hot, man. Hot. H. O. T. He never believed in me. Never thought I was an artist, and now I've made it.
+MOB_73G   I'm the best damn skin flick director of all time, my friend. I just wanted to say, it's a pleasure to have met you.
+MOB_73H   Thanks steve.
+MOB_73I   I love you, baby. Don't go changing on me, you hear.
+MOB_73J   I hear you. Good bye, Steve.
+MOB_95    Get to the payphone at location.
+MOB_95A   Get to the payphone in Little Havana.
+MOB_96    Get to the payphone at location.
+MOB_96A   Get to the payphone at the airport terminal.
+MOB_97    Get to the payphone at location.
+MOB_98    Get to the payphone at location.
+MOB_98A   Get to the pay phone in Vice Point.
+MOB_99    Get to the payphone at location.
+MOB_99A   Get to the payphone next to the mall in Washington.
+MONTAX    Cash made in taxi
+MOONBM    Moonbeam
+MP5       MP
+MULE      Mule
+MXCARD    Max. INSANE Jump dist. (ft)
+MXCARDM   Max. INSANE Jump dist. (m)
+MXCARJ    Max. INSANE Jump height (ft)
+MXCARJM   Max. INSANE Jump height (m)
+MXFLIP    Max. INSANE Jump flips
+MXJUMP    Max. INSANE Jump rotation
+M_FAIL    MISSION FAILED!
+M_PASS    MISSION PASSED! $~1~
+NBMNBUY   El Swanko Casa purchased: $~1~
+NBMN_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
+NBMN_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
+NBMN_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase El Swanko Casa for $~1~
+NEWCONT   New ~h~Contact Point ~w~opened at the marina in Ocean Beach!!
+NEW_REC   ~g~New Record Set!! ~w~~1~ minutes ~g~and ~w~~1~ seconds.
+#UpdatedSCM edited
+NITRO     Taxi Driver mission complete. All taxi's now have a boost jump! Just press the horn button.
+NMISON    Mission attempts
+NOCD      The disc tray is empty. Please insert disc.
+NOMONEY   ~g~You need more cash!
+NOSTUC    No INSANE stunts completed
+NOTAXI    ~g~You need a Kaufman Cab to activate this mission.
+NOUNIF    Unique Jumps completed
+NOV       Nov
+NO_PCCD   Please insert your GTA Vice City CD, or press ESC to cancel
+NUMBER    ~1~
+NUMSHV    Safehouse visits
+OCEANIC   Oceanic
+OCHEBUY   Ocean Heights Apartment purchased: $~1~
+OCHE_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
+OCHE_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
+OCHE_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Ocean Heights Apartment for $~1~
+OCT       Oct
+OPENCD    The disc tray is open. Please close the disc tray.
+OUTFT1    Street
+#UpdatedSCM edited
+OUTFT10   Black Tracksuit
+#UpdatedSCM edited
+OUTFT11   Red Tracksuit
+OUTFT12   Frankie
+OUTFT13   MC Tommy
+OUTFT2    Soiree
+OUTFT3    Coveralls
+OUTFT4    Country Club
+#UpdatedSCM edited
+OUTFT5    Cuban Dress
+OUTFT6    Cop
+#UpdatedSCM edited
+OUTFT7    Bank Robber
+OUTFT8    Casual
+#UpdatedSCM edited
+OUTFT9    Mr. Vercetti
+PACKER    Packer
+PAGEB11   Flamethrower delivered to hideout.
+PAGEB13   Health delivered to hideout
+PAGEB14   Adrenaline delivered to hideout
+PAGE_00   .
+PAGE_01   Kill ~1~ Gang Members in 2 Minutes!
+PAGE_02   Destroy ~1~ Vehicles in 2 Minutes!
+PAGE_03   Drive-by and Waste ~1~ Gang Members in 2 Minutes!
+PAGE_04   Runover and Kill ~1~ Gang Members in 2 Minutes!
+PAGE_05   Gun Down ~1~ Gang Members in 2 Minutes!
+PASDRO    Passengers dropped off
+PATRIOT   Patriot
+PBOAT_1   Press the ~h~~k~~PED_FIREWEAPON~ ~w~button to fire the boat cannons.
+PBOAT_2   Press the ~h~~k~~PED_FIREWEAPON~ ~w~button to fire the boat cannons.
+#UpdatedSCM edited
+PCJ600    PCJ-600
+PCRESRT   Starting new game. Please wait...
+PEREN     Perennial
+PERPIC    Hidden Packages found
+PER_COM   Percentage completed
+PE_WAST   People you've wasted
+PE_WSOT   People wasted by others
+PHIL      PHIL MISSIONS
+PHIL1     PHIL MISSION 1
+PHIL2     PHIL MISSION 2
+PHIL_1    Gun Runner
+PHIL_2    Boomshine Saigon
+PHOENIX   Phoenix
+PICK1     Body Armor delivered to Ocean View Hotel!
+PICK10    Hunter now available from the Army Barracks!
+PICK2     .357 delivered to Ocean View Hotel!
+PICK3     Chainsaw delivered to Ocean View Hotel!
+PICK4     Flame Thrower delivered to Ocean View Hotel!
+PICK5     .308 Sniper delivered to Ocean View Hotel!
+PICK6     Minigun delivered to Ocean View Hotel!
+PICK7     Rocket Launcher delivered to Ocean View Hotel!
+#UpdatedSCM edited
+PICK8     Sea Sparrow now available from Vercetti Estate on Starfish Island!
+#UpdatedSCM only
+PICK8B    Sea Sparrow now available from Diaz's Mansion on Starfish Island!
+#UpdatedSCM edited
+PICK9     Rhino tank now available from Fort Baxter Air Base!
+PISTOL    Pistol
+#UpdatedSCM edited
+PIZ1_A    THE WELL STACKED PIZZA
+PIZZABO   Pizza Boy
+PLANE_4   Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+PLANE_H   Use the ~h~~k~~VEHICLE_ACCELERATE~~w~ button to accelerate, Left and right to turn.
+PL_STAT   Player stats
+POLICAR   Police
+POLMAV    Police Maverick
+POL_HQ    VCPD HQ
+PONY      Pony
+POR1_03   ~r~Candy is dead!
+POR1_19   Hey!
+PORN      PORN MISSIONS
+PORN1     PORN MISSION 1
+PORN2     PORN MISSION 2
+PORN3     PORN MISSION 3
+PORN4     PORN MISSION 4
+PORNBUY   Film Studio purchased: $~1~
+PORNI     Prawn Island
+PORN_1    Recruitment Drive
+PORN_2    Dildo Dodo
+PORN_3    Martha's Mug Shot
+PORN_4    G-spotlight
+PORN_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Film Studios for $~1~
+PORN_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Film Studios for $~1~
+PORN_NO   You cannot buy the Film Studio at this time, come back later.
+PORN_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Film Studios for $~1~
+PQUINS    Perfect quadruple insane stunt
+PREDATR   Predator
+PRINST    Perfect insane stunt
+PRNT_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Print Works for $~1~
+PRNT_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Print Works for $~1~
+PRNT_NO   You cannot buy the Print Works at this time, come back later.
+PRNT_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Print Works for $~1~
+PROPOWN   Property Owned
+PROP_1    You don't have enough cash for this property
+PROP_2    You cannot buy property whilst on a mission
+PROT      PROTECTION MISSIONS
+PRTRST    Perfect triple insane stunt
+PU_CF1    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to pick up this weapon. It will replace any weapon you have of the same type.
+PU_CF3    Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to replace current weapon in this slot.
+PU_CF4    Press the ~h~~k~~VEHICLE_ENTER_EXIT~ ~w~button to replace current weapon in this slot.
+PU_MONY   You don't have enough cash.
+PYTHON    .357
+QUINST    Quadruple insane stunt
+RACE1     ~g~3..2..1.. GO GO GO!
+RACE2     ~g~3
+RACE3     ~g~2
+RACE4     ~g~1
+RACE5     ~g~GO!
+RACEFA    ~r~You failed to win the race!
+RACES     TIME:
+RACES17   New best time: ~1~:~1~
+RACES18   YOU HAVE WON: $~1~
+RACES20   New best time: ~1~:0~1~
+RACES21   Time: ~1~:0~1~
+RACES_4   3
+RACES_5   2
+RACES_6   1
+RACES_7   GO!
+RACES_9   Time: ~1~:~1~
+RACETM    ~b~RACE TIME: ~1~:~1~
+RACETM2   ~b~RACE TIME: ~1~:0~1~
+RAMPAGE   RAMPAGE!!
+RAMP_A    ALL RAMPAGES COMPLETED!!
+RAMP_F    RAMPAGE FAILED!!
+RAMP_P    RAMPAGE PASSED!!
+RANCHER   Rancher
+#UpdatedSCM edited
+RANGE     Shooting Range
+RATNG1    Upstanding Citizen
+RATNG10   Rat
+RATNG11   Leece
+RATNG12   Scam Artist
+RATNG13   Trickster
+RATNG14   Numbers Runner
+RATNG15   Hustler
+RATNG16   Bully
+RATNG17   Riff-Raff
+RATNG18   Scalawag
+RATNG19   Ruffian
+RATNG2    Nobody Special
+RATNG20   Outlaw
+RATNG21   Thug
+RATNG22   Drop Man
+RATNG23   SA Goon
+RATNG24   Goon
+RATNG25   Jailbird
+RATNG26   Ex-Con
+RATNG27   Felon
+RATNG28   Bag Man
+RATNG29   Wiseguy
+RATNG3    Litterer
+RATNG30   Wheelman
+RATNG31   Hired Muscle
+RATNG32   Hatchetman
+RATNG33   Headhunter
+RATNG34   Enforcer
+RATNG35   Ronin
+RATNG36   Fixer
+RATNG37   Hitman
+RATNG38   Associate
+RATNG39   Butcher
+RATNG4    Shoplifter
+RATNG40   Cleaner
+RATNG41   Assassin
+RATNG42   Consigliere
+RATNG43   Made Man
+RATNG44   Right-Hand Man
+RATNG45   Executioner
+RATNG46   Lieutenant
+RATNG47   Underboss
+RATNG48   Capo
+RATNG49   Boss
+RATNG5    Vandal
+RATNG50   Kingpin
+RATNG51   Don
+RATNG52   Godfather
+RATNG53   Untrustworthy
+RATNG54   Embarrassment
+RATNG55   Hacker
+RATNG56   Cheater
+RATNG57   Total Liar
+RATNG6    Do boy
+RATNG7    Pickpocket
+RATNG8    Clepto
+RATNG9    Snitch
+#RBM1_11   NO LONGER NEEDED
+#RBM1_3    NO LONGER NEEDED
+RBM1_6    ~g~Take Mercedes and the 'Love Juice' to the band at the recording studio.
+RBM2_6    ~g~Wow! She's a bloke, stop him!
+RBM3_5    ~g~Take Love Fist to the venue.
+RC4       'RUMPO RAMPAGE'
+RCBANDT   RC Bandit
+RCBARON   RC Baron
+RCCANX    ~r~RC plane cancelled.
+#RCH1_1    NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED
+RCH1_10   ~b~TOTAL TIME: ~1~:0~1~
+RCH1_11   RC Raider Pickup
+RCH1_2    ~g~The CHECKPOINTS are scattered throughout the airport.
+#RCH1_3    NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED
+RCH1_5    Time:
+RCH1_6    ~g~Use the RC Helicopter to collect checkpoints scattered throughout the airport.
+RCH1_9    ~b~TOTAL TIME: ~1~:~1~
+RCPL1_1   ~g~Compete in a CHECKPOINT RACE with 3 other RC Baron's
+RCPL1_2   ~g~You must go through the ~o~CENTRE CORONA ~g~to successfully pass a checkpoint.
+RCPL1_3   ~g~Get to the starting grid now!
+RCPL1_7   RC Baron Race
+RCR1_3    ~g~If you wish to quit this mission press the ~h~~k~~PED_FIREWEAPON~ ~g~button to detonate your RC car.
+RCR1_5    RC Bandit Race
+RCRAIDE   RC Raider
+RCRC1_2   ~g~Get to the starting grid now!
+RCRC1_4   ~g~3
+RCRC1_5   ~g~2
+RCRC1_6   ~g~1
+RCRC1_7   ~g~GO!
+RCRC1_8   ~g~Race time: ~1~ seconds
+REEFER    Reefer
+REGINA    Regina
+RELOAD    ~g~You have won the fast reload ability!
+REPLAY    REPLAY
+RESTART   Starting new game
+REWARD    REWARD $~1~
+RHINO     Rhino
+RIO       Rio
+ROCK      THE ROCKBAND GANG MISSIONS
+ROCK3     ROCKBAND MISSION 3
+ROCK_1    Love Juice
+ROCK_2    Psycho Killer
+ROCK_3    Publicity Tour
+ROCK_4    Love Fist!!
+ROK1_1E   ~g~It'll cost more than you've got!
+ROK1_1F   ~g~Come back when you got the money.
+ROK1_4    ~g~Ok, I think this is what you were after...
+ROK3_72   Love Fist!
+ROMERO    Romero's Hearse
+RUGER     Kruger
+RUMPO     Rumpo
+R_TIME    RACE TIME:
+SABRE     Sabre
+SABRETU   Sabre Turbo
+SANCHEZ   Sanchez
+SANDKIN   Sandking
+SAVE1     Walk into the corona to ~h~Save the game~w~. You cannot save during a mission.
+SAVE2     Any vehicle left in this garage will be stored when the game is saved.
+SCARF     Apartment 3c
+SCREWD    Screwdriver
+SEAGULL   Seagulls Sniped
+SEASPAR   Sea Sparrow
+SECOND    ~b~2nd
+SECURI    Securicar
+SEG3_1    TIME:
+SEG3_10   ~g~You hit the target! 2 more to go.
+SEG3_11   ~g~You hit the target! Just 1 more to go!
+SEG3_12   ~r~You missed the target! Go get a bomb!
+SEG3_13   ~g~Drop the bomb at a target zone.
+SEG3_14   ~r~You ran out of time and failed to demolish the building.
+SEG3_15   ~r~Your RC Raider has been destroyed! How you gonna transport the bombs now?
+SEG3_2    ~g~Get to the van that contains the RC Raider and remote timed bombs.
+SEG3_3    ~g~You must use the RC RAIDER to transport 4 bombs to 4 target zones on the building site.
+SEG3_4    ~g~You can pick up bombs by simply piloting your RC Raider adjacent to each one, to drop a bomb press the ~h~~k~~PED_FIREWEAPON~ ~g~button.
+SEG3_6    ~g~To successfully hit a target zone, you must drop the bomb in the area represented by the ~q~pink marker~w~. You can drop the bombs in any order.
+SEG3_7    ~g~Once you have dropped the FIRST bomb successfully in a target zone the detonation timer will start; you must then drop all the bombs within this time period.
+SEG3_8    ~g~All 4 bombs must be located at the 4 target zones to pass the mission and demolish the building.
+SEG3_9    ~g~You hit the target! 3 more to go.
+SENTINL   Sentinel
+SENTXS    Sentinel XS
+SEP       Sept
+SERG3_5   ~g~You can only carry one bomb at a time and cannot pick up successfully planted bombs.
+SET1EN    SetUp 1. Enabled
+SHOTGN1   Shotgun
+SHOTGN2   S.P.A.S. 12
+SHOTGN3   Stubby shotgun
+SHO_RAN   Shooting Range Rank
+SKIMMER   Skimmer
+SKUMBUY   Skumole Shack purchased: $~1~
+SKUM_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
+SKUM_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
+SKUM_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase Skumole Shack for $~1~
+SNIPE     Sniper rifle
+SPAND     Spand Express
+SPARROW   Sparrow
+SPEEDER   Speeder
+SPRAYIN   Sprayings
+SQUALO    Squalo
+STALION   Stallion
+STARI     Starfish Island
+STFT_01   Fastest time on 'Alloy Wheels Of Steel'
+STFT_02   Fastest time on 'The Driver'
+STFT_03   Fastest time in Dirt Ring
+STFT_04   Fastest time on RC Plane Race
+STFT_05   Fastest time on RC Car Race
+STFT_06   Fastest time on RC helicopter Pickup
+STFT_07   Fastest time on 'Terminal Velocity'
+STFT_08   Fastest time on 'Ocean Drive'
+STFT_09   Fastest time on 'Border Run'
+STFT_10   Fastest time on 'Capital Cruise'
+STFT_11   Fastest time on 'Tour!'
+STFT_12   Fastest time on 'V.C. Endurance'
+STFT_13   Fastest time on Downtown Chopper Checkpoint
+STFT_14   Fastest time on Ocean Beach Chopper Checkpoint
+STFT_15   Fastest time on Vice Point Chopper Checkpoint
+STFT_16   Fastest time on Little Haiti Chopper Checkpoint
+STFT_17   Fastest time on 'PCJ Playground'
+STFT_18   Fastest time on 'Trial By Dirt'
+STFT_19   Fastest time on 'Test Track'
+STFT_20   Fastest time for 'Cone Crazy'
+STFT_21   Fastest time in Hotring
+STFT_22   Fastest lap time in Hotring
+STFT_23   Fastest time for Checkpoint Charlie
+STHC_01   Highest score for Shooter
+STHC_02   Best Percentage of hits for Shooter
+STHC_03   Number of drug deals made
+STHC_04   Highest score with Keepie-Uppy beach ball
+STHC_05   Hotring Best Result
+STINGER   Stinger
+STOCK     ~r~out of stock
+STPR_1    The Malibu
+STPR_10   Links View Apartment
+STPR_11   El Swanko Casa
+STPR_12   1102 Washington Street
+STPR_13   Ocean Heights Apartment
+STPR_14   Skumole Shack
+STPR_15   Hyman Condo
+STPR_2    Print Works
+STPR_3    Film Studio
+STPR_4    Ice Cream Factory
+STPR_5    Car Showroom
+STPR_6    Taxi Company
+STPR_7    Boatyard
+STPR_8    Pole Position Club
+STPR_9    3321 Vice Point
+STRETCH   Stretch
+STRIP     The 'Pole Position Club'
+STRIP_1   ~r~Not enough cash, you cheap sleazebag.
+STRPBUY   Pole Position Club purchased: $~1~
+STRP_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Pole Position Club for $~1~
+STRP_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Pole Position Club for $~1~
+STRP_NO   You cannot buy the Stripclub at this time, come back later.
+STRP_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Pole Position Club for $~1~
+ST_2WHD   Longest 2 wheels distance (m)
+ST_2WHE   Longest 2 wheels time (secs)
+ST_ASSI   Assassination Contracts Completed
+ST_AUTO   Auto Repair and Painting Budget
+ST_BRK    Number of bloodring kills
+ST_DAMA   Property Destroyed
+ST_DRWN   Fishes Fed
+ST_FASH   Fashion Budget
+ST_FAVR   Favorite radio station
+ST_FAVV   Favorite vehicle
+ST_FTIM   Flight hours
+ST_GANG   Least favorite gang
+ST_GARB   Garbage Pickups Made
+ST_GNG1   Cubans
+ST_GNG2   Haitians
+ST_GNG3   Streetwannabe's
+ST_GNG4   Diaz's gang
+ST_GNG5   Security guards
+ST_GNG6   Biker gang
+ST_GNG7   Vercetti gang
+ST_GNG8   Golfers
+ST_HEAD   Number of headshots
+ST_ICEC   'Ice Cream' Sold
+ST_LOAN   Visits From Loan Sharks
+ST_LTBR   Longest time in bloodring (secs)
+ST_MOVI   Movie Stunts
+ST_PHOT   Photographs Taken
+ST_PIZZ   Pizza's Delivered
+ST_PR01   Flyboy
+ST_PR02   Aircraftman
+ST_PR03   Pilot Officer
+ST_PR04   Corporal
+ST_PR05   Lieutenant
+ST_PR06   Sergeant
+ST_PR07   Captain
+ST_PR08   Biggs
+ST_PR09   Wedge
+ST_PR10   Red Baron
+ST_PR11   Goose
+ST_PR12   Viper
+ST_PR13   Jester
+ST_PR14   Chappy
+ST_PR15   Iceman
+ST_PR16   Maverick
+ST_PR17   Noops
+ST_PR18   Air Chief Marshal
+ST_PR19   Ace
+ST_PRAN   Pilot Ranking
+ST_PROP   Property Budget
+ST_RAN0   Learner
+ST_RAN1   Navigator
+ST_RAN2   Co Pilot
+ST_RAN3   Junior
+ST_RAN4   Competent
+ST_RAN5   Senior
+ST_RAN6   Ace
+ST_RAN7   Red baron
+ST_STAR   Total number of wanted stars attained
+ST_STGN   Total number of wanted stars evaded
+ST_STOD   Longest Stoppie distance (m)
+ST_STOP   Longest Stoppie time (secs)
+ST_STOR   Stores Knocked Off
+ST_TIME   Playing Time
+ST_WEAP   Weapon Budget
+ST_WHED   Longest Wheelie distance (m)
+ST_WHEE   Longest Wheelie time (secs)
+ST_WSTR   least favorite radio station
+SUNSHIN   Sunshine Autos
+S_PROMP   When not on a mission you can save your progress by collecting the ~h~cassette tape pickup.
+T4X4_1    'PCJ Playground'
+T4X4_3    'GRIPPED!'
+T4X4_F    ~r~You bailed! Too tough for you?!
+TAX2_4    Go on, Tommy.
+TAX2_5    Beat the hell out of him.
+TAX2_6    He hasn't even got a license.
+TAX2_7    Damn limo services.
+TAXI      Taxi
+TAXI2     ~r~You're out of time!
+TAXIBUY   Taxi Firm purchased: $~1~
+TAXI_1    V.I.P.
+TAXI_2    Friendly Rivalry
+TAXI_3    Cabmaggedon
+TAXI_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Taxi Company for $~1~
+TAXI_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Taxi Company for $~1~
+TAXI_M    'TAXI DRIVER'
+TAXI_NO   You cannot buy the Taxi Company at this time, come back later.
+TAXI_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase the Taxi Company for $~1~
+TAXSHRT   ~g~You can use this Kaufman Cab to take you to destinations instead of driving. It will cost you $9.
+TAXW1_5   ~g~You need to be in a Kaufman cab!
+TAXW3_1   ~g~Go and pick up Mercedes.
+TAXWAR    TAXI WAR MISSIONS
+TAX_1     Kaufman Cabs
+TEC9      Tec 9
+TEX1_5    ~r~He got away!
+TEX3_9    ~g~Pickup a bomb by maneuvering the RC helicopter next to it.
+TEXTXYZ   Writing coordinates to file...
+TEX_1     Four Iron
+TEX_2     Two Bit Hit
+TEX_3     Demolition Man
+THIRD     ~b~3rd
+TIMER     This is a timed mission, you must complete it before the timer counts down to zero.
+TMANS     Vercetti Estate
+TM_BUST   Times busted
+TM_DED    Hospital visits
+TOPFUN    Top Fun
+TOP_SHO   Top Shooting Range Score
+TOTDISM   Total distance traveled (m)
+TOT_DIS   Total distance traveled (miles)
+TRASHM    Trashmaster
+TRINST    Triple insane stunt
+TROPIC    Tropic
+TSCORE    EARNINGS: $~1~
+#UpdatedSCM edited
+TTUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi driver missions on or off.
+#UpdatedSCM edited
+TTUTOR2   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi driver missions on or off.
+TYREPOP   Tires popped with gunfire
+TYRESLA   Tires slashed with a blade
+UMBERTO   Cafe Robina
+USJ       UNIQUE STUNT BONUS!
+USJ_ALL   ALL UNIQUE STUNTS COMPLETED!
+UZI       Uz-1
+VCNMAV    VCN Maverick
+#UpdatedSCM entry
+VCPDCHE   VCPD Cheetah
+VCPTBUY   3321 Vice Point purchased: $~1~
+VCPT_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
+VCPT_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
+VCPT_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 3321 Vice Point for $~1~
+VICE_C    Vice City
+VIRGO     Virgo
+VOODOO    Voodoo
+WALTON    Walton
+WANT_A    You will only be arrested if you have a ~h~wanted level.
+WANT_B    Your ~h~wanted level~w~ is represented by the row of stars in the top right of the screen.
+WANT_C    You now have a ~h~wanted level~w~ of one...
+WANT_D    two...
+WANT_E    three...
+WANT_F    As your ~h~wanted level~w~ increases you will attract more powerful forms of law enforcement.
+WANT_G    When you are ~h~'busted'~w~ you are returned to the nearest police station.
+WANT_H    The cops will take all your weapons and some of your cash as a bribe.
+WANT_I    Any mission you were on will be failed.
+WANT_J    You will find ways of reducing your wanted level the more you play.
+#UpdatedSCM edited
+WANT_K    If you are in a vehicle, ~h~SPRAY SHOPS~w~ will ~h~clear your wanted level.
+WANT_L    Your wanted level has been suspended, if you commit a crime whilst the stars are flashing your full wanted level will be reinstated.
+WASHBUY   1102 Washington Street purchased: $~1~
+WASHING   Washington
+WASH_C    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
+WASH_L    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
+WASH_T    Press the ~h~~k~~PED_ANSWER_PHONE~ ~w~button to purchase 1102 Washington Street for $~1~
+WEATHE1   FORCE WEATHER SUNNY
+WEATHE2   FORCE WEATHER EXTRA SUNNY
+WEATHE3   FORCE WEATHER CLOUDY
+WEATHE4   FORCE WEATHER RAINY
+WEATHE5   FORCE WEATHER FOGGY
+WEATHE6   WEATHER NORMAL
+WELCOME   WELCOME TO
+WHEEL01   TWO WHEELS DOUBLE BONUS: $ ~1~ Distance: ~1~.~1~m Time: ~1~ seconds
+WHEEL02   TWO WHEELS DOUBLE BONUS: $ ~1~ Distance: ~1~ feet Time: ~1~ seconds
+WHEEL03   TWO WHEELS BONUS: $ ~1~ Time: ~1~ seconds
+WHEEL04   TWO WHEELS BONUS: $ ~1~ Distance: ~1~.~1~m
+WHEEL05   TWO WHEELS BONUS: $ ~1~ Distance: ~1~ feet
+WHEEL06   WHEELIE BONUS: $ ~1~ Distance: ~1~.~1~m Time: ~1~ seconds
+WHEEL07   WHEELIE BONUS: $ ~1~ Distance: ~1~ feet Time: ~1~ seconds
+WHEEL08   WHEELIE BONUS: $ ~1~ Time: ~1~ seconds
+WHEEL09   WHEELIE BONUS: $ ~1~ Distance: ~1~.~1~m
+WHEEL10   WHEELIE BONUS: $ ~1~ Distance: ~1~ feet
+WHEEL11   STOPPIE BONUS: $ ~1~ Distance: ~1~.~1~m Time: ~1~ seconds
+WHEEL12   STOPPIE BONUS: $ ~1~ Distance: ~1~ feet Time: ~1~ seconds
+WHEEL13   STOPPIE BONUS: $ ~1~ Time: ~1~ seconds
+WHEEL14   STOPPIE BONUS: $ ~1~ Distance: ~1~.~1~m
+WHEEL15   STOPPIE BONUS: $ ~1~ Distance: ~1~ feet
+WHOOPEE   Mr. Whoopee
+WIN_95    Grand Theft Auto VC cannot run on Windows 95
+WIN_DX    Grand Theft Auto VC requires at least DirectX version 8.1
+WIN_TTL   Grand Theft Auto VC
+WIN_VDM   Grand Theft Auto VC cannot find enough available video memory
+WRONGCD   Incorrect disc. Please insert correct disc.
+YANKEE    Yankee
+ZEBRA     Zebra Cab
+

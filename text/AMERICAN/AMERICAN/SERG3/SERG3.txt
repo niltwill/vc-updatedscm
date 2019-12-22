@@ -1,0 +1,52 @@
+TEX3_1    ~g~Use the RC helicopter to transport bombs to four demolition points on the building site.
+TEX3_10   ~g~Drop the bomb at a target.
+TEX3_11   targets left:
+TEX3_12   ~g~Bomb planted! Only 3 more targets to go! Go back and get another bomb.
+TEX3_13   ~g~Bomb planted! Only 2 more targets to go! Go back and get another bomb.
+TEX3_14   ~g~Bomb planted! Only 1 more target to go! Go back and get another bomb.
+TEX3_15   ~r~Detonation timer initiated! ~g~You must plant the ~w~4 bombs ~g~in the remaining time!
+TEX3_16   ~g~Get to the ~w~TOPFUN ~g~van near the building site to be demolished.
+TEX3_17   ~r~You ran out of time!
+TEX3_18   ~r~Your RC Helicopter has been destroyed!
+TEX3_19   ~r~You dropped your bomb in the water! That ain't no way to fish!
+TEX3_2    ~g~You must place one bomb at each target. You can place bombs in any order.
+TEX3_20   ~r~The RC Helicopter is nearly out of range!
+TEX3_21   ~r~The RC Helicopter went out of range!
+TEX3_22   Pressing the ~h~~k~~VEHICLE_ACCELERATE~ ~w~button increases the rotor speed, causing the helicopter to ~h~ascend.
+TEX3_23   Press the ~h~~k~~VEHICLE_TURRETUP~~w~ and ~h~~k~~VEHICLE_TURRETDOWN~~w~ buttons to tilt the helicopter in the direction you wish to maneuver it.
+TEX3_24   Press the ~h~~k~~VEHICLE_LOOKLEFT~ ~w~button to rotate the helicopter counter-clockwise.
+TEX3_25   Press the ~h~~k~~VEHICLE_LOOKRIGHT~ ~w~button to rotate the helicopter clockwise.
+TEX3_26   Pressing the ~h~~k~~VEHICLE_BRAKE~ ~w~button ~w~decreases the rotor speed, causing the helicopter to~h~ descend.
+TEX3_27   ~g~A central stairway allows access to all the floors in the building.
+TEX3_28   To ~h~pick up a bomb~w~, simply maneuver the RC helicopter next to it. The RC Helicopter can carry one bomb at a time.
+TEX3_29   To drop a bomb press the~h~ ~k~~PED_FIREWEAPON~ ~w~button.
+TEX3_3    ~g~Maneuver the RC helicopter next to a bomb to pick it up. it can carry one bomb at a time..
+TEX3_30   ~g~To pick up a bomb, simply maneuver the RC helicopter next to it. The RC Helicopter can carry one bomb at a time.
+TEX3_31   ~r~You destroyed the TOPFUN van that contained the bombs and RC helicopter!
+TEX3_32   You can ~h~look behind~w~ by simultaneously pressing the ~h~~k~~VEHICLE_LOOKLEFT~~w~ and the ~h~~k~~VEHICLE_LOOKRIGHT~~w~ buttons.
+TEX3_33   Once you pick up a bomb the radar will show you the position of the target relative to the RC helicopter.
+TEX3_34   An ~h~upwards pointing triangular blip ~w~indicates the target is ~h~above ~w~the RC helicopter.
+TEX3_35   A ~h~downward pointing triangular blip ~w~indicates the target is ~h~below ~w~the RC helicopter.
+TEX3_36   A ~h~square blip ~w~indicates the target is on the ~h~same level ~w~as the RC helicopter
+TEX3_37   Pushing ~h~back on the analog stick ~w~decreases the rotor speed, causing the helicopter to~h~ descend.
+TEX3_38   Pressing the ~h~~k~~VEHICLE_ACCELERATE~ ~w~button increases the rotor speed, causing the helicopter to ~h~ascend.
+TEX3_39   ~g~To drop a bomb press the ~h~~k~~VEHICLE_HANDBRAKE~ ~g~button.
+TEX3_4    ~g~To drop a bomb press the~h~ ~k~~PED_FIREWEAPON~ ~g~button.
+TEX3_40   To drop a bomb press the ~h~~k~~VEHICLE_HANDBRAKE~ ~w~button.
+TEX3_5    ~g~If you place a bomb unsuccessfully you can pick it up and try again.
+TEX3_6    ~g~Once you have picked up a bomb for the first time, the detonation timer will start.
+TEX3_7    ~g~You must then place the remaining bombs in 7 minutes!
+TEX3_8    ~g~You missed the target! Pick up a bomb and try again!
+TEX3_A    Now look here, son. I got a problem and I reckon you could help me with it.
+TEX3_B    I'm no builder.
+TEX3_C    No, I was thinking more of your demolition skills.
+TEX3_D    Now this here, this is the development as planned and this,
+TEX3_E    this is the property that we're looking at.
+TEX3_F    You're trying to say this new office block is kind of in the way.
+TEX3_G    You catch on quick.
+TEX3_H    Now I'm going to head out of town for a while
+TEX3_I    and if that office development were to face sudden and insurmountable structural problems, then I..
+TEX3_J    As a civil minded individual you'd feel obliged to step in and
+TEX3_K    save the rejuvenation of an important area of the city?
+TEX3_L    Where can I get more guys like you?
+

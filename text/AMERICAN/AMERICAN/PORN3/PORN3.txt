@@ -1,0 +1,47 @@
+POR3_01   ~g~Follow Candy's ~h~Stretch~g~.
+POR3_02   ~r~You've killed the Congressman! There's no way you can blackmail him now.
+POR3_03   ~r~You've alerted the Congressman's protection, they will get him out of there immediately.
+POR3_04   Uh, Candy, could you call me Martha?
+POR3_05   Oh Alex - I mean Martha. Whatever you say...
+POR3_06   Martha, someone's watching.. how kinky.
+POR3_07   You! Give me that camera!
+POR3_08   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target~w~ with the camera.
+POR3_09   Press and hold the~h~ ~k~~PED_LOCK_TARGET~ ~w~button to ~h~target ~w~with the camera.
+POR3_10   Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+POR3_11   Press the~h~ ~k~~PED_SNIPER_ZOOM_IN~ ~w~button to ~h~zoom in ~w~with the camera and the~h~ ~k~~PED_SNIPER_ZOOM_OUT~ ~w~button to ~h~zoom out ~w~again.
+POR3_12   Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+POR3_13   Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+POR3_14   Press the~h~ ~k~~PED_FIREWEAPON~ ~w~button to take a picture.
+POR3_15   ~r~You trashed Candy's Stretch!
+POR3_16   ~g~You need three good blackmail photographs of Alex Shrub with Candy.
+POR3_17   ~g~Get back to the Porn Studios with the film.
+POR3_19   ~r~You ran out of film!
+POR3_20   ~g~If you need transport, use the ~h~Sparrow~g~ round the back.
+POR3_21   ~g~You lost Candy's Stretch!
+POR3_22   ~g~The WK Chariot Hotel across from his balcony should provide an ideal photo-grabbing location.
+POR3_23   ~g~There is a side door that will allow you access to the hotel.
+POR3_24   PHOTOS TAKEN:
+POR3_A    Ok, what's the problem now?
+POR3_B    SSShhhh!
+POR3_C    Well, after his close encounter with the nympho-invaders,
+POR3_D    our hero finds himself unable to think of anything but this huge phallic mountain -
+POR3_E    and that's when I want to do the scene with the vat of mashed potatoes, but then we, uh -
+POR3_F    I don't give a crap about that!
+POR3_G    J - Just keep going, keep going!
+POR3_H    Hey Tommy...
+POR3_I    You mentioned something about some legal problem on the phone?
+POR3_J    Congressman Alex Shrub has jumped on the pre-election bandwagon, he's going after the puritan vote.
+POR3_K    Rumors are he's gonna support measures to restrict, shall we say,
+POR3_L    the more fleshy aspects of this nation's great entertainment industry.
+POR3_M    Great.
+POR3_N    Candy! You know Shrub,
+POR3_O    you guys get up to anything kinky?
+POR3_P    Oh yeah, oh yeah, oh yeah! Yes yes yes YES OOOoooh!
+POR3_Q    Please - tell me you got that.
+POR3_R    Was that part of the, uh... or was she talking to..?
+POR3_S    Hey, I can never tell. Anyway...
+POR3_T    You're probably best following her after the shoot,
+POR3_U    see if she'll lead you to their new love nest.
+POR3_V    You got a camera?
+POR3_X    Yeah. Get him a camera.
+

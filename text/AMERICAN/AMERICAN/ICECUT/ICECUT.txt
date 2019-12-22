@@ -1,0 +1,27 @@
+ICC1_A    Who are you?
+ICC1_B    Your new owner.
+ICC1_C    Were you now, or at any time, a child?
+ICC1_D    What are you talking about?
+ICC1_E    Were you a child?
+ICC1_F    Yes! Calm down! What's wrong with you?
+ICC1_G    I knew it. A child.
+ICC1_H    A dirty, stinking, sniveling, snotting, vile, puking, crying little baby!
+ICC1_I    A baby.. an awful, horrible, disgusting little boo hoo.
+ICC1_J    Mommy doesn't love you. You little shit!
+ICC1_K    Ow! Calm down.
+ICC1_L    I HATE babies, and I hate children.
+ICC1_M    They're dirty, sniveling, snotting, vile, puking little..
+ICC1_N    Enough already!
+ICC1_P    You make soft ice cream, okay? It's purely for kids.
+ICC1_Q    What kind of psycho are you?
+ICC1_R    Just so I understand this, why make children happy if you hate them?
+ICC1_S    Oh, you stupid, sniveling, snotty-
+ICC1_T    Shut up!
+ICC1_U    - Brat!
+ICC1_V    The ice cream is a front.
+ICC1_W    We distribute other, non-dairy products.
+ICC1_X    And if I see a kid, I put him to good use.
+ICC1_Y    Don't I, kiddies? Yes - yes, I do. Mummy doesn't love you.
+ICC1_Z    She HATES you!
+ICC1_ZA   PROPERTY ACQUIRED!
+

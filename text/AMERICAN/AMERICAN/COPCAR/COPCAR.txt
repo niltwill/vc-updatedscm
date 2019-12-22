@@ -1,0 +1,9 @@
+CLEVEL    Vigilante Mission Level ~1~
+COPCART   ~g~You have ~1~ seconds to return to a police vehicle before the mission ends.
+C_BREIF   ~g~Suspect last seen in the ~a~ area.
+C_CANC    ~r~Vigilante mission cancelled!
+C_COMP1   Vigilante mission level 12 complete: Your max Body Armor increased to 150
+C_PASS    THREAT ELIMINATED: $ ~1~
+C_TIME    ~r~Your time as a law enforcer is over!
+KILLS     KILLS:
+

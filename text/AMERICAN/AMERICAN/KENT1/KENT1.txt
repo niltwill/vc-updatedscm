@@ -1,0 +1,23 @@
+KPM1_1    ~g~Lance is being held at the junk yard, Go and rescue him!
+KPM1_2    ~r~You were supposed to get Lance out alive!
+KPM1_3    LANCE'S HEALTH:
+KPM1_4    ~g~Get Lance to the hospital!
+KPM1_5    ~g~Diaz's guys are after you! Get Lance to the hospital.
+KPM1_A    Awright mush, I'm gonna save your Vera, mate.
+KPM1_B    What the hell are you talking about?
+KPM1_C    You know that wanker Diaz, the Bugle Master.
+KPM1_D    He's got your boy, Lance. Word is your mate tried to jump him...
+KPM1_E    didn't jump high enough if you know what I mean.
+KPM1_F    Where did he take him? In plain English?
+KPM1_G    Keep your barnet on! They got him across town at the junkyard.
+KPM1_H    Bloody hell....you nutter!
+M_PASSN   MISSION PASSED!
+RESC_1    You ok to use a gun?
+RESC_2    Sure...I guess...nice to see you, too.
+RESC_3    Let's get out of here.
+RESC_4    There goes my careful planning blown to shit, thanks to you. You screwed up real good, Lance!
+RESC_5    He killed my brother. What do you expect me to do, mow his lawns?
+RESC_6    We're gonna have to take out that prick Diaz before he takes us out.
+RESC_7    Get patched up and meet me on the bridge to Star Island, ok?
+RESC_8    Ok, I got you.
+

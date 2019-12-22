@@ -1,0 +1,21 @@
+BIKE1_1   All right, fancy clothes. Let's see what you can do.
+BM1_1     ~g~Get a Freeway or an Angel and get to the starting grid.
+BM1_2     ~g~You need a Freeway or an Angel to compete!
+BM1_3     ~r~The racers have been attacked!
+BM1_A     Where's Baker?
+BM1_B     I'm looking for Big Mitch Baker...
+BM1_C     Who's lookin'?
+BM1_D     Tommy Vercetti.
+BM1_E     Vercetti
+BM1_F     You don't look like the law, so that's bought you a minute.
+BM1_G     You better talk fast.
+BM1_H     Kent Paul said you might be interested in pulling security for a gig he's got set up.
+BM1_I     Kent Paul? Sheesh! No wonder he sent ya.
+BM1_J     The last time he was here he left through the window in nothing but his limey birthday suit.
+BM1_K     Are you interested or not?
+BM1_L     We only do favors for our own.
+BM1_M     How do I join?
+BM1_N     This ain't no country club, boy. Can you handle a bike?
+BM1_O     Can you sit on a stool and drink?
+BM1_P     Cougar, Zeppelin, go see how this girl handles a bike...
+

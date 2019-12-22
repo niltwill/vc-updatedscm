@@ -1,0 +1,80 @@
+INT1_A    Tommy Vercetti...Huh! shit.
+INT1_A1   pay him a little visit, right?
+INT1_A2   see how he's doing.
+INT1_B    Didn't think they'd ever let him out.
+INT1_C    He kept his head down, helps people forget.
+INT1_D    People will remember soon enough.
+INT1_E    When they see him walking down the streets of their neighborhoods.
+INT1_F    It will be bad for business.
+INT1_G    Well, what are we gonna do, Sonny?
+INT1_H    We treat him like an old friend and keep him busy out of town. OK?
+INT1_I    We been talking about expanding down South, right?
+INT1_J    Vice City is twenty-four carat gold these days.
+INT1_K    The Colombians, the Mexicans, hell,
+INT1_L    even those Cuban refugees are cutting themselves a piece of some nice action.
+INT1_M    But it's all drugs, Sonny,
+INT1_N    None of the families will touch that shit!
+INT1_O    Times are changing.
+INT1_P    The families can't keep their backs turned while our enemies reap the rewards.
+INT1_Q    So, we send someone down to do the dirty work for us...
+INT1_R    and cut ourselves a nice quiet slice. OK?
+INT1_S    Who's our contact down there?
+INT1_T    Ken Rosenberg, schmuck of a lawyer.
+INT1_U    How's he gonna hold Vercetti's leash?
+INT1_V    We don't need him to.
+INT1_W    We just set him loose in Vice City,
+INT1_X    we give him a little cash to get started. OK?
+INT1_Y    Give it a few months.
+INT1_Z    Then we go down,
+INT2_A    Hey, hey, guys! It's, uh, Ken Rosenberg here! Hey! Heh, heh, hey, great, hey!
+INT2_B    Well, uh, I'm gonna drive you guys to the meet, okay?
+INT2_C    Now, I've talked to the suppliers and they are very, huh-ha,
+INT2_D    keen to start a business relationship, so, uh,
+INT2_E    if all goes well, we should, uh,
+INT2_F    be doing very nicely for ourselves, which is, y'know...
+INT2_G    good..
+INT2_H    Okay, so. They're brothers, okay.
+INT2_I    One operates the uh, the business,
+INT2_J    and the other one does the flying.
+INT2_K    Now they operate out of Mexico,
+INT2_L    no, no, no, wait...
+INT2_M    They own a farm in Panama.
+INT2_N    Okay, all right, listen -
+INT2_O    you guys, when we get there should I stay in the car,
+INT2_P    or do you guys want me to come in with you guys?
+INT2_Q    No. Stay in the car.
+INT2_R    You know what, I thought about it,
+INT2_S    I'm gonna watch the car.
+INT3_A    Ok, that's them in the chopper.
+INT3_B    All right, here's the deal.
+INT3_C    They want a straight exchange on open ground.
+INT3_D    All right? Ok. Stay tight, let's go.
+INT3_E    All right. Take it easy, now.
+INT3_F    I'm right here. The cars running, baby!
+INT3_G    Got it?
+INT3_H    100% pure grade-A Colombian, my friend.
+INT3_I    The greens?
+INT3_J    Tens and twenties...used.
+INT3_K    I think we have a deal, my friend. HA HA!
+INT3_L    Go on, get out of here! Drive!
+INT3_M    Let me see it.
+INT3_N    Oh Shit!
+INT4_A    Screwed! We're screwed!
+INT4_B    This is soo typical,
+INT4_C    I poke my head out of the gutter for one freakin' second,
+INT4_D    and fate shovels shit in my face!
+INT4_E    Well, screw you!
+INT4_F    Shut your face and quit complaining! You're alive, aren't ya'?
+INT4_G    Drop me right up here.
+INT4_H    Go dump the car, then go get some sleep.
+INT4_I    I'll drop by your office tomorrow and we can start sorting this mess out.
+INT4_J    OK, that's a good idea, I'll get some sleep.
+INT4_K    What are you gonna do?
+INT4_L    Make my way back to my hotel,
+INT4_M    clear my head, and figure this crap out.
+INT4_N    OK.
+INTRO1    I poke my head out of the gutter for one freakin' second and fate shovels shit in my face!
+INTRO2    Go get some sleep.
+INTRO3    What are you gonna do?
+INTRO4    I'll drop by your office tomorrow and we can start sorting this mess out.
+

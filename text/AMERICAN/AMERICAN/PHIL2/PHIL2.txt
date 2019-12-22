@@ -1,0 +1,28 @@
+PHI2_01   ~g~Quick, get Phil to the hospital.
+PHI2_03   ~r~Phil Cassidy is dead!!! Now who's gonna supply arms in Vice City?
+PHI2_04   PHIL'S HEALTH:
+PHI2_05   Not the hospital, man! Too many cops and Viet Cong!
+PHI2_06   There's an ex-army surgeon owes me a few favors and a lawnmower.
+PHI2_07   He's got a place down Little Havana - ooo look, a giant fish.
+PHI2_08   Watch out! Charlie in the tree line!
+PHI2_09   Is it me or are the roads made of jelly?
+PHI2_10   Broken Spoon to Mother Hen, you copy?
+PHI2_11   Spooney Wooney Woo Woo Woooo!
+PHI2_12   He's come for me boy!
+PHI2_13   Black feathered wings beating all around...
+PHI2_14   It's beautiful, man ... it's beautiful ... but so cold ...
+PHI2_15   10-4 we've got a drunk driver.
+PHIL2_A   Hey Phil, how's it goin?
+PHIL2_B   Heeyyyy, Tommy. Howyadoin'? Ish been too long...
+PHIL2_C   I swear you should lay off that boomshine, man -
+PHIL2_D   smells like paint stripper. Making my eyes burn...
+PHIL2_E   Shshs shhh youshelf Tommy,
+PHIL2_F   and come over here because there's someshin' I wanna show you.. someshin.
+PHIL2_G   Woof! God! Should I be able to smell that from way over here? I'm feeling woozy.
+PHIL2_H   Don'tchaworry about the shmell Tommy, you jush wash thish.
+PHIL2_I   Shittycheapbatteriesh or shumin'. There'sh shum more on the bench.
+PHIL2_J   TA-DAAA!
+PHIL2_K   Aww Damn!
+PHI_AS1   PHILS PLACE ASSET COMPLETED
+PHI_AS2   ~g~New Weapons available to purchase from Phils Place.
+

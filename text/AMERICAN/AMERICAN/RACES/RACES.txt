@@ -1,0 +1,25 @@
+RACEHLP   ~w~Press the~h~ ~k~~PED_SPRINT~ ~w~button to start the selected race. Press the~h~ ~k~~VEHICLE_ENTER_EXIT~ ~w~button to exit.
+RACES00   Race ~1~:
+RACES01   Terminal Velocity
+RACES02   Ocean Drive
+RACES03   Border Run
+RACES04   Capital Cruise
+RACES05   Tour!
+RACES06   V.C. Endurance
+RACES07   Entrance Fee: $~1~
+RACES08   Best Time: ~1~:~1~
+RACES09   Best Result: 1st
+RACES10   Best Result: 2nd
+RACES11   Best Result: 3rd
+RACES12   Best Result: 4th
+RACES13   Track Length: ~1~.~1~ km
+RACES15   Best Time: NA
+RACES16   Best Result: NA
+RACES19   You cannot afford to enter this race.
+RACES22   Best Time: ~1~:0~1~
+RACES23   Track Length: ~1~.~1~ miles
+RACES_1   ~g~Get a fast vehicle and get to the starting grid.
+RACES_2   ~g~You need a vehicle to race, this is not a foot race!
+RACES_3   3..2..1.. GO GO GO!
+RACES_8   ~r~You didn't win the race!
+

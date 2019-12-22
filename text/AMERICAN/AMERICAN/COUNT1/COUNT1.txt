@@ -1,0 +1,35 @@
+CM1_1     ~g~Go to the Chartered Libertine Lines boat at the docks.
+CM1_2     ~g~The Shipping Officer will have the information that is required.
+CM1_2A    Look at the arse on that!
+CM1_2B    Awright girl, it's your loss mate init!
+CM1_2C    Awright me ol'china, how's it hangin'?
+CM1_2D    What do you know about counterfeiting?
+CM1_2E    Oh I'm fine Paul, how 'bout you?
+CM1_2F    Come 'ere!
+CM1_2G    Awright! Awright! Awright!! You're obviously a busy man.
+CM1_2H    All I know about dodgy readys is the Triads supply the plates.
+CM1_2I    They've got a shipping company down the docks,
+CM1_2J    the boss man would know when the plates are coming in next!
+CM1_2K    Thanks Paul.
+CM1_2L    What's the matter with you, you maniac!
+CM1_2M    Give me another drink, lively!
+CM1_3     ~g~You've been spotted!
+CM1_5     ~g~Go and meet Kent Paul at the Malibu Club!
+CM1_6     ~g~Get the information back to the Print Works!
+CM1_A     Mr. Vercetti? Hey. You bought the old print works?
+CM1_B     Yeah, my old man used to work on these.
+CM1_C     I was going to follow him in his trade, but...I lived a different life.
+CM1_D     You planning on selling the old machinery, breaking it down?
+CM1_E     I'm thinking we might print something - a newspaper, a magazine...
+CM1_F     Oh, crap, sonny, low grade crap. I've always fancied printing money. It ain't too hard.
+CM1_G     You know, I've been doing it on a small scale for years.
+CM1_H     Really?
+CM1_I     Sure. But we'd need some good quality plates.
+CM1_J     Of course! There's a counterfeiting syndicate already operating in Florida.
+CM1_K     A syndicate?
+CM1_L     Yeah. Just rumors is all I've heard.
+CM1_M     I know a man who's good with rumors...
+CM1_N     I used to spend the evenings with him, cleaning the rollers...
+CNT1_1    Who are you? Oooof! Aaiieee! Not the face! Not the face!
+CNT1_2    Ok, I talk! I talk!
+

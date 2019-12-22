@@ -1,0 +1,32 @@
+GEN1_01   When jogging, press and hold the~h~ ~k~~PED_FIREWEAPON~ ~w~button to prepare a melee attack.
+GEN1_02   When jogging, press and hold the~h~ ~k~~PED_FIREWEAPON~ ~w~button to prepare a melee attack.
+GEN1_03   When jogging, press and hold the~h~ ~k~~PED_FIREWEAPON~ ~w~button to prepare a melee attack.
+GEN1_05   ~g~Go and kill Gonzalez!
+GEN1_06   Eh! He's got a blade!
+GEN1_07   Go away from me, you cheap bastard!
+GEN1_08   Oh sweet Jesus, I've wasted my life and my looks!
+GEN1_09   I pay you double, Tommy, DOUBLE!
+GEN1_10   I'm going to shut that big mouth of yours!
+GEN1_11   Stop running you fat slimeball!
+GEN1_12   Stand still and I'll make it quick!
+GEN1_13   Quit your squealing, no one cares, fatso!
+GEN1_14   Release the~h~ ~k~~PED_FIREWEAPON~ ~w~button to make the attack.
+GEN1_15   Release the~h~ ~k~~PED_FIREWEAPON~ ~w~button to make the attack.
+GEN1_16   Release the~h~ ~k~~PED_FIREWEAPON~ ~w~button to make the attack.
+GEN1_18   ~r~Gonzalez has made it safely to the Police Station!
+GEN1_19   ~g~The Vice City Police are on to you!
+GEN1_20   ~g~Get into a vehicle.
+GEN1_21   ~g~Get to the~h~ Pay 'N' Spray~g~ in~h~ Vice Point~g~.
+GEN1_22   Drive your vehicle into the spray shop to lose your ~h~wanted level, ~h~repair and ~h~respray your vehicle. Cost - ~h~$100. This time it's free.
+GEN1_23   ~g~Go back through the doors to return to the ground floor.
+GEN1_A    Mr. Vercetti!
+GEN1_B    Colonel.
+GEN1_C    Thank you for coming. Please sit. Lobster?
+GEN1_D    No - thanks.
+GEN1_E    I'm ashamed to admit that one of the causes of our mutual problem appears to have been the loose tongue of a man I used to trust.
+GEN1_F    I've been carrying Gonzalez for years, but now his incompetence reaches new heights!
+GEN1_G    It is only right that you kill Gonzalez...
+GEN1_H    Did he do it? It's the money that's important to me.
+GEN1_I    For this kindness I'll reward you, and then we will find your money together.
+GEN1_J    He will be at his Penthouse, half drunk probably. Use this...
+

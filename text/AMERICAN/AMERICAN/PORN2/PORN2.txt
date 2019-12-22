@@ -1,0 +1,25 @@
+DILDO     Skimmer Fuel:
+POR2_01   ~g~There is a seaplane that was used as a prop in some old indie film round the back of the studios.
+POR2_02   ~g~Pick one of the checkpoints to start dropping the flyers from.
+POR2_03   ~g~Drop the flyers all the way to the end checkpoint.
+POR2_04   ~r~LOW FUEL!!!
+POR2_05   ~g~Use it to distribute the flyers around town.
+POR2_A    How's filming going, Steve?
+POR2_B    Well, Candy is a natural and that new girl - she's insatiable!
+POR2_C    She went through half the cast and crew before I even took a light reading.
+POR2_D    Anyway, hey, tomorrow we're going on location to shoot the boat scenes -
+POR2_E    Boat scenes?! What boat scenes?
+POR2_F    The fishermen are in the throes of passion when this giant shark comes in -
+POR2_G    What'd I say about the giant shark?
+POR2_H    I said, 'NO GIANT SHARK', alright?
+POR2_I    Just keep the cameras pointed at the poontang!
+POR2_J    Ok ok, hey Tommy, a guy's gotta try, right?
+POR2_K    Get those flyers printed up?
+POR2_L    Yeah, but nobody's gonna let us distribute those things, I mean
+POR2_M    They're just too, uh, they're unimaginative.
+POR2_N    You don't worry about that.
+POR2_O    I've got my own ideas for distribution.
+POR2_P    O.K. Hey, Candy, uh - in my trailer.
+POR2_Q    Oh, boy.
+PORN2_9   ~g~You have ~1~ seconds to return to a Skimmer before the mission ends.
+

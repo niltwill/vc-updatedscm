@@ -1,0 +1,29 @@
+BUYP1     You can now buy property in certain areas of the map.
+BUYP2     If you see a green house pickup, you can buy that property.
+BUYP3     Stand inside the pickup, then press the ~h~~k~~PED_ANSWER_PHONE~~w~ button to purchase that property.
+PRO1_01   ~g~Do a hit and run on the shop fronts and the owners will be begging for protection.
+PRO1_03   ~r~This was supposed to be a hit and run, not a 'hit and have coffee'.
+PRO1_04   My livelihood, destroyed!
+PRO1_05   Ruined...RUINED!!
+PRO1_06   I pay through the ass for protection!
+PRO1_07   My beautiful window display!
+PRO1_08   My store. My wonderful store.
+PRO1_09   Vercetti. Remember the name.
+PRO1_10   I run this town now. ME!
+PRO1_11   ~g~Get to ~y~The North Point Mall~g~ in ~y~Vice Point~g~.
+PRO1_12   ~g~Smash the panes of glass in each shop front and the owners will be begging for new protection.
+PRO1_13   ~g~You have five minutes to smash them all.
+PRO1_A    Oh, we gotta redecorate this place. We gotta make it look older.
+PRO1_B    I can't stand this look. Tommy, whadaya say? Whadaya say we put a bar in...
+PRO1_C    You're my lawyer, Rosenberg, not my interior decorator. Got it?
+PRO1_D    Listen to me,
+PRO1_E    The time to take over this town is now. It's all out there waiting for us.
+PRO1_F    We need to start seizing territory,
+PRO1_G    let Vice City know we're the new players in town, know what I'm saying?
+PRO1_I    What you need is a legitimate front Tommy, real estate. It's never done me no harm.
+PRO1_J    We need to start using some muscle or we can kiss all that hard work goodbye.
+PRO1_K    Local businesses know Diaz is dead, and they're refusing to pay protection!
+PRO1_L    Ooh! We could try bribery...
+PRO1_M    Bribery? Screw bribery! I'll show you how to make 'em scared!
+PRO1_N    I'll be back here in five minutes...
+
