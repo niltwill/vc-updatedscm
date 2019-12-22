@@ -177,6 +177,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Initial Ken's cutscene is now skippable (since you're in a vehicle: with the acceleration key).
 - Fixed Leaf Links bridge traffic flow not spawning.
 - Spand Express driver in "Jury Fury" now agressivly drives away from the accident place if you pass or fail the mission.
+- New GXT Source format, GXT changes required for the mod are now re-done from scratch.
 </details>
 
 <details>
@@ -253,68 +254,49 @@ Changes and improvements made to the original:
 - Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
 - The Love Fist limo now has a 10% chance of alarm going off once you steal it
 - Added a briefcase in restored 'Supply & Demand' cutscene.
-- Removed Tommy hand animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
+- Removed Tommy's hands movement animations in 'Treacherous Swine' when shouting at Gonzalez because of holding a chainsaw which is heavy.
 - Added a 'TIME:' next to the timer in the 'PCJ Playground' like in other side missions and GTA VCS.
 - Silent's contribution: 'The Job' mission code cleanup)
 - Patients in the Paramedic side-mission will now only enter the Ambulance when it is stopped (preventing from easy accident killings)
 - The Pole Position Club is now accessible without buying it, and the private service is also available, but it will cost you $50 each segment instead of $5 and it will not complete the asset mission, regardless of how much you stay, without you buying the asset first
-- Text colorization is mostly restored to the default pink ones (in american.gxt and american.fxt)????
 - Included the spanish translation now
-- Vercetti's Gang car changed to Banshee from Stallion
 - In 'Jury Fury', damaging the Admiral will now make the jury enter the car instead of just doing nothing
 - Cubans entering your vehicle at the start of 'Cannon Fodder' now takes longer than two seconds
-
-- Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)???
+- Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)
 - Timer in taxi mission will be set according to destination each time, thus the time will not increase infinitely anymore??????
-- You cannot start the mission 'Alloy Wheels of Steel' if in the cop outfit.
+- You cannot start the mission 'Alloy Wheels of Steel' if the player is wearing cop outfit.
 - No more infinite ammo with the pistol in 'The Shootist' in the first round, and you can also no longer shoot before the message "live ammunition...
 - Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)??
 - The target in 'Four Iron' will now escape when you hit him with a (not-so-deadly) weapon from the distance (otherwise if you do not get too close, you can easily kill him without him moving an inch)
 - In 'All Hands On Deck', the heli drivers and hunter driver are changed to FSFA
-- Lance will now say "Come on man, drive more careful!" if you damage the Infernus quite some in 'Back Alley Brawl'. (The other with the Strip Club is removed, as it conflicts with the other, there can only be one dialogue and because we first have to buy that before we can even enter it, so it makes no sense for Lance to say that! Not to mention we got sorta introduced to it in the first mission.)?????
-- You can now skip tutorial messages and info pickups at the start of the game. Press the SPRINT button to quit the player lock and go on without having to wait a little, or press the ACTION key under 6 seconds to remove help. If no action is taken, game includes help after 6 seconds. This does not have much impact on the game, it's merely an additional option for the seasoned players who don't need this info being repeated.
-	In no-help mode, some of these missions' help messages are also disabled:
-		- The Party (follow the T-shirt blip)
-		- Back Alley Brawl (attacking and sprinting help)
-		- Jury Fury (weapon cycling help, hardware store hint)
-		- Riot (cycling through targets, weapon drop help, explosive barrel help)
-		- Four Iron (the golf club help when you enter a Caddy)
-		- Demolition Man (the control of the RC heli)
-		- Mall Shootout (ammu-nation hint, triangle blip help)
-		- Guardian Angels (the assault rifle help, crouching, bike drive-by help)
-
-- Phil now sits in the left side of the Patriot in Boomshine Saigon??????
-- In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger
-- In 'The Job' mission, you will now have to lose your wanted level before initiating the bank robbery
+- Phil now sits in the left side of the Patriot in Boomshine Saigon
+- In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger.
+- In 'The Job' mission, you will now have to lose your wanted level before initiating the bank robbery.
 - Increased bike's health in 'G-spotlight'
 - The taxi driver in taxi sidemission will not enter as passenger anymore (because when he does, Tommy can no longer enter back to that taxi)??????
 - Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)??????
 - No more afternoon time setting in 'Supply & Demand'
 - Skimmer inside large hangar at airport now spawns after mission 'Dildo Dodo'????
-- Romero Hearse now spawns next to the pizza restaurant in Little Haiti after 'Two Bit Hit'
+- Romero Hearse now spawns next to "The Well Stacked Pizza" restaurant in Little Haiti after 'Two Bit Hit'
 - Changed text from "Mission failed" to "Pizza mission ended" when you turn off pizza mission needs revisit the text??
-- Fixed camera in 'The Party' after leaving Rafael's (now facing towards the bike)?????
-- Player is no longer facing towards the Lawyer's office in 'Jury Fury' after the opening cutscene????
-- In 'Riot', after getting the worker clothes you will no longer face Rafael's entrance???
 - The 'G-spotlight' mission now starts at 22:00 instead of 17:00
 - Added two star wanted level if you fail the mission 'Waste the Wife'
 - Changed the two identical HMYAP peds in the Bobcat in 'Autocide' (now the driver is BMODK)
 - Vehicles and targets no longer instantly disappear in 'Autocide'
 - Replaced the HMYRI ped in 'Road Kill' with the Burger guy
-- Army gang now carries MP5 as secondary weapon???
-- Vercetti's gang now uses the Stallion.
+- Army gang now carries MP5 as secondary weapon.
 - Moved the unique white admiral at the mansion and tucked it next to the stairs
-- Random possibility of vigilante and ambulance vehicles being either locked.
+- Random possibility of vigilante and ambulance vehicles being locked.
 - Lowered percentage of alarm triggering on Admiral at Vercetti's mansion (25% instead of 50%)
 - Added a second Securicar at the bank
 - In 'Jury Fury', the woman the jury is talking to will now disappear (with running) instead of remaining in the alley motionlessly
 - Limos now have unique colors in 'Keep Your Friends Close'
-- The mobs now wear Uzi instead of Tec-9s in 'Keep Your Friends Close'?????
-- Sonny's ruger is replaced to M4 in 'Keep Your Friends Close'?????
-- After you release the Squalo in 'The Fastest Boat', an alarm will sound off
+- The mobs now wear Uzi instead of Tec-9s in 'Keep Your Friends Close'
+- Sonny's ruger is replaced to M4 in 'Keep Your Friends Close'
+- After you release the Squalo in 'The Fastest Boat', an alarm will sound off.
 - The Diaz goons in 'Treacherous Swine' are now CLA and CLB (originally they are both CLA)
 - The shark goons no longer fly the sparrows during "Phnom Penh '86" (HMORI -> sea sparrow, WMOBU -> sparrow)???
-- Moved the golf outfit pickup from the Golf Club entrance back to 'Jocksports' store in Vice Point
+- Moved the golf outfit pickup from the Golf Club entrance to 'Jocksports' store in Vice Point where you pick it up on a mission.
 - Moved Candy closer to the limo in "Martha's Mug Shot", also changed one GDA to GDB (if you use a different texture for him)needs tweaking
 - In 'Psycho Killer', added HMYAP ped to drive the Trashmaster, also changed one GDA to GDB (if you use a different texture for him)
 - In 'Naval Engagement', fixed Rico standing far too close to the edge of the pier, also edited checkpoint to reflect this???
@@ -327,23 +309,22 @@ Changes and improvements made to the original:
 - In 'Demolition Man', now HMYAP and WMYCW are the workers (instead of just WMYCW)
 - In 'Demolition Man', there is now GDA and GDB instead of just GDA (if you use a different texture)
 - In 'Treacherous Swine', at the penthouse, if you park a vehicle near the entrance it will now disappear when Gonzales is leaving???
-- Added a chauffeur, Avery Carrington and Donald Love when the limo arrives
+- Added a chauffeur, Avery Carrington and Donald Love when the limo arrives.
 - From the Coach controlled by the AI, random peds will exit now and not only MALE01?????
 - In 'All Hands on Deck!', Colonel's sailors have more difference in models (instead of all being CGONA)
 - After 'All Hands on Deck' and 'Rub Out' mission is completed, the speeder you earned will spawn at Vercetti's mansion????
-- Increased Diaz's health in 'Rub Out' to increase difficulty?????
-- Increased Sonny's and Lance's health in 'Keep Your Friends Close' to increase difficulty??????
+- Increased Diaz's health in 'Rub Out' to increase difficulty.
+- Increased Sonny's and Lance's health in 'Keep Your Friends Close' to increase difficulty
 - In 'Supply & Demand', CBA and CBB is used instead of just CBA
-- In 'Supply & Demand', the freelancer is now visible on the Marquis
-- In 'Supply & Demand', Lance is now visible in the Squalo before you trigger the cutscene
+- In 'Supply & Demand', the freelancer is now visible on the Marquis.
+- In 'Supply & Demand', Lance is now visible in the Squalo before you trigger the cutscene.
 - Added unused cutscene in 'Supply & Demand'
 - 'Supply & Demand' now takes place during daytime because of the seagull sound in the readded cutscene
 - Increased garage vehicle storage limit, small garages now can hold up to 2 vehicles (like a car and a bike) while all other garages up to 4 vehicles???
 	- Links View Apartment: 2
 	- Ocean Heights Apartment: 2
 	- El Swanko Casa: 2
-- Health pickup in front of Ocean View hospital moved to the entrance doors (this fix needs revision to match vcs position)
-- Bank job mission(s) will now only be available after you finish with Kent Paul's phone call
+- Bank job mission(s) will now only be available after you anwser Kent's Paul's phone call.
 - BMYBB and WMYST model used in 'Recruitment Drive' instead of three BMYCR
 - Different models now used for enemies in 'Gun Runner' (BMYCR, BMYPI, HMYRI, HMYST, WMYCR)
 - Spaz shotgun replaced to Stubby shotgun and M60 to M4 in 'Gun Runner' (smaller weapons more fitting to the small crates)
@@ -351,72 +332,24 @@ Changes and improvements made to the original:
 - Slightly increased detection of the pizzabox because sometimes when you toss the pizza at them, they don't comprehend it
 - Red Tracksuit outfit now gets unlocked after completion of Juju Scramble (instead of being available since the very beginning of the game)
 - Increased the owners health in Ammu-Nation and tool stores (they do not die as quickly now)
-- Moved Phil to back seat of Patriot in 'Boomshine Saigon'
 - Rico's boat is now removed after completing 'Stunt Boat Challenge'
-- Restored Lance's beta lines in 'Back Alley Brawl' (only plays when you go near the Pole Position Strip Club)????????
-- In 'Autocide' when you quickly kill both Marcus Hammond and Franco Carter, game will no longer say they have noticed you?
-- In 'Cop Land' ending at the "asset text" display, the camera is moved to hide the 'see-through' entrance????
+- Restored Lance's beta lines in 'Back Alley Brawl' (only plays when you go near the Pole Position Strip Club)
+- In 'Autocide' when you quickly kill both Marcus Hammond and Franco Carter, game will no longer say they have noticed you.
+- In 'Cop Land' ending at the "asset text" display, the camera is moved to hide the 'see-through' entrance.
 - Added more ped variety in 'The Job' (inside the bank)
 - Tommy is relocated at the back seat of the Admiral in intro cutscene.
-- Post mission monologues in KENT1 and BARON5 are now handled by a separate script
-- All R3 submissions now require a double-tap to cancel, like in LCS and VCS
-- Fixed all-caps ragetext in Navel Engagement mission - KILL ALL THE HAITIANS ON THE BOAT -> Kill the Haitians on the boats
-- Tidied up dialogue from 'In the Beginning' (Subtitles now synchronise properly)????
-- 'Ocean View' --> 'Ocean View Hotel'????
-- PCJ 600 --> PCJ-600?????
-- Criminal rating status 'Leece' --> 'Leech'????
-- Tidied up the 'Publicity Tour' dialogue????
-- Renamed some of the places on the Map Legend???
-- Renamed 'Kruger' from 'Guardian Angels' back to PS2 'Ruger'??
-- Corrected some of the places on the Map Legend????
-- Updated save prompt text, coloured the pickup text name, and re-added missing text indicating that saving the game advances the time by six hours???
-- Tidied up the phonecall dialogue (Sonny's first call, Lance etc.)
-- Escobar International --> Escobar International Airport
-- BLOODRA --> Bloodring Banger (Oceanic)
-- BLOODRB --> Bloodring Banger (Glendale)
-- Updated the 100% complete message
-- 'You have been awarded the fast reload skill' --> 'You have unlocked the fast reload ability!'
-- Updated 'Martha's Mug Shot' mission text (originally using PC hotel name) also fixed up previously unnoticed grammar mistakes
-- 'Havana' clothes --> 'Cuban'
+- Post mission monologues in KENT1 and BARON5 are now handled by a separate script.
+- All R3 submissions now require a double-tap to cancel, like in LCS and VCS.
+- Tidied up dialogue from 'In the Beginning' (Subtitles now synchronise properly)??
 - Updated pickup names for tracksuits (now you can tell which colour is which, and which is unlocked on what mission; I.E - Black tracksuit outfit delivered to downtown etc)
-- VCS styled the clothing names --> 'Casuals'?????
-- 'New clothes' --> 'Frankie' outfit????
-- Highlighted mission specific clothing you unlock after each mission????
-- Expanded 'street' outfit text - Added info about changing and altering player skin from options (partly taken from PC manual)???
-- 'Bank Job' --> 'Bank Robber'
-- Fixed all-caps raegtext in credits, everything's properly capitalized / fixed?????
-- Styled the taxi destinations like VCS, renamed literally everything. Hospitals now named to what it says in the manual?????
-- Fixed up the paramedic text???????
-- Fixed the wrongly coloured text in 'Autocide'?????
-- Added bit of dialogue where Tommy says 'I work for-' before Diaz tells him to shurrup?????
-- Fixed up the ice cream factory dialogue?????
-- Tidied up cutscene / mission dialogue for 'The Party'?????
-- Tidied 'Back Alley Brawl' dialogue / mission text????
- - added missing coloured text to match destination blips????
- - more colored text where it should be???
-- Tidied 'Jury Fury' dialogue / mission text
- - added missing coloured text to match destination blips
-- Completed the entire credits list???
-- Hotring racers now have these names:?????
- - 'HOTRINA' --> 'Hotring Sunbeam'
- - 'HOTRINB' --> 'Hotring Thunderbird'
- - 'HOTRING' --> 'Hotring Lumia'
-- Fixed up Auntie poulet's mission dialogue?????
-- Improved the outfit delivered text even more????
-- Coloured some of the mission text for 'Jury Fury' 'Demolition Man' 'The Party'
-- Corrected the raeg text given for unique jumps???
-- Fixed the wrongly positioned text for 'walk through the doors of the Ocean View Hotel'
-- Coloured more of the mission specific dialogue where it was needed
-- Corrected raeg caps for wheelies / stoppies????
-- Fixed up the hidden package reward names so they're coloured like the outfit delivery messages????
-- Cheetah, Infernus, Stretch and Banshee no longer disappears in "The Party".???????
+- Added bit of dialogue where Tommy says 'I work for-' before Diaz tells him to shurrup?
 - GDA and GDB appear as the security now (so one can give a different texture to GDB)
 - In 'Hog Tied' mission, the shark gang members no longer fade away like ghosts.
 - Added MC Tommy outfit (available after completing 'Hog Tied' mission).
-- Drug dealer in Love Juice changed to BMYCR from BMYBB????
+- Drug dealer in Love Juice changed to BMYCR from BMYBB.
 - You can no longer block the courier's path with a car in "Mall Shootout" (at the exit).
-- Mesa Grande in Fort Baxter Air Base (like on VCS, spawns after mission "The Fastest Boat") revisit pls logic
-- Stretch in front of hotel in Washington Beach near the Pay 'n' Spray by Apartment 3C
+- Mesa Grande in Fort Baxter Air Base (like on VCS, spawns after mission "The Fastest Boat")????
+- Stretch in front of hotel in Washington Beach near the Pay 'n' Spray by Apartment 3C.
 - Fixed monologues after KENT1, after Avery's business advice call
 - Fixed monologue in BARON5 - now plays only after the mission is passed
 - Fixed monologues in ROCKB1, COUNT1, CAP_1 - their behaviour now matches stock post-cutscene monologues
@@ -424,10 +357,9 @@ Changes and improvements made to the original:
 	- Note: Save-friendly SCM doesn't seem to load old save games with these above, so it remained as it was.
 - Mercedes will now only say "Do you mind me resting my hand in your lap?" in 'The Party' mission if she sits next to you in a car.
 - Added two extra audio lines in "The Job" by Tommy if you get the attention of the cops: "Crap, now the cops are onto us!", "And we're not even there yet!"
-- Fixed the borked vehicle spawn points and added Zera's fixed vehicle spawn points (and forgot to mention some of these).
- 	- Phil's Patriot position slightly changed.?????
+ 	- Phil's Patriot position slightly changed.??
 - Tommy's clothes are no longer reverted to his default one when entering missions 'Riot', 'Four Iron', 'No Escape?', 'Cop Land'.
-- Voodoo model now gets destroyed in 'Cannon Fodder' instead of the non-existing 'Stinger' (original car)????
+- Voodoo model now gets destroyed in 'Cannon Fodder' instead of the non-existing 'Stinger' (original car)??
 - Hotring cars now spawn as a reward after completing the mission "Hotring" (similarly to Bloodring)??
 - Spand Express now spawns regularly after you complete "Riot" (at that mission location)
 - The "An Old Friend..." as the latest mission if you save the game before Lawyer's first mission is now displayed instead of "In the beginning..."????
@@ -435,12 +367,11 @@ Changes and improvements made to the original:
 - In mission 'Jury Fury', the woman the jury talks with is WFYBU instead of BFYBE, and the golfer now runs over a construction worker (WMYCW) instead of dockworker (HMYAP)
 - After the Spand Express van hits the Admiral in 'Jury Fury', it now drops a screwdriver and a hammer, instead of two hammers.
 - Speeder given by Cortez now matches colour of the one attached to the yacht.
-- Ingame maverick from "Phnom Penh '86" now matches the cutscene Maverick's colour
-- Tommy's sitting position inside the Maverick is now at the back seat in mission "Phnom Penh '86" (when picked up by Lance after you got the money) that doesn't make any sense
+- Ingame maverick from "Phnom Penh '86" now matches the cutscene Maverick's colour.
+- Tommy's sitting position inside the Maverick is now at the back seat in mission "Phnom Penh '86" (when picked up by Lance after you got the money)???
 - Tommy now walks over to Lance's Stallion during the beginning of 'Rub Out'.
-- Random stinger blocking Haitian Drug Factory Entrance during 'Cannon Fodder' replaced with a Voodoo
-- Restored unused 'yt_gangplnk_tmp' prop at the marina
-- Added long-needed Ambulance spawn point in front of hospital in Little Havana (similar to Vice City Stories).
+- Restored unused 'yt_gangplnk_tmp' prop at the marina.
+- Added Ambulance spawn point in front of hospital in Little Havana (similar to Vice City Stories).
 - Solid black palette used for UC vehicles changed to a lighter shade (still black).
 - At the Pole Position Strip Club, if the barkeeper's alive, she will now say some random lines to you if you get nearby to the counter (these were unused audio).
 - Restored Tommy's speaking animation with the french in "Mall Shoutout" and with Lance in "Guardian Angels" (at the carpark).
@@ -448,7 +379,6 @@ Changes and improvements made to the original:
 - Phnom Penh '86 now includes three additional audio lines: "You sure is better at shooting than talking." and "Thanks. You're a real charmer yourself." and "I know, Tommy."
 - Supply & Demand now includes the lines: "We made it! Those other boats ain't VIP class." (when reaching the Marquis), "They're matchwood! And fish food!" while damaging the cuban ships, plus "Bridge coming up!" after the jetty part (if the helicopter is still there).
 - In The Job mission, Tommy now says "New threads, huh? You need more than that, pal!" during the closing cutscene in response to Kent Paul. Also the line from "Yeah, and you'll put somebody's eye out!" is now said after "For god's sake, Phil, stop waving that thing around!"
-- Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
 - Added some audio lines ingame:
 	- During the mission "The Chase" after the Shark boss gets into the BF injection, Tommy will soon make the remark: "Sick of 		these pricks!"
 	- During the mission "Death Row", Diaz's goons will taunt you verbally at the junk yard: "Do you think you can get away with 		this?".
@@ -532,7 +462,7 @@ Despite these changes not breaking old save games, in these saved games you _mig
 - Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)
 - Increased bike's health in 'G-spotlight'
 - GDA now spawns earlier, before Phil says "I told you not to touch that alarm!" (before you can see him spawning if you quickly jump down from upstairs)
-- Phil now sits in the left side of the Patriot in Boomshine Saigon
+- Phil now sits in the left side of the Patriot and is moved to the back seat. in Boomshine Saigon
 - In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger
 - Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)
 - The target in 'Four Iron' will now escape when you hit him with a (not-so-deadly) weapon from the distance (otherwise if you do not get too close, you can easily kill him without him moving an inch)
