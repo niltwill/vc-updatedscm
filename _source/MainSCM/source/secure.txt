@@ -374,7 +374,9 @@ if
 8500:   not player $PLAYER_CHAR skin == 'PLAYER6'
 jf @SECURI_2342
 if
-80F5:   not player $PLAYER_CHAR 0 392.0 -478.5 12.4 radius 5.0 5.0 5.0
+//VCPD HQ 2 Stars wanted level fix.
+80F5:   not player $PLAYER_CHAR 0 393.800 -475.800 11.362 radius 6.0 6.0 6.0
+//80F5:   not player $PLAYER_CHAR 0 392.0 -478.5 12.4 radius 5.0 5.0 5.0
 jf @SECURI_2342
 Player.SetMinWantedLevel($PLAYER_CHAR, 2)
 
