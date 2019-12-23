@@ -157,7 +157,6 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Replaced Sentinel with Sentinel XS in "The Driver"
 - Removed changes related to "slowing down" certain NPC's vehicles in missions included in previous releases, we don't want to touch game's difficulty.
 - Phil's Patriot in "Boomshine Saigon" is now fireproof and Phil will no longer flee out of the vehicle if you'll try to catch the car on fire.
-- Ability to skip all of the game help messages when starting new game is back.
 - Restored the misplaced waitress in "Messing With The Man" so you can use a mod to fix her model and animations to see it.
 - Moved the biker's spawn location in the last cutscene of "Hog Tied" so he'll no longer appear out of nowhere (this is done to support "RestoreCutsceneFOV = 0" option in Widescreen Fix)
 - Gang Burritos are now instantly destroyed once you park Angel in the marker in front of Biker Clubhouse in "Hog Tied" (This is done to prevent some weird stuff going on on the cutscene like in the original)
@@ -178,6 +177,9 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - Fixed Leaf Links bridge traffic flow not spawning.
 - Spand Express driver in "Jury Fury" now agressivly drives away from the accident place if you pass or fail the mission.
 - New GXT Source format, GXT changes required for the mod are now re-done from scratch.
+- Fixed an issue related to VCPD HQ where the player would recive 2 stars wanted level upon leaving it.
+- Cell Phone will no longer ring inside certain interiors making the interior door closed and resulting in player being stuck inside until you either anwser the call or wait until it stops ringing.
+
 </details>
 
 <details>
