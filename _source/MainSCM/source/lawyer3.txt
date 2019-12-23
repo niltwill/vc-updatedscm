@@ -506,14 +506,10 @@ jf @LAWYER3_2922
 Actor.LockInCurrentPosition($2149) = True
 
 :LAWYER3_2922
-if
-   not $CANCEL_HELP_MSGS == 2
-then
 03E5: text_box 'HELP23'  // You can follow the ~h~hammer blip~w~ on the radar if you want to buy melee weapons from the hardware store.
 03E7: flash_hud 8
 wait 2000
 03E7: flash_hud -1
-end
 17@ = 0 // integer values
 0209: $2160 = random_int_in_ranges 0 6
 gosub @LAWYER3_8310
@@ -1228,9 +1224,6 @@ gosub @LAWYER3_8492
 
 :LAWYER3_6869
 if
-    not $CANCEL_HELP_MSGS == 2
-jf @LAWYER3_6923
-if
   $2152 == 1 // integer values
 jf @LAWYER3_6923
 if
@@ -1456,12 +1449,13 @@ $ONMISSION = 0 // integer values
 Marker.Disable($2157)
 Marker.Disable($2158)
 Marker.Disable($2165)
-8119: not car $2161 wrecked
-jf @LAWYER_8989
-00AD: set_car_cruise_speed $2161 to 18.0
-00AE: set_car_driving_style $2161 to 2
-00AF: set_car_mission $2161 to 1
-:LAWYER_8989
+if
+    8119: not car $2161 wrecked
+then
+    00AD: set_car_cruise_speed $2161 to 18.0
+    00AE: set_car_driving_style $2161 to 2
+    00AF: set_car_mission $2161 to 1
+end
 Model.Destroy(#HMORI)
 Model.Destroy(#BMYBU)
 Model.Destroy(#ADMIRAL)

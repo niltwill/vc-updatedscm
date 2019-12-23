@@ -420,15 +420,11 @@ $2112 = 10.4 // floating-point values
 014C: set_parked_car_generator $1949 cars_to_generate_to 0
 00BC: text_highpriority 'LAW1_1' 10000 ms 1  // ~g~Go get some new threads from Rafael's clothes shop.
 02A8: $59 = create_marker 28 at $99 $100 $101
-if
-    not $CANCEL_HELP_MSGS == 2
-then
 wait 3500
 03E5: text_box 'HELP20'  // Follow the ~h~T-shirt~w~ blip on the radar to find Rafael's.
 03E7: flash_hud 8
 wait 2000
 03E7: flash_hud -1
-end
 
 :LAWYER1_2242
 if

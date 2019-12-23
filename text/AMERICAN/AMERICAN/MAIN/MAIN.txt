@@ -6,8 +6,6 @@ AMMU      Go inside Ammu-Nation to buy a weapon.
 AMMUHLP   If you need any weapons visit ~h~Ammu-Nation~w~. Follow the ~h~Gun blip~w~ on the radar.
 ANGEL     Angel
 ANSWER    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to answer your cell phone.
-#UpdatedSCM only
-ANSWR2    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your cell phone call.
 APACHE    Hunter delivered to helipad in Ocean Beach.
 APR       Apr
 ARMOUR    Body Armor
@@ -122,8 +120,6 @@ BNK2_6    This guy's a lunatic!
 BNK3_2    I'm not driving for you, no way, I'm sharing this at group.
 BNK450A   What'd I tell you Tommy? What'd I tell you? Bent SWAT better watch out when Kent Paul is in town.
 BNK450B   Come on, gimme a bigger slice, mate, c'mon. I gotta get some new threads.
-#UpdatedSCM only
-BNK450C   New threads? Huh. You need more than that, pal!
 BNK4_26   Hot damn! Here they come!
 BNK4_2A   Boys at the car lot did a great job on this baby.
 BNK4_32   Use explosives to open the deposit boxes!
@@ -177,8 +173,6 @@ BUYGARS   ~g~You can also store vehicles in these garages.
 BUYSAVE   ~g~You can now save your game here when not on a mission.
 CABBIE    Cabbie
 CADDY     Caddy
-#UpdatedSCM only
-CAN_CON   Use ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~again to cancel the mission.
 CAP_1     Cap the Collector
 CARBUY    Car Showroom purchased: $~1~
 CARSOFF   Cars turned off.
@@ -233,10 +227,6 @@ CLOHELP   Clean Clothes!!
 CLOTH1    Soiree outfit delivered to Rafael's on Ocean Beach.
 #UpdatedSCM edited
 CLOTH10   Bank Robber outfit delivered to Malibu Club in Vice Point.
-#UpdatedSCM only
-CLOTH11   MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
-#UpdatedSCM only
-CLOTH12   Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
 CLOTH2    Street outfit delivered to Safehouses.
 CLOTH3    Coveralls outfit delivered to Tooled Up in The North Point Mall.
 CLOTH4    Country Club outfit delivered to The Golf Club in Leaf Links.
@@ -1318,8 +1308,6 @@ GMSAVE    Save Game
 GNG_WST   Gang members wasted
 GOAWAY1   ~g~Come back when you have finished the Haitian gang missions.
 GOAWAY2   ~g~Come back when you have finished the Biker gang missions.
-#UpdatedSCM only
-GOAWAY3   ~g~Come back when you are not wearing cop outfit.
 GOLFC     Leaf Links
 GOODBOY   $50 Good Citizen Bonus!
 GREENWO   Greenwood
@@ -2023,8 +2011,6 @@ PICK6     Minigun delivered to Ocean View Hotel!
 PICK7     Rocket Launcher delivered to Ocean View Hotel!
 #UpdatedSCM edited
 PICK8     Sea Sparrow now available from Vercetti Estate on Starfish Island!
-#UpdatedSCM only
-PICK8B    Sea Sparrow now available from Diaz's Mansion on Starfish Island!
 #UpdatedSCM edited
 PICK9     Rhino tank now available from Fort Baxter Air Base!
 PISTOL    Pistol

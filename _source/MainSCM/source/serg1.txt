@@ -702,11 +702,7 @@ jf @SERG1_4191
 if
 00DE:   player $PLAYER_CHAR driving_vehicle_type #CADDY
 jf @SERG1_4191
-if
-  not $CANCEL_HELP_MSGS == 2
-then
 03E5: text_box 'TEX1_8'  // Each time you enter a caddy you automatically receive a golf club, providing your melee weapon slot is empty.
-end
 041E: set_radio_station 6 -1
 $3296 = 1 // integer values
 

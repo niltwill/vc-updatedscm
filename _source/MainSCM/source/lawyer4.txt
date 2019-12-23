@@ -1393,9 +1393,6 @@ if
 0057:   player $PLAYER_CHAR 0 315.9 -313.0 9.0 282.4 -297.7 15.0
 jf @LAWYER4_8754
 if
-  not $CANCEL_HELP_MSGS == 2
-jf @LAWYER4_8539
-if
    not Actor.Dead($2210)
 jf @LAWYER4_8284
 Player.CanMove($PLAYER_CHAR) = False
@@ -1468,22 +1465,15 @@ jump @LAWYER4_8539
 jump @LAWYER4_8431
 
 :LAWYER4_8539
-if
-  not $CANCEL_HELP_MSGS == 2
-then
 Player.CanMove($PLAYER_CHAR) = True
 Camera.Restore_WithJumpCut
 Camera.SetBehindPlayer
-end
 if 
    not Actor.Dead($2210)
 jf @LAWYER4_8573 
 0350: set_actor $2210 maintain_position_when_attacked 0 
 
 :LAWYER4_8573
-if
-  not $CANCEL_HELP_MSGS == 2
-jf @LAWYER4_8623
 0293: $18 = get_controller_mode
 if
   $18 == 3 // integer values

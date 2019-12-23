@@ -1,0 +1,50 @@
+#
+#UpdatedSCM only
+#
+
+#BANKJ4
+WANTED2    ~g~Shake the cops and lose your wanted level!
+
+#BARON4
+COK4_36    ~r~The freelancer died!
+
+#COPCAR
+COPCARP    ~r~You have ~w~~1~~r~ second to return to a police vehicle before the mission ends.
+
+#KENT1
+RESC_9     Do you think that you can get away with this?
+RESC_10    You are just a little worm, under Diaz's tiny boot!
+
+#GENERA1
+GEN1_K    Use this...
+
+#MAIN
+ANSWR2    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your cell phone call.
+ANSWR3    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ again to skip your phone call.
+BNK450C   New threads? Huh. You need more than that, pal!
+CAN_CON   Use ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~again to cancel the mission.
+CLOTH11   MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
+CLOTH12   Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
+GOAWAY3   ~g~Come back when you are not wearing cop outfit.
+PICK8B    Sea Sparrow now available from Diaz's Mansion on Starfish Island!
+
+#
+#Leftovers
+#
+
+#AMBULAE
+#AMBULT    ~r~You have ~w~~1~~r~ seconds to return to an Ambulance before the mission ends.
+#AMBULT2   ~r~You have ~w~~1~~r~ second to return to an Ambulance before the mission ends.
+#A_OVER    ~r~Your time as an ambulance driver is over!
+
+#FIRETRK
+#F_RET     ~r~You have ~w~~1~~r~ seconds to return to a Fire Truck before the mission ends.
+#F_RET2    ~r~You have ~w~~1~~r~ second to return to a Fire Truck before the mission ends.
+
+#MAIN
+#HELP62    Press the~h~ ~k~~PED_ANSWER_PHONE~ ~w~button to skip tutorial messages or the~h~ ~k~~PED_SPRINT~ ~w~button to continue with help included.
+
+#TAXI1
+#TAXI8     ~r~You have ~w~~1~~r~ seconds to return to a Taxi before the mission ends.
+#TAXI9     ~r~You have ~w~~1~~r~ second to return to a Taxi before the mission ends.
+#TAXI10    ~r~The passenger has been killed!

@@ -54,6 +54,7 @@ $1182 = 20000 // integer values
 $CELL_RUB_OUT_CALL = 0 // integer values
 $CELL_LOVE_JUICE_CALL = 0 // integer values
 $CELL_FINALE_PHIL_CALL = 0 // integer values
+$ANSWER_HELP_MSG = 0
 thread 'CELLFON'
 set_wb_check_to 0
 create_thread @CELL
@@ -76,6 +77,23 @@ $1178 = 1 // integer values
 if
   $PASSED_LAW2_BACK_ALLEY_BRAWL == 1 // integer values
 jf @CELL_15081
+
+//check if we are not in an interior
+if and
+    $1002 == 0 //Pole Position Club
+    $987 == 0 //VCPD HQ
+    $986 == 0 //Malibu Club
+jf @CELL_15081
+if and
+    $1088 == 0 //Ocean View Hotel
+    $991 == 0  //Mansion Estate
+    $985 == 0  //El Banco Corrupto Grande
+    $1003 == 0 //North Point Mall
+    $989 == 0 //Cafe Robina
+    $988 == 0 //Shooting Range
+    $990 == 0 //Apartment 3c
+jf @CELL_15081
+
 if
    Player.Defined($PLAYER_CHAR)
 jf @CELL_15074
@@ -140,38 +158,70 @@ if
   $1179 == 1 // integer values
 jf @CELL_966
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_A' 10000 ms 1  // Hey Leo, I think we got a buyer for Diaz's merchandise.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_B' 10000 ms 1  // You gotta give him a ring, man, set up the deal, you know?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_C' 10000 ms 1  // Where are you now?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_D' 10000 ms 1  // You ok Leo? You sound kinda different.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_E' 10000 ms 1  // Just tell me where you are.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_F' 10000 ms 1  // Who the hell is this? Put Leo on, man!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_G' 10000 ms 1  // Leo's gone away for a while, he left me in charge.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_52H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB52_H' 10000 ms 1  // Screw you, man!
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_966
@@ -203,38 +253,70 @@ if
   $1179 == 1 // integer values
 jf @CELL_1443
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24A' 10000 ms 1  // Hola, is this Mr. Vercetti?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24B' 10000 ms 1  // Yeah.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24C' 10000 ms 1  // This is Cortez. You were at my party.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24D' 10000 ms 1  // Yeah. I remember.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24E' 10000 ms 1  // Mr. Vercetti, it was a most unfortunate incident that happened with your business deal.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24F' 10000 ms 1  // I know.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24G' 10000 ms 1  // I want you to know me and my people are doing their utmost to get to the bottom of it.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_24H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_24H' 10000 ms 1  // If you'd like to talk to me more privately, you can find me at the boat, eh? Okay? Good day, senor.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_1443
@@ -262,14 +344,22 @@ if
   $1179 == 1 // integer values
 jf @CELL_1671
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_70A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_70A' 10000 ms 1  // Tommy, it's me, Colonel Cortez. Look senor, I believe you are a man who can get things done. So please help me.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_70B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_70B' 10000 ms 1  // You can find me at the boat.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_1671
@@ -297,22 +387,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_1980
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_25A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_25A' 10000 ms 1  // Tommy, Thomas it's Cortez. Look, the French are giving me all kinds of trouble, amigo.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_25B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_25B' 10000 ms 1  // Damn hypocrites. They spend a hundred years stealing from poor countries and they call me a thief!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_25C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_25C' 10000 ms 1  // I am going to need your help as soon as possible, amigo.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_25D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_25D' 10000 ms 1  // So please hurry, Tommy, I need you, all right? I hate the damn French.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_1980
@@ -341,34 +447,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_2408
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18A' 10000 ms 1  // Tommy, it's Paulo, how are you? Right mate, anyway, thought I had to drop you a line.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18B' 10000 ms 1  // Oh my good lord, my son, you will not believe the quality of the brass I just encountered.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18C' 10000 ms 1  // Street walker or something, just down in Little Havana, mate.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18D' 10000 ms 1  // Said her name was Mercedes or something.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18E' 10000 ms 1  // Oh my god, mate. You gotta check this bird out.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18F' 10000 ms 1  // Could strip the lead out of a pencil. Said I was the best she ever had and all.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_18G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_18G' 10000 ms 1  // Keep you potatoes skinned for her. Be seeing you.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_2408
@@ -392,62 +526,118 @@ if
   $1179 == 1 // integer values
 jf @CELL_3101
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_A' 10000 ms 1  // Tommy, Thomas, it's Cortez. Que pasa?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_B' 10000 ms 1  // Things are interesting. How are you, my friend?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_G' 10000 ms 1  // I wanted to ask you about Mercedes.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_H' 10000 ms 1  // Ok, what about her?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_I' 10000 ms 1  // Oh Tommy, Tommy. I, I hear these stories, all these stories - I don't know what to think.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_K' 10000 ms 1  // Maybe she thinks she can do what she likes, but Tommy, tell me, is it true?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_M' 10000 ms 1  // Is what true?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_N' 10000 ms 1  // These stories I hear. Is she really going to be a lawyer?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_O' 10000 ms 1  // Oh Tommy, the shame, the shame! You know, we Cortez's are a proud family.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71J' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_P' 10000 ms 1  // We would never allow a daughter of ours to become a lawyer. Please tell me it isn't so. I don't think I could take it.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71K' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_Q' 10000 ms 1  // Oh Colonel, I can assure you Mercedes is never going to become a lawyer. Don't worry about it.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71L' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_R' 10000 ms 1  // Oh thank you, Tommy. Tommy, thank you. The shame would be unbearable. She is a lady, not a parasite, you know.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71M' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_T' 10000 ms 1  // Anyway, Tommy, you must excuse me, the new minister of the interior has arrived.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_71N' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB21_U' 10000 ms 1  // Many years ago, I killed his father in a failed coup so I must be polite. Good day, amigo.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_3101
@@ -479,22 +669,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_3410
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_62A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_62A' 10000 ms 1  // Tommy, is Ricardo Diaz, I want to thank you for looking out for me my man.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_62B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_62B' 10000 ms 1  // I ask that prick Cortez, he say you the real deal, my friend, why you not come see me.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_62C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_62C' 10000 ms 1  // I need a guy like you. All I have now is dickheads,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_62D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_62D' 10000 ms 1  // dickheads everywhere, yo. I make you real rich.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_3410
@@ -525,26 +731,46 @@ if
   $1179 == 1 // integer values
 jf @CELL_3844
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_20A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_20A' 10000 ms 1  // Alright, Tommy, it's Paul. I just heard from a mush that you've been a real naughty boy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_20B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_20B' 10000 ms 1  // Somebody has taken offense to you acting like the big guy all of a sudden, giving it the big shot thing.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_20C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_20C' 10000 ms 1  // Well, don't say I never warned you or nothing. Boasting is a mug's game, son.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_20D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_20D' 10000 ms 1  // Anyway, I heard there's some price been put on your head and someone's going to have a crack at you,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_20E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_20E' 10000 ms 1  // so watch yourself, and remember me, mate.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_3844
@@ -569,18 +795,30 @@ if
   $1179 == 1 // integer values
 jf @CELL_4082
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_01A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_01A' 10000 ms 1  // Awright me ol'china! It's Paul. I might have a little result for you, but I need to speak to you in person.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_01B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_01B' 10000 ms 1  // I'm enjoying a little R&R at the Club Malibu.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_01C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_01C' 10000 ms 1  // Reckon you're gonna owe me a favor or two after this, sunshine. I'll see you later.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4082
@@ -609,18 +847,30 @@ if
   $1179 == 1 // integer values
 jf @CELL_4363
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_02A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_02A' 10000 ms 1  // Ssssnniiiiffffff Hey! Hello, Tommy? Tommy!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_02B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_02B' 10000 ms 1  // We got a situation over at the Print Works. You better go and check it out.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_02C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_02C' 10000 ms 1  // Some kind of mess or other. Things are messed up. I gotta go.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4363
@@ -647,22 +897,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_4664
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_68A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_68A' 10000 ms 1  // Tommy son, have I got a surprise for you
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_68B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_68B' 10000 ms 1  // I'm down at the recording studios with some major artists
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_68C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_68C' 10000 ms 1  // Why don't you pay us a visit?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_68D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_68D' 10000 ms 1  // You know it makes sense, dontcha? See ya later.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4664
@@ -687,30 +953,54 @@ if
   $1179 == 1 // integer values
 jf @CELL_4673
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_A' 10000 ms 1  // Tommy, I heard you killed Ricardo Diaz.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_B' 10000 ms 1  // No, there was an unfortunate fire at his mansion.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_C' 10000 ms 1  // I think he might have burnt to death in his acrylic shirt.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_D' 10000 ms 1  // Tommy, I'm so proud of you. I knew you were a real man.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_E' 10000 ms 1  // It was an awful trouser stain of a man, you make me so proud to be your friend.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_56F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB56_F' 10000 ms 1  // I know you going to be busy trying to take over this town, but don't forget about me, you hear?
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4673
@@ -733,34 +1023,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_4682
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_A' 10000 ms 1  // Tommy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_B' 10000 ms 1  // Hey Mercedes.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_C' 10000 ms 1  // Hey indeed Mr. Tough Guy. I'm really angry with you Tommy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_D' 10000 ms 1  // Never make me hang out with Jezz Torrent again. He is pathetic.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_E' 10000 ms 1  // Half way through he starts crying about his doggie that died when he was 7 years old and that his mommy never loved him.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_F' 10000 ms 1  // And Tommy, he wears a wig and a bra in private.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_58G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB58_G' 10000 ms 1  // I am not very happy with you! I'm very, very angry. Goodbye!
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4682
@@ -783,22 +1101,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_4955
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_04A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_04A' 10000 ms 1  // How you doin' mate? It's Paulo again.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_04B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_04B' 10000 ms 1  // Look Tommy, I forgot to mention we're going to need some extra muscle for the concert. A bit of security.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_04C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_04C' 10000 ms 1  // There's a biker gang led by Mitch Baker, it would be great publicity. Very rock and roll, baby.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_04D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_04D' 10000 ms 1  // Sort this out for me and I'll get you some back stage passes for the gig, awright?
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_4955
@@ -823,22 +1157,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_5246
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_05A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_05A' 10000 ms 1  // Hey, it's Mitch. You did good Tommy, it's good to have the old girl back.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_05B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_05B' 10000 ms 1  // You tell Kent Paul he'll get his security for the gig.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_05C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_05C' 10000 ms 1  // You have my word on that.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_05D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_05D' 10000 ms 1  // Now keep yourself out of trouble.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_5246
@@ -861,26 +1211,46 @@ if
   $1179 == 1 // integer values
 jf @CELL_5554
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_26A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_26A' 10000 ms 1  // Hello, Tommy?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_26B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_26B' 10000 ms 1  // Yeah?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_26C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_26C' 10000 ms 1  // It's Baker. I just wanted to say I really enjoyed the show.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_26D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_26D' 10000 ms 1  // Me and the boys want to thank you, and remind you,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_26E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_26E' 10000 ms 1  // you got our respect. Good day. Keep riding hard, son.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_5554
@@ -903,34 +1273,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_5904
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09A' 10000 ms 1  // Hey Leo! I got some work for you!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09B' 10000 ms 1  // This ain't Leo.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09C' 10000 ms 1  // Hey, if Leo knows you got his phone, he gonna kill you!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09D' 10000 ms 1  // Maybe Leo's already dead. Maybe I killed Leo and took his phone - you think of that prick?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09E' 10000 ms 1  // You killed Leo? You must have big cojones - wanna work for me?!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_29D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_29D' 10000 ms 1  // Yeah, maybe...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_09F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_09F' 10000 ms 1  // Drop by my father's cafe in Little Havana and we'll talk mano a mano.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_5904
@@ -956,18 +1354,30 @@ if
   $1179 == 1 // integer values
 jf @CELL_6158
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_06A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_06A' 10000 ms 1  // Tommy, 'nuf dead man been chattin' about you, my dear.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_06B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_06B' 10000 ms 1  // Thought you might need something to make you feel better. So Auntie Poulet make you some stew, aye?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_06C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_06C' 10000 ms 1  // Come by me kitchen some time, ok Tommy?
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_6158
@@ -998,14 +1408,22 @@ if
   $1179 == 1 // integer values
 jf @CELL_6405
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_66A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_66A' 10000 ms 1  // Tommy, Tommy why you coming back here for?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_66B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_66B' 10000 ms 1  // I tell you we don't want to see you around here no more.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_6405
@@ -1028,34 +1446,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_6797
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08A' 10000 ms 1  // Hey Tommy, I thought you might need some business advice.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08B' 10000 ms 1  // Once you got the operation up and running, you'll need to drop by and take the week's cash.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08C' 10000 ms 1  // Let the guys think they got the run of the place and they'll be shaving the profits - ok?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08D' 10000 ms 1  // I know how to handle business, Ken, ok?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08E' 10000 ms 1  // Ok, ok. I know, you know. I was just, you know, telling you I know, that...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08F' 10000 ms 1  // ...you know, that I know. Just keeping it sharp baby! (sniff) Keeping it sharp. Oh yeah.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_08G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_08G' 10000 ms 1  // Whatever, Ken, whatever...
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_6797
@@ -1079,30 +1525,54 @@ if
   $1179 == 1 // integer values
 jf @CELL_7154
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11A' 10000 ms 1  // Howdy son, just thought I'd ring you up and give you some advice.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11B' 10000 ms 1  // Hey, Avery. What's eating you?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11C' 10000 ms 1  // There's a lot of opportunity in this town if you own the right real estate, you catch my drift?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11D' 10000 ms 1  // I reckon so...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11E' 10000 ms 1  // All I'm saying is keep your eyes open and you might find the perfect business opportunity. I'll catch y'later.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_11F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_11F' 10000 ms 1  // Later, Avery.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_7154
@@ -1134,50 +1604,90 @@ if and
   $1137 == 0 // integer values
   $CELL_MALIBU_CALL == 1 // integer values
 jf @CELL_7627
-wait 15000
+16@ = 0
+:CELL_7194
+wait 0
+if
+    16@ > 15000
+jf @CELL_7194
+jump @CELL_7195
+:CELL_7195
 gosub @CELL_15111
 if
   $1179 == 1 // integer values
 jf @CELL_7588
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14A' 10000 ms 1  // Hey there Tommy, you're gonna love me mate.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14B' 10000 ms 1  // A little birdy told me that Vice City SWAT Division has a deposit box at a certain rather large banking establishment,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14C' 10000 ms 1  // where they keep all the bribes they've taken over the years, like some kind of old boys' retirement fund.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14D' 10000 ms 1  // Of course, if this information should ever help you acquire any of that cash,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14E' 10000 ms 1  // I guess you'd feel obliged to push some of it my way?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14F' 10000 ms 1  // I'll bear that in mind, thanks Kent.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14G' 10000 ms 1  // It's Paul. I'm from Kent, near London, you prat.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_14H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_14H' 10000 ms 1  // Whatever you say, KENT.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_7588
 if
   $1179 == 1 // integer values
 jf @CELL_7613
+16@ = 0
 $1137 = 1 // integer values
 02A7: $247 = create_icon_marker_and_sphere $422 at $468 $469 $470 
 create_thread @BANK1
@@ -1196,30 +1706,54 @@ if
   $1179 == 1 // integer values
 jf @CELL_7938
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30A' 10000 ms 1  // Tommy, is Umberto Robina
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30B' 10000 ms 1  // Hey, how's the cafe?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30C' 10000 ms 1  // Oh, wonderful. Incredible. Tommy, incredible. No wimps, Tommy, just real men, and the beautiful women!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30D' 10000 ms 1  // Anyway, I wanted to tell you, me and Papi, to us, you Cuban.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30E' 10000 ms 1  // You have proved yourself, man. You got big cojones.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_30F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_30F' 10000 ms 1  // Well thank you, Umberto. Nobody's said that to me since I left jail. I'll see you around.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_7938
@@ -1242,22 +1776,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_8204
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_34A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_34A' 10000 ms 1  // Tommy, I really enjoyed working with you. Ain't had so much fun since the ridge in Nam, pal.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_34B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_34B' 10000 ms 1  // Anyhows, you need anything, you call on me, you hear?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_34C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_34C' 10000 ms 1  // I always remember those I served with,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_34D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_34D' 10000 ms 1  // and I am sure I can help you out, you hear?
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_8204
@@ -1282,22 +1832,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_8495
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_33A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_33A' 10000 ms 1  // Tommy, it's Phil, now cut out all the reminiscing crap and listen to me, you hear?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_33B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_33B' 10000 ms 1  // Good. I got me some extra strength boomshine nearing fermentation time and I was wondering if you'd fancy having a shot.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_33C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_33C' 10000 ms 1  // Seriously, Tommy, if you like a drink, or if you need to strip paint, this stuff'll make a man out of you.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_33D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_33D' 10000 ms 1  // Sure did out of me, even though I can't see out of one eye. I'll be waiting for you, y'hear.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_8495
@@ -1322,18 +1888,30 @@ if
   $1179 == 1 // integer values
 jf @CELL_8744
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_36A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_36A' 10000 ms 1  // Tommy, it's Phil, I want to thank you for helping me out back there son,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_36B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_36B' 10000 ms 1  // Damn Charlie, he'll always ambush you somewhere or other,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_36C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_36C' 10000 ms 1  // Anyway the wound is healing well, and it means I'll no longer be defrauding the government on my disability check.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_8744
@@ -1357,22 +1935,38 @@ if
   $1179 == 1 // integer values
 jf @CELL_8775
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_35A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_35A' 10000 ms 1  // Tommy, the wound is healing well.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_35B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_35B' 10000 ms 1  // Funny thing is, I have fought in 6 battle zones and always walked away without a scratch, and now this!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_35C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_35C' 10000 ms 1  // One armed Phil. Still, I got me a healthy selection of one handed fire power so I'll never be unarmed Phil, you hear.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_35D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_35D' 10000 ms 1  // Any way son, cut out the sentimental crap and go buy yourself a drink, you hear!
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_8775
@@ -1394,34 +1988,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_9136
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16A' 10000 ms 1  // Tommy, Paulo here, que pasa amigo?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16B' 10000 ms 1  // What do you want Paul? I don't want any fake label clothes.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16C' 10000 ms 1  // Very funny, mate, but you know I don't touch bent gear. Nah, I was just calling to see if I get a part in one your movies.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16D' 10000 ms 1  // Back in England I did a lot of blue stuff, mate. I'm packing more heat than you, my son.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16E' 10000 ms 1  // Paul, thanks for the offer, I'll bear it in mind.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16F' 10000 ms 1  // Seriously, don't forget about me, after all I done for you.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_16G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_16G' 10000 ms 1  // That's what I'm trying to forget about.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_9136
@@ -1456,38 +2078,70 @@ if
   $1179 == 1 // integer values
 jf @CELL_9637
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_A' 10000 ms 1  // Yo, Tommy! It's Lance.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_B' 10000 ms 1  // Yeah?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_C' 10000 ms 1  // Oh, nice to hear from you, Lance. Come on, man, be cool, be cool.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_D' 10000 ms 1  // I'm in the middle of something. What do you want?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_E' 10000 ms 1  // Nothing. Just to say, you know. Look Tommy, we can do this thing.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_F' 10000 ms 1  // You and me, no problem. You know what I mean?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_G' 10000 ms 1  // We're going to have to do it, 'cause otherwise, we're going to be dead, Lance.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_46H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB46_H' 10000 ms 1  // We're in too far now. But thanks for the call. I'll speak to you later.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_9637
@@ -1510,42 +2164,78 @@ if
   $1179 == 1 // integer values
 jf @CELL_10113
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40A' 10000 ms 1  // Hey Tommy, it's Sonny. How's the sun tan?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40B' 10000 ms 1  // I ain't got no sun tan.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40C' 10000 ms 1  // Well, you ain't got my money, either, so I'm wondering to myself,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40D' 10000 ms 1  // what are you doing? So, tell me, Tommy, what are you doing?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40E' 10000 ms 1  // I'm looking for the money, Sonny. Don't worry.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40F' 10000 ms 1  // I am worrying, Tommy, that's my style,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40G' 10000 ms 1  // because I seem to have this problem in my life with unreliable people.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40H' 10000 ms 1  // Don't be an unreliable person, Tommy, please.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_40I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_40I' 10000 ms 1  // Do us both a favor. I'm looking forward to hearing from you.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_10113
@@ -1571,38 +2261,70 @@ if
   $1179 == 1 // integer values
 jf @CELL_10565
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41A' 10000 ms 1  // Tommy, remember me?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41B' 10000 ms 1  // Hello Sonny.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41C' 10000 ms 1  // That's right, Sonny. We're old friends,
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41D' 10000 ms 1  // You never write me, you never call. Don't you want to be friends no more?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41E' 10000 ms 1  // I've been busy trying to sort things out. You didn't give me a lot of support down here, Sonny.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41F' 10000 ms 1  // Oh, my fault is it? We'll I've heard you been busy all right.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41G' 10000 ms 1  // Busy killing drugs barons. Busy taking over.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_41H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_41H' 10000 ms 1  // Don't forget about us, Tommy, 'cause I can assure you, I ain't forgotten about you.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_10565
@@ -1629,26 +2351,46 @@ if
   $1179 == 1 // integer values
 jf @CELL_10898
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_42A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_42A' 10000 ms 1  // Tommy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_42B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_42B' 10000 ms 1  // Sonny.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_42C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_42C' 10000 ms 1  // Obviously you are suffering from hearing problems, so I'll try again.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_42D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_42D' 10000 ms 1  // Where's the goddamned money, where's the goddamned stuff, and where's my cut of your new action?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_42E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_42E' 10000 ms 1  // You are making an idiot out of me, Tommy, and I'm not laughing yet.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_10898
@@ -1675,38 +2417,70 @@ if
   $1179 == 1 // integer values
 jf @CELL_11357
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43A' 10000 ms 1  // Tommy, Tommy, Tommy, I had Sonny on the phone, ok, are you with me?.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43B' 10000 ms 1  // I don't know about you, but there's something about a man threatening to murder my family
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43C' 10000 ms 1  // which really scares the crap out of me. What are you going to do?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43D' 10000 ms 1  // Ken, take it easy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43E' 10000 ms 1  // I AM calm, calm as a man can be when he's fearing for his life!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43F' 10000 ms 1  // Stay off the idiot fuel and look after yourself.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43G' 10000 ms 1  // No one's gonna take us out. I'll see you later.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_43H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_43H' 10000 ms 1  // I am calm. Don't I sound calm? Must be impending death that is doing this to my voice.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_11357
@@ -1729,62 +2503,118 @@ if
   $1179 == 1 // integer values
 jf @CELL_12043
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_A' 10000 ms 1  // Tommy We gotta talk about stuff.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_B' 10000 ms 1  // What's the problem Lance?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_C' 10000 ms 1  // It's you, my friend, I feel you're not giving me a fair slice.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_D' 10000 ms 1  // And more than that, you been embarrassing me in front of the boys. I can't have that.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_E' 10000 ms 1  // Lance, it ain't like that. You've been making mistakes.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_F' 10000 ms 1  // Tommy, I'm not your message boy. I'm not your running boy.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_G' 10000 ms 1  // Lance, don't screw up, and we won't have any problems. I screw up, you can lay into me any time.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_H' 10000 ms 1  // Tommy, I've done everything for you, you treat me like a fool. Don't do that.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_I' 10000 ms 1  // Lance, I won't rip you off or stab you in the back, okay?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45J' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_J' 10000 ms 1  // Just take it easy. This is tough enough without you getting all emotional on me.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45K' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_K' 10000 ms 1  // Trust me. Do you hear me, do you hear me?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45L' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_L' 10000 ms 1  // I hear you, Tommy, but I can't take this much more.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45M' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_M' 10000 ms 1  // Lance, don't be like this. Now I'm warning you.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_45N' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB45_N' 10000 ms 1  // Do you hear me? Just relax, take a few days off. Okay? I'll talk to you.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_12043
@@ -1807,34 +2637,62 @@ if
   $1179 == 1 // integer values
 jf @CELL_12435
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72A' 10000 ms 1  // Tommy, it's me, Lance. Keep your mouth shut there Tommy, 'cause I ain't got time to talk.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72B' 10000 ms 1  // I ain't interested in what you got to say. Why should I be? You don't care about me, do you?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72C' 10000 ms 1  // You gotta look after me a bit better. Give me a fair slice. You know...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72D' 10000 ms 1  // Tommy... oh, look, man, I'm sorry. It's just that...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72E' 10000 ms 1  // People patronize me all my life, treat me like a little kid.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72F' 10000 ms 1  // My brother would do that. Please, man, don't do that.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_72G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_72G' 10000 ms 1  // I gotta go.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_12435
@@ -1857,10 +2715,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_12575
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_47A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_47A' 10000 ms 1  // Tommy, Lance, we got big problems. Come down here. Right away.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_12575
@@ -1892,46 +2754,86 @@ if
   $1179 == 1 // integer values
 jf @CELL_13158
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63A' 10000 ms 1  // Tommy, it's Earnest. Earnest Kelly.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63B' 10000 ms 1  // How are you?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63C' 10000 ms 1  // I'm doing okay. I'll need a stick to walk, but I should be back at work soon enough.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63D' 10000 ms 1  // Good.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63E' 10000 ms 1  // I heard about Lance. What a little prick, eh?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63F' 10000 ms 1  // Yes.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63G' 10000 ms 1  // Never trust a man who walks the streets in his pajamas. That's what I say. Glad you killed him. I hope it was painful for the prick.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63H' 10000 ms 1  // I think it was. I just didn't think he was like that...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63I' 10000 ms 1  // Tommy, for a raging lunatic, you're pretty naive. I'll be back at work soon, teach you a thing or two about life, you hear.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_63J' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_63J' 10000 ms 1  // Take your time, Earnest. Look after yourself.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_13158
@@ -1958,50 +2860,94 @@ if
   $1179 == 1 // integer values
 jf @CELL_13750
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17A' 10000 ms 1  // Tommy Vercetti, how's it going, Mr. big shot? I hear all these things about you, some kind of player in town, now eh...
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17B' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17B' 10000 ms 1  // Paul, you're drunk.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17C' 10000 ms 1  // Nah, you stupid prat, I ain't drunk. I only had a couple and some treats, ain't been to bed for a couple of days, you know.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17D' 10000 ms 1  // Anyway, don't give me that. I ain't a mug. Who set you up in this town? Who? Me. That's who.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17E' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17F' 10000 ms 1  // Really?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17G' 10000 ms 1  // Don't give me that. Don't! I introduced you to people. I showed you the ropes, did a lot of stuff for you, and this is how you repay me.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17H' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17H' 10000 ms 1  // You ignore me. You won't give me a way in, after all I did for you! What do you think I am? A div or something?
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17I' 10000 ms 1  // Paul, take it easy. I've been busy, don't be an idiot.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17J' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17J' 10000 ms 1  // I ain't no idiot, mush. That's what they said in borstal. Are you asking for trouble son, because you're going to get it!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17K' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17K' 10000 ms 1  // Tommy, mate. Please. You was my big hope! Please, don't laugh at me!
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_17L' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_17L' 10000 ms 1  // Paul, get some sleep, seriously.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_13750
@@ -2027,30 +2973,54 @@ if
   $1179 == 1 // integer values
 jf @CELL_14122
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73A' 10000 ms 1  // Tommy, it's Steve.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73C' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73C' 10000 ms 1  // Hey indeed, genius. You're a marvel! I'm a marvel! They love us. We are re-writing the record books, pal.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73D' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73D' 10000 ms 1  // We are talking major awards here. Finally, I can put my dad in a home an tell him to shut up.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73F' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73F' 10000 ms 1  // Cool? It's hot, man. Hot. H. O. T. He never believed in me. Never thought I was an artist, and now I've made it.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73G' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73G' 10000 ms 1  // I'm the best damn skin flick director of all time, my friend. I just wanted to say, it's a pleasure to have met you.
 gosub @CELL_15747
+end
+
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_73I' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_73I' 10000 ms 1  // I love you, baby. Don't go changing on me, you hear.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14122
@@ -2073,10 +3043,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_14262
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_99A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_99A' 10000 ms 1  // Get to the payphone next to the mall in Washington.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14262
@@ -2104,10 +3078,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_14446
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_98A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_98A' 10000 ms 1  // Get to the pay phone in Vice Point.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14446
@@ -2135,10 +3113,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_14630
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_99A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_99A' 10000 ms 1  // Get to the payphone next to the mall in Washington.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14630
@@ -2166,10 +3148,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_14814
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_96A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_96A' 10000 ms 1  // Get to the payphone at the airport terminal.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14814
@@ -2197,10 +3183,14 @@ if
   $1179 == 1 // integer values
 jf @CELL_14998
 $1177 = 1 // integer values
+gosub @CELL_SKIP_CALL_1
+if not $ANSWER_HELP_MSG == 3
+then
 03CF: load_wav 'MOB_95A' as $1177
 gosub @CELL_15595
 00BC: text_highpriority 'MOB_95A' 10000 ms 1  // Get to the payphone in Little Havana.
 gosub @CELL_15747
+end
 00BE: text_clear_all
 
 :CELL_14998
@@ -2315,6 +3305,7 @@ jf @CELL_15593
 01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 1
 04E2: set_player $PLAYER_CHAR suspend_heavy_police_reinforcements 1
+$ANSWER_HELP_MSG = 1
 Model.Load(#CELLPHONE)
 
 :CELL_15465
@@ -2354,6 +3345,8 @@ jump @CELL_15538
 return
 
 :CELL_15595
+wait 0
+gosub @CELL_SKIP_CALL_2
 wait 0
 if
 83D0:   not wav $1177 loaded
@@ -2395,9 +3388,20 @@ return
 
 :CELL_15747
 wait 0
+gosub @CELL_SKIP_CALL_2
+wait 0
 if
 83D2:   not wav $1177 ended
 jf @CELL_15892
+wait 0
+
+if
+    $ANSWER_HELP_MSG == 3
+then
+    return
+    //jump @CELL_15885
+end
+
 wait 0
 if
    not Player.Defined($PLAYER_CHAR)
@@ -2496,4 +3500,69 @@ $1181 = 0 // integer values
 :CELL_16142
 Model.Destroy(#CELLPHONE)
 $ONMISSION = 0 // integer values
+$ANSWER_HELP_MSG = 0
+return
+
+:CELL_SKIP_CALL_1
+wait 0
+if and
+    $ANSWER_HELP_MSG == 1
+    $ONMISSION == 1
+then
+    03E6: remove_text_box
+    //wait 1000
+    0512: show_permanent_text_box 'ANSWR2' // Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your phone call.
+    $ANSWER_HELP_MSG = 2
+end
+return
+
+:CELL_SKIP_CALL_2
+wait 0
+if and
+    $ANSWER_HELP_MSG == 2
+    $ONMISSION == 1
+then
+    if and
+        00E1:   player 0 pressed_button 4
+        $ONMISSION == 1
+    then
+        $ANSWER_HELP_MSG = 4
+        17@ = 0
+    end
+end
+
+if and
+    $ANSWER_HELP_MSG == 4
+    $ONMISSION == 1
+then
+    /*if
+        00E1:   player 0 pressed_button 4
+    then
+        17@ = 0
+    else*/
+    if
+        17@ > 250
+    then
+        03E6: remove_text_box
+        $ANSWER_HELP_MSG = 3
+        /*03E6: remove_text_box
+        0512: show_permanent_text_box 'ANSWR3' // Press the ~h~~k~~PED_ANSWER_PHONE~~w~ again to skip your phone call.
+        $ANSWER_HELP_MSG = 5*/
+    end
+    //end
+end
+
+/*if and
+    $ANSWER_HELP_MSG == 5
+    $ONMISSION == 1
+then
+    if and
+        00E1:   player 0 pressed_button 4
+        $ONMISSION == 1
+    then
+        03E6: remove_text_box
+        $ANSWER_HELP_MSG = 3
+    end
+end*/
+
 return

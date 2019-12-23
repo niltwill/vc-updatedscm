@@ -685,9 +685,6 @@ if
   $2464 == 0 // integer values
 jf @GENERL3_4986
 if
-  not $CANCEL_HELP_MSGS == 2
-jf @GENERL3_4986
-if
   16@ > 9500 // integer values
 jf @GENERL3_4986
 03E5: text_box 'GEN3_57'  // The Kruger is an assault rifle, which allows you to manually aim in 1st person.
@@ -701,9 +698,6 @@ jf @GENERL3_5119
 if
   $2464 == 1 // integer values
 jf @GENERL3_5119
-if
-  not $CANCEL_HELP_MSGS == 2
-jf @GENERL3_5301
 if
   16@ > 9500 // integer values
 jf @GENERL3_5119
@@ -1983,11 +1977,7 @@ jf @GENERL3_12884
 0350: set_actor $2293 maintain_position_when_attacked 0
 0350: set_actor $2294 maintain_position_when_attacked 0
 0350: set_actor $2308 maintain_position_when_attacked 0
-if
-  not $CANCEL_HELP_MSGS == 2
-then
 03E5: text_box 'HELP45'  // Press the ~h~~k~~PED_DUCK~~w~ button to duck. This will increase the accuracy of guns you are holding.
-end
 16@ = 0 // integer values
 17@ = 0 // integer values
 $2360 = 12 // integer values
@@ -3622,9 +3612,6 @@ if
 jf @GENERL3_22942
 if
 0442:   player $PLAYER_CHAR in_car $2424
-jf @GENERL3_22942
-if
-    not $CANCEL_HELP_MSGS == 2
 jf @GENERL3_22942
 if
   $2465 == 0 // integer values

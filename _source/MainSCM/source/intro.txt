@@ -2386,38 +2386,55 @@ gosub @INTRO_PROCESS_SKIP
 if
   $INTRO_PARTIAL_CUT_SKIP == 4
 then
-    0169: set_fade_color 0 0 0
-	fade 0 1000
-	while fading
-		wait 0
-	end
-    040D: unload_wav 1
-    040D: unload_wav 2
-    00BE: text_clear_all
     if
-       not Car.Wrecked(0@)
-    then
-        Car.SetToNormalDriver(0@)
-        Car.PutAt(0@, 136.276, -819.859, 9.324)
-        Car.Angle(0@) = 207.1698
-    end
-    if and
         0256:   player $player_char defined
-        8118:   not actor $player_actor dead
     then
-        0362: put_actor $PLAYER_ACTOR at 136.847 -817.831 9.470 and_remove_from_car
-        Actor.Angle($PLAYER_ACTOR) = 225.495
-        Camera.SetBehindPlayer
-        Camera.Restore_WithJumpCut
+        0169: set_fade_color 0 0 0
+    	fade 0 500
+    	while fading
+    		wait 0
+    	end
+        040D: unload_wav 1
+        040D: unload_wav 2
+        00BE: text_clear_all
+        if and
+           not Car.Wrecked(0@)
+           81AF:   not car 0@ 0 136.276 -819.859 9.324 radius 3.0 3.0 4.0
+        then
+            Car.SetToNormalDriver(0@)
+            Car.PutAt(0@, 136.276, -819.859, 9.324)
+            Car.Angle(0@) = 207.1698
+        end
+        if
+            8118:   not actor $player_actor dead
+        then
+            0362: put_actor $PLAYER_ACTOR at 136.847 -817.831 9.470 and_remove_from_car
+            Actor.Angle($PLAYER_ACTOR) = 225.495
+            Camera.SetBehindPlayer
+            Camera.Restore_WithJumpCut
+        end
+        02A3: enable_widescreen 0
+        fade 1 500
+        while fading
+        	wait 0
+        end
+        jump @INTRO_14275
+    else
+        040D: unload_wav 1
+        040D: unload_wav 2
+        00BE: text_clear_all
+        jump @INTRO_14222
     end
-    02A3: enable_widescreen 0
-    fade 1 1000
-    while fading
-    	wait 0
+else
+    if or
+      Car.Wrecked(0@)
+      Actor.Dead(2@)
+    then
+        040D: unload_wav 1
+        040D: unload_wav 2
+        00BE: text_clear_all
+        jump @INTRO_14222
     end
-    16@ = 0
-    17@ = 0
-    jump @INTRO_14275
 end
 
 :INTRO_12980
@@ -2721,7 +2738,10 @@ then
 	// We want Enter to do full skip and Shift to do partial skip
 	// But with the gamepad, Y should do partial skip and A should do full skip
 	// so controls need to be reversed
-	if 0124:   has_pad_in_hands
+	0293: $18 = get_controller_mode
+	if or
+        0124:   has_pad_in_hands
+        $18 == 3
 	then
 		if or
 		    00E1:   player 0 pressed_button 12
@@ -2738,17 +2758,23 @@ then
 			return
 		end
 	else
-		if 00E1:   player 0 pressed_button 15
-		then
-			$INTRO_PARTIAL_CUT_SKIP = 3
-			$13 = 0
-			return
-		end
-		if 00E1:   player 0 pressed_button 16
-		then
-			$INTRO_PARTIAL_CUT_SKIP += 1
-			$13 = 0
-		end
+	   if or
+	        8124:   not has_pad_in_hands
+            not $18 == 3
+	   then
+    		if 00E1:   player 0 pressed_button 15
+    		then
+    			$INTRO_PARTIAL_CUT_SKIP = 3
+    			$13 = 0
+    			return
+    		end
+    		if 00E1:   player 0 pressed_button 16
+    		then
+    			$INTRO_PARTIAL_CUT_SKIP += 1
+    			$13 = 0
+    			return
+    		end
+	    end
 	end
 end
 return

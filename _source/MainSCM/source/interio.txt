@@ -46,7 +46,6 @@ $1095 = 0 // integer values
 $1098 = 0 // integer values
 $1084 = 0 // integer values
 $STRIP_CLUB_BOUGHT = 0 // integer values
-$BUYING_STRIPCLUB = 0 // integer values 
 thread 'INTERIO'
 set_wb_check_to 0
 create_thread @SHIT
@@ -74,10 +73,10 @@ if
   $999 == 0 // integer values
 jf @SHIT_1956
 if
-  $ONMISSION == 0 // integer values
-jf @SHIT_302
-if
   $PASSED_LAW2_BACK_ALLEY_BRAWL == 1
+jf @SHIT_1956
+if
+  $ONMISSION == 0 // integer values
 jf @SHIT_302
 if
   $1006 == 0 // integer values
@@ -2916,6 +2915,7 @@ jump @SHIT_18660
 if and
    0102: actor $PLAYER_ACTOR stopped_near_point_on_foot 90.092 -1456.600 9.585 radius 2.0 2.0 1.0 sphere 0
    not $SHIT_BAR_DIALOGUE_NUM == 0 // integer values
+   $STRIP_CLUB_BOUGHT == 0
    $1034 == 0 // integer values
 jf @SHIT_18660
 0209: $SHIT_BAR_DIALOGUE = random_int_in_ranges 0 8
@@ -2974,10 +2974,11 @@ while 83D0:   not wav 1 loaded
 end
 
 gosub @SHIT_18652
+wait 1500
 jump @SHIT_18653
 
 :SHIT_18652
-wait 2500
+wait 500
 if or
   0118: actor $1026 dead
   $1034 == 0 // integer values

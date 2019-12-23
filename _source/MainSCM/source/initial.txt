@@ -83,7 +83,6 @@ $7855 = 0 // integer values
 
 $MISSION_CANCEL_TIMER = -1
 $MISSION_CANCEL_STAGE = 0
-$CANCEL_HELP_MSGS = 0
 
 $291 = 0 // integer values
 $305 = 0 // integer values
