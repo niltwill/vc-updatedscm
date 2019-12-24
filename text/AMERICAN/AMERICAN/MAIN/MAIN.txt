@@ -2379,7 +2379,8 @@ ST_WHED   Longest Wheelie distance (m)
 ST_WHEE   Longest Wheelie time (secs)
 ST_WSTR   least favorite radio station
 SUNSHIN   Sunshine Autos
-S_PROMP   When not on a mission you can save your progress by collecting the ~h~cassette tape pickup.
+#UpdatedSCM edited
+S_PROMP   When not on a mission you can save your progress by collecting the ~h~cassette tape pickup - time will advance by 6 hours.
 T4X4_1    'PCJ Playground'
 T4X4_3    'GRIPPED!'
 T4X4_F    ~r~You bailed! Too tough for you?!
