@@ -2280,7 +2280,7 @@ STFT_21   Fastest time in Hotring
 STFT_22   Fastest lap time in Hotring
 STFT_23   Fastest time for Checkpoint Charlie
 #UpdatedSCM only
-STFT_24   Fastest time for "Faggio Freakout"	
+STFT_24   Fastest time for "Faggio Freakout"
 STHC_01   Highest score for Shooter
 STHC_02   Best Percentage of hits for Shooter
 STHC_03   Number of drug deals made
