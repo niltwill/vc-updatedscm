@@ -1449,7 +1449,8 @@ $ONMISSION = 0 // integer values
 Marker.Disable($2157)
 Marker.Disable($2158)
 Marker.Disable($2165)
-if
+if and
+    0118: not actor $11 dead
     8119: not car $2161 wrecked
 then
     00AD: set_car_cruise_speed $2161 to 18.0
