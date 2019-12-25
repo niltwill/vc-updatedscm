@@ -153,7 +153,8 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 
 <details>
   <summary>Latest update changelog (click me to expand) (full changelog underneath)</summary>
-- Fixes and improvements:	
+- Fixes and improvements:
+	
 - Replaced Sentinel with Sentinel XS in "The Driver"
 - Removed changes related to "slowing down" certain NPC's vehicles in missions included in previous releases, we don't want to touch game's difficulty.
 - Phil's Patriot in "Boomshine Saigon" is now fireproof and Phil will no longer flee out of the vehicle if you'll try to catch the car on fire.
@@ -181,6 +182,7 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 - New GXT Source format, GXT changes required for the mod are now re-done from scratch.
 - Initial Ken's cutscene is now skippable (since you're in a vehicle: with the acceleration key).
 - Spand Express driver in "Jury Fury" now aggressively drives away from the traffic accident once you pass or fail the mission.
+	
 </details>
 
 <details>
