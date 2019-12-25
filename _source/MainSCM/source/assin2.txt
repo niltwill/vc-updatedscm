@@ -160,8 +160,6 @@ wait 500
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Model.Destroy(#CELLPHONE)
 fade 0 1500
-wait 1000
-01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 03DE: set_pedestrians_density_multiplier_to 1.0
 01EB: set_traffic_density_multiplier_to 1.0
 
@@ -176,6 +174,8 @@ jump @ASSIN2_872
 02A3: enable_widescreen 0
 Camera.Restore_WithJumpCut
 Camera.SetBehindPlayer
+wait 0
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 fade 1 1500
 
 :ASSIN2_911

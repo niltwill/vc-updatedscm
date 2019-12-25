@@ -184,8 +184,6 @@ wait 500
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Model.Destroy(#CELLPHONE)
 fade 0 1000
-wait 1000
-01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 
 :ASSIN5_950
 if
@@ -552,6 +550,8 @@ Actor.Angle($6531) = 45.0281
 0243: set_actor $6531 ped_stats_to 16
 02A9: set_actor $6531 immune_to_nonplayer 1
 0350: set_actor $6531 maintain_position_when_attacked 1
+wait 0
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 fade 1 500
 
 :ASSIN5_4353
