@@ -66,6 +66,8 @@ jump @ASSIN5_211
 Player.CanMove($PLAYER_CHAR) = False
 0055: put_player $PLAYER_CHAR at -977.4625 -530.668 9.9113
 0171: set_player $PLAYER_CHAR z_angle_to 284.6051
+046F: store_player $PLAYER_CHAR currently_armed_weapon_to $713
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
 052B: actor $PLAYER_ACTOR hold_cellphone 1
 Camera.SetPosition(-981.4931, -531.1837, 11.49621, 0.0, 0.0, 0.0)
 0157: camera_on_player $PLAYER_CHAR mode 4 switchstyle 2
@@ -182,6 +184,8 @@ wait 500
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Model.Destroy(#CELLPHONE)
 fade 0 1000
+wait 1000
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 
 :ASSIN5_950
 if

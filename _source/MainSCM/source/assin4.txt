@@ -54,6 +54,8 @@ Player.CanMove($PLAYER_CHAR) = False
 Camera.SetPosition(-1479.544, -825.3295, 15.01768, 0.0, 0.0, 0.0)
 0157: camera_on_player $PLAYER_CHAR mode 4 switchstyle 2
 Camera.SetBehindPlayer
+046F: store_player $PLAYER_CHAR currently_armed_weapon_to $713
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
 052B: actor $PLAYER_ACTOR hold_cellphone 1
 03CF: load_wav 'JOB4_1' as 1
 03CF: load_wav 'JOB4_2' as 2
@@ -161,6 +163,8 @@ wait 500
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Model.Destroy(#CELLPHONE)
 fade 0 1000
+wait 1000
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 03DE: set_pedestrians_density_multiplier_to 1.0
 01EB: set_traffic_density_multiplier_to 1.0
 16@ = 0 // integer values

@@ -59,6 +59,8 @@ Camera.SetPosition(482.462, 242.7434, 12.795, 0.0, 0.0, 0.0)
 0395: clear_area 0 at 482.462 242.7434 range 12.795 1.0
 0157: camera_on_player $PLAYER_CHAR mode 4 switchstyle 2
 Camera.SetBehindPlayer
+046F: store_player $PLAYER_CHAR currently_armed_weapon_to $713
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to 0
 052B: actor $PLAYER_ACTOR hold_cellphone 1
 03CF: load_wav 'JOB2_1B' as 1
 03CF: load_wav 'JOB1_1C' as 2
@@ -158,6 +160,8 @@ wait 500
 052B: actor $PLAYER_ACTOR hold_cellphone 0
 Model.Destroy(#CELLPHONE)
 fade 0 1500
+wait 1000
+01B9: set_actor $PLAYER_ACTOR armed_weapon_to $713
 03DE: set_pedestrians_density_multiplier_to 1.0
 01EB: set_traffic_density_multiplier_to 1.0
 
