@@ -133,7 +133,7 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 
 * If you frequently get peds to deliver to at the not-yet-accessible Haitian factory during pizzaboy side mission in Little Havanna, you may overwrite the "paths.ipl". It doesn't do anything else other then removing the ped paths at the Haitian Factory. Afterwards the mission, it's probably the best if you restore the original file.
 
-I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b/NW_Fixes.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now.
+**I also recommend to use [NW-Fixes](https://www.mediafire.com/file/whejojss4y7vu05/NW_Fixes_Latest.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now. This now also includes the files needed for UpdatedSCM, so no need to mess with anything manually.**
 </details>
 
 
@@ -142,7 +142,6 @@ I also recommend to use [NW-Fixes](http://www.mediafire.com/file/ozr53qz061rdc1b
 
 - Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay 'n' Spray.
 - Fix Army spawning and attacking the player outside of Fort Baxter.
-- Skippable phone-calls. (The same way like in GTA SA/LCS)
 - Replace Leaf Links bridge traffic flow workaround with a proper fix (Check how VCS does it maybe?)
 - Fix possible crash when starting new game quickly after the Ken's office intro cutscene skip?
 - Fix the Jury not falling out of the car in "Jury Fury" if headshotted inside of the admiral with an M4 rifle (original VC bug)
@@ -177,9 +176,11 @@ Fixes and improvements:
 - Fixed Leaf Links bridge traffic flow not spawning.
 - Fixed an issue related to VCPD HQ where the player would recive 2 stars wanted level upon leaving it.
 - Cell Phone will no longer ring inside certain interiors making the interior door closed and resulting in player being stuck inside until you either anwser the call or wait until it stops ringing.
+- Added busted or wanted check for ambulance, firetruck and taxi sidemissions.
+- Now in "Gun Runner" the four backup faggios will not keep spawning infinitely, only once.
 
 New features:
-- You can now skip Phone calls same way you do in GTA SA/LCS.
+- You can now skip phone calls the same way you do in GTA SA/LCS.
 - New GXT Source format, GXT changes required for the mod are now re-done from scratch.
 - Initial Ken's cutscene is now skippable (since you're in a vehicle: with the acceleration key).
 - Spand Express driver in "Jury Fury" now aggressively drives away from the traffic accident once you pass or fail the mission.

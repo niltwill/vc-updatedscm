@@ -1,12 +1,19 @@
 :AMBULAN
+thread 'AMBULAN'
 gosub @AMBULAN_16
+if
+wasted_or_busted
+jf @AMBULAN_10
+gosub @AMBULAN_7409
+
+:AMBULAN_10
 gosub @AMBULAN_7425
 end_thread
 
 :AMBULAN_16
 $ONMISSION = 1 // integer values
 $319 = 1 // integer values
-thread 'AMBULAN'
+wait 0
 if
   $1581 == 0 // integer values
 jf @AMBULAN_60
@@ -1217,6 +1224,7 @@ if
 then
     01E3: text_1number_styled 'A_SAVES' number $6763 time 6000 style 6  // PEOPLE SAVED: ~1~
 end
+03EB: clear_small_messages_only
 
 :AMBULAN_7481
 $6760 = 0 // integer values

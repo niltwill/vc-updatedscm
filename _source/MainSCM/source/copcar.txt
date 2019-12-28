@@ -1,4 +1,5 @@
 :COPCAR
+thread 'COPCAR'
 gosub @COPCAR_36
 if
 wasted_or_busted
@@ -11,7 +12,6 @@ end_thread
 
 :COPCAR_36
 $ONMISSION = 1 // integer values
-thread 'COPCAR'
 wait 0
 if
   $1582 == 0 // integer values

@@ -1914,13 +1914,13 @@ MOB_72F   My brother would do that. Please, man, don't do that.
 MOB_72G   I gotta go.
 MOB_73A   Tommy, it's Steve.
 MOB_73B   Hey, Steve.
-MOB_73C   Hey indeed, genius. You're a marvel! I'm a marvel! They love us. We are re-writing the record books, pal.
-MOB_73D   We are talking major awards here. Finally, I can put my dad in a home an tell him to shut up.
+MOB_73C   You're a marvel! I'm a marvel! They love us. We are re-writing the record books, pal.
+MOB_73D   We are talking major awards here. I can put my dad in a home and tell him to shut up.
 MOB_73E   Eeer, that's cool, Steve.
-MOB_73F   Cool? It's hot, man. Hot. H. O. T. He never believed in me. Never thought I was an artist, and now I've made it.
-MOB_73G   I'm the best damn skin flick director of all time, my friend. I just wanted to say, it's a pleasure to have met you.
+MOB_73F   It's hot, man. Hot. H. O. T. He never believed in me. Never thought I was an artist, and now I've made it.
+MOB_73G   I'm the best damn skin flick director of all time, my friend. And I just wanted to say, it's a pleasure to have met you.
 MOB_73H   Thanks steve.
-MOB_73I   I love you, baby. Don't go changing on me, you hear.
+MOB_73I   I love you, baby. Don't you go changing on me, you hear.
 MOB_73J   I hear you. Good bye, Steve.
 MOB_95    Get to the payphone at location.
 MOB_95A   Get to the payphone in Little Havana.

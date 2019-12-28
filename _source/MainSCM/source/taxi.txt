@@ -1,10 +1,16 @@
 :TAXI
+thread 'TAXI'
 gosub @TAXI_16
+if
+wasted_or_busted
+jf @TAXI_10
+gosub @TAXI_6966
+
+:TAXI_10
 gosub @TAXI_6968
 end_thread
 
 :TAXI_16
-thread 'TAXI'
 set_wb_check_to 0
 $ONMISSION = 1 // integer values
 $314 = 1 // integer values

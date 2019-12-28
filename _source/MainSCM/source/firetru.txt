@@ -1,12 +1,18 @@
 :FIRETRU
+thread 'FIRETRU'
 gosub @FIRETRU_16
+if
+wasted_or_busted
+jf @FIRETRU_10
+gosub @FIRETRU_7573
+
+:FIRETRU_10
 gosub @FIRETRU_7990
 end_thread
 
 :FIRETRU_16
 $ONMISSION = 1 // integer values
 $321 = 1 // integer values
-thread 'FIRETRU'
 wait 0
 if
   $1583 == 0 // integer values
@@ -1038,6 +1044,7 @@ else
 		then
 			00BC: text_highpriority 'F_CANC' 3000 ms 1  // ~r~Fire Fighter mission cancelled!
 			$6842 = 1 // integer values
+			return
 		end
 	end
 end

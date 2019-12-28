@@ -18,16 +18,6 @@ RESC_10    You are just a little worm, under Diaz's tiny boot!
 #GENERA1
 GEN1_K    Use this...
 
-#MAIN
-ANSWR2    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your cell phone call.
-ANSWR3    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ again to skip your phone call.
-BNK450C   New threads? Huh. You need more than that, pal!
-CAN_CON   Use ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~again to cancel the mission.
-CLOTH11   MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
-CLOTH12   Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
-GOAWAY3   ~g~Come back when you are not wearing cop outfit.
-PICK8B    Sea Sparrow now available from Diaz's Mansion on Starfish Island!
-
 #
 #Leftovers
 #

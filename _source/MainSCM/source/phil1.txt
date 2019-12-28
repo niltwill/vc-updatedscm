@@ -1365,9 +1365,9 @@ Player.Money($PLAYER_CHAR) += 100
 $4301 += 1 // integer values
 
 :PHIL1_8316
-Actor.RemoveReferences($4242)
-Car.RemoveReferences($4238)
-$4277 = 1 // integer values
+//Actor.RemoveReferences($4242)
+//Car.RemoveReferences($4238)
+$4277 = 0 // integer values
 
 :PHIL1_8333
 if
@@ -1517,9 +1517,9 @@ Player.Money($PLAYER_CHAR) += 100
 $4301 += 1 // integer values
 
 :PHIL1_9317
-Actor.RemoveReferences($4243)
-Car.RemoveReferences($4239)
-$4278 = 1 // integer values
+//Actor.RemoveReferences($4243)
+//Car.RemoveReferences($4239)
+$4278 = 0 // integer values
 
 :PHIL1_9334
 if
@@ -1669,9 +1669,9 @@ Player.Money($PLAYER_CHAR) += 100
 $4301 += 1 // integer values
 
 :PHIL1_10318
-Actor.RemoveReferences($4244)
-Car.RemoveReferences($4240)
-$4279 = 1 // integer values
+//Actor.RemoveReferences($4244)
+//Car.RemoveReferences($4240)
+$4279 = 0 // integer values
 
 :PHIL1_10335
 if
@@ -1810,7 +1810,7 @@ jump @PHIL1_11336
 :PHIL1_11213
 $4281 -= 1 // integer values
 if
-  10 > $4301 // integer values
+  13 > $4301 // integer values
 jf @PHIL1_11319
 if
   $4300 == 1 // integer values
@@ -1821,9 +1821,9 @@ Player.Money($PLAYER_CHAR) += 100
 $4301 += 1 // integer values
 
 :PHIL1_11319
-Actor.RemoveReferences($4245)
-Car.RemoveReferences($4241)
-$4280 = 1 // integer values
+//Actor.RemoveReferences($4245)
+//Car.RemoveReferences($4241)
+$4280 = 0 // integer values
 
 :PHIL1_11336
 jump @PHIL1_11350
@@ -2083,6 +2083,14 @@ jf @PHIL1_12429
 Pickup.Destroy($4253)
 
 :PHIL1_12429
+Actor.RemoveReferences($4242)
+Actor.RemoveReferences($4243)
+Actor.RemoveReferences($4244)
+Actor.RemoveReferences($4245)
+Car.RemoveReferences($4238)
+Car.RemoveReferences($4239)
+Car.RemoveReferences($4240)
+Car.RemoveReferences($4241)
 Marker.Disable($4254)
 Marker.Disable($4255)
 Marker.Disable($4256)
