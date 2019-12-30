@@ -1333,7 +1333,8 @@ $2095 = Pickup.Create(#ADRENALINE, 1, -839.0, 740.6, 11.3)
 02EC: put_hidden_package_at -1131.6 -355.4 15.0
 02EC: put_hidden_package_at -1195.2 -317.7 10.9
 02EC: put_hidden_package_at -1093.7 -600.1 26.0
-02EC: put_hidden_package_at -1179.9 -576.3 12.0
+//Little Havana package placement fix.
+02EC: put_hidden_package_at -1179.9 -576.3 12.5
 02EC: put_hidden_package_at -1018.2 -874.1 17.9
 02EC: put_hidden_package_at -855.3 -631.8 11.3
 02EC: put_hidden_package_at -1179.2 -718.8 22.8
