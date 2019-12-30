@@ -177,7 +177,8 @@ Fixes and improvements:
 - Fixed an issue related to VCPD HQ where the player would recive 2 stars wanted level upon leaving it.
 - Cell Phone will no longer ring inside certain interiors making the interior door closed and resulting in player being stuck inside until you either anwser the call or wait until it stops ringing.
 - Added busted or wanted check for ambulance, firetruck and taxi sidemissions.
-- Now in "Gun Runner" the four backup faggios will not keep spawning infinitely, only once.
+- Backup on faggio's will no longer spawn infinitly in "Gun Runner".
+- Fixed hidden package placement next to Caffe Robina.
 
 New features:
 - You can now skip phone calls the same way you do in GTA SA/LCS.
