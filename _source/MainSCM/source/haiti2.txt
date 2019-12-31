@@ -48,7 +48,7 @@ $5882 = 0 // integer values
 12@ = 0 // integer values
 13@ = 0 // integer values
 14@ = 0 // integer values
-15@ = 0 // integer values
+$HAITI2_UNKNOWN_VAL = 0 // integer values
 $5873 = 0 // integer values
 $5874 = 0 // integer values
 $5875 = 0 // integer values
@@ -1902,14 +1902,14 @@ jf @HAIT2_10548
 0372: set_actor $5898 anim 0 wait_state_time 17 ms
 01B2: give_actor $5898 weapon 27 ammo 9999 // Load the weapon model before using this
 01D9: actor $5898 destroy_car $5883
-008B: 15@ = $4811 // integer values and handles
-15@ += 3400 // integer values
+008B: $HAITI2_UNKNOWN_VAL = $4811 // integer values and handles
+$HAITI2_UNKNOWN_VAL += 3400 // integer values
 14@ = 1 // integer values
 jump @HAIT2_10570
 
 :HAIT2_10548
-008B: 15@ = $4811 // integer values and handles
-15@ -= 100 // integer values
+008B: $HAITI2_UNKNOWN_VAL = $4811 // integer values and handles
+$HAITI2_UNKNOWN_VAL -= 100 // integer values
 14@ = 1 // integer values
 
 :HAIT2_10570
@@ -1923,7 +1923,7 @@ jf @HAIT2_10612
 
 :HAIT2_10612
 if
-001E:   $4811 > 15@ // integer values
+001E:   $4811 > $HAITI2_UNKNOWN_VAL // integer values
 jf @HAIT2_10688
 if
    not Car.Wrecked($5889)
@@ -1981,8 +1981,8 @@ if
    not Car.Wrecked($5889)
 jf @HAIT2_11021
 0239: actor $5898 run_to -515.7076 -230.4083
-008B: 15@ = $4811 // integer values and handles
-15@ += 700 // integer values
+008B: $HAITI2_UNKNOWN_VAL = $4811 // integer values and handles
+$HAITI2_UNKNOWN_VAL += 700 // integer values
 14@ = 5 // integer values
 jump @HAIT2_11028
 
@@ -2000,7 +2000,7 @@ if
 0185:   car $5889 health >= 250
 jf @HAIT2_11208
 if
-001E:   $4811 > 15@ // integer values
+001E:   $4811 > $HAITI2_UNKNOWN_VAL // integer values
 jf @HAIT2_11201
 if or
    not Actor.Dead($5896)

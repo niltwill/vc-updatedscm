@@ -52,7 +52,7 @@ $3498 = 60.0 // floating-point values
 12@ = -1090.0 // floating-point values
 14@ = -1030.0 // floating-point values
 13@ = 0.0 // floating-point values
-15@ = 90.0 // floating-point values
+$SERG2_FORBIDDEN_CUBE_Y2 = 90.0 // floating-point values
 $3478 = 0 // integer values
 $3479 = 0 // integer values
 $3480 = 0 // integer values
@@ -484,7 +484,7 @@ Player.CanMove($PLAYER_CHAR) = True
 00BC: text_highpriority 'TEX_2D' 10000 ms 1  // ~g~Take out the Haitian Gang Lord at Romero's Funeral Parlor!
 03F1: pedtype 8 add_threat 1
 018A: $3241 = create_checkpoint_at $3496 $3497 20.0
-01E8: create_forbidden_for_cars_cube 12@ 13@ 14.0 14@ 15@ 20.0
+01E8: create_forbidden_for_cars_cube 12@ 13@ 14.0 14@ $SERG2_FORBIDDEN_CUBE_Y2 20.0
 $98 = 0.0 // floating-point values
 
 :SERG2_2607
@@ -640,7 +640,7 @@ $3241 = Marker.CreateAboveActor($3466)
 
 :SERG2_3762
 if and
-8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ 15@
+8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
   $3483 == 0 // integer values
 jf @SERG2_3838
 wait 0
@@ -687,7 +687,7 @@ gosub @SERG2_8800
 
 :SERG2_4040
 if and
-8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ 15@
+8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
   2 > $3483 // integer values
 jf @SERG2_4131
 if
@@ -716,7 +716,7 @@ jf @SERG2_4248
 0084: $3495 = $3463 // integer values and handles
 gosub @SERG2_9532
 if
-80A3:   not actor $3466 0 12@ 13@ 14@ 15@
+80A3:   not actor $3466 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
 jf @SERG2_4248
 gosub @SERG2_8990
 
@@ -741,7 +741,7 @@ jf @SERG2_4536
 0084: $3495 = $3462 // integer values and handles
 gosub @SERG2_9532
 if
-80A3:   not actor $3466 0 12@ 13@ 14@ 15@
+80A3:   not actor $3466 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
 jf @SERG2_4394
 gosub @SERG2_8990
 
@@ -896,7 +896,7 @@ return
 Player.CanMove($PLAYER_CHAR) = True
 02A3: enable_widescreen 0
 Camera.Restore_WithJumpCut
-01E7: remove_forbidden_for_cars_cube 12@ 13@ 14.0 14@ 15@ 20.0
+01E7: remove_forbidden_for_cars_cube 12@ 13@ 14.0 14@ $SERG2_FORBIDDEN_CUBE_Y2 20.0
 03F2: pedtype 8 remove_threat 1
 Marker.Disable($3241)
 Marker.Disable($3504)
@@ -1659,8 +1659,8 @@ if
    not Actor.Dead($3466)
 jf @SERG2_8947
 if or
-8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ 15@
-80A3:   not actor $3466 0 12@ 13@ 14@ 15@
+8056:   not player $PLAYER_CHAR 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
+80A3:   not actor $3466 0 12@ 13@ 14@ $SERG2_FORBIDDEN_CUBE_Y2
 jf @SERG2_8940
 01EB: set_traffic_density_multiplier_to 1.0
 

@@ -267,7 +267,7 @@ $1011 = 0 // integer values
 wait 500
 fade 1 1500
 00BC: text_highpriority 'LAW2_6' 10000 ms 2  // ~g~Go to the Malibu Club and find Kent Paul.
-018A: 15@ = create_checkpoint_at $513 $514 $515
+018A: $LAWYER2_BLIP = create_checkpoint_at $513 $514 $515
 
 :LAWYER2_1506
 if
@@ -692,7 +692,7 @@ jump @LAWYER2_3711
 :LAWYER2_3743
 wait 500
 fade 1 1500
-Marker.Disable(15@)
+Marker.Disable($LAWYER2_BLIP)
 $2125 = Actor.Create(CivMale, #SPECIAL03, $2143, $2144, $2145)
 Actor.Angle($2125) = 70.0
 Actor.Health($2125) = 100
@@ -2375,7 +2375,7 @@ Model.Destroy(#KNIFECUR)
 0296: unload_special_actor 4
 040D: unload_wav 1
 040D: unload_wav 2
-Marker.Disable(15@)
+Marker.Disable($LAWYER2_BLIP)
 Marker.Disable($19)
 Marker.Disable($57)
 Marker.Disable(4@)

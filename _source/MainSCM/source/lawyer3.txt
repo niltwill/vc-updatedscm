@@ -341,7 +341,7 @@ Camera.SetPosition(110.714, -816.945, 14.589, 0.0, 0.0, 0.0)
 Camera.PointAt(111.238, -817.658, 14.123, 2)
 0395: clear_area 1 at 95.8 -843.2 range 10.0 20.0
 0@ = Car.Create(#GLENDALE, 95.8, -843.2, 10.0)
-0129: 15@ = create_actor 4 #WMOGO in_car 0@ driverseat
+0129: $LAWYER3_DRIVER = create_actor 4 #WMOGO in_car 0@ driverseat
 Car.Angle(0@) = 316.0
 0395: clear_area 1 at 113.7 -825.0 range 9.7 10.0
 1@ = Actor.Create(CivMale, #WMYCW, 113.7, -825.0, 9.7)
@@ -397,13 +397,13 @@ jump @LAWYER3_2083
 
 :LAWYER3_2197
 if
-   not Actor.Dead(15@)
+   not Actor.Dead($LAWYER3_DRIVER)
 jf @LAWYER3_2244
 if
    not Car.Wrecked(0@)
 jf @LAWYER3_2244
-01D3: actor 15@ leave_car 0@
-0243: set_actor 15@ ped_stats_to 39
+01D3: actor $LAWYER3_DRIVER leave_car 0@
+0243: set_actor $LAWYER3_DRIVER ped_stats_to 39
 
 :LAWYER3_2244
 Camera.SetPosition(110.834, -827.258, 12.204, 0.0, 0.0, 0.0)
@@ -417,15 +417,15 @@ if
 jf @LAWYER3_2413
 wait 0
 if
-   not Actor.Dead(15@)
+   not Actor.Dead($LAWYER3_DRIVER)
 jf @LAWYER3_2406
 if
    not Car.Wrecked(0@)
 jf @LAWYER3_2406
 if
-   not Actor.InCar(15@, 0@)
+   not Actor.InCar($LAWYER3_DRIVER, 0@)
 jf @LAWYER3_2406
-0239: actor 15@ run_to 137.6 -786.9
+0239: actor $LAWYER3_DRIVER run_to 137.6 -786.9
 
 :LAWYER3_2406
 jump @LAWYER3_2317
@@ -454,7 +454,7 @@ jump @LAWYER3_2463
 Model.Destroy(#GLENDALE)
 Model.Destroy(#WMOGO)
 Model.Destroy(#WMYCW)
-Actor.RemoveReferences(15@)
+Actor.RemoveReferences($LAWYER3_DRIVER)
 0395: clear_area 1 at 191.4 -1026.7 range 9.4 2.0
 $2147 = Actor.Create(CivMale, #HMORI, 191.4, -1026.7, 9.4)
 0243: set_actor $2147 ped_stats_to 39
