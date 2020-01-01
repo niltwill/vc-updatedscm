@@ -6509,7 +6509,8 @@ else
         end
     end
 end
-return
+$MISSION_CANCEL_FLAG == 2 // Comparison is intended here, do not "fix" it
+return                    // This will make this subroutine "return" the result of that comparison
 
 :IS_SCENE_SKIPPED
 if 15@ == 0

@@ -396,8 +396,7 @@ jf @AMBULAN_2555
 0293: $18 = get_controller_mode
 if $6761 == 0
 then
-	gosub @PROCESS_R3_ABORT
-	if $MISSION_CANCEL_FLAG == 2
+	if gosub @PROCESS_R3_ABORT
 	then
 		$6761 = 1
 	end
@@ -899,8 +898,7 @@ wait 0
 0293: $18 = get_controller_mode
 if $6761 == 0
 then
-	gosub @PROCESS_R3_ABORT
-	if $MISSION_CANCEL_FLAG == 2
+	if gosub @PROCESS_R3_ABORT
 	then
 		$6761 = 1
 	end

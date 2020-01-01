@@ -2671,8 +2671,7 @@ return
 :PIZZA_13772
 if $8017 == 0
 then
-	gosub @PROCESS_R3_ABORT
-	if $MISSION_CANCEL_FLAG == 2
+	if gosub @PROCESS_R3_ABORT
 	then
 		00BE: text_clear_all
 		$8015 = 3

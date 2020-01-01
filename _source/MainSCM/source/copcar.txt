@@ -2068,8 +2068,7 @@ else
     end
 end
 0293: $18 = get_controller_mode
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
     $6902 = 1 // integer values
@@ -3033,8 +3032,7 @@ else
     end
 end
 0293: $18 = get_controller_mode
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     00BC: text_highpriority 'C_CANC' 3000 ms 1  // ~r~Vigilante mission cancelled!
     $6902 = 1 // integer values
@@ -3052,8 +3050,7 @@ jf @COPCAR_16936
 053F: set_car $6875 tires_vulnerable 0
 if $6906 == 0
 then
-	gosub @PROCESS_R3_ABORT
-	if $MISSION_CANCEL_FLAG == 2
+	if gosub @PROCESS_R3_ABORT
 	then
 		$6906 = 1
 	end
