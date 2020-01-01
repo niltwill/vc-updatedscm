@@ -6511,6 +6511,29 @@ else
 end
 return
 
+:IS_SCENE_SKIPPED
+if 15@ == 0
+then
+    if and
+        80E1:   not player 0 pressed_button 12
+        80E1:   not player 0 pressed_button 15
+        80E1:   not player 0 pressed_button 16
+    then
+        15@ = 2
+    end
+end
+if 15@ == 2
+then
+    if or
+        00E1:   player 0 pressed_button 12
+        00E1:   player 0 pressed_button 15
+        00E1:   player 0 pressed_button 16
+    then
+        15@ = 1
+    end
+end
+return
+
 // HJ
 {$INCLUDE source\hj.txt}
 

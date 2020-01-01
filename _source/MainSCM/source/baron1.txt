@@ -738,7 +738,7 @@ jf @BARON1_5086
 :BARON1_5086
 wait 500
 02CF: 14@ = create_fire_at 347.5 417.4 20.6
-02CF: 15@ = create_fire_at 350.9 412.6 20.6
+02CF: $BARON1_FIRE2 = create_fire_at 350.9 412.6 20.6
 02CF: $2815 = create_fire_at 349.5 416.6 20.6
 wait 900
 if
@@ -855,7 +855,7 @@ if
   3@ == 0 // integer values
 jf @BARON1_6064
 02CF: 14@ = create_fire_at 347.5 417.4 20.6
-02CF: 15@ = create_fire_at 350.9 412.6 20.6
+02CF: $BARON1_FIRE2 = create_fire_at 350.9 412.6 20.6
 02CF: $2815 = create_fire_at 349.5 416.6 20.6
 2@ = 1 // integer values
 3@ = 1 // integer values
@@ -1231,7 +1231,7 @@ if
   2@ == 0 // integer values
 jf @BARON1_8417
 02CF: 14@ = create_fire_at 347.5 417.4 20.6
-02CF: 15@ = create_fire_at 350.9 412.6 20.6
+02CF: $BARON1_FIRE2 = create_fire_at 350.9 412.6 20.6
 02CF: $2815 = create_fire_at 349.5 416.6 20.6
 2@ = 1 // integer values
 

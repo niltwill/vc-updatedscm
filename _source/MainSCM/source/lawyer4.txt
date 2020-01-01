@@ -47,7 +47,7 @@ $2212 = 0 // integer values
 12@ = 0 // integer values
 13@ = 0 // integer values
 14@ = 0 // integer values
-15@ = 0 // integer values
+$LAWYER4_KILL_FLAG = 0 // integer values
 $2217 = 0 // integer values
 $2218 = 0 // integer values
 $2219 = 0 // integer values
@@ -982,13 +982,13 @@ if
 jf @LAWYER4_6007
 if and
 8184:   not actor $2192 health >= 99
-  15@ == 0 // integer values
+  $LAWYER4_KILL_FLAG == 0 // integer values
   $2205 == 0 // integer values
 jf @LAWYER4_6000
 $2212 += 1 // integer values
 053D:  $2192
 01CA: actor $2192 kill_player $PLAYER_CHAR
-15@ = 1 // integer values
+$LAWYER4_KILL_FLAG = 1 // integer values
 
 :LAWYER4_6000
 jump @LAWYER4_6046

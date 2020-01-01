@@ -29,7 +29,7 @@ $43 = 0 // integer values
 12@ = 0 // integer values
 13@ = 0 // integer values
 14@ = 0 // integer values
-15@ = 0 // integer values
+$BARON2_TEXT_SHOWN = 0 // integer values
 $2863 = 0 // integer values
 $2846 = 0 // integer values
 $BARON2_NEW2_DIALOGUE = 0
@@ -2012,7 +2012,7 @@ jump @BARON2_13912
 
 :BARON2_12551
 if
-  15@ == 0 // integer values
+  $BARON2_TEXT_SHOWN == 0 // integer values
 jf @BARON2_12679
 if
   $33 == 0 // integer values
@@ -2033,7 +2033,7 @@ if
 jf @BARON2_12679
 03D1: play_wav 1
 00BC: text_highpriority 'COK2_23' 5000 ms 2  // Ok, you're on your own from here! Good luck, brother!
-15@ = 0 // integer values
+$BARON2_TEXT_SHOWN = 1 // integer values
 
 :BARON2_12679
 jump @BARON2_12466

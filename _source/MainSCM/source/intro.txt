@@ -2262,15 +2262,17 @@ Camera.SetAtPos(114.2, -823.3, 9.7)
 0395: clear_area 1 at 86.428 -852.238 range 9.325 50.0
 03DE: set_pedestrians_density_multiplier_to 0.0
 01EB: set_traffic_density_multiplier_to 0.0
-0055: put_player $PLAYER_CHAR at 81.431 -852.868 9.332
+0055: put_player $PLAYER_CHAR at 107.2356 -802.7907 10.4633
 0395: clear_area 1 at 81.488 -852.563 range 10.0 10.0
 0@ = Car.Create(#ADMIRAL, 83.54, -851.669, 10.0)
 Car.SetImmunities(0@, 1, 1, 1, 1, 1)
 Car.Angle(0@) = 330.0
-01D4: actor $PLAYER_ACTOR go_to_car 0@ and_enter_it_as_a_passenger
 0129: 2@ = create_actor 4 #SPECIAL10 in_car 0@ driverseat
 01ED: clear_actor 2@ threat_search
 02AB: set_actor 2@ immunities BP 1 FP 1 EP 1 CP 1 MP 1
+01C8: 7@ = create_actor_pedtype 4 model #NULL in_car 0@ passenger_seat 1
+01ED: clear_actor 7@ threat_search
+02AB: set_actor 7@ immunities BP 1 FP 1 EP 1 CP 1 MP 1
 Car.SetToNormalDriver(0@)
 0229: set_car 0@ color_to 84 84
 1@ = Car.Create(#FAGGIO, 127.4, -818.5, 9.5)
@@ -2279,19 +2281,6 @@ Car.Angle(1@) = 250.6
 Model.Destroy(#ADMIRAL)
 Model.Destroy(#FAGGIO)
 
-:INTRO_12275
-if
-   not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_12318
-wait 0
-if
-   Car.Wrecked(0@)
-jf @INTRO_12311
-
-:INTRO_12311
-jump @INTRO_12275
-
-:INTRO_12318
 fade 1 1000
 0395: clear_area 1 at 116.583 -796.821 range 11.423 1.0
 Camera.SetPosition(116.583, -796.821, 11.423, 0.0, 0.0, 0.0)
@@ -2306,6 +2295,7 @@ Car.SetMaxSpeed(0@, 30.0)
 4@ = 1 // integer values
 
 :INTRO_12470
+15@ = 0 // Clear scene skip
 16@ = 0 // integer values
 17@ = 0 // integer values
 
@@ -2321,123 +2311,14 @@ jf @INTRO_12536
 jump @INTRO_12964
 
 :INTRO_12536
-if
-  4@ == 1 // integer values
-jf @INTRO_12674
-if
-  17@ >= 30000 // integer values
-jf @INTRO_12674
-if
-   not Car.Wrecked(0@)
-jf @INTRO_12674
-if
-81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
-jf @INTRO_12674
-4@ = 3 // integer values
-Car.PutAt(0@, 132.6, -818.278, 9.446)
-Car.Angle(0@) = 206.0214
-
-:INTRO_12674
-if
-  4@ == 1 // integer values
-jf @INTRO_12767
-if
-01AF:   car 0@ 0 103.1 -832.3 9.317 radius 4.0 4.0 4.0
-jf @INTRO_12767
-Car.DriveTo(0@, 113.371, -819.078, 9.317)
-4@ = 2 // integer values
-
-:INTRO_12767
-if
-  4@ == 2 // integer values
-jf @INTRO_12860
-if
-01AF:   car 0@ 0 113.371 -819.078 9.317 radius 4.0 4.0 4.0
-jf @INTRO_12860
-Car.DriveTo(0@, 132.6, -818.278, 9.446)
-4@ = 3 // integer values
-
-:INTRO_12860
-if
-  4@ == 3 // integer values
-jf @INTRO_12964
-if
-01AF:   car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
-jf @INTRO_12964
-if
-   not Car.Wrecked(0@)
-jf @INTRO_12964
-Car.SetMaxSpeed(0@, 0.0)
-Car.SetToNormalDriver(0@)
-4@ = 4 // integer values
-
-:INTRO_12964
-if
-   Actor.Dead(2@)
-jf @INTRO_12970
-jump @INTRO_14275
-
-:INTRO_12970
-if
-   3500 > 16@
-jf @INTRO_12980
-wait 0
-gosub @INTRO_PROCESS_SKIP
-if
-  $INTRO_PARTIAL_CUT_SKIP == 4
+if gosub @IS_SCENE_SKIPPED
 then
-    if
-        0256:   player $player_char defined
-    then
-        0169: set_fade_color 0 0 0
-    	fade 0 500
-    	while fading
-    		wait 0
-    	end
-        040D: unload_wav 1
-        040D: unload_wav 2
-        00BE: text_clear_all
-        if and
-           not Car.Wrecked(0@)
-           81AF:   not car 0@ 0 136.276 -819.859 9.324 radius 3.0 3.0 4.0
-        then
-            Car.SetToNormalDriver(0@)
-            Car.PutAt(0@, 136.276, -819.859, 9.324)
-            Car.Angle(0@) = 207.1698
-        end
-        if
-            8118:   not actor $player_actor dead
-        then
-            0362: put_actor $PLAYER_ACTOR at 136.847 -817.831 9.470 and_remove_from_car
-            Actor.Angle($PLAYER_ACTOR) = 225.495
-            Camera.SetBehindPlayer
-            Camera.Restore_WithJumpCut
-        end
-        02A3: enable_widescreen 0
-        fade 1 500
-        while fading
-        	wait 0
-        end
-        jump @INTRO_14275
-    else
-        040D: unload_wav 1
-        040D: unload_wav 2
-        00BE: text_clear_all
-        jump @INTRO_14222
-    end
-else
-    if or
-      Car.Wrecked(0@)
-      Actor.Dead(2@)
-    then
-        040D: unload_wav 1
-        040D: unload_wav 2
-        00BE: text_clear_all
-        jump @INTRO_14222
-    end
+    jump @INTRO_CUTSCENE_END
 end
 
-:INTRO_12980
+gosub @INTRO_PROCESS_ADMIRAL_ROUTE
+
+:INTRO_12964
 if
   3@ == 0 // integer values
 jf @INTRO_13038
@@ -2542,16 +2423,10 @@ if
   300 > 16@ // integer values
 jf @INTRO_13627
 wait 0
-if
-   Car.Wrecked(0@)
-jf @INTRO_13604
-
-:INTRO_13604
-if
-   Actor.Dead(2@)
-jf @INTRO_13620
-
-:INTRO_13620
+if gosub @IS_SCENE_SKIPPED
+then
+    jump @INTRO_CUTSCENE_END
+end
 jump @INTRO_13565
 
 :INTRO_13627
@@ -2572,17 +2447,10 @@ if
 83D2:   not wav 2 ended
 jf @INTRO_13741
 wait 0
-
-if
-   Car.Wrecked(0@)
-jf @INTRO_13718
-
-:INTRO_13718
-if
-   Actor.Dead(2@)
-jf @INTRO_13734
-
-:INTRO_13734
+if gosub @IS_SCENE_SKIPPED
+then
+    jump @INTRO_CUTSCENE_END
+end
 jump @INTRO_13683
 
 :INTRO_13741
@@ -2605,16 +2473,8 @@ if
    Actor.Driving(2@)
 jf @INTRO_13866
 wait 0
-if
-   Car.Wrecked(0@)
-jf @INTRO_13843
-
-:INTRO_13843
-if
-   Actor.Dead(2@)
-jf @INTRO_13859
-
-:INTRO_13859
+// Do not allow to skip during this narrow time window
+// As we don't want to destroy the actor while he's exiting the car
 jump @INTRO_13807
 
 :INTRO_13866
@@ -2632,11 +2492,10 @@ if
   1500 > 16@ // integer values
 jf @INTRO_13957
 wait 0
-if
-   not Actor.Dead(2@)
-jf @INTRO_13950
-
-:INTRO_13950
+if gosub @IS_SCENE_SKIPPED
+then
+    jump @INTRO_CUTSCENE_END
+end
 jump @INTRO_13911
 
 :INTRO_13957
@@ -2653,44 +2512,54 @@ Actor.PutAt(2@, 125.809, -815.263, 9.444)
 :INTRO_14078
 if
    not Actor.Dead(2@)
-jf @INTRO_14123
+jf @INTRO_14222
 0211: actor 2@ walk_to 116.269 -825.438
 0319: set_actor 2@ running 1
 5@ = 1 // integer values
 
-:INTRO_14123
-if
-   not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_14176
-Actor.PutAt($PLAYER_ACTOR, 132.93, -820.38, 10.45)
-Actor.Angle($PLAYER_ACTOR) = 225.495
-jump @INTRO_14196
-
-:INTRO_14176
-0362: put_actor $PLAYER_ACTOR at 136.829 -817.835 9.470 and_remove_from_car
-
-:INTRO_14196
-if
-   not Actor.Driving($PLAYER_ACTOR)
-jf @INTRO_14222
-Actor.Angle($PLAYER_ACTOR) = 225.495
-
 :INTRO_14222
+Actor.PutAt($PLAYER_ACTOR, 136.829, -817.835, 9.470)
+Actor.Angle($PLAYER_ACTOR) = 225.495
 17@ = 0 // integer values
 
 :INTRO_14229
 if
   1350 > 17@ // integer values
-jf @INTRO_14275
+jf @INTRO_CUTSCENE_END
 wait 0
-if
-   not Actor.Dead(2@)
-jf @INTRO_14268
-
-:INTRO_14268
+if gosub @IS_SCENE_SKIPPED
+then
+    jump @INTRO_CUTSCENE_END
+end
 jump @INTRO_14229
 
-:INTRO_14275
+:INTRO_CUTSCENE_END
+if and
+    15@ == 1
+    5@ == 0
+then
+	040D: unload_wav 1
+	040D: unload_wav 2
+
+	0169: set_fade_color 0 0 0
+	fade 0 1000
+	00BE: text_clear_all
+
+	while fading
+		wait 0
+		gosub @INTRO_PROCESS_ADMIRAL_ROUTE
+	end
+
+	Car.SetToNormalDriver(0@)
+	Car.PutAt(0@, 135.9, -819.0, 9.446)
+    Car.Angle(0@) = 206.0214
+
+    Actor.PutAt($PLAYER_ACTOR, 136.829, -817.835, 9.470)
+    Actor.Angle($PLAYER_ACTOR) = 225.495
+
+    wait 250
+end
+
 Camera.SetBehindPlayer
 Camera.Restore_WithJumpCut
 03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
@@ -2704,6 +2573,15 @@ Car.RemoveReferences(0@)
 Car.RemoveReferences(1@)
 014C: set_parked_car_generator $1899 cars_to_generate_to 101
 Actor.DestroyInstantly(2@)
+009B: destroy_actor_instantly 7@
+
+0169: set_fade_color 0 0 0
+fade 1 1000
+
+while fading
+	wait 0
+end
+
 $220 = 1 // integer values
 $ONMISSION = 0 // integer values
 if
@@ -2777,4 +2655,54 @@ then
 	    end
 	end
 end
+return
+
+:INTRO_PROCESS_ADMIRAL_ROUTE
+if 4@ == 1
+then
+    if 17@ >= 30000
+    then
+        if not Car.Wrecked(0@)
+        then
+            if 81AF:   not car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
+            then
+                4@ = 3
+                Car.PutAt(0@, 132.6, -818.278, 9.446)
+                Car.Angle(0@) = 206.0214
+            end
+        end
+    end
+end
+
+if 4@ == 1
+then
+    if 01AF:   car 0@ 0 103.1 -832.3 9.317 radius 4.0 4.0 4.0
+    then
+        Car.DriveTo(0@, 113.371, -819.078, 9.317)
+        4@ = 2
+    end
+end
+
+if 4@ == 2
+then
+    if 01AF:   car 0@ 0 113.371 -819.078 9.317 radius 4.0 4.0 4.0
+    then
+        Car.DriveTo(0@, 132.6, -818.278, 9.446)
+        4@ = 3
+    end
+end
+
+if 4@ == 3
+then
+    if 01AF:   car 0@ 0 132.6 -818.278 9.446 radius 3.0 3.0 4.0
+    then
+        if not Car.Wrecked(0@)
+        then
+            Car.SetMaxSpeed(0@, 0.0)
+            Car.SetToNormalDriver(0@)
+            4@ = 4
+        end
+    end
+end
+
 return
