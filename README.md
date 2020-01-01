@@ -183,7 +183,7 @@ Fixes and improvements:
 New features:
 - You can now skip phone calls the same way you do in GTA SA/LCS.
 - New GXT Source format, GXT changes required for the mod are now re-done from scratch.
-- Initial Ken's cutscene is now skippable.
+- Initial Ken's office cutscene is now skippable.
 - Spand Express driver in "Jury Fury" now aggressively drives away from the traffic accident once you pass or fail the mission.
 	
 </details>
