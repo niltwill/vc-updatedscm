@@ -1025,8 +1025,7 @@ return
 0293: $18 = get_controller_mode
 if $6849 == 0
 then
-	gosub @PROCESS_R3_ABORT
-	if $MISSION_CANCEL_FLAG == 2
+	if gosub @PROCESS_R3_ABORT
 	then
 		$6849 = 1
 	end

@@ -73,8 +73,7 @@ jf @TAXI_338
 jump @TAXI_6552
 
 :TAXI_338
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     jump @TAXI_6347
 end
@@ -142,8 +141,7 @@ jf @TAXI_718
 jump @TAXI_6486
 
 :TAXI_718
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     jump @TAXI_6347
 end
@@ -260,8 +258,7 @@ jf @TAXI_1470
 jump @TAXI_6486
 
 :TAXI_1470
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     jump @TAXI_6347
 end
@@ -969,8 +966,7 @@ jump @TAXI_6552
 
 :TAXI_5693
 0293: $18 = get_controller_mode
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     jump @TAXI_6347
 end
@@ -1172,8 +1168,7 @@ jump @TAXI_6876
 
 :TAXI_6734
 0293: $18 = get_controller_mode
-gosub @PROCESS_R3_ABORT
-if $MISSION_CANCEL_FLAG == 2
+if gosub @PROCESS_R3_ABORT
 then
     jump @TAXI_6876
 end
