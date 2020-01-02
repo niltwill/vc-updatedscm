@@ -2305,12 +2305,10 @@ if or
    not 4@ == 4 // integer values
 jf @INTRO_13565
 wait 0
-if
-   Car.Wrecked(0@)
-jf @INTRO_12536
-jump @INTRO_12964
-
-:INTRO_12536
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 if gosub @IS_SCENE_SKIPPED
 then
     jump @INTRO_CUTSCENE_END
@@ -2423,6 +2421,10 @@ if
   300 > 16@ // integer values
 jf @INTRO_13627
 wait 0
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 if gosub @IS_SCENE_SKIPPED
 then
     jump @INTRO_CUTSCENE_END
@@ -2433,20 +2435,16 @@ jump @INTRO_13565
 03D1: play_wav 2
 00BC: text_highpriority 'INTRO4' 10000 ms 1  // I'll drop by your office tomorrow and we can start sorting this mess out.
 wait 400
-if
-   Car.Wrecked(0@)
-jf @INTRO_13667
-
-:INTRO_13667
-if
-   Actor.Dead(2@)
-jf @INTRO_13683
 
 :INTRO_13683
 if
 83D2:   not wav 2 ended
 jf @INTRO_13741
 wait 0
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 if gosub @IS_SCENE_SKIPPED
 then
     jump @INTRO_CUTSCENE_END
@@ -2473,6 +2471,10 @@ if
    Actor.Driving(2@)
 jf @INTRO_13866
 wait 0
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 // Do not allow to skip during this narrow time window
 // As we don't want to destroy the actor while he's exiting the car
 jump @INTRO_13807
@@ -2492,6 +2494,10 @@ if
   1500 > 16@ // integer values
 jf @INTRO_13957
 wait 0
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 if gosub @IS_SCENE_SKIPPED
 then
     jump @INTRO_CUTSCENE_END
@@ -2527,6 +2533,10 @@ if
   1350 > 17@ // integer values
 jf @INTRO_CUTSCENE_END
 wait 0
+if Actor.Dead(7@)
+then
+    jump @INTRO_CUTSCENE_END
+end
 if gosub @IS_SCENE_SKIPPED
 then
     jump @INTRO_CUTSCENE_END
@@ -2562,12 +2572,19 @@ end
 
 Camera.SetBehindPlayer
 Camera.Restore_WithJumpCut
-03D5: remove_text 'INTRO4'  // I'll drop by your office tomorrow and we can start sorting this mess out.
+00BE: text_clear_all
 041E: set_radio_station 1 -1
 03BF: set_player $PLAYER_CHAR ignored_by_everyone_to 0
 01F7: set_player $PLAYER_CHAR ignored_by_cops_state_to 0
 03AD: set_rubbish 1
 Player.CanMove($PLAYER_CHAR) = True
+
+// Kill Tommy if his doppelganger died to prevent softlocks
+if Actor.Dead(7@)
+then
+    0322: kill_player $PLAYER_CHAR 
+end
+
 02A3: enable_widescreen 0
 Car.RemoveReferences(0@)
 Car.RemoveReferences(1@)
