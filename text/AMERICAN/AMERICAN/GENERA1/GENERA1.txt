@@ -28,5 +28,5 @@ GEN1_F    I've been carrying Gonzalez for years, but now his incompetence reache
 GEN1_G    It is only right that you kill Gonzalez...
 GEN1_H    Did he do it? It's the money that's important to me.
 GEN1_I    For this kindness I'll reward you, and then we will find your money together.
-GEN1_J    He will be at his Penthouse, half drunk probably. Use this...
+GEN1_J    He will be at his Penthouse, half drunk probably.
 

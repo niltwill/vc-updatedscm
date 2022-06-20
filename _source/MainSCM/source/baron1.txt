@@ -583,11 +583,11 @@ jf @BARON1_3816
 053D:  $PLAYER_ACTOR
 
 :BARON1_3816
-0395: clear_area 1 at 417.1 464.3 range 27.4 2.0
+0395: clear_area 1 at 370.546 471.494 range 10.512 2.0
 if
    not Actor.Dead(0@)
 jf @BARON1_3886
-$2816 = Car.Create(#BFINJECT, 417.1, 464.3, 27.4)
+$2816 = Car.Create(#BFINJECT, 370.546, 471.494, 10.512)
 01EC: make_car $2816 very_heavy 1
 
 :BARON1_3886
@@ -802,6 +802,23 @@ jf @BARON1_5732
 if
    not Car.Wrecked($2816)
 jf @BARON1_5732
+
+// if we want, we can put out the fire at this point, or a bit later, else we can hear it until mission fail/pass
+// but to be on the safe side, only if it's not already out
+// though I suppose it's not that big of a deal, since you're meant to chase anyway, not linger around there
+/*if 82D0:   not fire 14@ extinguished
+then
+02D1: destroy_fire 14@
+end
+if 82D0:   not fire $BARON1_FIRE2 extinguished
+then
+02D1: destroy_fire $BARON1_FIRE2
+end
+if 82D0:   not fire $2815 extinguished
+then
+02D1: destroy_fire $2815
+end*/
+
 03AB: set_car $2816 strong 1
 Car.PutAt($2816, 368.4, 478.6, 10.4)
 0129: 8@ = create_actor 9 #SGA in_car $2816 driverseat

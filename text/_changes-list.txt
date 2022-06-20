@@ -1,0 +1,74 @@
+Refer to this file for any custom additions that need to be added/edited for other language GXT files.
+
+1. AMERICAN > MAIN > CUSTOM.TXT
+
+Contains some new entries, but not all. First, you have to handle all that is here and is not commented out with "#".
+
+
+2. Next, review or add these entries:
+
+* BMX_1
+GETBIK2	~r~You have ~w~~1~ seconds ~g~to get on a Dirt Bike!
+GETBIK4 ~r~You have ~w~~1~ second ~g~to get on a Dirt Bike!
+
+* PIZZA
+PIZ1_07   ~r~One of the customers is dead! You're fired.
+PIZ_OVE   Pizza odd-job ended!
+PIZ_WON   Pizza odd-job Complete. Your max Health increased to 150.
+
+* TAXI1
+TAXI6     Taxi Driver mission over
+
+* MAIN
+ANSWR2    Press the ~h~~k~~PED_ANSWER_PHONE~~w~ to skip your cell phone call.
+#ASM3_A    TEXT NO LONGER NEEDED
+#ASM3_B    TEXT NO LONGER NEEDED
+BNK450C   New threads? Huh. You need more than that, pal!
+CAN_CON   Use ~h~~k~~TOGGLE_SUBMISSIONS~ ~w~again to cancel the mission.
+CLOTH10   Bank Robber outfit delivered to Malibu Club in Vice Point.
+CLOTH11   MC Tommy outfit delivered to Howlin' Petes Biker Emporium in Downtown.
+CLOTH12   Red Tracksuit outfit delivered to Brownstone Laundromat in Little Havana.
+CLOTH5    Cuban Dress outfit delivered to Little Havana Streetwear in Little Havana.
+CLOTH8    Mr. Vercetti outfit delivered to Collar & Cuffs on Ocean Beach.
+CLOTH9    Black Tracksuit outfit delivered to Jocksport in Downtown.
+COK2_26   ~r~Lance died!
+COK4_29   ~r~Lance died!
+CUNTY     Frankie outfit delivered to the Vercetti Estate!
+FIRELVL   Fire Fighter Mission level ~1~
+FIRETRK   Fire Truck
+FTUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire fighter missions on or off.
+FTUTOR2   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle fire fighter missions on or off.
+GOAWAY3   ~g~Come back when you are not wearing cop outfit.
+#HAM1_5    NO LONGER NEEDED
+HEAL_A    Your ~h~health~w~ is displayed in pink in the top right of the screen.
+MOB_73C   You're a marvel! I'm a marvel! They love us. We are re-writing the record books, pal.
+MOB_73D   We are talking major awards here. I can put my dad in a home and tell him to shut up.
+MOB_73F   It's hot, man. Hot. H. O. T. He never believed in me. Never thought I was an artist, and now I've made it.
+MOB_73G   I'm the best damn skin flick director of all time, my friend. And I just wanted to say, it's a pleasure to have met you.
+MOB_73I   I love you, baby. Don't you go changing on me, you hear.
+NITRO     Taxi Driver mission complete. All taxis now have a boost jump! Just press the horn button.
+OUTFT10   Black Tracksuit
+OUTFT11   Red Tracksuit
+OUTFT13   MC Tommy
+OUTFT5    Cuban Dress
+OUTFT7    Bank Robber
+OUTFT9    Mr. Vercetti
+PCJ600    PCJ-600
+PICK8     Sea Sparrow now available from Vercetti Estate on Starfish Island!
+PICK8B    Sea Sparrow now available from Diaz's Mansion on Starfish Island!
+PICK9     Rhino tank now available from Fort Baxter Air Base!
+PIZ1_A    THE WELL STACKED PIZZA
+RANGE     Shooting Range
+#RBM1_11   NO LONGER NEEDED
+#RBM1_3    NO LONGER NEEDED
+#RCH1_1    NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED
+#RCH1_3    NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED NO LONGER NEEDED
+S_PROMP   When not on a mission you can save your progress by collecting the ~h~cassette tape pickup - time will advance by 6 hours.
+TTUTOR    Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi driver missions on or off.
+TTUTOR2   Press the ~h~~k~~TOGGLE_SUBMISSIONS~ button~w~ to toggle taxi driver missions on or off.
+VCPDCHE   VCPD Cheetah
+WANT_K    If you are in a vehicle, ~h~SPRAY SHOPS~w~ will ~h~clear your wanted level.
+
+#Unused entries, non-existent mission.
+#FF_1      "Faggio Freakout"
+#STFT_24   Fastest time for "Faggio Freakout"

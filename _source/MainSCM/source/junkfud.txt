@@ -18,6 +18,8 @@ $1377 = 0 // integer values
 $1378 = 0 // integer values
 $1379 = 0 // integer values
 $1380 = 0 // integer values
+$JUNKFUD_0 = 0 // integer values
+$JUNKFUD_1 = 0 // integer values
 thread 'JUNKFUD'
 set_wb_check_to 0
 create_thread @FUD
@@ -34,17 +36,17 @@ jf @FUD_5282
 $1380 += 1 // integer values
 0054: store_player $PLAYER_CHAR position_to $1392 $1393 $1394
 
-0@ = 100
-1@ = 99
+$JUNKFUD_0 = 100
+$JUNKFUD_1 = 99
 if $389 == 1
 then
-	0@ += 50
-	1@ += 50
+	$JUNKFUD_0 += 50
+	$JUNKFUD_1 += 50
 end
 if $91 == 1
 then
-	0@ += 50
-	1@ += 50
+	$JUNKFUD_0 += 50
+	$JUNKFUD_1 += 50
 end
 
 if
@@ -69,7 +71,7 @@ jf @FUD_798
 if and
    not Actor.Dead($1358)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_786
 if
 00F6:   player $PLAYER_CHAR 0 445.66 1100.54 18.3 radius 1.0 1.0 2.0
@@ -109,7 +111,7 @@ jf @FUD_1032
 if and
    not Actor.Dead($1359)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_1020
 if
 00F6:   player $PLAYER_CHAR 0 436.75 1105.8 18.2 radius 1.0 1.0 2.0
@@ -149,7 +151,7 @@ jf @FUD_1266
 if and
    not Actor.Dead($1360)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_1254
 if
 00F6:   player $PLAYER_CHAR 0 434.5 1139.3 18.2 radius 1.0 1.0 2.0
@@ -189,7 +191,7 @@ jf @FUD_1500
 if and
    not Actor.Dead($1361)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_1488
 if
 00F6:   player $PLAYER_CHAR 0 451.24 1146.5 18.24 radius 1.0 1.0 2.0
@@ -282,7 +284,7 @@ jf @FUD_2189
 if and
    not Actor.Dead($1362)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_2177
 if
 00F6:   player $PLAYER_CHAR 0 375.76 1147.7 18.6 radius 1.0 1.0 2.0
@@ -322,7 +324,7 @@ jf @FUD_2423
 if and
    not Actor.Dead($1363)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_2411
 if
 00F6:   player $PLAYER_CHAR 0 394.16 1139.12 18.6 radius 1.0 1.0 2.0
@@ -362,7 +364,7 @@ jf @FUD_2657
 if and
    not Actor.Dead($1364)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_2645
 if
 00F6:   player $PLAYER_CHAR 0 392.96 1108.7 18.55 radius 1.0 1.0 2.0
@@ -402,7 +404,7 @@ jf @FUD_2891
 if and
    not Actor.Dead($1365)
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
 jf @FUD_2879
 if
 00F6:   player $PLAYER_CHAR 0 376.47 1101.7 18.58 radius 1.0 1.0 2.0
@@ -547,7 +549,7 @@ if
 jf @FUD_3913
 if and
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
    not Actor.Dead($1397)
 jf @FUD_3901
 if
@@ -669,7 +671,7 @@ if
 jf @FUD_4656
 if and
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
    not Actor.Dead($1396)
 jf @FUD_4644
 if
@@ -768,7 +770,7 @@ if
 jf @FUD_5240
 if and
    Player.Money($PLAYER_CHAR) > 0
-8183:   not player $PLAYER_CHAR health > 1@
+8183:   not player $PLAYER_CHAR health > $JUNKFUD_1
    not Actor.Dead($1395)
 jf @FUD_5228
 if
@@ -1541,7 +1543,7 @@ if and
 jf @FUD_9125
 0225: $1370 = player $PLAYER_CHAR health
 $1370 *= -1 // integer values
-0058: $1370 += 0@ // integer values
+0058: $1370 += $JUNKFUD_0
 $1371 = Player.Money($PLAYER_CHAR)
 if
 001C:   $1370 > $1371 // integer values

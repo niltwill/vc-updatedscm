@@ -499,7 +499,17 @@ $1752 = 15000 // integer values
 0060: $1752 -= $1750 // integer values
 0084: $1753 = $1752 // integer values and handles
 $1753 /= 1000 // integer values
-01E5: text_1number_highpriority 'GETBIK2' $1753 flag 2000 time 1  // ~r~You have ~w~~1~ seconds ~g~to get on a Dirt Bike!
+if
+    $1753 == 1
+then
+    01E5: text_1number_highpriority 'GETBIK4' $1753 flag 200 time 1  // ~r~You have ~w~~1~ second ~g~to get on a Dirt Bike!
+else
+    if
+        not $1753 == 0
+    then 
+        01E5: text_1number_highpriority 'GETBIK2' $1753 flag 200 time 1  // ~r~You have ~w~~1~ seconds ~g~to get on a Dirt Bike!
+    end
+end
 if
 00DE:   player $PLAYER_CHAR driving_vehicle_type #SANCHEZ
 jf @BMX_1_4281

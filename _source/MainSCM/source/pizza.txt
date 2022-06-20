@@ -145,6 +145,14 @@ $8011 = 1 // integer values
 if
 0121:   player $PLAYER_CHAR in_zone 'HAITI'  // Little Haiti
 jf @PIZZA_1027
+//open Haitian Factory gate temporarily if Trojan Voodoo is not complete
+if
+    not $282 == 1
+then
+    while 834E:   not move_object $1791 to -1114.5 73.0 10.1 speed 10.0 10.0 0.0 collision_check 0
+        wait 0
+    end
+end
 $8011 = 2 // integer values
 
 :PIZZA_1027
@@ -483,6 +491,23 @@ Marker.Disable($7990)
 Marker.Disable($7991)
 Marker.Disable($7992)
 Marker.Disable($7993)
+if
+    not $282 == 1
+then
+    while 834E:   not move_object $1791 to -1114.1 67.0 10.1 speed 10.0 10.0 0.0 collision_check 0
+        wait 0
+    end
+    //fix getting stuck in the gate
+    if
+        00E3:   player $PLAYER_CHAR 0 -1113.79 70.3044 radius 6.0 6.0
+    then
+        00A1: put_actor $PLAYER_ACTOR at -1111.99 70.3044 10.6358
+    end
+end
+022A: remove_forbidden_for_peds_cube -1116.24 121.395 10.0864 -1127.8 55.7903 10.2249
+022A: remove_forbidden_for_peds_cube -1129.32 71.2094 10.0864 -1160.72 70.625 10.086 
+022A: remove_forbidden_for_peds_cube -1140.38 82.3812 10.0864 -1140.32 62.5537 10.0864
+022A: remove_forbidden_for_peds_cube -1161.51 106.189 10.086 -1198.04 66.4731 16.9171
 0501: set_player $PLAYER_CHAR drive_by_mode_enabled 1
 0151: remove_status_text $8008
 014F: stop_timer $8012

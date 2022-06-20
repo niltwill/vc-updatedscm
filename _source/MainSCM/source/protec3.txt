@@ -1892,6 +1892,11 @@ Player.Money($PLAYER_CHAR) += 10000
 0318: set_latest_mission_passed 'BUD_3'  // Cop Land
 Marker.Disable($265)
 Marker.Disable($234)
+if
+83B1:   not garage $690 door_closed
+then
+0361: close_garage $690
+end
 04CE: $234 = create_icon_marker_without_sphere 29 at -378.4 -536.9 17.2
 $1175 += 1 // integer values
 $268 = 1 // integer values
@@ -1924,6 +1929,11 @@ Marker.Disable($4677)
 Marker.Disable($4676)
 Marker.Disable($4679)
 018E: stop_sound 6@
+if
+83B1:   not garage $690 door_closed
+then
+0361: close_garage $690
+end
 015C: set_zone_gang_info 'RICH1' 1 13 0 0 0 0 0 0 0 0 0 20
 015C: set_zone_gang_info 'RICH1' 0 10 0 0 0 0 0 0 0 0 0 10
 0152: set_zone_car_info 'RICH1' 1 12 0 0 0 0 0 0 0 0 0 10

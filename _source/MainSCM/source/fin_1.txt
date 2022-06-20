@@ -1024,6 +1024,16 @@ jump @FIN_1_6162
 
 :FIN_1_6147
 00BC: text_highpriority 'DEFSAFE' 200 ms 1  // ~g~Get back to the safe and defend it.
+if and
+    0256:   player $PLAYER_CHAR defined
+    8121:   not player $PLAYER_CHAR in_zone 'STARI'  // Starfish Island
+    8112:   not wasted_or_busted
+then
+    00BC: text_highpriority 'T4X4_F' 5000 ms 2 // ~r~You bailed! Too tough for you?!
+    gosub @FIN_1_27117
+    gosub @FIN_1_27446
+    end_thread
+end
 
 :FIN_1_6162
 if

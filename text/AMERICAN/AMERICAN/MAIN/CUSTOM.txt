@@ -33,6 +33,8 @@ GEN1_K    Use this...
 
 #MAIN
 #HELP62    Press the~h~ ~k~~PED_ANSWER_PHONE~ ~w~button to skip tutorial messages or the~h~ ~k~~PED_SPRINT~ ~w~button to continue with help included.
+#FF_1      "Faggio Freakout"
+#STFT_24   Fastest time for "Faggio Freakout"
 
 #TAXI1
 #TAXI8     ~r~You have ~w~~1~~r~ seconds to return to a Taxi before the mission ends.

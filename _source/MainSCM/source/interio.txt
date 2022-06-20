@@ -3278,6 +3278,11 @@ Actor.Angle($1044) = 33.0
 if
    not Actor.Dead($PLAYER_ACTOR)
 jf @SHIT_19937
+if
+    82D7:   not player $PLAYER_CHAR current_weapon == 0
+then
+    01B8: set_player $PLAYER_CHAR armed_weapon_to 0
+end
 Actor.PutAt($PLAYER_ACTOR, 65.5, -1453.7, 9.6)
 0372: set_actor $PLAYER_ACTOR anim $1016 wait_state_time 999999 ms
 Actor.Angle($PLAYER_ACTOR) = 210.0

@@ -3,7 +3,7 @@ In short, this mod is supposed to increase the gaming experience with GTA: Vice 
 ### Current version: v2.0 new (reorganized)
 
 ## Warning:
-UpdatedSCM is incompatibile with Stories NPC 'Taxi Service' by Ryadica Cahya (you won't be able to start Paramedic and Firefighter)
+UpdatedSCM is incompatible with Stories NPC 'Taxi Service' by Ryadica Cahya (you won't be able to start Paramedic and Firefighter)
 I do not recommend you to use the Save Friendly SCM, at least NOT to overwrite your old save files.
 It could corrupt your previous save files, if you use a different SCM for it.
 It's best used with a 100% completed save file if you cannot afford the time to restart the game.
@@ -131,8 +131,6 @@ And after that, add this line:
 Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah" or an other localized one. (Note that the included GXT files already contain this change.)
 
 
-* If you frequently get peds to deliver to at the not-yet-accessible Haitian factory during pizzaboy side mission in Little Havanna, you may overwrite the "paths.ipl". It doesn't do anything else other then removing the ped paths at the Haitian Factory. Afterwards the mission, it's probably the best if you restore the original file.
-
 **I also recommend to use [NW-Fixes](https://www.mediafire.com/file/whejojss4y7vu05/NW_Fixes_Latest.zip/file) (and put that one to higher priority in Modloader), the two are quite interrelated now. This now also includes the files needed for UpdatedSCM, so no need to mess with anything manually.**
 </details>
 
@@ -140,9 +138,10 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 <details>
   <summary>To-do: (click me to expand)</summary>
 
+- Proofread the English.gxt file to fix any left-over typos
 - Fix S.W.A.T attacking the player in "The Job" even through you lost wanted level in Pay 'n' Spray.
 - Fix Army spawning and attacking the player outside of Fort Baxter.
-- Replace Leaf Links bridge traffic flow workaround with a proper fix (Check how VCS does it maybe?)
+- Replace Leaf Links bridge traffic flow workaround with a proper fix, including adding some additional zone checks around the tight gaps of the golf zones (check how VCS does it, maybe?)
 - Fix possible crash when starting new game quickly after the Ken's office intro cutscene skip?
 - Fix the Jury not falling out of the car in "Jury Fury" if headshotted inside of the admiral with an M4 rifle (original VC bug)
 </details>
@@ -153,7 +152,26 @@ Then edit the appropriate GXT file, and add "VCPDCHE" string with "VCPD Cheetah"
 <details>
   <summary>Latest update changelog (click me to expand) (full changelog underneath)</summary>
 Fixes and improvements:
-	
+
+- The BF Injection is no longer placed on a nearby visible roof in the mission "The Chase"
+- When playing the final mission "Keep Your Friends Close...", you can no longer leave Starfish Island for long before failing the mission (you are not to go and explore Vice City at your leisure at this time).
+- Active weapon no longer remains equipped during the Pole Position Strip Club sessions
+- Fixed the food vendors' crash when restoring HP
+- Inaccessible peds spawning in the Haitian drug factory during Pizzaboy side mission in Little Haiti are now accessible (the closed gate gets opened temporarily during the mission, if Trojan Voodoo mission is not complete yet)
+- The garage door used for police outfit change closes after the mission "Cop Land" (it shouldn't remain open in that weird angle)
+
+New features:
+- You can now skip phone calls the same way you do in GTA SA/LCS.
+- New GXT Source format, GXT changes required for the mod are now re-done from scratch.
+- Initial Ken's office cutscene is now skippable.
+- Spand Express driver in "Jury Fury" now aggressively drives away from the traffic accident once you pass or fail the mission.
+
+</details>
+
+<details>
+  <summary>Full changelog (click me to expand)</summary>
+Fixes:
+
 - Replaced Sentinel with Sentinel XS in "The Driver"
 - Removed changes related to "slowing down" certain NPC's vehicles in missions included in previous releases, we don't want to touch game's difficulty.
 - Phil's Patriot in "Boomshine Saigon" is now fireproof and Phil will no longer flee out of the vehicle if you'll try to catch the car on fire.
@@ -179,19 +197,6 @@ Fixes and improvements:
 - Added busted or wanted check for ambulance, firetruck and taxi sidemissions.
 - Backup on faggio's will no longer spawn infinitly in "Gun Runner".
 - Fixed hidden package placement next to Caffe Robina.
-
-New features:
-- You can now skip phone calls the same way you do in GTA SA/LCS.
-- New GXT Source format, GXT changes required for the mod are now re-done from scratch.
-- Initial Ken's office cutscene is now skippable.
-- Spand Express driver in "Jury Fury" now aggressively drives away from the traffic accident once you pass or fail the mission.
-	
-</details>
-
-<details>
-  <summary>Full changelog (click me to expand)</summary>
-Fixes:
-
 - Fixed the sphere in front of the Ocean View Hotel during the intro, now it's destroyed as soon as you approach the marker instead of after the cutscene ends.
 - Fixed some grammar mistakes regarding death messages of NPCs in the missions (LCS/VCS uses the same approach)
 - You no longer have to be in a vehicle after losing wanted level in 'Treacherous Swine' for the mission to pass. (now you can indeed pass it on foot or in a vehicle, you don't have to use the Pay 'n' Spray)
@@ -247,18 +252,18 @@ Fixes:
 	- Duration of Pole Position mission complete cutscene is slightly longer.
 	- The Infernus spawn inside the mall is disabled during 'All Hands On Deck!'
 	- The driver of Candy's car in 'Recruitment Drive' can no longer be shot while in the car.
-	- The limo driver and Candy can no longer be shot while in the car in 'Martha's Mug Shot'. In addition, the driver no longer 		responds to threats and the limo is fireproof.
+	- The limo driver and Candy can no longer be shot while in the car in 'Martha's Mug Shot'. In addition, the driver no longer responds to threats and the limo is fireproof.
 	- During 'Cannon Fodder', the player now leaves the taxi slightly before the Cubans, instead of right after.
 	- The Voodoo's with Cubans in 'Trojan Voodoo' are now fireproof, and the Cubans no longer respond to threats.
 	- The Topfun van is no longer locked in position at the end of 'Bombs Away!'
-	- Bugfix in 'Love Juice' regarding trying to pick up Mercedes. It is now only possible in a car or motorcycle (with exception 		Pizza Boy/Baggage) as per instructed. No more easy heli rides!
-	- The player is now removed from any vehicle and the vehicle despawned after the intro cutscene in 'Publicity Tour' if he was 		in one.
+	- Bugfix in 'Love Juice' regarding trying to pick up Mercedes. It is now only possible in a car or motorcycle (with exception Pizza Boy/Baggage) as per instructed. No more easy heli rides!
+	- The player is now removed from any vehicle and the vehicle despawned after the intro cutscene in 'Publicity Tour' if he was in one.
 	- Lance now appears as IGBudy3 instead of the usual IGBuddy in 'Death Row'.	
 
 
 Changes and improvements made to the original:
 
-- The "press TAB to answer the call" textbox should now always display, the game now correctly destroys previous textboxes????
+- The "press TAB to answer the call" textbox should now always display, the game now correctly destroys previous textboxes???
 - Added 'Time' indicator next to the clock in Vigilante, Firefighter, Paramedic, Pizzaboy, Shooting Range and Cone Crazy missions, like it appears in other GTA games
 - The Love Fist limo now has a 10% chance of alarm going off once you steal it
 - Added a briefcase in restored 'Supply & Demand' cutscene.
@@ -271,7 +276,7 @@ Changes and improvements made to the original:
 - In 'Jury Fury', damaging the Admiral will now make the jury enter the car instead of just doing nothing
 - Cubans entering your vehicle at the start of 'Cannon Fodder' now takes longer than two seconds
 - Rico should now fade away at end of 'Cannon Fodder' (and also unkillable by the player during that time, since he is vital to the upcoming storyline)
-- Timer in taxi mission will be set according to destination each time, thus the time will not increase infinitely anymore??????
+- Timer in taxi mission will be set according to destination each time, thus the time will not increase infinitely anymore???
 - You cannot start the mission 'Alloy Wheels of Steel' if the player is wearing cop outfit.
 - No more infinite ammo with the pistol in 'The Shootist' in the first round, and you can also no longer shoot before the message "live ammunition...
 - Time is now adjusted to 23:00 when you visit Cortez's yacht in 'The Party' (due to the Colonel saying: "Buenas noches!" - indicating night time)??
@@ -281,8 +286,8 @@ Changes and improvements made to the original:
 - In 'Sir, Yes Sir!' mission, the army now use M4 instead of Ruger.
 - In 'The Job' mission, you will now have to lose your wanted level before initiating the bank robbery.
 - Increased bike's health in 'G-spotlight'
-- The taxi driver in taxi sidemission will not enter as passenger anymore (because when he does, Tommy can no longer enter back to that taxi)??????
-- Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)??????
+- The taxi driver in taxi sidemission will not enter as passenger anymore (because when he does, Tommy can no longer enter back to that taxi)???
+- Added slow motion effect in 'Psycho Killer' while the psycho kills the security guard (in one shot now)???
 - No more afternoon time setting in 'Supply & Demand'
 - Skimmer inside large hangar at airport now spawns after mission 'Dildo Dodo'????
 - Romero Hearse now spawns next to "The Well Stacked Pizza" restaurant in Little Haiti after 'Two Bit Hit'
@@ -388,15 +393,15 @@ Changes and improvements made to the original:
 - Supply & Demand now includes the lines: "We made it! Those other boats ain't VIP class." (when reaching the Marquis), "They're matchwood! And fish food!" while damaging the cuban ships, plus "Bridge coming up!" after the jetty part (if the helicopter is still there).
 - In The Job mission, Tommy now says "New threads, huh? You need more than that, pal!" during the closing cutscene in response to Kent Paul. Also the line from "Yeah, and you'll put somebody's eye out!" is now said after "For god's sake, Phil, stop waving that thing around!"
 - Added some audio lines ingame:
-	- During the mission "The Chase" after the Shark boss gets into the BF injection, Tommy will soon make the remark: "Sick of 		these pricks!"
-	- During the mission "Death Row", Diaz's goons will taunt you verbally at the junk yard: "Do you think you can get away with 		this?".
-	- During the mission "Keep your Friends Close", Tommy will now shout "Sonny? SONNY! I'm coming for ya!" in response to Sonny's 		killing order.
-	- Strippers now say some comments to you in the Pole Position Club when the camera changes, at the private stripteaser room. -		This might increase the monotonous scene's atmosphere a bit.
+	- During the mission "The Chase" after the Shark boss gets into the BF injection, Tommy will soon make the remark: "Sick of these pricks!"
+	- During the mission "Death Row", Diaz's goons will taunt you verbally at the junk yard: "Do you think you can get away with this?".
+	- During the mission "Keep your Friends Close", Tommy will now shout "Sonny? SONNY! I'm coming for ya!" in response to Sonny's killing order.
+	- Strippers now say some comments to you in the Pole Position Club when the camera changes, at the private stripteaser room. This might increase the monotonous scene's atmosphere a bit.
 
 - Phone call additions:
-	- During Umberto Robina's call, Tommy will now reply with an additional "Yeah, maybe..." when Umberto asks: "wanna work for 		me?"
+	- During Umberto Robina's call, Tommy will now reply with an additional "Yeah, maybe..." when Umberto asks: "wanna work for me?"
 	- Ken Rosenberg now gives you some business advice (after completing the mission 'Shakedown')
-	- Kent Paul rings you up regarding the the SWAT retirement fund which is later seized in the mission 'The Job', happens shortly 		after you purchase the Malibu Club.
+	- Kent Paul rings you up regarding the the SWAT retirement fund which is later seized in the mission 'The Job', happens shortly after you purchase the Malibu Club.
 	- Phil Cassidy now calls after you complete the last storyline mission (Keep your Friends Close)
 	- Mercedes now also rings you up after you complete the mission 'Rub Out'.
 	- Mercedes now rants to you about Jezz Torrent after you complete the mission 'Love Juice'.
@@ -420,7 +425,10 @@ Also there are no model changes of any kind. Though some vehicle additions exist
 **Warning!**
 Despite these changes not breaking old save games, in these saved games you _might_ see weird glitches like an unusual floating building, something misbehaving, or some missing collision. So use this at your own risk and it's still best practice to start a new game above all else to make sure everything goes smoothly!
 
-- Removed a misplaced pedestrian in the cutscene of the mission 'Messing With the Man' (only his head was visible).
+- The BF Injection is no longer placed on a nearby visible roof in the mission "The Chase"
+- When playing the final mission "Keep Your Friends Close...", you can no longer leave Starfish Island for long before failing the mission (you are not to go and explore Vice City at your leisure at this time).
+- Inaccessible peds spawning in the Haitian drug factory during Pizzaboy side mission in Little Haiti are now accessible (the closed gate gets opened temporarily during the mission, if Trojan Voodoo mission is not complete yet)
+- The garage door used for police outfit change closes after the mission "Cop Land" (it shouldn't remain open in that weird angle)
 - Speeder given by Cortez now matches colour of the one attached to the yacht.
 - Ingame maverick from "Phnom Penh '86" now matches the cutscene Maverick's colour
 - Tommy's sitting position inside the Maverick is now at the back seat in mission "Phnom Penh '86" (when picked up by Lance after you got the money)
